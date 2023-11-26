@@ -16,6 +16,7 @@
     "locations": [ "land" ],
     "city_distance": [ 8, 30 ],
     "occurrences": [ 0, 2 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
@@ -35,6 +36,7 @@
     "locations": [ "land" ],
     "city_distance": [ 8, 30 ],
     "occurrences": [ 1, 2 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -57,6 +59,7 @@
     "locations": [ "land" ],
     "city_distance": [ 8, 40 ],
     "occurrences": [ 0, 2 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "URBAN", "MAN_MADE" ]
   },
   {
@@ -429,6 +432,7 @@
     "city_distance": [ 5, 25 ],
     "city_sizes": [ 4, -1 ],
     "occurrences": [ 0, 4 ],
+    "priority": 1,
     "flags": [ "CLASSIC", "URBAN", "MAN_MADE" ]
   },
   {
@@ -544,6 +548,7 @@
     "locations": [ "land" ],
     "city_distance": [ 5, -1 ],
     "occurrences": [ 0, 2 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -862,6 +867,7 @@
     "locations": [ "forest" ],
     "city_distance": [ 15, -1 ],
     "occurrences": [ 1, 40 ],
+    "priority": 1,
     "flags": [ "UNIQUE", "LAB", "WILDERNESS", "MAN_MADE" ],
     "rotate": false
   },
@@ -1057,6 +1063,7 @@
     "locations": [ "field" ],
     "city_distance": [ 10, 40 ],
     "occurrences": [ 0, 6 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -2455,6 +2462,7 @@
     "city_distance": [ 10, -1 ],
     "city_sizes": [ 3, 20 ],
     "occurrences": [ 35, 100 ],
+    "priority": 1,
     "flags": [ "GLOBALLY_UNIQUE", "SAFE_AT_WORLDGEN", "MAN_MADE" ]
   },
   {
@@ -2744,6 +2752,7 @@
     "locations": [ "land" ],
     "city_distance": [ 10, 200 ],
     "occurrences": [ 0, 4 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -2757,6 +2766,7 @@
     "locations": [ "land" ],
     "city_distance": [ 10, 200 ],
     "occurrences": [ 0, 4 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -2770,6 +2780,7 @@
     "locations": [ "land" ],
     "city_distance": [ 10, 200 ],
     "occurrences": [ 0, 4 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -2815,6 +2826,7 @@
     "locations": [ "land" ],
     "city_distance": [ -1, 100 ],
     "occurrences": [ 0, 4 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -3381,6 +3393,7 @@
     "locations": [ "field", "forest_without_trail" ],
     "city_distance": [ 15, 150 ],
     "occurrences": [ 0, 4 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -3659,6 +3672,7 @@
     "city_distance": [ 3, -1 ],
     "city_sizes": [ 1, 16 ],
     "occurrences": [ 33, 100 ],
+    "priority": -1,
     "flags": [ "SAFE_AT_WORLDGEN", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
@@ -6197,8 +6211,9 @@
       { "point": [ 29, 29, 0 ], "overmap": "special_forest_thick" },
       { "point": [ -1, 15, 0 ], "locations": [ "land", "road" ] }
     ],
-    "locations": [ "land", "road" ],
+    "locations": [ "land" ],
     "occurrences": [ 35, 100 ],
+    "priority": 1,
     "//": "Inflated chance, effective rate ~19% (n=726)",
     "connections": [ { "point": [ -1, 15, 0 ], "terrain": "road", "connection": "local_road" } ],
     "flags": [ "FARM", "UNIQUE", "SAFE_AT_WORLDGEN", "MAN_MADE" ]
@@ -6941,6 +6956,7 @@
     "locations": [ "potential_basement_lab_entrance" ],
     "//": "Low chance to find a matching location, so always try to place it",
     "occurrences": [ 99, 100 ],
+    "priority": 1,
     "flags": [ "LAB", "UNIQUE", "MAN_MADE" ]
   },
   {
@@ -6978,6 +6994,7 @@
     "city_distance": [ 10, -1 ],
     "city_sizes": [ 1, 12 ],
     "occurrences": [ 5, 100 ],
+    "priority": -1,
     "flags": [ "CLASSIC", "UNIQUE", "MAN_MADE" ]
   },
   {
