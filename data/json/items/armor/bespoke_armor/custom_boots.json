@@ -56,16 +56,16 @@
     "type": "ARMOR",
     "copy-from": "boots_survivor",
     "proportional": { "weight": 1.4, "volume": 1.4 },
-    "name": { "str": "pair of XL survivor boots", "str_pl": "pairs of XL survivor boots" },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "name": { "str": "pair of survivor boots", "str_pl": "pairs of survivor boots" },
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "boots_survivor_xs",
     "type": "ARMOR",
     "copy-from": "boots_survivor",
-    "name": { "str": "pair of XS survivor boots", "str_pl": "pairs of XS survivor boots" },
+    "name": { "str": "pair of survivor boots", "str_pl": "pairs of survivor boots" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "boots_wsurvivor_nofur",
@@ -116,17 +116,17 @@
     "id": "boots_wsurvivor_nofur_xl",
     "type": "ARMOR",
     "copy-from": "boots_wsurvivor_nofur",
-    "name": { "str": "pair of XL faux fur winter survivor boots", "str_pl": "pairs of XL faux fur winter survivor boots" },
+    "name": { "str": "pair of faux fur winter survivor boots", "str_pl": "pairs of faux fur winter survivor boots" },
     "proportional": { "weight": 1.3, "volume": 1.3 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "boots_wsurvivor_nofur_xs",
     "type": "ARMOR",
     "copy-from": "boots_wsurvivor_nofur",
-    "name": { "str": "pair of XS faux fur winter survivor boots", "str_pl": "pairs of XS faux fur winter survivor boots" },
+    "name": { "str": "pair of faux fur winter survivor boots", "str_pl": "pairs of faux fur winter survivor boots" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "boots_wsurvivor",
@@ -186,18 +186,18 @@
   {
     "id": "boots_wsurvivor_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL winter survivor boots", "str_pl": "pairs of XL winter survivor boots" },
+    "name": { "str": "pair of winter survivor boots", "str_pl": "pairs of winter survivor boots" },
     "copy-from": "boots_wsurvivor",
     "proportional": { "weight": 1.3, "volume": 1.3 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "boots_wsurvivor_xs",
     "type": "ARMOR",
     "copy-from": "boots_wsurvivor",
-    "name": { "str": "pair of XS winter survivor boots", "str_pl": "pairs of XS winter survivor boots" },
+    "name": { "str": "pair of winter survivor boots", "str_pl": "pairs of winter survivor boots" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "swim_fins_custom",

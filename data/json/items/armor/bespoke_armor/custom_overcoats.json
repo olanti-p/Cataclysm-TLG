@@ -89,18 +89,18 @@
   {
     "id": "longcoat_survivor_xl",
     "type": "ARMOR",
-    "name": { "str": "XL survivor longcoat" },
+    "name": { "str": "survivor longcoat" },
     "copy-from": "longcoat_survivor",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "longcoat_survivor_xs",
     "type": "ARMOR",
     "copy-from": "longcoat_survivor",
-    "name": { "str": "XS survivor longcoat" },
+    "name": { "str": "survivor longcoat" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "sleeveless_longcoat_survivor",

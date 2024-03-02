@@ -52,17 +52,17 @@
     "id": "xl_helmet_nomad",
     "type": "ARMOR",
     "copy-from": "helmet_nomad",
-    "name": { "str": "XL nomad cowl" },
+    "name": { "str": "nomad cowl" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_helmet_nomad",
     "type": "ARMOR",
     "copy-from": "helmet_nomad",
-    "name": { "str": "XS nomad cowl" },
+    "name": { "str": "nomad cowl" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "hood_survivor",
@@ -164,49 +164,49 @@
     "id": "hood_wsurvivor_xl",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor",
-    "name": { "str": "XL winter survivor hood" },
+    "name": { "str": "winter survivor hood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "hood_wsurvivor_xs",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor",
-    "name": { "str": "XS winter survivor hood" },
+    "name": { "str": "winter survivor hood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "hood_survivor_xl",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
-    "name": { "str": "XL survivor hood" },
+    "name": { "str": "survivor hood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "hood_survivor_xs",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
-    "name": { "str": "XS survivor hood" },
+    "name": { "str": "survivor hood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "hood_fsurvivor_xl",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
-    "name": { "str": "XL survivor firehood" },
+    "name": { "str": "survivor firehood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "hood_fsurvivor_xs",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
-    "name": { "str": "XS survivor firehood" },
+    "name": { "str": "survivor firehood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "hood_wsurvivor_nofur",
@@ -236,17 +236,17 @@
     "id": "hood_wsurvivor_nofur_xl",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor_nofur",
-    "name": { "str": "XL faux fur winter survivor hood" },
+    "name": { "str": "faux fur winter survivor hood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "hood_wsurvivor_nofur_xs",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor_nofur",
-    "name": { "str": "XS faux fur winter survivor hood" },
+    "name": { "str": "winter faux fur survivor hood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "helmet_scavenger",
@@ -275,16 +275,16 @@
     "id": "xl_helmet_scavenger",
     "type": "ARMOR",
     "copy-from": "helmet_scavenger",
-    "name": { "str": "XL scavenger cowl" },
+    "name": { "str": "scavenger cowl" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "helmet_scavenger_xs",
     "type": "ARMOR",
     "copy-from": "helmet_scavenger",
-    "name": { "str": "XS scavenger cowl" },
+    "name": { "str": "scavenger cowl" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   }
 ]

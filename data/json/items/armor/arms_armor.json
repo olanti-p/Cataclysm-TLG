@@ -129,17 +129,17 @@
     "id": "xl_armguard_chitin",
     "copy-from": "armguard_chitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XL chitin arm guards", "str_pl": "pairs of XL chitin arm guards" },
+    "name": { "str": "pair of chitin arm guards", "str_pl": "pairs of chitin arm guards" },
     "proportional": { "weight": 1.25, "volume": 1.23 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_armguard_chitin",
     "type": "ARMOR",
     "copy-from": "armguard_chitin",
-    "name": { "str": "pair of XS chitin arm guards", "str_pl": "pairs of XS chitin arm guards" },
+    "name": { "str": "pair of chitin arm guards", "str_pl": "pairs of chitin arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "armguard_acidchitin",
@@ -154,17 +154,17 @@
     "id": "xl_armguard_acidchitin",
     "copy-from": "armguard_acidchitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XL biosilicified chitin arm guards", "str_pl": "pairs of XL biosilicified chitin arm guards" },
+    "name": { "str": "pair of biosilicified chitin arm guards", "str_pl": "pairs of biosilicified chitin arm guards" },
     "proportional": { "weight": 1.25, "volume": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_armguard_acidchitin",
     "type": "ARMOR",
     "copy-from": "armguard_acidchitin",
-    "name": { "str": "pair of XS biosilicified chitin arm guards", "str_pl": "pairs of XS biosilicified chitin arm guards" },
+    "name": { "str": "pair of biosilicified chitin arm guards", "str_pl": "pairs of biosilicified chitin arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "cloth_arms_padded",
@@ -250,19 +250,19 @@
   {
     "id": "xl_armguard_hard",
     "type": "ARMOR",
-    "name": { "str": "pair of XL hard arm guards", "str_pl": "pairs of XL hard arm guards" },
+    "name": { "str": "pair of hard arm guards", "str_pl": "pairs of hard arm guards" },
     "weight": "550 g",
     "volume": "4 L",
     "copy-from": "armguard_hard",
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_armguard_hard",
     "type": "ARMOR",
     "copy-from": "armguard_hard",
-    "name": { "str": "pair of XS hard arm guards", "str_pl": "pairs of XS hard arm guards" },
+    "name": { "str": "pair of hard arm guards", "str_pl": "pairs of hard arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "leather_arm_guards",
@@ -295,18 +295,18 @@
   {
     "id": "leather_arm_guards_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL leather arm guards", "str_pl": "pairs of XL leather arm guards" },
-    "copy-from": "leather_arm_guards",
+    "name": { "str": "pair of leather arm guards", "str_pl": "pairs of leather arm guards" },
+    "copy-from": "armguard_larmor",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_arm_guards_xs",
     "type": "ARMOR",
-    "copy-from": "leather_arm_guards",
-    "name": { "str": "pair of XS leather arm guards", "str_pl": "pairs of XS leather arm guards" },
+    "copy-from": "armguard_larmor",
+    "name": { "str": "pair of leather arm guards", "str_pl": "pairs of leather arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "paper_vambraces",
@@ -412,18 +412,18 @@
   {
     "id": "sheet_metal_bracers_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL sheet metal bracers", "str_pl": "pairs of XL sheet metal bracers" },
+    "name": { "str": "pair of sheet metal bracers", "str_pl": "pairs of sheet metal bracers" },
     "copy-from": "sheet_metal_bracers",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "sheet_metal_bracers_xs",
     "type": "ARMOR",
     "copy-from": "sheet_metal_bracers",
-    "name": { "str": "pair of XS sheet metal bracers", "str_pl": "pairs of XS sheet metal bracers" },
+    "name": { "str": "pair of sheet metal bracers", "str_pl": "pairs of sheet metal bracers" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "tire_arm_guards",
@@ -455,18 +455,18 @@
   {
     "id": "tire_arm_guards_xl",
     "type": "ARMOR",
-    "copy-from": "tire_arm_guards",
-    "name": { "str": "pair of XL tire arm guards", "str_pl": "pairs of XL tire arm guards" },
+    "name": { "str": "pair of tire arm guards", "str_pl": "pairs of tire arm guards" },
+    "copy-from": "armguard_tire",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "tire_arm_guards_xs",
     "type": "ARMOR",
-    "copy-from": "tire_arm_guards",
-    "name": { "str": "pair of XS tire arm guards", "str_pl": "pairs of XS tire arm guards" },
+    "copy-from": "armguard_tire",
+    "name": { "str": "pair of tire arm guards", "str_pl": "pairs of tire arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "armguard_soft",
@@ -500,19 +500,19 @@
   {
     "id": "xl_armguard_soft",
     "type": "ARMOR",
-    "name": { "str": "pair of XL neoprene arm sleeves", "str_pl": "pairs of XL neoprene arm sleeves" },
+    "name": { "str": "pair of neoprene arm sleeves", "str_pl": "pairs of neoprene arm sleeves" },
     "weight": "330 g",
     "volume": "1750 ml",
     "copy-from": "armguard_soft",
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_armguard_soft",
     "type": "ARMOR",
     "copy-from": "armguard_soft",
-    "name": { "str": "pair of XS neoprene arm sleeves", "str_pl": "pairs of XS neoprene arm sleeves" },
+    "name": { "str": "pair of neoprene arm sleeves", "str_pl": "pairs of neoprene arm sleeves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gambeson_sleeve",
@@ -538,18 +538,18 @@
   {
     "id": "xl_gambeson_sleeve",
     "type": "ARMOR",
-    "name": { "str": "pair of XL gambeson sleeves", "str_pl": "pairs of XL gambeson sleeves" },
+    "name": { "str": "pair of gambeson sleeves", "str_pl": "pairs of gambeson sleeves" },
     "copy-from": "gambeson_sleeve",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gambeson_sleeve",
     "type": "ARMOR",
-    "name": { "str": "pair of XS gambeson sleeves", "str_pl": "pairs of XS gambeson sleeves" },
+    "name": { "str": "pair of gambeson sleeves", "str_pl": "pairs of gambeson sleeves" },
     "copy-from": "gambeson_sleeve",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_sleeves",
@@ -607,6 +607,7 @@
     ]
   },
   {
+<<<<<<< HEAD
     "id": "chainmail_sleeves_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
@@ -619,12 +620,29 @@
       "menu_text": "Loosen"
     },
     "extend": { "flags": [ "UNDERSIZE" ] }
+=======
+    "id": "xl_k_gambeson_sleeve",
+    "type": "ARMOR",
+    "name": { "str": "pair of Kevlar gambeson sleeves", "str_pl": "pairs of Kevlar gambeson sleeves" },
+    "copy-from": "k_gambeson_sleeve",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
+  },
+  {
+    "id": "xs_k_gambeson_sleeve",
+    "type": "ARMOR",
+    "name": { "str": "pair of Kevlar gambeson sleeves", "str_pl": "pairs of Kevlar gambeson sleeves" },
+    "copy-from": "k_gambeson_sleeve",
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
+>>>>>>> Move XL-XS to JSON tags
   },
   {
     "id": "chainmail_sleeves_xl",
     "type": "ARMOR",
+<<<<<<< HEAD
     "copy-from": "chainmail_sleeves",
-    "name": { "str": "pair of XL chainmail sleeves", "str_pl": "pairs of XL chainmail sleeves" },
+    "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -632,11 +650,42 @@
       "target": "chainmail_sleeves_loose_xl",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
+=======
+    "copy-from": "base_chainmail_arms",
+    "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
+    "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "volume_encumber_modifier": 0,
+        "ablative": true,
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "20 kg",
+        "max_item_length": "65 cm",
+        "moves": 1500,
+        "description": "You can wear some armor over chainmail without penalty.",
+        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "volume_encumber_modifier": 0,
+        "ablative": true,
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "20 kg",
+        "max_item_length": "65 cm",
+        "moves": 1000,
+        "description": "You can wear some armor over chainmail without penalty.",
+        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
+      }
+    ],
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
+>>>>>>> Move XL-XS to JSON tags
   },
   {
     "id": "chainmail_junk_sleeves",
     "type": "ARMOR",
+<<<<<<< HEAD
     "copy-from": "chainmail_sleeves",
     "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
     "description": "Protective sleeves made of interlocking links of low-quality steel wire.  The fit can be adjusted to allow them to serve as outerwear.",
@@ -647,6 +696,36 @@
       "target": "chainmail_junk_sleeves_loose",
       "menu_text": "Loosen"
     }
+=======
+    "copy-from": "base_chainmail_arms",
+    "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "volume_encumber_modifier": 0,
+        "ablative": true,
+        "max_contains_volume": "1700 ml",
+        "max_contains_weight": "20 kg",
+        "max_item_length": "65 cm",
+        "moves": 1500,
+        "description": "You can wear some armor over chainmail without penalty.",
+        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "volume_encumber_modifier": 0,
+        "ablative": true,
+        "max_contains_volume": "550 ml",
+        "max_contains_weight": "20 kg",
+        "max_item_length": "65 cm",
+        "moves": 1000,
+        "description": "You can wear some armor over chainmail without penalty.",
+        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
+      }
+    ],
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
+>>>>>>> Move XL-XS to JSON tags
   },
   {
     "id": "chainmail_sleeves_loose",
@@ -680,7 +759,7 @@
     "id": "chainmail_sleeves_loose_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves_xl",
-    "name": { "str": "pair of XL chainmail sleeves (loose)", "str_pl": "pairs of XL chainmail sleeves (loose)" },
+    "name": { "str": "pair of chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -734,6 +813,7 @@
     ]
   },
   {
+<<<<<<< HEAD
     "id": "bronze_vambraces",
     "type": "ARMOR",
     "category": "armor",
@@ -763,18 +843,18 @@
   {
     "id": "bronze_vambraces_xl",
     "type": "ARMOR",
-    "copy-from": "bronze_vambraces",
-    "name": { "str": "pair of XL bronze vambraces", "str_pl": "pairs of XL bronze vambraces" },
+    "copy-from": "armguard_bronze",
+    "name": { "str": "pair of bronze vambraces", "str_pl": "pairs of bronze vambraces" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "bronze_vambraces_xs",
     "type": "ARMOR",
-    "copy-from": "bronze_vambraces",
-    "name": { "str": "pair of XS bronze vambraces", "str_pl": "pairs of XS bronze vambraces" },
+    "copy-from": "armguard_bronze",
+    "name": { "str": "pair of bronze vambraces", "str_pl": "pairs of bronze vambraces" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "leather_vambraces",
@@ -807,19 +887,20 @@
   {
     "id": "leather_vambraces_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL leather vambraces", "str_pl": "pairs of XL leather vambraces" },
+    "name": { "str": "pair of leather vambraces", "str_pl": "pairs of leather vambraces" },
     "weight": "531 g",
     "volume": "1250 ml",
-    "copy-from": "leather_vambraces",
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "copy-from": "vambrace_larmor",
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_vambraces_xs",
     "type": "ARMOR",
-    "copy-from": "leather_vambraces",
-    "name": { "str": "pair of XS leather vambraces", "str_pl": "pairs of XS leather vambraces" },
+    "copy-from": "vambrace_larmor",
+    "looks_like": "vambrace_larmor",
+    "name": { "str": "pair of leather vambraces", "str_pl": "pairs of leather vambraces" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "armguard_cut_resistant",
@@ -867,18 +948,24 @@
   {
     "id": "platemail_arm_guards_xs",
     "type": "ARMOR",
-    "name": { "str": "XS pair of plate arm guards", "str_pl": "XS pairs of plate arm guards" },
+<<<<<<< HEAD
+    "name": { "str": "pair of plate arm guards", "str_pl": "pairs of plate arm guards" },
     "copy-from": "platemail_arm_guards",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "platemail_arm_guards_xl",
     "type": "ARMOR",
+<<<<<<< HEAD
     "name": { "str": "XL pair of plate arm guards", "str_pl": "XL pairs of plate arm guards" },
     "copy-from": "platemail_arm_guards",
+=======
+    "name": { "str": "tempered steel light arm guard" },
+    "copy-from": "armor_qt_lightarmguard",
+>>>>>>> Move XL-XS to JSON tags
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "platemail_pauldrons",
@@ -914,18 +1001,12 @@
   {
     "id": "platemail_pauldrons_xs",
     "type": "ARMOR",
-    "name": { "str": "pair of XS plate pauldrons", "str_pl": "pairs of XS plate pauldrons" },
+    "name": { "str": "pair of plate pauldrons", "str_pl": "pairs of plate pauldrons" },
     "copy-from": "platemail_pauldrons",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "platemail_pauldrons_xl",
-    "type": "ARMOR",
-    "name": { "str": "pair of XL plate pauldrons", "str_pl": "pairs of XL plate pauldrons" },
-    "copy-from": "platemail_pauldrons",
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_pauldrons",
@@ -960,18 +1041,18 @@
   {
     "id": "leather_pauldrons_xs",
     "type": "ARMOR",
-    "name": { "str": "pair of XS leather pauldrons", "str_pl": "pairs of XS leather pauldrons" },
+    "name": { "str": "pair of leather pauldrons", "str_pl": "pairs of leather pauldrons" },
     "copy-from": "leather_pauldrons",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "leather_pauldrons_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL leather pauldrons", "str_pl": "pairs of XL leather pauldrons" },
+    "name": { "str": "pair of leather pauldrons", "str_pl": "pairs of leather pauldrons" },
     "copy-from": "leather_pauldrons",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "armor_riot_arm",

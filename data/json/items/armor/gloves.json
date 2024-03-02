@@ -68,18 +68,18 @@
   {
     "id": "chainmail_gloves_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail gloves", "str_pl": "pairs of XL chainmail gloves" },
+    "name": { "str": "chainmail gloves", "str_pl": "pairs of chainmail gloves" },
     "copy-from": "chainmail_gloves",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_gloves_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_gloves",
-    "name": { "str": "XS chainmail gloves", "str_pl": "pairs of XS chainmail gloves" },
+    "name": { "str": "chainmail gloves", "str_pl": "pairs of chainmail gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_junk_gloves",
@@ -196,18 +196,18 @@
   {
     "id": "xl_gauntlets_chitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XL chitinous gauntlets", "str_pl": "pairs of XL chitinous gauntlets" },
+    "name": { "str": "pair of chitinous gauntlets", "str_pl": "pairs of chitinous gauntlets" },
     "copy-from": "gauntlets_chitin",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gauntlets_chitin",
     "type": "ARMOR",
     "copy-from": "gauntlets_chitin",
-    "name": { "str": "pair of XS chitinous gauntlets", "str_pl": "pairs of XS chitinous gauntlets" },
+    "name": { "str": "pair of chitinous gauntlets", "str_pl": "pairs of chitinous gauntlets" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gauntlets_acidchitin",
@@ -222,18 +222,18 @@
   {
     "id": "xl_gauntlets_acidchitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XL biosilicified chitin gauntlets", "str_pl": "pairs of XL biosilicified chitin gauntlets" },
+    "name": { "str": "pair of biosilicified chitin gauntlets", "str_pl": "pairs of biosilicified chitin gauntlets" },
     "copy-from": "gauntlets_acidchitin",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gauntlets_acidchitin",
     "type": "ARMOR",
     "copy-from": "gauntlets_acidchitin",
-    "name": { "str": "pair of XS biosilicified chitin gauntlets", "str_pl": "pairs of XS biosilicified chitin gauntlets" },
+    "name": { "str": "pair of biosilicified chitin gauntlets", "str_pl": "pairs of biosilicified chitin gauntlets" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_claws",
@@ -330,18 +330,18 @@
   {
     "id": "leather_gauntlets_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL leather gauntlets", "str_pl": "pairs of XL leather gauntlets" },
+    "name": { "str": "pair of leather gauntlets", "str_pl": "pairs of leather gauntlets" },
     "copy-from": "leather_gauntlets",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_gauntlets_xs",
     "type": "ARMOR",
     "copy-from": "leather_gauntlets",
-    "name": { "str": "pair of XS leather gauntlets", "str_pl": "pairs of XS leather gauntlets" },
+    "name": { "str": "pair of leather gauntlets", "str_pl": "pairs of leather gauntlets" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_bag",
@@ -464,19 +464,19 @@
   {
     "id": "xl_gloves_fur",
     "type": "ARMOR",
-    "name": { "str": "pair of XL fur gloves", "str_pl": "pairs of XL fur gloves" },
+    "name": { "str": "pair of fur gloves", "str_pl": "pairs of fur gloves" },
     "copy-from": "gloves_fur",
     "proportional": { "weight": 1.6, "volume": 1.6 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gloves_fur",
     "type": "ARMOR",
     "copy-from": "gloves_fur",
     "looks_like": "gloves_fur",
-    "name": { "str": "pair of XS fur gloves", "str_pl": "pairs of XS fur gloves" },
+    "name": { "str": "pair of fur gloves", "str_pl": "pairs of fur gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_faux_fur",
@@ -490,7 +490,7 @@
     "to_hit": 1,
     "material": [ "faux_fur" ],
     "symbol": "[",
-    "looks_like": "fire_gauntlets",
+    "looks_like": "gloves_fur",
     "color": "brown",
     "warmth": 55,
     "material_thickness": 3,
@@ -499,19 +499,18 @@
   {
     "id": "xl_gloves_faux_fur",
     "type": "ARMOR",
-    "name": { "str": "pair of XL faux fur gloves", "str_pl": "pairs of XL faux fur gloves" },
+    "name": { "str": "pair of faux fur gloves", "str_pl": "pairs of faux fur gloves" },
     "copy-from": "gloves_faux_fur",
     "proportional": { "weight": 1.6, "volume": 1.6 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gloves_faux_fur",
     "type": "ARMOR",
     "copy-from": "gloves_faux_fur",
-    "looks_like": "gloves_fur",
-    "name": { "str": "pair of XS faux fur gloves", "str_pl": "pairs of XS fur gloves" },
+    "name": { "str": "pair of faux fur gloves", "str_pl": "pairs of faux fur gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_leather",
@@ -536,19 +535,19 @@
   {
     "id": "xl_gloves_leather",
     "type": "ARMOR",
-    "name": { "str": "pair of XL leather gloves", "str_pl": "pairs of XL leather gloves" },
+    "name": { "str": "pair of leather gloves", "str_pl": "pairs of leather gloves" },
     "copy-from": "gloves_leather",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gloves_leather",
     "type": "ARMOR",
     "copy-from": "gloves_leather",
     "looks_like": "gloves_leather",
-    "name": { "str": "pair of XS leather gloves", "str_pl": "pairs of XS leather gloves" },
+    "name": { "str": "pair of leather gloves", "str_pl": "pairs of leather gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_denim",
@@ -622,19 +621,19 @@
   {
     "id": "xl_gloves_light",
     "type": "ARMOR",
-    "name": { "str": "pair of XL light gloves", "str_pl": "pairs of XL light gloves" },
+    "name": { "str": "pair of light gloves", "str_pl": "pairs of light gloves" },
     "copy-from": "gloves_light",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gloves_light",
     "type": "ARMOR",
     "copy-from": "gloves_light",
     "looks_like": "gloves_light",
-    "name": { "str": "pair of XS light gloves", "str_pl": "pairs of XS light gloves" },
+    "name": { "str": "pair of light gloves", "str_pl": "pairs of light gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_liner",
@@ -658,19 +657,19 @@
   {
     "id": "xl_gloves_liner",
     "type": "ARMOR",
-    "name": { "str": "pair of XL glove liners", "str_pl": "pairs of XL glove liners" },
+    "name": { "str": "pair of glove liners", "str_pl": "pairs of glove liners" },
     "copy-from": "gloves_liner",
     "proportional": { "weight": 2, "volume": 2 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gloves_liner",
     "type": "ARMOR",
     "copy-from": "gloves_liner",
     "looks_like": "gloves_liner",
-    "name": { "str": "pair of XS glove liners", "str_pl": "pairs of XS glove liners" },
+    "name": { "str": "pair of glove liners", "str_pl": "pairs of glove liners" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_medical",
@@ -789,19 +788,19 @@
   {
     "id": "xl_gloves_wool",
     "type": "ARMOR",
-    "name": { "str": "pair of XL wool gloves", "str_pl": "pairs of XL wool gloves" },
+    "name": { "str": "pair of wool gloves", "str_pl": "pairs of wool gloves" },
     "copy-from": "gloves_wool",
     "proportional": { "weight": 1.4, "volume": 1.4 },
-    "flags": [ "OVERSIZE" ]
+    "flags": [ "OVERSIZE", "PREFIX_XL" ]
   },
   {
     "id": "xs_gloves_wool",
     "type": "ARMOR",
     "copy-from": "gloves_wool",
     "looks_like": "gloves_wool",
-    "name": { "str": "pair of XS wool gloves", "str_pl": "pairs of XS wool gloves" },
+    "name": { "str": "pair of wool gloves", "str_pl": "pairs of wool gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "UNDERSIZE" ]
+    "flags": [ "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "gloves_work",

@@ -90,16 +90,16 @@
     "id": "pants_survivor_xl",
     "type": "ARMOR",
     "copy-from": "pants_survivor",
-    "name": { "str_sp": "XL survivor cargo pants" },
+    "name": { "str_sp": "survivor cargo pants" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "pants_survivor_xs",
     "type": "ARMOR",
     "copy-from": "pants_survivor",
-    "name": { "str_sp": "XS survivor cargo pants" },
+    "name": { "str_sp": "survivor cargo pants" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   }
 ]

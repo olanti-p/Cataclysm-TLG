@@ -64,19 +64,19 @@
   {
     "id": "xl_armor_chitin",
     "type": "ARMOR",
-    "name": { "str": "XL chitinous armor" },
+    "name": { "str": "chitinous armor" },
     "copy-from": "armor_chitin",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "armor_chitin_xs",
     "type": "ARMOR",
     "copy-from": "armor_chitin",
     "looks_like": "armor_chitin",
-    "name": { "str": "XS chitinous armor" },
+    "name": { "str": "chitinous armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "STURDY", "OUTER", "UNDERSIZE" ]
+    "flags": [ "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "armor_acidchitin",
@@ -93,19 +93,19 @@
   {
     "id": "xl_armor_acidchitin",
     "type": "ARMOR",
-    "name": { "str": "XL biosilicified chitin armor" },
+    "name": { "str": "biosilicified chitin armor" },
     "copy-from": "armor_acidchitin",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "armor_acidchitin_xs",
     "type": "ARMOR",
     "copy-from": "armor_acidchitin",
     "looks_like": "armor_acidchitin",
-    "name": { "str": "XS biosilicified chitin armor" },
+    "name": { "str": "biosilicified chitin armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "armor_farmor",
@@ -153,19 +153,19 @@
   {
     "id": "xl_armor_farmor",
     "type": "ARMOR",
-    "name": { "str": "XL fur body armor" },
+    "name": { "str": "fur body armor" },
     "copy-from": "armor_farmor",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "armor_farmor_xs",
     "type": "ARMOR",
     "copy-from": "armor_farmor",
     "looks_like": "armor_farmor",
-    "name": { "str": "XS fur body armor" },
+    "name": { "str": "fur body armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE" ]
+    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "armor_faux_farmor",
@@ -212,19 +212,18 @@
   {
     "id": "xl_armor_faux_farmor",
     "type": "ARMOR",
-    "name": { "str": "XL faux fur body armor" },
+    "name": { "str": "faux fur body armor" },
     "copy-from": "armor_faux_farmor",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "armor_faux_farmor_xs",
     "type": "ARMOR",
     "copy-from": "armor_faux_farmor",
-    "looks_like": "armor_farmor",
-    "name": { "str": "XS faux fur body armor" },
+    "name": { "str": "faux fur body armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE" ]
+    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "leather_armor_suit",
@@ -261,19 +260,19 @@
   {
     "id": "leather_armor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL suit of leather armor", "str_pl": "XL suits of leather armor" },
+    "name": { "str": "suit of leather armor", "str_pl": "suits of leather armor" },
     "copy-from": "leather_armor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_armor_suit_xs",
     "type": "ARMOR",
     "copy-from": "leather_armor_suit",
     "looks_like": "leather_armor_suit",
-    "name": { "str": "XS suit of leather armor", "str_pl": "XS suits of leather armor" },
+    "name": { "str": "suit of leather armor", "str_pl": "suits of leather armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "UNDERSIZE" ]
+    "flags": [ "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "junk_platemail_suit",
@@ -564,16 +563,16 @@
   {
     "id": "plated_leather_armor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL suit of plated leather armor", "str_pl": "XL suits of plated leather armor" },
+    "name": { "str": "suit of plated leather armor", "str_pl": "suits of plated leather armor" },
     "copy-from": "plated_leather_armor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "plated_leather_armor_suit_xs",
     "type": "ARMOR",
     "copy-from": "plated_leather_armor_suit",
-    "name": { "str": "XS suit of plated leather armor", "str_pl": "XS suits of plated leather armor" },
+    "name": { "str": "suit of plated leather armor", "str_pl": "suits of plated leather armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -796,7 +795,7 @@
   {
     "id": "chainmail_hauberk_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail hauberk" },
+    "name": { "str": "chainmail hauberk" },
     "copy-from": "chainmail_hauberk",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
@@ -805,13 +804,13 @@
       "target": "chainmail_hauberk_loose_xl",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_hauberk_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_hauberk",
-    "name": { "str": "XS chainmail hauberk" },
+    "name": { "str": "chainmail hauberk" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -819,7 +818,7 @@
       "target": "chainmail_hauberk_loose_xs",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_hauberk_loose",
@@ -838,7 +837,7 @@
   {
     "id": "chainmail_hauberk_loose_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail hauberk (loose)" },
+    "name": { "str": "chainmail hauberk (loose)" },
     "copy-from": "chainmail_hauberk_loose",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
@@ -847,13 +846,13 @@
       "target": "chainmail_hauberk_xl",
       "menu_text": "Tighten"
     },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_hauberk_loose_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_hauberk_loose",
-    "name": { "str": "XS chainmail hauberk (loose)" },
+    "name": { "str": "chainmail hauberk (loose)" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -861,7 +860,7 @@
       "target": "chainmail_hauberk_xs",
       "menu_text": "Tighten"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_junk_hauberk",
@@ -992,18 +991,18 @@
   {
     "id": "chainmail_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail suit" },
+    "name": { "str": "chainmail suit" },
     "copy-from": "chainmail_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_suit_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_suit",
-    "name": { "str": "XS chainmail suit" },
+    "name": { "str": "chainmail suit" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_suit_faraday",
@@ -1119,17 +1118,17 @@
     "id": "chainmail_suit_faraday_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_suit_faraday",
-    "name": { "str": "XL Faraday chainmail" },
+    "name": { "str": "Faraday chainmail" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_suit_faraday_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_suit_faraday",
-    "name": { "str": "XS Faraday chainmail" },
+    "name": { "str": "Faraday chainmail" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "cleansuit",
@@ -1187,19 +1186,19 @@
   {
     "id": "xl_entry_suit",
     "type": "ARMOR",
-    "name": { "str": "XL entry suit" },
+    "name": { "str": "entry suit" },
     "copy-from": "entry_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "entry_suit_xs",
     "type": "ARMOR",
     "copy-from": "entry_suit",
     "looks_like": "entry_suit",
-    "name": { "str": "XS entry suit" },
+    "name": { "str": "entry suit" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "bite_suit",
@@ -1312,19 +1311,19 @@
   {
     "id": "xl_nomex_suit",
     "type": "ARMOR",
-    "name": { "str": "XL flame-resistant suit" },
+    "name": { "str": "flame-resistant suit" },
     "copy-from": "nomex_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "nomex_suit_xs",
     "type": "ARMOR",
     "copy-from": "nomex_suit",
     "looks_like": "nomex_suit",
-    "name": { "str": "XS flame-resistant suit" },
+    "name": { "str": "flame-resistant suit" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "robofac_enviro_suit",

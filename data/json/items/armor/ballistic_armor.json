@@ -944,7 +944,7 @@
     "material": [ "nylon", "kevlar_layered" ],
     "color": "light_gray",
     "warmth": 15,
-    "flags": [ "STURDY", "OUTER", "WATER_FRIENDLY", "OVERSIZE" ],
+    "flags": [ "STURDY", "OUTER", "WATER_FRIENDLY", "OVERSIZE", "PREFIX_XL" ],
     "use_action": [ { "type": "attach_molle", "size": 12 }, { "type": "detach_molle" } ],
     "armor": [
       {
@@ -964,7 +964,7 @@
     "id": "xl_ballistic_vest_steel",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "XL steel-plated plate carrier" },
+    "name": { "str": "steel-plated plate carrier" },
     "description": "An enormous handmade ballistic vest built with lots of salvaged ballistic Kevlar panels and homemade \"ballistic inserts\" made of steel.  The thin metal isn't the most protective, but it's probably better than just plain Kevlar.",
     "weight": "12500 g",
     "volume": "9 L",
@@ -973,7 +973,7 @@
     "material": [ "nylon", "kevlar_layered", "steel" ],
     "color": "light_gray",
     "warmth": 20,
-    "flags": [ "STURDY", "OUTER", "WATER_FRIENDLY", "OVERSIZE" ],
+    "flags": [ "STURDY", "OUTER", "WATER_FRIENDLY", "OVERSIZE", "PREFIX_XL" ],
     "use_action": [ { "type": "attach_molle", "size": 12 }, { "type": "detach_molle" } ],
     "armor": [
       {
