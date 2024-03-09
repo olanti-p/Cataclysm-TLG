@@ -5867,7 +5867,7 @@
     "prereqs": [ "STR_UP_2" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
-    "enchantments": [ { "values": [ { "value": "STRENGTH", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "STRENGTH", "add": { "math": [ "alpha_stat_bonus(u_val('strength_base'))" ] } } ] } ]
   },
   {
     "type": "mutation",
@@ -5956,7 +5956,7 @@
     "prereqs": [ "DEX_UP_2" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
-    "enchantments": [ { "values": [ { "value": "DEXTERITY", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DEXTERITY", "add": { "math": [ "alpha_stat_bonus(u_val('dexterity_base'))" ] } } ] } ]
   },
   {
     "type": "mutation",
@@ -6020,7 +6020,7 @@
     "prereqs": [ "INT_UP_2" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
-    "enchantments": [ { "values": [ { "value": "INTELLIGENCE", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "INTELLIGENCE", "add": { "math": [ "alpha_stat_bonus(u_val('intelligence_base'))" ] } } ] } ]
   },
   {
     "type": "mutation",
@@ -6043,11 +6043,11 @@
       }
     ],
     "armor": [
-      {
-        "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ],
-        "bash": -3
-      }
-    ]
+    {
+      "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ],
+      "bash": -3
+    }
+  ]
   },
   {
     "type": "mutation",
@@ -6108,7 +6108,7 @@
     "prereqs": [ "PER_UP_2" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
-    "enchantments": [ { "values": [ { "value": "PERCEPTION", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "PERCEPTION", "add": { "math": [ "alpha_stat_bonus(u_val('perception_base'))" ] } } ] } ]
   },
   {
     "type": "mutation",
