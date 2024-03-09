@@ -28,6 +28,7 @@ static const mutation_category_id mutation_category_TROGLOBITE( "TROGLOBITE" );
 
 static const trait_id trait_EAGLEEYED( "EAGLEEYED" );
 static const trait_id trait_FELINE_EARS( "FELINE_EARS" );
+static const trait_id trait_EAGLEEYED( "EAGLEEYED" );
 static const trait_id trait_GOURMAND( "GOURMAND" );
 static const trait_id trait_MYOPIC( "MYOPIC" );
 static const trait_id trait_QUICK( "QUICK" );
