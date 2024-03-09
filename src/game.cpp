@@ -914,7 +914,7 @@ bool game::start_game()
         overmap_buffer.reveal( city_center_omt, city_size );
     }
 
-    u.moves = 0;
+    u.set_moves( 0 );
     u.process_turn(); // process_turn adds the initial move points
     u.set_stamina( u.get_stamina_max() );
     weather.temperature = SPRING_TEMPERATURE;
@@ -2701,7 +2701,7 @@ bool game::is_game_over()
     }
     if( uquit == QUIT_WATCH ) {
         // deny player movement and dodging
-        u.moves = 0;
+        u.set_moves( 0 );
         // prevent pain from updating
         u.set_pain( 0 );
         // prevent dodging
@@ -5613,7 +5613,7 @@ void game::exam_appliance( vehicle &veh, const point &c )
 {
     player_activity act = veh_app_interact::run( veh, c );
     if( act ) {
-        u.moves = 0;
+        u.set_moves( 0 );
         u.assign_activity( act );
     }
 }
@@ -5626,7 +5626,7 @@ void game::exam_vehicle( vehicle &veh, const point &c )
     }
     player_activity act = veh_interact::run( veh, c );
     if( act ) {
-        u.moves = 0;
+        u.set_moves( 0 );
         u.assign_activity( act );
     }
 }
@@ -5788,7 +5788,7 @@ void game::moving_vehicle_dismount( const tripoint &dest_loc )
     const units::angle d = ray.dir();
     add_msg( _( "You dive from the %s." ), veh->name );
     m.unboard_vehicle( u.pos() );
-    u.moves -= 200;
+    u.mod_moves( -to_moves<int>( 2_seconds ) );
     // Dive three tiles in the direction of tox and toy
     fling_creature( &u, d, 30, true, true );
     // Hit the ground according to vehicle speed
@@ -6342,7 +6342,7 @@ void game::peek()
 
 void game::peek( const tripoint &p )
 {
-    u.moves -= 200;
+    u.mod_moves( -u.get_speed() * 2 );
     tripoint prev = u.pos();
     u.setpos( p );
     const bool is_same_pos = u.pos() == prev;
@@ -10567,7 +10567,7 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
         return false;
     }
     bool diag = trigdist && u.posx() != dest_loc.x && u.posy() != dest_loc.y;
-    const int previous_moves = u.moves;
+    const int previous_moves = u.get_moves();
     if( u.is_mounted() ) {
         auto *crit = u.mounted_creature.get();
         if( !crit->has_flag( mon_flag_RIDEABLE_MECH ) &&
@@ -10581,10 +10581,10 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
         }
         const double base_moves = u.run_cost( mcost, diag ) * 100.0 / crit->get_speed();
         const double encumb_moves = u.get_weight() / 4800.0_gram;
-        u.moves -= static_cast<int>( std::ceil( base_moves + encumb_moves ) );
+        u.mod_moves( -static_cast<int>( std::ceil( base_moves + encumb_moves ) ) );
         crit->use_mech_power( u.current_movement_mode()->mech_power_use() );
     } else {
-        u.moves -= u.run_cost( mcost, diag );
+        u.mod_moves( -u.run_cost( mcost, diag ) );
         /**
         TODO:
         This should really use the mounted creatures stamina, if mounted.
@@ -10593,10 +10593,10 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
         */
         if( grabbed_vehicle == nullptr || grabbed_vehicle->wheelcache.empty() ) {
             //Burn normal amount of stamina if no vehicle grabbed or vehicle lacks wheels
-            u.burn_move_stamina( previous_moves - u.moves );
+            u.burn_move_stamina( previous_moves - u.get_moves() );
         } else {
             //Burn half as much stamina if vehicle has wheels, without changing move time
-            u.burn_move_stamina( 0.50 * ( previous_moves - u.moves ) );
+            u.burn_move_stamina( 0.50 * ( previous_moves - u.get_moves() ) );
         }
     }
     // Try and fail to drag someone with us.
@@ -11218,7 +11218,7 @@ bool game::phasing_move( const tripoint &dest_loc, const bool via_ramp )
         add_msg( _( "You quantum tunnel through the %d-tile wide barrier!" ), tunneldist );
         //tunneling costs 250 bionic power per impassable tile
         u.mod_power_level( -( tunneldist * trigger_cost ) );
-        u.moves -= 100; //tunneling costs 100 moves
+        u.mod_moves( -to_moves<int>( 1_seconds ) ); //tunneling takes exactly one second
         u.setpos( dest );
 
         if( m.veh_at( u.pos() ).part_with_feature( "BOARDABLE", true ) ) {
@@ -11980,7 +11980,8 @@ void game::vertical_move( int movez, bool force, bool peeking )
     }
 
     if( !u.move_effects( false ) && !force ) {
-        u.moves -= 100;
+        // move_effects determined we could not move, waste all moves
+        u.set_moves( 0 );
         return;
     }
 
@@ -12113,7 +12114,7 @@ void game::vertical_move( int movez, bool force, bool peeking )
             crit->use_mech_power( u.current_movement_mode()->mech_power_use() + 1_kJ );
         }
     } else {
-        u.moves -= move_cost;
+        u.mod_moves( -move_cost );
         u.burn_energy_all( -move_cost );
     }
 
@@ -12172,7 +12173,7 @@ void game::vertical_move( int movez, bool force, bool peeking )
         }
         if( player_displace ) {
             u.setpos( *displace );
-            u.moves -= 20;
+            u.mod_moves( -to_moves<int>( 1_seconds ) * 0.2 );;
             add_msg( _( "You push past %s blocking the way." ), crit_name );
         }
     }
@@ -12961,7 +12962,7 @@ void game::quickload()
             moves_since_last_save = 0;
             last_save_timestamp = std::time( nullptr );
 
-            u.moves = 0;
+            u.set_moves( 0 );
             uquit = QUIT_NOSAVED;
 
             main_menu::queued_world_to_load = world_name;
@@ -13443,7 +13444,8 @@ void game::climb_down_using( const tripoint &examp, climbing_aid_id aid_id, bool
 
     // If player is grabbed, trapped, or somehow otherwise movement-impeded, first try to break free
     if( !you.move_effects( false ) ) {
-        you.moves -= 100;
+        // move_effects determined we could not move, waste all moves
+        you.set_moves( 0 );
         return;
     }
 
@@ -13573,7 +13575,7 @@ void game::climb_down_using( const tripoint &examp, climbing_aid_id aid_id, bool
     you.set_activity_level( ACTIVE_EXERCISE );
     float weary_mult = 1.0f / you.exertion_adjusted_move_multiplier( ACTIVE_EXERCISE );
 
-    you.moves -= to_moves<int>( 1_seconds + 1_seconds * fall_mod ) * weary_mult;
+    you.mod_moves( -to_moves<int>( 1_seconds + 1_seconds * fall_mod ) * weary_mult );
     you.setpos( examp );
 
     // Pre-descent message.
