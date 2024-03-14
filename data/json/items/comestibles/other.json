@@ -658,7 +658,8 @@
     "price_postapoc": 0,
     "material": [ "paper" ],
     "volume": "3 ml",
-    "//2": "Based on https://www.sizes.com/home/napkins.htm"
+    "//2": "Based on https://www.sizes.com/home/napkins.htm",
+    "flags": [ "TINDER" ]
   },
   {
     "type": "GENERIC",
