@@ -68,6 +68,9 @@ static const damage_type_id damage_bullet( "bullet" );
 static const furn_str_id furn_f_plant_harvest( "f_plant_harvest" );
 static const furn_str_id furn_f_plant_mature( "f_plant_mature" );
 static const furn_str_id furn_f_plant_seedling( "f_plant_seedling" );
+static const flag_id json_flag_NO_RELOAD( "NO_RELOAD" );
+static const flag_id json_flag_NO_UNLOAD( "NO_UNLOAD" );
+
 
 static const gun_mode_id gun_mode_DEFAULT( "DEFAULT" );
 static const gun_mode_id gun_mode_MELEE( "MELEE" );
@@ -779,6 +782,18 @@ void Item_factory::finalize_post( itype &obj )
             } ) ) {
                 obj.repair.insert( tool );
             }
+        }
+    }
+
+    if( obj.has_flag( json_flag_NO_UNLOAD ) ) {
+        for( pocket_data &pocket : obj.pockets ) {
+            pocket._no_unload = true;
+        }
+    }
+
+    if( obj.has_flag( json_flag_NO_RELOAD ) ) {
+        for( pocket_data &pocket : obj.pockets ) {
+            pocket._no_reload = true;
         }
     }
 
