@@ -1299,7 +1299,6 @@ void monster::move()
             move_to( local_next_step, false, false, get_stagger_adjust( pos(), destination, local_next_step ) );
 
         if( !did_something ) {
-            // CHECKME: This used to always cost 100 moves, regardless of monster's speed!
             mod_moves( -get_speed() ); // If we don't do this, we'll get infinite loops.
         }
         if( has_effect( effect_dragging ) && dragged_foe != nullptr ) {
@@ -1706,7 +1705,6 @@ bool monster::bash_at( const tripoint &p )
 
     int bashskill = group_bash_skill( p );
     here.bash( p, bashskill );
-    // CHECKME: This used to always cost 100 moves, regardless of monster's speed!
     mod_moves( -get_speed() );
     return true;
 }
@@ -1879,7 +1877,6 @@ bool monster::move_to( const tripoint &p, bool force, bool step_on_critter,
     if( here.has_flag( ter_furn_flag::TFLAG_CLIMBABLE, destination ) ) {
         if( here.impassable( destination ) && critter == nullptr ) {
             if( flies() ) {
-                // CHECKME: This used to always cost 100 moves, regardless of monster's speed!
                 mod_moves( -get_speed() );
                 force = true;
                 if( get_option<bool>( "LOG_MONSTER_MOVEMENT" ) ) {
@@ -1888,7 +1885,6 @@ bool monster::move_to( const tripoint &p, bool force, bool step_on_critter,
                                             here.tername( p ) );
                 }
             } else if( climbs() ) {
-                // CHECKME: This used to always cost 150 moves, regardless of monster's speed!
                 mod_moves( -get_speed() * 1.5 );
                 force = true;
                 if( get_option<bool>( "LOG_MONSTER_MOVEMENT" ) ) {
