@@ -4062,7 +4062,7 @@
     "copy-from": "garnet_gold_tiara",
     "type": "ARMOR",
     "name": { "str": "gold hair beads", "str_pl": "sets of gold hair beads" },
-    "description": "an assortment of gold beads used to decorate locs or braids.",
+    "description": "An assortment of gold beads used to decorate locs or braids.",
     "weight": "15 g",
     "volume": "25 ml",
     "material": [ "gold" ],
