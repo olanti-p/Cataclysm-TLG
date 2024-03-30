@@ -2405,7 +2405,10 @@ bool generate_uniform_omt( const tripoint_abs_sm &p, const oter_id &terrain_type
 class tinymap : private map
 {
         friend class editmap;
-    public:
+protected:
+    tinymap(int mapsize, bool zlev) : map(mapsize, zlev) {};
+
+public:
         tinymap() : map( 2, false ) {}
         bool inbounds( const tripoint &p ) const override;
         bool inbounds( const tripoint_omt_ms &p ) const;
@@ -2645,5 +2648,18 @@ class fake_map : public tinymap
         explicit fake_map( const ter_id &ter_type = ter_str_id( "t_dirt" ).id() );
         ~fake_map() override;
         static constexpr int fake_map_z = -OVERMAP_DEPTH;
+};
+
+/**
+* Smallmap is similar to tinymap in that it covers a single overmap terrain (OMT) tile, but differs
+* from it in that it covers all Z levels, not just a single one. It's intended usage is for cases
+* where you need to operate on an OMT, but cannot guarantee you needs are restricted to a single
+* Z level.
+* The smallmap's natural relative reference system is the tripoint_omt_ms one.
+*/
+class smallmap : public tinymap
+{
+public:
+    smallmap() : tinymap(2, true) {}
 };
 #endif // CATA_SRC_MAP_H
