@@ -485,7 +485,7 @@
       "CONDUCTIVE"
     ],
     "weapon_category": [ "KNIVES" ],
-    "melee_damage": { "stab": 22 }
+    "melee_damage": { "stab": 21 }
   },
   {
     "id": "knife_hunting",
