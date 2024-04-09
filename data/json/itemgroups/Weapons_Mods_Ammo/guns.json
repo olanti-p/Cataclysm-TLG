@@ -759,7 +759,6 @@
       { "group": "nested_bh_m89", "prob": 20 },
       { "group": "nested_bfg50", "prob": 5 },
       { "group": "nested_carbine_flintlock", "prob": 140 },
-      { "group": "nested_famas", "prob": 1 },
       { "group": "nested_m60_semi", "prob": 10 },
       { "group": "nested_rifle_flintlock", "prob": 180 },
       { "group": "nested_oa93", "prob": 3 },
