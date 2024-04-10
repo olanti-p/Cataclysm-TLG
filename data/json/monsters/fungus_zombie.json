@@ -793,7 +793,7 @@
   {
     "id": "mon_zeindeer_fungus",
     "type": "MONSTER",
-    "name": { "str": "fungideer" },
+    "name": { "str_sp": "fungideer" },
     "looks_like": "mon_zeer",
     "description": "This bumpy, discolored reindeer resembles a malformed Rudolph, its nose having a faintly glowing red fungal sprout.  It'd look almost comical if it wasn't mutilating bodies with its innate strength.",
     "default_faction": "fungus",

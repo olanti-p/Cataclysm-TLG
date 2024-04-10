@@ -614,7 +614,7 @@
   {
     "id": "hakama_gi",
     "type": "ARMOR",
-    "name": { "str": "hakama" },
+    "name": { "str_sp": "hakama" },
     "description": "Plain black hakama for use in kendo and other martial arts.",
     "weight": "350 g",
     "volume": "1 L",
@@ -640,7 +640,7 @@
   {
     "id": "hakama",
     "type": "ARMOR",
-    "name": { "str": "hakama" },
+    "name": { "str_sp": "hakama" },
     "description": "A flowing, pleated garment which can be worn over a kimono.",
     "weight": "500 g",
     "volume": "1500 ml",
@@ -1434,7 +1434,7 @@
   {
     "id": "judo_gi",
     "type": "ARMOR",
-    "name": { "str": "judo gi" },
+    "name": { "str_sp": "judo gi" },
     "description": "Plain white judo gi.",
     "weight": "1000 g",
     "volume": "1500 ml",
@@ -1457,7 +1457,7 @@
   {
     "id": "karate_gi",
     "type": "ARMOR",
-    "name": { "str": "karate gi" },
+    "name": { "str_sp": "karate gi" },
     "description": "Plain white karate gi.  Made from loose and flowing cotton.",
     "weight": "400 g",
     "volume": "1500 ml",
@@ -1480,7 +1480,7 @@
   {
     "id": "kariginu",
     "type": "ARMOR",
-    "name": { "str": "kariginu" },
+    "name": { "str_sp": "kariginu" },
     "description": "A traditional, ankle-length Shinto robe with several layers and very wide sleeves.",
     "weight": "1400 g",
     "volume": "5500 ml",
@@ -1528,7 +1528,7 @@
   {
     "id": "keikogi",
     "type": "ARMOR",
-    "name": { "str": "keikogi" },
+    "name": { "str_sp": "keikogi" },
     "description": "Plain white keikogi for use in martial arts.",
     "weight": "250 g",
     "volume": "750 ml",
@@ -1594,7 +1594,7 @@
   {
     "id": "yukata",
     "type": "ARMOR",
-    "name": { "str": "yukata" },
+    "name": { "str_sp": "yukata" },
     "description": "An easy-to-wear, breezy robe secured with a sash.  Essentially Japanese pajamas.  Great for summer nights.",
     "weight": "900 g",
     "volume": "3 L",
@@ -1633,7 +1633,7 @@
   {
     "id": "haori",
     "type": "ARMOR",
-    "name": { "str": "haori" },
+    "name": { "str_sp": "haori" },
     "description": "A loose coat with wide sleeves that is worn unfastened over a kimono.  It is jet black with sparse, tasteful golden embroidery.",
     "weight": "800 g",
     "volume": "2 L",
@@ -2114,7 +2114,7 @@
   {
     "id": "santa_jacket",
     "type": "ARMOR",
-    "name": { "str": "santa jacket" },
+    "name": { "str": "Santa jacket" },
     "description": "A red jacket, trimmed with white faux fur, commonly used by bearded men on Christmas.  Warm and has a couple of small pockets.",
     "weight": "1500 g",
     "volume": "4500 ml",
@@ -2174,7 +2174,7 @@
   {
     "id": "santa_jacket_short",
     "type": "ARMOR",
-    "name": { "str": "short santa jacket" },
+    "name": { "str": "short Santa jacket" },
     "description": "A short red jacket with white faux fur as trim, similar to a Santa jacket but sleeveless, for a more revealing look on Christmas.",
     "weight": "1200 g",
     "volume": "2000 ml",
