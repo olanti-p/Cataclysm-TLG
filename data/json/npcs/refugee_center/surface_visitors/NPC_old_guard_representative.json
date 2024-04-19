@@ -20,9 +20,7 @@
         "condition": {
           "and": [
             { "u_has_mission": "MISSION_REFUGEE_Boris_CLEANUP" },
-            {
-              "not": { "npc_has_var": "cleanup_asked", "type": "mission", "context": "Boris_mission_1", "value": "yes" }
-            }
+            { "not": { "npc_has_var": "mission_Boris_mission_1_cleanup_asked", "value": "yes" } }
           ]
         },
         "trial": { "type": "PERSUADE", "difficulty": 15 },
@@ -97,7 +95,7 @@
     "id": "TALK_OLD_GUARD_REP_Refuse_Boris_Mission_1",
     "type": "talk_topic",
     "dynamic_line": "I'm sorry, but I can't leave my post here, and I just don't have the human resources even for a project like that.",
-    "speaker_effect": { "effect": { "npc_add_var": "cleanup_asked", "type": "mission", "context": "Boris_mission_1", "value": "yes" } },
+    "speaker_effect": { "effect": { "npc_add_var": "mission_Boris_mission_1_cleanup_asked", "value": "yes" } },
     "responses": [ { "text": "Well, thanks anyway…", "topic": "TALK_OLD_GUARD_REP" } ]
   },
   {
@@ -106,7 +104,7 @@
     "dynamic_line": "It's your lucky day: I just made contact with a couple volunteers like yourself, and that's exactly the sort of project I can put them to.",
     "speaker_effect": {
       "effect": [
-        { "npc_add_var": "cleanup_asked", "type": "mission", "context": "Boris_mission_1", "value": "yes" },
+        { "npc_add_var": "mission_Boris_mission_1_cleanup_asked", "value": "yes" },
         { "math": [ "u_mission_cleanup_promises_Boris_mission_1", "+=", "2" ] }
       ]
     },
