@@ -239,7 +239,7 @@
       { "item": "soup_dumplings", "prob": 15 },
       { "item": "curry_veggy", "prob": 15 },
       { "item": "curry_meat", "prob": 15 },
-      { "group": "flour_bag_paper_powder_1_70", "prob": 25 },
+      { "group": "flour_bag_paper_powder", "prob": 25 },
       { "group": "flour_bag_plastic_1_175", "prob": 5 },
       { "group": "milk_powder_bag_plastic_4", "prob": 20 },
       { "group": "cornmeal_box_small_10", "prob": 30 },
@@ -1083,7 +1083,7 @@
     "id": "fruit_leather_bag_plastic_5",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "fruit_leather", "container-item": "null", "count": 5 } ]
   },
   {
@@ -1091,7 +1091,7 @@
     "id": "dry_lentils_bag_plastic_2",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "dry_lentils", "container-item": "null", "count": 2 } ]
   },
   {
@@ -1099,7 +1099,7 @@
     "id": "gelatin_powder_bag_plastic_25",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "gelatin_powder", "container-item": "null", "count": 25 } ]
   },
   {
@@ -1196,7 +1196,7 @@
     "id": "pine_nuts_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "pine_nuts", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1204,7 +1204,7 @@
     "id": "candy_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "candy", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1212,7 +1212,7 @@
     "id": "candy2_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "candy2", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1220,7 +1220,7 @@
     "id": "candy3_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "candy3", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1228,7 +1228,7 @@
     "id": "candy4_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "candy4", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1236,7 +1236,7 @@
     "id": "cow_candy_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "cow_candy", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1252,7 +1252,7 @@
     "id": "mintpatties_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "mintpatties", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1268,7 +1268,7 @@
     "id": "maple_candy_bag_plastic_2",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "maple_candy", "container-item": "null", "count": 2 } ]
   },
   {
@@ -1276,7 +1276,7 @@
     "id": "candy_bracelet_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "candy_bracelet", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1292,7 +1292,7 @@
     "id": "pretzels_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "pretzels", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1300,7 +1300,7 @@
     "id": "porkstick_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "porkstick", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1308,7 +1308,7 @@
     "id": "chocpretzels_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "chocpretzels", "container-item": "null", "count": 3 } ]
   },
   {
@@ -1316,7 +1316,7 @@
     "id": "popcorn_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "popcorn", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1324,7 +1324,7 @@
     "id": "popcorn2_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "popcorn2", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1332,7 +1332,7 @@
     "id": "popcorn3_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "popcorn3", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1340,7 +1340,7 @@
     "id": "cracklins_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "cracklins", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1348,7 +1348,7 @@
     "id": "granola_bag_plastic_4",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "granola", "container-item": "null", "count": 4 } ]
   },
   {
@@ -1404,7 +1404,7 @@
     "id": "cheese_bag_plastic_4_8",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "cheese", "container-item": "null", "count": [ 4, 8 ] } ]
   },
   {
