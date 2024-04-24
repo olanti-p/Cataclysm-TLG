@@ -229,6 +229,31 @@
     "flags": [ "COLLAPSE_CONTENTS" ]
   },
   {
+    "id": "bag_plastic_small",
+    "type": "GENERIC",
+    "category": "container",
+    "name": { "str": "small plastic bag" },
+    "looks_like": "bag_plastic",
+    "description": "A small, open plastic bag.  Essentially trash.",
+    "weight": "1 g",
+    "volume": "2 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [ "plastic" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1250 g",
+        "moves": 400
+      }
+    ],
+    "symbol": ")",
+    "color": "light_gray",
+    "flags": [ "COLLAPSE_CONTENTS" ]
+  },
+  {
     "id": "bag_garbage",
     "type": "GENERIC",
     "category": "container",
