@@ -953,7 +953,7 @@
     "volume": "1 L",
     "price": 786750,
     "price_postapoc": 10490,
-    "material": [ "lead" ],
+    "material": [ "silver" ],
     "symbol": "=",
     "color": "light_gray"
   },
