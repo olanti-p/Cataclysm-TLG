@@ -289,7 +289,6 @@
     "//": "Any real, cutting weapons that can be used like an axe; large, heavy head with two sharp sides on a pole.",
     "tools": [
       [
-        [ "fire_ax", -1 ],
         [ "ax", -1 ],
         [ "hatchet", -1 ],
         [ "copper_ax", -1 ],
@@ -304,7 +303,9 @@
     "id": "real_great_axes",
     "type": "requirement",
     "//": "Any real, cutting weapons that can be used like an axe; large, heavy head with two sharp sides on a pole.",
-    "tools": [ [ [ "battleaxe", -1 ] ] ]
+    "tools": [ [
+      [ "fire_ax", -1 ],
+      [ "battleaxe", -1 ] ] ]
   },
   {
     "id": "basic_batons",
