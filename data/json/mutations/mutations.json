@@ -3214,6 +3214,8 @@
     "visibility": 1,
     "ugliness": 2,
     "description": "Your skin is covered with fine spines.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive moderate damage.",
+    "prereqs": [ "FELINE_FUR" ],
+    "types": [ "BODY_ARMOR_MOD" ],
     "changes_to": [ "QUILLS" ],
     "category": [ "BEAST" ]
   },
@@ -3227,6 +3229,7 @@
     "description": "Your body is covered with large quills.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive significant damage.",
     "prereqs": [ "SPINES" ],
     "category": [ "BEAST" ]
+    "types": [ "BODY_ARMOR_MOD" ]
   },
   {
     "type": "mutation",
