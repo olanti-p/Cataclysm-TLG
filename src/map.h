@@ -1941,8 +1941,7 @@ class map
         }
 
         bool inbounds_z( const int z ) const {
-            return z >= -OVERMAP_DEPTH && z <= OVERMAP_HEIGHT &&
-                   ( zlevels || z == get_abs_sub().z() );
+            return z >= -OVERMAP_DEPTH && z <= OVERMAP_HEIGHT;
         }
 
         /** Clips the coordinates of p to fit the map bounds */
