@@ -433,7 +433,7 @@
   {
     "id": "meat_raw_steak",
     "type": "requirement",
-    "//": "An unbroken slab of raw meat.  For when scraps just aren't good enough.",
+    "//": "A whole slab of raw, red meat.  Substitutes pork and beef, but not chicken, in common recipes.",
     "components": [ [ [ "meat", 1 ], [ "mutant_meat", 1 ], [ "human_flesh", 1 ], [ "mutant_human_flesh", 1 ], [ "demihuman_flesh", 1 ] ] ]
   },
   {
@@ -555,12 +555,11 @@
     ]
   },
   {
-    "id": "meat_cooked",
+    "id": "meat_red_cooked",
     "type": "requirement",
-    "//": "meat you'd put on a sandwich",
+    "//": "cooked red meat.",
     "components": [
       [
-        [ "any_cracklins", 2, "LIST" ],
         [ "meat_cooked", 1 ],
         [ "meat_fatty_cooked", 1 ],
         [ "meat_scrap_cooked", 10 ],
@@ -571,7 +570,6 @@
         [ "demihuman_cooked", 1 ],
         [ "meat_pickled", 1 ],
         [ "meat_smoked", 1 ],
-        [ "earthworm_dried", 10 ],
         [ "meat_salted", 1 ],
         [ "dry_meat", 1 ],
         [ "rehydrated_meat", 1 ],
@@ -581,6 +579,25 @@
         [ "bologna", 2 ],
         [ "can_spam", 2 ],
         [ "fried_spam", 2 ],
+        [ "meat_canned", 1 ],
+        [ "meat_aspic", 1 ],
+        [ "sausage", 1 ],
+        [ "sausage_cooked", 1 ],
+        [ "sausage_wasteland", 1 ],
+        [ "bratwurst_sausage", 1 ],
+        [ "meat_fried", 1 ]
+      ]
+    ]
+  },
+  {
+    "id": "meat_cooked",
+    "type": "requirement",
+    "//": "meat you'd put on a sandwich",
+    "components": [
+      [
+        [ "meat_red_cooked", 1, "LIST" ],
+        [ "any_cracklins", 2, "LIST" ],
+        [ "earthworm_dried", 10 ],
         [ "can_chicken", 1 ],
         [ "fish_cooked", 1 ],
         [ "fish_scrap_cooked", 10 ],
@@ -593,16 +610,9 @@
         [ "can_sardine", 1 ],
         [ "can_clams", 1 ],
         [ "salted_fish", 1 ],
-        [ "meat_canned", 1 ],
         [ "fish_canned", 1 ],
         [ "fish_pickled", 1 ],
-        [ "lobster_canned", 1 ],
-        [ "meat_aspic", 1 ],
-        [ "sausage", 1 ],
-        [ "sausage_cooked", 1 ],
-        [ "sausage_wasteland", 1 ],
-        [ "bratwurst_sausage", 1 ],
-        [ "meat_fried", 1 ]
+        [ "lobster_canned", 1 ]
       ]
     ]
   },
