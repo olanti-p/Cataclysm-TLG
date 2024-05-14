@@ -4047,7 +4047,7 @@ bool cata_tiles::draw_critter_above( const tripoint &p, lit_level ll, int &heigh
     Character &you = get_player_character();
     const Creature *pcritter = nullptr;
     // Search for a creature above
-    while( pcritter == nullptr && !here.dont_draw_lower_floor( scan_p ) &&
+    while( pcritter == nullptr && scan_p.z <= OVERMAP_HEIGHT && !here.dont_draw_lower_floor( scan_p ) &&
            scan_p.z - you.pos().z <= fov_3d_z_range ) {
         pcritter = get_creature_tracker().creature_at( scan_p, true );
         scan_p.z++;
