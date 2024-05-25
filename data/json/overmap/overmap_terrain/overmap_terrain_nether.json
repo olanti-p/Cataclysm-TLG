@@ -6,6 +6,15 @@
     "sym": " ",
     "color": "black",
     "see_cost": 10,
-    "flags": [ "RISK_HIGH" ]
+    "flags": [ "RISK_EXTREME" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "void_spider_lair_entrance", "void_spider_lair_a1", "void_spider_lair_a2" ],
+    "name": "abyss",
+    "sym": " ",
+    "color": "black",
+    "see_cost": 10,
+    "flags": [ "RISK_EXTREME" ]
   }
 ]
