@@ -1006,6 +1006,7 @@
         [ "integrated_welder", 300 ],
         [ "soldering_iron", 300 ],
         [ "soldering_iron_portable", 300 ],
+        [ "integrated_electrokit", 300 ],
         [ "oxy_torch", 40 ]
       ]
     ],
@@ -1182,6 +1183,7 @@
         [ "integrated_welder", 150 ],
         [ "soldering_iron", 150 ],
         [ "soldering_iron_portable", 150 ],
+        [ "integrated_electrokit", 150 ],
         [ "oxy_torch", 20 ]
       ]
     ],
@@ -1221,6 +1223,7 @@
         [ "integrated_welder", 75 ],
         [ "soldering_iron", 75 ],
         [ "soldering_iron_portable", 75 ],
+        [ "integrated_electrokit", 75 ],
         [ "oxy_torch", 10 ]
       ]
     ],
@@ -1385,6 +1388,7 @@
         [ "integrated_welder", 225 ],
         [ "soldering_iron", 225 ],
         [ "soldering_iron_portable", 225 ],
+        [ "integrated_electrokit", 225 ],
         [ "oxy_torch", 30 ]
       ]
     ],
@@ -1555,7 +1559,8 @@
         [ "welder_crude", 150 ],
         [ "integrated_welder", 150 ],
         [ "soldering_iron", 150 ],
-        [ "soldering_iron_portable", 150 ]
+        [ "soldering_iron_portable", 150 ],
+        [ "integrated_electrokit", 150 ]
       ]
     ],
     "components": [ [ [ "steel_chunk", 6 ], [ "scrap", 18 ] ], [ [ "pipe", 2 ] ] ]
