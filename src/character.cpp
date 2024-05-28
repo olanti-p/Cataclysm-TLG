@@ -572,6 +572,11 @@ Character::Character() :
     dex_bonus = 0;
     per_bonus = 0;
     int_bonus = 0;
+    ppen_str = 0;
+    ppen_dex = 0;
+    ppen_int = 0;
+    ppen_per = 0;
+    ppen_spd = 0;
     lifestyle = 0;
     daily_health = 0;
     health_tally = 0;
@@ -12545,17 +12550,19 @@ stat_mod Character::get_pain_penalty() const
 
     int stat_penalty = std::floor( std::pow( pain, 0.8f ) / 10.0f );
 
-    // Prevent negative penalties, there is better ways to give bonuses for pain
-    // Venera says int and per should be penalized more (and per is penalized less, for legacy reasons, duh)
-    // TODO change the formula to pain/10?
-    ret.strength = std::max( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_STR,
-                             stat_penalty ), 0.0 );
-    ret.dexterity = std::max( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_DEX,
-                              stat_penalty ), 0.0 );
-    ret.intelligence = std::max( enchantment_cache->modify_value(
-                                     enchant_vals::mod::PAIN_PENALTY_MOD_INT, stat_penalty ), 0.0 );
-    ret.perception = std::max( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_PER,
-                               stat_penalty * 0.666f ), 0.0 );
+    // Clamp penalties so that they are never negative (turning into bonuses) and never bring stats below 1.
+    // A stat of 0 is supposed to incapacitate the character, and pain alone wouldn't do that.
+    // TODO: Pain should probably not affect stats granted by bionics, its penalties should be capped, and its
+    // penalties should scale with max stat, but not linearly - 20 base strength should have a proportional
+    // advantage over 10 base strength assuming the same amount of pain.
+    ret.strength = std::clamp( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_STR,
+                             stat_penalty ), 0.0, get_str() - 1.0 );
+    ret.dexterity = std::clamp( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_DEX,
+                              stat_penalty ), 0.0, get_dex() - 1.0 );
+    ret.intelligence = std::clamp( enchantment_cache->modify_value(
+                                     enchant_vals::mod::PAIN_PENALTY_MOD_INT, stat_penalty * 1.333 ), 0.0, get_dex() - 1.0 );
+    ret.perception = std::clamp( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_PER,
+                               stat_penalty * 0.666f ), 0.0, get_dex() - 1.0 );
 
     int speed_penalty = std::pow( pain, 0.7f );
 
@@ -12563,6 +12570,17 @@ stat_mod Character::get_pain_penalty() const
                           speed_penalty ), 0.0 );
 
     ret.speed = std::min( ret.speed, 50 );
+    return ret;
+}
+
+stat_mod Character::read_pain_penalty() const
+{
+    stat_mod ret;
+    ret.strength = ppen_str;
+    ret.dexterity = ppen_dex;
+    ret.intelligence = ppen_int;
+    ret.perception = ppen_per;
+    ret.speed = ppen_spd;
     return ret;
 }
 
