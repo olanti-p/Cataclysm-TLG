@@ -1891,5 +1891,26 @@
     "volume": "240 ml",
     "flags": [ "EATEN_HOT", "FREEZERBURN" ],
     "fun": 4
+  },
+  {
+    "id": "scrapple",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": { "str_sp": "scrapple" },
+    "symbol": "%",
+    "looks_like": "offal_cooked",
+    "description": "Meat scraps and grain pressed into a loaf, sliced, and pan-fried.  It was a popular dish in the Mid-Atlantic United States.",
+    "price_postapoc": "40 cent",
+    "material": [ "flesh", "wheat" ],
+    "primary_material": "flesh",
+    "color": "brown",
+    "weight": "58 g",
+    "volume": "56 ml",
+    "spoils_in": "5 days",
+    "calories": 127,
+    "fun": 1,
+    "quench": -8,
+    "flags": [ "EATEN_HOT" ],
+    "vitamins": [ [ "vitC", 0 ], [ "calcium", 3 ], [ "iron", 8 ] ]
   }
 ]
