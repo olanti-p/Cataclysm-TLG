@@ -145,6 +145,8 @@ static const matype_id style_none( "style_none" );
 
 static const mongroup_id GROUP_DEBUG_EXACTLY_ONE( "GROUP_DEBUG_EXACTLY_ONE" );
 
+static const morale_type morale_perm_debug( "morale_perm_debug" );
+
 static const mtype_id mon_generator( "mon_generator" );
 
 static const trait_id trait_ASTHMA( "ASTHMA" );
@@ -2282,9 +2284,9 @@ static void character_edit_menu()
         case D_MORALE: {
             int value;
             if( query_int( value, _( "Set the morale to?  Currently: %d" ), you.get_morale_level() ) ) {
-                you.rem_morale( MORALE_PERM_DEBUG );
+                you.rem_morale( morale_perm_debug );
                 int morale_level_delta = value - you.get_morale_level();
-                you.add_morale( MORALE_PERM_DEBUG, morale_level_delta );
+                you.add_morale( morale_perm_debug, morale_level_delta );
                 you.apply_persistent_morale();
             }
         }
