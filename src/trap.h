@@ -63,7 +63,7 @@ bool map_regen( const tripoint &p, Creature *c, item *i );
 bool drain( const tripoint &p, Creature *c, item *i );
 bool snake( const tripoint &p, Creature *c, item *i );
 bool cast_spell( const tripoint &p, Creature *critter, item * );
-bool sound_detect( const tripoint &p, Creature *, item * );
+bool dummy_trap( const tripoint &p, Creature *critter, item * );
 } // namespace trapfunc
 
 struct vehicle_handle_trap_data {
