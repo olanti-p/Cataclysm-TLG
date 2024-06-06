@@ -2710,7 +2710,7 @@ std::optional<int> iuse::ma_manual( Character *p, item *it, const tripoint & )
     return 1;
 }
 
-// Why this still exist?
+// TODO: Why does this exist?
 std::optional<int> iuse::crowbar_weak( Character *p, item *it, const tripoint &pos )
 {
     return iuse::crowbar( p, it, pos );
