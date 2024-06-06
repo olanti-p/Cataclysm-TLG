@@ -2710,12 +2710,7 @@ std::optional<int> iuse::ma_manual( Character *p, item *it, const tripoint & )
     return 1;
 }
 
-// Remove after 0.G
-std::optional<int> iuse::hammer( Character *p, item *it, const tripoint &pos )
-{
-    return iuse::crowbar( p, it, pos );
-}
-
+// Why this still exist?
 std::optional<int> iuse::crowbar_weak( Character *p, item *it, const tripoint &pos )
 {
     return iuse::crowbar( p, it, pos );
@@ -2770,7 +2765,6 @@ std::optional<int> iuse::crowbar( Character *p, item *it, const tripoint &pos )
         return std::nullopt;
     }
 
-    // previously iuse::hammer
     if( prying->prying_nails ) {
         p->assign_activity( prying_activity_actor( pnt, item_location{*p, it} ) );
         return std::nullopt;
