@@ -93,7 +93,6 @@ IDENTIFIER_CHECK_BLACKLIST = {
     "bigun",
     "m2browning",
     "american_180",
-    "sig_mosquito",
     "fn_p90",
     "p50",
     "fn_ps90",
