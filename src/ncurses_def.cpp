@@ -205,6 +205,7 @@ void catacurses::erase()
 
 void catacurses::endwin()
 {
+    ui_manager::reset();
     return curses_check_result( ::endwin(), OK, "endwin" );
 }
 

@@ -219,6 +219,8 @@ class ui_adaptor
          **/
         void reset();
 
+        void shutdown();
+
         /* See the `ui_manager` namespace */
         static void invalidate( const rectangle<point> &rect, bool reenable_uis_below );
         static bool has_imgui();
@@ -245,6 +247,7 @@ class ui_adaptor
 
         bool disabling_uis_below;
         bool is_debug_message_ui;
+        bool is_shutting_down = false;
 
         mutable bool invalidated;
         mutable bool deferred_resize;
@@ -289,6 +292,7 @@ void redraw_invalidated();
  **/
 void screen_resized();
 void invalidate_all_ui_adaptors();
+void reset();
 } // namespace ui_manager
 
 #endif // CATA_SRC_UI_MANAGER_H
