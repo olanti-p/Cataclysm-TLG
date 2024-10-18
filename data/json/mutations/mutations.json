@@ -983,18 +983,6 @@
   },
   {
     "type": "mutation",
-    "id": "GOODMEMORY",
-    "name": { "str": "Good Memory" },
-    "points": 3,
-    "description": "You have an exceptional memory, and find it easy to remember things.  Your skills will erode slightly slower than usual.",
-    "types": [ "MEMORY" ],
-    "skill_rust_multiplier": 0.66,
-    "starting_trait": true,
-    "valid": false,
-    "cancels": [ "FORGETFUL" ]
-  },
-  {
-    "type": "mutation",
     "id": "DEFT",
     "name": { "str": "Deft" },
     "points": 1,
@@ -1238,24 +1226,13 @@
   },
   {
     "type": "mutation",
-    "id": "STRICT_HUMANITARIAN",
-    "name": { "str": "Strict Humanitarian" },
-    "points": 1,
-    "description": "You're convinced that these things that look vaguely human from elsewhere are definitely not people.  Therefore it's okay to eat them, right?",
-    "starting_trait": true,
-    "valid": false,
-    "cancels": [ "VEGETARIAN", "VEGAN", "HERBIVORE", "RUMINANT", "GRAZER", "CANNIBAL" ],
-    "flags": [ "STRICT_HUMANITARIAN" ]
-  },
-  {
-    "type": "mutation",
     "id": "PSYCHOPATH",
-    "name": { "str": "Uncaring" },
+    "name": { "str": "Psychopath" },
     "points": 2,
-    "description": "You don't feel any remorse or guilt for harming your fellow man.",
+    "description": "You have a diminished capacity for empathy and feel little remorse for your actions.  On its own this does not make you predisposed to harm others, but it does make it easier to intimidate or lie to them.",
     "starting_trait": true,
     "valid": false,
-    "social_modifiers": { "intimidate": 5 },
+    "social_modifiers": { "lie": 5, "persuade": -5, "intimidate": 5 },
     "types": [ "HUMAN_EMPATHY" ],
     "flags": [ "PSYCHOPATH" ]
   },
@@ -1267,10 +1244,8 @@
     "description": "You derive enjoyment from killing things.  Putting end to life seem to spark some dark satisfaction and thrill, and you crave it every moment.",
     "starting_trait": true,
     "valid": false,
-    "social_modifiers": { "intimidate": 10 },
-    "types": [ "HUMAN_EMPATHY" ],
-    "prereqs": [ "PSYCHOPATH" ],
-    "flags": [ "PSYCHOPATH" ]
+    "social_modifiers": { "intimidate": 5 },
+    "prereqs": [ "PSYCHOPATH" ]
   },
   {
     "type": "mutation",
@@ -1376,7 +1351,7 @@
     "id": "XXXL",
     "name": { "str": "Weight: XXXL" },
     "points": -1,
-    "description": "You gained an awful lot of weight before the Cataclysm.  Whatever the reason, now that mobility is key to survival, your bloated figure presents an additional danger.  You need to lose weight or die trying.",
+    "description": "You gained an awful lot of weight before the Cataclysm.  Whatever the reason, now that mobility is key to survival, your oversized figure presents an additional danger.  You need to lose weight or die trying.",
     "purifiable": false,
     "starting_trait": true,
     "valid": false,
@@ -1402,20 +1377,9 @@
     "points": -1,
     "description": "Whether due to injury or age, your knees aren't particularly strong or flexible.  Moving over rough terrain will slow you down more than normal.",
     "starting_trait": true,
-    "cancels": [ "STRONGKNEES", "REALLYBADKNEES" ],
+    "cancels": [ "STRONGKNEES" ],
     "valid": false,
     "enchantments": [ { "values": [ { "value": "MOVECOST_OBSTACLE_MOD", "multiply": 0.25 } ] } ]
-  },
-  {
-    "type": "mutation",
-    "id": "REALLYBADKNEES",
-    "name": { "str": "Stiff Knees" },
-    "points": -3,
-    "description": "Your knees never bend.  Period.  Stiff as a metal pole.  Pray that your journey doesn't involve stairs or slightly uneven terrain.",
-    "starting_trait": true,
-    "cancels": [ "STRONGKNEES", "BADKNEES" ],
-    "valid": false,
-    "enchantments": [ { "values": [ { "value": "MOVECOST_OBSTACLE_MOD", "multiply": 2.5 } ] } ]
   },
   {
     "type": "mutation",
@@ -1424,7 +1388,7 @@
     "points": 1,
     "description": "Your knees are strong and capable of angles that you couldn't imagine previously.  Moving over rough terrain will slow you down less than normal.",
     "category": [ "BATRACHIAN" ],
-    "cancels": [ "BADKNEES", "REALLYBADKNEES" ],
+    "cancels": [ "BADKNEES" ],
     "enchantments": [ { "values": [ { "value": "MOVECOST_OBSTACLE_MOD", "multiply": -0.1 } ] } ]
   },
   {
@@ -1463,7 +1427,7 @@
   {
     "type": "mutation",
     "id": "SLOWHEALER2",
-    "name": { "str": "Poor Healer" },
+    "name": { "str": "Very Slow Healer" },
     "points": -4,
     "description": "Your health recovery is severely impaired.  Your HP whilst asleep, as well as your broken limbs, heal at 33% of the regular rate.",
     "starting_trait": true,
@@ -1476,7 +1440,7 @@
   {
     "type": "mutation",
     "id": "SLOWHEALER3",
-    "name": { "str": "Imperceptive Healer" },
+    "name": { "str": "Terrible Healer" },
     "points": -8,
     "description": "Wounds are incredibly dangerous to you, as they barely heal at all.  Your HP whilst asleep, as well as your broken limbs, heal at 10% of the regular rate.",
     "starting_trait": true,
@@ -1612,6 +1576,7 @@
     "starting_trait": true,
     "types": [ "HEARING" ],
     "prereqs": [ "BADHEARING" ],
+    "category": [ "GASTROPOD" ],
     "enchantments": [ { "values": [ { "value": "HEARING_MULT", "multiply": -1 } ] } ],
     "flags": [ "DEAF" ]
   },
@@ -1646,7 +1611,7 @@
     "starting_trait": true,
     "vitamins_absorb_multi": [ [ "flesh", [ [ "vitC", 0 ], [ "calcium", 0 ], [ "iron", 0 ] ] ] ],
     "types": [ "DIET" ],
-    "cancels": [ "CANNIBAL", "STRICT_HUMANITARIAN", "VEGAN" ],
+    "cancels": [ "CANNIBAL", "VEGAN" ],
     "changes_to": [ "HERBIVORE" ],
     "category": [ "CATTLE", "RABBIT" ]
   },
@@ -1655,10 +1620,10 @@
     "id": "THINSKIN",
     "name": { "str": "Thin-Skinned" },
     "points": -1,
-    "description": "Your skin is fragile.  Cutting and bashing damage is slightly increased for you.",
+    "description": "Your skin is fragile and slightly vulnerable to cutting and stabbing attacks.",
     "types": [ "ARMOR" ],
     "category": [ "CHIROPTERAN" ],
-    "armor": [ { "part_types": [ "torso", "head", "arm", "hand", "leg", "foot", "mouth", "tail" ], "cut": -1, "bash": -1 } ]
+    "armor": [ { "part_types": [ "torso", "head", "arm", "hand", "leg", "foot", "mouth", "tail" ], "cut": -1, "stab": -1 } ]
   },
   {
     "type": "mutation",
@@ -1683,7 +1648,7 @@
   {
     "type": "mutation",
     "id": "ANTIFRUIT",
-    "name": { "str": "Fructose Intolerance" },
+    "name": { "str": "Hates Fruit" },
     "points": -3,
     "description": "Eating fruits always causes your stomach to ache.  It's possible for you to eat them, but you will suffer morale penalties and obtain less nutrition from them.",
     "valid": false,
@@ -1753,18 +1718,6 @@
     "starting_trait": true,
     "social_modifiers": { "intimidate": -2 },
     "category": [ "BIRD", "RAPTOR" ]
-  },
-  {
-    "type": "mutation",
-    "id": "FORGETFUL",
-    "name": { "str": "Forgetful" },
-    "points": -3,
-    "description": "You have a hard time remembering things.  Your skills will erode slightly faster than usual.",
-    "types": [ "MEMORY" ],
-    "social_modifiers": { "lie": -5 },
-    "skill_rust_multiplier": 1.33,
-    "starting_trait": true,
-    "category": [ "BEAST", "MEDICAL", "CHIMERA", "MOUSE", "INSECT", "RABBIT" ]
   },
   {
     "type": "mutation",
@@ -1855,9 +1808,9 @@
   {
     "type": "mutation",
     "id": "SCHIZOPHRENIC",
-    "name": { "str": "Kaluptic Psychosis" },
+    "name": { "str": "Schizophrenic" },
     "points": -3,
-    "description": "Ever since the sky first broke, you have felt unwell, your head split by alien thoughts.  You will periodically suffer from delusions, ranging from minor effects to full visual hallucinations.  Some of these effects may be controlled through the use of antipsychotics.",
+    "description": "You periodically suffer from delusions, ranging from minor effects to full visual hallucinations.  Some of these effects may be controlled through the use of antipsychotics.",
     "starting_trait": true,
     "category": [ "MEDICAL" ]
   },
@@ -1980,7 +1933,7 @@
     "starting_trait": true,
     "valid": false,
     "types": [ "DIET" ],
-    "cancels": [ "CANNIBAL", "STRICT_HUMANITARIAN", "VEGETARIAN" ]
+    "cancels": [ "CANNIBAL", "VEGETARIAN" ]
   },
   {
     "type": "mutation",
@@ -3079,8 +3032,10 @@
     "visibility": 8,
     "ugliness": 5,
     "enchantments": [
-      { "condition": { "not": "u_has_weapon" }, "values": [ { "value": "ITEM_DAMAGE_BASH", "add": 4 } ] },
-      { "values": [ { "value": "DEXTERITY", "add": -1 } ] }
+      {
+        "condition": { "not": "u_has_weapon" },
+        "values": [ { "value": "ITEM_DAMAGE_BASH", "add": 4 }, { "value": "DEXTERITY", "add": -1 } ]
+      }
     ],
     "description": "You've grown a sclerotin exoskeleton, akin to an organic suit of platemail.  It provides excellent physical protection and makes your punches hit harder, but reduces your Dexterity by 1 and encumbers all body parts but your eyes and mouth.  Greatly reduces wet effects.",
     "types": [ "BODY_ARMOR" ],
@@ -3139,6 +3094,12 @@
     "prereqs": [ "CHITIN2" ],
     "category": [ "CRUSTACEAN" ],
     "leads_to": [ "CRUSTACEAN_CLAW" ],
+    "enchantments": [
+      {
+        "condition": { "not": "u_has_weapon" },
+        "values": [ { "value": "ITEM_DAMAGE_BASH", "add": 4 }, { "value": "DEXTERITY", "add": -1 } ]
+      }
+    ],
     "integrated_armor": [ "integrated_carapace" ],
     "wet_protection": [
       { "part": "head", "ignored": 15 },
@@ -3151,8 +3112,7 @@
       { "part": "hand_l", "ignored": 9 },
       { "part": "hand_r", "ignored": 9 },
       { "part": "torso", "ignored": 34 }
-    ],
-    "enchantments": [ { "values": [ { "value": "DEXTERITY", "add": -2 } ] } ]
+    ]
   },
   {
     "type": "mutation",
@@ -3250,8 +3210,7 @@
     "points": 0,
     "visibility": 10,
     "ugliness": 9,
-    "description": "Instead of your right hand, you now have a giant claw resembling ones found on crabs.  It encumbers you greatly, but you can use it in melee combat to deal massive damage.",
-    "valid": false,
+    "description": "Your right hand has become a crab claw.  It encumbers you greatly, but you can use it in melee combat to deal massive damage.",
     "cancels": [ "NAILS", "CLAWS", "TALONS", "WEBBED", "ARM_TENTACLES", "ARM_TENTACLES_4", "ARM_TENTACLES_8" ],
     "prereqs": [ "CRUSTACEAN_CARAPACE" ],
     "integrated_armor": [ "integrated_giant_pincer" ],
@@ -3268,7 +3227,8 @@
     "visibility": 1,
     "ugliness": 2,
     "description": "Your skin is covered with fine spines.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive moderate damage.",
-    "changes_to": [ "QUILLS" ]
+    "changes_to": [ "QUILLS" ],
+    "category": [ "BEAST" ]
   },
   {
     "type": "mutation",
@@ -3278,7 +3238,8 @@
     "visibility": 3,
     "ugliness": 3,
     "description": "Your body is covered with large quills.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive significant damage.",
-    "prereqs": [ "SPINES" ]
+    "prereqs": [ "SPINES" ],
+    "category": [ "BEAST" ]
   },
   {
     "type": "mutation",
@@ -4131,7 +4092,7 @@
     "cancels": [ "HUMAN_ARMS", "HUMAN_LEGS" ],
     "threshreq": [ "THRESH_SLIME", "THRESH_ELFA" ],
     "category": [ "SLIME", "ELFA" ],
-    "enchantments": [ { "values": [ { "value": "DEXTERITY", "add": 1 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DEXTERITY", "add": -1 } ] } ]
   },
   {
     "type": "mutation",
@@ -5306,7 +5267,7 @@
     "threshreq": [ "THRESH_BEAST", "THRESH_RAPTOR", "THRESH_CHIMERA", "THRESH_URSINE" ],
     "category": [ "BEAST", "RAPTOR", "CHIMERA", "URSINE" ],
     "flags": [ "PRED4" ],
-    "enchantments": [ { "values": [ { "value": "COMBAT_CATCHUP", "multiply": 3.0 }, { "value": "INTELLIGENCE", "add": -3 } ] } ]
+    "enchantments": [ { "values": [ { "value": "COMBAT_CATCHUP", "multiply": 2.0 }, { "value": "INTELLIGENCE", "add": -3 } ] } ]
   },
   {
     "type": "mutation",
@@ -5960,7 +5921,7 @@
     "id": "DEX_UP_3",
     "name": { "str": "Extremely Dextrous" },
     "points": 3,
-    "description": "You are nimble and quick.  +4 Dexterity.",
+    "description": "You are quick and nimble.  +4 Dexterity.",
     "types": [ "DEX" ],
     "prereqs": [ "DEX_UP_2" ],
     "changes_to": [ "DEX_UP_4" ],
@@ -6022,7 +5983,7 @@
     "points": 3,
     "visibility": 1,
     "ugliness": 1,
-    "description": "You are much smarter, and your skull bulges slightly.  +4 Intelligence.",
+    "description": "You are much smarter.  +4 Intelligence.",
     "types": [ "INT" ],
     "prereqs": [ "INT_UP_2" ],
     "changes_to": [ "INT_UP_4" ],
@@ -6037,7 +5998,7 @@
     "points": 4,
     "visibility": 3,
     "ugliness": 3,
-    "description": "Your skull bulges noticeably due to your impressive brain.  +7 Intelligence.",
+    "description": "You are far smarter.  +7 Intelligence.",
     "types": [ "INT" ],
     "prereqs": [ "INT_UP_3" ],
     "threshreq": [ "THRESH_CEPHALOPOD" ],
@@ -6397,7 +6358,7 @@
     "visibility": 8,
     "ugliness": 5,
     "mixed_effect": true,
-    "description": "Your eyes barely protrude from your head on tentacles, preventing the use of any rigid eyewear.  On the plus side, you can have additional awareness, but sometimes your vision goes wonky as your brain tries to process the new angles.  Perception +1",
+    "description": "Your eyes barely protrude from your head on stalks, preventing the use of any rigid eyewear.  On the plus side, you can have additional awareness, but sometimes your vision goes wonky as your brain tries to process the new angles.  Perception +1",
     "types": [ "EYES" ],
     "changes_to": [ "EYESTALKS2", "EYESTALKS_RIGID" ],
     "category": [ "GASTROPOD", "CRUSTACEAN" ],
@@ -6433,7 +6394,7 @@
     "category": [ "CRUSTACEAN" ],
     "restricts_gear": [ "eyes" ],
     "allow_soft_gear": true,
-    "enchantments": [ { "values": [ { "value": "PERCEPTION", "add": 1 } ] } ],
+    "enchantments": [ { "values": [ { "value": "PERCEPTION", "add": 2 } ] } ],
     "flags": [ "EYE_MEMBRANE" ]
   },
   {
@@ -9509,7 +9470,6 @@
     "id": "STRONGER_RESISTCHILL",
     "name": { "str": "High Cold Tolerance" },
     "points": 3,
-    "valid": true,
     "description": "You are now even less bothered by the cold and it is harder for you to freeze or to even get chilly.  When you do though, it'll hit just as hard as it did before.",
     "prereqs": [ "RESISTCHILL" ],
     "category": [ "LUPINE", "URSINE", "CATTLE", "FELINE", "RABBIT", "MOUSE", "BEAST" ],
@@ -9533,7 +9493,6 @@
     "id": "STRONGER_RESISTWARM",
     "name": { "str": "High Heat Tolerance" },
     "points": 3,
-    "valid": true,
     "description": "You are now even less bothered by the heat and it is harder for you to overheat or even sweat.  When you do though, it'll hit just as hard as it did before.",
     "prereqs": [ "RESISTWARM" ],
     "types": [ "ACCLIMATIZATION" ],
@@ -9574,13 +9533,11 @@
     "id": "CEPH_MIND",
     "name": { "str": "Cephalopod Mind" },
     "points": 5,
-    "description": "Your mind has been altered in such a way that you now find it very difficult to understand humans.  Your capability to persuade and lie to them suffers slightly, even if it is mitigated by your intelligence.  In addition, while you find it much easier to learn by doing now, the plasticity of your psyche means you forget skills much faster.",
+    "description": "You've developed an uncanny patience for problem-solving, making it easier to stay focused on learning.",
     "cancels": [ "TRUTHTELLER", "LIAR", "SLOWLEARNER", "FASTLEARNER" ],
     "purifiable": false,
     "types": [ "HUMAN_EMPATHY" ],
-    "social_modifiers": { "lie": -5, "persuade": -5 },
     "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "LEARNING_FOCUS", "add": 17 } ] } ],
-    "skill_rust_multiplier": 1.5,
     "category": [ "CEPHALOPOD" ],
     "prereqs": [ "INT_UP_4" ],
     "threshreq": [ "THRESH_CEPHALOPOD" ]
@@ -9590,7 +9547,6 @@
     "id": "RESISTCHILL_RESISTWARM",
     "name": { "str": "Temperature Tolerance" },
     "points": 5,
-    "valid": true,
     "description": "You are now not at all bothered by the heat and it is harder for you to overheat or freeze at all.  When you do though, it'll hit just as hard as it did before.",
     "prereqs": [ "RESISTWARM" ],
     "types": [ "ACCLIMATIZATION" ],
@@ -9604,7 +9560,7 @@
   {
     "type": "mutation",
     "id": "VANITY",
-    "name": { "str": "Highly Vain" },
+    "name": { "str": "Vain" },
     "points": -1,
     "description": "You know you're beautiful, and the world deserves to know it too.  You prefer to show off your stunningly good looks to the world and will be unhappy if you cover up your face.",
     "category": [ "ALPHA" ],

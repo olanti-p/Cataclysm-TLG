@@ -1237,16 +1237,6 @@
   {
     "type": "profession",
     "subtype": "hobby",
-    "id": "trivia",
-    "name": "Trivia",
-    "description": "You loved learning and sharing interesting facts about many different topics.  None of them are useful anymore, but your strong memory certainly is.",
-    "points": 3,
-    "skills": [ { "level": 1, "name": "speech" } ],
-    "traits": [ "GOODMEMORY" ]
-  },
-  {
-    "type": "profession",
-    "subtype": "hobby",
     "id": "scrapart",
     "name": "Scrap Art",
     "description": "You spent hours welding discarded scrap into large and intricate designs.  Some said you were just welding junk into bigger junk.  You call it art.",
