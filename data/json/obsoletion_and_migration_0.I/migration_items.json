@@ -166,46 +166,6 @@
     "replace": "survivor_mess_kit"
   },
   {
-    "id": "5x50dart",
-    "type": "MIGRATION",
-    "replace": "50match"
-  },
-  {
-    "id": "5x50heavy",
-    "type": "MIGRATION",
-    "replace": "50match"
-  },
-  {
-    "id": "reloaded_5x50dart",
-    "type": "MIGRATION",
-    "replace": "reloaded_50bmg"
-  },
-  {
-    "id": "5x50_100_mag",
-    "type": "MIGRATION",
-    "replace": "stanag100"
-  },
-  {
-    "id": "5x50_50_mag",
-    "type": "MIGRATION",
-    "replace": "stanag50"
-  },
-  {
-    "id": "needlegun",
-    "type": "MIGRATION",
-    "replace": "nailgun"
-  },
-  {
-    "id": "needlepistol",
-    "type": "MIGRATION",
-    "replace": "nailgun"
-  },
-  {
-    "id": "5x50_hull",
-    "type": "MIGRATION",
-    "replace": "shot_hull"
-  },
-  {
     "id": "AID_bio_alarm",
     "type": "MIGRATION",
     "replace": "letter"

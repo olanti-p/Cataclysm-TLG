@@ -1631,14 +1631,7 @@
     "id": "shoes_maid",
     "type": "item_group",
     "subtype": "distribution",
-    "items": [
-      [ "stockings", 70 ],
-      [ "dress_shoes", 60 ],
-      [ "sneakers", 50 ],
-      [ "tights", 20 ],
-      [ "socks", 20 ],
-      [ "heels", 10 ]
-    ]
+    "items": [ [ "stockings", 70 ], [ "dress_shoes", 60 ], [ "sneakers", 50 ], [ "tights", 20 ], [ "socks", 20 ], [ "heels", 10 ] ]
   },
   {
     "id": "mansion_maid_dress",
