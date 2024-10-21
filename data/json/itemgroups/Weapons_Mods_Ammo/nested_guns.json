@@ -52,6 +52,19 @@
     ]
   },
   {
+    "id": "nested_needlepistol",
+    "type": "item_group",
+    "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [
+      { "item": "needlepistol", "charges-min": 0, "charges-max": 50 },
+      { "item": "5x50_50_mag" },
+      { "item": "5x50_50_mag", "prob": 50 },
+      { "group": "on_hand_5x50" }
+    ]
+  },
+  {
     "id": "nested_hk_usc45",
     "type": "item_group",
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
@@ -1261,6 +1274,19 @@
       { "item": "hk46mag" },
       { "item": "hk46mag", "prob": 50 },
       { "group": "on_hand_46" }
+    ]
+  },
+  {
+    "id": "nested_needlegun",
+    "type": "item_group",
+    "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [
+      { "item": "needlegun", "charges-min": 0, "charges-max": 50 },
+      { "item": "5x50_50_mag" },
+      { "item": "5x50_50_mag", "prob": 50 },
+      { "group": "on_hand_5x50" }
     ]
   },
   {

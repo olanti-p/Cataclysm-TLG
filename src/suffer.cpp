@@ -336,7 +336,7 @@ void suffer::while_grabbed( Character &you )
     int crush_resist = 0;
     for( auto&& dest : here.points_in_radius( you.pos(), 1, 0 ) ) { // *NOPAD*
         const monster *const mon = creatures.creature_at<monster>( dest );
-        if( mon && mon->has_flag( mon_flag_GROUP_BASH ) ) {
+        if( mon && mon->has_flag( mon_flag_GROUP_BASH ) && !mon->is_hallucination() ) {
             crowd++;
             add_msg_debug( debugmode::DF_CHARACTER, "Crowd pressure check: monster %s found, crowd size %d",
                            mon->name(), crowd );
