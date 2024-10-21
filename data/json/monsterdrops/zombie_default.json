@@ -9,9 +9,7 @@
       { "group": "common_gloves", "damage": [ 1, 4 ], "prob": 20 },
       { "group": "hatstore_hats", "damage": [ 1, 4 ], "prob": 20 },
       { "group": "scarfs_unisex", "damage": [ 1, 4 ], "prob": 20 },
-      { "item": "vampire_fangs", "damage": [ 1, 4 ], "prob": 25, "event": "halloween" },
       { "group": "accesories_personal_unisex", "damage": [ 1, 4 ], "prob": 15 },
-      { "group": "christmas_accesories_personal_unisex", "damage": [ 1, 4 ], "prob": 25, "event": "christmas" },
       {
         "distribution": [
           {
@@ -41,8 +39,7 @@
                   { "item": "tux", "prob": 1, "damage": [ 1, 4 ] },
                   { "item": "thawb", "prob": 1, "damage": [ 1, 4 ] },
                   { "item": "cassock", "prob": 1, "damage": [ 1, 4 ] },
-                  { "item": "haori", "prob": 1, "damage": [ 1, 4 ] },
-                  { "group": "costume_suits", "prob": 25, "damage": [ 1, 4 ], "event": "halloween" }
+                  { "item": "haori", "prob": 1, "damage": [ 1, 4 ] }
                 ]
               },
               { "group": "neckties", "prob": 15, "damage": [ 1, 4 ] },
@@ -110,10 +107,10 @@
       },
       {
         "distribution": [
-          { "item": "helmet_bike", "damage": [ 1, 4 ], "prob": 50 },
-          { "group": "clothing_biker", "damage": [ 1, 4 ], "prob": 50 }
+          { "item": "helmet_bike", "damage": [ 1, 4 ], "prob": 60 },
+          { "group": "clothing_biker", "damage": [ 1, 4 ], "prob": 40 }
         ],
-        "prob": 3
+        "prob": 2
       }
     ]
   },
@@ -270,18 +267,18 @@
     "id": "default_zombie_items",
     "entries": [
       { "group": "large_bags", "damage": [ 1, 4 ], "contents-group": "default_zombie_items_bags", "prob": 6 },
-      { "group": "small_bags", "damage": [ 1, 4 ], "contents-group": "default_zombie_items_bags_small", "prob": 10 },
-      { "group": "bugout_bag", "prob": 1 },
-      { "group": "default_zombie_items_pockets", "prob": 20 },
+      { "group": "small_bags", "damage": [ 1, 4 ], "contents-group": "default_zombie_items_bags_small", "prob": 8 },
+      { "group": "bugout_bag", "damage": [ 1, 4 ], "prob": 1 },
+      { "group": "default_zombie_items_pockets", "prob": 10 },
       {
         "distribution": [
           { "item": "teargas_sprayer", "prob": 10, "charges-min": 0, "charges-max": 8 },
           {
-            "collection": [ { "item": "holster" }, { "group": "guns_pistol_common_everyday_carry", "damage": [ 0, 2 ] } ],
-            "prob": 8
+            "collection": [ { "item": "holster", "damage": [ 0, 2 ] }, { "group": "guns_pistol_common_everyday_carry", "damage": [ 0, 2 ] } ],
+            "prob": 1
           },
           {
-            "collection": [ { "item": "holster" }, { "item": "tazer", "damage": [ 0, 2 ], "charges-min": 0, "charges-max": 100 } ],
+            "collection": [ { "item": "holster", "damage": [ 0, 2 ] }, { "item": "tazer", "damage": [ 0, 2 ], "charges-min": 0, "charges-max": 100 } ],
             "prob": 5
           }
         ],
@@ -292,7 +289,7 @@
   {
     "type": "item_group",
     "subtype": "collection",
-    "//": "contains clothing (always), a wallet (30% chance), and items in pockets or a bag (80~% chance)",
+    "//": "contains clothing (95%), a wallet (30% chance), and items in pockets or a bag (20~% chance)",
     "id": "default_zombie_death_drops",
     "entries": [
       { "group": "wallets", "damage": [ 1, 4 ], "prob": 30 },
@@ -300,9 +297,9 @@
         "distribution": [
           {
             "collection": [
-              { "group": "default_zombie_clothes" },
+              { "group": "default_zombie_clothes", "prob": 95 },
               {
-                "distribution": [ { "group": "default_zombie_items", "prob": 80 }, { "group": "default_zombie_items_pockets", "prob": 20 } ]
+                "distribution": [ { "group": "default_zombie_items", "prob": 20 }, { "group": "default_zombie_items_pockets", "prob": 20 } ]
               }
             ],
             "prob": 99
