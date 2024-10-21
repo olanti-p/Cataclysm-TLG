@@ -409,7 +409,7 @@
     "type": "profession_item_substitutions",
     "trait": "WOOLALLERGY",
     "sub": [
-      { "item": "blazer", "new": [ "jacket_leather_red" ] },
+      { "item": "blazer", "new": [ "jacket_leather" ] },
       { "item": "hat_hunting", "new": [ "hat_cotton" ] },
       { "item": "hat_newsboy", "new": [ "hat_cotton" ] },
       { "item": "peacoat", "new": [ "jacket_flannel" ] },

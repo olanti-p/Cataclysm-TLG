@@ -103,53 +103,6 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "boots_bone",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "pair of occult boots", "str_pl": "pairs of occult boots" },
-    "description": "Leather boots covered with tiny, finely-carved bones.  With each step, the bones collide with each other and produce a melodic clicking.",
-    "weight": "1824 g",
-    "volume": "4250 ml",
-    "price": 13500,
-    "price_postapoc": 1500,
-    "copy-from": "boots",
-    "symbol": "[",
-    "looks_like": "boots",
-    "color": "dark_gray",
-    "material_thickness": 3,
-    "flags": [ "VARSIZE", "WATERPROOF" ],
-    "armor": [
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [
-          "foot_toes_r",
-          "foot_toes_l",
-          "foot_ankle_r",
-          "foot_ankle_l",
-          "foot_heel_r",
-          "foot_heel_l",
-          "foot_arch_r",
-          "foot_arch_l"
-        ],
-        "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 },
-          { "type": "bone", "covered_by_mat": 80, "thickness": 1.0 }
-        ],
-        "encumbrance": 25,
-        "coverage": 100
-      },
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
-        "material": [
-          { "type": "rubber", "covered_by_mat": 100, "thickness": 6.0 },
-          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 }
-        ],
-        "coverage": 100
-      }
-    ]
-  },
-  {
     "id": "boots_bunker",
     "type": "ARMOR",
     "category": "armor",

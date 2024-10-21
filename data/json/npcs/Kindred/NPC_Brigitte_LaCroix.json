@@ -44,12 +44,12 @@
       { "item": "boxer_briefs" },
       { "item": "socks" },
       { "item": "tshirt_tour" },
-      { "item": "jacket_leather_bone" },
+      { "item": "jacket_leather" },
       { "item": "gloves_liner" },
       { "item": "helmet_skull" },
       { "item": "gloves_leather" },
       { "item": "pants_leather" },
-      { "item": "boots_bone" },
+      { "item": "boots" },
       { "item": "backpack_leather" }
     ]
   },
