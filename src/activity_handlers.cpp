@@ -205,6 +205,7 @@ static const itype_id itype_pseudo_magazine( "pseudo_magazine" );
 
 static const json_character_flag json_flag_ASOCIAL1( "ASOCIAL1" );
 static const json_character_flag json_flag_ASOCIAL2( "ASOCIAL2" );
+static const json_character_flag json_flag_BLOODFEEDER( "BLOODFEEDER" );
 static const json_character_flag json_flag_CANNIBAL( "CANNIBAL" );
 static const json_character_flag json_flag_PAIN_IMMUNE( "PAIN_IMMUNE" );
 static const json_character_flag json_flag_PSYCHOPATH( "PSYCHOPATH" );
@@ -545,16 +546,17 @@ static void set_up_butchery( player_activity &act, Character &you, butcher_type 
                           corpse.in_species( species_FERAL ) ) &&
                           !corpse.in_species( species_ZOMBIE ) );
 
-    // applies to all butchery actions except for dissections
-    if( is_human && action != butcher_type::DISSECT && !( you.has_flag( json_flag_CANNIBAL ) ||
-            you.has_flag( json_flag_PSYCHOPATH ) || you.has_flag( json_flag_SAPIOVORE ) ) ) {
-        //first determine if the butcherer has the dissect_humans proficiency.
+    // Applies to all butchery actions except for dissections. Bloodfeeders are OK with draining humans for blood.
+    if( ( is_human && action != butcher_type::DISSECT && !( you.has_flag( json_flag_CANNIBAL ) ) ) || (
+            is_human && action == butcher_type::BLEED && !( you.has_flag( json_flag_BLOODFEEDER ) ) ) ||
+        you.has_flag( json_flag_PSYCHOPATH ) || you.has_flag( json_flag_SAPIOVORE ) ) {
+        // First determine if the butcherer has the dissect_humans proficiency.
         if( you.has_proficiency( proficiency_prof_dissect_humans ) ) {
-            //if it's player doing the butchery, ask them first.
+            // If it's player doing the butchery, ask them first.
             if( you.is_avatar() ) {
                 if( query_yn(
                         _( "Really desecrate the mortal remains of a fellow human being by butchering them for meat?" ) ) ) {
-                    //give the player a random message showing their disgust and cause morale penalty.
+                    // Give the player a random message showing their disgust and cause morale penalty.
                     switch( rng( 1, 3 ) ) {
                         case 1:
                             you.add_msg_if_player( m_bad, _( "You clench your teeth at the prospect of this gruesome job." ) );

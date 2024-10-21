@@ -2119,12 +2119,7 @@
   {
     "type": "item_group",
     "id": "female_underwear_bottom",
-    "items": [
-      [ "panties", 70 ],
-      [ "boy_shorts", 50 ],
-      [ "bikini_bottom", 5 ],
-      [ "bikini_bottom_short", 1 ]
-    ]
+    "items": [ [ "panties", 70 ], [ "boy_shorts", 50 ], [ "bikini_bottom", 5 ], [ "bikini_bottom_short", 1 ] ]
   },
   {
     "type": "item_group",
@@ -2607,12 +2602,7 @@
     "type": "item_group",
     "id": "diving_wetsuit",
     "//": "Only diving appropriate suits.",
-    "items": [
-      [ "wetsuit", 50 ],
-      [ "wetsuit_thick", 50 ],
-      [ "wetsuit_spring", 5 ],
-      [ "wetsuit_spring_sleeveless", 5 ]
-    ]
+    "items": [ [ "wetsuit", 50 ], [ "wetsuit_thick", 50 ], [ "wetsuit_spring", 5 ], [ "wetsuit_spring_sleeveless", 5 ] ]
   },
   {
     "type": "item_group",

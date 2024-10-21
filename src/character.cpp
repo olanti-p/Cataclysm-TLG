@@ -12902,7 +12902,7 @@ bool Character::can_fly()
     }
     if( ( has_trait_flag( json_flag_WINGS_1 ) || has_trait_flag( json_flag_WINGS_2 ) ||
           has_trait_flag( json_flag_WING_GLIDE ) ) &&
-        ( 100 * weight_carried() / weight_capacity() > 50 || get_str() < 4 ||
+        ( 100 * ( weight_carried() / weight_capacity() ) > 50 || get_str() < 4 ||
           has_effect( effect_winded ) ) ) {
         return false;
     }

@@ -167,8 +167,10 @@ static const trait_id trait_SHELL3( "SHELL3" );
 static const trait_id trait_SHOUT1( "SHOUT1" );
 static const trait_id trait_SHOUT2( "SHOUT2" );
 static const trait_id trait_SHOUT3( "SHOUT3" );
+static const trait_id trait_SLIMESPAWNER( "SLIMESPAWNER" );
 static const trait_id trait_SNAIL_TRAIL( "SNAIL_TRAIL" );
 static const trait_id trait_SORES( "SORES" );
+static const trait_id trait_TRANSPIRATION( "TRANSPIRATION" );
 static const trait_id trait_TROGLO( "TROGLO" );
 static const trait_id trait_TROGLO2( "TROGLO2" );
 static const trait_id trait_TROGLO3( "TROGLO3" );
@@ -331,6 +333,7 @@ void suffer::while_grabbed( Character &you )
     creature_tracker &creatures = get_creature_tracker();
     int crowd = 0;
     int impassable_ter = 0;
+    int crush_resist = 0;
     for( auto&& dest : here.points_in_radius( you.pos(), 1, 0 ) ) { // *NOPAD*
         const monster *const mon = creatures.creature_at<monster>( dest );
         if( mon && mon->has_flag( mon_flag_GROUP_BASH ) ) {
@@ -343,25 +346,40 @@ void suffer::while_grabbed( Character &you )
         }
     }
 
-    // if we aren't near two monsters with GROUP_BASH we won't suffocate
+    // If we aren't near two monsters with GROUP_BASH we won't suffocate.
     if( crowd < 2 ) {
         return;
     }
-    // Getting crushed against the wall counts as a monster
-    if( impassable_ter ) {
+
+    // Walls only get added if we're actually boxed in.
+    if( impassable_ter && crowd + impassable_ter > 5 ) {
         you.add_msg_if_player( m_bad, _( "You're crushed against the walls!" ) );
         crowd += impassable_ter;
     }
 
-    if( crowd == 2 ) {
-        // only a chance to lose breath at low grab chance, none with only a single zombie
-        you.oxygen -= rng( 0, 1 );
-    } else if( crowd <= 4 ) {
-        you.oxygen -= 1;
-    } else if( crowd <= 6 ) {
-        you.oxygen -= rng( 1, 2 );
-    } else if( crowd <= 8 ) {
-        you.oxygen -= 2;
+    // 5% chance to resist, with bonuses under certain conditions.
+    // Standing up and unencumbered is a good start. So is being able to breathe through your extremities.
+    // Todo: Add exception for power armor, snail shell if retracted.
+    if( !you.has_effect( effect_downed ) && !you.is_prone() ) {
+        crush_resist += 1;
+    }
+    if( 100 * ( you.weight_carried() / you.weight_capacity() ) <= 25 ) {
+        crush_resist += 1;
+    }
+    if( you.has_trait( trait_SLIMESPAWNER ) || you.has_trait( trait_TRANSPIRATION ) ) {
+        crush_resist += 1;
+    }
+    if( crush_resist <= rng( 0, 19 ) ) {
+        if( crowd == 3 ) {
+            // Only a chance to lose breath at low grab chance, none with only a single zombie
+            you.oxygen -= rng( 0, 1 );
+        } else if( crowd == 4 ) {
+            you.oxygen -= 1;
+        } else if( crowd <= 6 ) {
+            you.oxygen -= rng( 1, 2 );
+        } else if( crowd <= 8 ) {
+            you.oxygen -= 2;
+        }
     }
 
     // a few warnings before starting to take damage
@@ -370,7 +388,7 @@ void suffer::while_grabbed( Character &you )
         if( uistate.distraction_oxygen && you.is_avatar() ) {
             g->cancel_activity_or_ignore_query( distraction_type::oxygen, _( "You're suffocating!" ) );
         }
-        // your characters chest is being crushed and you are dying
+        // your character's chest is being crushed and they are dying
         you.apply_damage( nullptr, you.get_random_body_part_of_type( body_part_type::type::torso ), rng( 1,
                           4 ) );
     } else if( you.oxygen <= 15 ) {
