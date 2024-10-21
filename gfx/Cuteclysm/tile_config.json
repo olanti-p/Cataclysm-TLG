@@ -2614,7 +2614,6 @@
         { "id": "cowl_wool", "fg": 1617, "rotates": false, "multitile": false },
         { "id": "cured_hide", "fg": 1318, "rotates": false, "multitile": false },
         { "id": "cured_pelt", "fg": 1317, "rotates": false, "multitile": false },
-        { "id": "dance_shoes", "fg": 1529, "rotates": false, "multitile": false },
         { "id": "depowered_armor", "fg": 1734, "rotates": false, "multitile": false },
         { "id": "depowered_helmet", "fg": 1735, "rotates": false, "multitile": false },
         { "id": "diamond_dental_grill", "fg": 945, "rotates": false, "multitile": false },

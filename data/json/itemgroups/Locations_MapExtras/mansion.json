@@ -1049,7 +1049,6 @@
       { "item": "glass_shard", "prob": 30, "count": [ 1, 8 ] },
       [ "wrapper", 30 ],
       [ "wrapper_foil", 3 ],
-      [ "dance_shoes", 20 ],
       [ "dress_shoes", 20 ],
       { "item": "cotton_patchwork", "prob": 20, "custom-flags": [ "FILTHY" ] },
       [ "9mm_casing", 20 ],
@@ -1636,7 +1635,6 @@
       [ "stockings", 70 ],
       [ "dress_shoes", 60 ],
       [ "sneakers", 50 ],
-      [ "dance_shoes", 20 ],
       [ "tights", 20 ],
       [ "socks", 20 ],
       [ "heels", 10 ]

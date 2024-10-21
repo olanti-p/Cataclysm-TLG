@@ -213,7 +213,6 @@
       { "item": "roller_blades", "prob": 35 },
       { "item": "sneakers", "prob": 50 },
       { "item": "lowtops", "prob": 40 },
-      { "item": "dance_shoes", "prob": 25 },
       { "item": "slippers", "prob": 30 },
       { "item": "flip_flops", "prob": 35 },
       { "item": "flip_flops_exp", "prob": 5 },

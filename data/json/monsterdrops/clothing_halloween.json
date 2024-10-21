@@ -249,8 +249,7 @@
           {
             "distribution": [
               { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "heels", "prob": 35, "damage": [ 1, 4 ] },
-              { "item": "dance_shoes", "prob": 25, "damage": [ 1, 4 ] }
+              { "item": "heels", "prob": 35, "damage": [ 1, 4 ] }
             ]
           },
           {
@@ -346,8 +345,7 @@
           {
             "distribution": [
               { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "heels", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "dance_shoes", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "heels", "prob": 40, "damage": [ 1, 4 ] }
             ]
           },
           {

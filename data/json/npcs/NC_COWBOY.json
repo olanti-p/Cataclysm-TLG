@@ -30,8 +30,7 @@
     "entries": [
       { "item": "sneakers", "prob": 20 },
       { "item": "boots_western", "prob": 10 },
-      { "item": "boots", "prob": 50 },
-      { "item": "boots_denim", "prob": 10 }
+      { "item": "boots", "prob": 50 }
     ]
   },
   {

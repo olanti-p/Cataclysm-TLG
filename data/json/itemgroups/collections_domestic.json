@@ -515,7 +515,6 @@
       { "item": "flip_flops_exp", "prob": 5 },
       { "item": "lowtops", "prob": 45 },
       { "item": "dress_shoes", "prob": 50 },
-      { "item": "dance_shoes", "prob": 5 },
       { "item": "heels", "prob": 50 },
       { "item": "coat_rain", "prob": 50 },
       { "item": "hood_rain", "prob": 20 },
