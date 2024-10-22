@@ -105,5 +105,23 @@
     "recurrence": [ "3 minutes", "10 minutes" ],
     "condition": { "not": { "u_has_flag": "BILE_AFFLICTED" } },
     "effect": [ { "u_lose_trait": "BILE_STINK" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "acid_in_eyes",
+    "recurrence": [ "1 seconds", "1 seconds" ],
+    "condition": {
+      "and": [
+        { "u_has_effect": "corroding", "bodypart": "eyes" },
+        {
+          "and": [
+            { "not": { "u_has_flag": "ACIDPROOF" } },
+            { "not": { "u_has_trait": "PER_SLIME_OK" } },
+            { "not": { "u_has_bionics": "bio_armor_eyes" } }
+          ]
+        }
+      ]
+    },
+    "effect": [ { "u_add_effect": "blind", "target_part": "eyes", "duration": "3 seconds" } ]
   }
 ]

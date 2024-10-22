@@ -59,7 +59,10 @@ enum class spell_flag : int {
     FRIENDLY_POLY, // polymorph spell makes the monster friendly
     SILENT, // spell makes no noise at target
     NO_EXPLOSION_SFX, // spell has no visual explosion
-    LIQUID, // effects applied by this spell can be resisted with waterproof equipment if targeting a body part. doesn't apply to damage (yet)
+    LIQUID, // this spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor
+    LIQUID_DAMAGE_ARMOR, // requires LIQUID. The liquid splashed by this spell can damage items worn by characters according to its liquid_volume amount, damage amount, and type
+    LIQUID_DAMAGE_TARGET, // requires LIQUID. Will damage target characters according to the liquid_volume amount that isn't blocked by their armor. Monsters are damaged normally
+    MAKE_FILTHY, // requires LIQUID. The liquid splashed by this spell can add the FILTHY flag to items worn by characters, accoridng to its liquid_volume and type
     LOUD, // spell makes extra noise at target
     VERBAL, // spell makes noise at caster location, mouth encumbrance affects fail %
     SOMATIC, // arm encumbrance affects fail % and casting time (slightly)
@@ -79,7 +82,7 @@ enum class spell_flag : int {
     PAIN_NORESIST, // pain altering spells can't be resisted (like with the deadened trait)
     NO_FAIL, // this spell cannot fail when you cast it
     SPAWN_GROUP, // spawn or summon from an item or monster group, instead of individual item/monster ID
-    IGNITE_FLAMMABLE, // if spell effect area has any thing flammable, a fire will be produced
+    IGNITE_FLAMMABLE, // if spell effect area has any thing flammable, a fire will be produced. LIQUID spells can ignite target characters' equipment
     MUST_HAVE_CLASS_TO_LEARN, // you can't learn the spell unless you already have the class.
     SPAWN_WITH_DEATH_DROPS, // allow summoned monsters to drop their usual death drops
     NO_CORPSE_QUIET, // allow summoned monsters to vanish/leave without leaving a corpse
@@ -87,7 +90,6 @@ enum class spell_flag : int {
     PSIONIC, // psychic powers instead of traditional magic
     RECHARM, // charm_monster spell adds to duration of existing charm_monster effect
     DODGEABLE, // the target can dodge this attack completely if they succeed on a dodge roll against its spell level.
-    MAKE_FILTHY, // requires LIQUID. The liquid splashed by this spell can add the FILTHY flag to items worn by characters, accoridng to its liquid_volume and type
     LAST
 };
 
@@ -608,6 +610,8 @@ class spell
         std::string effect_data() const;
         // get spell summon vehicle id
         vproto_id summon_vehicle_id() const;
+        // get field id
+        std::optional<field_type_id> field() const;
         // name of spell (translated)
         std::string name() const;
         // description of spell (translated)
@@ -634,9 +638,13 @@ class spell
         std::string aoe_string( const Creature &caster ) const;
         std::string duration_string( const Creature &caster ) const;
 
+        damage_type_id get_dmg_type() const {
+            return dmg_type();
+        }
         spell_id get_spell_type() const {
             return type;
         }
+
         // magic energy source enum
         magic_energy_type energy_source() const;
         // the color that's representative of the damage type

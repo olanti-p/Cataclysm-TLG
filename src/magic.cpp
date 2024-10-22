@@ -158,6 +158,8 @@ std::string enum_to_string<spell_flag>( spell_flag data )
         case spell_flag::PSIONIC: return "PSIONIC";
         case spell_flag::RECHARM: return "RECHARM";
         case spell_flag::DODGEABLE: return "DODGEABLE";
+        case spell_flag::LIQUID_DAMAGE_ARMOR: return "LIQUID_DAMAGE_ARMOR";
+        case spell_flag::LIQUID_DAMAGE_TARGET: return "LIQUID_DAMAGE_TARGET";
         case spell_flag::MAKE_FILTHY: return "MAKE_FILTHY";
         case spell_flag::LAST: break;
     }
@@ -1185,6 +1187,11 @@ int spell::energy_cost( const Character &guy ) const
         }
     }
     return std::max( cost * temp_spell_cost_multiplyer, 0.0f );
+}
+
+std::optional<field_type_id> spell::field() const
+{
+    return type->field;
 }
 
 bool spell::has_flag( const spell_flag &flag ) const

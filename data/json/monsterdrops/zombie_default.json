@@ -278,7 +278,10 @@
             "prob": 1
           },
           {
-            "collection": [ { "item": "holster", "damage": [ 0, 2 ] }, { "item": "tazer", "damage": [ 0, 2 ], "charges-min": 0, "charges-max": 100 } ],
+            "collection": [
+              { "item": "holster", "damage": [ 0, 2 ] },
+              { "item": "tazer", "damage": [ 0, 2 ], "charges-min": 0, "charges-max": 100 }
+            ],
             "prob": 5
           }
         ],

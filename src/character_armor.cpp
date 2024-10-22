@@ -385,8 +385,15 @@ void Character::describe_damage( damage_unit &du, item &armor ) const
 {
     const material_type &material = armor.get_random_material();
     // FIXME: Hardcoded damage types
-    std::string damage_verb = ( du.type == STATIC( damage_type_id( "bash" ) ) ) ?
-                              material.bash_dmg_verb() : material.cut_dmg_verb();
+    std::string damage_verb;
+    // Fire has its own method, but heat damage exists outside of fire IE lasers
+    if( du.type == STATIC( damage_type_id( "bash" ) ) ) {
+        damage_verb = material.bash_dmg_verb();
+    } else if( du.type == STATIC( damage_type_id( "heat" ) ) || STATIC( damage_type_id( "acid" ) ) ) {
+        damage_verb = material.acid_dmg_verb();
+    } else {
+        damage_verb = material.cut_dmg_verb();
+    }
 
     const std::string pre_damage_name = armor.tname();
     const std::string pre_damage_adj = armor.get_base_material().dmg_adj( armor.damage_level() );

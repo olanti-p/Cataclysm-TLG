@@ -1953,25 +1953,25 @@ void outfit::absorb_damage( Character &guy, damage_unit &elem, bodypart_id bp,
 std::string outfit::get_liquid_descriptor( int liquid_remaining )
 {
     std::string liquid_descriptor;
-    if( liquid_remaining <= 10 ) {
+    if( liquid_remaining <= 100 ) {
         liquid_descriptor = _( "droplets of" );
-    } else if( liquid_remaining <= 20 ) {
-        liquid_descriptor = _( "a glob of" );
-    } else if( liquid_remaining <= 30 ) {
-        liquid_descriptor = _( "a spurt of" );
-    } else if( liquid_remaining <= 50 ) {
-        liquid_descriptor = _( "a splatter of" );
-    } else if( liquid_remaining <= 75 ) {
-        liquid_descriptor = _( "a spray of" );
-    } else if( liquid_remaining <= 100 ) {
-        liquid_descriptor = _( "quite a lot of" );
-    } else if( liquid_remaining <= 125 ) {
-        liquid_descriptor = _( "copious amounts of" );
-    } else if( liquid_remaining <= 150 ) {
-        liquid_descriptor = _( "a cascade of" );
-    } else if( liquid_remaining <= 175 ) {
-        liquid_descriptor = _( "a torrent of" );
     } else if( liquid_remaining <= 200 ) {
+        liquid_descriptor = _( "a glob of" );
+    } else if( liquid_remaining <= 300 ) {
+        liquid_descriptor = _( "a spurt of" );
+    } else if( liquid_remaining <= 500 ) {
+        liquid_descriptor = _( "a splatter of" );
+    } else if( liquid_remaining <= 750 ) {
+        liquid_descriptor = _( "a spray of" );
+    } else if( liquid_remaining <= 1000 ) {
+        liquid_descriptor = _( "quite a lot of" );
+    } else if( liquid_remaining <= 1250 ) {
+        liquid_descriptor = _( "copious amounts of" );
+    } else if( liquid_remaining <= 1500 ) {
+        liquid_descriptor = _( "a cascade of" );
+    } else if( liquid_remaining <= 1750 ) {
+        liquid_descriptor = _( "a torrent of" );
+    } else if( liquid_remaining <= 2000 ) {
         liquid_descriptor = _( "a flood of" );
     } else {
         liquid_descriptor = _( "a deluge of" );
@@ -1981,12 +1981,27 @@ std::string outfit::get_liquid_descriptor( int liquid_remaining )
 
 void outfit::splash_attack( Character &guy, const spell &sp, Creature &caster, bodypart_id bp )
 {
+    sub_bodypart_id sbp;
+    sub_bodypart_id secondary_sbp;
+    // if this body part has sub part locations, roll one
+    if( !bp->sub_parts.empty() ) {
+        sbp = bp->random_sub_part( false );
+        // the torso and legs have a second layer of hanging body parts
+        secondary_sbp = bp->random_sub_part( true );
+    }
+    damage_unit damage = damage_unit( sp.get_dmg_type(), static_cast<float>( sp.damage( caster ) ),
+                                      0.0f );
+    const bool damage_target = sp.has_flag( spell_flag::LIQUID_DAMAGE_TARGET );
+    const bool damage_armor = sp.has_flag( spell_flag::LIQUID_DAMAGE_ARMOR );
+    bool ignite = sp.has_flag( spell_flag::IGNITE_FLAMMABLE );
     const bool permanent = sp.has_flag( spell_flag::PERMANENT );
     int intensity = sp.effect_intensity( caster );
     int liquid_amount = sp.liquid_volume( caster );
     const int dur_moves = sp.duration( caster );
     const efftype_id spell_effect = efftype_id( sp.effect_data() );
     const time_duration dur_td = time_duration::from_moves( dur_moves );
+    const std::string liquid_name = sp.field()->obj().substance_name;
+    std::list<item> worn_remains;
     // Liquid will splash on the outermost items first.
     int liquid_remaining = liquid_amount;
     for( auto iter = worn.rbegin(); iter != worn.rend(); ) {
@@ -1997,30 +2012,72 @@ void outfit::splash_attack( Character &guy, const spell &sp, Creature &caster, b
         }
         const std::string pre_damage_name = armor.tname();
         if( rng( 1, 100 ) <= armor.get_coverage( bp ) && liquid_remaining > 0 ) {
-            guy.add_msg_if_player( m_warning, _( "Your %1$s is splashed with %2$s liquid." ),
-                                   armor.tname(), get_liquid_descriptor( liquid_remaining ) );
             // The item has intercepted the splash to protect its wearer,
             // now we roll to see if it's affected.
-            // A droplet of bile is less likely to ruin a shirt than a whole bucket.
-            if( rng( 1, std::max( 2, 200 - armor.breathability( bp ) ) ) < liquid_remaining ) {
+            guy.add_msg_if_player( m_warning, _( "Your %1s get splashed with %2s %3s." ),
+                                   armor.tname(), get_liquid_descriptor( liquid_remaining ), liquid_name );
+            // A droplet of acid or bile are less likely to ruin a shirt than a whole bucket.
+            if( ( rng( 1, 200 - armor.breathability( bp ) ) ) * 10 < liquid_remaining ) {
                 // Apply filth to the item. Currently hardcoded because we don't have other item
                 // flags that would make sense for this. It gets its own probability roll here
                 // because it can't use armor_absorb's.
                 if( sp.has_flag( spell_flag::MAKE_FILTHY ) && !armor.has_flag( flag_INTEGRATED ) &&
                     !armor.has_flag( flag_SEMITANGIBLE ) && !armor.has_flag( flag_PERSONAL ) &&
                     !armor.has_flag( flag_AURA ) &&
-                    rng( 1, std::max( 2, 200 - armor.breathability( bp ) ) ) < liquid_remaining ) {
-                    add_msg_if_player_sees( guy, m_bad, _( "%1$s %2$s is covered in filth!" ), guy.disp_name( true,
+                    ( rng( 1, 200 - armor.breathability( bp ) ) * 10 ) < liquid_remaining ) {
+                    add_msg_if_player_sees( guy, m_warning, _( "%1s %2s is covered in filth!" ), guy.disp_name( true,
                                             true ),
                                             armor.tname() );
                     armor.set_flag( json_flag_FILTHY );
                     guy.on_worn_item_soiled( armor );
                 }
+                // If this is an armor-damaging liquid, the damage is relative to fluid_remaining
+                // and the coverage of the item.
+                if( damage.amount >= 1.0f && damage_armor ) {
+                    const std::string pre_damage_name = armor.tname();
+                    bool destroy = false;
+                    item_armor_enchantment_adjust( guy, damage, armor );
+                    if( ignite && damage.amount >= 1.0f ) {
+                        int fire_intensity = std::ceil( intensity * ( liquid_remaining / liquid_amount ) );
+                        if( fire_intensity >= 1 ) {
+                            fire_data frd{ fire_intensity };
+                            destroy = !armor.has_flag( flag_INTEGRATED ) && armor.burn( frd );
+                            int fuel = roll_remainder( frd.fuel_produced );
+                            if( fuel > 0 ) {
+                                guy.add_effect( effect_onfire, time_duration::from_turns( fuel + 1 ), bp, false, 0, false,
+                                                true );
+                            }
+                        }
+                    }
+                    if( !destroy ) {
+                        // The roll here is 0 because we already rolled to see if the attack hurts the armor.
+                        // Not -1 so that we can't splash items with 0 coverage.
+                        if( secondary_sbp != sub_bodypart_id() ) {
+                            // Check for items hanging from the bodypart we hit.
+                            destroy = guy.armor_absorb( damage, armor, bp, secondary_sbp, 0 );
+                        } else {
+                            destroy = guy.armor_absorb( damage, armor, bp, sbp, 0 );
+                        }
+                    }
+                    if( destroy ) {
+                        if( get_player_view().sees( guy ) ) {
+                            SCT.add( point( guy.posx(), guy.posy() ), direction::NORTH, remove_color_tags( pre_damage_name ),
+                                     m_neutral, _( "destroyed" ), m_info );
+                        }
+                        destroyed_armor_msg( guy, pre_damage_name );
+                        armor.on_takeoff( guy );
+                        for( const item *it : armor.all_items_top( pocket_type::CONTAINER ) ) {
+                            worn_remains.push_back( *it );
+                        }
+                        iter = decltype( iter )( worn.erase( --iter.base() ) );
+                    }
+                }
             }
             // Whether or not the item was affected by the fluid, it still blocked some or all of it.
             // Breathability and coverage let fluid soak through, but some is lost, weakening the attack as it goes.
             liquid_remaining = std::max( 0,
-                                         liquid_remaining - ( ( armor.get_coverage( bp ) + armor.breathability( bp ) ) / 2 ) );
+                                         liquid_remaining - ( ( ( armor.get_coverage( bp ) + armor.breathability( bp ) ) / 2 ) * 10 ) );
+            damage.amount *= static_cast<float>( liquid_remaining ) / static_cast<float>( liquid_amount );
         }
         ++iter;
     }
@@ -2032,10 +2089,28 @@ void outfit::splash_attack( Character &guy, const spell &sp, Creature &caster, b
     }
     if( liquid_remaining == liquid_amount ) {
         // You took the whole attack without any being blocked!
-        add_msg_if_player_sees( guy, m_bad, _( "%1$s %2$s is splashed with %3$s liquid!" ),
-                                guy.disp_name( true,
-                                               true ), body_part_name_accusative( bp ), get_liquid_descriptor( liquid_remaining ) );
+        if( guy.is_avatar() ) {
+            guy.add_msg_if_player( m_warning, _( "You are splashed with %2s %3s!" ),
+                                   get_liquid_descriptor( liquid_remaining ), liquid_name );
+        } else {
+            add_msg_if_player_sees( guy, m_warning, _( "%1s is splashed with %2s %3s!" ), guy.disp_name(),
+                                    get_liquid_descriptor( liquid_remaining ), liquid_name );
+        }
     }
+    // If any containers were destroyed, dump the contents on the ground
+    guy.drop_invalid_inventory();
+    // Acid damages clothes directly, but should only harm players via the corroding effect
+    // However, something like boiling water should just deal damage instantly. guy_damage == true if so.
+    if( damage_target ) {
+        guy.deal_damage( nullptr, bp, damage_instance( damage.type, damage.amount ) );
+    }
+    if( sp.damage( caster ) < 0 ) {
+        sp.heal( guy.pos(), caster );
+        add_msg_if_player_sees( guy.pos(), m_good, _( "%s wounds are closing up!" ),
+                                guy.disp_name( true ) );
+    }
+    // Acid uses the corroding effect, but damage_over_time exists so we may as well run it here.
+    guy.add_damage_over_time( sp.damage_over_time( { bp.id() }, caster ) );
 }
 
 float outfit::damage_resist( const damage_type_id &dt, const bodypart_id &bp,
