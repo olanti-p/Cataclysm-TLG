@@ -209,6 +209,9 @@ struct field_type {
         description_affix desc_affix = description_affix::DESCRIPTION_AFFIX_NUM;
         map_bash_info bash_info;
 
+        // Name of whatever substance makes up the field, can be used in splash attacks or other messaging.
+        std::string substance_name = "liquid";
+
         // chance, issue, duration, speech
         std::tuple<int, std::string, time_duration, translation> npc_complain_data;
         field_immunity_data immunity_data;

@@ -27,11 +27,7 @@
     "type": "item_group",
     "id": "NC_COWBOY_shoes",
     "subtype": "distribution",
-    "entries": [
-      { "item": "sneakers", "prob": 20 },
-      { "item": "boots_western", "prob": 10 },
-      { "item": "boots", "prob": 50 }
-    ]
+    "entries": [ { "item": "sneakers", "prob": 20 }, { "item": "boots_western", "prob": 10 }, { "item": "boots", "prob": 50 } ]
   },
   {
     "type": "item_group",

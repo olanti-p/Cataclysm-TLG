@@ -247,10 +247,7 @@
             ]
           },
           {
-            "distribution": [
-              { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "heels", "prob": 35, "damage": [ 1, 4 ] }
-            ]
+            "distribution": [ { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] }, { "item": "heels", "prob": 35, "damage": [ 1, 4 ] } ]
           },
           {
             "distribution": [
@@ -343,10 +340,7 @@
             "prob": 75
           },
           {
-            "distribution": [
-              { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "heels", "prob": 40, "damage": [ 1, 4 ] }
-            ]
+            "distribution": [ { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] }, { "item": "heels", "prob": 40, "damage": [ 1, 4 ] } ]
           },
           {
             "distribution": [ { "item": "withered", "prob": 25, "damage": [ 1, 4 ] }, { "item": "bouquet", "prob": 75, "damage": [ 1, 4 ] } ],

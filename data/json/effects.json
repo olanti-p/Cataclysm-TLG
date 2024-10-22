@@ -3737,6 +3737,7 @@
   },
   {
     "type": "effect_type",
+    "id": "corroding",
     "name": [ "Acid Splattered", "Acid Splashed", "Acid Showered", "Acid Soaked", "Acid Drenched" ],
     "desc": [
       "You've got a little bit of acid on you.",
