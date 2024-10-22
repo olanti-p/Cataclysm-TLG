@@ -352,7 +352,7 @@ void suffer::while_grabbed( Character &you )
     }
 
     // Walls only get added if we're actually boxed in.
-    if( impassable_ter && crowd + impassable_ter > 5 ) {
+    if( impassable_ter && crowd + impassable_ter > 6 ) {
         you.add_msg_if_player( m_bad, _( "You're crushed against the walls!" ) );
         crowd += impassable_ter;
     }
@@ -384,15 +384,15 @@ void suffer::while_grabbed( Character &you )
 
     // a few warnings before starting to take damage
     if( you.oxygen <= 5 ) {
-        you.add_msg_if_player( m_bad, _( "You're suffocating!" ) );
+        you.add_msg_if_player( m_bad, _( "You're being suffocated!" ) );
         if( uistate.distraction_oxygen && you.is_avatar() ) {
-            g->cancel_activity_or_ignore_query( distraction_type::oxygen, _( "You're suffocating!" ) );
+            g->cancel_activity_or_ignore_query( distraction_type::oxygen, _( "You're being suffocated!" ) );
         }
         // your character's chest is being crushed and they are dying
         you.apply_damage( nullptr, you.get_random_body_part_of_type( body_part_type::type::torso ), rng( 1,
                           4 ) );
     } else if( you.oxygen <= 15 ) {
-        you.add_msg_if_player( m_bad, _( "You can't breathe with all this weight!" ) );
+        you.add_msg_if_player( m_bad, _( "You're being crushed beneath your attackers!" ) );
     } else if( you.oxygen <= 25 ) {
         you.add_msg_if_player( m_bad, _( "You're having difficulty breathing!" ) );
     }
