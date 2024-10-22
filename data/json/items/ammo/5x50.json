@@ -1,10 +1,10 @@
 [
- {
+  {
     "id": "5x50dart",
     "type": "AMMO",
     "name": { "str": "RA110 5x50mm flechette" },
     "description": "The Rivtech 5x50mm flechette round is a fin-stabilized steel needle packed into a plastic sabot which breaks apart shortly after the round clears the chamber.  The resulting cartridge is far lighter and produces lower recoil than a conventional round, while the projectile makes up for its low mass with extreme velocity and long range.",
-    "weight": "1 g",
+    "weight": "5 g",
     "volume": "144 ml",
     "price": 1125,
     "material": [ "plastic", "powder", "steel" ],
@@ -28,7 +28,7 @@
     "type": "AMMO",
     "name": { "str": "RA119 5x50mm penetrator" },
     "description": "The Rivtech 5x50mm penetrator round is a fin-stabilized armor-penetrating tungsten needle packed into a plastic sabot which breaks apart shortly after the round clears the chamber.  The resulting cartridge is far lighter and produces lower recoil than a conventional round, while the projectile makes up for its low mass with extreme velocity and long range.",
-    "weight": "1 g",
+    "weight": "6 g",
     "price": 1688,
     "price_postapoc": 2400,
     "relative": { "range": -10, "damage": { "damage_type": "bullet", "amount": 27, "armor_penetration": 28 }, "dispersion": 9 },

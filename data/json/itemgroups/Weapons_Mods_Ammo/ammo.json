@@ -138,8 +138,8 @@
     "subtype": "distribution",
     "entries": [
       { "item": "46mm", "prob": 70 },
-      { "item": "5x50dart", "prob": 30 },
-      { "item": "5x50heavy", "prob": 20 },
+      { "item": "5x50dart", "prob": 10 },
+      { "item": "5x50heavy", "prob": 5 },
       { "item": "9mmfmj", "prob": 100 }
     ]
   },
