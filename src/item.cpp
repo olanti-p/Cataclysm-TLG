@@ -302,6 +302,7 @@ item::item( const itype *type, time_point turn, int qty ) : type( type ), bday( 
     }
     item_vars = type->item_variables;
 
+    update_prefix_suffix_flags();
     if( has_flag( flag_CORPSE ) ) {
         corpse = &type->source_monster.obj();
         if( !type->source_monster.is_null() && !type->source_monster->zombify_into.is_empty() ) {
@@ -652,6 +653,7 @@ item &item::convert( const itype_id &new_type, Character *carrier )
         carrier->on_item_acquire( *this );
     }
 
+    update_prefix_suffix_flags();
     return *this;
 }
 
@@ -1674,6 +1676,9 @@ stacking_info item::stacks_with( const item &rhs, bool check_components, bool co
         bits.set( tname::segments::TEMPERATURE, is_same_temperature( rhs ) );
         bits.set( tname::segments::TAGS, item_tags == rhs.item_tags );
     }
+
+    bits.set( tname::segments::CUSTOM_ITEM_PREFIX, bits[tname::segments::TAGS] );
+    bits.set( tname::segments::CUSTOM_ITEM_SUFFIX, bits[tname::segments::TAGS] );
 
     bits.set( tname::segments::FAULTS, faults == rhs.faults );
     bits.set( tname::segments::TECHNIQUES, techniques == rhs.techniques );
@@ -6680,6 +6685,31 @@ void item::update_inherited_flags()
             }
         }
     }
+    update_prefix_suffix_flags();
+}
+
+void item::update_prefix_suffix_flags()
+{
+    prefix_tags_cache.clear();
+    suffix_tags_cache.clear();
+    auto const insert_prefix_suffix_flags = [this]( FlagsSetType const & Flags ) {
+        for( flag_id const &f : Flags ) {
+            update_prefix_suffix_flags( f );
+        }
+    };
+    insert_prefix_suffix_flags( get_flags() );
+    insert_prefix_suffix_flags( type->get_flags() );
+    insert_prefix_suffix_flags( inherited_tags_cache );
+}
+
+void item::update_prefix_suffix_flags( const flag_id &f )
+{
+    if( !f->item_prefix().empty() ) {
+        prefix_tags_cache.emplace( f );
+    }
+    if( !f->item_suffix().empty() ) {
+        suffix_tags_cache.emplace( f );
+    }
 }
 
 void item::on_contents_changed()
@@ -7562,6 +7592,7 @@ item &item::set_flag( const flag_id &flag )
 {
     if( flag.is_valid() ) {
         item_tags.insert( flag );
+        update_prefix_suffix_flags( flag );
         requires_tags_processing = true;
     } else {
         debugmsg( "Attempted to set invalid flag_id %s", flag.str() );
@@ -7572,6 +7603,7 @@ item &item::set_flag( const flag_id &flag )
 item &item::unset_flag( const flag_id &flag )
 {
     item_tags.erase( flag );
+    update_prefix_suffix_flags();
     requires_tags_processing = true;
     return *this;
 }
@@ -7590,6 +7622,16 @@ item &item::set_flag_recursive( const flag_id &flag )
 const item::FlagsSetType &item::get_flags() const
 {
     return item_tags;
+}
+
+const item::FlagsSetType &item::get_prefix_flags() const
+{
+    return prefix_tags_cache;
+}
+
+const item::FlagsSetType &item::get_suffix_flags() const
+{
+    return suffix_tags_cache;
 }
 
 bool item::has_property( const std::string &prop ) const
@@ -8603,7 +8645,7 @@ float item::resist( const damage_type_id &dmg_type, const bool to_self,
     }
 
     // Implicit item damage immunity for damage types listed prior to bash
-    // There are dmg types that do not affect items such as PURE/COLD etc..
+    // There are dmg types that do not affect items such as PURE/COLD etc.
     if( to_self && !damage_type_can_damage_items( dmg_type ) ) {
         return std::numeric_limits<float>::max();
     }
@@ -8732,7 +8774,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                                 total_coverage += m->cover;
                                 tmp_add = m->id->resist( dmg_type );
                             } else { // The physical damage is only reduced by this material layer through gaps where it isn't covered by ones above
-                                tmp_add = ( ( 100 - total_coverage ) / 100.00 ) * m->id->resist( dmg_type );
+                                tmp_add = ( ( 100 - total_coverage ) / 100 ) * m->id->resist( dmg_type );
                             }
                         } else { // The damage is nonphysical
                             tmp_add = m->id->resist( dmg_type ) * m->cover * 0.01f;
@@ -8741,7 +8783,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                     resist += tmp_add;
                 }
             }
-            // Acid ( being both enviro and physical, 'cause it's a liquid ) cares about breathability rather than environmental protection.
+            // Acid (being both enviro and physical, 'cause it's a liquid) cares about breathability rather than environmental protection.
             // Gas/etc attacks still care about enviro.
             if( !dmg_type->physical ) {
                 const int env = get_env_resist( resist_value );
@@ -8754,6 +8796,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
         }
         return resist + mod;
     }
+
     // If we don't have armor portion materials for this body part, we just look at the item's general values.
     const std::map<material_id, int> mats = made_of();
     if( !mats.empty() ) {
@@ -8770,6 +8813,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
         // Average by portion of materials
         resist /= total;
     }
+
     return resist + mod;
 }
 
@@ -8958,6 +9002,7 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
             return armor_status::UNDAMAGED;
         }
     }
+
     return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
 }
 
