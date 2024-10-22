@@ -2164,8 +2164,7 @@
       "NO_SCENT",
       "AUTO_WALL_SYMBOL",
       "MINEABLE",
-      "BLOCK_WIND",
-      "WIRED_WALL"
+      "BLOCK_WIND"
     ],
     "bash": {
       "str_min": 60,

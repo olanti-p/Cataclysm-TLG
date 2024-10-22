@@ -11,7 +11,7 @@
       "i": [ [ "t_card_industrial", 65 ], [ "t_card_reader_broken", 35 ] ],
       "$": "t_door_metal_locked",
       "D": "t_door_c",
-      "O": "t_double_pane_glass",
+      "O": "t_window_domestic",
       "f": "t_metal_railing",
       "F": "t_fence_barbed",
       "1": [ [ "t_tree_pine", 25 ], [ "t_tree_pine_harvested", 60 ], [ "t_tree_deadpine", 15 ] ],
