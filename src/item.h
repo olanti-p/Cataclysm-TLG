@@ -1288,17 +1288,17 @@ class item : public visitable
                        const std::vector<const part_material *> &armor_mats = {},
                        float avg_thickness = 1.0f ) const;
         /**
-         * Handles the special rules regarding environmental type damage such as fire and acid.
-         * Currently does not damage items as damage to items from fire is handled elsewhere, and
-         * acid is currently not intended to cause item damage.
+         * Handles the special rules regarding environmental type damage, such as acid and heat.
+         * Currently only damages items if the damage is both environmental and physical, such as acid.
+         * Fire damages items elsewhere, and cold/bio/electric can't harm items.
          * @param dmg_type The type of incoming damage
          * @param to_self If this is true, it returns item's own resistance, not one it gives to wearer.
          * @param bodypart_target The bodypart_id or sub_bodypart_id of the target bodypart.
-         * @param base_env_resist Will override the base environmental
+         * @param resist_value Will override the base environmental
          * resistance (to allow hypothetical calculations for gas masks).
          */
         float _environmental_resist( const damage_type_id &dmg_type, bool to_self = false,
-                                     int base_env_resist = 0,
+                                     int resist_value = 0,
                                      bool bp_null = true,
                                      const std::vector<const part_material *> &armor_mats = {} ) const;
         /*@}*/
@@ -1961,12 +1961,6 @@ class item : public visitable
         /** returns read-only set of flags of this item (not including flags from item type or gunmods) */
         const FlagsSetType &get_flags() const;
 
-        /** returns read-only set of flags of this item that will add prefixes to this item. */
-        const FlagsSetType &get_prefix_flags() const;
-
-        /** returns read-only set of flags of this item that will add suffixes to this item. */
-        const FlagsSetType &get_suffix_flags() const;
-
         /** Idempotent filter setting an item specific flag. */
         item &set_flag( const flag_id &flag );
 
@@ -2438,8 +2432,6 @@ class item : public visitable
          */
         int ammo_remaining( const Character *carrier = nullptr, bool include_linked = false ) const;
         int ammo_remaining( bool include_linked ) const;
-
-
     private:
         int ammo_remaining( const std::set<ammotype> &ammo, const Character *carrier = nullptr,
                             bool include_linked = false ) const;
@@ -3041,11 +3033,6 @@ class item : public visitable
         bool armor_full_protection_info( std::vector<iteminfo> &info, const iteminfo_query *parts ) const;
 
         void update_inherited_flags();
-        /**
-        * Update prefix_tags_cache and suffix_tags_cache
-        */
-        void update_prefix_suffix_flags();
-        void update_prefix_suffix_flags( const flag_id &flag );
 
     public:
         enum class sizing : int {
@@ -3096,8 +3083,6 @@ class item : public visitable
         bool requires_tags_processing = true;
         cata::heap<FlagsSetType> item_tags; // generic item specific flags
         cata::heap<FlagsSetType> inherited_tags_cache;
-        cata::heap<FlagsSetType> prefix_tags_cache; // flags that will add prefixes to this item
-        cata::heap<FlagsSetType> suffix_tags_cache; // flags that will add suffixes to this item
         lazy<safe_reference_anchor> anchor;
         cata::heap<std::map<std::string, std::string>> item_vars;
         const mtype *corpse = nullptr;
