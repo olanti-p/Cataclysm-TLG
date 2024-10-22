@@ -546,6 +546,7 @@ static void damage_targets( const spell &sp, Creature &caster,
         sp.create_field( target, caster );
         bool dodgeable = sp.has_flag( spell_flag::DODGEABLE );
         bool liquid = sp.has_flag( spell_flag::LIQUID );
+        bool liquid_damage_target = ( sp.has_flag( spell_flag::LIQUID_DAMAGE_TARGET ) );
         if( sp.has_flag( spell_flag::IGNITE_FLAMMABLE ) && here.is_flammable( target ) ) {
             here.add_field( target, fd_fire, 1, 10_minutes );
 
@@ -614,13 +615,16 @@ static void damage_targets( const spell &sp, Creature &caster,
             }
 
             for( damage_unit &val : atk.proj.impact.damage_units ) {
-                if( sp.has_flag( spell_flag::PERCENTAGE_DAMAGE ) ) {
-                    // TODO: Change once spells don't always target get_max_hitsize_bodypart(). Should target each bodypart with it's respecive %
+                if( sp.has_flag( spell_flag::PERCENTAGE_DAMAGE ) && ( liquid_damage_target || !liquid ) ) {
+                    // TODO: Change once spells don't always target get_max_hitsize_bodypart(). Should target each bodypart with it's respective %
                     val.amount = cr->get_hp( cr->get_max_hitsize_bodypart() ) * sp.damage( caster ) / 100.0;
                 }
                 val.amount *= damage_mitigation_multiplier;
             }
-            cr->deal_projectile_attack( &caster, atk, true );
+            // Ensure we don't accidentally try to damage a monster with a splash attack that isn't supposed to hurt
+            if( liquid_damage_target || !liquid ) {
+                cr->deal_projectile_attack( &caster, atk, true );
+            }
         } else if( sp.damage( caster ) < 0 ) {
             sp.heal( target, caster );
             add_msg_if_player_sees( cr->pos(), m_good, _( "%s wounds are closing up!" ),

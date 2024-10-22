@@ -2450,5 +2450,10 @@
   {
     "id": "DRACULIN_VENOM",
     "type": "json_flag"
+  },
+  {
+    "id": "ACID_AFFLICTED",
+    "type": "json_flag",
+    "//": "The character is afflicted with acid."
   }
 ]
