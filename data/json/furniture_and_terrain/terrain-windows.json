@@ -415,16 +415,7 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "flags": [
-      "FLAMMABLE",
-      "NOITEM",
-      "ALARMED",
-      "WALL",
-      "BLOCK_WIND",
-      "REDUCE_SCENT",
-      "WINDOW",
-      "SUPPORTS_ROOF"
-    ],
+    "flags": [ "FLAMMABLE", "NOITEM", "ALARMED", "WALL", "BLOCK_WIND", "REDUCE_SCENT", "WINDOW", "SUPPORTS_ROOF" ],
     "deconstruct": { "ter_set": "t_window_alarm", "items": [ { "item": "null", "count": 0 } ] },
     "bash": {
       "str_min": 6,
@@ -525,15 +516,7 @@
     "color": "yellow",
     "move_cost": 4,
     "coverage": 60,
-    "flags": [
-      "NOITEM",
-      "FLAMMABLE",
-      "SUPPORTS_ROOF",
-      "MOUNTABLE",
-      "CONNECT_WITH_WALL",
-      "PERMEABLE",
-      "SUPPORTS_ROOF"
-    ],
+    "flags": [ "NOITEM", "FLAMMABLE", "SUPPORTS_ROOF", "MOUNTABLE", "CONNECT_WITH_WALL", "PERMEABLE", "SUPPORTS_ROOF" ],
     "curtain_transform": "t_window_empty",
     "open": "t_window_empty_curtains_open",
     "examine_action": "curtains",
@@ -597,10 +580,7 @@
     "coverage": 95,
     "roof": "t_flat_roof",
     "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "SUPPORTS_ROOF" ],
-    "deconstruct": {
-      "ter_set": "t_window",
-      "items": [ { "item": "2x4", "count": [ 3, 4 ] }, { "item": "nail", "charges": [ 6, 8 ] } ]
-    },
+    "deconstruct": { "ter_set": "t_window", "items": [ { "item": "2x4", "count": [ 3, 4 ] }, { "item": "nail", "charges": [ 6, 8 ] } ] },
     "bash": {
       "str_min": 3,
       "str_max": 30,
@@ -726,10 +706,7 @@
       "sound_vol": 16,
       "sound_fail_vol": 10,
       "ter_set": "t_window_frame",
-      "items": [
-        { "item": "splinter", "count": [ 0, 2 ] },
-        { "item": "plastic_chunk", "count": [ 1, 4 ] }
-      ]
+      "items": [ { "item": "splinter", "count": [ 0, 2 ] }, { "item": "plastic_chunk", "count": [ 1, 4 ] } ]
     },
     "prying": {
       "result": "t_window_frame",
@@ -1063,7 +1040,7 @@
       "message": "You finish cutting the metal.",
       "byproducts": [ { "item": "rebar", "count": [ 1, 8 ] } ]
     },
-    "flags": [ "TRANSPARENT", "NOITEM", "CONNECT_WITH_WALL", "REDUCE_SCENT",  "THIN_OBSTACLE", "WINDOW", "SUPPORTS_ROOF" ],
+    "flags": [ "TRANSPARENT", "NOITEM", "CONNECT_WITH_WALL", "REDUCE_SCENT", "THIN_OBSTACLE", "WINDOW", "SUPPORTS_ROOF" ],
     "oxytorch": { "result": "t_window", "duration": "40 seconds", "byproducts": [ { "item": "rebar", "count": [ 1, 8 ] } ] },
     "bash": {
       "str_min": 3,
@@ -1702,7 +1679,7 @@
       "BARRICADABLE_WINDOW",
       "CONNECT_WITH_WALL",
       "BLOCK_WIND",
-      "REDUCE_SCENT", 
+      "REDUCE_SCENT",
       "WINDOW",
       "SUPPORTS_ROOF"
     ],
@@ -1795,15 +1772,7 @@
     "color": "light_gray",
     "move_cost": 0,
     "roof": "t_metal_flat_roof",
-    "flags": [
-      "NOITEM",
-      "CONNECT_WITH_WALL",
-      "THIN_OBSTACLE",
-      "BLOCK_WIND",
-      "REDUCE_SCENT",
-      "WINDOW",
-      "SUPPORTS_ROOF"
-    ],
+    "flags": [ "NOITEM", "CONNECT_WITH_WALL", "THIN_OBSTACLE", "BLOCK_WIND", "REDUCE_SCENT", "WINDOW", "SUPPORTS_ROOF" ],
     "bash": {
       "str_min": 50,
       "str_max": 75,

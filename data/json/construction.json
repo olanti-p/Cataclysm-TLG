@@ -916,7 +916,6 @@
     "pre_terrain": "t_window_frame",
     "post_terrain": "t_window_boarded_noglass"
   },
-
   {
     "type": "construction",
     "id": "constr_window_reinforced_noglass",
