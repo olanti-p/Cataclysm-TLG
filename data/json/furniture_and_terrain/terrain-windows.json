@@ -16,6 +16,7 @@
       "BARRICADABLE_WINDOW",
       "CONNECT_WITH_WALL",
       "BLOCK_WIND",
+      "REDUCE_SCENT",
       "WINDOW",
       "SUPPORTS_ROOF"
     ],
@@ -595,7 +596,7 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "REDUCE_SCENT", "SUPPORTS_ROOF" ],
+    "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "SUPPORTS_ROOF" ],
     "deconstruct": {
       "ter_set": "t_window",
       "items": [ { "item": "2x4", "count": [ 3, 4 ] }, { "item": "nail", "charges": [ 6, 8 ] } ]
@@ -634,7 +635,7 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "REDUCE_SCENT", "SUPPORTS_ROOF" ],
+    "flags": [ "FLAMMABLE", "NOITEM", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "SUPPORTS_ROOF" ],
     "deconstruct": {
       "ter_set": "t_window_no_curtains",
       "items": [ { "item": "2x4", "count": [ 3, 4 ] }, { "item": "nail", "charges": [ 6, 8 ] } ]
@@ -673,7 +674,7 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "REDUCE_SCENT", "SUPPORTS_ROOF" ],
+    "flags": [ "FLAMMABLE", "NOITEM", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "SUPPORTS_ROOF" ],
     "deconstruct": {
       "ter_set": "t_window_domestic",
       "items": [ { "item": "2x4", "count": [ 3, 4 ] }, { "item": "nail", "charges": [ 6, 8 ] } ]
@@ -712,7 +713,7 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "REDUCE_SCENT", "SUPPORTS_ROOF" ],
+    "flags": [ "FLAMMABLE", "NOITEM", "CONNECT_WITH_WALL", "WINDOW", "BLOCK_WIND", "SUPPORTS_ROOF" ],
     "deconstruct": {
       "ter_set": "t_plastic_window",
       "items": [ { "item": "2x4", "count": [ 3, 4 ] }, { "item": "nail", "charges": [ 6, 8 ] } ]
@@ -1062,7 +1063,7 @@
       "message": "You finish cutting the metal.",
       "byproducts": [ { "item": "rebar", "count": [ 1, 8 ] } ]
     },
-    "flags": [ "TRANSPARENT", "NOITEM", "CONNECT_WITH_WALL", "THIN_OBSTACLE", "WINDOW", "SUPPORTS_ROOF" ],
+    "flags": [ "TRANSPARENT", "NOITEM", "CONNECT_WITH_WALL", "REDUCE_SCENT",  "THIN_OBSTACLE", "WINDOW", "SUPPORTS_ROOF" ],
     "oxytorch": { "result": "t_window", "duration": "40 seconds", "byproducts": [ { "item": "rebar", "count": [ 1, 8 ] } ] },
     "bash": {
       "str_min": 3,
@@ -1158,7 +1159,6 @@
       "NOITEM",
       "OPENCLOSE_INSIDE",
       "BARRICADABLE_WINDOW_CURTAINS",
-      "REDUCE_SCENT",
       "CONNECT_WITH_WALL",
       "BLOCK_WIND",
       "WINDOW",
@@ -1206,7 +1206,6 @@
       "NOITEM",
       "OPENCLOSE_INSIDE",
       "BARRICADABLE_WINDOW_CURTAINS",
-      "REDUCE_SCENT",
       "BLOCK_WIND",
       "CONNECT_WITH_WALL",
       "WINDOW",
@@ -1703,6 +1702,7 @@
       "BARRICADABLE_WINDOW",
       "CONNECT_WITH_WALL",
       "BLOCK_WIND",
+      "REDUCE_SCENT", 
       "WINDOW",
       "SUPPORTS_ROOF"
     ],

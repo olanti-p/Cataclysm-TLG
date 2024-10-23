@@ -2647,21 +2647,21 @@
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 4 ] ] ]
+    "components": [ [ [ "glass_shard", 2 ] ], [ "glass_shard_large", 1 ] ] ]
   },
   {
     "result": "glass_plate",
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 4 ] ] ]
+    "components": [ [ [ "glass_shard", 4 ] ], [ "glass_shard_large", 1 ] ] ]
   },
   {
     "result": "jar_3l_glass_sealed",
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 12 ] ] ]
+    "components": [ [ [ "glass_shard", 9 ] ], [ "glass_shard_large", 1 ] ] ]
   },
   {
     "result": "bottle_glass",
@@ -2703,7 +2703,7 @@
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 7 ] ] ]
+    "components": [ [ [ "glass_shard", 5 ] ] , [ "glass_shard_large", 1 ] ] ]
   },
   {
     "result": "mirror",
@@ -2717,7 +2717,7 @@
     "type": "uncraft",
     "activity_level": "NO_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 88 ] ] ]
+    "components": [ [ [ "glass_shard", 72 ] ] , [ "glass_shard_large", 3 ] ] ]
   },
   {
     "result": "game_watch",
@@ -6799,7 +6799,7 @@
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 600 ] ] ],
+    "components": [ [ [ "glass_shard", 93 ] ] , [ "glass_shard_large", 3 ] ] ]
     "flags": [ "BLIND_EASY" ]
   },
   {
@@ -6807,7 +6807,7 @@
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 285 ] ] ],
+    "components": [ [ [ "glass_shard", 45 ] ] , [ "glass_shard_large", 2 ] ] ]
     "flags": [ "BLIND_EASY" ]
   },
   {
@@ -6815,7 +6815,7 @@
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 1000 ] ] ],
+    "components": [ [ [ "glass_shard", 180 ] ] , [ "glass_shard_large", 5 ] ] ],
     "flags": [ "BLIND_EASY" ]
   },
   {
