@@ -3579,10 +3579,10 @@
     "points": 0,
     "skills": [ { "level": 3, "name": "dodge" } ],
     "items": {
-      "both": {
-        "entries": [ { "item": "socks" }, { "item": "knit_scarf" }, { "group": "charged_smart_phone" } ]
+      "both": { "entries": [ { "item": "socks" }, { "item": "knit_scarf" }, { "group": "charged_smart_phone" } ] },
+      "male": {
+        "entries": [ { "item": "briefs" }, { "item": "tux" }, { "item": "tourmaline_silver_cufflinks" }, { "item": "dress_shoes" } ]
       },
-      "male": { "entries": [ { "item": "briefs" }, { "item": "tux" }, { "item": "tourmaline_silver_cufflinks" }, { "item": "dress_shoes" } ] },
       "female": {
         "entries": [
           { "item": "bra" },

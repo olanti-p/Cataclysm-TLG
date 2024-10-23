@@ -1684,7 +1684,7 @@
     "book_learn": [ [ "glassblowing_book", 5 ] ],
     "proficiencies": [ { "proficiency": "prof_glassblowing", "required": false, "time_multiplier": 6 } ],
     "tools": [ [ [ "metalworking_tongs_any", 1, "LIST" ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 75 ] ] ],
-    "components": [ [ [ "glass_shard", 3 ] ], [ [ "silver_small", 6 ] ] ]
+    "components": [ [ [ "glass_shard", 3 ], [ "tempered_glass_shard", 20 ] ], [ [ "silver_small", 6 ] ] ]
   },
   {
     "type": "recipe",
@@ -1704,7 +1704,16 @@
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
       [ [ "forge", 25 ] ]
     ],
-    "components": [ [ [ "glass_shard", 3 ], [ "bottle_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ] ] ]
+    "components": [
+      [
+        [ "glass_shard", 3 ],
+        [ "bottle_glass", 1 ],
+        [ "flask_glass", 3 ],
+        [ "test_tube", 6 ],
+        [ "marble", 9 ],
+        [ "tempered_glass_shard", 20 ]
+      ]
+    ]
   },
   {
     "type": "recipe",
@@ -3083,7 +3092,14 @@
       [ [ "forge", 75 ] ]
     ],
     "components": [
-      [ [ "glass_shard", 3 ], [ "pipe_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ] ],
+      [
+        [ "glass_shard", 6 ],
+        [ "pipe_glass", 1 ],
+        [ "flask_glass", 3 ],
+        [ "test_tube", 6 ],
+        [ "marble", 18 ],
+        [ "tempered_glass_shard", 30 ]
+      ],
       [ [ "stopcock", 1 ] ]
     ]
   },
