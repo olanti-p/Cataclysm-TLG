@@ -410,7 +410,7 @@
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
       [ [ "forge", 150 ] ]
     ],
-    "components": [ [ [ "glass_shard", 13 ], [ "flask_glass", 20 ], [ "test_tube", 27 ], [ "marble", 318 ] ] ]
+    "components": [ [ [ "glass_shard", 109 ], [ "flask_glass", 20 ], [ "test_tube", 27 ], [ "marble", 318 ], [ "tempered_glass_shard", 545 ] ] ]
   },
   {
     "type": "recipe",
@@ -430,7 +430,7 @@
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
       [ [ "forge", 75 ] ]
     ],
-    "components": [ [ [ "glass_shard", 3 ], [ "pipe_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ] ] ]
+    "components": [ [ [ "glass_shard", 25 ], [ "pipe_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ], [ "tempered_glass_shard", 125 ] ] ]
   },
   {
     "type": "recipe",
@@ -450,7 +450,7 @@
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
       [ [ "forge", 50 ] ]
     ],
-    "components": [ [ [ "glass_shard", 4 ], [ "flask_glass", 6 ], [ "test_tube", 8 ], [ "marble", 93 ] ] ]
+    "components": [ [ [ "glass_shard", 31 ], [ "flask_glass", 6 ], [ "test_tube", 8 ], [ "marble", 93 ], [ "tempered_glass_shard", 155 ] ] ]
   },
   {
     "type": "recipe",
@@ -470,7 +470,7 @@
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
       [ [ "forge", 25 ] ]
     ],
-    "components": [ [ [ "glass_shard", 1 ], [ "test_tube", 2 ], [ "marble", 25 ] ] ]
+    "components": [ [ [ "glass_shard", 8 ], [ "test_tube", 2 ], [ "marble", 24 ],  [ "tempered_glass_shard", 40 ] ] ]
   },
   {
     "type": "recipe",
@@ -491,7 +491,7 @@
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
       [ [ "forge", 5 ] ]
     ],
-    "components": [ [ [ "glass_shard", 1 ], [ "flask_glass", 1 ], [ "marble", 25 ] ] ]
+    "components": [ [ [ "glass_shard", 8 ], [ "flask_glass", 1 ], [ "marble", 24 ],  [ "tempered_glass_shard", 40 ] ] ]
   },
   {
     "type": "recipe",
