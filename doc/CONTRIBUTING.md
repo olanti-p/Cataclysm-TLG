@@ -2,58 +2,23 @@
 
 **Opening a new issue?** Please read [ISSUES.md](../ISSUES.md) first.
 
-**Want an introductory guide for creating game content?** You might want to
-read the [Guide to adding new content to CDDA for first time
-contributors](https://github.com/CleverRaven/Cataclysm-DDA/wiki/Guide-to-adding-new-content-to-CDDA-for-first-time-contributors)
-on the CDDA wiki.
-
-Cataclysm:Dark Days Ahead is released under the Creative Commons Attribution ShareAlike 3.0 license. The code and content of the game is free to use, modify, and redistribute for any purpose whatsoever. See http://creativecommons.org/licenses/by-sa/3.0/ for details.
+Cataclysm: The Last Generation is released under the Creative Commons Attribution ShareAlike 3.0 license. The code and content of the game is free to use, modify, and redistribute for any purpose whatsoever. See http://creativecommons.org/licenses/by-sa/3.0/ for details.
 This means any contribution you make to the project will also be covered by the same license, and this license is irrevocable.
 
 ## Using a good text editor
 
-Most of the Cataclysm: Dark Days Ahead game data is defined in JSON files.
+Most of the Cataclysm: The Last Generation game data is defined in JSON files.
 These files are intended to be easy for you to edit, but there are some
 pitfalls.  Using Windows Notepad can get you into trouble, because it likes to
-insert a special character called a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) at the start of the file, which CDDA
+insert a special character called a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) at the start of the file, which CTLG
 does not want.
 
 If you're going to be editing JSON files consider getting a more fully-featured
 editor such as [Notepad++](https://notepad-plus-plus.org/).
 
-## All PRs must have a "Summary" section
-
-Summary is a *mandatory* one-line description of your change that will be extracted and added to [the project changelog](../data/changelog.txt).
-If the summary is invalid, your PR is unable to get merged.
-
-The format is:
-
-```markdown
-#### Summary
-Category "description"
-```
-
-The categories to choose from are: Features, Content, Interface, Mods, Balance, Bugfixes, Performance, Infrastructure, Build, I18N.
-
-Example:
-
-```markdown
-#### Summary
-Content "Adds new mutation category 'Mouse'"
-```
-
-Or, if you want it treated as a minor tweak that doesn't appear in the changelog:
-
-```markdown
-#### Summary
-None
-```
-
-See [the Changelog Guidelines](../doc/CHANGELOG_GUIDELINES.md) for explanations of the categories.
-
 ## Contributing via GitHub
 
-Contributing to Cataclysm: Dark Days Ahead is easy — simply [fork](https://github.com/CleverRaven/Cataclysm-DDA/fork) the repository here on GitHub, make your changes, and then send us a pull request.
+Contributing to Cataclysm: The Last Generation is easy — simply [fork](https://github.com/CleverRaven/Cataclysm-DDA/fork) the repository here on GitHub, make your changes, and then send us a pull request.
 
 There are a couple of guidelines we suggest sticking to (see [#Example Workflow](#example-workflow)):
 
