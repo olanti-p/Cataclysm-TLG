@@ -63,7 +63,7 @@
     "volume": "5 ml",
     "price": 800,
     "price_postapoc": 0,
-    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "flags": [ "BANK_NOTE_SHAPED", "PAPER_SHAPED", "TINDER" ],
     "material": [ "paper" ],
     "symbol": "*",
     "color": "light_gray"
@@ -107,7 +107,8 @@
     "volume": "5 ml",
     "price": 100,
     "price_postapoc": 0,
-    "material": [ "plastic" ],
+    "flags": [ "TINDER" ],
+    "material": [ "paper" ],
     "symbol": "*",
     "color": "light_gray"
   },

@@ -13,6 +13,7 @@
     "category": "chems",
     "phase": "liquid",
     "container": "bottle_glass",
+    "flags": [ "TINDER" ],
     "material": [ "alcohol" ],
     "symbol": "~",
     "color": "white",
@@ -76,7 +77,7 @@
     "ammo_type": "diesel",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 4 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
   },
   {
     "id": "jp8",
@@ -99,7 +100,7 @@
     "ammo_type": "jp8",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
   },
   {
     "id": "avgas",
@@ -122,7 +123,7 @@
     "ammo_type": "avgas",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
   },
   {
     "id": "biodiesel",
@@ -131,7 +132,7 @@
     "weight": "875 mg",
     "material": [ "biodiesel" ],
     "type": "AMMO",
-    "description": "Vegetable oil- or animal fat-based diesel fuel consisting of long-chain alkyl (methyl, ethyl, or propyl) esters.",
+    "description": "Vegetable oil or animal fat-based diesel fuel consisting of long-chain alkyl (methyl, ethyl, or propyl) esters.  It can safely be used in diesel engines.",
     "price": 30,
     "price_postapoc": 60
   },
@@ -155,13 +156,14 @@
     "ammo_type": "gasoline",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
   },
   {
     "id": "lamp_oil",
     "type": "AMMO",
     "name": { "str_sp": "kerosene" },
     "description": "A thin and clean-burning oil made for use in oil lamps.",
+    "//": "Needs a wick to burn, so it isn't TINDER.",
     "category": "fuel",
     "weight": "810 mg",
     "volume": "200ml",
@@ -223,7 +225,7 @@
     "ammo_type": "flammable",
     "damage": { "damage_type": "heat", "amount": 15, "armor_penetration": 30 },
     "range": 6,
-    "effects": [ "FLAME", "STREAM_BIG", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM_BIG", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
   },
   {
     "id": "gelled_gasoline",
@@ -284,6 +286,7 @@
     "phase": "liquid",
     "container": "bottle_plastic",
     "material": [ "turpentine" ],
+    "flags": [ "TINDER" ],
     "symbol": "~",
     "color": "white",
     "ammo_type": "turpentine",
@@ -306,6 +309,7 @@
     "phase": "liquid",
     "container": "bottle_plastic",
     "material": [ "turpentine" ],
+    "flags": [ "TINDER" ],
     "symbol": "~",
     "color": "white",
     "ammo_type": "lamp_oil",
@@ -318,6 +322,7 @@
     "type": "AMMO",
     "name": { "str_sp": "crude lamp oil" },
     "description": "A crude, natural oil made for use in pre-modern oil lamps.",
+    "//": "Lamp oil needs a wick to burn, so it isn't TINDER",
     "category": "fuel",
     "weight": "810 mg",
     "volume": "200ml",

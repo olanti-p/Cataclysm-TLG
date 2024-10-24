@@ -1909,7 +1909,17 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
     if( !here.is_flammable( where ) ) {
         try_fuel_fire( *act, *you, true );
         if( !here.is_flammable( where ) ) {
-            you->add_msg_if_player( m_info, _( "There's nothing to light there." ) );
+            if( here.has_flag_ter( ter_furn_flag::TFLAG_USABLE_FIRE, where ) ) {
+                you->add_msg_if_player( m_info, _( "It's already burning hot there." ) );
+            } else if( here.has_flag_ter( ter_furn_flag::TFLAG_LIQUID, where ) ||
+                       here.has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, where ) ||
+                       here.has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, where ) ) {
+                you->add_msg_if_player( m_info, _( "You need dry ground to light a fire." ) );
+            } else if( here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, where ) ) {
+                you->add_msg_if_player( m_info, _( "It's already burning hot there." ) );
+            } else {
+                you->add_msg_if_player( m_info, _( "There's nothing to light there." ) );
+            }
             you->cancel_activity();
             return;
         }
@@ -1927,9 +1937,14 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
         return;
     }
 
+    if( here.has_flag( ter_furn_flag::TFLAG_NOITEM, where ) && !here.has_flag( ter_furn_flag::TFLAG_TINDER, where ) ) {
+        you->add_msg_if_player( m_info, _( "That might be burnable, but it won't light so easily." ) );
+        you->cancel_activity();
+        return;
+    }
+
     item &firestarter = *act->targets.front();
-    if( firestarter.has_flag( flag_REQUIRES_TINDER ) ) {
-        if( !here.tinder_at( where ) ) {
+        if( !here.tinder_at( where ) && !here.is_tinder( where ) ) {
             inventory_filter_preset preset( []( const item_location & loc ) {
                 return loc->has_flag( flag_TINDER );
             } );
@@ -1941,7 +1956,7 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
 
             item_location tinder;
             if( inv_s.empty() || !( tinder = inv_s.execute() ) ) {
-                you->add_msg_if_player( m_info, _( "This item requires tinder to light." ) );
+                you->add_msg_if_player( m_info, _( "You'll need some tinder to get a fire going." ) );
                 you->cancel_activity();
                 return;
             }
@@ -1957,7 +1972,6 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
                 tinder.remove_item();
             }
         }
-    }
 
     const use_function *usef = firestarter.type->get_use( "firestarter" );
     if( usef == nullptr || usef->get_actor_ptr() == nullptr ) {
@@ -1966,7 +1980,7 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
         return;
     }
 
-    you->mod_moves( -you->moves );
+    you->mod_moves( -you->get_moves() );
     const firestarter_actor *actor = dynamic_cast<const firestarter_actor *>( usef->get_actor_ptr() );
     const float light = actor->light_mod( you->pos() );
     act->moves_left -= light * 100;

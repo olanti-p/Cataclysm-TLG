@@ -23,7 +23,7 @@
     "symbol": "/",
     "color": "brown",
     "name": { "str_sp": "splintered wood" },
-    "description": "A splintered piece of wood, could be used as a skewer or for kindling.",
+    "description": "A splintered piece of wood. It could be used as a skewer for cooking.",
     "category": "other",
     "material": [ "wood" ],
     "weight": "150 g",
