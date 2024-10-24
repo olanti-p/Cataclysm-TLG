@@ -9,7 +9,6 @@
       { "group": "robofac_armor_pieces_basic" },
       { "group": "robofac_armor_pieces_military" },
       { "group": "robofac_gun_mags" },
-      { "group": "robofac_gun_exodii" },
       { "group": "robofac_gun_kit" },
       { "item": "robofac_armor_anchor" },
       { "item": "robofac_armor_anchor_on" },
@@ -128,12 +127,6 @@
       { "item": "robofac_gun_40mm_5rd", "count": 2, "prob": 100 },
       { "item": "robofac_gun_40mm_3rd", "count": 2, "prob": 100 }
     ]
-  },
-  {
-    "type": "item_group",
-    "id": "robofac_gun_exodii",
-    "subtype": "collection",
-    "items": [ { "item": "robofac_gun_exodii", "count": 1, "prob": 25 }, { "item": "robofac60_123ln", "count": 5, "prob": 100 } ]
   },
   {
     "type": "item_group",

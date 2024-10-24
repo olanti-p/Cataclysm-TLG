@@ -1962,20 +1962,6 @@
     "requirements": [  ]
   },
   {
-    "id": "achievement_reach_exodii_base",
-    "type": "achievement",
-    "name": "Strange Neighbors",
-    "requirements": [
-      {
-        "event_statistic": "last_overmap_special_avatar_entered",
-        "is": "==",
-        "target": [ "overmap_special_id", "exodii_base" ],
-        "visible": "when_achievement_completed",
-        "description": "Reach the strange fortress"
-      }
-    ]
-  },
-  {
     "id": "achievement_reach_hub01",
     "type": "achievement",
     "name": "Is this thing on?",
