@@ -911,8 +911,8 @@ class npc : public Character
         // true if the NPC produces electrical radiation
         // TODO: make this way less hard coded
         bool is_electrical() const override {
-            // only beep on Rubik for now
-            return has_trait( trait_id( "EXODII_BODY_1" ) );
+            // Not presently in use.
+            return false;
         }
 
         // Ally of or traveling with p

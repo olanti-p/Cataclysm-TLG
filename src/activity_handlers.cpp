@@ -1937,41 +1937,42 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
         return;
     }
 
-    if( here.has_flag( ter_furn_flag::TFLAG_NOITEM, where ) && !here.has_flag( ter_furn_flag::TFLAG_TINDER, where ) ) {
+    if( here.has_flag( ter_furn_flag::TFLAG_NOITEM, where ) &&
+        !here.has_flag( ter_furn_flag::TFLAG_TINDER, where ) ) {
         you->add_msg_if_player( m_info, _( "That might be burnable, but it won't light so easily." ) );
         you->cancel_activity();
         return;
     }
 
     item &firestarter = *act->targets.front();
-        if( !here.tinder_at( where ) && !here.is_tinder( where ) ) {
-            inventory_filter_preset preset( []( const item_location & loc ) {
-                return loc->has_flag( flag_TINDER );
-            } );
-            inventory_pick_selector inv_s( *you, preset );
-            inv_s.add_nearby_items( PICKUP_RANGE );
-            inv_s.add_character_items( *you );
+    if( !here.tinder_at( where ) && !here.is_tinder( where ) ) {
+        inventory_filter_preset preset( []( const item_location & loc ) {
+            return loc->has_flag( flag_TINDER );
+        } );
+        inventory_pick_selector inv_s( *you, preset );
+        inv_s.add_nearby_items( PICKUP_RANGE );
+        inv_s.add_character_items( *you );
 
-            inv_s.set_title( _( "Select tinder to use for lighting a fire" ) );
+        inv_s.set_title( _( "Select tinder to use for lighting a fire" ) );
 
-            item_location tinder;
-            if( inv_s.empty() || !( tinder = inv_s.execute() ) ) {
-                you->add_msg_if_player( m_info, _( "You'll need some tinder to get a fire going." ) );
-                you->cancel_activity();
-                return;
-            }
-
-            item copy = *tinder;
-            bool count_by_charges = tinder->count_by_charges();
-            if( count_by_charges ) {
-                tinder->charges--;
-                copy.charges = 1;
-            }
-            here.add_item_or_charges( where, copy );
-            if( !count_by_charges || tinder->charges <= 0 ) {
-                tinder.remove_item();
-            }
+        item_location tinder;
+        if( inv_s.empty() || !( tinder = inv_s.execute() ) ) {
+            you->add_msg_if_player( m_info, _( "You'll need some tinder to get a fire going." ) );
+            you->cancel_activity();
+            return;
         }
+
+        item copy = *tinder;
+        bool count_by_charges = tinder->count_by_charges();
+        if( count_by_charges ) {
+            tinder->charges--;
+            copy.charges = 1;
+        }
+        here.add_item_or_charges( where, copy );
+        if( !count_by_charges || tinder->charges <= 0 ) {
+            tinder.remove_item();
+        }
+    }
 
     const use_function *usef = firestarter.type->get_use( "firestarter" );
     if( usef == nullptr || usef->get_actor_ptr() == nullptr ) {

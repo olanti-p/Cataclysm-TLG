@@ -79,6 +79,6 @@
     "type": "MONSTER_FACTION",
     "name": "mi-go",
     "copy-from": "mi-go",
-    "hate": [ "zombie", "triffid", "fungus", "exodii", "shan" ]
+    "hate": [ "zombie", "triffid", "fungus", "shan" ]
   }
 ]
