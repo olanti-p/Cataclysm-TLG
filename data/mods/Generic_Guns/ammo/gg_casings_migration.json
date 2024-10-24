@@ -65,7 +65,6 @@
       "762R_casing",
       "300_casing",
       "30carbine_casing",
-      "123ln_casing"
     ],
     "type": "MIGRATION",
     "replace": "rifle_casing"
