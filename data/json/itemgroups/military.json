@@ -935,7 +935,6 @@
       { "item": "plut_cell", "prob": 10, "charges": [ 1, 5 ] },
       { "item": "m249", "prob": 1, "charges": [ 0, 30 ] },
       { "item": "m240", "prob": 1, "charges": [ 0, 200 ] },
-      { "item": "rm614_lmg", "prob": 1, "charges": [ 0, 250 ] },
       { "item": "m134", "prob": 1, "charges": [ 0, 200 ] },
       { "item": "atgm_launcher", "prob": 1 },
       { "item": "atgm_heat", "prob": 3 },

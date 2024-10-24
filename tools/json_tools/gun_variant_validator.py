@@ -92,8 +92,6 @@ IDENTIFIER_CHECK_BLACKLIST = {
     "rm11b_sniper_rifle",
     "rm2000_smg",
     "rm51_assault_rifle",
-    "rm614_lmg",
-    "rm88_battle_rifle",
     "bigun",
     "sw629",
     "sw_500",
@@ -157,10 +155,8 @@ IDENTIFIER_CHECK_BLACKLIST = {
     "hpt3895",
     "m2carbine",
     "smg_40",
-    "rm228",
     "needlegun",
     "needlepistol",
-    "rm298",
 }
 NAME_CHECK_BLACKLIST = {
     # FIXME: fix and remove these
@@ -223,7 +219,6 @@ NAME_CHECK_BLACKLIST = {
     "hi_power_40",
     "walther_ppq_40",
     "hptjcp",
-    "rm228",
     "AT4",
     "af2011a1_38super",
     "m1911a1_38super",
