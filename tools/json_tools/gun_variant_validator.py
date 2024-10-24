@@ -64,7 +64,6 @@ UNIT_UNITS = {
 }
 GUNS_BLACKLIST = {
     # Well named, faction-specific weapon, with weird ammo
-    "brogyeki",
 }
 AMMO_BLACKLIST = {
     "arrow",
@@ -77,12 +76,11 @@ AMMO_BLACKLIST = {
     "water",
 }
 VARIANT_CHECK_BLACKLIST = {
-    "pamd68rubik",
+
 }
 VARIANT_CHECK_PAIR_BLACKLIST = {
     # FIXME: fix and remove these
     ("m17", "m18"),
-    ("pamd68", "pamd68mountable"),
     ("type99", "type99_sniper"),
     ("glock_20", "glock_40"),
 }
@@ -143,7 +141,6 @@ IDENTIFIER_CHECK_BLACKLIST = {
     "ak556",
     "minidraco556",
     "mdrx",
-    "sapra",
     "raging_bull",
     "raging_judge",
     "type99",
@@ -199,7 +196,6 @@ NAME_CHECK_BLACKLIST = {
     "fs2000",
     "scar_l",
     "m231pfw",
-    "brogyaga",
     "raging_bull",
     "raging_judge",
     "m202_flash",
