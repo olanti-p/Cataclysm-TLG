@@ -3373,7 +3373,7 @@ bool map::is_flammable( const tripoint &p )
     // TODO: Burning fuel on water, fires on boats?
     if( has_flag_ter( ter_furn_flag::TFLAG_LIQUID, p ) ||
         has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, p ) ||
-        has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, p ) || 
+        has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, p ) ||
         has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, p ) ) {
         return false;
     }
@@ -6475,7 +6475,8 @@ bool map::add_field( const tripoint &p, const field_type_id &type_id, int intens
     }
 
     // Don't spawn liquid fields on water tiles
-    if( ( has_flag( ter_furn_flag::TFLAG_SWIMMABLE, p ) || has_flag( ter_furn_flag::TFLAG_LIQUID, p ) ) && type_id.obj().phase == phase_id::LIQUID ) {
+    if( ( has_flag( ter_furn_flag::TFLAG_SWIMMABLE, p ) ||
+          has_flag( ter_furn_flag::TFLAG_LIQUID, p ) ) && type_id.obj().phase == phase_id::LIQUID ) {
         return false;
     }
 

@@ -19,7 +19,7 @@
     "type": "MONSTER_FACTION",
     "name": "mega_herbivore",
     "base_faction": "animal",
-    "neutral": [ "small_animal", "fish", "exodii", "isolated_artisans", "passive_machine", "herbivore" ],
+    "neutral": [ "small_animal", "fish", "isolated_artisans", "passive_machine", "herbivore" ],
     "by_mood": [ "wolf", "big_cat", "mega_cat", "mega_wolf" ]
   },
   {
