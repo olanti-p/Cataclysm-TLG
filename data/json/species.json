@@ -23,7 +23,7 @@
   {
     "type": "SPECIES",
     "id": "CYBORG",
-    "description": "an alien cyborg",
+    "description": "a cyborg",
     "flags": [ "DRACULIN_IMMUNE" ],
     "footsteps": "heavy thuds."
   },
@@ -176,7 +176,8 @@
     "id": "ROBOT",
     "description": "a robot",
     "footsteps": "mechanical whirring.",
-    "bleeds": "fd_mechanical_fluid"
+    "bleeds": "fd_mechanical_fluid",
+    "flags": [ "DRACULIN_IMMUNE" ]
   },
   {
     "type": "SPECIES",
