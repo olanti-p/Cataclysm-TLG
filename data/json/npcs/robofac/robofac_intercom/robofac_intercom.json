@@ -67,17 +67,6 @@
         "condition": { "u_has_var": "u_has_researched_gun", "type": "dialogue", "context": "hub_rnd", "value": "yes" }
       },
       {
-        "group": "robofac_gun_exodii",
-        "rigid": true,
-        "strict": true,
-        "condition": {
-          "and": [
-            { "u_has_var": "u_has_researched_gun", "type": "dialogue", "context": "hub_rnd", "value": "yes" },
-            { "math": [ "hub01_hwp_exotic_researched", "==", "1" ] }
-          ]
-        }
-      },
-      {
         "group": "NC_ROBOFAC_INTERCOM_trade_hm12",
         "rigid": true,
         "strict": true,

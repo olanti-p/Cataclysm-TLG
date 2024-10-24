@@ -163,14 +163,10 @@
             "relevant_genders": [ "npc" ]
           },
           "no": {
-            "math": [ "npc_randomize_dialogue_direction", "==", "3" ],
-            "yes": "Well, a few of my caravans have come back now talkin' about this giant metal castle on top of a rock, in the middle of nowhere.  They ain't been crazy enough to check it out, but you could if you want.",
-            "no": {
               "math": [ "npc_randomize_dialogue_direction", "==", "4" ],
               "yes": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
               "no": "ERROR: out of bounds on randomize_directions."
             }
-          }
         }
       }
     },
@@ -200,18 +196,6 @@
         "switch": true
       },
       {
-        "text": "How do I get to that castle?",
-        "topic": "TALK_FREE_MERCHANT_TEAMSTER_DIRECTIONS_2",
-        "condition": {
-          "and": [
-            { "math": [ "npc_randomize_dialogue_direction", "==", "3" ] },
-            { "not": { "u_has_var": "directions", "type": "teamster", "context": "mission", "value": "exodii" } }
-          ]
-        },
-        "effect": { "assign_mission": "directions_exodii" },
-        "switch": true
-      },
-      {
         "text": "Where was that?",
         "topic": "TALK_FREE_MERCHANT_TEAMSTER_DIRECTIONS_2",
         "condition": {
@@ -238,45 +222,6 @@
     "type": "talk_topic",
     "dynamic_line": "*shows you on your map where to find it.  \"That should get you there.  Good luck, I 'spect you'll need it.",
     "responses": [ { "text": "Thanks for the directions.  I'll check it out.", "topic": "TALK_DONE" } ]
-  },
-  {
-    "type": "talk_topic",
-    "id": "TALK_FREE_MERCHANT_TEAMSTER_FACTION_INTRO",
-    "dynamic_line": "Always lookin' for new places to trade.  What you got for me?",
-    "responses": [
-      {
-        "text": "[Tell them about Rubik and the Exodii]",
-        "topic": "TALK_FREE_MERCHANT_TEAMSTER_EXODII_1",
-        "condition": { "u_has_var": "u_met_Rubik", "type": "general", "context": "meeting", "value": "yes" }
-      },
-      { "text": "Hold on, what were you saying before?", "topic": "TALK_NONE" },
-      { "text": "Actually, I have to go.  Maybe later.", "topic": "TALK_DONE" }
-    ]
-  },
-  {
-    "type": "talk_topic",
-    "id": "TALK_FREE_MERCHANT_TEAMSTER_EXODII_1",
-    "//": "In the future this should start a quest line or allow free merchant caravans to sometimes show up near the Exodii base.",
-    "dynamic_line": "Well now, that's a hell of a story.  Some day, I'll see if we can get out there an' look into it.  Sounds like there'd be some real interestin' trade.",
-    "responses": [ { "text": "Can I ask you something else?", "topic": "TALK_FREE_MERCHANT_TEAMSTER_CHAT" } ]
-  },
-  {
-    "type": "talk_topic",
-    "id": "TALK_FREE_MERCHANT_TEAMSTER_Boris_Mission_1",
-    "dynamic_line": {
-      "gendered_line": "Yeah, I'll help out.  I've pretty much been waiting for someone to ask, the mess is in my way but I've been too busy to organize it myself.  Boris is the one to talk to, you say?  I'll let him know.",
-      "relevant_genders": [ "npc" ]
-    },
-    "speaker_effect": {
-      "effect": [
-        { "npc_add_var": "cleanup_asked", "type": "mission", "context": "Boris_mission_1", "value": "yes" },
-        { "math": [ "u_mission_cleanup_promises_Boris_mission_1", "++" ] }
-      ]
-    },
-    "responses": [
-      { "text": "Thanks so much!  Can I ask you something else?", "topic": "TALK_FREE_MERCHANT_TEAMSTER_CHAT" },
-      { "text": "Thanks so much!  I have to go ask a few others, talk to you later.", "topic": "TALK_DONE" }
-    ]
   },
   {
     "id": "TALK_FREE_MERCHANT_TEAMSTER_Godco_Trader",
@@ -479,31 +424,6 @@
       "success": "Huh, go figure.",
       "success_lie": "Huh, go figure.",
       "failure": "It is what it is."
-    }
-  },
-  {
-    "id": "directions_exodii",
-    "type": "mission_definition",
-    "name": { "str": "Check out that scrap metal castle" },
-    "description": "A few of my caravans have come back now talkin' about this giant metal castle on top of a rock, in the middle of nowhere.  They ain't been crazy enough to check it out, but you could if you want.",
-    "goal": "MGOAL_GO_TO",
-    "difficulty": 2,
-    "value": 0,
-    "start": {
-      "assign_mission_target": { "om_terrain": "exodii_base_x0y3z0", "om_special": "exodii_base", "reveal_radius": 5, "search_range": 1000 },
-      "effect": { "u_add_var": "directions", "type": "teamster", "context": "mission", "value": "exodii" }
-    },
-    "origins": [ "ORIGIN_SECONDARY" ],
-    "dialogue": {
-      "describe": "A few of my caravans have come back now talkin' about this giant metal castle on top of a rock, in the middle of nowhere.  They ain't been crazy enough to check it out, but you could if you want.",
-      "offer": "A few of my caravans have come back now talkin' about this giant metal castle on top of a rock, in the middle of nowhere.  They ain't been crazy enough to check it out, but you could if you want.",
-      "accepted": "Your funeral.",
-      "rejected": "Seems reasonable.",
-      "advice": "Be careful.  Seems like a rough place to me.",
-      "inquire": "How is the search going?",
-      "success": "Huh, go figure.",
-      "success_lie": "Huh, go figure.",
-      "failure": "Seems reasonable."
     }
   },
   {
