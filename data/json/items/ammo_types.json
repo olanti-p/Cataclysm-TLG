@@ -553,12 +553,6 @@
   },
   {
     "type": "ammunition_type",
-    "id": "20x66mm",
-    "name": "20x66mm caseless shotgun",
-    "default": "20x66_shot"
-  },
-  {
-    "type": "ammunition_type",
     "id": "5x50",
     "name": "5x50mm flechette",
     "default": "5x50dart"
