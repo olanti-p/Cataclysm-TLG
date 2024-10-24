@@ -3379,6 +3379,13 @@ bool map::flammable_items_at( const tripoint_bub_ms &p, int threshold )
 
 bool map::is_flammable( const tripoint &p )
 {
+    // No fires on liquid tiles regardless of other factors
+    // TODO: Burning fuel on water, fires on boats?
+    if( has_flag_ter( ter_furn_flag::TFLAG_LIQUID, p ) ||
+        has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, p ) ||
+        has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, p ) ) {
+        return false;
+    }
 
     if( has_flag( ter_furn_flag::TFLAG_FLAMMABLE, p ) ) {
         return true;
