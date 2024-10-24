@@ -681,7 +681,6 @@
       { "item": "binoculars", "prob": 20 },
       { "item": "masterkey", "prob": 2 },
       { "item": "m26_mass", "prob": 3 },
-      { "item": "rm121aux", "prob": 1 },
       { "item": "canteen", "prob": 15 },
       { "item": "2lcanteen", "prob": 10 },
       { "item": "camelbak", "prob": 5 },
