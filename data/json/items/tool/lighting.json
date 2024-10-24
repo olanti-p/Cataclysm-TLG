@@ -995,7 +995,7 @@
       "menu_text": "Light torch",
       "type": "transform"
     },
-    "flags": [ "BURNOUT" ],
+    "flags": [ "BURNOUT", "TINDER" ],
     "melee_damage": { "bash": 8 }
   },
   {
@@ -1028,7 +1028,7 @@
       }
     ],
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "FIRE", "LIGHT_60", "CHARGEDIM", "FLAMING", "TRADER_AVOID", "WATER_EXTINGUISH", "BURNOUT" ],
+    "flags": [ "FIRE", "LIGHT_60", "CHARGEDIM", "FLAMING", "TRADER_AVOID", "WATER_EXTINGUISH", "BURNOUT", "TINDER" ],
     "melee_damage": { "bash": 8 }
   },
   {

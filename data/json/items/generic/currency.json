@@ -13,7 +13,7 @@
     "to_hit": -3,
     "color": "white",
     "symbol": "$",
-    "flags": [ "BANK_NOTE_SHAPED" ],
+    "flags": [ "BANK_NOTE_SHAPED", "TINDER" ],
     "material": [ "paper" ]
   },
   {
@@ -220,6 +220,7 @@
     "price": 1,
     "price_postapoc": 0,
     "material": [ "paper" ],
+    "flags": [ "TINDER" ],
     "symbol": "$",
     "color": "dark_gray",
     "pocket_data": [
@@ -245,7 +246,7 @@
     "symbol": "$",
     "color": "green",
     "to_hit": -3,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -258,7 +259,7 @@
     "symbol": "$",
     "price": 200,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -271,7 +272,7 @@
     "symbol": "$",
     "price": 500,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -284,7 +285,7 @@
     "symbol": "$",
     "price": 1000,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -297,7 +298,7 @@
     "symbol": "$",
     "price": 2000,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -310,7 +311,7 @@
     "symbol": "$",
     "price": 5000,
     "price_postapoc": 1,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -323,7 +324,7 @@
     "symbol": "$",
     "price": 10000,
     "price_postapoc": 1,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -340,7 +341,7 @@
     "material": [ "paper" ],
     "price": 10000,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_STRAP_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_STRAP_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -426,7 +427,7 @@
     "price_postapoc": 25000,
     "weight": "100 g",
     "volume": "113 ml",
-    "flags": [ "BANK_NOTE_STRAP_SHAPED" ]
+    "flags": [ "BANK_NOTE_STRAP_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -443,7 +444,7 @@
     "material": [ "paper" ],
     "price": 100000,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY" ]
+    "flags": [ "OLD_CURRENCY", "TINDER" ]
   },
   {
     "type": "GENERIC",

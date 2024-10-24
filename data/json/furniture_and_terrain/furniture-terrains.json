@@ -83,7 +83,8 @@
       "EASY_DECONSTRUCT",
       "HIDE_PLACE",
       "NO_SIGHT",
-      "BLOCK_WIND"
+      "BLOCK_WIND",
+      "TINDER"
     ],
     "bash": {
       "str_min": 4,
@@ -103,7 +104,7 @@
     "coverage": 100,
     "description": "A pile of cardboard boxes that have been filled with rags and junk and stacked together like bricks to form a wall.",
     "required_str": -1,
-    "flags": [ "NOITEM", "BLOCKSDOOR", "FLAMMABLE_ASH", "ORGANIC", "EASY_DECONSTRUCT", "BLOCK_WIND" ],
+    "flags": [ "NOITEM", "BLOCKSDOOR", "FLAMMABLE_ASH", "ORGANIC", "EASY_DECONSTRUCT", "BLOCK_WIND", "TINDER" ],
     "deconstruct": {
       "items": [
         { "item": "box_large", "count": 1 },
@@ -142,7 +143,7 @@
     "move_cost_mod": 0,
     "description": "A flat floor made of sheets of cardboard duct-taped together, covering a plastic sheet on the ground.",
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "FLAT", "ORGANIC", "EASY_DECONSTRUCT" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "FLAT", "ORGANIC", "EASY_DECONSTRUCT", "TINDER" ],
     "deconstruct": {
       "items": [ { "item": "cardboard", "count": 10 }, { "item": "paper", "count": 50 }, { "item": "plastic_sheet", "count": 2 } ]
     },
@@ -167,7 +168,7 @@
     "move_cost_mod": 0,
     "description": "A sloped roof made of cardboard boxes, stuffed with scrap cardboard and paper and layered atop each other.  Sheets of plastic are carefully arranged on top to shed water.  It looks like it could last a season or two at least before crumbling.",
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "FLAT", "ORGANIC", "EASY_DECONSTRUCT", "ALLOW_ON_OPEN_AIR" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "FLAT", "ORGANIC", "EASY_DECONSTRUCT", "ALLOW_ON_OPEN_AIR", "TINDER" ],
     "deconstruct": {
       "items": [
         { "item": "box_small", "count": 10 },
@@ -203,7 +204,7 @@
     "coverage": 100,
     "description": "A pile of cardboard boxes that have been filled with rags and junk and stacked together like bricks to form a wall.  The largest box has been cut open and folded to form a makeshift door, which is open.",
     "required_str": -1,
-    "flags": [ "NOITEM", "BLOCKSDOOR", "FLAMMABLE_ASH", "ORGANIC", "EASY_DECONSTRUCT", "BLOCK_WIND", "DOOR" ],
+    "flags": [ "NOITEM", "BLOCKSDOOR", "FLAMMABLE_ASH", "ORGANIC", "EASY_DECONSTRUCT", "BLOCK_WIND", "DOOR", "TINDER" ],
     "deconstruct": {
       "items": [
         { "item": "box_large", "count": 1 },
@@ -243,7 +244,7 @@
     "coverage": 100,
     "description": "A pile of cardboard boxes that have been filled with rags and junk and stacked together like bricks to form a wall.  The largest box has been cut open and folded to form a makeshift door, which is closed.",
     "required_str": -1,
-    "flags": [ "NOITEM", "FLAMMABLE_ASH", "ORGANIC", "EASY_DECONSTRUCT", "BLOCK_WIND", "DOOR" ],
+    "flags": [ "NOITEM", "FLAMMABLE_ASH", "ORGANIC", "EASY_DECONSTRUCT", "BLOCK_WIND", "DOOR", "TINDER" ],
     "open": "f_cardboard_door_o",
     "deconstruct": {
       "items": [
@@ -908,7 +909,7 @@
     "id": "f_ash",
     "name": "pile of ash",
     "symbol": "#",
-    "description": "A pile of ash, from wood or possibly corpses.",
+    "description": "The carbonized remains of something burnt.",
     "color": "light_gray",
     "move_cost_mod": 0,
     "required_str": -1,
@@ -939,7 +940,7 @@
     "type": "furniture",
     "id": "f_boulder_medium",
     "name": "medium boulder",
-    "description": "A pretty big boulder, but still small enough to see and climb over.  It would be a struggle to move it.  It can be used as a primitive anvil, or broken into a bunch of smaller rocks.",
+    "description": "A pretty big boulder, but still small enough for a man to see and climb over.  It could be a struggle to move it.  It can be used as a primitive anvil, or broken into a bunch of smaller rocks.",
     "symbol": "0",
     "color": "light_gray",
     "move_cost_mod": 6,
@@ -959,7 +960,7 @@
     "type": "furniture",
     "id": "f_boulder_large",
     "name": "large boulder",
-    "description": "A boulder that's taller than you.  Now how are you going to move this?",
+    "description": "A boulder that's taller than a man.  Now how are you going to move this?",
     "symbol": "O",
     "color": "light_gray",
     "move_cost_mod": -1,
