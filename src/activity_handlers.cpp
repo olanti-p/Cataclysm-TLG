@@ -1909,7 +1909,15 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
     if( !here.is_flammable( where ) ) {
         try_fuel_fire( *act, *you, true );
         if( !here.is_flammable( where ) ) {
-            you->add_msg_if_player( m_info, _( "There's nothing to light there." ) );
+            if( here.has_flag_ter( ter_furn_flag::TFLAG_USABLE_FIRE, where ) ) {
+                you->add_msg_if_player( m_info, _( "It's already burning hot there." ) );
+            } else if( here.has_flag_ter( ter_furn_flag::TFLAG_LIQUID, where ) ||
+                       here.has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, where ) ||
+                       here.has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, where ) ) {
+                you->add_msg_if_player( m_info, _( "You need dry ground to light a fire." ) );
+            } else {
+                you->add_msg_if_player( m_info, _( "There's nothing to light there." ) );
+            }
             you->cancel_activity();
             return;
         }
