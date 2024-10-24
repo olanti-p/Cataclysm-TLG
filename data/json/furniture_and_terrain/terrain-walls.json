@@ -2706,7 +2706,7 @@
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_floor_wax",
-    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "PLACE_ITEM", "WALL", "NO_SCENT" ],
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "PLACE_ITEM", "WALL", "NO_SCENT" ],
     "bash": {
       "str_min": 12,
       "str_max": 150,

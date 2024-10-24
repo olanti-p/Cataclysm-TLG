@@ -72,12 +72,13 @@
     "phase": "liquid",
     "container": "jerrycan",
     "material": [ "diesel" ],
+    "flags": [ "TINDER" ],
     "symbol": "=",
     "color": "green",
     "ammo_type": "diesel",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 4 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
   },
   {
     "id": "jp8",
@@ -100,7 +101,7 @@
     "ammo_type": "jp8",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
   },
   {
     "id": "avgas",
@@ -117,13 +118,14 @@
     "phase": "liquid",
     "looks_like": "diesel",
     "container": "jerrycan",
+    "flags": [ "TINDER" ],
     "material": [ "avgas" ],
     "symbol": "=",
     "color": "green",
     "ammo_type": "avgas",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
   },
   {
     "id": "biodiesel",
@@ -151,12 +153,13 @@
     "phase": "liquid",
     "container": "jerrycan",
     "material": [ "gasoline" ],
+    "flags": [ "TINDER" ],
     "symbol": "=",
     "color": "light_red",
     "ammo_type": "gasoline",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
+    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
   },
   {
     "id": "lamp_oil",
@@ -218,6 +221,7 @@
     "count": 250,
     "stack_size": 200,
     "phase": "liquid",
+    "flags": [ "TINDER" ],
     "container": "pressurized_tank",
     "material": [ "hydrocarbons" ],
     "symbol": "=",
@@ -225,7 +229,7 @@
     "ammo_type": "flammable",
     "damage": { "damage_type": "heat", "amount": 15, "armor_penetration": 30 },
     "range": 6,
-    "effects": [ "FLAME", "STREAM_BIG", "INCENDIARY", "NEVER_MISFIRES", "TINDER" ]
+    "effects": [ "FLAME", "STREAM_BIG", "INCENDIARY", "NEVER_MISFIRES" ]
   },
   {
     "id": "gelled_gasoline",

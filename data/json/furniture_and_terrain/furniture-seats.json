@@ -51,7 +51,8 @@
       "EASY_DECONSTRUCT",
       "CAN_SIT",
       "ALIGN_WORKBENCH",
-      "SMALL_HIDE"
+      "SMALL_HIDE",
+      "TINDER"
     ],
     "bash": {
       "str_min": 10,
@@ -157,7 +158,7 @@
         { "item": "splinter", "count": [ 1, 25 ] }
       ]
     },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "BLOCKSDOOR", "MOUNTABLE", "CAN_SIT", "SMALL_HIDE" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "BLOCKSDOOR", "MOUNTABLE", "CAN_SIT", "SMALL_HIDE", "TINDER" ],
     "bash": {
       "str_min": 12,
       "str_max": 40,

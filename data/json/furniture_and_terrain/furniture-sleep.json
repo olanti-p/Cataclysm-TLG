@@ -12,7 +12,7 @@
     "floor_bedding_warmth": 1000,
     "required_str": -1,
     "deconstruct": { "items": [ { "item": "mattress", "count": 1 } ], "furn_set": "f_bed_frame" },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT", "SMALL_HIDE" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT", "SMALL_HIDE", "TINDER" ],
     "bash": {
       "str_min": 12,
       "str_max": 40,
@@ -74,7 +74,7 @@
     "floor_bedding_warmth": 1000,
     "required_str": -1,
     "deconstruct": { "items": [ { "item": "down_mattress", "count": 1 } ], "furn_set": "f_bed_frame" },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT", "TINDER" ],
     "bash": {
       "str_min": 12,
       "str_max": 40,
@@ -108,7 +108,7 @@
       "items": [ { "item": "down_mattress", "count": 1 }, { "item": "2x4", "count": 16 }, { "item": "nail", "charges": [ 10, 20 ] } ],
       "furn_set": "f_bed_down"
     },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "CAN_SIT" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "CAN_SIT", "TINDER" ],
     "bash": {
       "str_min": 12,
       "str_max": 40,
@@ -146,7 +146,7 @@
         { "item": "sheet_metal_small", "count": 12 }
       ]
     },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "CAN_SIT", "SMALL_HIDE" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "CAN_SIT", "SMALL_HIDE", "TINDER" ],
     "bash": {
       "str_min": 25,
       "str_max": 60,
@@ -199,7 +199,7 @@
     "required_str": 7,
     "deployed_item": "mattress",
     "examine_action": "deployed_furniture",
-    "flags": [ "TRANSPARENT", "SHORT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "flags": [ "TRANSPARENT", "SHORT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "EASY_DECONSTRUCT", "TINDER" ],
     "deconstruct": { "items": [ { "item": "mattress", "count": 1 } ] },
     "bash": {
       "str_min": 8,
@@ -223,7 +223,7 @@
     "required_str": 7,
     "deployed_item": "down_mattress",
     "examine_action": "deployed_furniture",
-    "flags": [ "TRANSPARENT", "SHORT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE" ],
+    "flags": [ "TRANSPARENT", "SHORT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "TINDER" ],
     "deconstruct": { "items": [ { "item": "down_mattress", "count": 1 } ] },
     "bash": {
       "str_min": 8,
@@ -309,7 +309,7 @@
         { "item": "nail", "charges": [ 4, 6 ] }
       ]
     },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "SHORT", "SMALL_HIDE" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "SHORT", "SMALL_HIDE", "TINDER" ],
     "bash": {
       "str_min": 8,
       "str_max": 30,
@@ -337,7 +337,7 @@
     "floor_bedding_warmth": 200,
     "required_str": -1,
     "deconstruct": { "items": [ { "item": "stick", "count": 4 }, { "item": "straw_pile", "count": [ 120, 140 ] } ] },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "SHORT", "EASY_DECONSTRUCT", "SMALL_HIDE" ],
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "SHORT", "EASY_DECONSTRUCT", "SMALL_HIDE", "TINDER" ],
     "bash": {
       "str_min": 6,
       "str_max": 20,

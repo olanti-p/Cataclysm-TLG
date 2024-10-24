@@ -3404,16 +3404,13 @@ bool map::is_flammable( const tripoint_bub_ms &p )
 
 bool map::tinder_at( const tripoint &p )
 {
-    if ( !has_flag( ter_furn_flag::TFLAG_NOITEM, p ) && !has_flag( ter_furn_flag::TFLAG_TINDER, p ) ) {
-        for( const item &i : i_at( p ) ) {
-            if( i.has_flag( flag_TINDER ) ) {
-                return true;
-            }
+    for( const item &i : i_at( p ) ) {
+        if( i.has_flag( flag_TINDER ) ) {
+            return true;
         }
     }
     return false;
 }
-
 
 bool map::is_tinder( const tripoint &p )
 {

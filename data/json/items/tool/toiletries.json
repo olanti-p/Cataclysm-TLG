@@ -47,20 +47,10 @@
     "price": 127,
     "price_postapoc": 20,
     "material": [ "cotton" ],
+    "flags": [ "TINDER" ],
     "symbol": ",",
     "color": "white",
-    "use_action": [ "WASH_HARD_ITEMS" ],
-    "snippet_category": [
-      { "id": "dtowel1", "text": "An elegant, monogrammed dish towel.  Unfortunately, they aren't your initials." },
-      { "id": "dtowel2", "text": "An elegant, monogrammed dish towel.  It even has your initials!" },
-      { "id": "dtowel3", "text": "A well-used dish towel, judging by the stains." },
-      { "id": "dtowel4", "text": "A novelty dish towel featuring a popular children's cartoon character." },
-      { "id": "dtowel5", "text": "A novelty dish towel which reads \"IT'S WINE O CLOCK\"." },
-      { "id": "dtowel6", "text": "A dish towel with a floral pattern." },
-      { "id": "dtowel7", "text": "A dish towel with a gingham pattern." },
-      { "id": "dtowel8", "text": "A dish towel with a cat pattern." }
-    ],
-    "//2": "Based on https://www.amazon.com/dp/B01IG8X9E6"
+    "use_action": [ "WASH_HARD_ITEMS" ]
   },
   {
     "id": "elec_hairtrimmer",
@@ -150,7 +140,7 @@
       { "type": "heal", "move_cost": 200, "used_up_item": { "id": "cotton_patchwork", "quantity": 1, "flags": [ "FILTHY" ] } },
       "WASH_HARD_ITEMS"
     ],
-    "flags": [ "NO_SALVAGE" ]
+    "flags": [ "NO_SALVAGE", "TINDER" ]
   },
   {
     "type": "GENERIC",
