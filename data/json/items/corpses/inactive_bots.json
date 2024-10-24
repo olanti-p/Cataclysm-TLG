@@ -910,5 +910,21 @@
     },
     "flags": [ "SINGLE_USE", "NO_SALVAGE" ],
     "melee_damage": { "bash": 8 }
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_balloon_sniper_drone",
+    "symbol": ",",
+    "color": "yellow",
+    "name": { "str": "broken balloon sniper drone" },
+    "category": "other",
+    "description": "A broken balloon drone.  The balloon has been shredded, but most of the chassis is still intact.  Could be gutted for parts.",
+    "price": 1000,
+    "material": [ "steel" ],
+    "volume": "70 L",
+    "weight": "150 kg",
+    "to_hit": -3,
+    "flags": [ "TRADER_AVOID", "NO_REPAIR" ],
+    "melee_damage": { "bash": 20, "cut": 15 }
   }
 ]

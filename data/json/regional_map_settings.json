@@ -656,9 +656,7 @@
           "mx_portal": 3,
           "mx_portal_in": 3,
           "mx_helicopter": 1,
-          "mx_exocrash_1": 1,
-          "mx_beehive_natural": 20,
-          "mx_exocrash_2": 1
+          "mx_beehive_natural": 20
         }
       },
       "forest_thick": {
@@ -692,10 +690,8 @@
           "mx_portal": 3,
           "mx_portal_in": 3,
           "mx_jabberwock": 1,
-          "mx_exocrash_1": 1,
           "mx_helicopter": 1,
-          "mx_beehive_natural": 30,
-          "mx_exocrash_2": 1
+          "mx_beehive_natural": 30
         }
       },
       "forest_water": {
@@ -722,9 +718,7 @@
           "mx_portal": 8,
           "mx_portal_in": 7,
           "mx_helicopter": 5,
-          "mx_exocrash_1": 1,
-          "mx_beehive_natural": 25,
-          "mx_exocrash_2": 1
+          "mx_beehive_natural": 25
         }
       },
       "field": {
@@ -755,8 +749,6 @@
           "mx_portal_in": 10,
           "mx_science": 10,
           "mx_military": 4,
-          "mx_exocrash_1": 5,
-          "mx_exocrash_2": 5,
           "mx_golden_monoliths": 1
         }
       },
@@ -780,9 +772,7 @@
           "mx_casings": 1000,
           "mx_corpses": 300,
           "mx_prison_bus": 150,
-          "mx_prison_van": 10,
-          "mx_exocrash_1": 5,
-          "mx_exocrash_2": 5
+          "mx_prison_van": 10
         }
       },
       "bridgehead_ground": { "chance": 5, "extras": { "mx_minefield": 100 } },
@@ -819,9 +809,7 @@
           "mx_crater": 180,
           "mx_portal_in": 30,
           "mx_point_burned_ground": 100,
-          "mx_casings": 30,
-          "mx_exocrash_1": 1,
-          "mx_exocrash_2": 1
+          "mx_casings": 30
         }
       },
       "research_facility_interior": {
@@ -857,9 +845,7 @@
           "mx_portal": 10,
           "mx_portal_in": 10,
           "mx_science": 5,
-          "mx_military": 4,
-          "mx_exocrash_1": 5,
-          "mx_exocrash_2": 5
+          "mx_military": 4
         }
       }
     },
