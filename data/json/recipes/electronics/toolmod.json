@@ -39,7 +39,7 @@
     "reversible": true,
     "decomp_learn": 4,
     "autolearn": false,
-    "book_learn": [ [ "exodii_wiring_kit_reference", 4 ] ],
+    "book_learn": [ [ "recipe_lab_elec", 4 ] ],
     "using": [ [ "soldering_standard", 24 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
     "proficiencies": [
@@ -47,7 +47,7 @@
       { "proficiency": "prof_elec_circuits" },
       { "proficiency": "prof_elec_semiconductors" }
     ],
-    "components": [ [ [ "power_supply", 1 ] ], [ [ "exodii_wire_kit", 1 ] ] ]
+    "components": [ [ [ "power_supply", 1 ] ], [ [ "cbm_wire_kit", 1 ] ] ]
   },
   {
     "result": "magazine_battery_mod",
