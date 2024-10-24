@@ -1,6 +1,6 @@
 [
   {
-    "id": [ "TALK_BLACKSMITH_SERVICES", "TALK_BLACKSMITH_PROTOTYPE_EXODII_ITEMS_READY" ],
+    "id": [ "TALK_BLACKSMITH_SERVICES", "TALK_BLACKSMITH_PROTOTYPE_NOMAD_ITEMS_READY" ],
     "type": "talk_topic",
     "dynamic_line": [
       "Hiya darlin', welcome to the shop.",
@@ -57,16 +57,16 @@
         "topic": "TALK_BLACKSMITH_PROTOTYPE"
       },
       {
-        "text": "[Show the nomad jumpsuit blueprint.] Hey - I met a group with some interesting ideas for armor design.  Is any of this of use to you?",
+        "text": "[Show the nomad jumpsuit blueprint.] Hey - I found some interesting ideas for armor design.  Is any of this of use to you?",
         "condition": {
           "and": [
             { "u_has_items": { "item": "bp_nomad_jumpsuit", "count": 1 } },
             {
-              "not": { "u_has_var": "blacksmith_crafting_EXODII", "type": "dialogue", "context": "artisans", "value": "yes" }
+              "not": { "u_has_var": "blacksmith_crafting_NOMAD", "type": "dialogue", "context": "artisans", "value": "yes" }
             }
           ]
         },
-        "topic": "TALK_BLACKSMITH_PROTOTYPE_EXODII"
+        "topic": "TALK_BLACKSMITH_PROTOTYPE_NOMAD"
       },
       {
         "text": "[100 merch] I'd like to become a member of the co-op.",
@@ -208,11 +208,11 @@
         "text": "You mentioned you'd need some special materials to make that nomad armor?",
         "condition": {
           "and": [
-            { "not": { "u_has_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans", "value": "yes" } },
-            { "u_has_var": "blacksmith_crafting_EXODII", "type": "dialogue", "context": "artisans", "value": "yes" }
+            { "not": { "u_has_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans", "value": "yes" } },
+            { "u_has_var": "blacksmith_crafting_NOMAD", "type": "dialogue", "context": "artisans", "value": "yes" }
           ]
         },
-        "topic": "TALK_BLACKSMITH_PROTOTYPE_EXODII_ITEMS"
+        "topic": "TALK_BLACKSMITH_PROTOTYPE_NOMAD_ITEMS"
       },
       {
         "text": "Let's trade.",

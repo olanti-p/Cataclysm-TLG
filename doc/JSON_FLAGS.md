@@ -975,8 +975,6 @@ See [Mapgen flags](MAPGEN.md#mapgen-flags).
 - ```mx_drugdeal``` Corpses and some drugs.
 - ```mx_dead_vegetation``` Kills all plants (e.g. aftermath of acid rain).
 - ```mx_point_dead_vegetation``` Kills all plants (e.g. aftermath of acid rain) (partial application).
-- ```mx_exocrash_1``` Area of glassed sand created by a crashed pod of space travelers. Populated by zomborgs.
-- ```mx_exocrash_2``` Area of glassed sand created by a crashed pod of space travelers. Populated by zomborgs.
 - ```mx_fallen_shed``` A collapsed shed.
 - ```mx_grove``` All trees and shrubs become a single species of tree.
 - ```mx_grass``` A meadow with tall grass.
@@ -1015,7 +1013,6 @@ See [Mapgen flags](MAPGEN.md#mapgen-flags).
 - ```mx_trees``` A small chunk of forest with puddles with fresh water.
 - ```mx_trees_2``` A small chunk of forest with puddles with fresh water.
 - ```mx_shia``` A *chance* of Shia, if the Crazy Cataclysm mod is enabled.
-- ```mx_shia``` A *chance* of Jackson, if the Crazy Cataclysm mod is enabled.
 
 
 ## Material Phases

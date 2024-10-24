@@ -49,7 +49,7 @@
     "//": "this is all the dialogue related to working on armor with Cody",
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_var": "blacksmith_crafting_EXODII",
+      "u_has_var": "blacksmith_crafting_NOMAD",
       "type": "dialogue",
       "context": "artisans",
       "value": "yes",
@@ -70,7 +70,7 @@
       },
       {
         "text": "[5 weeks, CBM-integrated protection] I'd like nomad armor.",
-        "condition": { "u_has_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans", "value": "yes" },
+        "condition": { "u_has_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans", "value": "yes" },
         "effect": [ { "math": [ "u_number_artisans_blacksmith_wait", "=", "5" ] } ],
         "topic": "TALK_BLACKSMITH_FABRICATE_MEASUREMENTS"
       }
@@ -195,7 +195,7 @@
           { "u_spawn_item": "armor_nomad_chainmail" },
           { "u_add_var": "blacksmith_crafting", "type": "dialogue", "context": "artisans", "value": "no" },
           { "u_add_var": "u_current_project", "type": "dialogue", "context": "artisans", "value": "none" },
-          { "u_lose_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans" }
+          { "u_lose_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans" }
         ],
         "topic": "TALK_BLACKSMITH_SERVICES"
       },
@@ -241,7 +241,7 @@
           { "u_spawn_item": "armor_nomad_lightplate" },
           { "u_add_var": "blacksmith_crafting", "type": "dialogue", "context": "artisans", "value": "no" },
           { "u_add_var": "u_current_project", "type": "dialogue", "context": "artisans", "value": "none" },
-          { "u_lose_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans" }
+          { "u_lose_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans" }
         ],
         "topic": "TALK_BLACKSMITH_SERVICES"
       },
@@ -287,7 +287,7 @@
           { "u_spawn_item": "armor_nomad_plate" },
           { "u_add_var": "blacksmith_crafting", "type": "dialogue", "context": "artisans", "value": "no" },
           { "u_add_var": "u_current_project", "type": "dialogue", "context": "artisans", "value": "none" },
-          { "u_lose_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans" }
+          { "u_lose_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans" }
         ],
         "topic": "TALK_BLACKSMITH_SERVICES"
       },
@@ -333,7 +333,7 @@
           { "u_spawn_item": "armor_nomad_heavyplate" },
           { "u_add_var": "blacksmith_crafting", "type": "dialogue", "context": "artisans", "value": "no" },
           { "u_add_var": "u_current_project", "type": "dialogue", "context": "artisans", "value": "none" },
-          { "u_lose_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans" }
+          { "u_lose_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans" }
         ],
         "topic": "TALK_BLACKSMITH_SERVICES"
       }
@@ -350,8 +350,7 @@
     ]
   },
   {
-    "id": "TALK_BLACKSMITH_PROTOTYPE_EXODII",
-    "//": "this is dialogue for sharing EXODII secrets",
+    "id": "TALK_BLACKSMITH_PROTOTYPE_NOMAD",
     "type": "talk_topic",
     "dynamic_line": [
       "Oh wow, this is really interesting, huh?  The way they balance weight for travel is genius.  If you wanted a real suit of armor for a traveling warrior, I think I could do it with this.  I'll need one of each of these wire kits, though, for each set I make.  Bring some to me if you want me to use them."
@@ -359,24 +358,24 @@
     "responses": [
       {
         "text": "I have some right now.  [Hand over a CBM interface wire kit and an external climate control kit.]",
-        "condition": { "and": [ { "u_has_item": "exodii_ac_kit" }, { "u_has_item": "exodii_wire_kit" } ] },
+        "condition": { "and": [ { "u_has_item": "nomad_ac_kit" }, { "u_has_item": "cbm_wire_kit" } ] },
         "effect": [
-          { "u_add_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans", "value": "yes" },
-          { "u_consume_item": "exodii_ac_kit", "count": 1, "popup": true },
-          { "u_consume_item": "exodii_wire_kit", "count": 1, "popup": true }
+          { "u_add_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans", "value": "yes" },
+          { "u_consume_item": "nomad_ac_kit", "count": 1, "popup": true },
+          { "u_consume_item": "cbm_wire_kit", "count": 1, "popup": true }
         ],
-        "topic": "TALK_BLACKSMITH_PROTOTYPE_EXODII_ITEMS_READY"
+        "topic": "TALK_BLACKSMITH_PROTOTYPE_NOMAD_ITEMS_READY"
       },
       {
         "text": "I'll try and find some.",
-        "effect": [ { "u_add_var": "blacksmith_crafting_EXODII", "type": "dialogue", "context": "artisans", "value": "yes" } ],
+        "effect": [ { "u_add_var": "blacksmith_crafting_NOMAD", "type": "dialogue", "context": "artisans", "value": "yes" } ],
         "topic": "TALK_BLACKSMITH_SERVICES"
       }
     ]
   },
   {
     "type": "talk_topic",
-    "id": "TALK_BLACKSMITH_PROTOTYPE_EXODII_ITEMS",
+    "id": "TALK_BLACKSMITH_PROTOTYPE_NOMAD_ITEMS",
     "dynamic_line": {
       "gendered_line": "Yeah; the designs you showed me call for 'em.  Not sure what they are myself, but the pictures are real descriptive about how to use them.  To make anything, I'll need one of each of those wire kits.  Got any?",
       "relevant_genders": [ "u" ]
@@ -384,20 +383,20 @@
     "responses": [
       {
         "text": "Here you go.  [Hand over a CBM interface wire kit and an external climate control kit.]",
-        "condition": { "and": [ { "u_has_item": "exodii_ac_kit" }, { "u_has_item": "exodii_wire_kit" } ] },
+        "condition": { "and": [ { "u_has_item": "nomad_ac_kit" }, { "u_has_item": "cbm_wire_kit" } ] },
         "effect": [
-          { "u_add_var": "blacksmith_has_exodii_items", "type": "dialogue", "context": "artisans", "value": "yes" },
-          { "u_consume_item": "exodii_ac_kit", "count": 1, "popup": true },
-          { "u_consume_item": "exodii_wire_kit", "count": 1, "popup": true }
+          { "u_add_var": "blacksmith_has_nomad_items", "type": "dialogue", "context": "artisans", "value": "yes" },
+          { "u_consume_item": "nomad_ac_kit", "count": 1, "popup": true },
+          { "u_consume_item": "cbm_wire_kit", "count": 1, "popup": true }
         ],
-        "topic": "TALK_BLACKSMITH_PROTOTYPE_EXODII_ITEMS_READY"
+        "topic": "TALK_BLACKSMITH_PROTOTYPE_NOMAD_ITEMS_READY"
       },
       { "text": "Not right now.", "topic": "TALK_BLACKSMITH_SERVICES" }
     ]
   },
   {
     "type": "talk_topic",
-    "id": "TALK_BLACKSMITH_PROTOTYPE_EXODII_ITEMS_READY",
+    "id": "TALK_BLACKSMITH_PROTOTYPE_NOMAD_ITEMS_READY",
     "dynamic_line": {
       "gendered_line": "Thanks, sugar!  If you ever have me make some armor, just let me know if you want me to use these in it.",
       "relevant_genders": [ "u" ]

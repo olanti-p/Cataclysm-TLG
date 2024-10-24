@@ -15,7 +15,7 @@ static const bionic_id bio_power_storage( "bio_power_storage" );
 static const gun_mode_id gun_mode_MELEE( "MELEE" );
 
 static const mtype_id mon_zombie_electric( "mon_zombie_electric" );
-static const mtype_id mon_zomborg( "mon_zomborg" );
+static const mtype_id mon_mon_pattern_bigfrog( "mon_pattern_bigfrog" );
 
 static void test_zapback( Creature &attacker, const bool expect_damage,
                           const dealt_projectile_attack *proj = nullptr )
@@ -111,6 +111,6 @@ TEST_CASE( "zapback_npc_electricity_immune", "[mondefense]" )
 
 TEST_CASE( "zapback_monster", "[mondefense]" )
 {
-    monster attacker( mon_zomborg );
+    monster attacker( mon_pattern_bigfrog );
     test_zapback( attacker, true );
 }

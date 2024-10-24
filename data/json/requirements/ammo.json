@@ -346,7 +346,6 @@
     "//": "A list of rifle-caliber casings for use in crafts and adjacent projects. Excludes giant cartridges like .50 Browning and shotgun shells.",
     "components": [
       [
-        [ "123ln_casing", 1 ],
         [ "223_casing", 1 ],
         [ "270win_casing", 1 ],
         [ "3006_casing", 1 ],
