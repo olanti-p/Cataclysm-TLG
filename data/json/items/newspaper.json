@@ -11,7 +11,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -27,7 +27,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -43,7 +43,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID", "BANK_NOTE_SHAPED", "PAPER_SHAPED" ],
+    "flags": [ "TRADER_AVOID", "BANK_NOTE_SHAPED", "PAPER_SHAPED", "TINDER" ],
     "weight": "12 mg",
     "volume": "1 ml"
   },
@@ -59,7 +59,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ],
+    "flags": [ "TRADER_AVOID", "PAPER_SHAPED", "TINDER" ],
     "weight": "12 mg",
     "volume": "1 ml"
   },
@@ -295,7 +295,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ],
+    "flags": [ "TRADER_AVOID", "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -311,7 +311,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID", "CREDIT_CARD_SHAPED", "PAPER_SHAPED" ],
+    "flags": [ "TRADER_AVOID", "CREDIT_CARD_SHAPED", "PAPER_SHAPED", "TINDER" ],
     "weight": "1 g",
     "volume": "2 ml"
   },
@@ -326,7 +326,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "1 g",
     "volume": "1 ml"
   },
@@ -342,7 +342,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -358,7 +358,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -374,7 +374,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -390,7 +390,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -406,7 +406,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -422,7 +422,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "5 ml"
   },
@@ -439,7 +439,7 @@
     "price_postapoc": 0,
     "looks_like": "survnote",
     "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ],
+    "flags": [ "TRADER_AVOID", "PAPER_SHAPED", "TINDER" ],
     "weight": "3 g",
     "volume": "10 ml"
   },
@@ -455,7 +455,7 @@
     "looks_like": "newest_newspaper",
     "color": "white",
     "symbol": "?",
-    "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ]
+    "flags": [ "TRADER_AVOID", "PAPER_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -469,7 +469,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "6 g",
     "volume": "12 ml"
   },
@@ -485,7 +485,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "6 g",
     "volume": "12 ml"
   },
@@ -501,7 +501,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "6 g",
     "volume": "12 ml"
   },
@@ -517,7 +517,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "6 g",
     "volume": "12 ml"
   },
@@ -531,7 +531,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "PAPER_SHAPED" ],
+    "flags": [ "PAPER_SHAPED", "TINDER" ],
     "weight": "6 g",
     "volume": "12 ml",
     "variant_type": "generic",
@@ -591,6 +591,6 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID", "BANK_NOTE_SHAPED" ]
+    "flags": [ "TRADER_AVOID", "BANK_NOTE_SHAPED", "TINDER" ]
   }
 ]

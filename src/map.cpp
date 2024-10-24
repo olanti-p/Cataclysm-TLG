@@ -3344,16 +3344,6 @@ bool map::is_last_ter_wall( const bool no_furn, const point &p,
     return result;
 }
 
-bool map::tinder_at( const tripoint &p )
-{
-    for( const item &i : i_at( p ) ) {
-        if( i.has_flag( flag_TINDER ) ) {
-            return true;
-        }
-    }
-    return false;
-}
-
 bool map::flammable_items_at( const tripoint &p, int threshold )
 {
     if( !has_items( p ) ||
@@ -3409,6 +3399,34 @@ bool map::is_flammable( const tripoint &p )
 bool map::is_flammable( const tripoint_bub_ms &p )
 {
     return is_flammable( p.raw() );
+}
+
+bool map::tinder_at( const tripoint &p )
+{
+    for( const item &i : i_at( p ) ) {
+        if( i.has_flag( flag_TINDER ) ) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool map::is_tinder( const tripoint &p )
+{
+
+    if( has_flag( ter_furn_flag::TFLAG_TINDER, p ) ) {
+        return true;
+    }
+
+    if( get_field_intensity( p, fd_web ) > 0 ) {
+        return true;
+    }
+    return false;
+}
+
+bool map::is_tinder( const tripoint_bub_ms &p )
+{
+    return is_tinder( p.raw() );
 }
 
 void map::decay_fields_and_scent( const time_duration &amount )
@@ -6456,7 +6474,7 @@ bool map::add_field( const tripoint &p, const field_type_id &type_id, int intens
     }
 
     // Don't spawn liquid fields on water tiles
-    if( has_flag( ter_furn_flag::TFLAG_SWIMMABLE, p ) && type_id.obj().phase == phase_id::LIQUID ) {
+    if( ( has_flag( ter_furn_flag::TFLAG_SWIMMABLE, p ) || has_flag( ter_furn_flag::TFLAG_LIQUID, p ) ) && type_id.obj().phase == phase_id::LIQUID ) {
         return false;
     }
 

@@ -1131,6 +1131,8 @@ class map
         // TODO: fix point types (remove the first overload)
         bool is_flammable( const tripoint &p );
         bool is_flammable( const tripoint_bub_ms &p );
+        bool is_tinder( const tripoint &p );
+        bool is_tinder( const tripoint_bub_ms &p );
         point random_outdoor_tile() const;
         // mapgen
 

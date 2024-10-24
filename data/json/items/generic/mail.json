@@ -12,6 +12,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
+    "flags": [ "TINDER" ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -37,6 +38,7 @@
     "price": 0,
     "price_postapoc": 0,
     "material": [ "paper" ],
+    "flags": [ "TINDER" ],
     "symbol": "`",
     "color": "white",
     "variant_type": "generic",

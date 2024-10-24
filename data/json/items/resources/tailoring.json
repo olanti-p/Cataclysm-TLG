@@ -49,6 +49,7 @@
     "name": { "str_sp": "cotton scraps" },
     "description": "A handful of oddly-shaped smallish bits of cotton, waste material from tailoring projects.  Not useful for much and usually disposed of, but they can be recycled into some thread if you really want.",
     "volume": "1 ml",
+    "flags": [ "TINDER" ],
     "material": [ "cotton" ],
     "symbol": "=",
     "color": "dark_gray"
@@ -72,6 +73,7 @@
     "name": { "str_sp": "felt scraps" },
     "description": "A handful of oddly-shaped smallish bits of felt, waste material from tailoring projects.  Not useful for much and usually disposed of, but they can be recycled into some wool fiber if you really want.",
     "volume": "5 ml",
+    "flags": [ "TINDER" ],
     "material": [ "wool" ]
   },
   {
@@ -211,7 +213,7 @@
     "price": 2000,
     "price_postapoc": 10,
     "material": [ "wool" ],
-    "flags": [ "NO_SALVAGE" ],
+    "flags": [ "NO_SALVAGE", "TINDER" ],
     "weight": "3 g",
     "volume": "18 ml",
     "category": "spare_parts"
@@ -335,7 +337,7 @@
     "weight": "38 g",
     "volume": "47 ml",
     "//": "Medium weight cotton fabric with a GSM of 203",
-    "flags": [ "SINGLE_USE" ],
+    "flags": [ "SINGLE_USE", "TINDER" ],
     "use_action": { "type": "heal", "bandages_power": 2, "bleed": 10, "move_cost": 6000 },
     "price": 1000,
     "price_postapoc": 10,
@@ -386,6 +388,7 @@
     "description": "A 12-inch by 24-inch sheet of felt, suitable for making clothing.",
     "weight": "28 g",
     "volume": "145 ml",
+    "flags": [ "TINDER" ],
     "//": "based on 150GSM felt",
     "price": 2500,
     "price_postapoc": 20,
@@ -400,6 +403,7 @@
     "name": { "str": "patchwork felt sheet" },
     "description": "A 12-inch by 24-inch sheet of felt sewn together from patches.  Suitable for making clothing if you lack proper material sheets.",
     "//": "150GSM felt",
+    "flags": [ "TINDER" ],
     "price": 500,
     "price_postapoc": 50
   },
@@ -649,6 +653,7 @@
     "price": 1250,
     "price_postapoc": 50,
     "material": [ "denim" ],
+    "flags": [ "TINDER" ],
     "symbol": "=",
     "color": "dark_gray"
   },
@@ -663,6 +668,7 @@
     "price": 1,
     "price_postapoc": 5,
     "material": [ "denim" ],
+    "flags": [ "TINDER" ],
     "symbol": "=",
     "color": "dark_gray"
   },
@@ -676,7 +682,7 @@
     "price": 400,
     "price_postapoc": 12,
     "material": [ "denim" ],
-    "flags": [ "NO_SALVAGE" ],
+    "flags": [ "NO_SALVAGE", "TINDER" ],
     "weight": "11 g",
     "volume": "13 ml",
     "category": "spare_parts"
@@ -691,6 +697,7 @@
     "volume": "95 ml",
     "price_postapoc": 50,
     "material": [ "denim" ],
+    "flags": [ "TINDER" ],
     "symbol": "=",
     "color": "dark_gray"
   },
