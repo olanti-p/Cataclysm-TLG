@@ -12,7 +12,17 @@
     "floor_bedding_warmth": 1000,
     "required_str": -1,
     "deconstruct": { "items": [ { "item": "mattress", "count": 1 } ], "furn_set": "f_bed_frame" },
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "PLACE_ITEM", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT", "SMALL_HIDE", "TINDER" ],
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "PLACE_ITEM",
+      "ORGANIC",
+      "MOUNTABLE",
+      "CAN_SIT",
+      "EASY_DECONSTRUCT",
+      "SMALL_HIDE",
+      "TINDER"
+    ],
     "bash": {
       "str_min": 12,
       "str_max": 40,
