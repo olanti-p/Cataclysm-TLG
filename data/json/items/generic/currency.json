@@ -259,7 +259,7 @@
     "symbol": "$",
     "price": 200,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -272,7 +272,7 @@
     "symbol": "$",
     "price": 500,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -285,7 +285,7 @@
     "symbol": "$",
     "price": 1000,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -298,7 +298,7 @@
     "symbol": "$",
     "price": 2000,
     "price_postapoc": 0,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -311,7 +311,7 @@
     "symbol": "$",
     "price": 5000,
     "price_postapoc": 1,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
@@ -324,7 +324,7 @@
     "symbol": "$",
     "price": 10000,
     "price_postapoc": 1,
-    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED" ]
+    "flags": [ "OLD_CURRENCY", "BANK_NOTE_SHAPED", "TINDER" ]
   },
   {
     "type": "GENERIC",
