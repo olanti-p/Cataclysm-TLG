@@ -3373,8 +3373,7 @@ bool map::is_flammable( const tripoint &p )
     // TODO: Burning fuel on water, fires on boats?
     if( has_flag_ter( ter_furn_flag::TFLAG_LIQUID, p ) ||
         has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, p ) ||
-        has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, p ) || 
-        has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, p ) ) {
+        has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, p ) ) {
         return false;
     }
 

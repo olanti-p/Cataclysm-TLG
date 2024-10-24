@@ -1916,7 +1916,7 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
                        here.has_flag_ter( ter_furn_flag::TFLAG_LIQUIDCONT, where ) ) {
                 you->add_msg_if_player( m_info, _( "You need dry ground to light a fire." ) );
             } else if( here.has_flag_ter( ter_furn_flag::TFLAG_NO_FLOOR, where ) ) {
-                you->add_msg_if_player( m_info, _( "It's already burning hot there." ) );
+                you->add_msg_if_player( m_info, _( "You can't light a fire in midair." ) );
             } else {
                 you->add_msg_if_player( m_info, _( "There's nothing to light there." ) );
             }
