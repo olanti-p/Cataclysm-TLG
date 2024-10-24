@@ -100,18 +100,6 @@
         "switch": true
       },
       {
-        "text": "Weird.  I guess I could check that out too, sure.",
-        "topic": "TALK_RC_SURVIVOR_Tips2",
-        "condition": {
-          "and": [
-            { "math": [ "npc_randomize_dialogue_direction", "==", "3" ] },
-            { "not": { "u_has_var": "directions", "type": "teamster", "context": "mission", "value": "exodii" } }
-          ]
-        },
-        "effect": { "assign_mission": "directions_exodii" },
-        "switch": true
-      },
-      {
         "text": "Ah, yeah, I've heard of that too.  It's a weird world out there, hey?",
         "topic": "TALK_NONE",
         "switch": true,

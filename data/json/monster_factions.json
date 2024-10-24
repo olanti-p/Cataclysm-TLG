@@ -36,7 +36,7 @@
     "type": "MONSTER_FACTION",
     "name": "human",
     "neutral": [ "mech_bot", "passive_machine" ],
-    "by_mood": [ "exodii", "isolated_artisans", "yrax" ]
+    "by_mood": [ "isolated_artisans", "yrax" ]
   },
   {
     "type": "MONSTER_FACTION",
@@ -94,14 +94,14 @@
     "name": "small_animal",
     "base_faction": "animal",
     "friendly": [ "attack_player_only" ],
-    "neutral": [ "zombie", "fish", "exodii", "isolated_artisans", "nether", "animal", "yrax", "passive_machine" ],
+    "neutral": [ "zombie", "fish", "isolated_artisans", "nether", "animal", "yrax", "passive_machine" ],
     "by_mood": [ "cat", "bear", "fox", "big_cat", "dog", "wolf" ]
   },
   {
     "type": "MONSTER_FACTION",
     "name": "herbivore",
     "base_faction": "animal",
-    "neutral": [ "small_animal", "fish", "exodii", "isolated_artisans", "yrax", "passive_machine" ]
+    "neutral": [ "small_animal", "fish", "isolated_artisans", "yrax", "passive_machine" ]
   },
   {
     "type": "MONSTER_FACTION",
@@ -169,7 +169,6 @@
       "bot",
       "animal",
       "small_animal",
-      "exodii",
       "isolated_artisans",
       "plant",
       "nether",
@@ -399,7 +398,6 @@
       "corvid",
       "ratkin",
       "lab_mutant",
-      "exodii",
       "isolated_artisans",
       "yrax",
       "mi-go",
@@ -621,14 +619,6 @@
   },
   {
     "type": "MONSTER_FACTION",
-    "name": "exodii",
-    "base_faction": "human",
-    "neutral": [ "fish", "small_animal", "herbivore", "passive_machine" ],
-    "by_mood": [ "animal", "nether", "human", "yrax" ],
-    "hate": [ "zombie", "fungus", "triffid", "mi-go" ]
-  },
-  {
-    "type": "MONSTER_FACTION",
     "name": "isolated_artisans",
     "base_faction": "human",
     "neutral": [ "fish", "small_animal", "herbivore", "passive_machine" ],
@@ -641,7 +631,7 @@
     "base_faction": "nether",
     "neutral": [ "fish", "yrax", "small_animal", "slime", "passive_machine" ],
     "by_mood": [ "nether" ],
-    "hate": [ "zombie", "triffid", "fungus", "exodii", "isolated_artisans" ]
+    "hate": [ "zombie", "triffid", "fungus", "isolated_artisans" ]
   },
   {
     "type": "MONSTER_FACTION",
