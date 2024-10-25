@@ -2494,6 +2494,12 @@ void repair_item_finish( player_activity *act, Character *you, bool no_menu )
             }
         }
 
+        if( used_tool == nullptr ) {
+            add_msg( m_bad, _( "You have lost the item you were using to make the repair." ) );
+            act->set_to_null();
+            return;
+        }
+
         // TODO: Allow setting this in the actor
         // TODO: Don't use charges_to_use: welder has 50 charges per use, soldering iron has 1
         if( !used_tool->ammo_sufficient( you ) ) {
@@ -2614,10 +2620,15 @@ void repair_item_finish( player_activity *act, Character *you, bool no_menu )
             }
         }
 
-        title += string_format( _( "Charges: <color_light_blue>%s/%s</color> %s (%s per use)\n" ),
-                                ammo_remaining, used_tool->ammo_capacity( current_ammo, true ),
-                                ammo_name,
-                                used_tool->ammo_required() );
+        title += used_tool->is_tool() && used_tool->has_flag( flag_USES_NEARBY_AMMO )
+                 ? string_format( _( "Charges: <color_light_blue>%s</color> %s (%s per use)\n" ),
+                                  ammo_remaining,
+                                  ammo_name,
+                                  used_tool->ammo_required() )
+                 : string_format( _( "Charges: <color_light_blue>%s/%s</color> %s (%s per use)\n" ),
+                                  ammo_remaining, used_tool->ammo_capacity( current_ammo, true ),
+                                  ammo_name,
+                                  used_tool->ammo_required() );
         title += string_format( _( "Materials available: %s\n" ), string_join( material_list, ", " ) );
         title += string_format( _( "Skill used: <color_light_blue>%s (%s)</color>\n" ),
                                 actor->used_skill.obj().name(), level );
