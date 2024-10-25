@@ -19,7 +19,7 @@
     "melee_skill": 3,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 12 } ],
+    "melee_damage": [ { "damage_type": "cut", "amount": 1 } ],
     "bleed_rate": 25,
     "vision_night": 3,
     "//grab": "Bulkier than a base zombie but awkward because of the metal bits",
