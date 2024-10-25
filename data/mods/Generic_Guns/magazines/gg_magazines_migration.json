@@ -128,7 +128,6 @@
       "hk46bigmag",
       "hk46mag",
       "fnp90mag",
-      "robofacmultimag",
       "5x50_100_mag",
       "5x50_50_mag",
       "ppshdrum",
@@ -171,7 +170,6 @@
       "skorpion82mag",
       "mp5_10_mag",
       "tdi_10mm_mag",
-      "robofac60",
       "greasegun30mag",
       "greasegun32mag"
     ],
@@ -301,10 +299,6 @@
       "8x40_500_mag",
       "8x40_50_mag",
       "famasmag",
-      "robofac40",
-      "xedra40",
-      "robofac100",
-      "robofac50",
       "usc10mag",
       "usc15mag",
       "usc20mag",
@@ -352,8 +346,7 @@
       "ruger_pr_mag",
       "steyr_scout_mag",
       "steyr_scout_mag_makeshift",
-      "borealmosin_clip",
-      "robofac20"
+      "borealmosin_clip"
     ],
     "type": "MIGRATION",
     "replace": "rifle_sniper_mag"
@@ -379,9 +372,6 @@
       "USAS10mag",
       "USAS20mag",
       "shotbelt_20",
-      "robofac10",
-      "xedra10",
-      "robofac30",
       "aa12_box_mag",
       "aa12_drum_mag",
       "aa12_vehicle_drum",

@@ -56,9 +56,6 @@ ID_WHITELIST = {
     # Magazines
     '223_speedloader5',
     'coin_wrapper',
-    'robofac_gun_40mm_3rd',
-    'robofac_gun_40mm_5rd',
-    'robofac_gun_40mm_10rd',
     'bio_shotgun_gun',
     'gasfilter_med',
 
