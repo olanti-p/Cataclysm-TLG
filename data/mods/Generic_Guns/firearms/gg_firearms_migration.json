@@ -30,7 +30,7 @@
     "replace": "grenade_pistol"
   },
   {
-    "id": [ "mgl", "sapra", "robofac_gun_40mm", "triple_launcher_simple", "pseudo_m203" ],
+    "id": [ "mgl", "triple_launcher_simple", "pseudo_m203" ],
     "type": "MIGRATION",
     "replace": "grenade_revolver"
   },
@@ -354,9 +354,7 @@
       "805_bren",
       "bren2_556",
       "fs2000",
-      "robofac_gun",
       "psl",
-      "xedra_gun",
       "obrez",
       "mk47",
       "hk_usc45",
@@ -374,11 +372,6 @@
     ],
     "type": "MIGRATION",
     "replace": "rifle_sporter"
-  },
-  {
-    "id": [ "pamd68", "pamd71z", "pamd68rubik", "pamd68mountable" ],
-    "type": "MIGRATION",
-    "replace": "rifle_assault_foreign"
   },
   {
     "id": [ "combination_gun", "pipe_combination_gun" ],
