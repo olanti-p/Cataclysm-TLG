@@ -5,7 +5,6 @@
     "name": { "str": "zombie cyborg" },
     "description": "This walking corpse is riddled with the broken promises of next-gen biotech.  Its flesh has gone black around the edges of its bionic armor plating, and its unpowered implants now serve only as dead weight.",
     "default_faction": "zombie",
-    "looks_like": "mon_exodii_worker",
     "volume": "62500 ml",
     "weight": "81500 g",
     "species": [ "CYBORG", "ZOMBIE" ],
