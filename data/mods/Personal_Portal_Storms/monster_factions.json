@@ -13,6 +13,6 @@
     "type": "MONSTER_FACTION",
     "name": "human",
     "neutral": [ "mech_bot", "passive_machine", "nether_player_hate" ],
-    "by_mood": [ "exodii", "isolated_artisans", "yrax" ]
+    "by_mood": [ "isolated_artisans", "yrax" ]
   }
 ]
