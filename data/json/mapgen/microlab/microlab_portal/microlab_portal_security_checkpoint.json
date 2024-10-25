@@ -5,7 +5,11 @@
     "subtype": "collection",
     "entries": [
       {
-        "distribution": [ { "item": "shot_hull", "prob": 30 }, { "item": "223_casing", "prob": 70, "count": [ 1, 5 ] }, { "item": "9mm_casing", "prob": 70, "count": [ 3, 5 ] } ],
+        "distribution": [
+          { "item": "shot_hull", "prob": 30 },
+          { "item": "223_casing", "prob": 70, "count": [ 1, 5 ] },
+          { "item": "9mm_casing", "prob": 70, "count": [ 3, 5 ] }
+        ],
         "prob": 90
       }
     ]

@@ -59,9 +59,7 @@
     "type": "item_group",
     "id": "NC_ROBOFAC_MERC_1_wield",
     "subtype": "collection",
-    "items": [
-      { "item": "scar_l", "ammo-item": "556", "charges": 40, "contents-item": "shoulder_strap" }
-    ]
+    "items": [ { "item": "scar_l", "ammo-item": "556", "charges": 40, "contents-item": "shoulder_strap" } ]
   },
   {
     "id": "TALK_ROBOFAC_MERC_1",

@@ -519,9 +519,7 @@
   {
     "type": "item_group",
     "id": "xedra_gun",
-    "items": [
-    { "item": "hk_mp5k", "prob": 45 }
-    ]
+    "items": [ { "item": "hk_mp5k", "prob": 45 } ]
   },
   {
     "id": "xedra_kill_team_set",

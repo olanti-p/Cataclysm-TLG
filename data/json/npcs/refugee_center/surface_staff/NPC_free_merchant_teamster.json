@@ -163,10 +163,10 @@
             "relevant_genders": [ "npc" ]
           },
           "no": {
-              "math": [ "npc_randomize_dialogue_direction", "==", "4" ],
-              "yes": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
-              "no": "ERROR: out of bounds on randomize_directions."
-            }
+            "math": [ "npc_randomize_dialogue_direction", "==", "4" ],
+            "yes": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
+            "no": "ERROR: out of bounds on randomize_directions."
+          }
         }
       }
     },
