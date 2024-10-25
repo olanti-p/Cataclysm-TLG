@@ -468,7 +468,7 @@
     "symbol": "%",
     "quench": -18,
     "calories": 24,
-    "description": "A pungent garlic bulb.  Popular as a seasoning for its strong flavor.  Can be disassembled into cloves.",
+    "description": "A pungent garlic bulb, popular as a seasoning for its strong flavor.  Can be disassembled into cloves or planted as is.",
     "price": 300,
     "price_postapoc": 50,
     "material": [ "garlic" ],
@@ -476,7 +476,8 @@
     "fun": -18,
     "flags": [ "RAW", "PLANTABLE_SEED" ],
     "vitamins": [ [ "vitC", 5 ], [ "calcium", 3 ], [ "iron", 1 ] ],
-    "//": "Who in their right mind would eat an entire garlic bulb raw?"
+    "//": "Who in their right mind would eat an entire garlic bulb raw?",
+    "seed_data": { "plant_name": "garlic", "fruit": "garlic", "byproducts": [ "withered" ], "grow": "65 days" }
   },
   {
     "type": "COMESTIBLE",
@@ -489,13 +490,12 @@
     "symbol": "%",
     "quench": -3,
     "calories": 4,
-    "description": "Cloves of garlic.  Useful as a seasoning.",
+    "description": "Cloves of garlic, useful as a seasoning.",
     "price": "8 cent",
     "material": [ "garlic" ],
     "volume": "25 ml",
     "fun": -3,
-    "flags": [ "NUTRIENT_OVERRIDE" ],
-    "seed_data": { "plant_name": "garlic", "fruit": "garlic", "byproducts": [ "withered" ], "grow": "65 days" }
+    "flags": [ "NUTRIENT_OVERRIDE" ]
   },
   {
     "type": "COMESTIBLE",
