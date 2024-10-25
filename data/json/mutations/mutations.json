@@ -1162,7 +1162,7 @@
     "starting_trait": true,
     "cancels": [ "CLUMSY" ],
     "category": [ "BIRD", "ELFA", "FELINE", "CHIROPTERAN" ],
-    "noise_modifier": 0.4
+    "noise_modifier": 0.6
   },
   {
     "type": "mutation",
@@ -6157,36 +6157,20 @@
   },
   {
     "type": "mutation",
-    "id": "VERY_SHORT",
+    "id": "SMALL_NATURAL",
     "flags": [ "SMALL" ],
-    "name": { "str": "Very Short" },
+    "name": { "str": "Small" },
     "points": 0,
     "visibility": 4,
     "mixed_effect": true,
     "starting_trait": true,
-    "description": "You are significantly shorter than the general population.  You can't carry quite as much as a person of average height and you need special accommodations to drive a car, but otherwise being little isn't too much of a bother.",
+    "description": "You are very short!  Either you haven't fully grown up yet, or you've got some form of dwarfism.  You can't carry as much, your feet can't reach the pedals to drive a car, and you're not as durable as the average adult.",
     "types": [ "SIZE" ],
     "changes_to": [ "SMALL" ],
     "category": [ "MOUSE", "RABBIT" ],
     "stomach_size_multiplier": 0.5,
-    "enchantments": [ { "values": [ { "value": "MAX_HP", "multiply": -0.05 } ] } ],
-    "weight_capacity_modifier": 0.8
-  },
-  {
-    "type": "mutation",
-    "id": "VERY_TALL",
-    "flags": [ "LARGE" ],
-    "name": { "str": "Very Tall" },
-    "points": 0,
-    "visibility": 1,
-    "mixed_effect": true,
-    "starting_trait": true,
-    "description": "You are significantly taller than the general population.  This leaves you with high blood pressure, a big appetite, and some minor health concerns, but you can carry a bit more than normal.",
-    "types": [ "SIZE" ],
-    "changes_to": [ "LARGE", "HUGE" ],
-    "category": [ "URSINE", "CATTLE", "LIZARD", "CHIMERA", "CRUSTACEAN" ],
-    "stomach_size_multiplier": 1.5,
-    "weight_capacity_modifier": 1.05
+    "enchantments": [ { "values": [ { "value": "MAX_HP", "multiply": -0.2 } ] } ],
+    "weight_capacity_modifier": 0.7
   },
   {
     "type": "mutation",
@@ -6200,7 +6184,7 @@
     "types": [ "SIZE" ],
     "changes_to": [ "SMALL2" ],
     "category": [ "MOUSE", "RABBIT" ],
-    "stomach_size_multiplier": 0.5,
+    "stomach_size_multiplier": 0.6,
     "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 1 }, { "value": "MAX_HP", "multiply": -0.05 } ] } ],
     "weight_capacity_modifier": 0.8
   },
@@ -6212,7 +6196,7 @@
     "points": 0,
     "visibility": 8,
     "mixed_effect": true,
-    "description": "You're only half as tall as you used to be!  The weight of things you once found easy to carry is now unbearable, clothes are now twice as encumbering for you unless you refit them (since you're half their size), and your hit points are heavily reduced.  However, your movement is silent, and your dodge skill is a little higher.",
+    "description": "You're the size of a toddler!  The weight of things you once found easy to carry is now unbearable, clothes are now twice as encumbering for you unless you refit them, and your hit points are heavily reduced.  However, your movement is silent, and your dodge skill is a little higher.",
     "types": [ "SIZE" ],
     "prereqs": [ "SMALL" ],
     "changes_to": [ "SMALL_OK" ],
