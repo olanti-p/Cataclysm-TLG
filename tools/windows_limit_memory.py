@@ -15,7 +15,7 @@ usage: windows_limit_memory.py [-h]
                                [-m MEMORY]
                                {process,pid} ...
 
-C:DDA Memory Limit test script.
+C:TLG Memory Limit test script.
 
 positional arguments:
   {process,pid}         help for sub-commands
@@ -36,7 +36,7 @@ Examples:
 
     ; starting process "cataclysm-tiles.exe" and limiting its memory to 1GiB.
     $ python windows_limit_memory.py -m 1024 process \
-            z:\\CDDA\\Cataclysm-tiles.exe
+            z:\\CTLG\\Cataclysm-tiles.exe
 """
 
 import argparse
@@ -755,7 +755,7 @@ def main(args: argparse.Namespace) -> int:
 
 if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(
-        description="C:DDA Memory Limit test script.")
+        description="C:TLG Memory Limit test script.")
 
     #
     # options for all sub-commands

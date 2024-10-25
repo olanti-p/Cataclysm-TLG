@@ -3,7 +3,7 @@ from spell_checker.spell_checker import spell_check
 import polib
 
 
-pofile = polib.pofile('./lang/po/cataclysm-dda.pot')
+pofile = polib.pofile('./lang/po/cataclysm-tlg.pot')
 # occurrences = dict()
 for entry in pofile:
     typos = spell_check(entry.msgid)
