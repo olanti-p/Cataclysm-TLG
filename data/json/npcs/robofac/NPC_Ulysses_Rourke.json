@@ -36,9 +36,9 @@
       { "skill": "pistol", "bonus": { "rng": [ 2, 4 ] } },
       { "skill": "smg", "bonus": { "rng": [ 2, 6 ] } }
     ],
-    "carry_override": "NC_robofac_security_head_misc",
-    "worn_override": "NC_robofac_security_head_worn",
-    "weapon_override": "NC_robofac_security_head_weapon"
+    "worn_override": "NC_ANCILLA_GRUNT_worn",
+    "carry_override": "NC_ANCILLA_GRUNT_carry",
+    "weapon_override": "NC_ANCILLA_GRUNT_wield"
   },
   {
     "type": "item_group",
