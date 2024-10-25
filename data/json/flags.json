@@ -2456,5 +2456,9 @@
     "id": "ACID_AFFLICTED",
     "type": "json_flag",
     "//": "The character is afflicted with acid."
+  },
+  {
+    "id": "USES_NEARBY_AMMO",
+    "type": "json_flag"
   }
 ]
