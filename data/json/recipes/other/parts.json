@@ -130,11 +130,7 @@
     "time": "4 m",
     "using": [ [ "soldering_standard", 4 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
-    "components": [
-      [ [ "e_scrap", 10 ] ],
-      [ [ "clockworks", 1 ] ],
-      [ [ "solder_wire", 2 ] ]
-    ]
+    "components": [ [ [ "e_scrap", 10 ] ], [ [ "clockworks", 1 ] ], [ [ "solder_wire", 2 ] ] ]
   },
   {
     "//": "TODO MAKE A RECIPE FOR THIS AND A BOOK, UPDATE COMPONENTS",
@@ -146,12 +142,7 @@
     "time": "4 m",
     "using": [ [ "soldering_standard", 4 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
-    "components": [
-      [ [ "e_scrap", 10 ] ],
-      [ [ "clockworks", 2 ] ],
-      [ [ "solder_wire", 2 ] ],
-      [ [ "pipe", 1 ] ]
-    ]
+    "components": [ [ [ "e_scrap", 10 ] ], [ [ "clockworks", 2 ] ], [ [ "solder_wire", 2 ] ], [ [ "pipe", 1 ] ] ]
   },
   {
     "type": "recipe",
