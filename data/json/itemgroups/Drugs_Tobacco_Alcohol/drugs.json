@@ -256,8 +256,7 @@
     "entries": [
       { "group": "bfipowder_bottle_plastic_5_60", "prob": 100 },
       { "item": "dayquil", "count-min": 1, "count-max": 30, "container-item": "bottle_plastic", "prob": 50 },
-      { "item": "nyquil", "count-min": 1, "count-max": 30, "container-item": "bottle_plastic", "prob": 50 },
-      { "item": "flu_shot", "count-min": 1, "count-max": 10, "container-item": "null", "prob": 50 }
+      { "item": "nyquil", "count-min": 1, "count-max": 30, "container-item": "bottle_plastic", "prob": 50 }
     ]
   },
   {
@@ -283,7 +282,6 @@
       { "group": "antifungal_dr_group", "prob": 10 },
       { "group": "antiparasitic_dr_group", "prob": 10 },
       { "group": "diazepam_dr_group", "prob": 10 },
-      { "group": "calcium_dr_group", "prob": 10 },
       { "group": "iron_dr_group", "prob": 10 },
       { "group": "prozac_dr_group", "prob": 10 },
       { "group": "thorazine_dr_group", "prob": 10 },
@@ -374,9 +372,7 @@
       { "prob": 5, "group": "strong_antibiotic_bottle_plastic_pill_prescription_1_5" },
       { "prob": 2, "group": "antifungal_bottle_plastic_pill_prescription_1_5" },
       { "prob": 3, "group": "antiparasitic_bottle_plastic_pill_prescription_1_10" },
-      [ "survnote", 1 ],
       { "prob": 4, "group": "diazepam_bottle_plastic_pill_prescription_1_10" },
-      [ "flu_shot", 5 ],
       [ "syringe", 8 ]
     ]
   },
