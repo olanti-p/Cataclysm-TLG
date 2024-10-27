@@ -20,6 +20,7 @@
 #include "effect.h"
 #include "effect_source.h"
 #include "enums.h"
+#include "magic.h"
 #include "mapdata.h"
 #include "map_field.h"
 #include "translations.h"
@@ -211,6 +212,7 @@ struct field_type {
 
         // Name of whatever substance makes up the field, can be used in splash attacks or other messaging.
         std::string substance_name = "liquid";
+        fake_spell spell_data;
 
         // chance, issue, duration, speech
         std::tuple<int, std::string, time_duration, translation> npc_complain_data;

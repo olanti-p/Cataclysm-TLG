@@ -289,6 +289,7 @@
     "has_acid": true,
     "priority": 2,
     "half_life": "2 minutes",
+    "spell_data": { "id": "acid_puddle" },
     "phase": "liquid",
     "display_field": true,
     "looks_like": "fd_bile"

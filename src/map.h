@@ -1134,6 +1134,7 @@ class map
         bool is_tinder( const tripoint &p );
         bool is_tinder( const tripoint_bub_ms &p );
         point random_outdoor_tile() const;
+        bool cast_field_spell( const tripoint &p, Character &critter, field_entry &cur );
         // mapgen
 
         void draw_line_ter( const ter_id &type, const point &p1, const point &p2,

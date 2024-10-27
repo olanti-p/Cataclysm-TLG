@@ -3500,6 +3500,17 @@ void map::decay_fields_and_scent( const time_duration &amount )
     }
 }
 
+bool map::cast_field_spell( const tripoint &p, Character &critter, field_entry &fd )
+{
+    {
+        const spell field_spell = fd.spell_data.get_spell( critter, 1 );
+        npc dummy;
+        field_spell.cast_all_effects( dummy, critter.pos() );
+        field_spell.make_sound( p, get_player_character() );
+        return true;
+    }
+}
+
 point map::random_outdoor_tile() const
 {
     std::vector<point> options;
