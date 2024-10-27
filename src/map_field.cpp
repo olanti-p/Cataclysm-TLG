@@ -1448,7 +1448,7 @@ void map::player_in_field( Character &you )
         }
 
         // Do things based on what field effect we are currently in.
-        const field_type_id ft = cur.get_field_type();
+        const field_type_id &ft = cur.get_field_type();
          if( ft == fd_acid ) {
              map &here = get_map();
              here.cast_field_spell( you.pos(), you, cur );

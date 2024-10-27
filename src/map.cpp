@@ -3500,13 +3500,16 @@ void map::decay_fields_and_scent( const time_duration &amount )
     }
 }
 
-bool map::cast_field_spell( const tripoint &p, Character &critter, field_entry &fd )
+bool map::cast_field_spell( const tripoint &p, Character &critter, field_entry &cur )
 {
     {
-        const spell field_spell = fd.spell_data.get_spell( critter, 1 );
+        //const fake_spell field_spell = cur.get_field_type()->spell_data.get_spell( critter, 1 );
+        spell field_spell = cur.get_field_type()->spell_data.get_spell();
         npc dummy;
+        field_spell.set_level( dummy, 10 );
         field_spell.cast_all_effects( dummy, critter.pos() );
         field_spell.make_sound( p, get_player_character() );
+        add_msg( _( "Casting %1s on %2s!" ), field_spell.name(), critter.disp_name() );
         return true;
     }
 }
