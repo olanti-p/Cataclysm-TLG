@@ -213,6 +213,9 @@ static bool in_spell_aoe( const tripoint &start, const tripoint &end, const int 
     if( ignore_walls ) {
         return true;
     }
+    if( start.x == end.x && start.y == end.y && start.z == end.z ) {
+        return true;
+    }
     map &here = get_map();
     const std::vector<tripoint> trajectory = line_to( start, end );
     for( const tripoint &pt : trajectory ) {
@@ -429,7 +432,6 @@ std::set<tripoint> calculate_spell_effect_area( const spell &sp, const tripoint 
 {
     // the actual target that the spell will hit.
     tripoint epicenter( target );
-
     // stop short if we hit a wall, if the spell has a projectile
     if( sp.shape() == spell_shape::blast && !sp.has_flag( spell_flag::NO_PROJECTILE ) ) {
         std::vector<tripoint> trajectory = line_to( caster.pos(), target );
@@ -446,12 +448,12 @@ std::set<tripoint> calculate_spell_effect_area( const spell &sp, const tripoint 
     }
 
     std::set<tripoint> targets = { epicenter }; // initialize with epicenter
-    if( sp.aoe( caster ) < 1 && sp.shape() != spell_shape::line ) {
+    // TODO: Why is this even here?
+    if( sp.aoe( caster ) < 1 && ( sp.shape() != spell_shape::line && sp.shape() != spell_shape::blast ) ) {
         return targets;
     }
 
     targets = sp.effect_area( caster.pos(), target, caster );
-
     for( std::set<tripoint>::iterator it = targets.begin(); it != targets.end(); ) {
         if( !sp.is_valid_target( caster, *it ) ) {
             it = targets.erase( it );
