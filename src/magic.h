@@ -379,7 +379,7 @@ class spell_type
         std::set<species_id> ignored_species_ids;
 
         // list of bodyparts this spell applies its effect to
-        body_part_set affected_bps;
+        mutable body_part_set affected_bps;
 
         std::set<std::string> flags; // string flags
 

@@ -1450,8 +1450,8 @@ void map::player_in_field( Character &you )
         // Do things based on what fields we are currently in.
         const field_type_id ft = cur.get_field_type();
 
-        // Cast spells. Skip if we're in a vehicle, unless the field is a gas.
-        if ( ft->spell_data.id != spell_id::NULL_ID() && ( !you.in_vehicle && ft.obj().phase != phase_id::GAS ) ) {
+        // Cast spells. Skip if we're in a vehicle or on a mount (though the mount itself is not safe!), unless the field is a gas.
+        if ( ft->spell_data.id != spell_id::NULL_ID() && ( !you.in_vehicle && !you.is_mounted() && ft.obj().phase != phase_id::GAS ) ) {
              map &here = get_map();
              here.cast_field_spell( you.pos(), you, cur );
         }

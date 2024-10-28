@@ -3114,7 +3114,6 @@ void fake_spell::load( const JsonObject &jo )
 {
     mandatory( jo, false, "id", id );
     optional( jo, false, "hit_self", self, self_default );
-
     optional( jo, false, "once_in", trigger_once_in, trigger_once_in_default );
     optional( jo, false, "message", trigger_message );
     optional( jo, false, "npc_message", npc_trigger_message );
