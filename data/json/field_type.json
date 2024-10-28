@@ -302,7 +302,7 @@
     "valid_targets": [ "hostile", "ally", "self", "ground" ],
     "max_level": 10,
     "affected_body_parts": [ "foot_l", "foot_r" ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "LIQUID", "NON_MAGICAL", "LIQUID_DAMAGE_ARMOR" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "LIQUID", "NON_MAGICAL", "LIQUID_DAMAGE_ARMOR", "NO_BLOCK_MITIGATION", "NO_DODGE_MITIGATION" ],
     "min_damage": 6,
     "min_aoe": 1,
     "max_aoe": 1,

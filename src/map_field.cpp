@@ -1447,48 +1447,15 @@ void map::player_in_field( Character &you )
             continue;
         }
 
-        // Do things based on what field effect we are currently in.
-        const field_type_id &ft = cur.get_field_type();
-         if( ft == fd_acid ) {
+        // Do things based on what fields we are currently in.
+        const field_type_id ft = cur.get_field_type();
+
+        // Cast spells. Skip if we're in a vehicle, unless the field is a gas.
+        if ( ft->spell_data.id != spell_id::NULL_ID() && ( !you.in_vehicle && ft.obj().phase != phase_id::GAS ) ) {
              map &here = get_map();
              here.cast_field_spell( you.pos(), you, cur );
-            // Assume vehicles block acid damage entirely,
-            // you're certainly not standing in it.
-            // if( !you.in_vehicle && !you.has_trait( trait_ACIDPROOF ) ) {
-            //     int total_damage = 0;
-            //     total_damage += burn_body_part( you, cur, bodypart_id( "foot_l" ), 2 );
-            //     total_damage += burn_body_part( you, cur, bodypart_id( "foot_r" ), 2 );
-            //     const bool on_ground = you.is_on_ground();
-            //     if( on_ground ) {
-            //         // Apply the effect to the remaining body parts
-            //         total_damage += burn_body_part( you, cur, bodypart_id( "leg_l" ), 2 );
-            //         total_damage += burn_body_part( you, cur, bodypart_id( "leg_r" ), 2 );
-            //         total_damage += burn_body_part( you, cur, bodypart_id( "hand_l" ), 2 );
-            //         total_damage += burn_body_part( you, cur, bodypart_id( "hand_r" ), 2 );
-            //         total_damage += burn_body_part( you, cur, bodypart_id( "torso" ), 2 );
-            //         // Less arms = less ability to keep upright
-            //         if( ( !you.has_two_arms_lifting() && one_in( 4 ) ) || one_in( 2 ) ) {
-            //             total_damage += burn_body_part( you, cur, bodypart_id( "arm_l" ), 1 );
-            //             total_damage += burn_body_part( you, cur, bodypart_id( "arm_r" ), 1 );
-            //             total_damage += burn_body_part( you, cur, bodypart_id( "head" ), 1 );
-            //         }
-            //     }
+        }
 
-            //     if( on_ground && total_damage > 0 ) {
-            //         you.add_msg_player_or_npc( m_bad, _( "The acid burns your body!" ),
-            //                                    _( "The acid burns <npcname>'s body!" ) );
-            //     } else if( total_damage > 0 ) {
-            //         you.add_msg_player_or_npc( m_bad, _( "The acid burns your legs and feet!" ),
-            //                                    _( "The acid burns <npcname>'s legs and feet!" ) );
-            //     } else if( on_ground ) {
-            //         you.add_msg_if_player( m_warning, _( "You're lying in a pool of acid!" ) );
-            //     } else if( !you.is_immune_field( fd_acid ) ) {
-            //         you.add_msg_if_player( m_warning, _( "You're standing in a pool of acid!" ) );
-            //     }
-
-            //     you.check_dead_state();
-            // }
-         }
         if( ft == fd_sap ) {
             // Sap does nothing to cars.
             if( !you.in_vehicle ) {

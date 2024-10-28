@@ -322,12 +322,12 @@ bool Character::ablative_armor_absorb( damage_unit &du, item &armor, const sub_b
                 }
 
                 if( damaged == item::armor_status::TRANSFORMED ) {
-                    //the plate is broken
+                    // The plate is compromised
                     const std::string pre_damage_name = ablative_armor.tname();
 
                     // TODO: add balistic and shattering verbs for ablative materials instead of hard coded
                     std::string format_string = _( "Your %1$s %2$s!" );
-                    std::string damage_verb = "is shattered";
+                    std::string damage_verb = "is damaged!";
                     if( !ablative_armor.find_armor_data()->damage_verb.empty() ) {
                         damage_verb = ablative_armor.find_armor_data()->damage_verb.translated();
                     }
