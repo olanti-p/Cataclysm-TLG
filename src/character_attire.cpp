@@ -1919,7 +1919,6 @@ void outfit::absorb_damage( Character &guy, damage_unit &elem, bodypart_id bp,
             if( armor.is_ablative() ) {
                 guy.ablative_armor_absorb( elem, armor, sbp, roll );
             }
-
             // if not already destroyed to an armor absorb
             destroy = guy.armor_absorb( elem, armor, bp, sbp, roll );
             // for the torso we also need to consider if it hits anything hanging off the character or their neck
@@ -1954,27 +1953,27 @@ std::string outfit::get_liquid_descriptor( int liquid_remaining )
 {
     std::string liquid_descriptor;
     if( liquid_remaining <= 100 ) {
-        liquid_descriptor = _( "droplets of" );
+        liquid_descriptor = _( "Droplets of" );
     } else if( liquid_remaining <= 200 ) {
-        liquid_descriptor = _( "a glob of" );
+        liquid_descriptor = _( "A glob of" );
     } else if( liquid_remaining <= 300 ) {
-        liquid_descriptor = _( "a spurt of" );
+        liquid_descriptor = _( "A spurt of" );
     } else if( liquid_remaining <= 500 ) {
-        liquid_descriptor = _( "a splatter of" );
+        liquid_descriptor = _( "A splatter of" );
     } else if( liquid_remaining <= 750 ) {
-        liquid_descriptor = _( "a spray of" );
+        liquid_descriptor = _( "A spray of" );
     } else if( liquid_remaining <= 1000 ) {
-        liquid_descriptor = _( "quite a lot of" );
+        liquid_descriptor = _( "Quite a lot of" );
     } else if( liquid_remaining <= 1250 ) {
-        liquid_descriptor = _( "copious amounts of" );
+        liquid_descriptor = _( "Copious amounts of" );
     } else if( liquid_remaining <= 1500 ) {
-        liquid_descriptor = _( "a cascade of" );
+        liquid_descriptor = _( "A cascade of" );
     } else if( liquid_remaining <= 1750 ) {
-        liquid_descriptor = _( "a torrent of" );
+        liquid_descriptor = _( "A torrent of" );
     } else if( liquid_remaining <= 2000 ) {
-        liquid_descriptor = _( "a flood of" );
+        liquid_descriptor = _( "A flood of" );
     } else {
-        liquid_descriptor = _( "a deluge of" );
+        liquid_descriptor = _( "A deluge of" );
     }
     return liquid_descriptor;
 }
@@ -2014,18 +2013,20 @@ void outfit::splash_attack( Character &guy, const spell &sp, Creature &caster, b
         if( rng( 1, 100 ) <= armor.get_coverage( bp ) && liquid_remaining > 0 ) {
             // The item has intercepted the splash to protect its wearer,
             // now we roll to see if it's affected.
-            guy.add_msg_if_player( m_warning, _( "Your %1s get splashed with %2s %3s." ),
-                                   armor.tname(), get_liquid_descriptor( liquid_remaining ), liquid_name );
+            add_msg_if_player_sees( guy, m_warning, _( "%1s %2s gets on %3s %4s." ), get_liquid_descriptor( liquid_remaining ), liquid_name, guy.disp_name( true ),
+                                   armor.tname() );
             // A droplet of acid or bile are less likely to ruin a shirt than a whole bucket.
-            if( ( rng( 1, 200 - armor.breathability( bp ) ) ) * 10 < liquid_remaining ) {
+            // Breathability works against the item as it means the liquid is soaking in or getting through
+            // gaps or holes.
+            if( ( rng( 1, 2000 ) - ( armor.breathability( bp ) * 10 ) ) < liquid_remaining ) {
                 // Apply filth to the item. Currently hardcoded because we don't have other item
                 // flags that would make sense for this. It gets its own probability roll here
                 // because it can't use armor_absorb's.
                 if( sp.has_flag( spell_flag::MAKE_FILTHY ) && !armor.has_flag( flag_INTEGRATED ) &&
                     !armor.has_flag( flag_SEMITANGIBLE ) && !armor.has_flag( flag_PERSONAL ) &&
-                    !armor.has_flag( flag_AURA ) &&
-                    ( rng( 1, 200 - armor.breathability( bp ) ) * 10 ) < liquid_remaining ) {
-                    add_msg_if_player_sees( guy, m_warning, _( "%1s %2s is covered in filth!" ), guy.disp_name( true,
+                    !armor.has_flag( flag_AURA ) && (
+                    ( rng( 1, 2000 ) - ( armor.breathability( bp ) * 10 ) ) < liquid_remaining ) ) {
+                    add_msg_if_player_sees( guy, m_warning, _( "Filth covers %1s %2s!" ), guy.disp_name( true,
                                             true ),
                                             armor.tname() );
                     armor.set_flag( json_flag_FILTHY );
@@ -2089,24 +2090,18 @@ void outfit::splash_attack( Character &guy, const spell &sp, Creature &caster, b
     }
     if( liquid_remaining == liquid_amount ) {
         // You took the whole attack without any being blocked!
-        if( guy.is_avatar() ) {
-            guy.add_msg_if_player( m_warning, _( "You are splashed with %2s %3s!" ),
-                                   get_liquid_descriptor( liquid_remaining ), liquid_name );
-        } else {
-            add_msg_if_player_sees( guy, m_warning, _( "%1s is splashed with %2s %3s!" ), guy.disp_name(),
-                                    get_liquid_descriptor( liquid_remaining ), liquid_name );
-        }
+            add_msg_if_player_sees( guy, m_warning, _( "%1s %2s splashes onto %3s!" ), get_liquid_descriptor( liquid_remaining ), liquid_name, guy.disp_name() );
     }
     // If any containers were destroyed, dump the contents on the ground
     guy.drop_invalid_inventory();
     // Acid damages clothes directly, but should only harm players via the corroding effect
     // However, something like boiling water should just deal damage instantly. guy_damage == true if so.
     if( damage_target ) {
-        guy.deal_damage( nullptr, bp, damage_instance( damage.type, damage.amount ) );
+        guy.deal_damage( &caster, bp, damage_instance( damage.type, damage.amount ) );
     }
     if( sp.damage( caster ) < 0 ) {
         sp.heal( guy.pos(), caster );
-        add_msg_if_player_sees( guy.pos(), m_good, _( "%s wounds are closing up!" ),
+        add_msg_if_player_sees( guy, m_good, _( "%s wounds are closing up!" ),
                                 guy.disp_name( true ) );
     }
     // Acid uses the corroding effect, but damage_over_time exists so we may as well run it here.

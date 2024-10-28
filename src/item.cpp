@@ -8761,7 +8761,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                     float tmp_add = 0.f;
                     if( derived.has_value() && !m->id->has_dedicated_resist( dmg_type ) ) {
                         if( dmg_type->physical ) {
-                            if( total_coverage + m->cover <= 100 || !dmg_type->physical ) {
+                            if( total_coverage + m->cover <= 100 ) {
                                 total_coverage += m->cover;
                                 tmp_add = m->id->resist( derived->first );
                             } else { // The physical damage is only reduced by this material layer through gaps where it isn't covered by ones above
@@ -8969,10 +8969,12 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     const float armors_own_resist = resist( du.type, true, bp );
     if( armors_own_resist > 1000.0f ) {
         // This is some weird type that doesn't damage armors
+                        add_msg( _( "weird type that doesn't damage armor." ) );
         return armor_status::UNDAMAGED;
     }
     // Fragile items take damage if the block more than 15% of their armor value
     if( has_flag( flag_FRAGILE ) && du.amount / armors_own_resist > 0.15f ) {
+                        add_msg( _( "what does fragilay mean." ) );
         return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
     }
 
@@ -8982,6 +8984,7 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     int num_parts_covered = get_covered_body_parts().count();
     // Acid spreads out to cover the surface of the item, ignoring this mitigation.
     if( !one_in( num_parts_covered ) && !du.type->env ) {
+                        add_msg( _( "It's the weird acid spread mitigation thing?." ) );
         return armor_status::UNDAMAGED;
     }
 
@@ -8993,7 +8996,9 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     if( post_mitigated_dmg > armors_own_resist ) {
         // handle overflow, if you take a lot of damage your armor should be damaged
         if( damaged_chance >= 1 ) {
-            return armor_status::DAMAGED;
+                            add_msg( _( "Overflow damage." ) );
+            add_msg( _( "Forciing the damage mod in overflow." ) );
+            return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
         }
         if( one_in( 1 / ( 1 - damaged_chance ) ) ) {
             return armor_status::UNDAMAGED;
@@ -9005,7 +9010,7 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
             return armor_status::UNDAMAGED;
         }
     }
-
+                add_msg( _( "It says we're modding damage." ) );
     return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
 }
 

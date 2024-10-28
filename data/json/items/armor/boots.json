@@ -2385,7 +2385,7 @@
     "warmth": 5,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [ { "encumbrance": 2, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [ { "encumbrance": 2, "coverage": 100, "breathability": 50, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
     "id": "xlsocks",
