@@ -16,8 +16,10 @@
 #include "active_item_cache.h"
 #include "ammo.h"
 #include "ammo_effect.h"
+#include "anatomy.h"
 #include "avatar.h"
 #include "basecamp.h"
+#include "body_part_set.h"
 #include "bodypart.h"
 #include "cached_options.h"
 #include "calendar.h"
@@ -117,10 +119,12 @@ static const diseasetype_id disease_bad_food( "bad_food" );
 
 static const efftype_id effect_boomered( "boomered" );
 static const efftype_id effect_crushed( "crushed" );
+static const efftype_id effect_downed( "downed" );
 static const efftype_id effect_fake_common_cold( "fake_common_cold" );
 static const efftype_id effect_fake_flu( "fake_flu" );
 static const efftype_id effect_gliding( "gliding" );
 static const efftype_id effect_pet( "pet" );
+static const efftype_id effect_quadruped_full( "quadruped_full" );
 
 static const field_type_str_id field_fd_clairvoyant( "fd_clairvoyant" );
 
@@ -134,6 +138,9 @@ static const item_group_id Item_spawn_data_default_zombie_items( "default_zombie
 
 static const itype_id itype_battery( "battery" );
 static const itype_id itype_nail( "nail" );
+
+static const json_character_flag json_flag_FOOT( "LIMB_FOOT" );
+static const json_character_flag json_flag_HAND( "LIMB_HAND" );
 
 static const material_id material_glass( "glass" );
 
@@ -3500,6 +3507,57 @@ void map::decay_fields_and_scent( const time_duration &amount )
     }
 }
 
+bool map::cast_field_spell( const tripoint &p, Character &critter, field_entry &cur ) {
+    spell field_spell = cur.get_field_type()->spell_data.get_spell();
+    npc dummy;
+    field_spell.set_level( dummy, cur.get_field_intensity() );
+    if( cur.get_field_type()->phase == phase_id::LIQUID ) {
+        // We're dealing with a puddle on the ground, we've got a good shot of just stepping over it or something.
+        // Todo: Dex check to reduce parts_hit? Deft, etc?
+        int parts_hit = cur.get_field_intensity() + rng( -1, 1 );
+        // Our "hands" are on the ground as well as our feet. This might spread out the effects, but isn't strictly worse than standing.
+        if( critter.has_effect( effect_quadruped_full ) && ( critter.is_running() || critter.is_crouching() ) ) {
+            std::vector<bodypart_id> quadruped_parts = critter.get_all_body_parts_with_flag( json_flag_HAND );
+            std::vector<bodypart_id> foot_parts = critter.get_all_body_parts_with_flag( json_flag_FOOT );
+            quadruped_parts.insert( quadruped_parts.end(), foot_parts.begin(), foot_parts.end() );
+            std::vector<bodypart_id> splash_zone = critter.get_random_body_parts( quadruped_parts, parts_hit );
+            //splash_zone.insert( splash_zone.end(), hand_parts.begin(), hand_parts.end() );
+            for( const bodypart_id &bp : splash_zone ) {
+                bodypart_str_id bp_str_id = bp.id();
+                field_spell.get_spell_type()->affected_bps.set( bp_str_id );
+            }
+            foot_parts.clear();
+            quadruped_parts.clear();
+            splash_zone.clear();
+        // We are lying in a puddle of something. It can hit any BP and will hit more than if we were standing.
+        } else if( critter.is_prone() || critter.has_effect( effect_downed ) ) {
+            //std::vector<bodypart_id> splash_zone = critter.get_all_body_parts();
+            parts_hit += rng( 0, 2 );
+            std::vector<bodypart_id> splash_zone = critter.get_random_body_parts( critter.get_all_body_parts(), parts_hit );
+            for( const bodypart_id &bp : splash_zone ) {
+                bodypart_str_id bp_str_id = bp.id();
+                field_spell.get_spell_type()->affected_bps.set( bp_str_id );
+                }
+            splash_zone.clear();
+        // We are standing or crouching, so only our feet get hit unless it's unusually deep or we're very small.
+        } else {
+            parts_hit = 1; //DEBUG: REMOVE THIS
+            std::vector<bodypart_id> splash_zone = critter.get_random_body_parts( critter.get_all_body_parts_with_flag( json_flag_FOOT ), parts_hit );
+            ///std::vector<bodypart_id> splash_zone = critter.get_all_body_parts_with_flag( json_flag_FOOT );
+            for( const bodypart_id &bp : splash_zone ) {
+                bodypart_str_id bp_str_id = bp.id();
+                field_spell.get_spell_type()->affected_bps.set( bp_str_id );
+            }
+            splash_zone.clear();
+        }
+    }
+    field_spell.cast_all_effects( dummy, critter.pos() );
+    field_spell.make_sound( p, get_player_character() );
+    field_spell.get_spell_type()->affected_bps.clear();
+    return true;
+}
+
+
 point map::random_outdoor_tile() const
 {
     std::vector<point> options;
@@ -5319,13 +5377,6 @@ item map::water_from( const tripoint &p )
     weather_manager &weather = get_weather();
     if( has_flag( ter_furn_flag::TFLAG_SALT_WATER, p ) ) {
         item ret( "salt_water", calendar::turn, item::INFINITE_CHARGES );
-        ret.set_item_temperature( std::max( weather.get_temperature( p ),
-                                            temperatures::cold ) );
-        return ret;
-    }
-
-    if( has_flag( ter_furn_flag::TFLAG_CHOCOLATE, p ) ) {
-        item ret( "liquid_cacao", calendar::turn, item::INFINITE_CHARGES );
         ret.set_item_temperature( std::max( weather.get_temperature( p ),
                                             temperatures::cold ) );
         return ret;

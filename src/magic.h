@@ -47,49 +47,51 @@ class event;
 template <typename E> struct enum_traits;
 
 enum class spell_flag : int {
-    PERMANENT, // items or creatures spawned with this spell do not disappear and die as normal
-    PERMANENT_ALL_LEVELS, // items spawned with this spell do not disappear even if the spell is not max level
-    PERCENTAGE_DAMAGE, //the spell deals damage based on the targets current hp.
-    IGNORE_WALLS, // spell's aoe goes through walls
-    NO_PROJECTILE, // spell's original targeting area can be targeted through walls
-    SWAP_POS, // a projectile spell swaps the positions of the caster and target
-    HOSTILE_SUMMON, // summon spell always spawns a hostile monster
-    HOSTILE_50, // summoned monster spawns friendly 50% of the time
-    POLYMORPH_GROUP, // polymorph spell chooses a monster from a group
-    FRIENDLY_POLY, // polymorph spell makes the monster friendly
-    SILENT, // spell makes no noise at target
-    NO_EXPLOSION_SFX, // spell has no visual explosion
-    LIQUID, // this spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor
-    LIQUID_DAMAGE_ARMOR, // requires LIQUID. The liquid splashed by this spell can damage items worn by characters according to its liquid_volume amount, damage amount, and type
-    LIQUID_DAMAGE_TARGET, // requires LIQUID. Will damage target characters according to the liquid_volume amount that isn't blocked by their armor. Monsters are damaged normally
-    MAKE_FILTHY, // requires LIQUID. The liquid splashed by this spell can add the FILTHY flag to items worn by characters, accoridng to its liquid_volume and type
-    LOUD, // spell makes extra noise at target
-    VERBAL, // spell makes noise at caster location, mouth encumbrance affects fail %
-    SOMATIC, // arm encumbrance affects fail % and casting time (slightly)
-    NO_HANDS, // hands do not affect spell energy cost
-    UNSAFE_TELEPORT, // teleport spell risks killing the caster or others
-    TARGET_TELEPORT, // aoe is teleport variance from target
-    NO_LEGS, // legs do not affect casting time
-    CONCENTRATE, // focus affects spell fail %
-    RANDOM_AOE, // picks random number between min+increment*level and max instead of normal behavior
-    RANDOM_DAMAGE, // picks random number between min+increment*level and max instead of normal behavior
-    RANDOM_DURATION, // picks random number between min+increment*level and max instead of normal behavior
-    RANDOM_TARGET, // picks a random valid target within your range instead of normal behavior.
-    RANDOM_CRITTER, // same as RANDOM_TARGET but ignores ground
-    MUTATE_TRAIT, // overrides the mutate spell_effect to use a specific trait_id instead of a category
-    WONDER, // instead of casting each of the extra_spells, it picks N of them and casts them (where N is std::min( damage(), number_of_spells ))
-    EXTRA_EFFECTS_FIRST, // the extra effects are cast before the main spell.
-    PAIN_NORESIST, // pain altering spells can't be resisted (like with the deadened trait)
-    NO_FAIL, // this spell cannot fail when you cast it
-    SPAWN_GROUP, // spawn or summon from an item or monster group, instead of individual item/monster ID
-    IGNITE_FLAMMABLE, // if spell effect area has any thing flammable, a fire will be produced. LIQUID spells can ignite target characters' equipment
-    MUST_HAVE_CLASS_TO_LEARN, // you can't learn the spell unless you already have the class.
-    SPAWN_WITH_DEATH_DROPS, // allow summoned monsters to drop their usual death drops
-    NO_CORPSE_QUIET, // allow summoned monsters to vanish/leave without leaving a corpse
-    NON_MAGICAL, // ignores spell resistance
-    PSIONIC, // psychic powers instead of traditional magic
-    RECHARM, // charm_monster spell adds to duration of existing charm_monster effect
-    DODGEABLE, // the target can dodge this attack completely if they succeed on a dodge roll against its spell level.
+    PERMANENT, // Items or creatures spawned with this spell do not disappear and die as normal.
+    PERMANENT_ALL_LEVELS, // Items spawned with this spell do not disappear even if the spell is not max level.
+    PERCENTAGE_DAMAGE, // The spell deals damage based on the target's current HP.
+    IGNORE_WALLS, // Spell's aoe goes through walls.
+    NO_PROJECTILE, // Spell's original targeting area can be targeted through walls.
+    SWAP_POS, // A projectile spell swaps the positions of the caster and target.
+    HOSTILE_SUMMON, // Summon spell always spawns a hostile monster.
+    HOSTILE_50, // Summoned monster spawns friendly 50% of the time.
+    POLYMORPH_GROUP, // Polymorph spell chooses a monster from a group.
+    FRIENDLY_POLY, // Polymorph spell makes the monster friendly.
+    SILENT, // Spell makes no noise at target.
+    NO_EXPLOSION_SFX, // Spell has no visual explosion.
+    LIQUID, // This spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor.
+    LIQUID_DAMAGE_ARMOR, // Requires LIQUID. The liquid splashed by this spell can damage items worn by characters according to its liquid_volume amount, damage amount, and type.
+    LIQUID_DAMAGE_TARGET, // Requires LIQUID. Will damage target characters according to the liquid_volume amount that isn't blocked by their armor. Monsters are damaged normally.
+    MAKE_FILTHY, // Requires LIQUID. The liquid splashed by this spell can add the FILTHY flag to items worn by characters, according to its liquid_volume.
+    LOUD, // Spell makes extra noise at target.
+    VERBAL, // Spell makes noise at caster location, mouth encumbrance affects fail %.
+    SOMATIC, // Arm encumbrance affects fail % and casting time (slightly).
+    NO_HANDS, // Hands do not affect spell energy cost.
+    UNSAFE_TELEPORT, // Teleport spell risks killing the caster or others.
+    TARGET_TELEPORT, // Aoe is teleport variance from target.
+    NO_LEGS, // Legs do not affect casting time.
+    CONCENTRATE, // Focus affects spell fail %.
+    RANDOM_AOE, // Picks random number between min+increment*level and max instead of normal behavior.
+    RANDOM_DAMAGE, // Picks random number between min+increment*level and max instead of normal behavior.
+    RANDOM_DURATION, // Picks random number between min+increment*level and max instead of normal behavior.
+    RANDOM_TARGET, // Picks a random valid target within your range instead of normal behavior.
+    RANDOM_CRITTER, // Same as RANDOM_TARGET but ignores ground.
+    MUTATE_TRAIT, // Overrides the mutate spell_effect to use a specific trait_id instead of a category.
+    WONDER, // instead of casting each of the extra_spells, it picks N of them and casts them (where N is std::min( damage(), number_of_spells )).
+    EXTRA_EFFECTS_FIRST, // The extra effects are cast before the main spell.
+    PAIN_NORESIST, // Pain altering spells can't be resisted (like with the deadened trait).
+    NO_FAIL, // This spell cannot fail when you cast it.
+    SPAWN_GROUP, // Spawn or summon from an item or monster group, instead of individual item/monster ID.
+    IGNITE_FLAMMABLE, // If spell effect area has any thing flammable, a fire will be produced. LIQUID spells can ignite target characters' equipment.
+    MUST_HAVE_CLASS_TO_LEARN, // You can't learn the spell unless you already have the class.
+    SPAWN_WITH_DEATH_DROPS, // Allow summoned monsters to drop their usual death drops.
+    NO_CORPSE_QUIET, // Allow summoned monsters to vanish/leave without leaving a corpse.
+    NON_MAGICAL, // Ignores spell resistance, which disallows the usual 1/3 damage mitigation available there.
+    PSIONIC, // Psychic powers instead of traditional magic.
+    RECHARM, // Charm_monster spell adds to duration of existing charm_monster effect.
+    DODGEABLE, // The target can dodge this attack completely if they succeed on a dodge roll against its spell level. Implies NO_DODGE_MITIGATION.
+    NO_DODGE_MITIGATION, // This attack does not allow for the usual 1/3 damage mitigation via a dodge roll.
+    NO_BLOCK_MITIGATION, // This attack does not allow for the usual 1/3 damage mitigation via a block roll.
     LAST
 };
 
@@ -144,7 +146,7 @@ struct enum_traits<spell_flag> {
 };
 
 struct fake_spell {
-    spell_id id;
+    spell_id id = spell_id::NULL_ID();
 
     static const std::optional<int> max_level_default;
     // max level this spell can be
@@ -377,7 +379,7 @@ class spell_type
         std::set<species_id> ignored_species_ids;
 
         // list of bodyparts this spell applies its effect to
-        body_part_set affected_bps;
+        mutable body_part_set affected_bps;
 
         std::set<std::string> flags; // string flags
 

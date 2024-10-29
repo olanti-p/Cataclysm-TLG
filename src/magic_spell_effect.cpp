@@ -213,6 +213,9 @@ static bool in_spell_aoe( const tripoint &start, const tripoint &end, const int 
     if( ignore_walls ) {
         return true;
     }
+    if( start.x == end.x && start.y == end.y && start.z == end.z ) {
+        return true;
+    }
     map &here = get_map();
     const std::vector<tripoint> trajectory = line_to( start, end );
     for( const tripoint &pt : trajectory ) {
@@ -429,7 +432,6 @@ std::set<tripoint> calculate_spell_effect_area( const spell &sp, const tripoint 
 {
     // the actual target that the spell will hit.
     tripoint epicenter( target );
-
     // stop short if we hit a wall, if the spell has a projectile
     if( sp.shape() == spell_shape::blast && !sp.has_flag( spell_flag::NO_PROJECTILE ) ) {
         std::vector<tripoint> trajectory = line_to( caster.pos(), target );
@@ -446,12 +448,12 @@ std::set<tripoint> calculate_spell_effect_area( const spell &sp, const tripoint 
     }
 
     std::set<tripoint> targets = { epicenter }; // initialize with epicenter
-    if( sp.aoe( caster ) < 1 && sp.shape() != spell_shape::line ) {
+    // TODO: Why is this even here?
+    if( sp.aoe( caster ) < 1 && ( sp.shape() != spell_shape::line && sp.shape() != spell_shape::blast ) ) {
         return targets;
     }
 
     targets = sp.effect_area( caster.pos(), target, caster );
-
     for( std::set<tripoint>::iterator it = targets.begin(); it != targets.end(); ) {
         if( !sp.is_valid_target( caster, *it ) ) {
             it = targets.erase( it );
@@ -586,17 +588,23 @@ static void damage_targets( const spell &sp, Creature &caster,
             add_effect_to_target( target, sp, caster );
         }
         if( sp.damage( caster ) > 0 || ( liquid && !cr->is_monster() ) ) {
+            bool no_dodge_mitigation = sp.has_flag( spell_flag::NO_DODGE_MITIGATION );
+            bool no_block_mitigation = sp.has_flag( spell_flag::NO_BLOCK_MITIGATION );
             // calculate damage mitigation from various sources
             // 5% per point (linear) ranging from 0-33%, capped at block score
-            // skip if the attack was dodgeable as you'd have evaded it already
+            // skip if the attack was dodgeable as we'd have evaded it already
             double damage_mitigation_multiplier = 1.0;
-            if( const int spell_block = cr->get_block_bonus() - spell_accuracy > 0 &&
+            
+            if( !no_block_mitigation ) {
+                const int spell_block = cr->get_block_bonus();
+                if( spell_block - spell_accuracy > 0 &&
                                         !dodgeable ) {
-                const int roll = std::round( rng( 1, 20 ) );
-                damage_mitigation_multiplier -= ( 1 - 0.05 * std::max( roll, spell_block ) ) / 3.0;
+                    const int roll = std::round( rng( 1, 20 ) );
+                    damage_mitigation_multiplier -= ( 1 - 0.05 * std::max( roll, spell_block ) ) / 3.0;
+                }
             }
 
-            if( !dodgeable && cr->dodge_check( spell_accuracy ) ) {
+            if( !no_dodge_mitigation && !dodgeable && cr->dodge_check( spell_accuracy ) ) {
                 const int spell_dodge = cr->get_dodge() - spell_accuracy;
                 const int roll = std::round( rng( 1, 20 ) );
                 damage_mitigation_multiplier -= ( 1 - 0.05 * std::max( roll, spell_dodge ) ) / 3.0;
