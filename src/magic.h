@@ -146,7 +146,7 @@ struct enum_traits<spell_flag> {
 };
 
 struct fake_spell {
-    spell_id id;
+    spell_id id = spell_id::NULL_ID();
 
     static const std::optional<int> max_level_default;
     // max level this spell can be
