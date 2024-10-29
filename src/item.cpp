@@ -3760,9 +3760,9 @@ bool item::armor_full_protection_info( std::vector<iteminfo> &info,
 static void armor_protect_dmg_info( int dmg, std::vector<iteminfo> &info )
 {
     if( dmg > 0 ) {
-        info.emplace_back( "ARMOR", _( "Protection values are <bad>reduced by damage</bad> and "
-                                       "you may be able to <info>improve them by repairing this "
-                                       "item</info>." ) );
+        info.emplace_back( "ARMOR", _( "Protection and coverage are <bad>reduced by damage</bad> "
+                                       "and you may be able to <info>improve them by repairing "
+                                       "this item</info>." ) );
     }
 }
 
@@ -3909,7 +3909,7 @@ void item::armor_protection_info( std::vector<iteminfo> &info, const iteminfo_qu
                                resist( damage_acid, false, sbp ) );
             info.emplace_back( bp_cat, space + _( "Fire: " ), "",
                                iteminfo::no_newline | iteminfo::is_decimal,
-                               resist( damage_heat, false, sbp, get_base_env_resist_w_filter() ) );
+                               resist( damage_heat, false, sbp ) );
             info.emplace_back( bp_cat, space + _( "Environmental: " ),
                                get_env_resist( get_base_env_resist_w_filter() ) );
         }
@@ -3988,9 +3988,9 @@ void item::pet_armor_protection_info( std::vector<iteminfo> &info,
 
         if( damage() > 0 ) {
             info.emplace_back( "ARMOR",
-                               _( "Protection values are <bad>reduced by damage</bad> and "
-                                  "you may be able to <info>improve them by repairing this "
-                                  "item</info>." ) );
+                               _( "Protection and coverage are <bad>reduced by damage</bad> "
+                                  "and you may be able to <info>improve them by repairing "
+                                  "this item</info>." ) );
         }
     }
 }
@@ -4134,7 +4134,7 @@ void item::armor_info( std::vector<iteminfo> &info, const iteminfo_query *parts,
         for( const bodypart_str_id &bp : get_covered_body_parts() ) {
             const armor_portion_data *portion = portion_for_bodypart( bp );
             if( portion ) {
-                limb_groups[portion->coverage].emplace_back( bp );
+                limb_groups[ get_coverage( bp )].emplace_back( bp );
             }
         }
         // keep on one line if only 1 entry
@@ -8290,6 +8290,10 @@ item::cover_type item::get_cover_type( const damage_type_id &type )
 int item::get_avg_coverage( const cover_type &type ) const
 {
     const islot_armor *t = find_armor_data();
+
+    float damage_factor = get_relative_health();
+    //float damage_factor = std::min( 1.0f, ( get_relative_health() + 0.17f ) );
+    int adjusted_coverage = 0;
     if( !t ) {
         return 0;
     }
@@ -8310,42 +8314,67 @@ int item::get_avg_coverage( const cover_type &type ) const
         return 0;
     } else {
         avg_coverage /= avg_ctr;
-        return avg_coverage;
+        adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * avg_coverage );
+        return adjusted_coverage;
     }
 }
 
 int item::get_coverage( const bodypart_id &bodypart, const cover_type &type ) const
 {
+    int adjusted_coverage = 0;
     if( const armor_portion_data *portion_data = portion_for_bodypart( bodypart ) ) {
+        float damage_factor = 0;
+        if( get_relative_health() > .7 ) {
+            damage_factor = 1.0;
+        } else {
+            damage_factor = std::min( 1.0f, ( get_relative_health() + 0.10f ) );
+        }
         switch( type ) {
+            // Coverage does not degrade on the first tick of durability loss, only afterwards.
             case cover_type::COVER_DEFAULT:
-                return portion_data->coverage;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->coverage );
+                break;
             case cover_type::COVER_MELEE:
-                return portion_data->cover_melee;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2) * portion_data->cover_melee );
+                break;
             case cover_type::COVER_RANGED:
-                return portion_data->cover_ranged;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_ranged );
+                break;
             case cover_type::COVER_VITALS:
-                return portion_data->cover_vitals;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_vitals );
+                break;
         }
     }
-    return 0;
+    return adjusted_coverage;
 }
 
 int item::get_coverage( const sub_bodypart_id &bodypart, const cover_type &type ) const
 {
+    int adjusted_coverage = 0;
     if( const armor_portion_data *portion_data = portion_for_bodypart( bodypart ) ) {
+        float damage_factor = 0;
+        if( get_relative_health() > .7 ) {
+            damage_factor = 1.0;
+        } else {
+            damage_factor = std::min( 1.0f, ( get_relative_health() + 0.10f ) );
+        }
         switch( type ) {
+            // Coverage does not degrade on the first tick of durability loss, only afterwards.
             case cover_type::COVER_DEFAULT:
-                return portion_data->coverage;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->coverage );
+                break;
             case cover_type::COVER_MELEE:
-                return portion_data->cover_melee;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_melee );
+                break;
             case cover_type::COVER_RANGED:
-                return portion_data->cover_ranged;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_ranged );
+                break;
             case cover_type::COVER_VITALS:
-                return portion_data->cover_vitals;
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_vitals );
+                break;
         }
     }
-    return 0;
+    return adjusted_coverage;
 }
 
 bool item::has_sublocations() const
@@ -8734,7 +8763,6 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
         // Fire does damage to items elsewhere. Cold, etc. do not deal damage to items as they're non-physical.
         return std::numeric_limits<float>::max();
     }
-
     std::optional<std::pair<damage_type_id, float>> derived;
     if( !dmg_type->derived_from.first.is_null() ) {
         derived = dmg_type->derived_from;
@@ -8747,7 +8775,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
         // If we have armour portion materials for this body part, use them.
         int total_coverage = 0;
         if( !armor_mats.empty() ) {
-            // Physical enviro attacks (ie acid) try to damage the surface layers of armor and do not respect
+            // Physical enviro attacks (ie acid) attack the surface layers of armor and do not respect
             // thickness - when it comes to chemicals, a material burns, or it does not. Nonphysical attacks
             // don't respect thickness, but average the protection of all layers, surface or no. Acid rolls
             // for portion total (and thus can bypass layers that dont fully cover), other stuff doesn't.
@@ -8759,6 +8787,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                 resist_value < 0 ? internal_roll = rng( 0, 99 ) : internal_roll = resist_value;
                 if( internal_roll < m->cover || !dmg_type->physical ) {
                     float tmp_add = 0.f;
+                    // First we check if the material has a resistance score to our damage type. If not, run this.
                     if( derived.has_value() && !m->id->has_dedicated_resist( dmg_type ) ) {
                         if( dmg_type->physical ) {
                             if( total_coverage + m->cover <= 100 ) {
@@ -8771,6 +8800,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                         } else { // The damage is nonphysical
                             tmp_add = m->id->resist( derived->first ) * m->cover * 0.01f * derived->second;
                         }
+                    // If the material DOES have dedicated resistances to our damage type, run this.
                     } else {
                         if( dmg_type->physical ) {
                             if( total_coverage + m->cover <= 100 ) {
@@ -8797,6 +8827,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                 resist /= total;
             }
         }
+        // The end result of all these checks is averaged to give us the item's final overall armor value.
         return resist + mod;
     }
 
@@ -8969,12 +9000,10 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     const float armors_own_resist = resist( du.type, true, bp );
     if( armors_own_resist > 1000.0f ) {
         // This is some weird type that doesn't damage armors
-                        add_msg( _( "weird type that doesn't damage armor." ) );
         return armor_status::UNDAMAGED;
     }
     // Fragile items take damage if the block more than 15% of their armor value
     if( has_flag( flag_FRAGILE ) && du.amount / armors_own_resist > 0.15f ) {
-                        add_msg( _( "what does fragilay mean." ) );
         return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
     }
 
@@ -8984,7 +9013,6 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     int num_parts_covered = get_covered_body_parts().count();
     // Acid spreads out to cover the surface of the item, ignoring this mitigation.
     if( !one_in( num_parts_covered ) && !du.type->env ) {
-                        add_msg( _( "It's the weird acid spread mitigation thing?." ) );
         return armor_status::UNDAMAGED;
     }
 
@@ -8992,16 +9020,15 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     // Most armor piercing damage comes from bypassing armor, not forcing through
     const float post_mitigated_dmg = du.amount;
     // more gradual damage chance calc
-    const float damaged_chance = 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1;
+    float damaged_chance = 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1;
     if( post_mitigated_dmg > armors_own_resist ) {
         // handle overflow, if you take a lot of damage your armor should be damaged
-        if( damaged_chance >= 1 ) {
-                            add_msg( _( "Overflow damage." ) );
-            add_msg( _( "Forciing the damage mod in overflow." ) );
+        if( damaged_chance >= 1.0 ) {
             return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
         }
-        if( one_in( 1 / ( 1 - damaged_chance ) ) ) {
-            return armor_status::UNDAMAGED;
+        float roll_damaged_chance = 1.0 / ( 1.0 - damaged_chance );
+        if( one_in( roll_damaged_chance ) ) {
+            return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
         }
     } else {
         // Sturdy items and power armors never take chip damage.
@@ -9010,7 +9037,6 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
             return armor_status::UNDAMAGED;
         }
     }
-                add_msg( _( "It says we're modding damage." ) );
     return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
 }
 
@@ -13107,10 +13133,10 @@ bool item::process_corpse( map &here, Character *carrier, const tripoint &pos )
         } else {
             if( corpse->in_species( species_ROBOT ) ) {
                 carrier->add_msg_if_player( m_warning,
-                                            _( "Oh dear god, a robot you're carrying has started moving!" ) );
+                                            _( "A robot you're carrying has started moving!" ) );
             } else {
                 carrier->add_msg_if_player( m_warning,
-                                            _( "Oh dear god, a corpse you're carrying has started moving!" ) );
+                                            _( "A corpse you're carrying has started moving!" ) );
             }
         }
         // Destroy this corpse item
