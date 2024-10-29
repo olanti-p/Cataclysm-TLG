@@ -1288,7 +1288,7 @@ class item : public visitable
                        const std::vector<const part_material *> &armor_mats = {},
                        float avg_thickness = 1.0f ) const;
         /**
-         * Handles the special rules regarding environmental type damage, such as acid and heat.
+         * Handles the special rules regarding environmental type resistance, such as acid and heat.
          * Currently only damages items if the damage is both environmental and physical, such as acid.
          * Fire damages items elsewhere, and cold/bio/electric can't harm items.
          * @param dmg_type The type of incoming damage
