@@ -3515,20 +3515,33 @@ bool map::cast_field_spell( const tripoint &p, Character &you, field_entry &cur 
     if( cur.get_field_type()->phase == phase_id::LIQUID ) {
         // We're dealing with a puddle on the ground, we've got a good shot of just stepping over it or something.
         // Todo: Dex check to reduce parts_hit? Deft, etc?
-        int parts_hit = cur.get_field_intensity() + rng( -1, 1 );
+        int parts_hit = cur.get_field_intensity() + rng( -1, 0 );
         // Our "hands" are on the ground as well as our feet. This might spread out the effects, but isn't strictly worse than standing.
         if( you.has_effect( effect_quadruped_full ) && ( you.is_running() || you.is_crouching() ) ) {
-            std::vector<bodypart_id> quadruped_parts = you.get_all_body_parts_with_flag( json_flag_HAND );
-            std::vector<bodypart_id> foot_parts = you.get_all_body_parts_with_flag( json_flag_FOOT );
-            quadruped_parts.insert( quadruped_parts.end(), foot_parts.begin(), foot_parts.end() );
-            std::vector<bodypart_id> splash_zone = you.get_random_body_parts( quadruped_parts, parts_hit );
-            for( const bodypart_id &bp : splash_zone ) {
-                bodypart_str_id bp_str_id = bp.id();
-                field_spell.get_spell_type()->affected_bps.set( bp_str_id );
+            // Small and tiny characters risk their arms and legs as well.
+            if ( you.get_size() == creature_size::small || you.get_size() == creature_size::tiny ) {
+                std::vector<bodypart_id> quadruped_parts = you.get_all_body_parts_with_flag( json_flag_HAND );
+                std::vector<bodypart_id> foot_parts = you.get_all_body_parts_with_flag( json_flag_LIMB_LOWER );
+                quadruped_parts.insert( quadruped_parts.end(), foot_parts.begin(), foot_parts.end() );
+                quadruped_parts.push_back( bodypart_id( "arm_l" ) );
+                quadruped_parts.push_back( bodypart_id( "arm_r" ) );
+                int extra_parts_hit = ( you.get_size() == creature_size::small ) ? 0 : 1;
+                parts_hit += rng( 0, extra_parts_hit );
+                std::vector<bodypart_id> splash_zone = you.get_random_body_parts( quadruped_parts, parts_hit );
+                for( const bodypart_id &bp : splash_zone ) {
+                    bodypart_str_id bp_str_id = bp.id();
+                    field_spell.get_spell_type()->affected_bps.set( bp_str_id );
+                }
+            } else {
+                std::vector<bodypart_id> quadruped_parts = you.get_all_body_parts_with_flag( json_flag_HAND );
+                std::vector<bodypart_id> foot_parts = you.get_all_body_parts_with_flag( json_flag_FOOT );
+                quadruped_parts.insert( quadruped_parts.end(), foot_parts.begin(), foot_parts.end() );
+                std::vector<bodypart_id> splash_zone = you.get_random_body_parts( quadruped_parts, parts_hit );
+                for( const bodypart_id &bp : splash_zone ) {
+                    bodypart_str_id bp_str_id = bp.id();
+                    field_spell.get_spell_type()->affected_bps.set( bp_str_id );
+                }
             }
-            foot_parts.clear();
-            quadruped_parts.clear();
-            splash_zone.clear();
         // We are lying in a puddle of something. It can hit any BP and will hit more than if we were standing.
         } else if( you.is_prone() || you.has_effect( effect_downed ) ) {
             parts_hit += rng( 0, 2 );
@@ -3536,23 +3549,30 @@ bool map::cast_field_spell( const tripoint &p, Character &you, field_entry &cur 
             for( const bodypart_id &bp : splash_zone ) {
                 bodypart_str_id bp_str_id = bp.id();
                 field_spell.get_spell_type()->affected_bps.set( bp_str_id );
-                }
-            splash_zone.clear();
+            }
         // We are standing or crouching, so only our feet get hit unless we're very small.
         } else {
-            std::vector<bodypart_id> foot_parts = you.get_all_body_parts_with_flag( json_flag_FOOT );
             // Puddles seem much deeper when you're fun sized.
             if ( you.get_size() == creature_size::small || you.get_size() == creature_size::tiny ) {
-                std::vector<bodypart_id> leg_parts = you.get_all_body_parts_with_flag( json_flag_LIMB_LOWER );
-                foot_parts.insert( foot_parts.end(), leg_parts.begin(), leg_parts.end() );
+                std::vector<bodypart_id> foot_parts = you.get_all_body_parts_with_flag( json_flag_LIMB_LOWER);
                 int extra_parts_hit = ( you.get_size() == creature_size::small ) ? 1 : 2;
                 parts_hit += rng( 0, extra_parts_hit );
-            }
-            std::vector<bodypart_id> splash_zone = you.get_random_body_parts( foot_parts, parts_hit );
-            for ( const bodypart_id &bp : splash_zone ) {
-               field_spell.get_spell_type()->affected_bps.set( bp.id() );
+                std::vector<bodypart_id> splash_zone = you.get_random_body_parts( foot_parts, parts_hit );
+                for ( const bodypart_id &bp : splash_zone ) {
+                    field_spell.get_spell_type()->affected_bps.set( bp.id() );
+                }
+            } else {
+                std::vector<bodypart_id> foot_parts = you.get_all_body_parts_with_flag( json_flag_FOOT );
+                std::vector<bodypart_id> splash_zone = you.get_random_body_parts( foot_parts, parts_hit );
+                for ( const bodypart_id &bp : splash_zone ) {
+                   field_spell.get_spell_type()->affected_bps.set( bp.id() );
+                }
             }
         }
+    }
+    // We avoided stepping in anything.
+    if( field_spell.get_spell_type()->affected_bps.count() <= 0 ) {
+        return false;
     }
     field_spell.cast_all_effects( dummy, you.pos() );
     field_spell.make_sound( p, get_player_character() );
