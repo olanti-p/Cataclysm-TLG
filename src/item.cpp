@@ -8291,9 +8291,6 @@ int item::get_avg_coverage( const cover_type &type ) const
 {
     const islot_armor *t = find_armor_data();
 
-    float damage_factor = get_relative_health();
-    //float damage_factor = std::min( 1.0f, ( get_relative_health() + 0.17f ) );
-    int adjusted_coverage = 0;
     if( !t ) {
         return 0;
     }
@@ -8314,8 +8311,7 @@ int item::get_avg_coverage( const cover_type &type ) const
         return 0;
     } else {
         avg_coverage /= avg_ctr;
-        adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * avg_coverage );
-        return adjusted_coverage;
+        return avg_coverage;
     }
 }
 
@@ -8325,7 +8321,6 @@ int item::get_coverage( const bodypart_id &bodypart, const cover_type &type ) co
     if( const armor_portion_data *portion_data = portion_for_bodypart( bodypart ) ) {
         float damage_factor = std::min( 1.0f, ( get_relative_health() + 0.2f ) );
         switch( type ) {
-            // Coverage does not degrade on the first tick of durability loss, only afterwards.
             case cover_type::COVER_DEFAULT:
                 adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->coverage );
                 break;
@@ -8349,7 +8344,6 @@ int item::get_coverage( const sub_bodypart_id &bodypart, const cover_type &type 
     if( const armor_portion_data *portion_data = portion_for_bodypart( bodypart ) ) {
         float damage_factor = std::min( 1.0f, ( get_relative_health() + 0.2f ) );
         switch( type ) {
-            // Coverage does not degrade on the first tick of durability loss, only afterwards.
             case cover_type::COVER_DEFAULT:
                 adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->coverage );
                 break;
