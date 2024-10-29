@@ -3514,7 +3514,7 @@ bool map::cast_field_spell( const tripoint &p, Character &critter, field_entry &
     if( cur.get_field_type()->phase == phase_id::LIQUID ) {
         // We're dealing with a puddle on the ground, we've got a good shot of just stepping over it or something.
         // Todo: Dex check to reduce parts_hit? Deft, etc?
-        int parts_hit = cur.get_field_intensity();
+        int parts_hit = cur.get_field_intensity() + rng( -1, 1 );
         // Our "hands" are on the ground as well as our feet. This might spread out the effects, but isn't strictly worse than standing.
         if( critter.has_effect( effect_quadruped_full ) && ( critter.is_running() || critter.is_crouching() ) ) {
             std::vector<bodypart_id> quadruped_parts = critter.get_all_body_parts_with_flag( json_flag_HAND );
@@ -3541,6 +3541,7 @@ bool map::cast_field_spell( const tripoint &p, Character &critter, field_entry &
             splash_zone.clear();
         // We are standing or crouching, so only our feet get hit unless it's unusually deep or we're very small.
         } else {
+            parts_hit = 1; //DEBUG: REMOVE THIS
             std::vector<bodypart_id> splash_zone = critter.get_random_body_parts( critter.get_all_body_parts_with_flag( json_flag_FOOT ), parts_hit );
             ///std::vector<bodypart_id> splash_zone = critter.get_all_body_parts_with_flag( json_flag_FOOT );
             for( const bodypart_id &bp : splash_zone ) {
