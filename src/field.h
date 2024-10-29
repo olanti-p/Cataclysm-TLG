@@ -58,7 +58,7 @@ class field_entry
         time_duration mod_field_age( const time_duration &mod_age ) {
             return set_field_age( get_field_age() + mod_age );
         }
-
+        fake_spell spell_data;
         bool is_dangerous() const;
         bool is_mopsafe() const;
 

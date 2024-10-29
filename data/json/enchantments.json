@@ -127,8 +127,7 @@
         { "not": "u_can_drop_weapon" }
       ]
     },
-    "values": [ { "value": "MOVE_COST", "multiply": -0.15 }, { "value": "CARRY_WEIGHT", "multiply": 0.35 } ],
-    "ench_effects": [ { "effect": "natural_stance", "intensity": 1 } ]
+    "values": [ { "value": "MOVE_COST", "multiply": -0.15 }, { "value": "CARRY_WEIGHT", "multiply": 0.35 } ]
   },
   {
     "id": "ench_quadruped_movement_half",

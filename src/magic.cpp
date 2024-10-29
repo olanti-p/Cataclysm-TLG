@@ -158,6 +158,8 @@ std::string enum_to_string<spell_flag>( spell_flag data )
         case spell_flag::PSIONIC: return "PSIONIC";
         case spell_flag::RECHARM: return "RECHARM";
         case spell_flag::DODGEABLE: return "DODGEABLE";
+        case spell_flag::NO_DODGE_MITIGATION: return "NO_DODGE_MITIGATION";
+        case spell_flag::NO_BLOCK_MITIGATION: return "NO_BLOCK_MITIGATION";
         case spell_flag::LIQUID_DAMAGE_ARMOR: return "LIQUID_DAMAGE_ARMOR";
         case spell_flag::LIQUID_DAMAGE_TARGET: return "LIQUID_DAMAGE_TARGET";
         case spell_flag::MAKE_FILTHY: return "MAKE_FILTHY";
@@ -3112,7 +3114,6 @@ void fake_spell::load( const JsonObject &jo )
 {
     mandatory( jo, false, "id", id );
     optional( jo, false, "hit_self", self, self_default );
-
     optional( jo, false, "once_in", trigger_once_in, trigger_once_in_default );
     optional( jo, false, "message", trigger_message );
     optional( jo, false, "npc_message", npc_trigger_message );

@@ -3759,6 +3759,7 @@
       "hurt_chance": [ 1 ],
       "hurt_max": [ 2 ],
       "pain_min": [ 1 ],
+      "pain_max_val": [ 20 ],
       "pain_chance": [ 1 ],
       "pain_chance_bot": [ 2, 8 ],
       "health_chance": [ 1 ],
@@ -3766,7 +3767,7 @@
       "hurt_chance_bot": [ 2, 8 ],
       "health_chance_bot": [ 900, 3600 ]
     },
-    "scaling_mods": { "hurt_amount": [ 0.3 ], "health_chance": [ 1 ] },
+    "scaling_mods": { "hurt_amount": [ 0.3 ], "health_chance": [ 1 ], "pain_max_val": [ 5 ] },
     "show_in_info": true,
     "flags": [ "ACID_AFFLICTED" ]
   },

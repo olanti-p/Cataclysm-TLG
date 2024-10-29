@@ -818,6 +818,9 @@ class Creature : public viewer
 
         /* Returns the number of broken bodyparts of a given type */
         int get_num_broken_body_parts_of_type( body_part_type::type part_type ) const;
+        
+        /* Gets a vector full of bodypart_ids */
+        std::vector<bodypart_id> get_random_body_parts( const std::vector<bodypart_id>& bp_list, size_t amount );
 
         const std::map<bodypart_str_id, bodypart> &get_body() const;
         void set_body();
