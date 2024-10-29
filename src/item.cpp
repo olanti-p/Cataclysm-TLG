@@ -8323,12 +8323,7 @@ int item::get_coverage( const bodypart_id &bodypart, const cover_type &type ) co
 {
     int adjusted_coverage = 0;
     if( const armor_portion_data *portion_data = portion_for_bodypart( bodypart ) ) {
-        float damage_factor = 0;
-        if( get_relative_health() > .7 ) {
-            damage_factor = 1.0;
-        } else {
-            damage_factor = std::min( 1.0f, ( get_relative_health() + 0.10f ) );
-        }
+        float damage_factor = std::min( 1.0f, ( get_relative_health() + 0.2f ) );
         switch( type ) {
             // Coverage does not degrade on the first tick of durability loss, only afterwards.
             case cover_type::COVER_DEFAULT:
@@ -8352,12 +8347,7 @@ int item::get_coverage( const sub_bodypart_id &bodypart, const cover_type &type 
 {
     int adjusted_coverage = 0;
     if( const armor_portion_data *portion_data = portion_for_bodypart( bodypart ) ) {
-        float damage_factor = 0;
-        if( get_relative_health() > .7 ) {
-            damage_factor = 1.0;
-        } else {
-            damage_factor = std::min( 1.0f, ( get_relative_health() + 0.10f ) );
-        }
+        float damage_factor = std::min( 1.0f, ( get_relative_health() + 0.2f ) );
         switch( type ) {
             // Coverage does not degrade on the first tick of durability loss, only afterwards.
             case cover_type::COVER_DEFAULT:
