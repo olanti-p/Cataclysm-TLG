@@ -1775,10 +1775,7 @@ void map::monster_in_field( monster &z )
         // Digging monsters are immune to fields
         return;
     }
-    if( veh_at( z.pos() ) ) {
-        // FIXME: Immune when in a vehicle for now.
-        return;
-    }
+
     field &curfield = get_field( z.pos() );
 
     int dam = 0;
@@ -1791,13 +1788,12 @@ void map::monster_in_field( monster &z )
             continue;
         }
         const field_type_id cur_field_type = cur.get_field_type();
-        if( cur_field_type == fd_acid ) {
-            if( !z.flies() ) {
-                const int d = rng( cur.get_field_intensity(), cur.get_field_intensity() * 3 );
-                z.deal_damage( nullptr, bodypart_id( "torso" ), damage_instance( damage_acid, d ) );
-                z.check_dead_state();
-            }
-
+        if( ( z.flies() || veh_at( z.pos() ) ) && cur.get_field_type()->phase == phase_id::LIQUID ) {
+            continue;
+        }
+        if ( cur_field_type->spell_data.id != spell_id::NULL_ID() ) {
+             map &here = get_map();
+             here.cast_field_spell_on_monster( z.pos(), z, cur );
         }
         if( cur_field_type == fd_sap ) {
             z.moves -= cur.get_field_intensity() * 5;
