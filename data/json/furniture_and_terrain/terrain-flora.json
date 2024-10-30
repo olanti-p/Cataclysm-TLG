@@ -1480,7 +1480,7 @@
     "examine_action": "tree_maple_tapped",
     "move_cost": 0,
     "coverage": 80,
-    "flags": [ "FLAMMABLE_ASH", "SEALED", "PLACE_ITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "LIQUIDCONT",  "CLIMB_ADJACENT" ],
+    "flags": [ "FLAMMABLE_ASH", "SEALED", "PLACE_ITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "LIQUIDCONT", "CLIMB_ADJACENT" ],
     "bash": {
       "str_min": 80,
       "str_max": 180,
