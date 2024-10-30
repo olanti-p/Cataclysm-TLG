@@ -36,8 +36,7 @@
       { "trait": "QUICK" },
       { "trait": "FASTHEALER" },
       { "trait": "OPTIMISTIC" },
-      { "trait": "FELINE_EARS" },
-      { "trait": "MAKAYLA_MUTATOR" }
+      { "trait": "FELINE_EARS" }
     ],
     "bonus_dex": { "rng": [ 2, 2 ] },
     "bonus_int": { "rng": [ 1, 1 ] },
