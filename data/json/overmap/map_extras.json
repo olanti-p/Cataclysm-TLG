@@ -108,18 +108,6 @@
     "flags": [ "MAN_MADE" ]
   },
   {
-    "id": "mx_supplydrop",
-    "type": "map_extra",
-    "name": { "str": "Supply Drop" },
-    "description": "Several supply crates were dropped here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_airdrop" },
-    "min_max_zlevel": [ 0, 0 ],
-    "sym": "C",
-    "color": "yellow",
-    "autonote": true,
-    "flags": [ "MAN_MADE" ]
-  },
-  {
     "id": "mx_military",
     "type": "map_extra",
     "name": { "str": "Military", "ctxt": "Map Extra" },

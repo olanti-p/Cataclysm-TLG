@@ -583,7 +583,10 @@
               "t_tree": 40,
               "t_tree_young": 80,
               "t_tree_pine": 40,
-              "t_tree_birch": 20,
+              "t_tree_hemlock": 10,
+              "t_tree_sweet_birch": 20,
+              "t_tree_magnolia": 8,
+              "t_tree_birch": 10,
               "t_tree_elm": 20,
               "t_tree_cottonwood": 20,
               "t_tree_alder": 80,
@@ -605,7 +608,7 @@
               "t_tree_elderberry": 2,
               "t_tree_mulberry": 2,
               "t_tree_sassafras": 3,
-              "t_region_tree_dead": 90
+              "t_region_tree_dead": 120
             }
           },
           "shrubs_and_flowers": {
@@ -646,8 +649,8 @@
       "forest": {
         "chance": 40,
         "extras": {
-          "mx_blackberry_patch": 1000,
-          "mx_point_dead_vegetation": 500,
+          "mx_blackberry_patch": 500,
+          "mx_point_dead_vegetation": 1000,
           "mx_point_burned_ground": 500,
           "mx_grove": 500,
           "mx_shrubbery": 500,
@@ -680,10 +683,10 @@
       "forest_thick": {
         "chance": 30,
         "extras": {
-          "mx_blackberry_patch": 1300,
+          "mx_blackberry_patch": 1100,
           "mx_grove": 500,
           "mx_shrubbery": 500,
-          "mx_point_dead_vegetation": 500,
+          "mx_point_dead_vegetation": 800,
           "mx_point_burned_ground": 500,
           "mx_spider": 200,
           "mx_clearcut": 125,
@@ -746,7 +749,7 @@
           "mx_grass2": 3500,
           "mx_trees2": 800,
           "mx_point_burned_ground": 500,
-          "mx_point_dead_vegetation": 500,
+          "mx_point_dead_vegetation": 1000,
           "mx_trees": 500,
           "mx_knotweed_patch": 250,
           "mx_fallen_shed": 200,
@@ -757,7 +760,6 @@
           "mx_nest_wasp": 50,
           "mx_mass_grave": 50,
           "mx_grave": 50,
-          "mx_supplydrop": 4,
           "mx_Trapdoor_spider_den": 40,
           "mx_collegekids": 30,
           "mx_drugdeal": 30,
@@ -781,7 +783,6 @@
           "mx_roadblock_mil": 170,
           "mx_bandits_block": 800,
           "mx_drugdeal": 300,
-          "mx_supplydrop": 5,
           "mx_portal": 50,
           "mx_crater": 100,
           "mx_portal_in": 40,
@@ -799,7 +800,7 @@
       "build": {
         "chance": 90,
         "extras": {
-          "mx_bugout": 20,
+          "mx_bugout": 10,
           "mx_house_spider": 40,
           "mx_house_wasp": 30,
           "mx_military": 5,
@@ -855,7 +856,6 @@
           "mx_nest_wasp": 50,
           "mx_mass_grave": 50,
           "mx_grave": 50,
-          "mx_supplydrop": 2,
           "mx_Trapdoor_spider_den": 40,
           "mx_collegekids": 30,
           "mx_drugdeal": 30,
