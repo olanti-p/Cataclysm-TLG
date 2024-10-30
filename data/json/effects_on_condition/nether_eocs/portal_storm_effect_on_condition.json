@@ -23,13 +23,6 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING",
-    "recurrence": [ { "global_val": "ps_min_woc", "default": "5 days" }, { "global_val": "ps_max_woc", "default": "18 days" } ],
-    "global": true,
-    "effect": { "run_eocs": "EOC_CAUSE_EARLY_PORTAL_STORM" }
-  },
-  {
-    "type": "effect_on_condition",
     "id": "EOC_PORTAL_EARLY_MESSAGES",
     "recurrence": [ "1 minutes", "30 minutes" ],
     "global": true,
@@ -1175,55 +1168,6 @@
     "type": "effect_on_condition",
     "id": "EOC_PORTAL_DUNGEON_PUNISHMENT_NARROW_VIEWPOINT",
     "effect": { "u_add_effect": "narrow_viewpoint", "duration": { "global_val": "ps_effect_length" } }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_PORTAL_NPC",
-    "effect": [
-      {
-        "u_spawn_npc": "portal_person",
-        "hallucination_count": 2,
-        "outdoor_only": true,
-        "min_radius": 3,
-        "max_radius": 5,
-        "lifespan": [ "1 minutes", "3 minutes" ],
-        "spawn_message": "A person steps nearby from somewhere else.",
-        "spawn_message_plural": "Several identical people walk nearby from nowhere."
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "MAKAYLA_MUTATOR_portal_storm",
-    "recurrence": "15 minutes",
-    "//": "The assumption is that Makayla controls this normally, so the effects are only active when she's the avatar.  Thus global:true.",
-    "global": true,
-    "condition": {
-      "and": [
-        { "is_weather": "portal_storm" },
-        { "u_has_trait": "MAKAYLA_MUTATOR" },
-        { "not": { "u_has_worn_with_flag": "PORTAL_PROOF" } },
-        "u_is_outside"
-      ]
-    },
-    "deactivate_condition": { "not": { "is_weather": "portal_storm" } },
-    "effect": [
-      { "u_message": "Everything feels fuzzy.", "type": "info" },
-      { "math": [ "u_vitamin('mutagen_feline')", "=", "450" ] },
-      { "math": [ "u_vitamin('mutagen')", "=", "750" ] },
-      {
-        "run_eocs": [
-          {
-            "id": "cat_ears_portal_storm",
-            "condition": { "not": { "u_has_trait": "FELINE_EARS" } },
-            "effect": [
-              { "u_message": "It didn't take very long for the ears to be back.", "type": "info" },
-              { "u_add_trait": "FELINE_EARS" }
-            ]
-          }
-        ]
-      }
-    ]
   },
   {
     "type": "effect_on_condition",

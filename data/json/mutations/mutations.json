@@ -646,26 +646,6 @@
   },
   {
     "type": "mutation",
-    "id": "PORTAL_DEPENDENT",
-    "name": { "str": "Portal Dependent" },
-    "points": -8,
-    "description": "You feel alien in your own body, as if part of you remained behind with the storm.  You will suffer severely when not exposed to portal storms unless you find a way to anchor yourself to the world again.",
-    "valid": false,
-    "starting_trait": false,
-    "purifiable": false
-  },
-  {
-    "type": "mutation",
-    "id": "REALITY_GRASP",
-    "name": { "str": "Stabilized in Reality" },
-    "points": 0,
-    "description": "You have regained some substance and have stabilized somewhat, if not entirely.  Portal storm withdrawal will not affect you as strongly as before.",
-    "valid": false,
-    "starting_trait": false,
-    "purifiable": false
-  },
-  {
-    "type": "mutation",
     "id": "OPTIMISTIC",
     "name": { "str": "Optimist" },
     "points": 2,
@@ -7285,17 +7265,6 @@
     "description": "Your DNA has been damaged in a way that causes you to continually develop more mutations.",
     "changes_to": [ "CHAOTIC" ],
     "category": [ "SLIME", "MEDICAL", "CHIMERA" ]
-  },
-  {
-    "type": "mutation",
-    "id": "MAKAYLA_MUTATOR",
-    "name": { "str": "Catastrophic Mutation" },
-    "points": -2,
-    "mixed_effect": true,
-    "description": "Exposure to portal storms and related phenomena causes you to mutate in a mostly predictable fashion.",
-    "purifiable": false,
-    "valid": false,
-    "cancels": [ "CHAOTIC", "UNSTABLE" ]
   },
   {
     "type": "mutation",
