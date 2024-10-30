@@ -301,7 +301,17 @@
     "description": "The target is splashed by a puddle of acid on the ground.",
     "valid_targets": [ "hostile", "ally", "ground" ],
     "max_level": 10,
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "LIQUID", "NON_MAGICAL", "LIQUID_DAMAGE_ARMOR", "NO_BLOCK_MITIGATION", "NO_DODGE_MITIGATION" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "LIQUID",
+      "NON_MAGICAL",
+      "LIQUID_DAMAGE_ARMOR",
+      "NO_BLOCK_MITIGATION",
+      "NO_DODGE_MITIGATION"
+    ],
     "min_damage": 5,
     "damage_increment": 5,
     "max_damage": 50,

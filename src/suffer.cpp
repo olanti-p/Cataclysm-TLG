@@ -345,13 +345,14 @@ void suffer::while_grabbed( Character &you )
         if( mon ) {
             int mon_size = static_cast<std::underlying_type_t<creature_size>>( mon->get_size() );
             // Small monsters can't crush huge characters. Tiny monsters can't crush anyone.
-            if( mon->has_flag( mon_flag_GROUP_BASH ) && !mon->is_hallucination() && your_size <= mon_size + 2 && mon_size != 1 ) {
+            if( mon->has_flag( mon_flag_GROUP_BASH ) && !mon->is_hallucination() && your_size <= mon_size + 2 &&
+                mon_size != 1 ) {
                 crowd++;
                 add_msg_debug( debugmode::DF_CHARACTER, "Crowd pressure check: monster %s found, crowd size %d",
                                mon->name(), crowd );
             }
         } else if( here.impassable( dest ) ) {
-        impassable_ter++;
+            impassable_ter++;
         }
     }
 
@@ -382,14 +383,14 @@ void suffer::while_grabbed( Character &you )
     }
     if( crowd == crush_grabs_req ) {
         // only a chance to lose breath at minimum grabs
-            you.oxygen -= rng( 0, 1 );
-        } else if( crowd <= crush_grabs_req * 2 ) {
-            you.oxygen -= 1;
-        } else if( crowd <= crush_grabs_req * 3 ) {
-            you.oxygen -= rng( 1, 2 );
-        } else if( crowd <= crush_grabs_req * 4 ) {
-            you.oxygen -= 2;
-        }
+        you.oxygen -= rng( 0, 1 );
+    } else if( crowd <= crush_grabs_req * 2 ) {
+        you.oxygen -= 1;
+    } else if( crowd <= crush_grabs_req * 3 ) {
+        you.oxygen -= rng( 1, 2 );
+    } else if( crowd <= crush_grabs_req * 4 ) {
+        you.oxygen -= 2;
+    }
 
     // a few warnings before starting to take damage
     if( you.oxygen <= 5 ) {

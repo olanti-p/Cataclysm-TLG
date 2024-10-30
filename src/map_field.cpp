@@ -1451,9 +1451,10 @@ void map::player_in_field( Character &you )
         const field_type_id ft = cur.get_field_type();
 
         // Cast spells. Skip if we're in a vehicle or on a mount (though the mount itself is not safe!), unless the field is a gas.
-        if ( ft->spell_data.id != spell_id::NULL_ID() && ( !you.in_vehicle && !you.is_mounted() && ft.obj().phase != phase_id::GAS ) ) {
-             map &here = get_map();
-             here.cast_field_spell( you.pos(), you, cur );
+        if( ft->spell_data.id != spell_id::NULL_ID() && ( !you.in_vehicle && !you.is_mounted() &&
+                ft.obj().phase != phase_id::GAS ) ) {
+            map &here = get_map();
+            here.cast_field_spell( you.pos(), you, cur );
         }
 
         if( ft == fd_sap ) {
@@ -1791,9 +1792,9 @@ void map::monster_in_field( monster &z )
         if( ( z.flies() || veh_at( z.pos() ) ) && cur.get_field_type()->phase == phase_id::LIQUID ) {
             continue;
         }
-        if ( cur_field_type->spell_data.id != spell_id::NULL_ID() ) {
-             map &here = get_map();
-             here.cast_field_spell_on_monster( z.pos(), z, cur );
+        if( cur_field_type->spell_data.id != spell_id::NULL_ID() ) {
+            map &here = get_map();
+            here.cast_field_spell_on_monster( z.pos(), z, cur );
         }
         if( cur_field_type == fd_sap ) {
             z.moves -= cur.get_field_intensity() * 5;
