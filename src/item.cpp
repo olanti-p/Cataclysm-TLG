@@ -8325,7 +8325,7 @@ int item::get_coverage( const bodypart_id &bodypart, const cover_type &type ) co
                 adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->coverage );
                 break;
             case cover_type::COVER_MELEE:
-                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2) * portion_data->cover_melee );
+                adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_melee );
                 break;
             case cover_type::COVER_RANGED:
                 adjusted_coverage = std::floor( ( ( 1 + damage_factor ) / 2 ) * portion_data->cover_ranged );
@@ -8784,7 +8784,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                         } else { // The damage is nonphysical
                             tmp_add = m->id->resist( derived->first ) * m->cover * 0.01f * derived->second;
                         }
-                    // If the material DOES have dedicated resistances to our damage type, run this.
+                        // If the material DOES have dedicated resistances to our damage type, run this.
                     } else {
                         if( dmg_type->physical ) {
                             if( total_coverage + m->cover <= 100 ) {

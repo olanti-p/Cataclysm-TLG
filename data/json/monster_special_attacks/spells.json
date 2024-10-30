@@ -823,7 +823,17 @@
     "description": "Vomit a mouthful of acid on an enemy.",
     "valid_targets": [ "hostile", "ground", "ally" ],
     "max_level": 10,
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "LIQUID", "DODGEABLE", "NON_MAGICAL", "LIQUID_DAMAGE_ARMOR", "NO_BLOCK_MITIGATION" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "LIQUID",
+      "DODGEABLE",
+      "NON_MAGICAL",
+      "LIQUID_DAMAGE_ARMOR",
+      "NO_BLOCK_MITIGATION"
+    ],
     "min_accuracy": 14,
     "accuracy_increment": 14,
     "max_accuracy": 140,

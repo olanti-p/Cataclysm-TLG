@@ -10,7 +10,7 @@
     "condition": {
       "and": [
         { "expects_vars": [ "prep_time", "spell_to_cast", "message_success", "message_fail" ] },
-        { "math": [ "u_val('stamina')", ">", "energy_amount" ] }
+        { "math": [ "u_val('stamina')", ">", "_energy_amount" ] }
       ]
     },
     "effect": [
@@ -25,7 +25,7 @@
     "id": "EOC_GENERIC_SPELL_MUTATION_ACT",
     "effect": [
       {
-        "u_cast_spell": { "id": { "context_val": "spell_to_cast" }, "message": { "context_val": "message_success" } },
+        "u_cast_spell": { "id": { "context_val": "spell_to_cast" }, "message": { "context_val": "message_success" }, "min_level": 1 },
         "targeted": true
       }
     ]
@@ -67,14 +67,14 @@
       {
         "run_eoc_with": "EOC_GENERIC_SPELL_MUTATION",
         "variables": {
-          "energy_amount": "2000",
+          "energy_amount": "1400",
           "prep_time": "1",
           "spell_to_cast": "spell_feline_leap",
           "message_success": {
             "i18n": true,
-            "str": "You squat down, build up tension in your legs, waggling your tail, then release, launching yourself quite a distance."
+            "str": "You squat down, build up tension in your legs, then release, launching yourself quite a distance."
           },
-          "message_fail": { "i18n": true, "str": "Your legs are too tired to perform a jump." }
+          "message_fail": { "i18n": true, "str": "You are too tired to perform a jump." }
         }
       }
     ]
@@ -86,14 +86,11 @@
       {
         "run_eoc_with": "EOC_GENERIC_SPELL_MUTATION",
         "variables": {
-          "energy_amount": "2000",
+          "energy_amount": "1800",
           "prep_time": "2",
           "spell_to_cast": "spell_short_leap",
-          "message_success": {
-            "i18n": true,
-            "str": "You squat down, build up tension in your legs and release, launching yourself quite a distance."
-          },
-          "message_fail": { "i18n": true, "str": "Your legs are too tired to perform a jump." }
+          "message_success": { "i18n": true, "str": "You take a big leap forward." },
+          "message_fail": { "i18n": true, "str": "You  are too tired to perform a jump." }
         }
       }
     ]
@@ -105,11 +102,11 @@
       {
         "run_eoc_with": "EOC_GENERIC_SPELL_MUTATION",
         "variables": {
-          "energy_amount": "6000",
-          "prep_time": "3",
+          "energy_amount": "2000",
+          "prep_time": "2",
           "spell_to_cast": "spell_crushing_leap",
-          "message_success": { "i18n": true, "str": "You squat down, build up tension in your legs and release.  Death from above." },
-          "message_fail": { "i18n": true, "str": "Your legs are too tired to perform a jump." }
+          "message_success": { "i18n": true, "str": "You crouch down and leap forward with all your might." },
+          "message_fail": { "i18n": true, "str": "You are too tired to perform a jump." }
         }
       }
     ]
@@ -121,14 +118,11 @@
       {
         "run_eoc_with": "EOC_GENERIC_SPELL_MUTATION",
         "variables": {
-          "energy_amount": "2500",
+          "energy_amount": "1900",
           "prep_time": "1",
           "spell_to_cast": "spell_avian_leap",
-          "message_success": {
-            "i18n": true,
-            "str": "You jump at your target with your talons up front, attempting to deal devastating damage to your target."
-          },
-          "message_fail": { "i18n": true, "str": "Your legs are too tired to perform a jump." }
+          "message_success": { "i18n": true, "str": "You leap forward, talons ready to strike." },
+          "message_fail": { "i18n": true, "str": "You are too tired to perform a jump." }
         }
       }
     ]
