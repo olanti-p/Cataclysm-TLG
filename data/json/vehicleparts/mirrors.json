@@ -18,7 +18,7 @@
       "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "20 s", "using": [ [ "adhesive", 1 ] ] }
     },
     "flags": [ "VISION", "PROTRUSION", "UNMOUNT_ON_DAMAGE" ],
-    "breaks_into": [ { "item": "glass_shard", "count": [ 0, 16 ] } ],
+    "breaks_into": [ { "item": "glass_shard", "charges": [ 0, 8 ] } ],
     "variants": [
       { "id": "left", "label": "Left", "symbols": "o", "symbols_broken": "*" },
       { "id": "right", "label": "Right", "symbols": "o", "symbols_broken": "*" }
@@ -43,7 +43,7 @@
       "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "20 s", "using": [ [ "adhesive", 1 ] ] }
     },
     "flags": [ "VISION" ],
-    "breaks_into": [ { "item": "glass_shard", "count": [ 0, 16 ] } ],
+    "breaks_into": [ { "item": "glass_shard", "charges": [ 0, 8 ] } ],
     "variants": [ { "symbols": "o", "symbols_broken": "*" } ]
   }
 ]
