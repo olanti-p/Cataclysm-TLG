@@ -333,21 +333,32 @@ void suffer::while_grabbed( Character &you )
     creature_tracker &creatures = get_creature_tracker();
     int crowd = 0;
     int impassable_ter = 0;
+    // Medium size characters == 3.
+    int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
+    int crush_grabs_req = your_size - 1;
+    // Minimum of 1 grabber required.
+    crush_grabs_req = std::max( 1, crush_grabs_req );
+
     int crush_resist = 0;
     for( auto&& dest : here.points_in_radius( you.pos(), 1, 0 ) ) { // *NOPAD*
         const monster *const mon = creatures.creature_at<monster>( dest );
-        if( mon && mon->has_flag( mon_flag_GROUP_BASH ) && !mon->is_hallucination() ) {
-            crowd++;
-            add_msg_debug( debugmode::DF_CHARACTER, "Crowd pressure check: monster %s found, crowd size %d",
-                           mon->name(), crowd );
-        }
-        if( here.impassable( dest ) ) {
-            impassable_ter++;
+        if( mon ) {
+            int mon_size = static_cast<std::underlying_type_t<creature_size>>( mon->get_size() );
+            // Small monsters can't crush huge characters. Tiny monsters can't crush anyone.
+            if( mon->has_flag( mon_flag_GROUP_BASH ) && !mon->is_hallucination() && your_size <= mon_size + 2 && mon_size != 1 ) {
+                crowd++;
+                add_msg_debug( debugmode::DF_CHARACTER, "Crowd pressure check: monster %s found, crowd size %d",
+                               mon->name(), crowd );
+            }
+        } else if( here.impassable( dest ) ) {
+        impassable_ter++;
         }
     }
 
-    // If we aren't near two monsters with GROUP_BASH we won't suffocate.
-    if( crowd < 2 ) {
+    add_msg_debug( debugmode::DF_CHARACTER,
+                   "Crowd pressure sum: character size requires %d grabbers, found %d ", crush_grabs_req, crowd );
+    // if we aren't near enough monsters with GROUP_BASH we won't suffocate
+    if( crowd < crush_grabs_req ) {
         return;
     }
 
@@ -369,18 +380,16 @@ void suffer::while_grabbed( Character &you )
     if( you.has_trait( trait_SLIMESPAWNER ) || you.has_trait( trait_TRANSPIRATION ) ) {
         crush_resist += 1;
     }
-    if( crush_resist <= rng( 0, 19 ) ) {
-        if( crowd == 3 ) {
-            // Only a chance to lose breath at low grab chance, none with only a single zombie
+    if( crowd == crush_grabs_req ) {
+        // only a chance to lose breath at minimum grabs
             you.oxygen -= rng( 0, 1 );
-        } else if( crowd == 4 ) {
+        } else if( crowd <= crush_grabs_req * 2 ) {
             you.oxygen -= 1;
-        } else if( crowd <= 6 ) {
+        } else if( crowd <= crush_grabs_req * 3 ) {
             you.oxygen -= rng( 1, 2 );
-        } else if( crowd <= 8 ) {
+        } else if( crowd <= crush_grabs_req * 4 ) {
             you.oxygen -= 2;
         }
-    }
 
     // a few warnings before starting to take damage
     if( you.oxygen <= 5 ) {
