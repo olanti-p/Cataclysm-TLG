@@ -1762,7 +1762,7 @@
     "starting_trait": true,
     "types": [ "ANIMAL_EMPATHY" ],
     "changes_to": [ "ANIMALDISCORD2" ],
-    "category": [ "BEAST", "RAPTOR", "INSECT", "MOUSE", "RABBIT" ]
+    "category": [ "RAPTOR", "MOUSE", "RABBIT" ]
   },
   {
     "type": "mutation",
@@ -4036,7 +4036,7 @@
     "description": "Your body produces a potent venom.  Cutting or stabbing attacks from mutations have a chance to poison your target.",
     "prereqs": [ "POISRESIST" ],
     "changes_to": [ "POISONOUS2" ],
-    "category": [ "SLIME", "TROGLOBITE", "SPIDER", "CEPHALOPOD", "GASTROPOD", "CHIMERA", "BATRACHIAN" ]
+    "category": [ "SLIME", "TROGLOBITE", "SPIDER", "CEPHALOPOD", "GASTROPOD", "CHIMERA" ]
   },
   {
     "type": "mutation",
@@ -4334,11 +4334,10 @@
     "id": "FELINE_LEAP",
     "name": { "str": "Pounce" },
     "points": 1,
-    "description": "You've gained a strong ability to leap a short distance from a standing position with little preparation time.",
-    "//": "This is differentiated from the other two leaps by a shorter range yet a shorter prep time. Probably less useful than them since it will still exhaust you.",
+    "description": "You can leap a good distance forward at a moment's notice.",
     "active": true,
     "kcal": true,
-    "cost": 400,
+    "cost": 4,
     "activated_is_setup": false,
     "activated_eocs": [ "EOC_FELINE_LEAP" ],
     "cancels": [ "LEAPING_LEGS", "LEAPING_LEGS2" ],
@@ -4354,8 +4353,10 @@
     "points": 1,
     "visibility": 3,
     "ugliness": 1,
-    "description": "You've gained a strong ability to leap from a standing position.",
+    "description": "You've developed quite a powerful leap.",
     "active": true,
+    "kcal": true,
+    "cost": 4,
     "activated_is_setup": false,
     "activated_eocs": [ "EOC_SHORT_LEAP" ],
     "prereqs": [ "STRONG_LEGS" ],
@@ -4370,8 +4371,10 @@
     "points": 1,
     "visibility": 3,
     "ugliness": 1,
-    "description": "You've gained a strong ability to leap a significant distance from a standing position and crush whatever you land on.",
+    "description": "You can leap a significant distance and slam your body down hard on anything, friend or foe, in your landing zone.",
     "active": true,
+    "kcal": true,
+    "cost": 4,
     "activated_is_setup": false,
     "activated_eocs": [ "EOC_CRUSHING_LEAP" ],
     "prereqs": [ "LEAPING_LEGS" ],
@@ -4388,7 +4391,7 @@
     "mixed_effect": true,
     "description": "You have grown large, curved, and wickedly sharp talons in place of your big toes.  Fortunately, they don't get in the way of your movement.  Unfortunately, they do prevent wearing footgear.",
     "types": [ "FEET" ],
-    "category": [ "RAPTOR", "SPIDER" ],
+    "category": [ "RAPTOR" ],
     "restricts_gear": [ "foot_toes_l", "foot_toes_r" ],
     "destroys_gear": true,
     "allowed_items": [ "ALLOWS_TALONS" ],
@@ -4407,7 +4410,7 @@
     "visibility": 4,
     "ugliness": 2,
     "mixed_effect": true,
-    "description": "Your legs and feet have become bird-like, with long talons arranged three ahead and one behind.  They probably won't fit in human shoes, but they're perfect for gripping onto precarious perches.",
+    "description": "Your legs and feet have become bird-like, with long talons arranged three ahead and one behind.  They're perfect gripping onto precarious perches, or for making a long-ranged leap attack.",
     "active": true,
     "activated_is_setup": false,
     "activated_eocs": [ "EOC_AVIAN_LEAP" ],
@@ -4417,7 +4420,13 @@
     "category": [ "BIRD" ],
     "restricts_gear": [ "foot_l", "foot_r" ],
     "destroys_gear": true,
-    "allowed_items": [ "ALLOWS_TALONS" ]
+    "allowed_items": [ "ALLOWS_TALONS" ],
+    "attacks": {
+      "attack_text_u": "You slash %s with your talons!",
+      "attack_text_npc": "%1$s slashes %2$s with their talons!",
+      "chance": 20,
+      "strength_damage": { "damage_type": "cut", "amount": 2 }
+    }
   },
   {
     "type": "mutation",
@@ -5319,9 +5328,10 @@
     "points": 2,
     "visibility": 4,
     "ugliness": 2,
-    "description": "You have a pair of large, feathered wings.  Your body is too heavy to be able to fly, but you can use them to slow your descent during a fall, and will not take falling damage under any circumstances.",
-    "types": [ "WINGS" ],
-    "prereqs": [ "WINGS_STUB" ],
+    "description": "Your arms have mostly transformed into a huge pair of feathered wings.  Though you retain a few fingers, your fine manipulation is greatly hampered.  On the other hand, you can glide from ledges and will take less damage if you fall, provided you're healthy and unburdened.",
+    "types": [ "ARMS", "HANDS" ],
+    "enchantments": [ "ench_wings_bird" ],
+    "prereqs": [ "ARM_FEATHERS" ],
     "prereqs2": [ "HOLLOW_BONES" ],
     "threshreq": [ "THRESH_BIRD" ],
     "category": [ "BIRD" ],
@@ -6402,7 +6412,7 @@
     "description": "You have a pair of stubby little wings projecting from your shoulderblades.  They can be wiggled at will, but are useless.",
     "types": [ "WINGS" ],
     "changes_to": [ "WINGS_INSECT", "WINGS_BUTTERFLY" ],
-    "category": [ "INSECT", "BIRD" ]
+    "category": [ "INSECT" ]
   },
   {
     "type": "mutation",
@@ -8471,8 +8481,8 @@
     "name": { "str": "Toxic Flesh" },
     "points": 1,
     "description": "Your flesh is highly poisonous, and creatures that bite you will receive a nasty surprise.",
-    "category": [ "FISH", "GASTROPOD" ],
-    "threshreq": [ "THRESH_FISH", "THRESH_GASTROPOD" ],
+    "category": [ "FISH", "GASTROPOD", "BATRACHIAN" ],
+    "threshreq": [ "THRESH_FISH", "THRESH_GASTROPOD", "THRESH_BATRACHIAN" ],
     "purifiable": false
   },
   {
