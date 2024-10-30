@@ -26,19 +26,19 @@
       "deep_rock"
     ],
     "default_groundcover": [ [ "t_region_groundcover", 1 ] ],
-    "//": "Weights are set high in order to allow mods to add rare terrains.  Dividing current weights by 1000 breaks in repo mods and should not be approved.",
+    "//": "Weights are set high in order to allow mods to add rare terrains.",
     "region_terrain_and_furniture": {
       "terrain": {
-        "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 2000, "t_dirt": 1000 },
-        "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 3 },
-        "t_region_groundcover_forest": { "t_forestfloor": 10, "t_grass": 1, "t_grass_long": 1, "t_moss": 1, "t_grass_dead": 1 },
+        "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 3000, "t_dirt": 1000 },
+        "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 4 },
+        "t_region_groundcover_forest": { "t_forestfloor": 10, "t_grass": 1, "t_grass_long": 1, "t_moss": 1, "t_grass_dead": 2 },
         "t_region_groundcover_swamp": { "t_grass_long": 300, "t_grass_tall": 100, "t_moss": 200, "t_dirt": 200 },
         "t_region_groundcover_barren": { "t_dirt": 30, "t_grass_dead": 2, "t_railroad_rubble": 1 },
         "t_region_grass": { "t_grass": 1 },
         "t_region_soil": { "t_dirt": 1 },
         "t_region_shrub_forest_dense": {
           "t_underbrush": 30,
-          "t_shrub": 10,
+          "t_shrub": 30,
           "t_fern": 5,
           "t_shrub_blueberry": 2,
           "t_shrub_raspberry": 2,
@@ -46,9 +46,9 @@
           "t_shrub_strawberry": 1,
           "t_shrub_grape": 1
         },
-        "t_region_shrub_forest": { "t_region_shrub_forest_dense": 60, "t_shrub_rose": 5, "t_shrub_blackberry": 5 },
+        "t_region_shrub_forest": { "t_region_shrub_forest_dense": 70, "t_shrub_rose": 5, "t_shrub_blackberry": 5 },
         "t_region_shrub_plains": {
-          "t_shrub": 10,
+          "t_shrub": 20,
           "t_shrub_blueberry": 2,
           "t_shrub_blackberry": 2,
           "t_shrub_rose": 2,
@@ -56,7 +56,7 @@
           "t_shrub_strawberry": 1,
           "t_shrub_grape": 1
         },
-        "t_region_shrub_swamp": { "t_fern": 2, "t_shrub_raspberry": 2, "t_shrub_blueberry": 2, "t_shrub_huckleberry": 1, "t_shrub_rose": 1 },
+        "t_region_shrub_swamp": { "t_fern": 4, "t_shrub_raspberry": 2, "t_shrub_blueberry": 2, "t_shrub_huckleberry": 1, "t_shrub_rose": 1 },
         "t_region_shrub_fruit": {
           "t_shrub_blueberry": 6,
           "t_shrub_strawberry": 6,
@@ -66,31 +66,36 @@
           "t_shrub_huckleberry": 2,
           "t_shrub_peanut": 1
         },
-        "t_region_shrub_decorative": { "t_shrub": 30, "t_fern": 5, "t_shrub_rose": 20, "t_shrub_hydrangea": 20, "t_shrub_lilac": 20, "t_bamboo_long": 5 },
-        "t_region_shrub": { "t_region_shrub_decorative": 60, "t_underbrush": 10, "t_region_shrub_fruit": 30 },
+        "t_region_shrub_decorative": { "t_shrub": 30, "t_fern": 5, "t_shrub_rose": 15, "t_shrub_hydrangea": 20, "t_shrub_lilac": 20, "t_bamboo_long": 5 },
+        "t_region_shrub": { "t_region_shrub_decorative": 60, "t_underbrush": 10, "t_region_shrub_fruit": 15 },
         "t_region_tree_forest_dense": {
-          "t_tree": 18,
+          "t_tree": 25,
+          "t_tree_pine": 20,
+          "t_tree_maple": 19,
           "t_tree_blackjack": 10,
           "t_tree_hickory": 18,
-          "t_tree_pine": 9,
-          "t_tree_maple": 7,
-          "t_tree_birch": 7,
-          "t_tree_beech": 7,
+          "t_tree_hemlock": 9,
+          "t_tree_sweet_birch": 7,
+          "t_tree_ash": 6,
+          "t_tree_birch": 5,
+          "t_tree_beech": 5,
           "t_tree_cottonwood": 4,
           "t_tree_elm": 4,
           "t_tree_cherry": 4,
           "t_tree_plum": 2,
+          "t_tree_sycamore": 1,
           "t_tree_sassafras": 1,
-          "t_region_tree_dead": 5,
-          "t_region_tree_forest_other": 5
+          "t_region_tree_dead": 64
         },
         "t_region_tree_forest_other": {
           "t_tree_willow": 15,
           "t_tree_alder": 15,
+          "t_tree_sycamore": 10,
           "t_tree_chestnut": 10,
           "t_tree_basswood": 10,
           "t_tree_hazelnut": 10,
-          "t_tree_crabapple": 8,
+          "t_tree_crabapple": 10,
+          "t_tree_magnolia": 2,
           "t_tree_apple": 2,
           "t_tree_coffee": 1,
           "t_tree_apricot": 2,
@@ -103,26 +108,31 @@
         },
         "t_region_tree_forest": { "t_region_tree_forest_dense": 2, "t_region_tree_forest_other": 1 },
         "t_region_tree": {
-          "t_tree": 128,
-          "t_tree_young": 128,
-          "t_tree_birch": 16,
+          "t_tree": 160,
+          "t_tree_young": 150,
+          "t_tree_maple": 140,
+          "t_tree_pine": 90,
+          "t_tree_hemlock": 60,
+          "t_tree_sweet_birch": 40,
+          "t_tree_ash": 40,
+          "t_tree_sycamore": 30,
+          "t_tree_birch": 25,
           "t_tree_elm": 16,
           "t_tree_cottonwood": 16,
           "t_tree_basswood": 16,
           "t_tree_alder": 16,
-          "t_tree_pine": 32,
-          "t_tree_maple": 32,
           "t_tree_willow": 32,
           "t_tree_hickory": 16,
+          "t_tree_magnolia": 8,
           "t_tree_walnut": 8,
           "t_tree_butternut": 4,
           "t_tree_chestnut": 8,
           "t_tree_hazelnut": 2,
           "t_tree_beech": 2,
-          "t_tree_blackjack": 8,
+          "t_tree_blackjack": 20,
           "t_tree_coffee": 2,
-          "t_tree_crabapple": 2,
-          "t_tree_apple": 1,
+          "t_tree_crabapple": 8,
+          "t_tree_apple": 2,
           "t_tree_apricot": 1,
           "t_tree_cherry": 1,
           "t_tree_juniper": 2,
@@ -132,17 +142,22 @@
           "t_tree_elderberry": 2,
           "t_tree_mulberry": 2,
           "t_tree_sassafras": 3,
-          "t_region_tree_dead": 48
+          "t_tree_deadpine": 90,
+          "t_tree_very_dead": 20,
+          "t_region_tree_dead": 148
         },
         "t_region_tree_shade": {
           "t_tree": 64,
           "t_tree_young": 32,
           "t_tree_birch": 16,
           "t_tree_elm": 16,
+          "t_tree_sycamore": 12,
+          "t_tree_magnolia": 6,
           "t_tree_cottonwood": 16,
           "t_tree_basswood": 16,
           "t_tree_alder": 16,
           "t_tree_maple": 32,
+          "t_tree_sweet_birch": 28,
           "t_tree_willow": 32,
           "t_tree_hickory": 16,
           "t_tree_chestnut": 8,
@@ -151,12 +166,12 @@
           "t_tree_elderberry": 2,
           "t_tree_mulberry": 2,
           "t_tree_sassafras": 3,
-          "t_tree_dead": 2
+          "t_tree_dead": 128
         },
         "t_region_tree_fruit": {
           "t_tree_young": 4,
           "t_tree_apple": 2,
-          "t_tree_crabapple": 1,
+          "t_tree_crabapple": 4,
           "t_tree_apricot": 2,
           "t_tree_cherry": 2,
           "t_tree_peach": 2,
@@ -164,13 +179,15 @@
           "t_tree_plum": 2,
           "t_tree_elderberry": 2,
           "t_tree_mulberry": 2,
-          "t_tree_dead": 4
+          "t_tree_dead": 24,
+          "t_tree_very_dead": 8
         },
         "t_region_tree_dead": {
+          "t_tree_dead": 40,
+          "t_tree_deadpine": 28,
           "t_tree_hickory_dead": 8,
-          "t_tree_dead": 7,
+          "t_tree_very_dead": 12,
           "t_tree_dead_warped": 1,
-          "t_tree_deadpine": 3,
           "t_tree_deadpine_warped": 1
         },
         "t_region_tree_nut": {
@@ -183,9 +200,10 @@
           "t_tree_beech": 2,
           "t_tree_hazelnut": 2,
           "t_tree_coffee": 2,
-          "t_tree_dead": 4
+          "t_tree_dead": 24,
+          "t_tree_very_dead": 16
         },
-        "t_region_tree_evergreen": { "t_tree_pine": 32, "t_tree_juniper": 16, "t_tree_deadpine": 2 }
+        "t_region_tree_evergreen": { "t_tree_pine": 32, "t_tree_hemlock": 28, "t_tree_juniper": 16, "t_tree_deadpine": 18 }
       },
       "furniture": {
         "f_region_flower": {

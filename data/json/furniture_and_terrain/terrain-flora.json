@@ -1351,6 +1351,43 @@
   },
   {
     "type": "terrain",
+    "id": "t_tree_hemlock",
+    "name": "hemlock tree",
+    "looks_like": "t_tree",
+    "description": "This is an evergreen tree from the 'Tsuga' genus, superficially similar to a pine.",
+    "symbol": "4",
+    "color": "green",
+    "move_cost": 0,
+    "coverage": 80,
+    "roof": "t_treetop_evergreen",
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "CLIMB_ADJACENT" ],
+    "transforms_into": "t_tree_hemlock_harvested",
+    "examine_action": "harvest_ter",
+    "harvest_by_season": [ { "seasons": [ "spring", "summer", "autumn", "winter" ], "id": "pine_harv" } ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "stick_long", "count": [ 3, 10 ] }, { "item": "splinter", "count": [ 10, 25 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_hemlock_harvested",
+    "name": "pine tree",
+    "description": "A towering coniferous tree that belongs to the 'Pinus' genus, with the New England species varying from 'P. strobus', 'P. resinosa' and 'P. rigida'.  Some of the branches and resin clumps have been stripped away and many of the pinecones aren't developed fully yet, but given a season, it could be harvestable again.",
+    "symbol": "4",
+    "color": "brown",
+    "roof": "t_treetop_evergreen",
+    "copy-from": "t_tree_pine",
+    "looks_like": "t_tree_deadpine",
+    "transforms_into": "t_tree_pine",
+    "examine_action": "harvested_plant"
+  },
+  {
+    "type": "terrain",
     "id": "t_tree_birch",
     "name": "birch tree",
     "looks_like": "t_tree",
@@ -1391,6 +1428,59 @@
     "move_cost": 0,
     "coverage": 80,
     "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "CLIMB_ADJACENT" ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        { "item": "stick_long", "count": [ 3, 10 ] },
+        { "item": "splinter", "count": [ 10, 25 ] },
+        { "item": "leaves", "count": [ 50, 150 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_sweet_birch",
+    "name": "sweet birch tree",
+    "looks_like": "t_tree",
+    "roof": "t_treetop",
+    "description": "The sweet birch lacks the paper bark of its cousins in the 'Betula' genus.  It gets its name from its sweet sap, which can be tapped with a spile and used to make syrup.",
+    "symbol": "7",
+    "color": [ "red", "light_green", "light_green", "red" ],
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "CLIMB_ADJACENT" ],
+    "examine_action": "harvest_ter",
+    "transforms_into": "t_tree_sweet_birch_tapped",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        { "item": "stick_long", "count": [ 3, 10 ] },
+        { "item": "splinter", "count": [ 10, 25 ] },
+        { "item": "leaves", "count": [ 50, 150 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_sweet_birch_tapped",
+    "name": "sweet birch tree",
+    "looks_like": "t_tree",
+    "roof": "t_treetop",
+    "description": "The sweet birch lacks the paper bark of its cousins in the 'Betula' genus.  This one's tapped with a spile.",
+    "symbol": "7",
+    "color": [ "red", "light_green", "light_green", "red" ],
+    "examine_action": "tree_maple_tapped",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "FLAMMABLE_ASH", "SEALED", "PLACE_ITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "LIQUIDCONT",  "CLIMB_ADJACENT" ],
     "bash": {
       "str_min": 80,
       "str_max": 180,
@@ -1498,6 +1588,81 @@
     "coverage": 80,
     "flags": [ "FLAMMABLE_ASH", "SEALED", "PLACE_ITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "LIQUIDCONT", "CLIMB_ADJACENT" ],
     "examine_action": "tree_maple_tapped",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        { "item": "stick_long", "count": [ 3, 10 ] },
+        { "item": "splinter", "count": [ 10, 25 ] },
+        { "item": "leaves", "count": [ 50, 150 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_ash",
+    "name": "ash tree",
+    "looks_like": "t_tree",
+    "roof": "t_treetop",
+    "description": "A member of the 'Fraxinus' genus, these hardwood trees have long been prized for their lumber.",
+    "symbol": "7",
+    "color": [ "light_green", "light_green", "i_light_green", "brown" ],
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "CLIMB_ADJACENT" ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        { "item": "stick_long", "count": [ 3, 10 ] },
+        { "item": "splinter", "count": [ 10, 25 ] },
+        { "item": "leaves", "count": [ 50, 150 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_magnolia",
+    "name": "magnolia tree",
+    "looks_like": "t_tree_apple",
+    "roof": "t_treetop",
+    "description": "Part of an ancient lineage of broadleaf trees known for their large white flowers.",
+    "symbol": "7",
+    "color": [ "light_green", "light_green", "i_light_green", "brown" ],
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "CLIMB_ADJACENT" ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        { "item": "stick_long", "count": [ 3, 10 ] },
+        { "item": "splinter", "count": [ 10, 25 ] },
+        { "item": "leaves", "count": [ 50, 150 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_sycamore",
+    "name": "sycamore tree",
+    "looks_like": "t_tree",
+    "roof": "t_treetop",
+    "description": "A long-lived tree with flaky bark and a broad trunk.",
+    "symbol": "7",
+    "color": [ "light_green", "light_green", "i_light_green", "brown" ],
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT", "BROWSABLE", "CLIMB_ADJACENT" ],
     "bash": {
       "str_min": 80,
       "str_max": 180,
