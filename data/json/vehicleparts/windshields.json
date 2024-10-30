@@ -2,7 +2,7 @@
   {
     "id": "windshield",
     "type": "vehicle_part",
-    "breaks_into": [ { "count": [ 14, 39 ], "item": "tempered_glass_shard" } ],
+    "breaks_into": [ { "charges": [ 14, 39 ], "item": "tempered_glass_shard" } ],
     "categories": [ "hull" ],
     "color": "light_cyan",
     "damage_modifier": 70,
