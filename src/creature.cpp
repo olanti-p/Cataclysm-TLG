@@ -2640,18 +2640,19 @@ std::vector<bodypart_id> Creature::get_all_body_parts( get_body_part_flags flags
     return  all_bps;
 }
 
- std::vector<bodypart_id> Creature::get_random_body_parts( const std::vector<bodypart_id>& bp_list, size_t amount )
- {
+std::vector<bodypart_id> Creature::get_random_body_parts( const std::vector<bodypart_id> &bp_list,
+        size_t amount )
+{
     std::vector<bodypart_id> random_parts;
     amount = std::max<size_t>( 0, std::min( amount, ( bp_list.size() - 1 ) ) );
     // Use a set to avoid duplicates
     std::set<int> selected_indices;
-    while ( selected_indices.size() < amount ) {
+    while( selected_indices.size() < amount ) {
         int index = rng( 0, bp_list.size() - 1 );
         selected_indices.insert( index );
     }
     // Collect the random bodypart_ids
-    for (int index : selected_indices) {
+    for( int index : selected_indices ) {
         random_parts.push_back( bp_list[index] );
     }
     return random_parts;

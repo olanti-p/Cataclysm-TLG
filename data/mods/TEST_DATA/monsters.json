@@ -430,5 +430,24 @@
     "description": "This shoggoth is for testing purposes only.",
     "copy-from": "mon_shoggoth",
     "delete": { "special_attacks": [ "SPLIT" ] }
+  },
+  {
+    "id": "mon_pattern_bigfrog",
+    "type": "MONSTER",
+    "name": { "str": "staticskin frog" },
+    "description": "Test Frog!",
+    "copy-from": "mon_proxy_bigfrog",
+    "volume": "30 L",
+    "weight": "20 kg",
+    "hp": 40,
+    "speed": 80,
+    "symbol": "x",
+    "color": "light_blue",
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "electric", "amount": 3 }, { "damage_type": "cut", "amount": 1 } ],
+    "armor": { "bash": 2, "acid": 2, "heat": 1, "electric": 4 },
+    "weakpoint_sets": [ "wps_amphibian_body", "wps_amphibian_frog", "wps_amphibian_electric" ],
+    "luminance": 3,
+    "special_when_hit": [ "ZAPBACK", 100 ]
   }
 ]

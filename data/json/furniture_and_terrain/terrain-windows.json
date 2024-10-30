@@ -1691,8 +1691,8 @@
       "sound_fail": "whack!",
       "sound_vol": 16,
       "sound_fail_vol": 10,
-      "ter_set": "t_window_empty",        
-      "items": [ { "item":  "tempered_glass_shard", "charges": [ 29, 39 ] } ]
+      "ter_set": "t_window_empty",
+      "items": [ { "item": "tempered_glass_shard", "charges": [ 29, 39 ] } ]
     }
   },
   {
@@ -1725,7 +1725,7 @@
       "sound_vol": 16,
       "sound_fail_vol": 10,
       "ter_set": "t_window_empty",
-      "items": [ { "item":  "tempered_glass_shard", "charges": [ 29, 39 ] } ]
+      "items": [ { "item": "tempered_glass_shard", "charges": [ 29, 39 ] } ]
     }
   },
   {
@@ -1758,7 +1758,7 @@
         { "item": "steel_lump", "prob": 55 },
         { "item": "steel_chunk", "count": [ 1, 4 ] },
         { "item": "scrap", "count": [ 1, 5 ] },
-        { "item":  "tempered_glass_shard", "charges": [ 19, 29 ] }
+        { "item": "tempered_glass_shard", "charges": [ 19, 29 ] }
       ]
     }
   },
@@ -1783,7 +1783,7 @@
         { "item": "steel_lump", "prob": 55 },
         { "item": "steel_chunk", "count": [ 1, 4 ] },
         { "item": "scrap", "count": [ 1, 5 ] },
-        { "item":  "tempered_glass_shard", "charges": [ 19, 29 ] }
+        { "item": "tempered_glass_shard", "charges": [ 19, 29 ] }
       ]
     }
   }

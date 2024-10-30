@@ -519,7 +519,8 @@ class bodypart
 
         const encumbrance_data &get_encumbrance_data() const;
 
-        std::vector<bodypart_id> get_random_body_parts( const std::vector<bodypart_id>& bp_list, size_t amount );
+        std::vector<bodypart_id> get_random_body_parts( const std::vector<bodypart_id> &bp_list,
+                size_t amount );
 
         void set_hp_cur( int set );
         void set_hp_max( int set );

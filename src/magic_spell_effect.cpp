@@ -449,7 +449,8 @@ std::set<tripoint> calculate_spell_effect_area( const spell &sp, const tripoint 
 
     std::set<tripoint> targets = { epicenter }; // initialize with epicenter
     // TODO: Why is this even here?
-    if( sp.aoe( caster ) < 1 && ( sp.shape() != spell_shape::line && sp.shape() != spell_shape::blast ) ) {
+    if( sp.aoe( caster ) < 1 && ( sp.shape() != spell_shape::line &&
+                                  sp.shape() != spell_shape::blast ) ) {
         return targets;
     }
 
@@ -594,11 +595,11 @@ static void damage_targets( const spell &sp, Creature &caster,
             // 5% per point (linear) ranging from 0-33%, capped at block score
             // skip if the attack was dodgeable as we'd have evaded it already
             double damage_mitigation_multiplier = 1.0;
-            
+
             if( !no_block_mitigation ) {
                 const int spell_block = cr->get_block_bonus();
                 if( spell_block - spell_accuracy > 0 &&
-                                        !dodgeable ) {
+                    !dodgeable ) {
                     const int roll = std::round( rng( 1, 20 ) );
                     damage_mitigation_multiplier -= ( 1 - 0.05 * std::max( roll, spell_block ) ) / 3.0;
                 }
