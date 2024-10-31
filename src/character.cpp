@@ -303,6 +303,7 @@ static const json_character_flag json_flag_FEATHER_FALL( "FEATHER_FALL" );
 static const json_character_flag json_flag_GLIDE( "GLIDE" );
 static const json_character_flag json_flag_GLIDING( "GLIDING" );
 static const json_character_flag json_flag_GRAB( "GRAB" );
+static const json_character_flag json_flag_GRAB_FILTER( "GRAB_FILTER" );
 static const json_character_flag json_flag_HEAL_OVERRIDE( "HEAL_OVERRIDE" );
 static const json_character_flag json_flag_HEATSINK( "HEATSINK" );
 static const json_character_flag json_flag_HYPEROPIC( "HYPEROPIC" );
@@ -1820,7 +1821,7 @@ void Character::forced_dismount()
     if( is_avatar() ) {
         avatar &player_character = get_avatar();
         if( player_character.get_grab_type() != object_type::NONE ) {
-            add_msg( m_warning, _( "You let go of the grabbed object." ) );
+            add_msg( m_warning, _( "You let go of what you were grabbing." ) );
             player_character.grab( object_type::NONE );
         }
         set_movement_mode( move_mode_walk );
@@ -2473,6 +2474,25 @@ void Character::process_turn()
                 }
             }
             it++;
+        }
+    }
+    creature_tracker &creatures = get_creature_tracker();
+    // Persist grabs as long as there's an adjacent target.
+    if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+        bool remove = true;
+        map &here = get_map();
+        for( const tripoint &dest : here.points_in_radius( pos(), 1, 0 ) ) {
+            const Creature *const target = creatures.creature_at<Creature>( dest );
+            if( target && target->has_effect_with_flag( json_flag_GRAB ) ) {
+                remove = false;
+            }
+        }
+        if( remove ) {
+            for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                const efftype_id effid = eff.get_id();
+                remove_effect( effid );
+                add_msg_debug( debugmode::DF_MATTACK, "Grab filter effect %s removed.", effid.c_str() );
+            }
         }
     }
     effect_on_conditions::process_effect_on_conditions( *this );

@@ -61,6 +61,8 @@ class gun_mode;
 
 static const efftype_id effect_amigara( "amigara" );
 static const efftype_id effect_glowing( "glowing" );
+static const efftype_id effect_grabbing( "grabbing" );
+static const efftype_id effect_grabbed( "grabbed" );
 static const efftype_id effect_harnessed( "harnessed" );
 static const efftype_id effect_hunger_engorged( "hunger_engorged" );
 static const efftype_id effect_incorporeal( "incorporeal" );
@@ -73,9 +75,14 @@ static const efftype_id effect_winded( "winded" );
 
 static const itype_id itype_swim_fins( "swim_fins" );
 
+static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
+static const flag_id json_flag_GRAB( "GRAB" );
+
 static const move_mode_id move_mode_prone( "prone" );
 
 static const skill_id skill_swimming( "swimming" );
+static const skill_id skill_throw( "throw" );
+static const skill_id skill_unarmed( "unarmed" );
 
 static const trait_id trait_GRAZER( "GRAZER" );
 static const trait_id trait_RUMINANT( "RUMINANT" );
@@ -981,6 +988,59 @@ void avatar_action::plthrow( avatar &you, item_location loc,
         }
     }
 
+if ( you.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+    bool remove = true;
+    map &here = get_map();
+    creature_tracker &creatures = get_creature_tracker();
+    
+    for ( const tripoint &dest : here.points_in_radius( you.pos(), 1, 0) ) {
+        const Creature *const target = creatures.creature_at<Creature>( dest );
+        
+        if ( target != nullptr && target->has_effect_with_flag( json_flag_GRAB ) ) {
+            remove = false;
+            if ( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
+                                      _( "You can't muster the effort to throw anything…") ) ) {
+            return;
+            }
+            target_handler::trajectory trajectory = target_handler::mode_throw_creature(you, target);
+
+            if ( trajectory.empty() ) {
+                return;
+            }
+
+            units::angle target_angle = coord_to_angle( you.pos(), trajectory.back() );
+            // TODO: We instead need to store who or what the player is grabbing
+            // so that we can remove the grabbed effect from it explicitly here.
+            for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                 const efftype_id effid = eff.get_id();
+                 you.remove_effect(effid);
+            }
+                const_cast<Creature*>( target )->remove_effect( effect_grabbed );
+                const_cast<Creature*>( target )->remove_effect( effect_grabbing );
+
+            int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
+            int their_size = static_cast<std::underlying_type_t<creature_size>>( target->as_monster->get_size() );
+            // TODO: Work out numbers so things perform as expected here.
+            // Average man can throw a cat several meters, a child only a few, might struggle to throw an adult at all.
+            float throwforce = ( ( you.get_arm_str() + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 3 ) + ( their_size - your_size ) ) * 10.0 );
+            if( throwforce <= 50 ) {
+            add_msg( m_warning _( "The %1s is too heavy to throw." ), target->as_monster()->name() );
+            return;
+            }
+            add_msg( _( "You throw the %1s!" ), target->as_monster()->name() );
+            g->fling_creature(const_cast<Creature*>( target ), target_angle, throwforce );
+            return;
+        }
+    }
+
+    if (remove) {
+        for (const effect &eff : you.get_effects_with_flag(json_flag_GRAB_FILTER)) {
+            const efftype_id effid = eff.get_id();
+            you.remove_effect(effid);
+        }
+    }
+}
+  
     if( !loc ) {
         loc = game_menus::inv::titled_menu( you,  _( "Throw item" ),
                                             _( "You don't have any items to throw." ) );
