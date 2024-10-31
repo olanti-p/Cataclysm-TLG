@@ -29,6 +29,7 @@
 #include "color.h"
 #include "construction.h"
 #include "creature_tracker.h"
+#include "creature.h"
 #include "cursesdef.h"
 #include "damage.h"
 #include "debug.h"
@@ -119,6 +120,8 @@ static const bionic_id bio_remote( "bio_remote" );
 static const damage_type_id damage_cut( "cut" );
 
 static const efftype_id effect_alarm_clock( "alarm_clock" );
+static const efftype_id effect_grabbed( "grabbed" );
+static const efftype_id effect_grabbing( "grabbing" );
 static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_stunned( "stunned" );
@@ -138,6 +141,7 @@ static const material_id material_glass( "glass" );
 static const quality_id qual_CUT( "CUT" );
 
 static const skill_id skill_melee( "melee" );
+static const skill_id skill_unarmed( "unarmed" );
 
 static const trait_id trait_BRAWLER( "BRAWLER" );
 static const trait_id trait_HIBERNATE( "HIBERNATE" );
@@ -658,17 +662,20 @@ static void close()
     }
 }
 
-// Establish or release a grab on a vehicle
+// Establish or release a grab on a creature, vehicle, or piece of furniture
 static void grab()
 {
     avatar &you = get_avatar();
     map &here = get_map();
+    creature_tracker &creatures = get_creature_tracker();
 
     if( you.get_grab_type() != object_type::NONE ) {
         if( const optional_vpart_position vp = here.veh_at( you.pos() + you.grab_point ) ) {
             add_msg( _( "You release the %s." ), vp->vehicle().name );
         } else if( here.has_furn( you.pos() + you.grab_point ) ) {
             add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
+        } else if( creatures.creature_at( you.pos() + you.grab_point ) ) {
+            add_msg( _( "You relinquish your grip." ) );
         }
 
         you.grab( object_type::NONE );
@@ -689,7 +696,7 @@ static void grab()
     }
 
     // Object might not be on the same z level if on a ramp.
-    if( !( here.veh_at( grabp ) || here.has_furn( grabp ) ) ) {
+    if( !( here.veh_at( grabp ) || here.has_furn( grabp ) || creatures.creature_at( grabp ) ) ) {
         if( here.has_flag( ter_furn_flag::TFLAG_RAMP_UP, grabp ) ||
             here.has_flag( ter_furn_flag::TFLAG_RAMP_UP, you.pos() ) ) {
             grabp.z += 1;
@@ -698,8 +705,24 @@ static void grab()
             grabp.z -= 1;
         }
     }
-
-    if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
+    if ( creatures.creature_at( grabp ) && !creatures.creature_at( grabp )->is_hallucination() ) {
+        int grab_strength = you.get_str_bonus() + you.get_skill_level( skill_unarmed );
+        if( creatures.creature_at( grabp )->is_monster() ) {
+            monster *z = creatures.creature_at( grabp )->as_monster();
+            add_msg( _( "You grab the %s." ), z->name() );
+            // Add grabbed - permanent, removal handled in try_remove_grab on move/wait
+            z->add_effect( effect_grabbed, 1_days, body_part_bp_null, true, grab_strength );
+            you.add_effect( effect_grabbing, 1_days, true, 1 );
+        } else {
+            Character *guy = creatures.creature_at( grabp )->as_character();
+            const bodypart_id &bp = guy->random_body_part();
+            add_msg( _( "You grab %s." ), guy->disp_name() );
+            // Need to target a limb since this is a character and not a monster
+            guy->add_effect( effect_grabbed, 1_days, bp, true, grab_strength );
+            you.add_effect( effect_grabbing, 1_days, true, 1 );
+        }
+    } else if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
+        
         if( !vp->vehicle().handle_potential_theft( you ) ) {
             return;
         }
@@ -720,7 +743,8 @@ static void grab()
         } else {
             add_msg( _( "You grab the %s." ), here.furnname( grabp ) );
         }
-    } else { // TODO: grab mob? Captured squirrel = pet (or meat that stays fresh longer).
+
+    } else {
         add_msg( m_info, _( "There's nothing to grab there!" ) );
     }
 }

@@ -2330,15 +2330,29 @@ bool monster::move_effects( bool )
         const tripoint_range<tripoint> &surrounding = here.points_in_radius( pos(), 1, 0 );
         for( const effect &grab : get_effects_with_flag( json_flag_GRAB ) ) {
             // Is our grabber around?
-            monster *grabber = nullptr;
-            for( const tripoint loc : surrounding ) {
-                monster *mon = creatures.creature_at<monster>( loc );
-                if( mon && mon->has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+            Creature *grabber = nullptr;
+
+            
+        for( const tripoint &loc : surrounding ) {
+            Creature *creature = creatures.creature_at<Creature>( loc );
+            if( creature == nullptr ) {
+                continue;
+            }
+
+            if( monster *mon = dynamic_cast<monster*>( creature ) ) {
+                if( mon->has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
                     add_msg_debug( debugmode::DF_MATTACK, "Grabber %s found", mon->name() );
                     grabber = mon;
                     break;
                 }
             }
+            if( Character *guy = dynamic_cast<Character*>( creature ) ) {
+                if( guy->has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+                    grabber = guy;
+                    break;
+                }
+            }
+        }
 
             if( grabber == nullptr ) {
                 remove_effect( grab.get_id() );
@@ -2355,8 +2369,10 @@ bool monster::move_effects( bool )
             if( !x_in_y( monster, grab_str ) ) {
                 return false;
             } else {
-                if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) ) {
-                    add_msg( _( "The %s breaks free from the %s's grab!" ), name(), grabber->name() );
+                if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) && grabber->is_monster() ) {
+                    add_msg( _( "The %s breaks free from the %s's grab!" ), name(), grabber->as_monster()->name() );
+                } else if( u_see_me ) {
+                    add_msg( _( "The %s breaks free from %s grab!" ), name(), grabber->disp_name( true ) );
                 }
                 remove_effect( grab.get_id() );
             }

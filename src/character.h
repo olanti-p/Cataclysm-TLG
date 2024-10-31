@@ -2175,6 +2175,8 @@ class Character : public Creature, public visitable
         int thrown_item_total_damage_raw( const item &thrown ) const;
         /** Maximum thrown range with a given item, taking all active effects into account. */
         int throw_range( const item & ) const;
+        /** Maximum thrown range with a given item, taking all active effects into account. */
+        int throw_creature_range() const;
         /** Dispersion of a thrown item, against a given target, taking into account whether or not the throw was blind. */
         int throwing_dispersion( const item &to_throw, Creature *critter = nullptr,
                                  bool is_blind_throw = false ) const;

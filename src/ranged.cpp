@@ -187,6 +187,7 @@ class target_ui
         TargetMode mode = TargetMode::Fire;
         // Weapon being fired/thrown
         item *relevant = nullptr;
+        const Creature *thrown_creature = nullptr;
         // Cached selection range from player's position
         int range = 0;
         // Cached current ammo to display
@@ -447,6 +448,23 @@ target_handler::trajectory target_handler::mode_throw( avatar &you, item &releva
     ui.mode = blind_throwing ? target_ui::TargetMode::ThrowBlind : target_ui::TargetMode::Throw;
     ui.relevant = &relevant;
     ui.range = you.throw_range( relevant );
+
+    restore_on_out_of_scope<tripoint> view_offset_prev( you.view_offset );
+    return ui.run();
+}
+
+// TODO: Set view_offset to the creature being thrown, derive throwing range
+// from throwforce.
+target_handler::trajectory target_handler::mode_throw_creature( avatar &you, const Creature* thrown_creature ) {
+    if (thrown_creature == nullptr) {
+
+        return trajectory();
+    }
+    target_ui ui = target_ui();
+    ui.you = &you;
+    ui.mode = target_ui::TargetMode::SelectOnly;
+    ui.thrown_creature = thrown_creature;
+    ui.range = 15;
 
     restore_on_out_of_scope<tripoint> view_offset_prev( you.view_offset );
     return ui.run();
