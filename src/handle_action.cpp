@@ -676,6 +676,7 @@ static void grab()
             add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
         } else if( creatures.creature_at( you.pos() + you.grab_point ) ) {
             add_msg( _( "You relinquish your grip." ) );
+            you.grab_1.clear();
         }
 
         you.grab( object_type::NONE );
@@ -707,12 +708,15 @@ static void grab()
     }
     if ( creatures.creature_at( grabp ) && !creatures.creature_at( grabp )->is_hallucination() ) {
         int grab_strength = you.get_str_bonus() + you.get_skill_level( skill_unarmed );
+        Creature* rawcreature = creatures.creature_at( grabp );
+        std::shared_ptr<Creature> victimptr(rawcreature, []( Creature* ) {});
         if( creatures.creature_at( grabp )->is_monster() ) {
             monster *z = creatures.creature_at( grabp )->as_monster();
             add_msg( _( "You grab the %s." ), z->name() );
             // Add grabbed - permanent, removal handled in try_remove_grab on move/wait
             z->add_effect( effect_grabbed, 1_days, body_part_bp_null, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
+            you.grab_1.set( victimptr, 10 );
         } else {
             Character *guy = creatures.creature_at( grabp )->as_character();
             const bodypart_id &bp = guy->random_body_part();
@@ -720,6 +724,7 @@ static void grab()
             // Need to target a limb since this is a character and not a monster
             guy->add_effect( effect_grabbed, 1_days, bp, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
+            you.grab_1.set( victimptr, 10, bp );
         }
     } else if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
         
@@ -732,7 +737,7 @@ static void grab()
         }
         you.grab( object_type::VEHICLE, grabp - you.pos() );
         add_msg( _( "You grab the %s." ), vp->vehicle().name );
-    } else if( here.has_furn( grabp ) ) { // If not, grab furniture if present
+    } else if( here.has_furn( grabp ) ) {
         if( !here.furn( grabp ).obj().is_movable() ) {
             add_msg( _( "You can not grab the %s." ), here.furnname( grabp ) );
             return;

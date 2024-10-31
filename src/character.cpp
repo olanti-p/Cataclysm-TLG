@@ -1822,6 +1822,7 @@ void Character::forced_dismount()
         avatar &player_character = get_avatar();
         if( player_character.get_grab_type() != object_type::NONE ) {
             add_msg( m_warning, _( "You let go of what you were grabbing." ) );
+            grab_1.clear();
             player_character.grab( object_type::NONE );
         }
         set_movement_mode( move_mode_walk );
@@ -2493,6 +2494,7 @@ void Character::process_turn()
                 remove_effect( effid );
                 add_msg_debug( debugmode::DF_MATTACK, "Grab filter effect %s removed.", effid.c_str() );
             }
+            grab_1.clear();
         }
     }
     effect_on_conditions::process_effect_on_conditions( *this );
