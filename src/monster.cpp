@@ -640,8 +640,8 @@ void monster::refill_udders()
 void monster::reset_digestion()
 {
     if( calendar::turn - stomach_timer > 3_days ) {
-        //If the player hasn't been around, assume critters have been operating at a subsistence level.
-        //Otherwise everything will constantly be underfed. We only run this on load to prevent problems.
+        // If the player hasn't been around, assume critters have been operating at a subsistence level.
+        // Otherwise everything will constantly be underfed. We only run this on load to prevent problems.
         remove_effect( effect_critter_underfed );
         remove_effect( effect_critter_well_fed );
         amount_eaten = 0;

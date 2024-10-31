@@ -992,10 +992,9 @@ if ( you.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
     bool remove = true;
     map &here = get_map();
     creature_tracker &creatures = get_creature_tracker();
-    
     for ( const tripoint &dest : here.points_in_radius( you.pos(), 1, 0) ) {
         const Creature *const target = creatures.creature_at<Creature>( dest );
-        
+
         if ( target != nullptr && target->has_effect_with_flag( json_flag_GRAB ) ) {
             remove = false;
             if ( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
@@ -1009,25 +1008,29 @@ if ( you.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
             }
 
             units::angle target_angle = coord_to_angle( you.pos(), trajectory.back() );
-            // TODO: We instead need to store who or what the player is grabbing
-            // so that we can remove the grabbed effect from it explicitly here.
+            you.grab_1.clear();
             for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                  const efftype_id effid = eff.get_id();
-                 you.remove_effect(effid);
+                 you.remove_effect( effid );
             }
+            // TODO: Clean up these manual removals.
                 const_cast<Creature*>( target )->remove_effect( effect_grabbed );
                 const_cast<Creature*>( target )->remove_effect( effect_grabbing );
 
             int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
-            int their_size = static_cast<std::underlying_type_t<creature_size>>( target->as_monster->get_size() );
+            int their_size = static_cast<std::underlying_type_t<creature_size>>( target->as_monster()->get_size() );
             // TODO: Work out numbers so things perform as expected here.
             // Average man can throw a cat several meters, a child only a few, might struggle to throw an adult at all.
+            // Add a stamina check to make sure this is doable at all. Leave the door open for bionic parts to reduce the minimum.
             float throwforce = ( ( you.get_arm_str() + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 3 ) + ( their_size - your_size ) ) * 10.0 );
             if( throwforce <= 50 ) {
-            add_msg( m_warning _( "The %1s is too heavy to throw." ), target->as_monster()->name() );
+            add_msg( ( "The %1s is too heavy for you to throw." ), target->as_monster()->name() );
             return;
             }
+            // TODO: Add a stamina cost here. Leave the door open for bionic parts to reduce this.
             add_msg( _( "You throw the %1s!" ), target->as_monster()->name() );
+            you.grab_1.clear();
+            // TODO: fling_creature should reduce damage based on victim size. A squirrel isn't going to destroy a brick wall.
             g->fling_creature(const_cast<Creature*>( target ), target_angle, throwforce );
             return;
         }
