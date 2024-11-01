@@ -137,6 +137,8 @@ static const itype_id itype_radiocontrol( "radiocontrol" );
 static const json_character_flag json_flag_ALARMCLOCK( "ALARMCLOCK" );
 static const json_character_flag json_flag_SUBTLE_SPELL( "SUBTLE_SPELL" );
 
+static const json_character_flag json_flag_GRAB_FILTER( "GRAB_FILTER" );
+
 static const material_id material_glass( "glass" );
 
 static const quality_id qual_CUT( "CUT" );
@@ -675,8 +677,13 @@ static void grab()
             add_msg( _( "You release the %s." ), vp->vehicle().name );
         } else if( here.has_furn( you.pos() + you.grab_point ) ) {
             add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
-        } else if( creatures.creature_at( you.pos() + you.grab_point ) ) {
+        } else if( you.grab_1.victim != nullptr ) {
             add_msg( _( "You relinquish your grip." ) );
+            you.grab_1.victim->remove_effect( effect_grabbed );
+            for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                const efftype_id effid = eff.get_id();
+                you.remove_effect( effid );
+            }
             you.grab_1.clear();
         }
 
@@ -719,8 +726,19 @@ static void grab()
         int grab_strength = you.get_str_bonus() + you.get_skill_level( skill_unarmed );
         Creature* rawcreature = creatures.creature_at( grabp );
         std::shared_ptr<Creature> victimptr(rawcreature, []( Creature* ) {});
+        const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+        item weap =  null_item_reference();
+        you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
         if( creatures.creature_at( grabp )->is_monster() ) {
             monster *z = creatures.creature_at( grabp )->as_monster();
+            // TODO: Force this to use unarmed skill for one-handed or multilimb grabs. Will need to
+            // write an optional member into hit_roll to name a weapon skill.
+            // TODO TWO: Grabbing with whip-type weapons?
+            int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
+            if( hitspread < 0 ) {
+                add_msg( _( "You reach for the %s, but fail to make contact!" ), z->name() );
+                return;
+            }
             add_msg( _( "You grab the %s." ), z->name() );
             // Add grabbed - permanent, removal handled in try_remove_grab on move/wait
             z->add_effect( effect_grabbed, 1_days, body_part_bp_null, true, grab_strength );
@@ -728,9 +746,16 @@ static void grab()
             you.grab_1.set( victimptr, 10 );
         } else {
             Character *guy = creatures.creature_at( grabp )->as_character();
-            const bodypart_id &bp = guy->random_body_part();
-            add_msg( _( "You grab %s." ), guy->disp_name() );
+            // TODO: Followers shouldn't try to dodge.
+            int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
+            if( hitspread < 0 ) {
+                add_msg( _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
+                return;
+            }
             // Need to target a limb since this is a character and not a monster
+            // TODO: Smarter limb targeting. Make sure we can't grab already-grabbed BPs
+            const bodypart_id &bp = guy->random_body_part( true );
+            add_msg( _( "You grab %1s by the %2s." ), guy->disp_name(), bp->name );
             guy->add_effect( effect_grabbed, 1_days, bp, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
             you.grab_1.set( victimptr, 10, bp );
