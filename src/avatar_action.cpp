@@ -997,28 +997,43 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             } else {
                 their_size = static_cast<std::underlying_type_t<creature_size>>( you.grab_1.victim->as_character()->get_size() );
             }
-            float throwforce = ( ( you.get_arm_str() + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 3 ) + ( their_size - your_size ) ) * 10.0 );
+            // A zombie hulk has a throwforce of 96. Fully evolved crab mutant starting from 10 strength has 25 strength. At 5/5 skills.
+            // a fully evolved crab mutant is at 75. Players can rapidly catch up and exceed this with bionics, but are subject to stat
+            // loss from pain etc., and are limited by stamina while monsters are not. Crab w/both strength CBMs > 140!!
+            float throwforce = ( ( you.get_arm_str() * 1.3 + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 3 ) + ( their_size - your_size ) ) * 2 );
+            // Fling's range is throwforce/10. Use the same calc here so that trajectory() knows how
+            // far to let the cursor extend.
+            int range = static_cast<int>( throwforce / 10 );
+            debugmsg( "Avatar initiating throw with throwforce %1s and max range %2s.", throwforce, range );
             if ( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
                                         _( "You can't muster the effort to throw anything…") ) ) {
                     return;
                 }
-            if( throwforce <= 50 ) {
-                you.add_msg_if_player( ( "The %1s is too heavy for you to throw." ), you.grab_1.victim->as_monster()->name() );
+            if( range <= 1 ) {
+                you.add_msg_if_player( ( "You can't muster the strength to throw that." ) );
                 return;
-                }
-            if ( ( you.grab_1.victim->has_effect_with_flag( json_flag_GRAB_FILTER ) && you.has_effect_with_flag( json_flag_GRAB ) ) && !you.try_remove_grab( true ) ) {
-                    if( you.grab_1.victim->is_monster() ) {
-                        you.add_msg_if_player( _( "The %1s clings to you tightly!" ), you.grab_1.victim->as_monster()->name() );
-                    } else {
-                        you.add_msg_if_player( _( "%1s clings to you tightly!" ), you.grab_1.victim->disp_name() );
-                    }
+            }
+            if ( ( you.grab_1.victim->has_effect_with_flag( json_flag_GRAB_FILTER ) && you.has_effect_with_flag( json_flag_GRAB ) ) && !you.try_remove_grab() ) {
+                item weap =  null_item_reference();
+                you.mod_moves( -100 - you.attack_speed( weap ) );
                     return;
                 }
-            target_handler::trajectory trajectory = target_handler::mode_throw_creature( you, you.grab_1.victim.get() );
-
+            target_handler::trajectory trajectory = target_handler::mode_throw_creature( you, you.grab_1.victim.get(), range );
             if ( trajectory.empty() ) {
                 return;
             }
+
+            // Proportionally reduce the force of the throw by how far we threw them compared to how far we could have thrown them.
+            // This lets us shove someone out of the way without gibbing them. Also means we only throw creatures roughly as far
+            // as we intended.
+            float distance = rl_dist( you.grab_1.victim->pos(), trajectory.back() );
+                if ( distance == 0.0 ) {
+                    debugmsg( "Error: Invalid throw distance." );
+                    return;
+                }
+            distance /= range;
+            throwforce *= distance;
+            debugmsg( "Adjusted throwforce for distance thrown is %s.", throwforce );
             units::angle target_angle = coord_to_angle( you.pos(), trajectory.back() );
             for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
@@ -1030,76 +1045,13 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             else {
                 you.add_msg_if_player( _( "You throw %1s!" ), you.grab_1.victim->as_character()->disp_name() );
             }
-            g->fling_creature( you.grab_1.victim.get(), target_angle, throwforce );
+            g->fling_creature( you.grab_1.victim.get(), target_angle, throwforce, false );
             you.grab_1.clear();
+            const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+            item weap =  null_item_reference();
+            you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
             return;
         }
-    //    map &here = get_map();
-//        creature_tracker &creatures = get_creature_tracker();
-//        for ( const tripoint &dest : here.points_in_radius( you.pos(), 1, 0) ) {
-//            const Creature *const target = creatures.creature_at<Creature>( dest );
-//            if ( target == nullptr || dest == you.pos() ) {
-//                continue;
-//            }
-            // int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
-            // int their_size = 0;
-            // if( target->is_monster() ) {
-            // their_size = static_cast<std::underlying_type_t<creature_size>>( target->as_monster()->get_size() );
-            // } else {
-            // their_size = static_cast<std::underlying_type_t<creature_size>>( target->as_character()->get_size() );
-            // }
-            //float throwforce = ( ( you.get_arm_str() + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 3 ) + ( their_size - your_size ) ) * 10.0 );
-          //  if ( target != nullptr && target->has_effect_with_flag( json_flag_GRAB ) ) {
-          //      if ( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
-         //                               _( "You can't muster the effort to throw anything…") ) ) {
-          //          return;
-           //     }
-           //     if( throwforce <= 50 ) {
-           //         you.add_msg_if_player( ( "The %1s is too heavy for you to throw." ), target->as_monster()->name() );
-           //         return;
-             //   }
-            //     if ( ( target->has_effect_with_flag( json_flag_GRAB_FILTER ) && you.has_effect_with_flag( json_flag_GRAB ) ) && !you.try_remove_grab( true ) ) {
-            //         if( target->is_monster() ) {
-            //             you.add_msg_if_player( _( "The %1s clings to you tightly!" ), target->as_monster()->name() );
-            //         } else {
-            //             you.add_msg_if_player( _( "%1s clings to you tightly!" ), target->disp_name() );
-            //         }
-            //         return;
-            //     }
-            // }
-        //     target_handler::trajectory trajectory = target_handler::mode_throw_creature( you, target );
-
-        //     if ( trajectory.empty() ) {
-        //         return;
-        //     }
-
-        //     units::angle target_angle = coord_to_angle( you.pos(), trajectory.back() );
-        //     you.grab_1.clear();
-        //     for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
-        //         const efftype_id effid = eff.get_id();
-        //         you.remove_effect( effid );
-        //     }
-        //         // TODO: Clean up these manual removals.
-        //         //    const_cast<Creature*>( target )->remove_effect( effect_grabbed );
-        //         //    const_cast<Creature*>( target )->remove_effect( effect_grabbing );
-
-
-        //         // TODO: Work out numbers so things perform as expected here.
-        //         // Average man can throw a cat several meters, a child only a few, might struggle to throw an adult at all.
-        //         // Add a stamina check to make sure this is doable at all. Leave the door open for bionic parts to reduce the minimum.
-
-        //         // TODO: Add a stamina cost here. Leave the door open for bionic parts to reduce this.
-        //         // Add variable messaging for shove/throw/send flying
-        //         // Split the grab filter effects so we know the right filter is going with the right grab
-        //     if( target->is_monster() ) {
-        //         you.add_msg_if_player( _( "You throw the %1s!" ), target->as_monster()->name() );
-        //     }
-        //     else {
-        //         you.add_msg_if_player( _( "You throw %1s!" ), target->as_character()->disp_name() );
-        //     }
-        //     g->fling_creature(const_cast<Creature*>( target ), target_angle, throwforce );
-        //     return;
-        // }
     }  
     if( !loc ) {
         loc = game_menus::inv::titled_menu( you,  _( "Throw item" ),
