@@ -19,10 +19,12 @@ static const efftype_id effect_crushed( "crushed" );
 static const efftype_id effect_downed( "downed" );
 static const efftype_id effect_heavysnare( "heavysnare" );
 static const efftype_id effect_in_pit( "in_pit" );
+static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_lightsnare( "lightsnare" );
 static const efftype_id effect_webbed( "webbed" );
 
 static const flag_id json_flag_GRAB( "GRAB" );
+static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
 
 static const itype_id itype_rope_6( "rope_6" );
 static const itype_id itype_snare_trigger( "snare_trigger" );
@@ -218,6 +220,11 @@ bool Character::try_remove_grab( bool attacking )
                 add_msg_debug( debugmode::DF_MATTACK, "Orphan grab found and removed" );
                 continue;
             }
+            if( has_effect( effect_incorporeal ) ) {
+                grabber->remove_grab( eff.get_bp().id() );
+                remove_effect( eff.get_id(), eff.get_bp() );
+                continue;
+            }
 
             // Short out the check when attacking after removing any orphan grabs
             if( attacking ) {
@@ -256,10 +263,11 @@ bool Character::try_remove_grab( bool attacking )
             grabber_roll = std::max( grabber_roll, escape_chance ) + rng( 1, 10 );
             escape_chance += grab_break_factor;
             if( has_trait( trait_SLIMY ) || has_trait( trait_VISCOUS ) ) {
-                const float slime_factor = worn.clothing_wetness_mult( eff.get_bp() ) * 6;
-                // Slime offers a 6% bonus to escaping from a grab on a naked body part.
+                const float slime_factor = worn.clothing_wetness_mult( eff.get_bp() ) * 8;
+                // Slime offers an 8% bonus to escaping from a grab on a naked body part.
                 // Slime exudes from the skin and will only soak through clothes according to their combined breathability and coverage.
-                // Since the attacker is grabbing at the outermost layer, that 6% is multiplied by clothing_wetness_mult for that body part.
+                // Since the attacker is grabbing at the outermost layer, that 8% is multiplied by clothing_wetness_mult for that body part.
+                // TODO: Negate this bonus for artificial limbs.
                 escape_chance += slime_factor;
                 add_msg_debug( debugmode::DF_MATTACK,
                                "%s is slimy, escape chance increased by %f",

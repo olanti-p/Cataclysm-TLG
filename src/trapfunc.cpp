@@ -826,10 +826,6 @@ bool trapfunc::pit( const tripoint &p, Creature *c, item * )
     if( c == nullptr ) {
         return false;
     }
-    // tiny animals aren't hurt by falling into pits
-    if( c->get_size() == creature_size::tiny ) {
-        return false;
-    }
     const float eff = pit_effectiveness( p );
     c->add_msg_player_or_npc( m_bad, _( "You fall in a pit!" ), _( "<npcname> falls in a pit!" ) );
     c->add_effect( effect_in_pit, 1_turns, true );
@@ -843,6 +839,10 @@ bool trapfunc::pit( const tripoint &p, Creature *c, item * )
         } else if( you->has_active_bionic( bio_shock_absorber ) ) {
             you->add_msg_if_player( m_info,
                                     _( "You hit the ground hard, but your grav chute handles the impact admirably!" ) );
+                                        // tiny animals aren't hurt by falling into pits
+        } else if( you->get_size() == creature_size::tiny ) {
+            you->add_msg_if_player( _( "You are unharmed by the fall." ) );
+            return false;
         } else {
             int dodge = you->get_dodge();
             ///\EFFECT_DODGE reduces damage taken falling into a pit
@@ -876,10 +876,6 @@ bool trapfunc::pit_spikes( const tripoint &p, Creature *c, item * )
     if( c == nullptr ) {
         return false;
     }
-    // tiny animals aren't hurt by falling into spiked pits
-    if( c->get_size() == creature_size::tiny ) {
-        return false;
-    }
     c->add_msg_player_or_npc( m_bad, _( "You fall in a spiked pit!" ),
                               _( "<npcname> falls in a spiked pit!" ) );
     c->add_effect( effect_in_pit, 1_turns, true );
@@ -893,6 +889,9 @@ bool trapfunc::pit_spikes( const tripoint &p, Creature *c, item * )
                                 you->has_flag( json_flag_WINGS_2 ) ) ) {
             you->add_msg_player_or_npc( _( "You spread your wings to slow your fall." ),
                                         _( "<npcname> spreads their wings to slow their fall." ) );
+        } else if( you->get_size() == creature_size::tiny ) {
+            you->add_msg_if_player( _( "You land harmlessly between the spikes." ) );
+            return false;
         } else if( you->has_active_bionic( bio_shock_absorber ) ) {
             you->add_msg_if_player( m_info,
                                     _( "You hit the ground hard, but your grav chute handles the impact admirably!" ) );
@@ -962,10 +961,6 @@ bool trapfunc::pit_glass( const tripoint &p, Creature *c, item * )
     if( c == nullptr ) {
         return false;
     }
-    // tiny animals aren't hurt by falling into glass pits
-    if( c->get_size() == creature_size::tiny ) {
-        return false;
-    }
     c->add_msg_player_or_npc( m_bad, _( "You fall in a pit filled with glass shards!" ),
                               _( "<npcname> falls in pit filled with glass shards!" ) );
     c->add_effect( effect_in_pit, 1_turns, true );
@@ -979,6 +974,9 @@ bool trapfunc::pit_glass( const tripoint &p, Creature *c, item * )
                                 you->has_flag( json_flag_WINGS_2 ) ) ) {
             you->add_msg_player_or_npc( _( "You spread your wings to slow your fall." ),
                                         _( "<npcname> spreads their wings to slow their fall." ) );
+        } else if( you->get_size() == creature_size::tiny ) {
+            you->add_msg_if_player( _( "You land harmlessly atop the shards." ) );
+            return false;
         } else if( you->has_active_bionic( bio_shock_absorber ) ) {
             you->add_msg_if_player( m_info,
                                     _( "You hit the ground hard, but your grav chute handles the impact admirably!" ) );
@@ -1258,9 +1256,6 @@ bool trapfunc::ledge( const tripoint &p, Creature *c, item * )
     Character *you = dynamic_cast<Character *>( c );
     if( you == nullptr ) {
         c->setpos( where );
-        if( c->get_size() == creature_size::tiny ) {
-            height = std::max( 0, height - 1 );
-        }
         if( c->has_effect( effect_weakened_gravity ) ) {
             height = std::max( 0, height - 1 );
         }
@@ -1273,8 +1268,8 @@ bool trapfunc::ledge( const tripoint &p, Creature *c, item * )
 
     item jetpack = you->item_worn_with_flag( STATIC( flag_id( "JETPACK" ) ) );
 
-    if( you->has_flag( json_flag_WALL_CLING ) &&  get_map().is_wall_adjacent( p ) ) {
-        you->add_msg_player_or_npc( _( "You attach yourself to the nearby wall." ),
+    if( you->has_flag( json_flag_WALL_CLING ) &&  get_map().is_clingable_wall_adjacent( p ) ) {
+        you->add_msg_player_or_npc( _( "You cling to the nearby wall." ),
                                     _( "<npcname> clings to the wall." ) );
         return false;
     }
@@ -1285,9 +1280,6 @@ bool trapfunc::ledge( const tripoint &p, Creature *c, item * )
         g->vertical_move( -height, true );
     } else {
         you->setpos( where );
-    }
-    if( you->get_size() == creature_size::tiny ) {
-        height = std::max( 0, height - 1 );
     }
     if( you->has_effect( effect_weakened_gravity ) ) {
         height = std::max( 0, height - 1 );

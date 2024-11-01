@@ -127,6 +127,7 @@ static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_stunned( "stunned" );
 
 static const flag_id json_flag_MOP( "MOP" );
+static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
 
 static const gun_mode_id gun_mode_AUTO( "AUTO" );
 
@@ -707,6 +708,14 @@ static void grab()
         }
     }
     if ( creatures.creature_at( grabp ) && !creatures.creature_at( grabp )->is_hallucination() ) {
+        if( you.is_armed() ) {
+            add_msg( _( "You'll need your hands free for grappling." ) );
+            return;
+        }
+        if( you.get_working_arm_count() < 1 || you.has_effect_with_flag( json_flag_NO_GRAB ) ) {
+            add_msg( _( "You can't manage that in your current condition." ) );
+            return;
+        }
         int grab_strength = you.get_str_bonus() + you.get_skill_level( skill_unarmed );
         Creature* rawcreature = creatures.creature_at( grabp );
         std::shared_ptr<Creature> victimptr(rawcreature, []( Creature* ) {});

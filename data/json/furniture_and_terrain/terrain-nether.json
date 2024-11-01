@@ -38,7 +38,7 @@
     "symbol": " ",
     "color": "black",
     "move_cost": 0,
-    "flags": [ "NOITEM", "WALL" ]
+    "flags": [ "NOITEM", "WALL", "UNCLINGABLE" ]
   },
   {
     "type": "terrain",
