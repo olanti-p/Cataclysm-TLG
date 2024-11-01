@@ -702,7 +702,7 @@ int Character::get_oxygen_max() const
 
 bool Character::can_recover_oxygen() const
 {
-    return get_limb_score( limb_score_breathing ) > 0.5f && !is_underwater() &&
+    return get_limb_score( limb_score_breathing ) > 0.5f && ( !is_underwater() && !has_active_bionic( bio_gills ) && !has_trait( trait_GILLS ) && !has_trait( trait_GILLS_CEPH ) ) &&
            !has_effect_with_flag( json_flag_GRAB ) && !( has_bionic( bio_synlungs ) &&
                    !has_active_bionic( bio_synlungs ) );
 }
@@ -2486,13 +2486,15 @@ void Character::process_turn()
             const Creature *const target = creatures.creature_at<Creature>( dest );
             if( target && target->has_effect_with_flag( json_flag_GRAB ) ) {
                 remove = false;
+                if( has_effect( effect_incorporeal ) ) {
+                remove = true;
+                }
             }
         }
         if( remove ) {
             for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
                 remove_effect( effid );
-                add_msg_debug( debugmode::DF_MATTACK, "Grab filter effect %s removed.", effid.c_str() );
             }
             grab_1.clear();
         }
@@ -12838,6 +12840,17 @@ int Character::impact( const int force, const tripoint &p )
                 mod /= 1.0f + ( 0.1f * swim_skill );
             }
         }
+    }
+
+    // A squirrel can fall a great distance without being harmed,
+    // and it would have to be going unbelievably fast to hurt anything
+    // it collided with.
+    if( get_size() == creature_size::tiny ) {
+        effective_force -= 40;
+    }
+    // Reduction is proportionally less as we scale up.
+    if( get_size() == creature_size::small ) {
+        effective_force = 15;
     }
 
     // Rescale for huge force

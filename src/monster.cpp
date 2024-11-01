@@ -101,6 +101,7 @@ static const efftype_id effect_grabbing( "grabbing" );
 static const efftype_id effect_has_bag( "has_bag" );
 static const efftype_id effect_heavysnare( "heavysnare" );
 static const efftype_id effect_hit_by_player( "hit_by_player" );
+static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_in_pit( "in_pit" );
 static const efftype_id effect_leashed( "leashed" );
 static const efftype_id effect_lightsnare( "lightsnare" );
@@ -2354,7 +2355,7 @@ bool monster::move_effects( bool )
             }
         }
 
-            if( grabber == nullptr ) {
+            if( grabber == nullptr || has_effect( effect_incorporeal ) ) {
                 remove_effect( grab.get_id() );
                 add_msg_debug( debugmode::DF_MATTACK, "Orphan grab found and removed" );
                 if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) ) {
@@ -3869,7 +3870,7 @@ void monster::on_load()
     try_biosignature();
     reset_digestion();
 
-    //Clean up runaway values for monsters which eat but don't digest yet.
+    // Clean up runaway values for monsters which eat but don't digest yet.
     if( amount_eaten > 0 ) {
         if( has_flag( mon_flag_EATS ) ) {
             digest_food();

@@ -267,6 +267,7 @@ std::string enum_to_string<ter_furn_flag>( ter_furn_flag data )
         case ter_furn_flag::TFLAG_SINGLE_SUPPORT: return "SINGLE_SUPPORT";
         case ter_furn_flag::TFLAG_CLIMB_ADJACENT: return "CLIMB_ADJACENT";
         case ter_furn_flag::TFLAG_TINDER: return "TINDER";
+        case ter_furn_flag::TFLAG_UNCLINGABLE: return "UNCLINGABLE";
         case ter_furn_flag::TFLAG_FLOATS_IN_AIR: return "FLOATS_IN_AIR";
 
         // *INDENT-ON*
