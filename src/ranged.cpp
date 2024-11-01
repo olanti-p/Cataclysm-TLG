@@ -174,6 +174,7 @@ class target_ui
             Fire,
             Throw,
             ThrowBlind,
+            ThrowCreature,
             Turrets,
             TurretManual,
             Reach,
@@ -456,13 +457,12 @@ target_handler::trajectory target_handler::mode_throw( avatar &you, item &releva
 // TODO: Set view_offset to the creature being thrown, derive throwing range
 // from throwforce.
 target_handler::trajectory target_handler::mode_throw_creature( avatar &you, const Creature* thrown_creature ) {
-    if (thrown_creature == nullptr) {
-
+    if ( thrown_creature == nullptr ) {
         return trajectory();
     }
     target_ui ui = target_ui();
     ui.you = &you;
-    ui.mode = target_ui::TargetMode::SelectOnly;
+    ui.mode = target_ui::TargetMode::ThrowCreature;
     ui.thrown_creature = thrown_creature;
     ui.range = 15;
 
@@ -2535,7 +2535,11 @@ target_handler::trajectory target_ui::run()
     }
 
     // Initialize cursor position
-    src = you->pos();
+    if( mode == TargetMode::ThrowCreature ) {
+        src = thrown_creature->pos();
+    } else {
+        src = you->pos();
+    }
     update_target_list();
 
     if( activity && activity->abort_if_no_targets && targets.empty() ) {
