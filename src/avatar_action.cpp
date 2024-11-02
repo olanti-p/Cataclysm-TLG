@@ -75,8 +75,8 @@ static const efftype_id effect_winded( "winded" );
 
 static const itype_id itype_swim_fins( "swim_fins" );
 
-static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
 static const flag_id json_flag_GRAB( "GRAB" );
+static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
 
 static const move_mode_id move_mode_prone( "prone" );
 
@@ -1001,10 +1001,13 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             // a fully evolved crab mutant is at 75. Players can rapidly catch up and exceed this with bionics, but are subject to stat
             // loss from pain etc., and are limited by stamina while monsters are not. Crab w/both strength CBMs > 140!!
             float throwforce = ( ( you.get_arm_str() * 1.3 + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 3 ) + ( their_size - your_size ) ) * 2 );
+            // Ensure that characters with high skill but low strength aren't throwing people across the street.
+            // 10 strength = average.
+            float strength_factor = ( std::min( 1, ( you.get_arm_str() / 11 ) ) );
+            throwforce *= strength_factor;
             // Fling's range is throwforce/10. Use the same calc here so that trajectory() knows how
             // far to let the cursor extend.
             int range = static_cast<int>( throwforce / 10 );
-            debugmsg( "Avatar initiating throw with throwforce %1s and max range %2s.", throwforce, range );
             if ( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
                                         _( "You can't muster the effort to throw anything…") ) ) {
                     return;
@@ -1033,19 +1036,21 @@ void avatar_action::plthrow( avatar &you, item_location loc,
                 }
             distance /= range;
             throwforce *= distance;
-            debugmsg( "Adjusted throwforce for distance thrown is %s.", throwforce );
             units::angle target_angle = coord_to_angle( you.pos(), trajectory.back() );
             for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
+                if( eff.get_intensity() == you.grab_1.grab_strength ) {
                 you.remove_effect( effid );
+                }
             }
-            if( you.grab_1.victim->is_monster() ) {
-                you.add_msg_if_player( _( "You throw the %1s!" ), you.grab_1.victim->as_monster()->name() );
-            }
-            else {
-                you.add_msg_if_player( _( "You throw %1s!" ), you.grab_1.victim->as_character()->disp_name() );
-            }
+            you.add_msg_if_player( _( "You %1s %2s!" ), you.as_character()->get_throw_descriptor( throwforce ), you.grab_1.victim->disp_name() );
             g->fling_creature( you.grab_1.victim.get(), target_angle, throwforce, false );
+            // Followers always assume you are doing things for good reasons that their dumb NPC brains can't fathom, but will
+            // still react if you start murdering them.
+            // TODO: Neutral NPCs should allow for a small amount of wrassling - there could be good reasons to shove them around.
+            if( ( you.grab_1.victim->is_npc() && throwforce > 24 && ( !you.grab_1.victim->as_npc()->is_player_ally() && you.is_avatar() ) ) || ( you.grab_1.victim->is_npc() && throwforce > 60 ) ) {
+                you.grab_1.victim->as_npc()->on_attacked( you );
+            }
             you.grab_1.clear();
             const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
             item weap =  null_item_reference();

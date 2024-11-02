@@ -126,6 +126,7 @@ static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_stunned( "stunned" );
 
+static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
 static const flag_id json_flag_MOP( "MOP" );
 static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
 
@@ -136,8 +137,6 @@ static const itype_id itype_radiocontrol( "radiocontrol" );
 
 static const json_character_flag json_flag_ALARMCLOCK( "ALARMCLOCK" );
 static const json_character_flag json_flag_SUBTLE_SPELL( "SUBTLE_SPELL" );
-
-static const json_character_flag json_flag_GRAB_FILTER( "GRAB_FILTER" );
 
 static const material_id material_glass( "glass" );
 
@@ -673,19 +672,22 @@ static void grab()
     creature_tracker &creatures = get_creature_tracker();
 
     if( you.get_grab_type() != object_type::NONE ) {
-        if( const optional_vpart_position vp = here.veh_at( you.pos() + you.grab_point ) ) {
-            add_msg( _( "You release the %s." ), vp->vehicle().name );
-        } else if( here.has_furn( you.pos() + you.grab_point ) ) {
-            add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
-        } else if( you.grab_1.victim != nullptr ) {
-            add_msg( _( "You relinquish your grip." ) );
+
+        if( you.grab_1.victim != nullptr ) {
+            add_msg( _( "You release %s." ), you.grab_1.victim->disp_name() );
             you.grab_1.victim->remove_effect( effect_grabbed );
             for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
+                if( eff.get_intensity() == you.grab_1.grab_strength ) {
                 you.remove_effect( effid );
+                }
             }
             you.grab_1.clear();
-        }
+        } else if( const optional_vpart_position vp = here.veh_at( you.pos() + you.grab_point ) ) {
+            add_msg( _( "You release the %s." ), vp->vehicle().name );
+        } else if( here.has_furn( you.pos() + you.grab_point ) ) {
+            add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
+        } else 
 
         you.grab( object_type::NONE );
         return;
@@ -723,9 +725,15 @@ static void grab()
             add_msg( _( "You can't manage that in your current condition." ) );
             return;
         }
-        int grab_strength = you.get_str_bonus() + you.get_skill_level( skill_unarmed );
+        int grab_strength = 1 + you.get_arm_str() + you.get_skill_level( skill_unarmed );
         Creature* rawcreature = creatures.creature_at( grabp );
         std::shared_ptr<Creature> victimptr(rawcreature, []( Creature* ) {});
+        // TODO: Make neutral NPCs tolerant of a small amount of grabbing.
+        if( creatures.creature_at( grabp )->is_npc() && !creatures.creature_at( grabp )->as_npc()->is_player_ally() ) {
+            if( !query_yn( _( "Really attack %s?" ), creatures.creature_at( grabp )->disp_name() ) ) {
+                return;
+            }
+        }
         const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
         item weap =  null_item_reference();
         you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
@@ -736,21 +744,22 @@ static void grab()
             // TODO TWO: Grabbing with whip-type weapons?
             int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
             if( hitspread < 0 ) {
-                add_msg( _( "You reach for the %s, but fail to make contact!" ), z->name() );
+                add_msg( _( "You reach for %s, but fail to make contact!" ), z->disp_name() );
                 return;
             }
             add_msg( _( "You grab the %s." ), z->name() );
-            // Add grabbed - permanent, removal handled in try_remove_grab on move/wait
             z->add_effect( effect_grabbed, 1_days, body_part_bp_null, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
-            you.grab_1.set( victimptr, 10 );
+            you.grab_1.set( victimptr, grab_strength );
+            you.grab( object_type::MONSTER, grabp - you.pos() );
         } else {
             Character *guy = creatures.creature_at( grabp )->as_character();
-            // TODO: Followers shouldn't try to dodge.
-            int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
-            if( hitspread < 0 ) {
-                add_msg( _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
-                return;
+            if( guy->is_npc() && !guy->as_npc()->is_player_ally() ) {
+                int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
+                if( hitspread < 0 ) {
+                    add_msg( _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
+                    return;
+                }
             }
             // Need to target a limb since this is a character and not a monster
             // TODO: Smarter limb targeting. Make sure we can't grab already-grabbed BPs
@@ -758,7 +767,13 @@ static void grab()
             add_msg( _( "You grab %1s by the %2s." ), guy->disp_name(), bp->name );
             guy->add_effect( effect_grabbed, 1_days, bp, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
-            you.grab_1.set( victimptr, 10, bp );
+            you.grab_1.set( victimptr, grab_strength, bp );
+            if guy->is_avatar() {
+            you.grab( object_type::PLAYER, grabp - you.pos() );
+            } else {
+            guy->as_npc()->on_attacked( you );
+            you.grab( object_type::NPC, grabp - you.pos() );
+            }
         }
     } else if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
         
