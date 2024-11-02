@@ -106,6 +106,8 @@ static const faction_id faction_amf( "amf" );
 static const faction_id faction_no_faction( "no_faction" );
 static const faction_id faction_your_followers( "your_followers" );
 
+static const flag_id json_flag_GRAB( "GRAB" );
+
 static const item_group_id Item_spawn_data_guns_pistol_common( "guns_pistol_common" );
 static const item_group_id Item_spawn_data_guns_rifle_common( "guns_rifle_common" );
 static const item_group_id Item_spawn_data_guns_shotgun_common( "guns_shotgun_common" );
@@ -3142,6 +3144,18 @@ void npc::process_turn()
         set_stamina( get_stamina_max() );
     }
 
+    if( has_effect_with_flag( json_flag_GRAB ) ) {
+        for( const effect &grab : get_effects_with_flag( json_flag_GRAB ) ) {
+            time_point start_time = grab.get_start_time();
+            time_duration effect_dur_elapsed = calendar::turn - start_time;
+            int speed_factor = 1 + std::round( 100 / get_speed() );
+            if( to_turns<int>( effect_dur_elapsed ) <= std::max( 1, speed_factor ) ) {
+                try_remove_grab();
+            }
+        }
+    }
+
+    // TODO: Probably ought to get rid of this if needs are disabled.
     if( is_player_ally() && calendar::once_every( 1_hours ) &&
         get_hunger() < 200 && get_thirst() < 100 && op_of_u.trust < 5 ) {
         // Friends who are well fed will like you more

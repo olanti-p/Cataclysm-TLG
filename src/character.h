@@ -589,6 +589,7 @@ class Character : public Creature, public visitable
 
         struct grab_data {
             std::shared_ptr<Creature> victim;
+            efftype_id grab_effect_id;
             int grab_strength;
             bodypart_id grabbed_part;
             grab_data() : victim(nullptr), grab_strength(0), grabbed_part(bodypart_id()) {}
@@ -3275,6 +3276,7 @@ class Character : public Creature, public visitable
         int get_mutation_visibility_cap( const Character *observed ) const;
         /** Returns an enumeration of visible mutations with colors */
         std::string visible_mutations( int visibility_cap ) const;
+        std::string get_throw_descriptor( int throwforce );
 
         player_activity get_destination_activity() const;
         void set_destination_activity( const player_activity &new_destination_activity );
