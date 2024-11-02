@@ -2958,7 +2958,8 @@ bool mattack::nurse_assist( monster *z )
 }
 bool mattack::nurse_operate( monster *z )
 {
-    if( z->has_effect( effect_dragging ) || z->has_effect( effect_operating ) || z->has_effect_with_flag( json_flag_NO_GRAB ) ) {
+    if( z->has_effect( effect_dragging ) || z->has_effect( effect_operating ) ||
+        z->has_effect_with_flag( json_flag_NO_GRAB ) ) {
         return false;
     }
     Character &player_character = get_player_character();

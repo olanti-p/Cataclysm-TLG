@@ -1716,7 +1716,17 @@
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_rock_roof",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "CONNECT_WITH_WALL", "MINEABLE", "BLOCK_WIND", "UNCLINGABLE" ],
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "CONNECT_WITH_WALL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "UNCLINGABLE"
+    ],
     "bash": {
       "str_min": 120,
       "str_max": 400,
@@ -2562,7 +2572,17 @@
     "color": "light_cyan",
     "move_cost": 0,
     "roof": "t_flat_roof",
-    "flags": [ "TRANSPARENT", "NOITEM", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "OPENCLOSE_INSIDE", "MINEABLE", "BLOCK_WIND", "UNCLINGABLE" ],
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "OPENCLOSE_INSIDE",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "UNCLINGABLE"
+    ],
     "close": "t_reinforced_glass_shutter",
     "bash": {
       "str_min": 40,

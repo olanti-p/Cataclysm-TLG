@@ -316,13 +316,13 @@ bool Character::try_remove_grab( bool attacking )
             burn_energy_arms( -5 * eff.get_intensity() );
             if( x_in_y( escape_chance, grabber_roll ) ) {
                 if( grabber->is_monster() ) {
-                grabber->as_monster()->remove_grab( eff.get_bp().id() );
-                add_msg_debug( debugmode::DF_MATTACK, "Removed grab effect %s from grabber %s",
-                               eff.get_bp()->name, grabber->as_monster()->name() );
+                    grabber->as_monster()->remove_grab( eff.get_bp().id() );
+                    add_msg_debug( debugmode::DF_MATTACK, "Removed grab effect %s from grabber %s",
+                                   eff.get_bp()->name, grabber->as_monster()->name() );
                 } else {
-                grabber->as_character()->grab_1.clear();
-                add_msg_debug( debugmode::DF_CHARACTER, "Removed grab effect %s from grabber %s",
-                               eff.get_bp()->name, grabber->disp_name() );
+                    grabber->as_character()->grab_1.clear();
+                    add_msg_debug( debugmode::DF_CHARACTER, "Removed grab effect %s from grabber %s",
+                                   eff.get_bp()->name, grabber->disp_name() );
                 }
 
                 if( grab_break_factor > 0 ) {

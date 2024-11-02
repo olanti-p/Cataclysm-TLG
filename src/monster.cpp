@@ -2358,16 +2358,19 @@ bool monster::move_effects( bool )
             }
             int monster = type->melee_skill + type->melee_damage.total_damage();
             int grab_str = get_effect_int( grab.get_id() );
-            add_msg_debug( debugmode::DF_MONSTER, "%1s attempting to break grab %2s, success %3s in intensity %4s",
+            add_msg_debug( debugmode::DF_MONSTER,
+                           "%1s attempting to break grab %2s, success %3s in intensity %4s",
                            get_name(), grab.get_id().c_str(), monster, grab_str );
             if( !x_in_y( monster, grab_str ) ) {
                 return false;
             } else {
                 if( grabber ) {
                     if( grabber->is_avatar() ) {
-                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ), grabber->disp_name( true ) );
+                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ),
+                                 grabber->disp_name( true ) );
                     } else if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) ) {
-                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ), grabber->disp_name( true ) );
+                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ),
+                                 grabber->disp_name( true ) );
                     }
                     if( !grabber->is_monster() ) {
                         for( const effect &eff : grabber->get_effects_with_flag( json_flag_GRAB_FILTER ) ) {

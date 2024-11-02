@@ -988,28 +988,35 @@ void avatar_action::plthrow( avatar &you, item_location loc,
         }
     }
 
-    if ( you.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+    if( you.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         if( you.grab_1.victim != nullptr ) {
-                int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
-                int their_size = 0;
+            int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
+            int their_size = 0;
             if( you.grab_1.victim->is_monster() ) {
-                their_size = static_cast<std::underlying_type_t<creature_size>>( you.grab_1.victim->as_monster()->get_size() );
+                their_size = static_cast<std::underlying_type_t<creature_size>>
+                             ( you.grab_1.victim->as_monster()->get_size() );
             } else {
-                their_size = static_cast<std::underlying_type_t<creature_size>>( you.grab_1.victim->as_character()->get_size() );
+                their_size = static_cast<std::underlying_type_t<creature_size>>
+                             ( you.grab_1.victim->as_character()->get_size() );
             }
             // A zombie hulk has a throwforce of 96. Fully evolved crab mutant starting from 10 strength has 25 strength. At 5/5 skills.
             // A fully evolved crab mutant hits ~87. Crabs can rapidly catch up and exceed this by adding bionics, but are subject to stat
             // loss from pain etc., and are limited by stamina while monsters are not.
             float strength_factor = 0;
             if( you.get_arm_str() > 10 ) {
-                strength_factor = you.get_arm_str() / 90;
+                strength_factor = you.get_arm_str() / 100;
             }
             // TODO: Get encumbrance involved here.
-            float throwforce = ( ( you.get_arm_str() * ( 1.1 + strength_factor ) + ( ( you.get_skill_level( skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 4 ) + ( their_size - your_size ) ) * 2 );
+            float throwforce = ( ( you.get_arm_str() * ( 1.1 + strength_factor ) + ( ( you.get_skill_level(
+                                       skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 4 ) + 2 *
+                                   ( their_size - your_size ) ) *
+                                 2 );
             // TODO: Get better stamina costs. Pull weight from monster's corpse entry?
             // Relative size is probably better than absolute until we make weapons
             // care about character size.
-            int stamina_mod = std::round( std::min( -800.f, ( 300 * you.get_skill_level( skill_throw ) + 400 * you.get_skill_level( skill_unarmed ) + ( -5500 * ( their_size / your_size ) ) ) ) );
+            int stamina_mod = std::round( std::min( -800.f,
+                                                    ( 300 * you.get_skill_level( skill_throw ) + 400 * you.get_skill_level( skill_unarmed ) +
+                                                            ( -5500 * ( their_size / your_size ) ) ) ) );
             // Ensure that characters with high skill but low strength aren't throwing people across the street.
             // 10 strength = average.
             // Fling's range is throwforce/10. Use the same calc here so that trajectory() knows how
@@ -1019,25 +1026,29 @@ void avatar_action::plthrow( avatar &you, item_location loc,
                 throwforce *= 0.25;
             }
             int range = static_cast<int>( throwforce / 10 );
-            if ( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
-                                        _( "You can't muster the effort to throw anything…") ) ) {
-                    return;
-                }
-            if( range <= 1 || you.get_stamina_max() < ( -1 * stamina_mod ) ) {
-                you.add_msg_if_player( ( "You can't muster the strength to throw %s." ), you.grab_1.victim->disp_name() );
+            if( !you.try_break_relax_gas( _( "You concentrate mightily, and your body obeys!" ),
+                                          _( "You can't muster the effort to throw anything…" ) ) ) {
+                return;
+            }
+            if( range <= 1 || you.get_stamina_max() < ( -1 * stamina_mod ) ||
+                their_size - your_size > you.get_arm_str() / 10 ) {
+                you.add_msg_if_player( ( "You can't muster the strength to throw %s." ),
+                                       you.grab_1.victim->disp_name() );
                 return;
             }
             if( ( you.get_stamina() ) < ( -1 * stamina_mod ) ) {
                 you.add_msg_if_player( ( "You're too exhausted to throw %s." ), you.grab_1.victim->disp_name() );
                 return;
             }
-            if ( ( you.grab_1.victim->has_effect_with_flag( json_flag_GRAB_FILTER ) && you.has_effect_with_flag( json_flag_GRAB ) ) && !you.try_remove_grab() ) {
+            if( ( you.grab_1.victim->has_effect_with_flag( json_flag_GRAB_FILTER ) &&
+                  you.has_effect_with_flag( json_flag_GRAB ) ) && !you.try_remove_grab() ) {
                 item weap =  null_item_reference();
                 you.mod_moves( -100 - you.attack_speed( weap ) );
-                    return;
-                }
-            target_handler::trajectory trajectory = target_handler::mode_throw_creature( you, you.grab_1.victim.get(), range );
-            if ( trajectory.empty() ) {
+                return;
+            }
+            target_handler::trajectory trajectory = target_handler::mode_throw_creature( you,
+                                                    you.grab_1.victim.get(), range );
+            if( trajectory.empty() ) {
                 return;
             }
 
@@ -1045,29 +1056,33 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             // This lets us shove someone out of the way without gibbing them. Also means we only throw creatures roughly as far
             // as we intended.
             float distance = rl_dist( you.grab_1.victim->pos(), trajectory.back() );
-                if ( distance == 0.0 ) {
-                    debugmsg( "Error: Invalid throw distance." );
-                    return;
-                }
+            if( distance == 0.0 ) {
+                debugmsg( "Error: Invalid throw distance." );
+                return;
+            }
             distance /= range;
             throwforce *= distance;
             bool do_harm = false;
             // TODO: Add some trajectory data to the sidebar.
             units::angle target_angle = coord_to_angle( you.pos(), trajectory.back() );
-            if( ( you.grab_1.victim->is_npc() && throwforce > 24 && !you.grab_1.victim->as_npc()->is_enemy() && ( !you.grab_1.victim->as_npc()->is_player_ally() && you.is_avatar() ) ) || ( you.grab_1.victim->is_npc() && throwforce > 60 ) ) {
-                if( !query_yn( _( "This will probably make %s angry.  Continue?" ), you.grab_1.victim->disp_name() ) ) {
+            if( ( you.grab_1.victim->is_npc() && throwforce > 24 && !you.grab_1.victim->as_npc()->is_enemy() &&
+                  ( !you.grab_1.victim->as_npc()->is_player_ally() && you.is_avatar() ) ) ||
+                ( you.grab_1.victim->is_npc() && throwforce > 60 ) ) {
+                if( !query_yn( _( "This will probably make %s angry.  Continue?" ),
+                               you.grab_1.victim->disp_name() ) ) {
                     return;
                 }
                 do_harm = true;
             }
-            for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+            for( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
                 if( eff.get_intensity() == you.grab_1.grab_strength ) {
-                you.remove_effect( effid );
+                    you.remove_effect( effid );
                 }
             }
             // TODO: Give enemies a chance to resist, possibly reducing throwforce.
-            you.add_msg_if_player( _( "You %1s %2s!" ), you.as_character()->get_throw_descriptor( throwforce ), you.grab_1.victim->disp_name() );
+            you.add_msg_if_player( _( "You %1s %2s!" ), you.as_character()->get_throw_descriptor( throwforce ),
+                                   you.grab_1.victim->disp_name() );
             g->fling_creature( you.grab_1.victim.get(), target_angle, throwforce, false );
             // Followers always assume you are doing things for good reasons that their dumb NPC brains can't fathom, but will
             // still react if you start murdering them.
@@ -1082,7 +1097,7 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             you.as_character()->burn_energy_arms( stamina_mod );
             return;
         }
-    }  
+    }
     if( !loc ) {
         loc = game_menus::inv::titled_menu( you,  _( "Throw item" ),
                                             _( "You don't have any items to throw." ) );
