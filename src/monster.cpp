@@ -2354,7 +2354,7 @@ bool monster::move_effects( bool )
             time_duration effect_dur_elapsed = calendar::turn - start_time;
             int speed_factor = 1 + std::round( 100 / get_speed() );
             if( to_turns<int>( effect_dur_elapsed ) <= std::max( 1, speed_factor ) ) {
-                continue;
+                return false;
             }
             int monster = type->melee_skill + type->melee_damage.total_damage();
             int grab_str = get_effect_int( grab.get_id() );
@@ -2365,9 +2365,9 @@ bool monster::move_effects( bool )
             } else {
                 if( grabber ) {
                     if( grabber->is_avatar() ) {
-                        add_msg( _( "%s breaks free from %s grab!" ), disp_name( false, true ), grabber->disp_name( true ) );
+                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ), grabber->disp_name( true ) );
                     } else if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) ) {
-                        add_msg( _( "%s breaks free from %s grab!" ), disp_name( false, true ), grabber->disp_name( true ) );
+                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ), grabber->disp_name( true ) );
                     }
                     if( !grabber->is_monster() ) {
                         for( const effect &eff : grabber->get_effects_with_flag( json_flag_GRAB_FILTER ) ) {

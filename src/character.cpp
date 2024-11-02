@@ -2526,32 +2526,36 @@ void Character::process_turn()
     // Check the grabbing character for orphan grabs on their end.
     if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         bool remove = false;
-        if( grab_1.victim == nullptr ) {
-            remove = true;
-        }
-        if( grab_1.victim != nullptr && square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+        if( !grab_1.victim || square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
             remove = true;
         }
         // This is for if we moved away, dropping our grab, but the victim moved adjacent to us before our next turn began.
-        if( grab_1.victim != nullptr ) {
-                bool grabfound = false;
-                for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
+        if( grab_1.victim ) {
+            bool grabfound = false;
+            for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
                 if( eff.get_intensity() == grab_1.grab_strength ) {
                     grabfound = true;
-                    }
                 }
-            if( grabfound == false ) {
-            remove = true;
+            }
+            if( !grabfound ) {
+                remove = true;
             }
         }
-        if( remove == true ) {
+        if( get_stamina() < 400 ) {
+            add_msg_if_player( _( "You're too exhausted to maintain your hold." ) );
+            remove = true;
+        }
+
+        if( remove ) {
             add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.", disp_name() );
             for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
                 remove_effect( effid );
                 add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.", disp_name() );
             }
-        grab_1.clear();
+            grab_1.clear();
+        } else {
+            burn_energy_arms( -400 );
         }
     }
     effect_on_conditions::process_effect_on_conditions( *this );
