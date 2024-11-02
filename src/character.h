@@ -592,8 +592,9 @@ class Character : public Creature, public visitable
             efftype_id grab_effect_id;
             int grab_strength;
             bodypart_id grabbed_part;
-            grab_data() : victim(nullptr), grab_strength(0), grabbed_part(bodypart_id()) {}
-            grab_data( std::shared_ptr<Creature> victim, int grab_strength, bodypart_id grabbed_part = bodypart_id() )
+            grab_data() : victim( nullptr ), grab_strength( 0 ), grabbed_part( bodypart_id() ) {}
+            grab_data( std::shared_ptr<Creature> victim, int grab_strength,
+                       bodypart_id grabbed_part = bodypart_id() )
                 : victim( victim ), grab_strength( grab_strength ), grabbed_part( grabbed_part ) {}
 
             void clear() {
@@ -601,8 +602,9 @@ class Character : public Creature, public visitable
                 grab_strength = 0;
                 grabbed_part = bodypart_id();
             }
-    
-            void set(std::shared_ptr<Creature> newvictim, int newgrab_strength, bodypart_id newgrabbed_part = bodypart_id() ) {
+
+            void set( std::shared_ptr<Creature> newvictim, int newgrab_strength,
+                      bodypart_id newgrabbed_part = bodypart_id() ) {
                 victim = newvictim;
                 grab_strength = newgrab_strength;
                 grabbed_part = newgrabbed_part;

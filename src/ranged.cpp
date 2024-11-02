@@ -459,8 +459,10 @@ target_handler::trajectory target_handler::mode_throw( avatar &you, item &releva
 
 // TODO: Set view_offset to the creature being thrown, derive throwing range
 // from throwforce.
-target_handler::trajectory target_handler::mode_throw_creature( avatar &you, const Creature* thrown_creature, int range ) {
-    if ( thrown_creature == nullptr ) {
+target_handler::trajectory target_handler::mode_throw_creature( avatar &you,
+        const Creature *thrown_creature, int range )
+{
+    if( thrown_creature == nullptr ) {
         return trajectory();
     }
     target_ui ui = target_ui();

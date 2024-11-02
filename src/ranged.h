@@ -40,7 +40,7 @@ trajectory mode_fire( avatar &you, aim_activity_actor &activity );
 trajectory mode_throw( avatar &you, item &relevant, bool blind_throwing );
 
 /** Throwing creature */
-trajectory mode_throw_creature( avatar &you, const Creature* thrown_creature, int range );
+trajectory mode_throw_creature( avatar &you, const Creature *thrown_creature, int range );
 
 /** Reach attacking */
 trajectory mode_reach( avatar &you, item_location weapon );

@@ -703,7 +703,8 @@ int Character::get_oxygen_max() const
 
 bool Character::can_recover_oxygen() const
 {
-    return get_limb_score( limb_score_breathing ) > 0.5f && ( !is_underwater() && !has_active_bionic( bio_gills ) && !has_trait( trait_GILLS ) && !has_trait( trait_GILLS_CEPH ) ) &&
+    return get_limb_score( limb_score_breathing ) > 0.5f && ( !is_underwater() &&
+            !has_active_bionic( bio_gills ) && !has_trait( trait_GILLS ) && !has_trait( trait_GILLS_CEPH ) ) &&
            !has_effect_with_flag( json_flag_GRAB ) && !( has_bionic( bio_synlungs ) &&
                    !has_active_bionic( bio_synlungs ) );
 }
@@ -2509,12 +2510,13 @@ void Character::process_turn()
         if( remove ) {
             for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
                 const efftype_id effid = eff.get_id();
-                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grab found and removed from %s.", grab_1.victim->disp_name() );
+                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grab found and removed from %s.",
+                               grab_1.victim->disp_name() );
                 if( eff.get_intensity() == grab_1.grab_strength ) {
                     grab_1.victim->remove_effect( effid );
                     // For now, GRAB_FILTER is only for a character's grab_1, so we can just remove it.
                     // This may need to be revisitied when multigrabs are added.
-                    for ( const effect &youeff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                    for( const effect &youeff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                         const efftype_id youeffid = youeff.get_id();
                         remove_effect( youeffid );
                     }
@@ -2547,11 +2549,13 @@ void Character::process_turn()
         }
 
         if( remove ) {
-            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.", disp_name() );
+            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                           disp_name() );
             for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
                 remove_effect( effid );
-                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.", disp_name() );
+                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                               disp_name() );
             }
             grab_1.clear();
         } else {

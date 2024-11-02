@@ -839,7 +839,7 @@ bool trapfunc::pit( const tripoint &p, Creature *c, item * )
         } else if( you->has_active_bionic( bio_shock_absorber ) ) {
             you->add_msg_if_player( m_info,
                                     _( "You hit the ground hard, but your grav chute handles the impact admirably!" ) );
-                                        // tiny animals aren't hurt by falling into pits
+            // tiny animals aren't hurt by falling into pits
         } else if( you->get_size() == creature_size::tiny ) {
             you->add_msg_if_player( _( "You are unharmed by the fall." ) );
             return false;

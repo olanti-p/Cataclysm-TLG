@@ -676,22 +676,22 @@ static void grab()
             add_msg( _( "You release the %s." ), vp->vehicle().name );
         } else if( here.has_furn( you.pos() + you.grab_point ) ) {
             add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
-        } else 
-
+        }
         you.grab( object_type::NONE );
         return;
     }
+
     if( you.grab_1.victim != nullptr ) {
         add_msg( _( "You release %s." ), you.grab_1.victim->disp_name() );
         you.grab_1.victim->remove_effect( effect_grabbed );
-        for ( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+        for( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
             const efftype_id effid = eff.get_id();
             if( eff.get_intensity() == you.grab_1.grab_strength ) {
-            you.remove_effect( effid );
+                you.remove_effect( effid );
             }
         }
-    you.grab_1.clear();
-    } 
+        you.grab_1.clear();
+    }
 
     const std::optional<tripoint> grabp_ = choose_adjacent( _( "Grab where?" ) );
     if( !grabp_ ) {
@@ -716,7 +716,7 @@ static void grab()
             grabp.z -= 1;
         }
     }
-    if ( creatures.creature_at( grabp ) && !creatures.creature_at( grabp )->is_hallucination() ) {
+    if( creatures.creature_at( grabp ) && !creatures.creature_at( grabp )->is_hallucination() ) {
         if( you.is_armed() ) {
             add_msg( _( "You'll need your hands free for grappling." ) );
             return;
@@ -731,10 +731,12 @@ static void grab()
             return;
         }
         int grab_strength = 1 + you.get_arm_str() + you.get_skill_level( skill_unarmed );
-        Creature* rawcreature = creatures.creature_at( grabp );
-        std::shared_ptr<Creature> victimptr(rawcreature, []( Creature* ) {});
+        Creature *rawcreature = creatures.creature_at( grabp );
+        std::shared_ptr<Creature> victimptr( rawcreature, []( Creature * ) {} );
         // TODO: Make neutral NPCs tolerant of a small amount of grabbing.
-        if( creatures.creature_at( grabp )->is_npc() && !creatures.creature_at( grabp )->as_npc()->is_player_ally() && !creatures.creature_at( grabp )->as_npc()->is_enemy() ) {
+        if( creatures.creature_at( grabp )->is_npc() &&
+            !creatures.creature_at( grabp )->as_npc()->is_player_ally() &&
+            !creatures.creature_at( grabp )->as_npc()->is_enemy() ) {
             if( !query_yn( _( "Really attack %s?" ), creatures.creature_at( grabp )->disp_name() ) ) {
                 return;
             }
@@ -748,7 +750,8 @@ static void grab()
             // TODO: Force this to use unarmed skill for one-handed or multilimb grabs. Will need to
             // write an optional member into hit_roll to name a weapon skill.
             // TODO TWO: Grabbing with whip-type weapons?
-            int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
+            int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(),
+                            you.as_character()->hit_roll() );
             if( hitspread < 0 ) {
                 add_msg( _( "You reach for %s, but fail to make contact!" ), z->disp_name() );
                 return;
@@ -761,7 +764,8 @@ static void grab()
             Character *guy = creatures.creature_at( grabp )->as_character();
             // Followers always assume the player has a good reason unless they're being badly harmed.
             if( guy->is_npc() && !guy->as_npc()->is_player_ally() ) {
-                int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(), you.as_character()->hit_roll() );
+                int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(),
+                                you.as_character()->hit_roll() );
                 if( hitspread < 0 ) {
                     add_msg( _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
                     return;
@@ -779,7 +783,7 @@ static void grab()
             }
         }
     } else if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
-        
+
         if( !vp->vehicle().handle_potential_theft( you ) ) {
             return;
         }
