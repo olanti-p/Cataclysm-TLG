@@ -210,6 +210,15 @@ bool Character::try_remove_grab( bool attacking )
                 if( guy && guy->grab_1.grabbed_part == eff.get_bp() ) {
                     add_msg_debug( debugmode::DF_CHARACTER, "Grabber %s found", guy->disp_name() );
                     grabber = guy;
+                    // Because of how turns are processed, we need to let character-initiated
+                    // grabs live for at least 1 second before we get to remove them, otherwise
+                    // we will instantly break player grabs.
+                    time_point start_time = eff.get_start_time();
+                    time_duration effect_dur_elapsed = calendar::turn - start_time;
+                    int speed_factor = 1 + std::round( 100 / get_speed() );
+                    if( to_turns<int>( effect_dur_elapsed ) <= std::max( 1, speed_factor ) ) {
+                        continue;
+                    }
                     break;
                 }
                 monster *mon = creatures.creature_at<monster>( loc );
@@ -228,9 +237,10 @@ bool Character::try_remove_grab( bool attacking )
             // Follower NPCs should almost always assume the player is doing something
             // for a good reason, as long as it's not killing them. Being grabbed is
             // not directly harmful, so they usually won't resist.
-            if( grabber->as_character()->is_avatar() && is_player_ally() ) {
+            if( grabber->as_character()->is_avatar() && as_npc()->is_player_ally() ) {
                 continue;
             }
+
             if( has_effect( effect_incorporeal ) ) {
                 if( grabber->is_monster() ) {
                     grabber->as_monster()->remove_grab( eff.get_bp().id() );
