@@ -2348,6 +2348,24 @@ bool monster::move_effects( bool )
                 }
                 continue;
             }
+            if( friendly == 0 ) {
+                on_hit( grabber, bodypart_id( "torso" ), INT_MIN );
+                if( type->has_anger_trigger( mon_trigger::HURT ) ) {
+                    anger += 5;
+                    if( grabber != nullptr && !grabber->is_monster() && !grabber->is_fake() ) {
+                        aggro_character = true;
+                    }
+                }
+                if( type->has_anger_trigger( mon_trigger::HOSTILE_CLOSE ) ) {
+                    anger += 15;
+                    if( grabber != nullptr && !grabber->is_monster() && !grabber->is_fake() ) {
+                        aggro_character = true;
+                    }
+                }
+                if( type->has_fear_trigger( mon_trigger::HOSTILE_CLOSE ) ) {
+                    morale -= 15;
+                }
+            }
             // Prevent the monster from instantly breaking grabs.
             // If the player can't do it, neither should they.
             time_point start_time = grab.get_start_time();
@@ -3743,6 +3761,7 @@ void monster::on_hit( Creature *source, bodypart_id,
     check_dead_state();
     // TODO: Faction relations
 }
+
 
 int monster::get_hp_max( const bodypart_id & ) const
 {

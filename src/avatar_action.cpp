@@ -999,6 +999,7 @@ void avatar_action::plthrow( avatar &you, item_location loc,
                 their_size = static_cast<std::underlying_type_t<creature_size>>
                              ( you.grab_1.victim->as_character()->get_size() );
             }
+            int size_factor = std::max( 0, ( their_size - 3 ) ) * 15;
             // A zombie hulk has a throwforce of 96. Fully evolved crab mutant starting from 10 strength has 25 strength. At 5/5 skills.
             // A fully evolved crab mutant hits ~87. Crabs can rapidly catch up and exceed this by adding bionics, but are subject to stat
             // loss from pain etc., and are limited by stamina while monsters are not.
@@ -1006,10 +1007,10 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             if( you.get_arm_str() > 10 ) {
                 strength_factor = you.get_arm_str() / 100;
             }
-            // TODO: Get encumbrance involved here.
-            float throwforce = ( ( you.get_arm_str() * ( 1.1 + strength_factor ) + ( ( you.get_skill_level(
-                                       skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 4 ) + 2 *
-                                   ( their_size - your_size ) ) *
+            // TODO: Get encumbrance and burden involved here.
+            float throwforce = ( ( ( you.get_arm_str() * ( 1.1 + strength_factor ) + ( ( you.get_skill_level(
+                                         skill_unarmed ) * 2 ) + you.get_skill_level( skill_throw ) / 4 ) + 2 *
+                                     ( their_size - your_size ) ) - size_factor ) *
                                  2 );
             // TODO: Get better stamina costs. Pull weight from monster's corpse entry?
             // Relative size is probably better than absolute until we make weapons
@@ -1074,10 +1075,28 @@ void avatar_action::plthrow( avatar &you, item_location loc,
                 }
                 do_harm = true;
             }
+            if( you.grab_1.victim->is_monster() && you.grab_1.victim->as_monster()->friendly == 0 ) {
+                if( you.grab_1.victim->as_monster()->type->has_anger_trigger( mon_trigger::HURT ) ) {
+                    you.grab_1.victim->as_monster()->anger += 15;
+                    if( !you.is_fake() ) {
+                        you.grab_1.victim->as_monster()->aggro_character = true;
+                    }
+                }
+                if( you.grab_1.victim->as_monster()->type->has_fear_trigger( mon_trigger::HURT ) ) {
+                    you.grab_1.victim->as_monster()->morale -= 15;
+                }
+            }
+            // Manually remove grab effects to prevent fling_creature() from failing.
             for( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
                 if( eff.get_intensity() == you.grab_1.grab_strength ) {
                     you.remove_effect( effid );
+                }
+            }
+            for( const effect &eff : you.grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
+                const efftype_id effid = eff.get_id();
+                if( eff.get_intensity() == you.grab_1.grab_strength ) {
+                    you.grab_1.victim->remove_effect( effid );
                 }
             }
             // TODO: Give enemies a chance to resist, possibly reducing throwforce.
