@@ -178,7 +178,8 @@ class target_ui
             TurretManual,
             Reach,
             Spell,
-            SelectOnly
+            SelectOnly,
+            ThrowCreature,
         };
 
         // Avatar
@@ -187,6 +188,7 @@ class target_ui
         TargetMode mode = TargetMode::Fire;
         // Weapon being fired/thrown
         item *relevant = nullptr;
+        const Creature *thrown_creature = nullptr;
         // Cached selection range from player's position
         int range = 0;
         // Cached current ammo to display
@@ -286,6 +288,9 @@ class target_ui
         // If true, LEVEL_UP, LEVEL_DOWN and directional keys
         // responsible for moving cursor will shift view instead.
         bool shifting_view = false;
+        // Forces the camera to track the aim cursor when going up
+        // or down levels.
+        bool shifting_view_temp = false;
 
         // Compact layout
         bool compact = false;
@@ -447,6 +452,24 @@ target_handler::trajectory target_handler::mode_throw( avatar &you, item &releva
     ui.mode = blind_throwing ? target_ui::TargetMode::ThrowBlind : target_ui::TargetMode::Throw;
     ui.relevant = &relevant;
     ui.range = you.throw_range( relevant );
+
+    restore_on_out_of_scope<tripoint> view_offset_prev( you.view_offset );
+    return ui.run();
+}
+
+// TODO: Set view_offset to the creature being thrown, derive throwing range
+// from throwforce.
+target_handler::trajectory target_handler::mode_throw_creature( avatar &you,
+        const Creature *thrown_creature, int range )
+{
+    if( thrown_creature == nullptr ) {
+        return trajectory();
+    }
+    target_ui ui = target_ui();
+    ui.you = &you;
+    ui.mode = target_ui::TargetMode::ThrowCreature;
+    ui.thrown_creature = thrown_creature;
+    ui.range = range;
 
     restore_on_out_of_scope<tripoint> view_offset_prev( you.view_offset );
     return ui.run();
@@ -2517,7 +2540,11 @@ target_handler::trajectory target_ui::run()
     }
 
     // Initialize cursor position
-    src = you->pos();
+    if( mode == TargetMode::ThrowCreature ) {
+        src = thrown_creature->pos();
+    } else {
+        src = you->pos();
+    }
     update_target_list();
 
     if( activity && activity->abort_if_no_targets && targets.empty() ) {
@@ -2679,7 +2706,7 @@ target_handler::trajectory target_ui::run()
             break;
         }
         case ExitCode::Fire: {
-            if( mode != TargetMode::SelectOnly ) {
+            if( mode != TargetMode::SelectOnly || mode != TargetMode::ThrowCreature ) {
                 bool harmful = !( mode == TargetMode::Spell && casting->damage( player_character ) <= 0 );
                 on_target_accepted( harmful );
             }
@@ -2794,6 +2821,10 @@ bool target_ui::handle_cursor_movement( const std::string &action, bool &skip_re
     const auto shift_view_or_cursor = [this]( const tripoint & delta ) {
         if( this->shifting_view ) {
             this->set_view_offset( this->you->view_offset + delta );
+        } else if( this->shifting_view_temp ) {
+            this->set_view_offset( this->you->view_offset + delta );
+            this->set_cursor_pos( dst + delta );
+            shifting_view_temp = false;
         } else {
             this->set_cursor_pos( dst + delta );
         }
@@ -2829,6 +2860,7 @@ bool target_ui::handle_cursor_movement( const std::string &action, bool &skip_re
                              0,
                              action == "LEVEL_UP" ? 1 : -1
                          );
+        shifting_view_temp = true;
         shift_view_or_cursor( delta );
     } else if( action == "NEXT_TARGET" ) {
         cycle_targets( 1 );
@@ -2866,7 +2898,6 @@ bool target_ui::set_cursor_pos( const tripoint &new_pos )
         valid_pos.z = clamp( valid_pos.z, -OVERMAP_DEPTH, OVERMAP_HEIGHT - 1 );
         // Or current view range
         valid_pos.z = clamp( valid_pos.z - src.z, -fov_3d_z_range, fov_3d_z_range ) + src.z;
-
         new_traj = here.find_clear_path( src, valid_pos );
         if( range == 1 ) {
             // We should always be able to hit adjacent squares
@@ -2883,7 +2914,7 @@ bool target_ui::set_cursor_pos( const tripoint &new_pos )
                     }
                 }
 
-                // FIXME: due to a bug in map::find_clear_path (#39693),
+                // FIXME: due to a bug in map::find_clear_path (DDA #39693),
                 //        returned trajectory is invalid in some cases.
                 //        This bandaid stops us from exceeding range,
                 //        but does not fix the issue.

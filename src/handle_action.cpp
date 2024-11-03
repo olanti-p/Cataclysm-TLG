@@ -29,6 +29,7 @@
 #include "color.h"
 #include "construction.h"
 #include "creature_tracker.h"
+#include "creature.h"
 #include "cursesdef.h"
 #include "damage.h"
 #include "debug.h"
@@ -119,11 +120,15 @@ static const bionic_id bio_remote( "bio_remote" );
 static const damage_type_id damage_cut( "cut" );
 
 static const efftype_id effect_alarm_clock( "alarm_clock" );
+static const efftype_id effect_grabbed( "grabbed" );
+static const efftype_id effect_grabbing( "grabbing" );
 static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_stunned( "stunned" );
 
+static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
 static const flag_id json_flag_MOP( "MOP" );
+static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
 
 static const gun_mode_id gun_mode_AUTO( "AUTO" );
 
@@ -138,6 +143,7 @@ static const material_id material_glass( "glass" );
 static const quality_id qual_CUT( "CUT" );
 
 static const skill_id skill_melee( "melee" );
+static const skill_id skill_unarmed( "unarmed" );
 
 static const trait_id trait_BRAWLER( "BRAWLER" );
 static const trait_id trait_HIBERNATE( "HIBERNATE" );
@@ -658,11 +664,12 @@ static void close()
     }
 }
 
-// Establish or release a grab on a vehicle
+// Establish or release a grab on a creature, vehicle, or piece of furniture
 static void grab()
 {
     avatar &you = get_avatar();
     map &here = get_map();
+    creature_tracker &creatures = get_creature_tracker();
 
     if( you.get_grab_type() != object_type::NONE ) {
         if( const optional_vpart_position vp = here.veh_at( you.pos() + you.grab_point ) ) {
@@ -670,8 +677,20 @@ static void grab()
         } else if( here.has_furn( you.pos() + you.grab_point ) ) {
             add_msg( _( "You release the %s." ), here.furnname( you.pos() + you.grab_point ) );
         }
-
         you.grab( object_type::NONE );
+        return;
+    }
+
+    if( you.grab_1.victim != nullptr ) {
+        add_msg( _( "You release %s." ), you.grab_1.victim->disp_name() );
+        you.grab_1.victim->remove_effect( effect_grabbed );
+        for( const effect &eff : you.get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+            const efftype_id effid = eff.get_id();
+            if( eff.get_intensity() == you.grab_1.grab_strength ) {
+                you.remove_effect( effid );
+            }
+        }
+        you.grab_1.clear();
         return;
     }
 
@@ -689,7 +708,7 @@ static void grab()
     }
 
     // Object might not be on the same z level if on a ramp.
-    if( !( here.veh_at( grabp ) || here.has_furn( grabp ) ) ) {
+    if( !( here.veh_at( grabp ) || here.has_furn( grabp ) || creatures.creature_at( grabp ) ) ) {
         if( here.has_flag( ter_furn_flag::TFLAG_RAMP_UP, grabp ) ||
             here.has_flag( ter_furn_flag::TFLAG_RAMP_UP, you.pos() ) ) {
             grabp.z += 1;
@@ -698,8 +717,74 @@ static void grab()
             grabp.z -= 1;
         }
     }
+    if( creatures.creature_at( grabp ) && !creatures.creature_at( grabp )->is_hallucination() ) {
+        if( you.is_armed() ) {
+            add_msg( _( "You'll need your hands free for grappling." ) );
+            return;
+        }
+        if( you.get_working_arm_count() < 1 || you.has_effect_with_flag( json_flag_NO_GRAB ) ) {
+            add_msg( _( "You can't manage that in your current condition." ) );
+            return;
+        }
+        // TODO: Dynamically calculate stamina cost.
+        if( you.get_stamina() < 400 ) {
+            you.add_msg_if_player( ( "You're too exhausted to wrestle anything." ) );
+            return;
+        }
+        int grab_strength = 1 + you.get_arm_str() + you.get_skill_level( skill_unarmed );
+        Creature *rawcreature = creatures.creature_at( grabp );
+        std::shared_ptr<Creature> victimptr( rawcreature, []( Creature * ) {} );
+        // TODO: Make neutral NPCs tolerant of a small amount of grabbing.
+        if( creatures.creature_at( grabp )->is_npc() &&
+            !creatures.creature_at( grabp )->as_npc()->is_player_ally() &&
+            !creatures.creature_at( grabp )->as_npc()->is_enemy() ) {
+            if( !query_yn( _( "Really attack %s?" ), creatures.creature_at( grabp )->disp_name() ) ) {
+                return;
+            }
+        }
+        const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+        item weap =  null_item_reference();
+        you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
+        you.as_character()->burn_energy_arms( -400 );
+        if( creatures.creature_at( grabp )->is_monster() ) {
+            monster *z = creatures.creature_at( grabp )->as_monster();
+            // TODO: Force this to use unarmed skill for one-handed or multilimb grabs. Will need to
+            // write an optional member into hit_roll to name a weapon skill.
+            // TODO TWO: Grabbing with whip-type weapons?
+            int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(),
+                            you.as_character()->hit_roll() );
+            if( hitspread < 0 ) {
+                add_msg( _( "You reach for %s, but fail to make contact!" ), z->disp_name() );
+                return;
+            }
+            add_msg( _( "You grab the %s." ), z->name() );
+            z->add_effect( effect_grabbed, 1_days, body_part_bp_null, true, grab_strength );
+            you.add_effect( effect_grabbing, 1_days, true, 1 );
+            you.grab_1.set( victimptr, grab_strength );
+        } else {
+            Character *guy = creatures.creature_at( grabp )->as_character();
+            // Followers always assume the player has a good reason unless they're being badly harmed.
+            if( guy->is_npc() && !guy->as_npc()->is_player_ally() ) {
+                int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(),
+                                you.as_character()->hit_roll() );
+                if( hitspread < 0 ) {
+                    add_msg( _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
+                    return;
+                }
+            }
+            // Need to target a limb since this is a character and not a monster
+            // TODO: Smarter limb targeting. Make sure we can't grab already-grabbed BPs
+            const bodypart_id &bp = guy->random_body_part( true );
+            add_msg( _( "You grab %1s by the %2s." ), guy->disp_name(), bp->name );
+            guy->add_effect( effect_grabbed, 1_days, bp, true, grab_strength );
+            you.add_effect( effect_grabbing, 1_days, true, 1 );
+            you.grab_1.set( victimptr, grab_strength, bp );
+            if( guy->is_npc() ) {
+                guy->as_npc()->on_attacked( you );
+            }
+        }
+    } else if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
 
-    if( const optional_vpart_position vp = here.veh_at( grabp ) ) {
         if( !vp->vehicle().handle_potential_theft( you ) ) {
             return;
         }
@@ -709,7 +794,7 @@ static void grab()
         }
         you.grab( object_type::VEHICLE, grabp - you.pos() );
         add_msg( _( "You grab the %s." ), vp->vehicle().name );
-    } else if( here.has_furn( grabp ) ) { // If not, grab furniture if present
+    } else if( here.has_furn( grabp ) ) {
         if( !here.furn( grabp ).obj().is_movable() ) {
             add_msg( _( "You can not grab the %s." ), here.furnname( grabp ) );
             return;
@@ -720,7 +805,8 @@ static void grab()
         } else {
             add_msg( _( "You grab the %s." ), here.furnname( grabp ) );
         }
-    } else { // TODO: grab mob? Captured squirrel = pet (or meat that stays fresh longer).
+
+    } else {
         add_msg( m_info, _( "There's nothing to grab there!" ) );
     }
 }

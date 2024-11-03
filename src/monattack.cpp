@@ -140,6 +140,8 @@ static const efftype_id effect_social_dissatisfied( "social_dissatisfied" );
 static const efftype_id effect_stunned( "stunned" );
 static const efftype_id effect_targeted( "targeted" );
 
+static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
+
 static const gun_mode_id gun_mode_AUTO( "AUTO" );
 
 static const itype_id itype_120mm_HEAT( "120mm_HEAT" );
@@ -2956,7 +2958,8 @@ bool mattack::nurse_assist( monster *z )
 }
 bool mattack::nurse_operate( monster *z )
 {
-    if( z->has_effect( effect_dragging ) || z->has_effect( effect_operating ) ) {
+    if( z->has_effect( effect_dragging ) || z->has_effect( effect_operating ) ||
+        z->has_effect_with_flag( json_flag_NO_GRAB ) ) {
         return false;
     }
     Character &player_character = get_player_character();
@@ -3037,7 +3040,7 @@ bool mattack::nurse_operate( monster *z )
                     } else {
                         sounds::sound( z->pos(), 8, sounds::sound_t::electronic_speech,
                                        string_format(
-                                           _( "a soft robotic voice say, \"Greetings kinbot.  Please take good care of this patient.\"" ) ) );
+                                           _( "a soft robotic voice say, \"Greetings, nurse.  Please take good care of this patient.\"" ) ) );
                         z->anger = 0;
                         // Situation is under control no need to intervene;
                         return false;

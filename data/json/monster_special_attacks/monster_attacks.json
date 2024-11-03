@@ -67,7 +67,14 @@
     "grab": true,
     "grab_data": { "grab_effect": "grabbed" },
     "//": "grab_strength preferentially set in the monster definition for clarity",
-    "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_effect": "maimed_arm" } } ] },
+    "condition": {
+      "and": [
+        { "not": { "u_has_flag": "GRAB_FILTER" } },
+        { "not": { "u_has_effect": "maimed_arm" } },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "hit_dmg_u": "%1$s grabs your %2$s!",
     "hit_dmg_npc": "%1$s grabs <npcname>'s %2$s!",
     "miss_msg_u": "%s tries to grab you, but you dodge!",
@@ -82,7 +89,15 @@
     "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
     "grab": true,
     "grab_data": { "grab_effect": "grabbed" },
-    "condition": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" }, { "not": { "u_has_effect": "grabbing_2" } } ] },
+    "condition": {
+      "and": [
+        { "u_has_flag": "GRAB_FILTER" },
+        { "npc_has_flag": "GRAB" },
+        { "not": { "u_has_effect": "grabbing_2" } },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "//": "We can't count grab filters, so grabbing 2 works as a soft cooldown",
     "self_effects_onhit": [ { "id": "grabbing_2", "duration": 150, "permanent": false } ],
     "hit_dmg_u": "%1$s grabs your %2$s with another appendage!",
@@ -99,7 +114,15 @@
     "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
     "grab": true,
     "grab_data": { "grab_effect": "grabbed" },
-    "condition": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" }, { "not": { "u_has_effect": "grabbing_3" } } ] },
+    "condition": {
+      "and": [
+        { "u_has_flag": "GRAB_FILTER" },
+        { "npc_has_flag": "GRAB" },
+        { "not": { "u_has_effect": "grabbing_3" } },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "//": "We can't count grab filters, so grabbing 3 works as a soft cooldown",
     "self_effects_onhit": [ { "id": "grabbing_3", "duration": 150, "permanent": false } ],
     "hit_dmg_u": "%1$s grabs your %2$s with its other hand!",
@@ -118,7 +141,14 @@
     "hitsize_min": 1,
     "range": 5,
     "grab": true,
-    "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_effect": "maimed_arm" } } ] },
+    "condition": {
+      "and": [
+        { "not": { "u_has_flag": "GRAB_FILTER" } },
+        { "not": { "u_has_effect": "maimed_arm" } },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
     "grab_data": { "exclusive_grab": true, "pull_chance": 100, "pull_weight_ratio": 0.75 },
     "no_dmg_msg_u": "",
@@ -134,7 +164,14 @@
     "//": "Drag moves will consume full move costs anyway, don't penalize the attack itself.",
     "move_cost": 0,
     "hitsize_min": 4,
-    "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_effect": "maimed_arm" } } ] },
+    "condition": {
+      "and": [
+        { "not": { "u_has_flag": "GRAB_FILTER" } },
+        { "not": { "u_has_effect": "maimed_arm" } },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "damage_max_instance": [ { "damage_type": "bash", "amount": 0 } ],
     "grab": true,
     "grab_data": {
@@ -159,7 +196,15 @@
     "cooldown": 2,
     "move_cost": 0,
     "hitsize_min": 4,
-    "condition": { "and": [ { "not": { "one_in_chance": 4 } }, { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] },
+    "condition": {
+      "and": [
+        { "not": { "one_in_chance": 4 } },
+        { "u_has_flag": "GRAB_FILTER" },
+        { "npc_has_flag": "GRAB" },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "grab": true,
     "grab_data": {
       "exclusive_grab": true,
@@ -191,7 +236,14 @@
     "id": "bite_grab",
     "//": "For monsters like dogs who bite and hold",
     "grab": true,
-    "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_effect": "maimed_mandible" } } ] },
+    "condition": {
+      "and": [
+        { "not": { "u_has_flag": "GRAB_FILTER" } },
+        { "not": { "u_has_effect": "maimed_mandible" } },
+        { "not": { "u_has_flag": "NO_GRAB" } },
+        { "not": { "npc_has_effect": "incorporeal" } }
+      ]
+    },
     "hit_dmg_u": "%1$s bites your %2$s and latches on tightly!",
     "hit_dmg_npc": "%1$s bites <npcname>'s %2$s and latches on tightly!",
     "miss_msg_u": "%1$s tries to bite you, but you dodge!",

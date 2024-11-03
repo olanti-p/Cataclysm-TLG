@@ -47,6 +47,7 @@ static const efftype_id effect_bite( "bite" );
 static const efftype_id effect_grabbed( "grabbed" );
 static const efftype_id effect_grabbing( "grabbing" );
 static const efftype_id effect_infected( "infected" );
+static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_laserlocked( "laserlocked" );
 static const efftype_id effect_null( "null" );
 static const efftype_id effect_poison( "poison" );
@@ -61,6 +62,7 @@ static const efftype_id effect_zombie_virus( "zombie_virus" );
 
 static const flag_id json_flag_GRAB( "GRAB" );
 static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
+static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
 
 static const json_character_flag json_flag_BIONIC_LIMB( "BIONIC_LIMB" );
 

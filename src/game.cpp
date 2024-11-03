@@ -11637,8 +11637,8 @@ bool game::fling_creature( Creature *c, const units::angle &dir, float flvel, bo
     for( const effect &eff : c->get_effects_with_flag( json_flag_GRAB ) ) {
         if( !x_in_y( flvel / 2, eff.get_intensity() ) ) {
             c->add_msg_player_or_npc( m_warning,
-                                      _( "You're almost sent flying, but something holds you in place!" ),
-                                      _( "<npcname> is almost sent flying, but something holds them in place!" ) );
+                                      _( "You're almost sent flying, but you're held in place!" ),
+                                      _( "<npcname> is almost sent flying, but is held in place!" ) );
             return false;
         } else {
             c->remove_effect( eff.get_id(), eff.get_bp() );

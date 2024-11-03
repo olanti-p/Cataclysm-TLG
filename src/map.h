@@ -564,6 +564,7 @@ class map
             return passable( tripoint( p, abs_sub.z() ) );
         }
         bool is_wall_adjacent( const tripoint &center ) const;
+        bool is_clingable_wall_adjacent( const tripoint &center ) const;
 
         bool is_open_air( const tripoint & ) const;
 
