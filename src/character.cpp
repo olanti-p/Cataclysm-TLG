@@ -302,7 +302,6 @@ static const json_character_flag json_flag_EYE_MEMBRANE( "EYE_MEMBRANE" );
 static const json_character_flag json_flag_FEATHER_FALL( "FEATHER_FALL" );
 static const json_character_flag json_flag_GLIDE( "GLIDE" );
 static const json_character_flag json_flag_GLIDING( "GLIDING" );
-static const json_character_flag json_flag_GRAB( "GRAB" );
 static const json_character_flag json_flag_HEAL_OVERRIDE( "HEAL_OVERRIDE" );
 static const json_character_flag json_flag_HEATSINK( "HEATSINK" );
 static const json_character_flag json_flag_HYPEROPIC( "HYPEROPIC" );
@@ -337,6 +336,9 @@ static const json_character_flag json_flag_WINGS_1( "WINGS_1" );
 static const json_character_flag json_flag_WINGS_2( "WINGS_2" );
 static const json_character_flag json_flag_WING_ARMS( "WING_ARMS" );
 static const json_character_flag json_flag_WING_GLIDE( "WING_GLIDE" );
+
+static const flag_id json_flag_GRAB( "GRAB" );
+static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
 
 static const limb_score_id limb_score_balance( "balance" );
 static const limb_score_id limb_score_breathing( "breathing" );
@@ -701,7 +703,8 @@ int Character::get_oxygen_max() const
 
 bool Character::can_recover_oxygen() const
 {
-    return get_limb_score( limb_score_breathing ) > 0.5f && !is_underwater() &&
+    return get_limb_score( limb_score_breathing ) > 0.5f && ( !is_underwater() &&
+            !has_active_bionic( bio_gills ) && !has_trait( trait_GILLS ) && !has_trait( trait_GILLS_CEPH ) ) &&
            !has_effect_with_flag( json_flag_GRAB ) && !( has_bionic( bio_synlungs ) &&
                    !has_active_bionic( bio_synlungs ) );
 }
@@ -899,6 +902,23 @@ int Character::get_character_parallax( bool zoom ) const
     character_parallax += get_modifier( character_modifier_ranged_dispersion_vision_mod );
 
     return std::max( static_cast<int>( std::round( character_parallax ) ), 0 );
+}
+
+std::string Character::get_throw_descriptor( int throwforce )
+{
+    std::string throw_descriptor;
+    if( throwforce < 30 ) {
+        throw_descriptor = _( "shove" );
+    } else if( throwforce < 40 ) {
+        throw_descriptor = _( "toss" );
+    } else if( throwforce < 60 ) {
+        throw_descriptor = _( "throw" );
+    } else if( throwforce < 70 ) {
+        throw_descriptor = _( "hurl" );
+    } else if( throwforce > 71 ) {
+        throw_descriptor = _( "launch" );
+    }
+    return throw_descriptor;
 }
 
 static double modified_sight_speed( double aim_speed_modifier, double effective_sight_dispersion,
@@ -1820,7 +1840,8 @@ void Character::forced_dismount()
     if( is_avatar() ) {
         avatar &player_character = get_avatar();
         if( player_character.get_grab_type() != object_type::NONE ) {
-            add_msg( m_warning, _( "You let go of the grabbed object." ) );
+            add_msg( m_warning, _( "You let go of what you were grabbing." ) );
+            grab_1.clear();
             player_character.grab( object_type::NONE );
         }
         set_movement_mode( move_mode_walk );
@@ -2475,6 +2496,72 @@ void Character::process_turn()
             it++;
         }
     }
+
+    // Persist grabs as long as our target is adjacent.
+    // Victims free themselves in their own loop, so we can mostly ignore them here.
+    if( grab_1.victim != nullptr && !grab_1.victim->is_monster() ) {
+        bool remove = false;
+        if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+            remove = true;
+        }
+        if( has_effect( effect_incorporeal ) ) {
+            remove = true;
+        }
+        if( remove ) {
+            for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
+                const efftype_id effid = eff.get_id();
+                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grab found and removed from %s.",
+                               grab_1.victim->disp_name() );
+                if( eff.get_intensity() == grab_1.grab_strength ) {
+                    grab_1.victim->remove_effect( effid );
+                    // For now, GRAB_FILTER is only for a character's grab_1, so we can just remove it.
+                    // This may need to be revisitied when multigrabs are added.
+                    for( const effect &youeff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                        const efftype_id youeffid = youeff.get_id();
+                        remove_effect( youeffid );
+                    }
+                    grab_1.clear();
+                }
+            }
+        }
+    }
+    // Check the grabbing character for orphan grabs on their end.
+    if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+        bool remove = false;
+        if( !grab_1.victim || square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+            remove = true;
+        }
+        // This is for if we moved away, dropping our grab, but the victim moved adjacent to us before our next turn began.
+        if( grab_1.victim ) {
+            bool grabfound = false;
+            for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
+                if( eff.get_intensity() == grab_1.grab_strength ) {
+                    grabfound = true;
+                }
+            }
+            if( !grabfound ) {
+                remove = true;
+            }
+        }
+        if( get_stamina() < 400 ) {
+            add_msg_if_player( _( "You're too exhausted to maintain your hold." ) );
+            remove = true;
+        }
+
+        if( remove ) {
+            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                           disp_name() );
+            for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                const efftype_id effid = eff.get_id();
+                remove_effect( effid );
+                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
+                               disp_name() );
+            }
+            grab_1.clear();
+        } else {
+            burn_energy_arms( -400 );
+        }
+    }
     effect_on_conditions::process_effect_on_conditions( *this );
 }
 
@@ -3002,7 +3089,7 @@ int Character::get_standard_stamina_cost( const item *thrown_item ) const
     // using 16_gram normalizes it to 8 str. Same effort expenditure
     // for each strike, regardless of weight. This is compensated
     // for by the additional move cost as weapon weight increases
-    //If the item is thrown, override with the thrown item instead.
+    // If the item is thrown, override with the thrown item instead.
 
     item current_weapon = used_weapon() ? *used_weapon() : null_item_reference();
 
@@ -12816,6 +12903,17 @@ int Character::impact( const int force, const tripoint &p )
                 mod /= 1.0f + ( 0.1f * swim_skill );
             }
         }
+    }
+
+    // A squirrel can fall a great distance without being harmed,
+    // and it would have to be going unbelievably fast to hurt anything
+    // it collided with.
+    if( get_size() == creature_size::tiny ) {
+        effective_force -= 40;
+    }
+    // Reduction is proportionally less as we scale up.
+    if( get_size() == creature_size::small ) {
+        effective_force = 15;
     }
 
     // Rescale for huge force

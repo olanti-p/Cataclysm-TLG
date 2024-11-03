@@ -19,10 +19,12 @@ static const efftype_id effect_crushed( "crushed" );
 static const efftype_id effect_downed( "downed" );
 static const efftype_id effect_heavysnare( "heavysnare" );
 static const efftype_id effect_in_pit( "in_pit" );
+static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_lightsnare( "lightsnare" );
 static const efftype_id effect_webbed( "webbed" );
 
 static const flag_id json_flag_GRAB( "GRAB" );
+static const flag_id json_flag_NO_GRAB( "NO_GRAB" );
 
 static const itype_id itype_rope_6( "rope_6" );
 static const itype_id itype_snare_trigger( "snare_trigger" );
@@ -200,10 +202,25 @@ bool Character::try_remove_grab( bool attacking )
         for( const effect &eff : get_effects_with_flag( json_flag_GRAB ) ) {
             float escape_chance = 1.0f;
             float grabber_roll = static_cast<float>( eff.get_intensity() );
-            // We need to figure out which monster is responsible for this grab early for good messaging
+            // We need to figure out which Creature is responsible for this grab early for good messaging
             // For now, one grabber per limb TODO: handle multiple grabbers and decrement intensity
-            monster *grabber = nullptr;
+            Creature *grabber = nullptr;
             for( const tripoint loc : surrounding ) {
+                Character *guy = creatures.creature_at<Character>( loc );
+                if( guy && guy->grab_1.grabbed_part == eff.get_bp() ) {
+                    add_msg_debug( debugmode::DF_CHARACTER, "Grabber %s found", guy->disp_name() );
+                    grabber = guy;
+                    // Because of how turns are processed, we need to let character-initiated
+                    // grabs live for at least 1 second before we get to remove them, otherwise
+                    // we will instantly break player grabs.
+                    time_point start_time = eff.get_start_time();
+                    time_duration effect_dur_elapsed = calendar::turn - start_time;
+                    int speed_factor = 1 + std::round( 100 / get_speed() );
+                    if( to_turns<int>( effect_dur_elapsed ) <= std::max( 1, speed_factor ) ) {
+                        continue;
+                    }
+                    break;
+                }
                 monster *mon = creatures.creature_at<monster>( loc );
                 if( mon && mon->is_grabbing( eff.get_bp().id() ) ) {
                     add_msg_debug( debugmode::DF_MATTACK, "Grabber %s found", mon->name() );
@@ -211,17 +228,34 @@ bool Character::try_remove_grab( bool attacking )
                     break;
                 }
             }
-
             // Something went wrong, remove grab to be sure and throw an error
             if( grabber == nullptr ) {
                 remove_effect( eff.get_id(), eff.get_bp() );
-                add_msg_debug( debugmode::DF_MATTACK, "Orphan grab found and removed" );
+                add_msg_debug( debugmode::DF_CHARACTER, "Orphan grab found and removed" );
                 continue;
+            }
+            // Follower NPCs should almost always assume the player is doing something
+            // for a good reason, as long as it's not killing them. Being grabbed is
+            // not directly harmful, so they usually won't resist.
+            if( grabber->as_character()->is_avatar() && as_npc()->is_player_ally() ) {
+                continue;
+            }
+
+            if( has_effect( effect_incorporeal ) ) {
+                if( grabber->is_monster() ) {
+                    grabber->as_monster()->remove_grab( eff.get_bp().id() );
+                    remove_effect( eff.get_id(), eff.get_bp() );
+                    continue;
+                } else {
+                    grabber->as_character()->grab_1.clear();
+                    remove_effect( eff.get_id(), eff.get_bp() );
+                    continue;
+                }
             }
 
             // Short out the check when attacking after removing any orphan grabs
             if( attacking ) {
-                add_msg_debug( debugmode::DF_MATTACK,
+                add_msg_debug( debugmode::DF_CHARACTER,
                                "Grab break check triggered by an attack, only removing orphan grabs allowed" );
                 continue;
             }
@@ -242,7 +276,7 @@ bool Character::try_remove_grab( bool attacking )
                                            _( "As you struggle to escape the grab something comes loose and falls to the ground!" ),
                                            _( "As <npcname> struggles to escape the grab something comes loose and falls to the ground!" ) );
                     if( is_avatar() ) {
-                        popup( _( "As you struggle to escape the grab something comes loose and falls to the ground!" ) );
+                        popup( _( "As you struggle to escape the grab, something comes loose and falls to the ground!" ) );
                     }
                     torn_pocket = true;
                 }
@@ -256,12 +290,13 @@ bool Character::try_remove_grab( bool attacking )
             grabber_roll = std::max( grabber_roll, escape_chance ) + rng( 1, 10 );
             escape_chance += grab_break_factor;
             if( has_trait( trait_SLIMY ) || has_trait( trait_VISCOUS ) ) {
-                const float slime_factor = worn.clothing_wetness_mult( eff.get_bp() ) * 6;
-                // Slime offers a 6% bonus to escaping from a grab on a naked body part.
+                const float slime_factor = worn.clothing_wetness_mult( eff.get_bp() ) * 8;
+                // Slime offers an 8% bonus to escaping from a grab on a naked body part.
                 // Slime exudes from the skin and will only soak through clothes according to their combined breathability and coverage.
-                // Since the attacker is grabbing at the outermost layer, that 6% is multiplied by clothing_wetness_mult for that body part.
+                // Since the attacker is grabbing at the outermost layer, that 8% is multiplied by clothing_wetness_mult for that body part.
+                // TODO: Negate this bonus for artificial limbs.
                 escape_chance += slime_factor;
-                add_msg_debug( debugmode::DF_MATTACK,
+                add_msg_debug( debugmode::DF_CHARACTER,
                                "%s is slimy, escape chance increased by %f",
                                eff.get_bp()->name, slime_factor );
             }
@@ -280,9 +315,15 @@ bool Character::try_remove_grab( bool attacking )
             // Every attempt burns some stamina - maybe some moves?
             burn_energy_arms( -5 * eff.get_intensity() );
             if( x_in_y( escape_chance, grabber_roll ) ) {
-                grabber->remove_grab( eff.get_bp().id() );
-                add_msg_debug( debugmode::DF_MATTACK, "Removed grab effect %s from monster %s",
-                               eff.get_bp()->name, grabber->name() );
+                if( grabber->is_monster() ) {
+                    grabber->as_monster()->remove_grab( eff.get_bp().id() );
+                    add_msg_debug( debugmode::DF_MATTACK, "Removed grab effect %s from grabber %s",
+                                   eff.get_bp()->name, grabber->as_monster()->name() );
+                } else {
+                    grabber->as_character()->grab_1.clear();
+                    add_msg_debug( debugmode::DF_CHARACTER, "Removed grab effect %s from grabber %s",
+                                   eff.get_bp()->name, grabber->disp_name() );
+                }
 
                 if( grab_break_factor > 0 ) {
                     add_msg_if_player( m_info, martial_arts_data->get_grab_break( *this ).avatar_message.translated(),

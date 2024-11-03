@@ -101,6 +101,7 @@ static const efftype_id effect_grabbing( "grabbing" );
 static const efftype_id effect_has_bag( "has_bag" );
 static const efftype_id effect_heavysnare( "heavysnare" );
 static const efftype_id effect_hit_by_player( "hit_by_player" );
+static const efftype_id effect_incorporeal( "incorporeal" );
 static const efftype_id effect_in_pit( "in_pit" );
 static const efftype_id effect_leashed( "leashed" );
 static const efftype_id effect_lightsnare( "lightsnare" );
@@ -640,8 +641,8 @@ void monster::refill_udders()
 void monster::reset_digestion()
 {
     if( calendar::turn - stomach_timer > 3_days ) {
-        //If the player hasn't been around, assume critters have been operating at a subsistence level.
-        //Otherwise everything will constantly be underfed. We only run this on load to prevent problems.
+        // If the player hasn't been around, assume critters have been operating at a subsistence level.
+        // Otherwise everything will constantly be underfed. We only run this on load to prevent problems.
         remove_effect( effect_critter_underfed );
         remove_effect( effect_critter_well_fed );
         amount_eaten = 0;
@@ -2324,22 +2325,21 @@ bool monster::move_effects( bool )
         }
     }
     if( has_effect_with_flag( json_flag_GRAB ) ) {
-        // Pretty hacky, but monsters have no stats
+        // The monster on monster stuff is pretty hacky, but has worked out so far.
         map &here = get_map();
         creature_tracker &creatures = get_creature_tracker();
-        const tripoint_range<tripoint> &surrounding = here.points_in_radius( pos(), 1, 0 );
+        const tripoint_range<tripoint_bub_ms> &surrounding = here.points_in_radius( pos_bub(), 1, 0 );
+        Creature *grabber = nullptr;
         for( const effect &grab : get_effects_with_flag( json_flag_GRAB ) ) {
             // Is our grabber around?
-            monster *grabber = nullptr;
-            for( const tripoint loc : surrounding ) {
-                monster *mon = creatures.creature_at<monster>( loc );
-                if( mon && mon->has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
-                    add_msg_debug( debugmode::DF_MATTACK, "Grabber %s found", mon->name() );
-                    grabber = mon;
+            for( const tripoint_bub_ms loc : surrounding ) {
+                Creature *someone = creatures.creature_at( loc );
+                if( someone && someone->has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
+                    add_msg_debug( debugmode::DF_MATTACK, "Grabber found: %s", someone->disp_name() );
+                    grabber = someone;
                     break;
                 }
             }
-
             if( grabber == nullptr ) {
                 remove_effect( grab.get_id() );
                 add_msg_debug( debugmode::DF_MATTACK, "Orphan grab found and removed" );
@@ -2348,17 +2348,58 @@ bool monster::move_effects( bool )
                 }
                 continue;
             }
+            if( friendly == 0 ) {
+                on_hit( grabber, bodypart_id( "torso" ), INT_MIN );
+                if( type->has_anger_trigger( mon_trigger::HURT ) ) {
+                    anger += 5;
+                    if( grabber != nullptr && !grabber->is_monster() && !grabber->is_fake() ) {
+                        aggro_character = true;
+                    }
+                }
+                if( type->has_anger_trigger( mon_trigger::HOSTILE_CLOSE ) ) {
+                    anger += 15;
+                    if( grabber != nullptr && !grabber->is_monster() && !grabber->is_fake() ) {
+                        aggro_character = true;
+                    }
+                }
+                if( type->has_fear_trigger( mon_trigger::HOSTILE_CLOSE ) ) {
+                    morale -= 15;
+                }
+            }
+            // Prevent the monster from instantly breaking grabs.
+            // If the player can't do it, neither should they.
+            time_point start_time = grab.get_start_time();
+            time_duration effect_dur_elapsed = calendar::turn - start_time;
+            int speed_factor = 1 + std::round( 100 / get_speed() );
+            if( to_turns<int>( effect_dur_elapsed ) <= std::max( 1, speed_factor ) ) {
+                return false;
+            }
             int monster = type->melee_skill + type->melee_damage.total_damage();
             int grab_str = get_effect_int( grab.get_id() );
-            add_msg_debug( debugmode::DF_MONSTER, "%s attempting to break grab %s, success %d in intensity %d",
-                           get_name(), grab.get_id().c_str(), monster, grabber );
+            add_msg_debug( debugmode::DF_MONSTER,
+                           "%1s attempting to break grab %2s, success %3s in intensity %4s",
+                           get_name(), grab.get_id().c_str(), monster, grab_str );
             if( !x_in_y( monster, grab_str ) ) {
                 return false;
             } else {
-                if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) ) {
-                    add_msg( _( "The %s breaks free from the %s's grab!" ), name(), grabber->name() );
+                if( grabber ) {
+                    if( grabber->is_avatar() ) {
+                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ),
+                                 grabber->disp_name( true ) );
+                    } else if( u_see_me && get_option<bool>( "LOG_MONSTER_MOVE_EFFECTS" ) ) {
+                        add_msg( _( "%1s breaks free from %2s grab!" ), disp_name( false, true ),
+                                 grabber->disp_name( true ) );
+                    }
+                    if( !grabber->is_monster() ) {
+                        for( const effect &eff : grabber->get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
+                            const efftype_id effid = eff.get_id();
+                            grabber->remove_effect( effid );
+                            remove_effect( grab.get_id() );
+                            grabber->as_character()->grab_1.clear();
+                            continue;
+                        }
+                    }
                 }
-                remove_effect( grab.get_id() );
             }
         }
     }
@@ -3721,6 +3762,7 @@ void monster::on_hit( Creature *source, bodypart_id,
     // TODO: Faction relations
 }
 
+
 int monster::get_hp_max( const bodypart_id & ) const
 {
     return type->hp;
@@ -3853,7 +3895,7 @@ void monster::on_load()
     try_biosignature();
     reset_digestion();
 
-    //Clean up runaway values for monsters which eat but don't digest yet.
+    // Clean up runaway values for monsters which eat but don't digest yet.
     if( amount_eaten > 0 ) {
         if( has_flag( mon_flag_EATS ) ) {
             digest_food();

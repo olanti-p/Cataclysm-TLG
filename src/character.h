@@ -583,6 +583,35 @@ class Character : public Creature, public visitable
         // Relative direction of a grab, add to posx, posy to get the coordinates of the grabbed thing.
         tripoint grab_point;
 
+        // Structs for grabs maintained by this character. Each struct holds one creature, one
+        // grab_strength value, and (if the victim is a character) one body part to be grabbed.
+        // Normally characters only get one grab, but weird cases ie arm tentacles might allow more.
+
+        struct grab_data {
+            std::shared_ptr<Creature> victim;
+            efftype_id grab_effect_id;
+            int grab_strength;
+            bodypart_id grabbed_part;
+            grab_data() : victim( nullptr ), grab_strength( 0 ), grabbed_part( bodypart_id() ) {}
+            grab_data( std::shared_ptr<Creature> victim, int grab_strength,
+                       bodypart_id grabbed_part = bodypart_id() )
+                : victim( victim ), grab_strength( grab_strength ), grabbed_part( grabbed_part ) {}
+
+            void clear() {
+                victim.reset();
+                grab_strength = 0;
+                grabbed_part = bodypart_id();
+            }
+
+            void set( std::shared_ptr<Creature> newvictim, int newgrab_strength,
+                      bodypart_id newgrabbed_part = bodypart_id() ) {
+                victim = newvictim;
+                grab_strength = newgrab_strength;
+                grabbed_part = newgrabbed_part;
+            }
+        };
+        grab_data grab_1;
+
         std::optional<city> starting_city;
         std::optional<point_abs_om> world_origin;
         bool random_start_location = true;
@@ -2175,6 +2204,8 @@ class Character : public Creature, public visitable
         int thrown_item_total_damage_raw( const item &thrown ) const;
         /** Maximum thrown range with a given item, taking all active effects into account. */
         int throw_range( const item & ) const;
+        /** Maximum thrown range with a given item, taking all active effects into account. */
+        int throw_creature_range() const;
         /** Dispersion of a thrown item, against a given target, taking into account whether or not the throw was blind. */
         int throwing_dispersion( const item &to_throw, Creature *critter = nullptr,
                                  bool is_blind_throw = false ) const;
@@ -3247,6 +3278,7 @@ class Character : public Creature, public visitable
         int get_mutation_visibility_cap( const Character *observed ) const;
         /** Returns an enumeration of visible mutations with colors */
         std::string visible_mutations( int visibility_cap ) const;
+        std::string get_throw_descriptor( int throwforce );
 
         player_activity get_destination_activity() const;
         void set_destination_activity( const player_activity &new_destination_activity );

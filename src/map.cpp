@@ -2371,6 +2371,16 @@ bool map::is_wall_adjacent( const tripoint &center ) const
     return false;
 }
 
+bool map::is_clingable_wall_adjacent( const tripoint &center ) const
+{
+    for( const tripoint &p : points_in_radius( center, 1 ) ) {
+        if( p != center && impassable( p ) && !has_flag( ter_furn_flag::TFLAG_UNCLINGABLE, p ) ) {
+            return true;
+        }
+    }
+    return false;
+}
+
 bool map::is_open_air( const tripoint &p ) const
 {
     if( !inbounds( p ) ) {

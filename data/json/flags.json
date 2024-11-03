@@ -2460,5 +2460,10 @@
   {
     "id": "USES_NEARBY_AMMO",
     "type": "json_flag"
+  },
+  {
+    "id": "NO_GRAB",
+    "type": "json_flag",
+    "//": "Effects with this flag prevent the creature from initiating a grab."
   }
 ]

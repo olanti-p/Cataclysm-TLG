@@ -328,6 +328,7 @@ enum class ter_furn_flag : int {
     TFLAG_CLIMB_ADJACENT,
     TFLAG_FLOATS_IN_AIR,
     TFLAG_TINDER,
+    TFLAG_UNCLINGABLE,
 
     NUM_TFLAG_FLAGS
 };
