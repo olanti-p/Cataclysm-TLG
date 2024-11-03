@@ -691,6 +691,7 @@ static void grab()
             }
         }
         you.grab_1.clear();
+        return;
     }
 
     const std::optional<tripoint> grabp_ = choose_adjacent( _( "Grab where?" ) );
