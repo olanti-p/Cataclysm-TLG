@@ -3652,6 +3652,12 @@
       { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
     ]
   },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
   {
     "type": "technique",
     "id": "FOLDING_FANGS_BITE",
@@ -3808,12 +3814,6 @@
       { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
       { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
       { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
-      { "stat": "arpen", "type": "stab", "scaling-stat": "unarmed", "scale": 1 },
-      { "stat": "movecost", "scale": 75 },
-      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
-      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
-    ]
-  },
   {
     "type": "technique",
     "id": "VAMPIRE_BITE",
@@ -3910,11 +3910,7 @@
       }
     ],
     "condition": {
-      "and": [
-        {
-          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
-        }
-      ]
+        "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
     },
     "flat_bonuses": [
       { "stat": "damage", "type": "stab", "scale": 15 },
