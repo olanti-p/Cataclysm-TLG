@@ -2394,11 +2394,10 @@ bool monster::move_effects( bool )
                         for( const effect &eff : grabber->get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                             const efftype_id effid = eff.get_id();
                             grabber->remove_effect( effid );
-                            remove_effect( grab.get_id() );
                             grabber->as_character()->grab_1.clear();
-                            continue;
                         }
                     }
+                    remove_effect( grab.get_id() );
                 }
             }
         }
