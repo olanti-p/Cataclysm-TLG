@@ -3507,7 +3507,8 @@
     "condition": {
       "and": [
         { "not": { "u_has_effect": "natural_stance" } },
-        { "and": [ { "not": { "npc_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_effect": "GRAB" } } ] }
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
+        { "not": { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } }
       ]
     },
     "tech_effects": [
@@ -3516,8 +3517,24 @@
         "chance": 70,
         "duration": 3000,
         "on_damage": true,
-        "message": "Saliva glistens across %s's wound!",
+        "message": "Saliva glistens across the wound!",
         "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
       }
     ],
     "flat_bonuses": [
@@ -3546,7 +3563,7 @@
     "condition": {
       "and": [
         {
-          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
         }
       ]
     },
@@ -3556,8 +3573,24 @@
         "chance": 70,
         "duration": 3000,
         "on_damage": true,
-        "message": "Saliva glistens across %s's wound!",
+        "message": "Saliva glistens across the wound!",
         "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
       }
     ],
     "flat_bonuses": [
@@ -3585,10 +3618,26 @@
       {
         "id": "anticoagulant_draculin",
         "chance": 90,
-        "duration": 6000,
+        "duration": 3000,
         "on_damage": true,
-        "message": "Saliva glistens across %s's wound!",
+        "message": "Saliva glistens across the wound!",
         "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 600,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
       }
     ],
     "flat_bonuses": [
@@ -3596,7 +3645,169 @@
       { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 4.4 },
       { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
       { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
-      { "stat": "arpen", "type": "bash", "scaling-stat": "unar,ed", "scale": 1 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "FOLDING_FANGS_BITE",
+    "name": "Folding Fang Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -5,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "FANGS_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        { "not": { "u_has_effect": "natural_stance" } },
+        { "not": { "npc_has_effect": "webbed" } },
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
+        { "not": { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 12 },
+      { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 1.0 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "FOLDING_FANGS_BITE_NATURAL",
+    "name": "Fang Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -2,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "FANGS_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        {
+          "or": [ { "u_has_effect": "natural_stance" }, { "npc_has_effect": "webbed" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+        }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 12 },
+      { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 1.0 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "FOLDING_FANGS_BITE_CRIT",
+    "name": "Critical Folding Fang Bite",
+    "melee_allowed": true,
+    "messages": [ "You deliver a wicked bite to %s", "<npcname> delivers a wicked bite to %s!" ],
+    "unarmed_allowed": true,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_tec": true,
+    "attack_vectors": [ "MOUTH" ],
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 90,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 600,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 12 },
+      { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 4.4 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
       { "stat": "arpen", "type": "stab", "scaling-stat": "unarmed", "scale": 1 },
       { "stat": "movecost", "scale": 75 },
       { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
@@ -3619,7 +3830,8 @@
     "condition": {
       "and": [
         { "not": { "u_has_effect": "natural_stance" } },
-        { "and": [ { "not": { "npc_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_effect": "GRAB" } } ] }
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
+        { "not": { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } }
       ]
     },
     "tech_effects": [
@@ -3628,8 +3840,24 @@
         "chance": 90,
         "duration": 3000,
         "on_damage": true,
-        "message": "Saliva glistens across %s's wound!",
+        "message": "Saliva glistens across the wound!",
         "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 600,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
       }
     ],
     "flat_bonuses": [
@@ -3661,14 +3889,30 @@
         "chance": 90,
         "duration": 3000,
         "on_damage": true,
-        "message": "Saliva glistens across %s's wound!",
+        "message": "Saliva glistens across the wound!",
         "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 600,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
       }
     ],
     "condition": {
       "and": [
         {
-          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
         }
       ]
     },
@@ -3697,10 +3941,26 @@
       {
         "id": "anticoagulant_draculin",
         "chance": 100,
-        "duration": 6000,
+        "duration": 3000,
         "on_damage": true,
-        "message": "Saliva glistens across %s's wound!",
+        "message": "Saliva glistens across the wound!",
         "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 600,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
       }
     ],
     "attack_vectors": [ "MOUTH" ],
@@ -3711,6 +3971,573 @@
       { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
       { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
       { "stat": "arpen", "type": "stab", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "SABER_TEETH_BITE",
+    "name": "Saber Teeth Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -5,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "SABER_TEETH_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        { "not": { "u_has_effect": "natural_stance" } },
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
+        { "not": { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 21 },
+      { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 1.0 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 100 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "SABER_TEETH_BITE_NATURAL",
+    "name": "Saber Teeth Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -2,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "SABER_TEETH_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "condition": {
+      "and": [
+        {
+          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+        }
+      ]
+    },
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 21 },
+      { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 1.0 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 100 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "SABER_TEETH_BITE_CRIT",
+    "name": "Critical Saber Teeth Bite",
+    "melee_allowed": true,
+    "messages": [ "You viciously bite %s", "<npcname> viciously bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -4,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_tec": true,
+    "attack_vectors": [ "MOUTH" ],
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 90,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 21 },
+      { "stat": "damage", "type": "stab", "scaling-stat": "unarmed", "scale": 4.4 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "movecost", "scale": 100 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "SHARKTEETH_BITE",
+    "name": "Shark Teeth Bite",
+    "melee_allowed": true,
+    "messages": [ "You chomp %s", "<npcname> chomps %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -5,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "SHARKTEETH_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        { "not": "u_is_underwater" },
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
+        { "not": { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 22 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 100 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "SHARKTEETH_BITE_NATURAL",
+    "name": "Shark Teeth Bite",
+    "melee_allowed": true,
+    "messages": [ "You chomp %s", "<npcname> chomps %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -2,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "SHARKTEETH_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        {
+          "or": [ "u_is_underwater", { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+        }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 22 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 100 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "SHARKTEETH_BITE_CRIT",
+    "name": "Critical Shark Teeth Bite",
+    "melee_allowed": true,
+    "messages": [ "You rip into %s with your shark teeth", "<npcname> rips into %s with their shark teeth!" ],
+    "unarmed_allowed": true,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_tec": true,
+    "attack_vectors": [ "MOUTH" ],
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 90,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 22 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 4.2 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "arpen", "type": "cut", "scaling-stat": "unarmed", "scale": 0.75 },
+      { "stat": "movecost", "scale": 100 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "MANDIBLES_BITE",
+    "name": "Mandibles Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -5,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "MANDIBLES_BITE_NATURAL",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        { "not": { "u_has_effect": "natural_stance" } },
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
+        { "not": { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } }
+      ]
+    },
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 10 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "MANDIBLES_BITE_NATURAL",
+    "name": "Mandibles Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -2,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "SHARKTEETH_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        {
+          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+        }
+      ]
+    },
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 10 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.06 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "MANDIBLES_BITE_CRIT",
+    "name": "Critical Mandibles Bite",
+    "melee_allowed": true,
+    "messages": [ "You viciously bite %s", "<npcname> viciously bites %s!" ],
+    "unarmed_allowed": true,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_tec": true,
+    "attack_vectors": [ "MOUTH" ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 10 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 4.2 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 0.24 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "arpen", "type": "cut", "scaling-stat": "unarmed", "scale": 0.75 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "BEAK_BITE",
+    "name": "Beak Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -5,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "BEAK_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        { "not": { "u_has_effect": "natural_stance" } },
+        { "and": [ { "not": { "npc_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_flag": "GRAB" } } ] },
+        { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } }, { "not": { "npc_has_flag": "GRAB" } } ] }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 7 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 2.06 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "BEAK_BITE_NATURAL",
+    "name": "Fang Bite",
+    "melee_allowed": true,
+    "messages": [ "You bite %s", "<npcname> bites %s!" ],
+    "unarmed_allowed": true,
+    "weighting": -2,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_ok": true,
+    "crit_tec_id": "FANGS_BITE_CRIT",
+    "attack_vectors": [ "MOUTH" ],
+    "condition": {
+      "and": [
+        {
+          "or": [ { "u_has_effect": "natural_stance" }, { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] }, { "and": [ { "npc_has_flag": "GRAB_FILTER" }, { "u_has_flag": "GRAB" } ] } ]
+        }
+      ]
+    },
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 7 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 2.06 },
+      { "stat": "movecost", "scale": 75 },
+      { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "BEAK_BITE_CRIT",
+    "name": "Critical Beak Bite",
+    "melee_allowed": true,
+    "messages": [ "You deliver a wicked bite to %s", "<npcname> delivers a wicked bite to %s!" ],
+    "unarmed_allowed": true,
+    "reach_ok": false,
+    "attack_override": true,
+    "crit_tec": true,
+    "attack_vectors": [ "MOUTH" ],
+    "tech_effects": [
+      {
+        "id": "anticoagulant_draculin",
+        "chance": 90,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Saliva glistens across the wound!",
+        "req_flag": "DRACULIN_VENOM"
+      },
+      {
+        "id": "venom_player1",
+        "chance": 70,
+        "duration": 600,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM1"
+      },
+      {
+        "id": "venom_player2",
+        "chance": 70,
+        "duration": 3000,
+        "on_damage": true,
+        "message": "Venom gets into the wound!",
+        "req_flag": "VENOM2"
+      }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "cut", "scale": 7 },
+      { "stat": "damage", "type": "cut", "scaling-stat": "unarmed", "scale": 4.2 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.75 },
+      { "stat": "damage", "type": "bash", "scaling-stat": "unarmed", "scale": 2.24 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "unarmed", "scale": 1 },
+      { "stat": "arpen", "type": "cut", "scaling-stat": "unarmed", "scale": 0.75 },
       { "stat": "movecost", "scale": 75 },
       { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
       { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
