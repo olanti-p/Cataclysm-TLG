@@ -587,7 +587,16 @@
     "symbol": ";",
     "color": "brown",
     "warmth": 2,
-    "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "PERSONAL", "WATER_FRIENDLY", "PADDED", "NO_SALVAGE", "PROVIDES_TECHNIQUES" ],
+    "flags": [
+      "INTEGRATED",
+      "ALLOWS_NATURAL_ATTACKS",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "WATER_FRIENDLY",
+      "PADDED",
+      "NO_SALVAGE",
+      "PROVIDES_TECHNIQUES"
+    ],
     "techniques": [ "FOLDING_FANGS_BITE", "FOLDING_FANGS_BITE_NATURAL" ],
     "armor": [
       {
@@ -1590,7 +1599,7 @@
     "id": "integrated_sharkteeth",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str_sp": "fangs" },
+    "name": { "str_sp": "shark teeth" },
     "description": "Rows of jagged teeth, essentially a biological chainsaw.  They're best used in deep water.",
     "weight": "100 g",
     "volume": "150 ml",
@@ -1625,7 +1634,17 @@
     "symbol": ",",
     "color": "white",
     "qualities": [ [ "CUT", 2 ], [ "BUTCHER", 4 ] ],
-    "techniques": [ "FANGS_BITE", "FANGS_BITE_NATURAL" ],
+    "techniques": [
+      "FANGS_BITE",
+      "FANGS_BITE_NATURAL",
+      "FANGS_BITE_MUZZLE",
+      "FANGS_BITE_NATURAL_MUZZLE",
+      "FANGS_BITE_LUCKY_MUZZLE",
+      "FANGS_BITE_MUZZLE_BEAR",
+      "FANGS_BITE_MUZZLE_RAPTOR",
+      "FANGS_BITE_NATURAL_MUZZLE_RAPTOR",
+      "FANGS_BITE_MUZZLE_LONG"
+    ],
     "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "PERSONAL", "PADDED", "PROVIDES_TECHNIQUES" ],
     "armor": [
       {
@@ -1680,6 +1699,110 @@
     "armor": [
       {
         "material": [ { "type": "bone", "covered_by_mat": 100, "thickness": 10 } ],
+        "covers": [ "mouth" ],
+        "coverage": 0,
+        "encumbrance": 0
+      }
+    ]
+  },
+  {
+    "id": "integrated_incisors",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str_sp": "incisors" },
+    "description": "A pair of chisel-like incisors which protrude from the upper and lower jaw.",
+    "weight": "100 g",
+    "volume": "125 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "bone" ],
+    "symbol": ",",
+    "color": "white",
+    "qualities": [ [ "CUT", 1 ], [ "CHISEL_WOOD", 1 ] ],
+    "techniques": [
+      "INCISORS_BITE",
+      "INCISORS_BITE_NATURAL",
+      "INCISORS_BITE_MUZZLE_RAT_RABBIT_NOSE",
+      "INCISORS_BITE_NATURAL_MUZZLE_RAT_RABBIT_NOSE"
+    ],
+    "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "PERSONAL", "PADDED", "PROVIDES_TECHNIQUES" ],
+    "armor": [
+      {
+        "material": [ { "type": "bone", "covered_by_mat": 100, "thickness": 10 } ],
+        "covers": [ "mouth" ],
+        "coverage": 0,
+        "encumbrance": 0
+      }
+    ]
+  },
+  {
+    "id": "integrated_wide_mouth",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str_sp": "wide mouth" },
+    "description": "Most people's mouths aren't as wide as their head.  This one is.",
+    "weight": "10 g",
+    "volume": "12 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "bone" ],
+    "symbol": ",",
+    "color": "white",
+    "techniques": [ "WIDE_MOUTH_BITE", "WIDE_MOUTH_BITE_NATURAL" ],
+    "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "PERSONAL", "PADDED", "PROVIDES_TECHNIQUES" ],
+    "armor": [
+      {
+        "material": [ { "type": "bone", "covered_by_mat": 100, "thickness": 10 } ],
+        "covers": [ "mouth" ],
+        "coverage": 0,
+        "encumbrance": 0
+      }
+    ]
+  },
+  {
+    "id": "integrated_beak",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str_sp": "crushing beak" },
+    "description": "A stout, curved beak, like a parrot's.  It's sharp and looks like it could deliver a formidable bite.",
+    "weight": "100 g",
+    "volume": "125 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "chitin" ],
+    "symbol": ",",
+    "color": "white",
+    "qualities": [ [ "HAMMER", 1 ] ],
+    "techniques": [ "BEAK_BITE", "BEAK_BITE_NATURAL", "BEAK_BITE_MOUTH_TENTACLES" ],
+    "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "PERSONAL", "PADDED", "PROVIDES_TECHNIQUES" ],
+    "armor": [
+      {
+        "material": [ { "type": "chitin", "covered_by_mat": 100, "thickness": 10 } ],
+        "covers": [ "mouth" ],
+        "coverage": 0,
+        "encumbrance": 0
+      }
+    ]
+  },
+  {
+    "id": "integrated_drill_beak",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str_sp": "drill beak" },
+    "description": "A sharp, pointed beak.  The surrounding structure seems fully capable of absorbing the shock of it jackhammering into wood or bone.",
+    "weight": "100 g",
+    "volume": "125 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "chitin" ],
+    "symbol": ",",
+    "color": "yellow",
+    "qualities": [ [ "DRILL", 1 ], [ "CHISEL_WOOD", 1 ] ],
+    "techniques": [ "DRILL_BEAK_PECK", "DRILL_BEAK_PECK_NATURAL" ],
+    "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "PERSONAL", "PADDED", "PROVIDES_TECHNIQUES" ],
+    "armor": [
+      {
+        "material": [ { "type": "chitin", "covered_by_mat": 100, "thickness": 10 } ],
         "covers": [ "mouth" ],
         "coverage": 0,
         "encumbrance": 0
