@@ -2453,6 +2453,16 @@
     "type": "json_flag"
   },
   {
+    "id": "VENOM1",
+    "type": "json_flag",
+    "//": "This character produces a venom which can be injected into enemies via certain mutation attacks."
+  },
+  {
+    "id": "VENOM2",
+    "type": "json_flag",
+    "//": "This character produces a potent venom which can be injected into enemies via certain mutation attacks."
+  },
+  {
     "id": "ACID_AFFLICTED",
     "type": "json_flag",
     "//": "The character is afflicted with acid."

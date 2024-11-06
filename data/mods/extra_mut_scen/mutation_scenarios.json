@@ -319,7 +319,7 @@
     "name": "Mutant - Bird Threshold",
     "description": "Start as a post-threshold Bird Mutant",
     "forced_traits": "THRESH_BIRD",
-    "extend": { "traits": [ "BEAK_HUM", "BEAK_PECK", "BIRD_EYE", "DOWN", "GIZZARD", "PER_UP_4" ] }
+    "extend": { "traits": [ "BEAK_HUM", "DRILL_BEAK", "BIRD_EYE", "DOWN", "GIZZARD", "PER_UP_4" ] }
   },
   {
     "type": "scenario",
