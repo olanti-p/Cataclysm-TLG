@@ -237,7 +237,7 @@ bool Character::try_remove_grab( bool attacking )
             // Follower NPCs should almost always assume the player is doing something
             // for a good reason, as long as it's not killing them. Being grabbed is
             // not directly harmful, so they usually won't resist.
-            if( grabber->as_character()->is_avatar() && as_npc()->is_player_ally() ) {
+            if( !grabber->is_monster() && grabber->as_character()->is_avatar() && as_npc()->is_player_ally() ) {
                 continue;
             }
 

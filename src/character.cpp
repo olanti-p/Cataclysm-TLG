@@ -2498,7 +2498,6 @@ void Character::process_turn()
     }
 
     // Persist grabs as long as our target is adjacent.
-    // Victims free themselves in their own loop, so we can mostly ignore them here.
     if( grab_1.victim != nullptr && !grab_1.victim->is_monster() ) {
         bool remove = false;
         if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
@@ -2521,6 +2520,7 @@ void Character::process_turn()
                         remove_effect( youeffid );
                     }
                     grab_1.clear();
+                    break;
                 }
             }
         }
@@ -2528,11 +2528,14 @@ void Character::process_turn()
     // Check the grabbing character for orphan grabs on their end.
     if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         bool remove = false;
-        if( !grab_1.victim || square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+        if( grab_1.victim != nullptr ) {
             remove = true;
         }
         // This is for if we moved away, dropping our grab, but the victim moved adjacent to us before our next turn began.
         if( grab_1.victim ) {
+            if( square_dist( grab_1.victim->pos(), pos() ) != 1 ) {
+                remove = true;
+            }
             bool grabfound = false;
             for( const effect &eff : grab_1.victim->get_effects_with_flag( json_flag_GRAB ) ) {
                 if( eff.get_intensity() == grab_1.grab_strength ) {
@@ -2547,15 +2550,12 @@ void Character::process_turn()
             add_msg_if_player( _( "You're too exhausted to maintain your hold." ) );
             remove = true;
         }
-
         if( remove ) {
-            add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
-                           disp_name() );
             for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
-                remove_effect( effid );
                 add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
-                               disp_name() );
+                       disp_name() );
+                remove_effect( effid );
             }
             grab_1.clear();
         } else {
@@ -7507,7 +7507,8 @@ int Character::item_handling_cost( const item &it, bool penalties, int base_cost
     if( weapon.typeId() == itype_e_handcuffs ) {
         mv *= 4;
     } else if( penalties && has_flag( json_flag_GRAB ) ) {
-        // Grabbed penalty scales for grabbed arms/hands
+        // Grabbed penalty scales for grabbed arms/hands.
+        // TODO: Make this more generalized for multi-armed characters like cephalopods.
         int pen = 2;
         for( const effect &eff : get_effects_with_flag( json_flag_GRAB ) ) {
             if( eff.get_bp()->primary_limb_type() == body_part_type::type::arm ||
