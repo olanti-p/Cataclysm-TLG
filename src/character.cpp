@@ -2554,7 +2554,7 @@ void Character::process_turn()
             for( const effect &eff : get_effects_with_flag( json_flag_GRAB_FILTER ) ) {
                 const efftype_id effid = eff.get_id();
                 add_msg_debug( debugmode::DF_CHARACTER, "Orphan grabbing effect found and removed from %s.",
-                       disp_name() );
+                               disp_name() );
                 remove_effect( effid );
             }
             grab_1.clear();
