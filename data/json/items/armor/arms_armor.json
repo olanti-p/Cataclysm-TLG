@@ -116,7 +116,7 @@
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "green",
-    "warmth": 10,
+    "warmth": 5,
     "material_thickness": 3,
     "environmental_protection": 2,
     "flags": [ "STURDY", "OUTER", "BLOCK_WHILE_WORN", "WATER_FRIENDLY" ],
