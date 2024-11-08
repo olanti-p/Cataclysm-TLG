@@ -1374,7 +1374,7 @@
     "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "SAW_M", "level": 1 } ]
   },
   {
-    "result": "lc_esbi_plate",
+    "result": "steel_esbi_plate",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_*",
@@ -2367,7 +2367,7 @@
     "time": "6 h",
     "qualities": [ { "id": "LEATHER_AWL", "level": 1 } ],
     "using": [ [ "cordage", 90 ], [ "fabric_leather_fur_hide", 1 ] ],
-    "components": [ [ [ "lamellae_lc", 648 ] ] ]
+    "components": [ [ [ "lamellae", 648 ] ] ]
   },
   {
     "result": "xl_armor_lamellar",
@@ -2376,7 +2376,7 @@
     "time": "10 h",
     "qualities": [ { "id": "LEATHER_AWL", "level": 1 } ],
     "using": [ [ "cordage", 140 ], [ "fabric_leather_fur_hide", 2 ] ],
-    "components": [ [ [ "lamellae_lc", 1080 ] ] ]
+    "components": [ [ [ "lamellae", 1080 ] ] ]
   },
   {
     "result": "armor_lamellar_repair",
@@ -2390,7 +2390,7 @@
     "time": "30 m",
     "book_learn": [ [ "textbook_armwest", 2 ], [ "textbook_armeast", 2 ], [ "textbook_armschina", 2 ] ],
     "using": [ [ "cordage", 6 ] ],
-    "components": [ [ [ "lamellae_lc", 18 ] ], [ [ "armor_lamellar_lc", 1 ] ] ],
+    "components": [ [ [ "lamellae", 18 ] ], [ [ "armor_lamellar", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_closures" } ]
   },
   {
@@ -2400,7 +2400,7 @@
     "id_suffix": "repair",
     "time": "30 m",
     "using": [ [ "cordage", 4 ] ],
-    "components": [ [ [ "lamellae_lc", 12 ] ], [ [ "xs_armor_lamellar_lc", 1 ] ] ]
+    "components": [ [ [ "lamellae", 12 ] ], [ [ "xs_armor_lamellar", 1 ] ] ]
   },
   {
     "result": "xl_armor_lamellar",
@@ -2409,7 +2409,7 @@
     "id_suffix": "repair",
     "time": "30 m",
     "using": [ [ "cordage", 8 ] ],
-    "components": [ [ [ "lamellae_lc", 24 ] ], [ [ "xl_armor_lamellar_lc", 1 ] ] ]
+    "components": [ [ [ "lamellae", 24 ] ], [ [ "xl_armor_lamellar", 1 ] ] ]
   },
   {
     "result": "chainmail_vest",
@@ -2422,7 +2422,7 @@
     "time": "7 h 10 m",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
     "using": [ [ "chainmail_standard", 7 ], [ "tailoring_cotton_patchwork", 6 ] ],
-    "components": [ [ [ "lc_link_sheet", 7 ] ], [ [ "lc_chain_link", 175 ] ], [ [ "lc_wire", 1 ] ] ],
+    "components": [ [ [ "link_sheet", 7 ] ], [ [ "chain_link", 175 ] ], [ [ "wire", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" } ]
   },
   {
@@ -2431,7 +2431,7 @@
     "copy-from": "chainmail_vest",
     "time": "7 h 10 m",
     "using": [ [ "chainmail_standard", 5 ], [ "tailoring_cotton_patchwork", 4 ] ],
-    "components": [ [ [ "lc_link_sheet", 5 ] ], [ [ "lc_chain_link", 131 ] ], [ [ "lc_wire", 1 ] ] ]
+    "components": [ [ [ "link_sheet", 5 ] ], [ [ "chain_link", 131 ] ], [ [ "wire", 1 ] ] ]
   },
   {
     "result": "xl_chainmail_vest",
@@ -2439,7 +2439,7 @@
     "copy-from": "chainmail_vest",
     "time": "8 h 5 m",
     "using": [ [ "chainmail_standard", 10 ], [ "tailoring_cotton_patchwork", 9 ] ],
-    "components": [ [ [ "lc_link_sheet", 10 ] ], [ [ "lc_chain_link", 210 ] ], [ [ "lc_wire", 2 ] ] ]
+    "components": [ [ [ "link_sheet", 10 ] ], [ [ "chain_link", 210 ] ], [ [ "wire", 2 ] ] ]
   },
   {
     "result": "armor_cuirass",
@@ -3008,7 +3008,7 @@
     ]
   },
   {
-    "result": "xl_ballistic_vest_lc",
+    "result": "xl_ballistic_vest_steel",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -3018,17 +3018,5 @@
     "autolearn": true,
     "reversible": true,
     "components": [ [ [ "xl_ballistic_vest", 1 ] ], [ [ "sheet_metal_small", 20 ] ] ]
-  },
-  {
-    "result": "xl_ballistic_vest_qt",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "10 m",
-    "skill_used": "fabrication",
-    "autolearn": true,
-    "reversible": true,
-    "components": [ [ [ "xl_ballistic_vest", 1 ] ], [ [ "steel_ballistic_plate", 10 ] ] ]
   }
 ]

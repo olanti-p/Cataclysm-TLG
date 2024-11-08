@@ -166,7 +166,7 @@
     "symbol": "[",
     "looks_like": "boots_bone",
     "color": "green",
-    "warmth": 10,
+    "warmth": 5,
     "material_thickness": 4,
     "environmental_protection": 3,
     "flags": [ "STURDY", "VARSIZE", "WATERPROOF" ],

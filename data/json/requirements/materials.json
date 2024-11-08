@@ -372,14 +372,8 @@
     "components": [
       [
         [ "scrap", 50 ],
-        [ "budget_steel_chunk", 4 ],
-        [ "budget_steel_lump", 1 ],
-        [ "lc_steel_chunk", 4 ],
-        [ "lc_steel_lump", 1 ],
-        [ "mc_steel_chunk", 4 ],
-        [ "mc_steel_lump", 1 ],
-        [ "hc_steel_chunk", 4 ],
-        [ "hc_steel_lump", 1 ]
+        [ "steel_chunk", 4 ],
+        [ "steel_lump", 1 ]
       ]
     ]
   },
@@ -491,19 +485,7 @@
     "id": "lc_steel_standard",
     "type": "requirement",
     "//": "Materials for use when forging items from steel",
-    "components": [ [ [ "lc_steel_lump", 1 ], [ "lc_steel_chunk", 4 ] ] ]
-  },
-  {
-    "id": "mc_steel_standard",
-    "type": "requirement",
-    "//": "Materials for use when forging items from steel",
-    "components": [ [ [ "mc_steel_lump", 1 ], [ "mc_steel_chunk", 4 ] ] ]
-  },
-  {
-    "id": "hc_steel_standard",
-    "type": "requirement",
-    "//": "Materials for use when forging items from steel",
-    "components": [ [ [ "hc_steel_lump", 1 ], [ "hc_steel_chunk", 4 ] ] ]
+    "components": [ [ [ "steel_lump", 1 ], [ "steel_chunk", 4 ] ] ]
   },
   {
     "id": "daub_fill",
