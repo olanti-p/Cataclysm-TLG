@@ -100,7 +100,7 @@
   {
     "id": "xs_chainmail_hands",
     "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
+    "copy-from": "chainmail_hands",
     "name": { "str": "pair of XS chainmail gloves", "str_pl": "pairs of XS chainmail gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }

@@ -79,7 +79,7 @@
   {
     "id": "xl_chainmail_hood",
     "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
+    "copy-from": "chainmail_hood",
     "name": { "str": "XL chainmail coif" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }

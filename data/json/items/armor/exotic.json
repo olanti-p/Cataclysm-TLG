@@ -135,14 +135,14 @@
     "volume": "1 L",
     "price": 2500,
     "price_postapoc": 400,
-    "material": [ "alien_liquid", "unobtanium" ],
+    "material": [ "alien_liquid", "superalloy" ],
     "symbol": "[",
     "looks_like": "union_suit",
     "color": "white",
     "armor": [
       {
         "material": [
-          { "type": "unobtanium", "covered_by_mat": 10, "thickness": 0.5 },
+          { "type": "superalloy", "covered_by_mat": 10, "thickness": 0.5 },
           { "type": "alien_liquid", "covered_by_mat": 100, "thickness": 1 }
         ],
         "covers": [ "torso" ],
@@ -152,7 +152,7 @@
       },
       {
         "material": [
-          { "type": "unobtanium", "covered_by_mat": 85, "thickness": 0.5 },
+          { "type": "superalloy", "covered_by_mat": 85, "thickness": 0.5 },
           { "type": "alien_liquid", "covered_by_mat": 100, "thickness": 1 }
         ],
         "covers": [ "arm_l", "arm_r" ],
@@ -196,7 +196,7 @@
     "volume": "100 ml",
     "price": 2500,
     "price_postapoc": 400,
-    "material": [ "unobtanium" ],
+    "material": [ "superalloy" ],
     "symbol": "[",
     "looks_like": "silver_necklace",
     "color": "white",
@@ -209,14 +209,14 @@
     },
     "armor": [
       {
-        "material": [ { "type": "unobtanium", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "material": [ { "type": "superalloy", "covered_by_mat": 100, "thickness": 0.5 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 10,
         "encumbrance": 0
       },
       {
-        "material": [ { "type": "unobtanium", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "material": [ { "type": "superalloy", "covered_by_mat": 100, "thickness": 0.5 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
         "coverage": 85,
