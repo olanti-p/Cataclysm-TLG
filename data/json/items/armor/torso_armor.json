@@ -77,125 +77,6 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "armor_lamellar",
-    "type": "ARMOR",
-    "name": { "str": "leather lamellar cuirass", "str_pl": "leather lamellar cuirasses" },
-    "description": "A cuirass made of multiple pieces of tough leather, laced together for durable yet flexible protection.",
-    "weight": "2108 g",
-    "volume": "9250 ml",
-    "price": 26000,
-    "price_postapoc": 2500,
-    "material": [ "leather" ],
-    "symbol": "[",
-    "looks_like": "vest_leather",
-    "copy-from": "armor_chitin",
-    "color": "brown",
-    "longest_side": "60 cm",
-    "warmth": 20,
-    "material_thickness": 3,
-    "flags": [ "VARSIZE", "STURDY", "OUTER", "ABLATIVE_CHAINMAIL_TORSO" ],
-    "armor": [
-      {
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.0 } ],
-        "encumbrance": 8,
-        "coverage": 100,
-        "cover_ranged": 95,
-        "cover_vitals": 70,
-        "covers": [ "torso" ]
-      },
-      {
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.0 } ],
-        "encumbrance": 4,
-        "coverage": 90,
-        "cover_ranged": 95,
-        "cover_vitals": 70,
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_upper_l", "arm_shoulder_l", "arm_upper_r", "arm_shoulder_r" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_armor_lamellar",
-    "type": "ARMOR",
-    "name": { "str": "XL leather lamellar cuirass", "str_pl": "XL leather lamellar cuirasses" },
-    "copy-from": "armor_lamellar",
-    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_armor_lamellar",
-    "type": "ARMOR",
-    "copy-from": "armor_lamellar",
-    "looks_like": "armor_lamellar",
-    "name": { "str": "XS leather lamellar cuirass", "str_pl": "XS leather lamellar cuirasses" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "armor_steel_lamellar",
-    "type": "ARMOR",
-    "name": { "str": "steel lamellar cuirass", "str_pl": "steel lamellar cuirasses" },
-    "description": "A cuirass made of small strips of sheet metal laced together, something of an intermediary between chain mail and plate armor.  It's less Mad Max and more Garage Mongolian, but the classics are classic for a reason.",
-    "weight": "14000 g",
-    "volume": "9250 ml",
-    "price": 26000,
-    "price_postapoc": 2500,
-    "material": [ "lc_steel" ],
-    "symbol": "[",
-    "looks_like": "armor_lorica",
-    "color": "light_gray",
-    "longest_side": "60 cm",
-    "warmth": 20,
-    "material_thickness": 3,
-    "flags": [ "VARSIZE", "OUTER", "NO_REPAIR", "ABLATIVE_CHAINMAIL_TORSO" ],
-    "armor": [
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 22,
-        "coverage": 95,
-        "cover_ranged": 95,
-        "cover_vitals": 70,
-        "covers": [ "torso" ]
-      },
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 16,
-        "coverage": 90,
-        "cover_ranged": 95,
-        "cover_vitals": 70,
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_upper_l", "arm_shoulder_l", "arm_upper_r", "arm_shoulder_r" ]
-      },
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 22,
-        "coverage": 90,
-        "cover_ranged": 95,
-        "cover_vitals": 70,
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_hip_l", "leg_upper_r", "leg_hip_r" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_armor_steel_lamellar",
-    "type": "ARMOR",
-    "name": { "str": "XL steel lamellar cuirass", "str_pl": "XL steel lamellar cuirasses" },
-    "description": "A cuirass made of small strips of sheet metal laced together, something of an intermediary between chain mail and plate armor.  The perfect size for an ogre or bipedal grizzly bear.",
-    "copy-from": "armor_steel_lamellar",
-    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_armor_steel_lamellar",
-    "type": "ARMOR",
-    "copy-from": "armor_steel_lamellar",
-    "name": { "str": "XS steel lamellar cuirass", "str_pl": "XS steel lamellar cuirasses" },
-    "description": "A cuirass made of small strips of sheet metal laced together, something of an intermediary between chain mail and plate armor.  Perfectly sized for a particularly angry toddler.",
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
     "id": "carpet_cuirass",
     "type": "ARMOR",
     "name": { "str": "carpet cuirass", "str_pl": "carpet cuirasses" },
@@ -489,7 +370,7 @@
     "armor": [ { "encumbrance": 20, "coverage": 80, "covers": [ "torso" ] } ]
   },
   {
-    "abstract": "chainmail_vest",
+    "id": "chainmail_vest",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "chainmail vest" },
@@ -543,7 +424,7 @@
     ]
   },
   {
-    "abstract": "chainmail_vest",
+    "id": "xl_chainmail_vest",
     "type": "ARMOR",
     "name": { "str": "XL chainmail vest" },
     "copy-from": "chainmail_vest",
@@ -564,7 +445,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "abstract": "chainmail_vest",
+    "id": "xs_chainmail_vest",
     "type": "ARMOR",
     "copy-from": "chainmail_vest",
     "name": { "str": "XS chainmail vest" },
@@ -1435,83 +1316,6 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "survivor_adhoc_leather_shirt",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "leather-padded shirt" },
-    "description": "Armor made of combined pre-Cataclysm clothing.  Sections from leather clothing are tightened and affixed to a thick cotton shirt, excluding the joints.",
-    "weight": "2000 g",
-    "volume": "2500 ml",
-    "price_postapoc": 3500,
-    "to_hit": -2,
-    "material": [ "cotton", "leather" ],
-    "symbol": "[",
-    "looks_like": "sweatshirt",
-    "color": "light_red",
-    "armor": [
-      {
-        "material": [
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "leather", "covered_by_mat": 90, "thickness": 1.5 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 8
-      },
-      {
-        "material": [ { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 } ],
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_elbow_l", "arm_elbow_r", "arm_shoulder_l", "arm_shoulder_r" ],
-        "coverage": 100,
-        "encumbrance": 0
-      },
-      {
-        "material": [
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "leather", "covered_by_mat": 95, "thickness": 1.5 }
-        ],
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_upper_l", "arm_lower_l", "arm_upper_r", "arm_lower_r" ],
-        "coverage": 100,
-        "encumbrance": 8
-      }
-    ],
-    "warmth": 35,
-    "material_thickness": 2.5,
-    "environmental_protection": 2,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY" ]
-  },
-  {
-    "id": "survivor_adhoc_leather_torso",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "leather-padded sleeveless shirt" },
-    "description": "Armor made of combined pre-Cataclysm clothing.  Sections from leather clothing are tightened and affixed to a thick cotton shirt.  The sleeves have been cut off.",
-    "weight": "1500 g",
-    "volume": "2000 ml",
-    "price_postapoc": 2000,
-    "to_hit": -2,
-    "material": [ "cotton", "leather" ],
-    "symbol": "[",
-    "looks_like": "sleeveless_tunic",
-    "color": "light_red",
-    "armor": [
-      {
-        "material": [
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "leather", "covered_by_mat": 90, "thickness": 1.5 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 8
-      }
-    ],
-    "warmth": 35,
-    "material_thickness": 2.5,
-    "environmental_protection": 2,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY" ]
-  },
-  {
     "id": "armor_riot_torso",
     "type": "ARMOR",
     "category": "armor",
@@ -1615,10 +1419,10 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "lc_mirror_armor",
+    "id": "mirror_armor",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "mild steel mirror armor", "str_pl": "sets of mild steel mirror armor" },
+    "name": { "str": "mirror armor", "str_pl": "sets of mirror armor" },
     "description": "Mirror armor is either round or square plates connected by fasteners to cover all four sides of the vital areas of the torso, mirror plate was usually worn on top of other armor like chainmail or brigandines.",
     "weight": "1000 g",
     "volume": "2 L",
@@ -1649,15 +1453,16 @@
     "id": "xl_mirror_armor",
     "type": "ARMOR",
     "name": { "str": "XL mirror armor", "str_pl": "sets of XL mirror armor" },
-    "copy-from": "cuirass_lightplate",
+    "copy-from": "mirror_armor",
+    "looks_like": "mirror_armor",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "xs_mirror_armor",
     "type": "ARMOR",
-    "copy-from": "lc_mirror_armor",
-    "looks_like": "lc_mirror_armor",
+    "copy-from": "mirror_armor",
+    "looks_like": "mirror_armor",
     "name": { "str": "XS mirror armor", "str_pl": "sets of XS mirror armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }

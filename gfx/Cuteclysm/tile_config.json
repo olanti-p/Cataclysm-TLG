@@ -2526,7 +2526,7 @@
         { "id": "badge_detective", "fg": 1726, "rotates": false, "multitile": false },
         { "id": "badge_marshal", "fg": 1726, "rotates": false, "multitile": false },
         { "id": "badge_swat", "fg": 1726, "rotates": false, "multitile": false },
-        { "id": "balclava", "fg": 1610, "rotates": false, "multitile": false },
+        { "id": "balaclava", "fg": 1610, "rotates": false, "multitile": false },
         { "id": "bandana", "fg": 1617, "rotates": false, "multitile": false },
         { "id": "barrette", "fg": 1673, "rotates": false, "multitile": false },
         { "id": "bastsandals", "fg": 1527, "rotates": false, "multitile": false },

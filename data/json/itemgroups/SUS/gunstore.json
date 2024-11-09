@@ -142,8 +142,10 @@
       { "item": "throwing_knife", "count-min": 1, "count-max": 6, "entry-wrapper": "leg_sheath6", "prob": 5 },
       { "group": "ear_protection", "prob": 45 },
       { "item": "hat_boonie", "prob": 30 },
-      { "item": "balclava", "prob": 30 },
-      { "item": "ballistic_vest_esapi", "prob": 5 },
+      { "item": "balaclava", "prob": 30 },
+      { "item": "stab_vest", "prob": 2 },
+      { "item": "level_3_vest", "prob": 4 },
+      { "item": "ballistic_vest_esapi", "prob": 3 },
       { "item": "aim_game", "prob": 35 }
     ]
   }

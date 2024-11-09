@@ -57,6 +57,7 @@
     "id": "launchers",
     "subtype": "distribution",
     "entries": [
+      { "item": "m79", "prob": 2 },
       { "item": "m320", "prob": 50 },
       { "item": "mgl", "prob": 60 },
       { "item": "m203", "prob": 50 },
@@ -64,8 +65,14 @@
       { "item": "m3_carlgustav", "prob": 10 },
       { "item": "m4_carlgustav", "prob": 10 },
       { "item": "m202_flash", "prob": 20 },
+      { "item": "RPG", "prob": 40 },
+      { "item": "RPG-7_ammo", "prob": 5 },
+      { "item": "RPG-7_og7v", "prob": 2 },
+      { "item": "RPG-7_tbg7v", "prob": 2 },
+      { "item": "RPG-7_pg7vr", "prob": 2 },
       { "item": "atgm_launcher", "prob": 3 },
       { "item": "atgm_heat", "prob": 6 },
+      { "item": "flamethrower", "prob": 2 },
       { "item": "rm451_flamethrower", "prob": 40 }
     ]
   },

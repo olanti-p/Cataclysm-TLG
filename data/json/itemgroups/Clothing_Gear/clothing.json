@@ -85,7 +85,7 @@
     "//": "Clothes that hunters take on hunting trips.",
     "subtype": "distribution",
     "entries": [
-      { "item": "balclava", "prob": 50 },
+      { "item": "balaclava", "prob": 50 },
       { "item": "hat_cotton", "prob": 50 },
       { "item": "hat_faux_fur", "prob": 25 },
       { "item": "hat_fur", "prob": 50 },
@@ -255,7 +255,7 @@
       { "distribution": [ { "item": "socks", "prob": 10 }, { "item": "socks_wool", "prob": 90 } ] },
       { "item": "boots_combat" },
       {
-        "collection": [ { "distribution": [ { "item": "balclava", "prob": 90 }, { "item": "balaclava_cut_resistant", "prob": 10 } ] } ],
+        "collection": [ { "distribution": [ { "item": "balaclava", "prob": 90 }, { "item": "balaclava_cut_resistant", "prob": 10 } ] } ],
         "prob": 25
       },
       {
@@ -473,7 +473,6 @@
           {
             "distribution": [
               { "item": "jeans", "prob": 60 },
-              { "item": "jeans_ripped", "prob": 5 },
               { "item": "jeans_skinny", "prob": 10 },
               { "item": "pants", "prob": 100 },
               { "item": "pants_leather", "prob": 30 },
@@ -886,7 +885,6 @@
       { "item": "unitard", "prob": 10 },
       { "item": "gloves_wraps", "prob": 45 },
       { "item": "jeans", "prob": 30 },
-      { "item": "jeans_ripped", "prob": 5 },
       { "item": "sports_bra", "prob": 25 },
       { "item": "jacket_leather", "prob": 20 },
       { "item": "jacket_varsity", "prob": 10 },
@@ -1480,7 +1478,6 @@
     "magazine": 100,
     "items": [
       [ "jeans", 90 ],
-      [ "jeans_ripped", 10 ],
       [ "jeans_skinny", 20 ],
       [ "pants_checkered", 5 ],
       [ "shorts", 70 ],
@@ -1731,7 +1728,6 @@
     "id": "pants",
     "items": [
       [ "jeans", 90 ],
-      [ "jeans_ripped", 10 ],
       [ "jeans_skinny", 20 ],
       [ "shorts", 70 ],
       [ "shorts_denim", 35 ],
@@ -1870,7 +1866,7 @@
       [ "tights", 20 ],
       [ "arm_warmers", 20 ],
       [ "leg_warmers", 20 ],
-      [ "balclava", 15 ],
+      [ "balaclava", 15 ],
       [ "santa_jacket", 1 ],
       [ "santa_jacket_short", 1 ],
       [ "santa_shorts", 1 ],
@@ -1965,7 +1961,7 @@
       [ "kufi", 10 ],
       [ "kippah", 30 ],
       [ "eboshi", 10 ],
-      [ "balclava", 20 ],
+      [ "balaclava", 20 ],
       [ "porkpie", 30 ]
     ]
   },
@@ -2153,7 +2149,6 @@
     "subtype": "distribution",
     "entries": [
       { "item": "jeans", "prob": 90 },
-      { "item": "jeans_ripped", "prob": 10 },
       { "item": "jeans_skinny", "prob": 20 },
       { "item": "pants_checkered", "prob": 5 },
       { "item": "shorts", "prob": 70 },
@@ -2245,7 +2240,7 @@
       { "item": "leggings", "prob": 20 },
       { "item": "garter_belt", "prob": 10 },
       { "item": "stockings", "prob": 20 },
-      { "item": "balclava", "prob": 15 },
+      { "item": "balaclava", "prob": 15 },
       { "item": "pants_ski", "prob": 60 },
       { "item": "long_underpants", "prob": 40 },
       { "item": "long_undertop", "prob": 40 },
@@ -3218,7 +3213,7 @@
       [ "hat_boonie", 16 ],
       [ "beret", 18 ],
       [ "beret_wool", 14 ],
-      [ "balclava", 12 ],
+      [ "balaclava", 12 ],
       [ "mask_survivorxl", 2 ],
       [ "combatsaw_off", 1 ],
       [ "bigun", 2 ],
@@ -3364,7 +3359,6 @@
     "items": [
       [ "basket_laundry", 30 ],
       [ "jeans", 90 ],
-      [ "jeans_ripped", 10 ],
       [ "jeans_skinny", 20 ],
       [ "pants_checkered", 5 ],
       [ "shorts", 70 ],
@@ -3662,7 +3656,7 @@
     "subtype": "distribution",
     "items": [
       { "item": "bandana", "prob": 90 },
-      { "item": "balclava", "prob": 50 },
+      { "item": "balaclava", "prob": 50 },
       { "item": "headscarf", "prob": 50 },
       { "item": "scarf_fur_long", "prob": 10 },
       { "item": "scarf_fur", "prob": 20 },
