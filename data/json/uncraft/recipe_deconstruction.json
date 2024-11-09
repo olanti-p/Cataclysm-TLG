@@ -5885,16 +5885,6 @@
     "components": [ [ [ "nylon", 10 ] ], [ [ "sheet_kevlar_layered", 12 ] ] ]
   },
   {
-    "result": "soft_3a_vest",
-    "type": "uncraft",
-    "activity_level": "LIGHT_EXERCISE",
-    "time": "5 m",
-    "skill_used": "tailor",
-    "difficulty": 3,
-    "qualities": [ { "id": "FABRIC_CUT", "level": 2 } ],
-    "components": [ [ [ "nylon", 10 ] ], [ [ "sheet_kevlar_layered", 12 ] ] ]
-  },
-  {
     "result": "level_3_vest",
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
@@ -6161,26 +6151,6 @@
     "time": "1 m",
     "qualities": [ { "id": "CUT", "level": 2 } ],
     "components": [ [ [ "sheet_denim_patchwork", 2 ] ], [ [ "button_plastic", 1 ] ], [ [ "zipper_short_plastic", 1 ] ] ],
-    "flags": [ "BLIND_HARD" ]
-  },
-  {
-    "result": "jeans_ripped",
-    "type": "uncraft",
-    "activity_level": "NO_EXERCISE",
-    "skill_used": "tailor",
-    "time": "1 m",
-    "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "sheet_denim_patchwork", 2 ] ], [ [ "button_plastic", 1 ] ], [ [ "zipper_short_plastic", 1 ] ] ],
-    "flags": [ "BLIND_HARD" ]
-  },
-  {
-    "result": "jeans_vintage",
-    "type": "uncraft",
-    "activity_level": "NO_EXERCISE",
-    "skill_used": "tailor",
-    "time": "1 m",
-    "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "sheet_denim_patchwork", 2 ] ], [ [ "button_steel", 1 ] ], [ [ "zipper_short_plastic", 1 ] ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {

@@ -117,7 +117,7 @@
     "to_hit": 1,
     "material": [ "plastic_pad", "leather" ],
     "symbol": "[",
-    "looks_like": "balclava",
+    "looks_like": "balaclava",
     "color": "red",
     "warmth": 10,
     "material_thickness": 3,
@@ -1052,7 +1052,7 @@
     "to_hit": -1,
     "material": [ "cotton" ],
     "symbol": "[",
-    "looks_like": "balclava",
+    "looks_like": "balaclava",
     "color": "green",
     "warmth": 30,
     "material_thickness": 0.5,
@@ -1338,7 +1338,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "helmet_nasal_xs",
+    "id": "xs_helmet_nasal",
     "type": "ARMOR",
     "copy-from": "helmet_nasal",
     "name": { "str": "XS nasal helm" },

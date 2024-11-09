@@ -48,20 +48,5 @@
     "time": "25 m",
     "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "HAMMER", "level": 1 } ],
     "components": [ [ [ "sheet_metal_small", 18 ] ], [ [ "scrap", 6 ] ] ]
-  },
-  {
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "result": "ammunition_box_carlgustav_he",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "60 m",
-    "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "sheet_metal", 2 ] ], [ [ "sheet_metal_small", 24 ] ], [ [ "scrap", 6 ] ] ]
-  },
-  {
-    "type": "uncraft",
-    "copy-from": "ammunition_box_carlgustav_he",
-    "result": "ammunition_box_carlgustav_hedp"
   }
 ]
