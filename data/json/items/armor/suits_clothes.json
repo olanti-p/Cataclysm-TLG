@@ -863,7 +863,7 @@
     "material": [ "cotton" ],
     "symbol": "[",
     "looks_like": "jumpsuit",
-    "color": "dark_red",
+    "color": "light_gray",
     "armor": [
       { "covers": [ "torso" ], "coverage": 95, "encumbrance": 3 },
       { "covers": [ "arm_l", "arm_r", "leg_l", "leg_r" ], "coverage": 90, "encumbrance": 3 }

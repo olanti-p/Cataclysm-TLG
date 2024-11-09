@@ -132,7 +132,7 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "armor_lamellar",
+    "id": "armor_steel_lamellar",
     "type": "ARMOR",
     "name": { "str": "steel lamellar cuirass", "str_pl": "steel lamellar cuirasses" },
     "description": "A cuirass made of small strips of sheet metal laced together, something of an intermediary between chain mail and plate armor.  It's less Mad Max and more Garage Mongolian, but the classics are classic for a reason.",
@@ -178,18 +178,18 @@
     ]
   },
   {
-    "id": "xl_armor_lamellar",
+    "id": "xl_armor_steel_lamellar",
     "type": "ARMOR",
     "name": { "str": "XL steel lamellar cuirass", "str_pl": "XL steel lamellar cuirasses" },
     "description": "A cuirass made of small strips of sheet metal laced together, something of an intermediary between chain mail and plate armor.  The perfect size for an ogre or bipedal grizzly bear.",
-    "copy-from": "armor_lamellar",
+    "copy-from": "armor_steel_lamellar",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_armor_lamellar",
+    "id": "xs_armor_steel_lamellar",
     "type": "ARMOR",
-    "copy-from": "armor_lamellar",
+    "copy-from": "armor_steel_lamellar",
     "name": { "str": "XS steel lamellar cuirass", "str_pl": "XS steel lamellar cuirasses" },
     "description": "A cuirass made of small strips of sheet metal laced together, something of an intermediary between chain mail and plate armor.  Perfectly sized for a particularly angry toddler.",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
@@ -546,7 +546,7 @@
     "abstract": "chainmail_vest",
     "type": "ARMOR",
     "name": { "str": "XL chainmail vest" },
-    "copy-from": "base_chainmail_vest",
+    "copy-from": "chainmail_vest",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "pocket_data": [
       {
@@ -566,7 +566,7 @@
   {
     "abstract": "chainmail_vest",
     "type": "ARMOR",
-    "copy-from": "base_chainmail_vest",
+    "copy-from": "chainmail_vest",
     "name": { "str": "XS chainmail vest" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "pocket_data": [
@@ -586,7 +586,7 @@
   },
   {
     "id": "chainmail_junk_vest",
-    "copy-from": "base_chainmail_vest",
+    "copy-from": "chainmail_vest",
     "replace_materials": { "steel": "budget_steel_chain" },
     "type": "ARMOR",
     "name": { "str": "chainmail vest" },
@@ -1331,7 +1331,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "armor_lc_chestplate",
+    "id": "armor_chestplate",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "steel chestplate" },
@@ -1661,5 +1661,5 @@
     "name": { "str": "XS mirror armor", "str_pl": "sets of XS mirror armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
-  },
+  }
 ]

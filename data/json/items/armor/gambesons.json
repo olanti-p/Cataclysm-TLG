@@ -369,7 +369,7 @@
     "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
     "name": { "str": "XS wool arming pants", "str_pl": "pairs of XS wool arming pants" },
-    "copy-from": "aketon_pants_canvas",
+    "copy-from": "aketon_pants_wool",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },

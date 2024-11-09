@@ -414,7 +414,7 @@
   {
     "id": "xl_steel_facemask",
     "type": "ARMOR",
-    "copy-from": "lc_steel_facemask",
+    "copy-from": "steel_facemask",
     "name": { "str": "XL mild steel armored face mask" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
@@ -422,7 +422,7 @@
   {
     "id": "xs_steel_facemask",
     "type": "ARMOR",
-    "copy-from": "lc_steel_facemask",
+    "copy-from": "steel_facemask",
     "name": { "str": "XS mild steel armored face mask" },
     "proportional": { "weight": 0.75, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "UNDERSIZE" ] }

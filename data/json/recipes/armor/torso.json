@@ -2338,7 +2338,7 @@
     "using": [ [ "tailoring_felt_patchwork", 20 ] ]
   },
   {
-    "result": "armor_lamellar",
+    "result": "armor_steel_lamellar",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
@@ -2361,7 +2361,7 @@
     ]
   },
   {
-    "result": "xs_armor_lamellar",
+    "result": "xs_armor_steel_lamellar",
     "type": "recipe",
     "copy-from": "armor_lamellar",
     "time": "6 h",
@@ -2370,7 +2370,7 @@
     "components": [ [ [ "lamellae", 648 ] ] ]
   },
   {
-    "result": "xl_armor_lamellar",
+    "result": "xl_armor_steel_lamellar",
     "type": "recipe",
     "copy-from": "armor_lamellar",
     "time": "10 h",
