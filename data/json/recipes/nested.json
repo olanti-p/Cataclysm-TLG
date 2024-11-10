@@ -667,9 +667,7 @@
     "name": "light chestplates",
     "description": "Recipes related to constructing light chestplates.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_light_chestplate"
-    ],
+    "nested_category_data": [ "nested_light_chestplate" ],
     "difficulty": 1
   },
   {
@@ -693,70 +691,20 @@
     "name": "standard chestplates",
     "description": "Recipes related to constructing steel chestplates from different qualities of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_armor_chestplate"
-    ],
+    "nested_category_data": [ "nested_armor_chestplate" ],
     "difficulty": 2
   },
   {
-    "id": "nested_armor_lc_heavy_chestplate",
+    "id": "nested_armor_heavy_chestplate",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel heavy chestplates",
-    "description": "Recipes related to constructing steel chestplates from mild steel.",
+    "name": "heavy chestplates",
+    "description": "Recipes related to constructing steel heavy chestplates.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_lc_heavy_chestplate", "armor_lc_heavy_chestplate" ],
+    "nested_category_data": [ "xl_armor_heavy_chestplate", "armor_heavy_chestplate" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_armor_mc_heavy_chestplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel heavy chestplates",
-    "description": "Recipes related to constructing steel chestplates from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_mc_heavy_chestplate", "armor_mc_heavy_chestplate" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_armor_hc_heavy_chestplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel heavy chestplates",
-    "description": "Recipes related to constructing steel chestplates from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_hc_heavy_chestplate", "armor_hc_heavy_chestplate" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_armor_ch_heavy_chestplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel heavy chestplates",
-    "description": "Recipes related to constructing steel chestplates from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_ch_heavy_chestplate", "armor_ch_heavy_chestplate" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_armor_qt_heavy_chestplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel heavy chestplates",
-    "description": "Recipes related to constructing steel chestplates from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_qt_heavy_chestplate", "armor_qt_heavy_chestplate" ],
-    "difficulty": 5
   },
   {
     "id": "nested_armor_all_heavy_chestplate",
@@ -765,15 +713,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "heavy chestplates",
-    "description": "Recipes related to constructing steel chestplates from different qualities of steel.",
+    "description": "Recipes related to constructing steel chestplates.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_armor_lc_heavy_chestplate",
-      "nested_armor_mc_heavy_chestplate",
-      "nested_armor_hc_heavy_chestplate",
-      "nested_armor_ch_heavy_chestplate",
-      "nested_armor_qt_heavy_chestplate"
-    ],
+    "nested_category_data": [ "nested_armor_heavy_chestplate" ],
     "difficulty": 3
   },
   {
@@ -789,64 +731,16 @@
     "difficulty": 5
   },
   {
-    "id": "nested_armor_lc_lightplate",
+    "id": "nested_armor_lightplate",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel light plate armor",
+    "name": "steel light plate armor",
     "description": "Recipes related to constructing steel plate armor from mild steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_lc_lightplate", "armor_lc_lightplate", "xl_armor_lc_lightplate_assembly", "armor_lc_lightplate_assembly" ],
+    "nested_category_data": [ "xl_armor_lightplate", "armor_lightplate", "xl_armor_lightplate_assembly", "armor_lightplate_assembly" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_armor_mc_lightplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel light plate armor",
-    "description": "Recipes related to constructing steel plate armor from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_mc_lightplate", "armor_mc_lightplate", "xl_armor_mc_lightplate_assembly", "armor_mc_lightplate_assembly" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_armor_hc_lightplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel light plate armor",
-    "description": "Recipes related to constructing steel plate armor from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_hc_lightplate", "armor_hc_lightplate", "xl_armor_hc_lightplate_assembly", "armor_hc_lightplate_assembly" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_armor_ch_lightplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel light plate armor",
-    "description": "Recipes related to constructing steel plate armor from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_ch_lightplate", "armor_ch_lightplate", "xl_armor_ch_lightplate_assembly", "armor_ch_lightplate_assembly" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_armor_qt_lightplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel light plate armor",
-    "description": "Recipes related to constructing steel plate armor from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_qt_lightplate", "armor_qt_lightplate", "xl_armor_qt_lightplate_assembly", "armor_qt_lightplate_assembly" ],
-    "difficulty": 5
   },
   {
     "id": "nested_armor_all_lightplate",
@@ -857,74 +751,20 @@
     "name": "light plate armors",
     "description": "Recipes related to constructing steel plate armor from different qualities of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_armor_lc_lightplate",
-      "nested_armor_mc_lightplate",
-      "nested_armor_hc_lightplate",
-      "nested_armor_ch_lightplate",
-      "nested_armor_qt_lightplate"
-    ],
+    "nested_category_data": [ "nested_armor_lc_lightplate" ],
     "difficulty": 1
   },
   {
-    "id": "nested_armor_lc_plate",
+    "id": "nested_armor_plate",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "mild steel plate armor",
-    "description": "Recipes related to constructing steel plate armor from mild steel.",
+    "description": "Recipes related to constructing steel plate armor.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_lc_plate", "armor_lc_plate", "xl_armor_lc_plate_assembly", "armor_lc_plate_assembly" ],
+    "nested_category_data": [ "xl_armor_plate", "armor_plate", "xl_armor_plate_assembly", "armor_plate_assembly" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_armor_mc_plate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel plate armor",
-    "description": "Recipes related to constructing steel plate armor from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_mc_plate", "armor_mc_plate", "xl_armor_mc_plate_assembly", "armor_mc_plate_assembly" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_armor_hc_plate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel plate armor",
-    "description": "Recipes related to constructing steel plate armor from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_hc_plate", "armor_hc_plate", "xl_armor_hc_plate_assembly", "armor_hc_plate_assembly" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_armor_ch_plate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel plate armor",
-    "description": "Recipes related to constructing steel plate armor from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_ch_plate", "armor_ch_plate", "xl_armor_ch_plate_assembly", "armor_ch_plate_assembly" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_armor_qt_plate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel plate armor",
-    "description": "Recipes related to constructing steel plate armor from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_qt_plate", "armor_qt_plate", "xl_armor_qt_plate_assembly", "armor_qt_plate_assembly" ],
-    "difficulty": 5
   },
   {
     "id": "nested_armor_all_plate",
@@ -935,74 +775,20 @@
     "name": "plate armors",
     "description": "Recipes related to constructing steel plate armor from different qualities of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_armor_lc_plate",
-      "nested_armor_mc_plate",
-      "nested_armor_hc_plate",
-      "nested_armor_ch_plate",
-      "nested_armor_qt_plate"
-    ],
+    "nested_category_data": [ "nested_armor_plate" ],
     "difficulty": 2
   },
   {
-    "id": "nested_armor_lc_heavyplate",
+    "id": "nested_armor_heavyplate",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "mild steel heavy plate armor",
-    "description": "Recipes related to constructing steel plate armor from mild steel.",
+    "description": "Recipes related to constructing steel plate armor.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_lc_heavyplate", "armor_lc_heavyplate", "xl_armor_lc_heavyplate_assembly", "armor_lc_heavyplate_assembly" ],
+    "nested_category_data": [ "xl_armor_heavyplate", "armor_heavyplate", "xl_armor_heavyplate_assembly", "armor_heavyplate_assembly" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_armor_mc_heavyplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel heavy plate armor",
-    "description": "Recipes related to constructing steel plate armor from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_mc_heavyplate", "armor_mc_heavyplate", "xl_armor_mc_heavyplate_assembly", "armor_mc_heavyplate_assembly" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_armor_hc_heavyplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel heavy plate armor",
-    "description": "Recipes related to constructing steel plate armor from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_hc_heavyplate", "armor_hc_heavyplate", "xl_armor_hc_heavyplate_assembly", "armor_hc_heavyplate_assembly" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_armor_ch_heavyplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel heavy plate armor",
-    "description": "Recipes related to constructing steel plate armor from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_ch_heavyplate", "armor_ch_heavyplate", "xl_armor_ch_heavyplate_assembly", "armor_ch_heavyplate_assembly" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_armor_qt_heavyplate",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel heavy plate armor",
-    "description": "Recipes related to constructing steel plate armor from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_armor_qt_heavyplate", "armor_qt_heavyplate", "xl_armor_qt_heavyplate_assembly", "armor_qt_heavyplate_assembly" ],
-    "difficulty": 5
   },
   {
     "id": "nested_armor_all_heavyplate",
@@ -1013,13 +799,7 @@
     "name": "heavy plate armors",
     "description": "Recipes related to constructing steel plate armor from different qualities of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_armor_lc_heavyplate",
-      "nested_armor_mc_heavyplate",
-      "nested_armor_hc_heavyplate",
-      "nested_armor_ch_heavyplate",
-      "nested_armor_qt_heavyplate"
-    ],
+    "nested_category_data": [ "nested_armor_heavyplate" ],
     "difficulty": 3
   },
   {
@@ -1035,64 +815,16 @@
     "difficulty": 8
   },
   {
-    "id": "nested_lc_demi_gaunt",
+    "id": "nested_demi_gaunt",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel demi-gauntlets",
-    "description": "Recipes related to constructing demi-gauntlets from mild steel.",
+    "name": "demi-gauntlets",
+    "description": "Recipes related to constructing demi-gauntlets.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "xl_lc_demi_gaunt", "lc_demi_gaunt" ],
+    "nested_category_data": [ "xl_demi_gaunt", "demi_gaunt" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_mc_demi_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel demi-gauntlets",
-    "description": "Recipes related to constructing demi-gauntlets from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_mc_demi_gaunt", "mc_demi_gaunt" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_demi_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel demi-gauntlets",
-    "description": "Recipes related to constructing demi-gauntlets from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_hc_demi_gaunt", "hc_demi_gaunt" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_demi_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel demi-gauntlets",
-    "description": "Recipes related to constructing demi-gauntlets from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_ch_demi_gaunt", "ch_demi_gaunt" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_demi_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel demi-gauntlets",
-    "description": "Recipes related to constructing demi-gauntlets from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_qt_demi_gaunt", "qt_demi_gaunt" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_demi_gaunt",
@@ -1101,76 +833,22 @@
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "name": "steel demi-gauntlets",
-    "description": "Recipes related to constructing demi-gauntlets from different types of steel.",
+    "description": "Recipes related to constructing demi-gauntlets.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_demi_gaunt",
-      "nested_mc_demi_gaunt",
-      "nested_hc_demi_gaunt",
-      "nested_ch_demi_gaunt",
-      "nested_qt_demi_gaunt"
-    ],
+    "nested_category_data": [ "nested_demi_gaunt" ],
     "difficulty": 5
   },
   {
-    "id": "nested_lc_mitten_gaunt",
+    "id": "nested_mitten_gaunt",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel mitten gauntlets",
-    "description": "Recipes related to constructing mitten gauntlets from mild steel.",
+    "name": "mitten gauntlets",
+    "description": "Recipes related to constructing mitten gauntlets.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "xl_lc_mitten_gaunt", "lc_mitten_gaunt" ],
+    "nested_category_data": [ "xl_mitten_gaunt", "mitten_gaunt" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_mc_mitten_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel mitten gauntlets",
-    "description": "Recipes related to constructing mitten gauntlets from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_mc_mitten_gaunt", "mc_mitten_gaunt" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_mitten_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel mitten gauntlets",
-    "description": "Recipes related to constructing mitten gauntlets from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_hc_mitten_gaunt", "hc_mitten_gaunt" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_mitten_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel mitten gauntlets",
-    "description": "Recipes related to constructing mitten gauntlets from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_ch_mitten_gaunt", "ch_mitten_gaunt" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_mitten_gaunt",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel mitten gauntlets",
-    "description": "Recipes related to constructing mitten gauntlets from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "xl_qt_mitten_gaunt", "qt_mitten_gaunt" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_mitten_gaunt",
@@ -1179,15 +857,9 @@
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "name": "steel mitten gauntlets",
-    "description": "Recipes related to constructing mitten gauntlets from different types of steel.",
+    "description": "Recipes related to constructing mitten gauntlets.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_mitten_gaunt",
-      "nested_mc_mitten_gaunt",
-      "nested_hc_mitten_gaunt",
-      "nested_ch_mitten_gaunt",
-      "nested_qt_mitten_gaunt"
-    ],
+    "nested_category_data": [ "nested_lc_mitten_gaunt" ],
     "difficulty": 5
   },
   {
@@ -1211,9 +883,7 @@
     "name": "steel light arm guards",
     "description": "Recipes related to constructing light arm guards from various types of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lightarmguards"
-    ],
+    "nested_category_data": [ "nested_lightarmguards" ],
     "difficulty": 1
   },
   {
@@ -1261,9 +931,7 @@
     "name": "steel heavy arm guards",
     "description": "Recipes related to constructing heavy arm guards from various types of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_heavyarmguards"
-    ],
+    "nested_category_data": [ "nested_heavyarmguards" ],
     "difficulty": 3
   },
   {
@@ -1299,9 +967,7 @@
     "name": "steel chain hauberks",
     "description": "Recipes related to fitting together chainmail armor to make chainmail hauberks in various types and sizes.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_chainmail_hauberk"
-    ],
+    "nested_category_data": [ "nested_chainmail_hauberk" ],
     "difficulty": 1
   },
   {
@@ -1337,9 +1003,7 @@
     "name": "steel chain suits",
     "description": "Recipes related to constructing chainmail suits in various types and sizes.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_chainmail_suit"
-    ],
+    "nested_category_data": [ "nested_chainmail_suit" ],
     "difficulty": 1
   },
   {
@@ -1415,71 +1079,22 @@
       "nested_scrap_cuirass",
       "nested_cuirass_tire",
       "nested_cuirass_bronze",
-      "nested_armor_lamellar",
       "nested_armor_cuirass",
       "nested_cuirass_lightplate"
     ],
     "difficulty": 3
   },
   {
-    "id": "nested_lc_light_leg_guards",
+    "id": "nested_light_leg_guards",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel light leg guards",
-    "description": "Recipes related to constructing light leg guards from mild steel.",
+    "name": "light leg guards",
+    "description": "Recipes related to constructing light leg guardsl.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "armor_lc_light_leg_guard", "xl_armor_lc_light_leg_guard" ],
+    "nested_category_data": [ "armor_light_leg_guard", "xl_armor_light_leg_guard" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_mc_light_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel light leg guards",
-    "description": "Recipes related to constructing light leg guards from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_mc_light_leg_guard", "xl_armor_mc_light_leg_guard" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_light_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel light leg guards",
-    "description": "Recipes related to constructing light leg guards from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_hc_light_leg_guard", "xl_armor_hc_light_leg_guard" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_light_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel light leg guards",
-    "description": "Recipes related to constructing light leg guards from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_ch_light_leg_guard", "xl_armor_ch_light_leg_guard" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_light_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel light leg guards",
-    "description": "Recipes related to constructing light leg guards from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_qt_light_leg_guard", "xl_armor_qt_light_leg_guard" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_light_leg_guards",
@@ -1488,76 +1103,22 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "steel light leg guards",
-    "description": "Recipes related to constructing light leg guards from various types of steel.",
+    "description": "Recipes related to constructing light leg guards.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_light_leg_guards",
-      "nested_mc_light_leg_guards",
-      "nested_hc_light_leg_guards",
-      "nested_ch_light_leg_guards",
-      "nested_qt_light_leg_guards"
-    ],
+    "nested_category_data": [ "nested_light_leg_guards" ],
     "difficulty": 1
   },
   {
-    "id": "nested_lc_leg_guards",
+    "id": "nested_leg_guards",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "mild steel leg guards",
-    "description": "Recipes related to constructing leg guards from mild steel.",
+    "description": "Recipes related to constructing leg guards.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "armor_lc_leg_guard", "xl_armor_lc_leg_guard" ],
+    "nested_category_data": [ "armor_leg_guard", "xl_armor_leg_guard" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_mc_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel leg guards",
-    "description": "Recipes related to constructing leg guards from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_mc_leg_guard", "xl_armor_mc_leg_guard" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel leg guards",
-    "description": "Recipes related to constructing leg guards from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_hc_leg_guard", "xl_armor_hc_leg_guard" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel leg guards",
-    "description": "Recipes related to constructing leg guards from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_ch_leg_guard", "xl_armor_ch_leg_guard" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel leg guards",
-    "description": "Recipes related to constructing leg guards from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_qt_leg_guard", "xl_armor_qt_leg_guard" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_leg_guards",
@@ -1566,76 +1127,22 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "steel leg guards",
-    "description": "Recipes related to constructing leg guards from various types of steel.",
+    "description": "Recipes related to constructing leg guards.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_leg_guards",
-      "nested_mc_leg_guards",
-      "nested_hc_leg_guards",
-      "nested_ch_leg_guards",
-      "nested_qt_leg_guards"
-    ],
+    "nested_category_data": [ "nested_leg_guards" ],
     "difficulty": 2
   },
   {
-    "id": "nested_lc_heavy_leg_guards",
+    "id": "nested_heavy_leg_guards",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "mild steel heavy leg guards",
-    "description": "Recipes related to constructing heavy leg guards from mild steel.",
+    "description": "Recipes related to constructing heavy leg guards.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "armor_lc_heavy_leg_guard", "xl_armor_lc_heavy_leg_guard" ],
+    "nested_category_data": [ "armor_heavy_leg_guard", "xl_armor_heavy_leg_guard" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_mc_heavy_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel heavy leg guards",
-    "description": "Recipes related to constructing heavy leg guards from medium steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_mc_heavy_leg_guard", "xl_armor_mc_heavy_leg_guard" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_heavy_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel heavy leg guards",
-    "description": "Recipes related to constructing heavy leg guards from high steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_hc_heavy_leg_guard", "xl_armor_hc_heavy_leg_guard" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_heavy_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel heavy leg guards",
-    "description": "Recipes related to constructing heavy leg guards from hardened steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_ch_heavy_leg_guard", "xl_armor_ch_heavy_leg_guard" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_heavy_leg_guards",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel heavy leg guards",
-    "description": "Recipes related to constructing heavy leg guards from tempered steel.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "armor_qt_heavy_leg_guard", "xl_armor_qt_heavy_leg_guard" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_heavy_leg_guards",
@@ -1646,13 +1153,7 @@
     "name": "steel heavy leg guards",
     "description": "Recipes related to constructing heavy leg guards from various types of steel.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_heavy_leg_guards",
-      "nested_mc_heavy_leg_guards",
-      "nested_hc_heavy_leg_guards",
-      "nested_ch_heavy_leg_guards",
-      "nested_qt_heavy_leg_guards"
-    ],
+    "nested_category_data": [ "nested_heavy_leg_guards" ],
     "difficulty": 3
   },
   {
@@ -2161,9 +1662,7 @@
     "name": "steel chain coifs",
     "description": "Recipes related to constructing various types and sizes of chainmail hoods designed to protect the wearer.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_chainmail_hood"
-    ],
+    "nested_category_data": [ "nested_chainmail_hood" ],
     "difficulty": 7
   },
   {
@@ -6357,12 +5856,7 @@
     "name": "makeshift ballistic plates",
     "description": "Recipes related to constructing makeshift ESAPI and ESBI plates.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "scrap_esapi_plate",
-      "steel_esapi_plate",
-      "scrap_esbi_plate",
-      "steel_esbi_plate"
-    ],
+    "nested_category_data": [ "scrap_esapi_plate", "steel_esapi_plate", "scrap_esbi_plate", "steel_esbi_plate" ],
     "difficulty": 5
   }
 ]

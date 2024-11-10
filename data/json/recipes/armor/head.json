@@ -1793,11 +1793,7 @@
     "time": "1 m 30 s",
     "reversible": true,
     "autolearn": true,
-    "components": [
-      [
-        [ "tshirt", 1 ]
-      ]
-    ],
+    "components": [ [ [ "tshirt", 1 ] ] ],
     "flags": [ "BLIND_HARD", "NO_RESIZE" ]
   },
   {
