@@ -1,5 +1,50 @@
 [
   {
+    "id": "kevlar",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "concealable ballistic vest" },
+    "description": "A lightweight ballistic armor vest, suitable for wearing under clothing.  Its level II rating suggests that it should help against lower-caliber pistol rounds.",
+    "weight": "1960 g",
+    "volume": "4 L",
+    "price": 35000,
+    "price_postapoc": 1250,
+    "to_hit": -3,
+    "material": [ "kevlar_layered", "nylon" ],
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "light_gray",
+    "warmth": 15,
+    "material_thickness": 4,
+    "flags": [ "STURDY" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
+        ],
+        "encumbrance": 3,
+        "coverage": 94,
+        "cover_vitals": 70,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ]
+      },
+      {
+        "material": [
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
+        ],
+        "//": "encumbrance handled above",
+        "encumbrance": 0,
+        "coverage": 85,
+        "cover_vitals": 60,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ]
+      }
+    ],
+    "melee_damage": { "bash": 6 }
+  },
+  {
     "id": "ballistic_vest_esapi",
     "type": "ARMOR",
     "category": "armor",
@@ -69,7 +114,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
-        "encumbrance": 6,
+        "encumbrance": 10,
         "coverage": 100,
         "cover_vitals": 90,
         "covers": [ "torso" ],
@@ -501,7 +546,17 @@
       }
     ]
   },
-
+  {
+    "id": "destroyed_large_ceramic_plate",
+    "type": "ARMOR",
+    "copy-from": "esapi_plate",
+    "name": { "str": "compromised ceramic front plate" },
+    "description": "A large ballistic plate that has been cracked by damage.  It no longer provides reliable protection, but it's still just as heavy.",
+    "price": 0,
+    "price_postapoc": 1,
+    "looks_like": "esapi_plate",
+    "material": [ "damaged_ceramic" ]
+  },
   {
     "id": "destroyed_medium_ceramic_plate",
     "type": "ARMOR",
@@ -616,7 +671,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
-        "encumbrance": 6,
+        "encumbrance": 12,
         "coverage": 100,
         "cover_vitals": 90,
         "covers": [ "torso" ],
@@ -687,7 +742,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }
         ],
-        "encumbrance": 1,
+        "encumbrance": 6,
         "coverage": 90,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -702,7 +757,7 @@
     "looks_like": "kevlar",
     "name": { "str": "stab vest" },
     "variant_type": "generic",
-    "description": "A lightweight soft armor vest.  The level II rating on the label suggests it will protect from knife attacks and smaller-caliber handguns, provided it has its matching stab plate inserts.",
+    "description": "A lightweight soft armor vest.  The level II rating on the label suggests it will protect from knife attacks and low caliber handguns, provided it has its matching stab plate inserts.",
     "weight": "1814 g",
     "volume": "6 L",
     "price": "470 USD",
@@ -744,13 +799,88 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar", "covered_by_mat": 95, "thickness": 2 }
         ],
-        "encumbrance": 4,
+        "encumbrance": 6,
         "coverage": 100,
         "cover_vitals": 70,
         "covers": [ "torso" ]
       }
     ]
   },
+{
+  "id": "soft_3a_vest",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": {
+    "str": "soft ballistic vest"
+  },
+  "looks_like": "kevlar",
+  "variant_type": "generic",
+  "description": "A bulky but comfortable armor vest.  It lacks pockets for ballistic plate inserts, but the IIIa rating on its label suggests that it should stand up to everything short of high-powered rifle rounds.",
+  "weight": "2650 g",
+  "volume": "6 L",
+  "price": "700 USD",
+  "price_postapoc": "5 USD",
+  "symbol": "[",
+  "material": [
+    "nylon",
+    "kevlar_layered"
+  ],
+  "color": "light_gray",
+  "warmth": 15,
+  "flags": [
+    "STURDY",
+    "OUTER",
+    "WATER_FRIENDLY"
+  ],
+  "armor": [
+    {
+      "material": [
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 1
+        },
+        {
+          "type": "kevlar_layered",
+          "covered_by_mat": 95,
+          "thickness": 4.4
+        }
+      ],
+      "encumbrance": 12,
+      "coverage": 100,
+      "cover_vitals": 70,
+      "covers": [
+        "torso"
+      ],
+      "specifically_covers": [
+        "torso_upper"
+      ]
+    },
+    {
+      "material": [
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 1
+        },
+        {
+          "type": "kevlar_layered",
+          "covered_by_mat": 95,
+          "thickness": 4.4
+        }
+      ],
+      "//": "encumbrance handled above",
+      "encumbrance": 0,
+      "coverage": 80,
+      "covers": [
+        "torso"
+      ],
+      "specifically_covers": [
+        "torso_lower"
+      ]
+    }
+  ]
+},
   {
     "id": "level_3_vest",
     "type": "ARMOR",
@@ -821,8 +951,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "dragon skin vest" },
-    "//": "Based on a true story related to the real-world design",
-    "description": "This type of ballistic vest once promised to be the future of body armor, claiming to allow a greater range of movement than conventional ballistic vests as well as better protection.  Created by the now-defunct company Meridian Ballistics, it features a unique design consisting of overlapping ceramic disks, and was once famously demonstrated on TV absorbing high-energy rifle rounds at point blank.\n\nThe US Army quickly snapped up several hundred units of the armor, but testing soon revealed that they were extremely heavy, weighing almost fifty pounds, and that the design failed spectacularly in environmental tests.  After a series of investigations, claims of fraud, and court hearings, Meridian went bankrupt, and the Department of Justice subsequently dropped this design from its certifications.\n\nThere were no known users of these vests by the time that the world ended; this one was either an original production in the hands of a collector, or a similar design from a different company.  Whatever the case may be, you have one now, in all its unwieldy glory.",
+    "description": "A ballistic vest made of disc-shaped ceramic scales arranged in an overlapping pattern, like the scales of a mythical dragon.  The design allows it to absorb many more impacts without becoming fully compromised like a ballistic plate might, but it was never widely adopted due to its failure to meet high-temperature operational tests.  While well past its warranty date, it remains a highly sought after collecter's item.",
     "weight": "21545 g",
     "volume": "6 L",
     "price": "5000 USD",

@@ -3,7 +3,7 @@
     "id": "waist_apron_long",
     "type": "ARMOR",
     "name": { "str": "long waist apron" },
-    "description": "A long waist apron made of cotton.",
+    "description": "A long cloth apron that haings from the waist.",
     "copy-from": "apron_cotton",
     "volume": "1750 ml",
     "weight": "226 g",
@@ -20,91 +20,13 @@
         "encumbrance": 2,
         "volume_encumber_modifier": 0.3
       }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_apron_cotton",
-        "name": { "str": "long waist apron" },
-        "description": "It's colored white, like the ones commonly used by chefs, professional or otherwise.",
-        "weight": 50,
-        "append": true
-      },
-      {
-        "id": "black_apron_cotton",
-        "name": { "str": "black long waist apron" },
-        "description": "It's colored black, commonly used by chefs working in the night or who just want to look cool.",
-        "color": "dark_gray",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "blue_apron_cotton",
-        "name": { "str": "blue long waist apron" },
-        "description": "It's a royal blue color, commonly used by supermarket workers around the world.",
-        "color": "blue",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "red_apron_cotton",
-        "name": { "str": "red long waist apron" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_apron_cotton",
-        "name": { "str": "pink long waist apron" },
-        "description": "It's colored neon pink, commonly used by women or men who like pink.",
-        "color": "pink",
-        "weight": 3,
-        "append": true
-      },
-      {
-        "id": "floral_apron_cotton",
-        "name": { "str": "floral long waist apron" },
-        "description": "It has a floral design and colored yellow, perfect for cooking outdoors.",
-        "color": "yellow",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "camo_apron_cotton",
-        "name": { "str": "camo long waist apron" },
-        "description": "It has a camouflage pattern, perfect for chefs who want to hide in the wild.",
-        "color": "green",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "skull_apron",
-        "name": { "str": "skull long waist apron" },
-        "description": "It's colored black with a skull and roses pattern.  Makes you feel more fashionable just by wearing it.",
-        "color": "dark_gray",
-        "append": true
-      },
-      {
-        "id": "maid_apron",
-        "name": { "str": "maid long waist apron" },
-        "description": "It's colored white with black frilly decorations, commonly used with a maid dress or alone for nighttime activities.",
-        "append": true
-      },
-      {
-        "id": "gothic_apron",
-        "name": { "str": "gothic long waist apron" },
-        "description": "It has a jet-black color with dark red decorations, perfect for cosplay or an adventurous gourmet.",
-        "color": "light_red",
-        "append": true
-      }
     ]
   },
   {
     "id": "waist_apron_short",
     "type": "ARMOR",
     "name": { "str": "short waist apron" },
-    "description": "A short waist apron made of cotton.",
+    "description": "A short cloth apron that hangs from the waist.",
     "copy-from": "apron_cotton",
     "volume": "350 ml",
     "weight": "136 g",
@@ -121,91 +43,13 @@
         "encumbrance": 0,
         "volume_encumber_modifier": 0.3
       }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_apron_cotton",
-        "name": { "str": "short waist apron" },
-        "description": "It's colored white, like the ones commonly used by chefs, professional or otherwise.",
-        "weight": 50,
-        "append": true
-      },
-      {
-        "id": "black_apron_cotton",
-        "name": { "str": "black short waist apron" },
-        "description": "It's colored black, commonly used by chefs working in the night or who just want to look cool.",
-        "color": "dark_gray",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "blue_apron_cotton",
-        "name": { "str": "blue short waist apron" },
-        "description": "It's a royal blue color, commonly used by supermarket workers around the world.",
-        "color": "blue",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "red_apron_cotton",
-        "name": { "str": "red short waist apron" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_apron_cotton",
-        "name": { "str": "pink short waist apron" },
-        "description": "It's colored neon pink, commonly used by women or men who like pink.",
-        "color": "pink",
-        "weight": 3,
-        "append": true
-      },
-      {
-        "id": "floral_apron_cotton",
-        "name": { "str": "floral short waist apron" },
-        "description": "It has a floral design and colored yellow, perfect for cooking outdoors.",
-        "color": "yellow",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "camo_apron_cotton",
-        "name": { "str": "camo short waist apron" },
-        "description": "It has a camouflage pattern, perfect for chefs who want to hide in the wild.",
-        "color": "green",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "skull_apron",
-        "name": { "str": "skull short waist apron" },
-        "description": "It's colored black with a skull and roses pattern.  Makes you feel more fashionable just by wearing it.",
-        "color": "dark_gray",
-        "append": true
-      },
-      {
-        "id": "maid_apron",
-        "name": { "str": "maid short waist apron" },
-        "description": "It's colored white with black frilly decorations, commonly used with a maid dress or alone for nighttime activities.",
-        "append": true
-      },
-      {
-        "id": "gothic_apron",
-        "name": { "str": "gothic short waist apron" },
-        "description": "It has a jet-black color with dark red decorations, perfect for cosplay or an adventurous gourmet.",
-        "color": "light_red",
-        "append": true
-      }
     ]
   },
   {
     "id": "apron_cotton",
     "type": "ARMOR",
     "name": { "str": "cotton apron" },
-    "description": "An apron made of cotton.",
+    "description": "An cloth apron that covers the front of the body.",
     "copy-from": "apron_leather",
     "volume": "1750 ml",
     "weight": "357 g",
@@ -213,91 +57,13 @@
     "material": [ "cotton" ],
     "color": "white",
     "material_thickness": 1.5,
-    "delete": { "flags": [ "WATER_FRIENDLY" ] },
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_apron_cotton",
-        "name": { "str": "cotton apron" },
-        "description": "It's colored white, like the ones commonly used by chefs, professional or otherwise.",
-        "weight": 50,
-        "append": true
-      },
-      {
-        "id": "black_apron_cotton",
-        "name": { "str": "black cotton apron" },
-        "description": "It's colored black, commonly used by chefs working in the night or who just want to look cool.",
-        "color": "dark_gray",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "blue_apron_cotton",
-        "name": { "str": "blue cotton apron" },
-        "description": "It's a royal blue color, commonly used by supermarket workers around the world.",
-        "color": "blue",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "red_apron_cotton",
-        "name": { "str": "red cotton apron" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_apron_cotton",
-        "name": { "str": "pink cotton apron" },
-        "description": "It's colored neon pink, commonly used by women or men who like pink.",
-        "color": "pink",
-        "weight": 3,
-        "append": true
-      },
-      {
-        "id": "floral_apron_cotton",
-        "name": { "str": "floral cotton apron" },
-        "description": "It has a floral design and colored yellow, perfect for cooking outdoors.",
-        "color": "yellow",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "camo_apron_cotton",
-        "name": { "str": "camo cotton apron" },
-        "description": "It has a camouflage pattern, perfect for chefs who want to hide in the wild.",
-        "color": "green",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "skull_apron",
-        "name": { "str": "skull apron" },
-        "description": "It's colored black with a skull and roses pattern.  Makes you feel more fashionable just by wearing it.",
-        "color": "dark_gray",
-        "append": true
-      },
-      {
-        "id": "maid_apron",
-        "name": { "str": "maid apron" },
-        "description": "It's colored white with black frilly decorations, commonly used with a maid dress or alone for nighttime activities.",
-        "append": true
-      },
-      {
-        "id": "gothic_apron",
-        "name": { "str": "gothic apron" },
-        "description": "It has a jet-black color with dark red decorations, perfect for cosplay or an adventurous gourmet.",
-        "color": "light_red",
-        "append": true
-      }
-    ]
+    "delete": { "flags": [ "WATER_FRIENDLY" ] }
   },
   {
     "id": "apron_leather",
     "type": "ARMOR",
     "name": { "str": "leather apron" },
-    "description": "An apron made of leather.",
+    "description": "A leather apron that covers the front of the body.",
     "weight": "1925 g",
     "volume": "2250 ml",
     "price": 1500,
@@ -342,18 +108,19 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "plastic apron" },
-    "description": "An apron made of plastic, provides good protection against accidental chemical splashes.",
+    "description": "An apron made of plastic that covers the front of the body, provides some protection against accidental chemical splashes.",
     "copy-from": "apron_leather",
     "weight": "391 g",
     "material": [ "plastic" ],
-    "color": "light_cyan"
+    "color": "light_cyan",
+    "extend": { "flags": [ "TRANSPARENT" ] }
   },
   {
     "id": "apron_cut_resistant",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "cut-resistant apron" },
-    "description": "An apron made of Kevlar fabric.",
+    "description": "A Kevlar apron that covers the front of the body.",
     "copy-from": "apron_leather",
     "weight": "576 g",
     "price": 3800,
@@ -470,23 +237,6 @@
       { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ], "coverage": 100 },
       { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 25 }
     ]
-  },
-  {
-    "id": "cheerleader_top_short",
-    "type": "ARMOR",
-    "name": { "str": "short cheerleader tank top" },
-    "description": "A short red cheerleader tank top.  It has the word \"Cheers\" printed at the top.",
-    "weight": "100 g",
-    "volume": "250 ml",
-    "price": 800,
-    "price_postapoc": 50,
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "tank_top",
-    "color": "red",
-    "armor": [ { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 90, "encumbrance": 2 } ],
-    "material_thickness": 0.2,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY" ]
   },
   {
     "id": "combat_shirt",
@@ -771,90 +521,7 @@
     "warmth": 20,
     "material_thickness": 1,
     "valid_mods": [ "steel_padded" ],
-    "flags": [ "VARSIZE", "POCKETS", "HOOD" ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "hoodie_red",
-        "name": { "str": "red hoodie" },
-        "description": "This one is colored red.",
-        "color": "red",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_blue",
-        "name": { "str": "blue hoodie" },
-        "color": "blue",
-        "description": "This one is colored blue.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_yellow",
-        "name": { "str": "yellow hoodie" },
-        "color": "yellow",
-        "description": "This one is colored yellow.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_green",
-        "name": { "str": "green hoodie" },
-        "color": "green",
-        "description": "This one is colored green.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_purple",
-        "name": { "str": "purple hoodie" },
-        "color": "magenta",
-        "description": "This one is colored purple.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_pink",
-        "name": { "str": "pink hoodie" },
-        "color": "magenta",
-        "description": "This one is colored pink.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_cyan",
-        "name": { "str": "cyan hoodie" },
-        "color": "cyan",
-        "description": "This one is colored cyan.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_black",
-        "name": { "str": "black hoodie" },
-        "color": "dark_gray",
-        "description": "This one is colored black.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_white",
-        "name": { "str": "white hoodie" },
-        "color": "light_gray",
-        "description": "This one is colored white.",
-        "append": true,
-        "weight": 1
-      },
-      {
-        "id": "hoodie_brown",
-        "name": { "str": "brown hoodie" },
-        "color": "brown",
-        "description": "This one is colored brown.",
-        "append": true,
-        "weight": 1
-      }
-    ]
+    "flags": [ "VARSIZE", "POCKETS", "HOOD" ]
   },
   {
     "id": "jersey",
@@ -872,34 +539,6 @@
     "color": "yellow",
     "warmth": 12,
     "material_thickness": 0.3,
-    "snippet_category": [
-      { "id": "decatur", "text": "A pro thunderball jersey made of cotton, printed with the logo of the Decatur Fist." },
-      {
-        "id": "squamish",
-        "text": "A 43-man squamish jersey made of cotton, printed with the logo of the Gainesville Veeblefetzers."
-      },
-      { "id": "london", "text": "A zero-G football jersey made of cotton, printed with the logo of the London Jets." },
-      {
-        "id": "endsville",
-        "text": "A football jersey made of cotton, printed with the logo of the Endsville Fluffycats."
-      },
-      { "id": "tokyo", "text": "A baseball jersey made of cotton, printed with the logo of the Tokyo Samurai." },
-      { "id": "basin", "text": "A basketball jersey made of cotton, printed with the logo of the Basin City Blues." },
-      {
-        "id": "deathrace",
-        "text": "A death race jersey made of cotton, printed with Frankenstein's logo and signature."
-      },
-      {
-        "id": "houston",
-        "text": "A rollerball jersey made of cotton, printed with the logo of the Houston Energy Corporation."
-      },
-      {
-        "id": "monroeville",
-        "text": "A hockey jersey made of cotton, printed with the logo of the Monroeville Zombies."
-      },
-      { "id": "rugby", "text": "A rugby jersey made of cotton, printed with the logo of the Canberra Drop Bears." },
-      { "id": "volleyball", "text": "A volleyball jersey made of cotton, printed with the logo of the Ooarai Ducks." }
-    ],
     "flags": [ "VARSIZE" ],
     "armor": [ { "encumbrance": 7, "coverage": 90, "covers": [ "torso", "arm_l", "arm_r" ] } ]
   },
@@ -919,66 +558,6 @@
     "material_thickness": 0.01,
     "flags": [ "VARSIZE", "SKINTIGHT", "WATER_FRIENDLY" ],
     "armor": [ { "coverage": 80, "covers": [ "torso" ] } ]
-  },
-  {
-    "id": "linuxtshirt",
-    "type": "ARMOR",
-    "name": { "str": "Linux t-shirt" },
-    "description": "A t-shirt with a picture of the Tux mascot on it.  Underneath it says \"You wouldn't buy a car with the hood welded shut.\"",
-    "weight": "110 g",
-    "volume": "500 ml",
-    "price": 2000,
-    "price_postapoc": 50,
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "tshirt",
-    "color": "dark_gray",
-    "warmth": 5,
-    "material_thickness": 0.1,
-    "snippet_category": [
-      {
-        "id": "tux",
-        "text": "A t-shirt with a picture of Tux, the Linux mascot!  It says \"You wouldn't buy a car with the hood welded shut.\""
-      },
-      {
-        "id": "ubuntusmartass",
-        "text": "A t-shirt with the Ubuntu logo on it, underneath it says \"Ubuntu is a South African word for 'I can't configure Debian'\""
-      },
-      {
-        "id": "arch",
-        "text": "A t-shirt with the Arch Linux logo on it, underneath it says \"Keep it Simple Stupid\""
-      },
-      {
-        "id": "ubuntu",
-        "text": "A t-shirt with the Ubuntu logo on it, underneath it says \"Linux for human beings\""
-      },
-      {
-        "id": "mint",
-        "text": "A t-shirt with the Linux Mint logo on it, underneath it says \"From freedom came elegance\""
-      },
-      {
-        "id": "fedora",
-        "text": "A t-shirt with the Fedora logo on it, underneath it says \"Freedom.  Friends.  Features.  First.\""
-      },
-      {
-        "id": "redhat",
-        "text": "A t-shirt with Red Hat's logo on it, underneath it says \"The World's Open Source Leader\""
-      },
-      {
-        "id": "debian",
-        "text": "A t-shirt with the Debian logo on it, underneath it says \"The Universal Operating System\""
-      }
-    ],
-    "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [
-      { "coverage": 90, "covers": [ "torso" ] },
-      {
-        "coverage": 100,
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
-      },
-      { "coverage": 50, "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_upper_l", "arm_upper_r" ] }
-    ]
   },
   {
     "id": "longshirt",
@@ -1001,8 +580,8 @@
   {
     "id": "maid_dress",
     "type": "ARMOR",
-    "name": { "str_sp": "French maid clothes" },
-    "description": "The French maid dress, blue with a frilly white apron.",
+    "name": { "str_sp": "maid uniform" },
+    "description": "A French maid dress, blue with a frilly white apron.",
     "weight": "250 g",
     "volume": "250 ml",
     "price": 5000,
@@ -1041,7 +620,7 @@
     "id": "maid_dress_short",
     "type": "ARMOR",
     "name": { "str_sp": "short French maid clothes" },
-    "description": "The French maid dress, black with a frilly white apron.  This version is much lighter and shorter than normal.",
+    "description": "A French maid dress, black with a frilly white apron.  This version is much lighter and shorter than normal.",
     "weight": "150 g",
     "volume": "250 ml",
     "price": 5000,
@@ -1329,18 +908,10 @@
   {
     "id": "sheriffshirt",
     "type": "ARMOR",
-    "name": { "str": "sheriff's shirt" },
-    "description": "A tan button-down shirt with long sleeves.",
+    "name": { "str": "snap front shirt" },
+    "description": "A long-sleeved shirt with snap buttons down the front.",
     "weight": "250 g",
     "volume": "750 ml",
-    "variants": [
-      { "id": "sheriff", "name": { "str": "sheriff's shirt" }, "description": "A tan button-down shirt with long sleeves." },
-      {
-        "id": "swat_shirt",
-        "name": { "str": "SWAT shirt" },
-        "description": "A charcoal button-down shirt with long sleeves.  Has a patch with the word \"SWAT\" affixed on one shoulder."
-      }
-    ],
     "price": 1100,
     "price_postapoc": 50,
     "material": [ "cotton" ],
@@ -1608,108 +1179,6 @@
     "color": "white",
     "warmth": 5,
     "material_thickness": 0.1,
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "skeletor_tshirt",
-        "name": { "str": "political meme t-shirt" },
-        "description": "A dark blue t-shirt with a circle of stars.  Inside the circle is a blue and yellow skeleton with his arms raised and mouth open.  Above the skeleton are the words 'Make Eternia' and below him, 'Great Again'.",
-        "color": "blue"
-      },
-      {
-        "id": "my_little_nazgul_tshirt",
-        "name": { "str": "My Little Nazgûl t-shirt" },
-        "description": "A light gray t-shirt with a drawing of a Nazgûl riding a black horse.  The drawing is in the style of old My Little Pony cartoons.",
-        "color": "light_gray"
-      },
-      {
-        "id": "generic_tshirt",
-        "name": { "str": "t-shirt" },
-        "description": "A short-sleeved cotton shirt.",
-        "weight": 40
-      },
-      {
-        "id": "faather_tshirt",
-        "name": { "str": "Matt Berry t-shirt" },
-        "description": "A t-shirt printed with a design of Matt Berry in a rugby shirt, a fist raised to the sky, mouth agape, shouting 'Faaather'!"
-      },
-      {
-        "id": "doom_song_tshirt",
-        "name": { "str": "doom song t-shirt" },
-        "description": "A black shirt with a green robot poorly disguised as a dog.  Words printed on it read: \"It's time for the DOOM song.  Doom, doom, doom, dooooom!!\"",
-        "color": "dark_gray"
-      },
-      {
-        "id": "boba_fetch_tshirt",
-        "name": { "str": "Boba Fetch t-shirt" },
-        "description": "A black shirt displaying a dog wearing the uniform of a well known galactic bounty hunter.  In place of a wrist rocket, it fires a tennis ball on a string.",
-        "color": "dark_gray"
-      },
-      {
-        "id": "mouse_portal_tshirt",
-        "name": { "str": "mouse portal t-shirt" },
-        "description": "The front of this shirt displays a blue portal with a mouse's head sticking out.  The mouse is pointing some kind of gun-like device towards a cube made of Swiss cheese.  The back of the shirt has an orange portal, with the back half of the mouse entering the portal."
-      },
-      {
-        "id": "ceiling_cthulhu_tshirt",
-        "name": { "str": "Ceiling Cthulhu t-shirt" },
-        "description": "This shirt displays a drawing of a ceiling with a round hole in it.  A quizzical-looking Cthulhu pokes its head down through the hole."
-      },
-      {
-        "id": "pumpkin_time",
-        "name": { "str": "pumpkin time t-shirt" },
-        "description": "This shirt displays a picture of a jack-o'-lantern with a tiny smiling black bat popping out of the top."
-      },
-      {
-        "id": "portal_to_the_cat_dimension_tshirt",
-        "name": { "str": "portal to the cat dimension t-shirt" },
-        "description": "A black t-shirt with a picture of a woman standing in front of a yawning portal, with numerous cats exiting the portal and surrounding her.",
-        "symbol": "c",
-        "color": "dark_gray",
-        "weight": 5
-      },
-      {
-        "id": "forbidden_futurama_tshirt",
-        "name": { "str": "forbidden robot t-shirt" },
-        "description": "This shirt displays a picture of a giant blocky robot with a cone-shaped head.  It holds both arms out, carrying a cyclops woman with purple hair."
-      },
-      {
-        "id": "swordocracy_tshirt",
-        "name": { "str": "Down with Swordocracy t-shirt", "str_pl": "Down with Swordocracy t-shirts" },
-        "description": "A t-shirt with a picture of a peasant with a fist raised, eyes alight with the fire of freedom, proclaiming, 'Down with sword-based governments!'",
-        "color": "light_red"
-      },
-      {
-        "id": "black_phillip_tshirt",
-        "name": { "str": "Black Phillip t-shirt" },
-        "description": "A black t-shirt with a picture of an old-fashioned cartoon black goat on the front, above the goat it says 'Black Phillip' and below are the words 'Live Deliciously'.",
-        "color": "dark_gray"
-      },
-      {
-        "id": "disney_parody_tshirt",
-        "name": { "str": "theme park parody t-shirt" },
-        "description": "A black t-shirt with a picture of a stylized castle with five spires.  Each spire has a purple-gray flame at the top.  At the bottom of the castle it says 'Menzoberranzan'",
-        "symbol": "M",
-        "color": "light_gray"
-      },
-      {
-        "id": "start_a_cult_tshirt",
-        "name": { "str": "activities for children t-shirt", "str_pl": "activities for children t-shirts" },
-        "description": "This t-shirt displays a picture of a hooded child standing behind a lectern, his mouth open and his arms held high.  A pentagram has been carved into the lectern and stuffed animals are arranged in a semicircle facing the child.  On the left of the child are the words 'Let's Start A Cult', while below it reads 'Activities for Children'.",
-        "symbol": "o",
-        "color": "dark_gray"
-      },
-      {
-        "id": "baseball_fan_tshirt",
-        "name": { "str": "baseball t-shirt" },
-        "description": "A short-sleeved cotton shirt with the logo of a local baseball team printed on its front and back."
-      },
-      {
-        "id": "football_fan_tshirt",
-        "name": { "str": "football t-shirt" },
-        "description": "A short-sleeved cotton shirt with the logo of a local football team printed on its front and back."
-      }
-    ],
     "flags": [ "VARSIZE", "SKINTIGHT" ],
     "armor": [
       { "coverage": 90, "covers": [ "torso" ] },
@@ -1719,115 +1188,6 @@
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
       },
       { "coverage": 50, "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_upper_l", "arm_upper_r" ] }
-    ]
-  },
-  {
-    "id": "tshirt_text",
-    "type": "ARMOR",
-    "name": { "str": "t-shirt" },
-    "description": "A short-sleeved cotton shirt.",
-    "weight": "110 g",
-    "volume": "500 ml",
-    "price": 800,
-    "price_postapoc": 50,
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "tshirt",
-    "color": "white",
-    "warmth": 5,
-    "material_thickness": 0.1,
-    "snippet_category": [
-      {
-        "id": "allyourbase",
-        "text": "A short-sleeved cotton shirt with the text \"chown -R us ~your/base\" printed on the front."
-      },
-      {
-        "id": "fda_approved",
-        "text": "A light blue t-shirt with yellow block letters that say 'FDA Approved to treat all diseases'."
-      },
-      { "id": "anxiety_superpower", "text": "A t-shirt with the text 'Anxiety is my super power'." },
-      { "id": "visitryleh", "text": "A t-shirt with the text 'Greetings from R'YLEH home of Cthulhu'." },
-      { "id": "robot_finds_kitten", "text": "A t-shirt with the text 'Play robotfindskitten today'." },
-      {
-        "id": "survived_apocalypse",
-        "text": "A t-shirt with the text 'I survived the apocalypse and all I got was this lousy T-shirt?'"
-      },
-      { "id": "zombiebelief", "text": "A t-shirt with the text 'Zombies don't care whether or not you believe.'" },
-      {
-        "id": "cthulhuprez1",
-        "text": "A t-shirt with the text 'Cthulhu for President: Why vote for the lesser evil'."
-      },
-      {
-        "id": "cthulhuprez2",
-        "text": "A t-shirt with the text 'Cthulhu for President: This time the stars are right'."
-      }
-    ],
-    "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [
-      { "coverage": 90, "covers": [ "torso" ] },
-      {
-        "coverage": 100,
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
-      },
-      { "coverage": 50, "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_upper_l", "arm_upper_r" ] }
-    ]
-  },
-  {
-    "id": "tshirt_tour",
-    "type": "ARMOR",
-    "copy-from": "tshirt",
-    "name": { "str": "tour t-shirt" },
-    "description": "A short-sleeved cotton shirt.",
-    "price": 1000,
-    "price_postapoc": 50,
-    "looks_like": "tshirt",
-    "color": "dark_gray",
-    "snippet_category": [
-      {
-        "id": "death",
-        "text": "A short-sleeved cotton shirt with a death metal band's spidery, indecipherable logo printed on the front."
-      },
-      {
-        "id": "power",
-        "text": "A short-sleeved cotton shirt with a muscle-bound, long-haired man printed on the front.  He is riding a red dragon and wielding a flaming sword with malicious glee."
-      },
-      {
-        "id": "thrash",
-        "text": "A short-sleeved cotton shirt with a gore-spattered, guitar-playing zombie printed on the front.  It's rather tasteless in light of current events."
-      },
-      {
-        "id": "prog",
-        "text": "A short-sleeved cotton shirt with a pattern of complex geometric shapes and transcendental imagery printed on the front."
-      },
-      {
-        "id": "mohawk",
-        "text": "A short-sleeved cotton shirt with an image of a woman's face in portrait printed on the front.  She is wearing a large blue mohawk, her face is set in a snarl."
-      },
-      {
-        "id": "nuwave",
-        "text": "A short-sleeved black cotton shirt with a stylized representation of a radio wave printed on the front."
-      },
-      {
-        "id": "an_punk",
-        "text": "A short-sleeved cotton shirt, its front showing an image of an upside-down American flag covered in anarchist graffiti, its edges frayed and burned."
-      },
-      {
-        "id": "mil_punk",
-        "text": "A short-sleeved cotton shirt with an AK-47 on the front.  It is held up by a clenched fist around its forestock, the fingers covered in crude looking tattoos."
-      },
-      {
-        "id": "mc_chris",
-        "text": "A short-sleeved cotton shirt with an interstellar bounty hunter on the front.  'My backpack's got jets'."
-      },
-      {
-        "id": "cthulhupunk1",
-        "text": "A short-sleeved white cotton shirt with the words 'THE DARKEST OF THE HILLSIDE THICKETS' with a picture of giant fantastical creatures dancing in a line.  Below the picture read the words 'Where the Great Old Ones Are'."
-      },
-      {
-        "id": "cthulhupunk2",
-        "text": "A short-sleeved black cotton shirt with the words 'THE DARKEST OF THE HILLSIDE THICKETS' below a picture of a roofless green Dodge Charger with five robed men in it.  The driver is throwing back a drink from a goblet, the first passenger is chanting from a book, the other three passengers are firing various guns at a blue flying eye with tentacles and a snail shell.  Red letters read 'THE DUKES OF ALHAZRED'."
-      }
     ]
   },
   {
@@ -1945,37 +1305,6 @@
         "encumbrance": 2
       },
       { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 90 }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_witch_dress",
-        "name": { "str": "black witch dress", "str_pl": "black witch dresses" },
-        "description": "It's colored black.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "green_witch_dress",
-        "name": { "str": "green witch dress", "str_pl": "green witch dresses" },
-        "description": "It's colored dark green.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "red_witch_dress",
-        "name": { "str": "red witch dress", "str_pl": "red witch dresses" },
-        "description": "It's colored dark red.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "purple_witch_dress",
-        "name": { "str": "purple witch dress", "str_pl": "purple witch dresses" },
-        "description": "It's colored dark purple.",
-        "weight": 25,
-        "append": true
-      }
     ]
   },
   {
@@ -2006,37 +1335,6 @@
         "max_contains_weight": "2 kg",
         "max_item_length": "13 cm",
         "moves": 100
-      }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_witch_dress_long",
-        "name": { "str": "long black witch dress", "str_pl": "long black witch dresses" },
-        "description": "It's colored black.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "green_witch_dress_long",
-        "name": { "str": "long green witch dress", "str_pl": "long green witch dresses" },
-        "description": "It's colored dark green.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "red_witch_dress_long",
-        "name": { "str": "long red witch dress", "str_pl": "long red witch dresses" },
-        "description": "It's colored dark red.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "purple_witch_dress_long",
-        "name": { "str": "long purple witch dress", "str_pl": "long purple witch dresses" },
-        "description": "It's colored dark purple.",
-        "weight": 25,
-        "append": true
       }
     ]
   },
@@ -2072,37 +1370,6 @@
         "encumbrance": 4
       },
       { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 40 }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_witch_dress_short",
-        "name": { "str": "short black witch dress", "str_pl": "short black witch dresses" },
-        "description": "It's colored black.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "green_witch_dress_short",
-        "name": { "str": "short green witch dress", "str_pl": "short green witch dresses" },
-        "description": "It's colored dark green.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "red_witch_dress_short",
-        "name": { "str": "short red witch dress", "str_pl": "short red witch dresses" },
-        "description": "It's colored dark red.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "purple_witch_dress_short",
-        "name": { "str": "short purple witch dress", "str_pl": "short purple witch dresses" },
-        "description": "It's colored dark purple.",
-        "weight": 25,
-        "append": true
-      }
     ]
   },
   {
