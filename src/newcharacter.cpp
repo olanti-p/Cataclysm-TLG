@@ -338,9 +338,9 @@ static std::string pools_to_string( const avatar &u, pool_type pool )
             bool is_valid = p.stat_points_left >= 0 && p.trait_points_left >= 0 && p.skill_points_left >= 0;
             return string_format(
                        _( "Stats: <color_%s>%d</color>  Traits: <color_%s>%d</color>  Skills: <color_%s>%d</color>\n  Total: <color_%s>%d</color>" ),
-                       p.stat_points_left >= 0 ? "light_gray" : "red", p.pure_stat_points,
-                       p.trait_points_left >= 0 ? "light_gray" : "red", p.pure_trait_points,
-                       p.skill_points_left >= 0 ? "light_gray" : "red", p.pure_skill_points,
+                       p.stat_points_left >= 0 ? "light_gray" : "red", p.stat_points_left,
+                       p.trait_points_left >= 0 ? "light_gray" : "red", std::abs( p.trait_points_left ),
+                       p.skill_points_left >= 0 ? "light_gray" : "red",  p.pure_skill_points,
                        is_valid ? "light_gray" : "red", p.skill_points_left );
         }
         case pool_type::ONE_POOL: {
@@ -3060,7 +3060,6 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
             if( level > 0 ) {
                 // For balance reasons, increasing a skill from level 0 gives 1 extra level for free, but
                 // decreasing it from level 2 forfeits the free extra level (thus changes it to 0)
-                // this only matters in legacy character creation modes
                 u.mod_skill_level( skill_id, level == 2 && pool != pool_type::FREEFORM ? -2 : -1 );
                 u.set_knowledge_level( skill_id, static_cast<int>( u.get_skill_level( skill_id ) ) );
             }
@@ -3070,7 +3069,6 @@ void set_skills( tab_manager &tabs, avatar &u, pool_type pool )
             const int level = u.get_skill_level( skill_id );
             if( level < MAX_SKILL ) {
                 // For balance reasons, increasing a skill from level 0 gives 1 extra level for free
-                // this only matters in legacy character creation modes
                 u.mod_skill_level( skill_id, level == 0 && pool != pool_type::FREEFORM ? +2 : +1 );
                 u.set_knowledge_level( skill_id, static_cast<int>( u.get_skill_level( skill_id ) ) );
             }
