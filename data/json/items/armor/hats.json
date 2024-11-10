@@ -151,7 +151,7 @@
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 60,
         "covers": [ "head" ],
         "specifically_covers": [ "head_forehead", "head_ear_r", "head_ear_l" ]
       }
@@ -162,21 +162,6 @@
     "type": "ARMOR",
     "name": { "str": "cowboy hat" },
     "description": "Whether yer hunting varmints, fixing up the ranch, or heading into the sunset, this is the hat for the job.",
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_cowboy_hat",
-        "name": { "str": "cowboy hat" },
-        "description": "Whether yer hunting varmints, fixing up the ranch, or heading into the sunset, this is the hat for the job.",
-        "weight": 30
-      },
-      {
-        "id": "flag_cowboy_hat",
-        "name": { "str_sp": "American cowboy hat" },
-        "description": "This hat has traded its original classic looks for a red, white, and blue pattern with a band of golden stars embossed about its lip; suitable headwear for only the most serious of patriots.",
-        "append": true
-      }
-    ],
     "weight": "390 g",
     "volume": "2 L",
     "price": 9500,
@@ -212,7 +197,15 @@
     "weight": "733 g",
     "volume": "1500 ml",
     "material_thickness": 0.2,
-    "pocket_data": [ { "max_contains_volume": "500 ml", "max_contains_weight": "1 kg", "watertight": true, "rigid": true } ],
+    "pocket_data": [
+      {
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "1 mm",
+        "watertight": true,
+        "rigid": true
+      }
+    ],
     "flags": [ "OVERSIZE", "BELTED", "ALLOWS_NATURAL_ATTACKS", "WATER_FRIENDLY" ],
     "armor": [
       { "encumbrance_modifiers": [ "NONE" ], "coverage": 60, "covers": [ "head" ], "specifically_covers": [ "head_crown" ] }
@@ -342,125 +335,9 @@
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 90,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
-      }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_hatball",
-        "name": { "str": "baseball cap" },
-        "description": "A cotton cap with a rounded crown, an adjustable strap, and a long visor.  It shields your eyes from the sun and provides a little bit of warmth.  Traditionally worn by baseball players.",
-        "weight": 40
-      },
-      {
-        "id": "baseball_fan_hatball",
-        "name": { "str": "baseball fan cap" },
-        "description": "A snapback baseball cap displaying the logo of a local baseball team.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 5
-      },
-      {
-        "id": "football_fan_hatball",
-        "name": { "str": "football fan cap" },
-        "description": "A snapback baseball cap displaying the logo of a local football team.  It shields your eyes from the sun and provides a little bit of warmth."
-      },
-      {
-        "id": "dollar_hatball",
-        "name": { "str": "dollar sign cap" },
-        "description": "A snapback golden-colored baseball cap displaying a golden dollar sign symbol at the front.  It shields your eyes from the sun and provides a little bit of warmth.  Makes you fell like a rapper.",
-        "weight": 1
-      },
-      {
-        "id": "pine_hatball1",
-        "name": { "str": "Lone Pine cap" },
-        "description": "A snapback baseball cap displaying the shape of a single pine tree at the front.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "sorcery_hatball",
-        "name": { "str": "sorcery baseball cap" },
-        "description": "A snapback baseball cap displaying the phrase 'Got Sorcery?', colored white in a cosmos black background.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "diamond_hatball",
-        "name": { "str": "diamond cap" },
-        "description": "A snapback baseball cap displaying the white-colored shape of a diamond in the front.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "blood_hatball",
-        "name": { "str": "blood donor cap" },
-        "description": "A snapback baseball cap displaying the image of bloodpack connected to a drop of blood in the front, and under that image, a text that reads: 'Donating Blood', in white, and 'Save Lifes' in red.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "fema_hatball",
-        "name": { "str": "FEMA cap" },
-        "description": "A beige colored snapback baseball cap displaying the FEMA acronym, which denotes for the Federal Emergency Management Agency, in the front, and the official seal of the Federal Emergency Management Agency in the right side.  Commonly used by the government organization employees and volunteers.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "earth_hatball",
-        "name": { "str": "Planet Earth cap" },
-        "description": "A snapback baseball cap displaying the detailed image of a round Planet Earth right at the front.  The whole cap is black, with some white dots around, making the background looks like outer space.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "flatearth_hatball",
-        "name": { "str": "Flat Earth cap" },
-        "description": "A snapback baseball cap displaying the image of a flat, disk-like Earth, with the dome right above it, showing the sun illuminating one half of Flat Earth, and the moon, illuminating the night with moonlight (which is reflected light from the sun) on the other half, and besides it, a text that reads: 'Earth is Flat!'.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "vegan_hatball",
-        "name": { "str": "Go Vegan cap" },
-        "description": "A snapback baseball cap displaying the green icon of a leaf in the front, and a text on the top of it reading 'Go Vegan!'.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "meat_hatball",
-        "name": { "str": "Bacon is Life cap" },
-        "description": "A snapback baseball cap displaying the pinkish icon of a slice of bacon in the front, and a text on the top of it reading 'Bacon is Life!'.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "biohazard_hatball",
-        "name": { "str": "biohazard cap" },
-        "description": "A snapback baseball cap displaying the green icon of the well known symbol of biohazard and biological danger in the front, and a text reading 'Warning: Biohazard'.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "america_hatball",
-        "name": { "str": "American cap" },
-        "description": "A snapback baseball cap embossed with the pattern of the flag of the United States of America.  It shields your eyes from the sun, provides a little bit of warmth and also makes you feel like a real patriot.",
-        "weight": 5
-      },
-      {
-        "id": "soccer_fan_hatball",
-        "name": { "str": "soccer fan cap" },
-        "description": "A snapback baseball cap displaying the logo of a popular soccer team.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "basketball_fan_hatball",
-        "name": { "str": "basketball fan cap" },
-        "description": "A snapback baseball cap displaying the logo of a popular basketball team.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 1
-      },
-      {
-        "id": "hockey_fan_hatball",
-        "name": { "str": "hockey fan cap" },
-        "description": "A snapback baseball cap displaying the logo of a popular hockey team.  It shields your eyes from the sun and provides a little bit of warmth.",
-        "weight": 5
-      },
-      {
-        "id": "generic_truckball",
-        "name": { "str": "trucker cap" },
-        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  The trucker hat came about in it's true form in the early 1970's as a promotional give-away from US feed or farming supply companies to farmers, truck drivers (hence the name) and other rural workers.  It is perfect for keeping your head cool and the sun out of your eyes.",
-        "weight": 2
       }
     ]
   },
@@ -486,64 +363,6 @@
         "coverage": 100,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
-      }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "white_hat_chef",
-        "name": { "str": "toque" },
-        "description": "It's colored white.",
-        "weight": 60,
-        "append": true
-      },
-      {
-        "id": "black_hat_chef",
-        "name": { "str": "black toque" },
-        "description": "It's colored black.",
-        "color": "dark_gray",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "blue_hat_chef",
-        "name": { "str": "blue toque" },
-        "description": "It's a royal blue color.",
-        "color": "blue",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "red_hat_chef",
-        "name": { "str": "red toque" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_hat_chef",
-        "name": { "str": "pink toque" },
-        "description": "It's colored pink.",
-        "color": "pink",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "yellow_hat_chef",
-        "name": { "str": "yellow toque" },
-        "description": "It's colored yellow.",
-        "color": "yellow",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "camo_hat_chef",
-        "name": { "str": "camo toque" },
-        "description": "It has camouflage dye.",
-        "color": "green",
-        "weight": 2,
-        "append": true
       }
     ]
   },
@@ -699,127 +518,7 @@
         "transparent": true
       }
     ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "yellow_hat_hard",
-        "name": { "str": "yellow hard hat" },
-        "description": "It's colored yellow, commonly used by general, unspecialized workers like laborers and operators of heavy machinery.",
-        "weight": 110,
-        "append": true
-      },
-      {
-        "id": "orange_hat_hard",
-        "name": { "str": "orange hard hat" },
-        "description": "It's colored orange, commonly used by road construction workers, new hires, and site visitors.",
-        "color": "light_red",
-        "weight": 110,
-        "append": true
-      },
-      {
-        "id": "white_hat_hard",
-        "name": { "str": "white hard hat" },
-        "description": "It's colored white, commonly used by anyone in a supervisory position, including managers, architects, engineers, and foremen.",
-        "color": "white",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "brown_hat_hard",
-        "name": { "str": "brown hard hat" },
-        "description": "It's colored brown, commonly used by workers using applications involving high heat such as welders.",
-        "color": "brown",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "blue_hat_hard",
-        "name": { "str": "blue hard hat" },
-        "description": "It's colored blue, commonly used by medical workers and electricians, as well as employees in a technical advisory role.",
-        "color": "blue",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "green_hat_hard",
-        "name": { "str": "green hard hat" },
-        "description": "It's colored green, commonly used by safety officers and inspectors.",
-        "color": "green",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "red_hat_hard",
-        "name": { "str": "red hard hat" },
-        "description": "It's colored red, commonly used by emergency workers and firefighters.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_hat_hard",
-        "name": { "str": "pink hard hat" },
-        "description": "It's colored pink, commonly issued as a punishment to workers that forgot or lost their hard hat.  Or maybe the previous owner just liked pink.",
-        "color": "pink",
-        "weight": 8,
-        "append": true
-      },
-      {
-        "id": "grey_hat_hard",
-        "name": { "str": "grey hard hat" },
-        "description": "It's colored grey, commonly used by visitors to any worksite.",
-        "color": "light_gray",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "black_hat_hard",
-        "name": { "str": "black hard hat" },
-        "description": "It's colored black, like the first real hard hats in history.",
-        "color": "dark_gray",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "cartoon_hat_hard",
-        "name": { "str": "cartoon hard hat" },
-        "description": "It has cartoon character stickers all over it.",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "camo_hat_hard",
-        "name": { "str": "camo hard hat" },
-        "description": "It's painted in camouflage dye.",
-        "color": "green",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "skull_hat_hard",
-        "name": { "str": "skull hard hat" },
-        "description": "It's colored white and has skull decorations.",
-        "color": "white",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "flag_hat_hard",
-        "name": { "str": "flag hard hat" },
-        "description": "It's decorated with an American flag pattern.  Protects your head with the power of freedom.",
-        "color": "light_red",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "steampunk_hat_hard",
-        "name": { "str": "steampunk hard hat" },
-        "description": "It's colored black, with industrial gear decorations and a steampunk design.",
-        "color": "dark_gray",
-        "append": true
-      }
-    ],
-    "melee_damage": { "bash": 6 }
+    "melee_damage": { "bash": 2 }
   },
   {
     "id": "hat_hard_hooded",
@@ -884,127 +583,7 @@
         "transparent": true
       }
     ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "yellow_hat_hard",
-        "name": { "str": "yellow summer hard hat" },
-        "description": "It's colored yellow, commonly used by general, unspecialized workers like laborers and operators of heavy machinery.",
-        "weight": 110,
-        "append": true
-      },
-      {
-        "id": "orange_hat_hard",
-        "name": { "str": "orange summer hard hat" },
-        "description": "It's colored orange, commonly used by road construction workers, new hires, and site visitors.",
-        "color": "light_red",
-        "weight": 110,
-        "append": true
-      },
-      {
-        "id": "white_hat_hard",
-        "name": { "str": "white summer hard hat" },
-        "description": "It's colored white, commonly used by anyone in a supervisory position, including managers, architects, engineers, and foremen.",
-        "color": "white",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "brown_hat_hard",
-        "name": { "str": "brown summer hard hat" },
-        "description": "It's colored brown, commonly used by workers using applications involving high heat such as welders.",
-        "color": "brown",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "blue_hat_hard",
-        "name": { "str": "blue summer hard hat" },
-        "description": "It's colored blue, commonly used by medical workers and electricians, as well as employees in a technical advisory role.",
-        "color": "blue",
-        "weight": 15,
-        "append": true
-      },
-      {
-        "id": "green_hat_hard",
-        "name": { "str": "green summer hard hat" },
-        "description": "It's colored green, commonly used by safety officers and inspectors.",
-        "color": "green",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "red_hat_hard",
-        "name": { "str": "red summer hard hat" },
-        "description": "It's colored red, commonly used by emergency workers and firefighters.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_hat_hard",
-        "name": { "str": "pink summer hard hat" },
-        "description": "It's colored pink, commonly issued as a punishment to regular workers that forgot or lost their hard hat.  Or maybe the previous owner just liked pink.",
-        "color": "pink",
-        "weight": 8,
-        "append": true
-      },
-      {
-        "id": "grey_hat_hard",
-        "name": { "str": "grey summer hard hat" },
-        "description": "It's colored grey, commonly used by visitors to any worksite.",
-        "color": "light_gray",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "black_hat_hard",
-        "name": { "str": "black summer hard hat" },
-        "description": "It's colored black, like the first real hard hats in history.",
-        "color": "dark_gray",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "cartoon_hat_hard",
-        "name": { "str": "cartoon summer hard hat" },
-        "description": "It has cartoon character stickers all over it.",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "camo_hat_hard",
-        "name": { "str": "camo summer hard hat" },
-        "description": "It's painted in camouflage dye.",
-        "color": "green",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "skull_hat_hard",
-        "name": { "str": "skull summer hard hat" },
-        "description": "It's colored white and has skull decorations.",
-        "color": "white",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "flag_hat_hard",
-        "name": { "str": "flag summer hard hat" },
-        "description": "It's decorated with an American flag pattern.  Protects your head with the power of freedom.",
-        "color": "light_red",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "steampunk_hat_hard",
-        "name": { "str": "steampunk summer hard hat" },
-        "description": "It's colored black, with industrial gear decorations and a steampunk design.",
-        "color": "dark_gray",
-        "append": true
-      }
-    ],
-    "melee_damage": { "bash": 6 }
+    "melee_damage": { "bash": 2 }
   },
   {
     "id": "hat_hunting",
@@ -1078,7 +657,7 @@
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 90,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
       }
@@ -1113,8 +692,7 @@
     "id": "hat_sombrero",
     "type": "ARMOR",
     "name": { "str": "sombrero" },
-    "//": "Head encumbrance stops you from wearing additional headgear.  No helmet over a sombrero, sorry.  But brimmed gear gets the anti-glare flag!",
-    "//2": "Not a real sombrero, but a felt imitation.",
+    "//": "Not a real sombrero, but a felt imitation.",
     "description": "An orange felt sombrero with traditional white and yellow hand stitching.  The wide brim keeps the sun out of your eyes, and a thin strap hooks around your chin.",
     "weight": "140 g",
     "volume": "3500 ml",
@@ -1130,7 +708,7 @@
     "flags": [ "OUTER", "SUN_GLASSES" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance_modifiers": [ "IMBALANCED" ],
         "coverage": 100,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
@@ -1153,7 +731,7 @@
     "warmth": 2,
     "material_thickness": 0.1,
     "armor": [
-      { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ], "specifically_covers": [ "head_crown" ] }
+      { "encumbrance_modifiers": [ "NONE" ], "coverage": 70, "covers": [ "head" ], "specifically_covers": [ "head_crown" ] }
     ]
   },
   {
@@ -1172,7 +750,7 @@
     "warmth": 3,
     "material_thickness": 0.2,
     "armor": [
-      { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ], "specifically_covers": [ "head_crown" ] }
+      { "encumbrance_modifiers": [ "NONE" ], "coverage": 70, "covers": [ "head" ], "specifically_covers": [ "head_crown" ] }
     ]
   },
   {
@@ -1194,7 +772,7 @@
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 70,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
       }
@@ -1241,7 +819,7 @@
     "warmth": 5,
     "material_thickness": 0.2,
     "environmental_protection": 1,
-    "flags": [ "FANCY", "VARSIZE" ],
+    "flags": [ "FANCY", "VARSIZE", "SUN_GLASSES" ],
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
@@ -1271,7 +849,7 @@
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 90,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
       }
@@ -1333,7 +911,7 @@
     "id": "tinfoil_hat",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "tinfoil hat" },
+    "name": { "str": "aluminum foil hat" },
     "description": "A sheet of aluminum foil that has been molded into a form-fitting hat.  Perfect for protecting yourself from the government, Illuminati, aliens, and THEM.",
     "weight": "16 g",
     "volume": "250 ml",
@@ -1343,7 +921,7 @@
     "symbol": "[",
     "looks_like": "hat_cotton",
     "warmth": 5,
-    "color": "yellow",
+    "color": "white",
     "flags": [ "PSYSHIELD_PARTIAL", "SKINTIGHT", "TRADER_AVOID", "NO_REPAIR", "SOFT" ],
     "armor": [
       {
@@ -1371,7 +949,7 @@
     "warmth": 8,
     "material_thickness": 0.2,
     "environmental_protection": 1,
-    "flags": [ "VARSIZE", "SUPER_FANCY" ],
+    "flags": [ "VARSIZE", "SUPER_FANCY", "SUN_GLASSES" ],
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
@@ -1395,9 +973,9 @@
     "looks_like": "bowhat",
     "color": "brown",
     "warmth": 7,
-    "material_thickness": 0.2,
+    "material_thickness": 0.6,
     "environmental_protection": 1,
-    "flags": [ "VARSIZE", "WATERPROOF", "WATER_FRIENDLY" ],
+    "flags": [ "VARSIZE", "WATERPROOF", "WATER_FRIENDLY", "SUN_GLASSES" ],
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
@@ -1438,8 +1016,7 @@
     "id": "hat_golf",
     "type": "ARMOR",
     "name": { "str": "golf cap" },
-    "//": "Head encumbrance stops you from wearing additional headgear.  No helmet over a ballcap, sorry.  But brimmed gear gets the anti-glare flag!",
-    "description": "You're not actually sure if this is called a golf cap, but it's the stereotypical cap golfers wear.",
+    "description": "A flat, short-brimmed cap, commonly worn by golfers.",
     "weight": "85 g",
     "volume": "500 ml",
     "price": 2200,
@@ -1455,7 +1032,7 @@
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 90,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ]
       }
@@ -1465,7 +1042,7 @@
     "id": "wizard_hat_costume",
     "type": "ARMOR",
     "name": "wizard hat",
-    "description": "A blue pointed hat with stars stitched into it.  Wearing it makes you feel like a powerful wizard.",
+    "description": "A pointed blue hat with stars stitched into it.",
     "weight": "300 g",
     "volume": "2 L",
     "price": 4000,
@@ -1489,8 +1066,8 @@
   {
     "id": "pointed_hat",
     "type": "ARMOR",
-    "name": "pointed hat",
-    "description": "A pointed hat suitable for a witch.",
+    "name": "witch hat",
+    "description": "A wide-brimmed hat with a pointy crown, an essential part of the stereotypical witch ensemble.",
     "weight": "40 g",
     "volume": "2 L",
     "price": 3000,
@@ -1508,37 +1085,6 @@
         "coverage": 80,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead", "head_ear_r", "head_ear_l" ]
-      }
-    ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_pointed_hat",
-        "name": { "str": "black pointed hat" },
-        "description": "It's colored black.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "green_pointed_hat",
-        "name": { "str": "green pointed hat" },
-        "description": "It's colored dark green.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "red_pointed_hat",
-        "name": { "str": "red pointed hat" },
-        "description": "It's colored dark red.",
-        "weight": 25,
-        "append": true
-      },
-      {
-        "id": "purple_pointed_hat",
-        "name": { "str": "purple pointed hat" },
-        "description": "It's colored dark purple.",
-        "weight": 25,
-        "append": true
       }
     ]
   }

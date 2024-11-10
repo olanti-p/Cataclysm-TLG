@@ -86,7 +86,7 @@ static const recipe_id recipe_armguard_chitin( "armguard_chitin" );
 static const recipe_id recipe_armguard_larmor( "armguard_larmor" );
 static const recipe_id recipe_armguard_lightplate( "armguard_lightplate" );
 static const recipe_id recipe_armguard_metal( "armguard_metal" );
-static const recipe_id recipe_balclava( "balclava" );
+static const recipe_id recipe_balaclava( "balaclava" );
 static const recipe_id recipe_blanket( "blanket" );
 static const recipe_id recipe_brew_mead( "brew_mead" );
 static const recipe_id recipe_brew_rum( "brew_rum" );
@@ -2063,7 +2063,7 @@ TEST_CASE( "tools_with_charges_as_components", "[crafting]" )
     sew_kit.put_in( thread, pocket_type::MAGAZINE );
     REQUIRE( sew_kit.ammo_remaining() == 100 );
     clear_and_setup( c, m, pocketknife );
-    c.learn_recipe( &*recipe_balclava );
+    c.learn_recipe( &*recipe_balaclava );
     c.set_skill_level( skill_survival, 10 );
 
     GIVEN( "sewing kit with thread on the ground" ) {
@@ -2072,7 +2072,7 @@ TEST_CASE( "tools_with_charges_as_components", "[crafting]" )
         c.i_add_or_drop( thread );
         c.i_add_or_drop( sheet_cotton, cotton_sheets_in_recipe );
         WHEN( "crafting a balaclava" ) {
-            craft_command cmd( &*recipe_balclava, 1, false, &c, c.pos() );
+            craft_command cmd( &*recipe_balaclava, 1, false, &c, c.pos() );
             cmd.execute( true );
             item res = cmd.create_in_progress_craft();
             THEN( "craft uses the free thread instead of tool ammo as component" ) {
@@ -2109,7 +2109,7 @@ TEST_CASE( "tools_with_charges_as_components", "[crafting]" )
         c.i_add_or_drop( thread );
         c.i_add_or_drop( sheet_cotton, cotton_sheets_in_recipe );
         WHEN( "crafting a balaclava" ) {
-            craft_command cmd( &*recipe_balclava, 1, false, &c, c.pos() );
+            craft_command cmd( &*recipe_balaclava, 1, false, &c, c.pos() );
             cmd.execute( true );
             item res = cmd.create_in_progress_craft();
             THEN( "craft uses the free thread instead of tool ammo as component" ) {

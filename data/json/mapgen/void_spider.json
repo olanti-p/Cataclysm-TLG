@@ -28,22 +28,16 @@
             "prob": 10
           },
           {
-            "collection": [ { "item": "holo_cloak" }, { "item": "standard_template_construct" }, { "item": "plasma_gun" } ],
+            "collection": [
+              { "item": "needlegun" },
+              { "item": "5x50_24_mag", "count": [ 1, 2 ] },
+              { "item": "optical_cloak" },
+              { "item": "bot_grenade_hack" }
+            ],
             "prob": 10
           },
           {
-            "collection": [
-              { "item": "jade_nagamaki", "damage": [ 0, 2 ] },
-              { "item": "greatbow_meteor", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai_mask", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai_torso", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai_shoulder", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai_shoulder", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai_legs", "damage": [ 0, 1 ] },
-              { "item": "armor_star_samurai_helmet_destroyed" },
-              { "item": "arrow_meteor", "count": [ 1, 2 ], "prob": 40 }
-            ],
+            "collection": [ { "item": "holo_cloak" }, { "item": "standard_template_construct" }, { "item": "plasma_gun" } ],
             "prob": 10
           }
         ],
@@ -58,8 +52,8 @@
     "container-item": "corpse_void_mummified",
     "on_overflow": "spill",
     "entries": [
-      { "item": "longrifle_flintlock", "variant": "leadworks_longrifle_flintlock", "prob": 10 },
-      { "item": "helmet_kettle", "variant": "morion", "prob": 10 },
+      { "item": "longrifle_flintlock", "prob": 10 },
+      { "item": "helmet_kettle", "prob": 10 },
       { "item": "towel", "prob": 10 },
       { "item": "tattered_garment", "prob": 10 },
       {
@@ -79,8 +73,7 @@
         "prob": 15
       },
       { "item": "altered_exposed_wiring_prototype", "prob": 10 },
-      { "item": "bead_bracelet", "prob": 10 },
-      { "item": "cape_sci_fi", "prob": 10 }
+      { "item": "bead_bracelet", "prob": 10 }
     ]
   },
   {

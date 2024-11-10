@@ -256,13 +256,10 @@
       { "item": "bondage_mask", "prob": 5 },
       { "item": "blindfold", "prob": 5 },
       { "item": "balaclava_skull", "prob": 25 },
-      { "item": "mask_skull", "prob": 20 },
+      { "item": "mask_skull", "prob": 25 },
+      { "item": "mask_hockey", "prob": 5 },
       { "item": "scarf_long", "prob": 10 },
-      { "item": "mask_dust", "variant": "skull_mask_dust", "prob": 20 },
-      { "item": "mask_dust", "variant": "steampunk_mask_dust", "prob": 15 },
-      { "item": "mask_dust", "variant": "flag_mask_dust", "prob": 15 },
       { "item": "face_veil", "prob": 10 },
-      { "item": "mask_plague", "prob": 15 },
       { "item": "pumpkin_mask", "prob": 10 },
       { "item": "zombie_mask", "prob": 10 }
     ]
@@ -282,7 +279,6 @@
     "entries": [
       { "item": "santa_pants", "prob": 20 },
       { "item": "santa_shorts", "prob": 10 },
-      { "item": "pants", "variant": "pants_flag", "prob": 15 },
       { "item": "trousers_ninja", "prob": 10 },
       { "item": "pants_army", "prob": 10 },
       { "item": "striped_pants", "prob": 15 },
@@ -297,8 +293,6 @@
     "//": "skirts for costumes, cosplay and costume parties",
     "subtype": "distribution",
     "entries": [
-      { "item": "cheerleader_skirt", "prob": 15 },
-      { "item": "cheerleader_skirt_short", "prob": 15 },
       { "item": "nanoskirt", "prob": 10 },
       { "item": "skirt_leather", "prob": 15 },
       { "item": "skirt_bostonchan", "prob": 20 }
@@ -310,13 +304,9 @@
     "//": "shirts for costumes, cosplay and costume parties",
     "subtype": "distribution",
     "entries": [
-      { "item": "tank_top", "variant": "tank_top_cheerleader", "prob": 25 },
-      { "item": "cheerleader_top_short", "prob": 35 },
-      { "item": "rashguard", "variant": "lifeguard_rashguard_shirt", "prob": 10 },
-      { "item": "rashguard", "variant": "skull_rashguard_shirt", "prob": 10 },
-      { "item": "rashguard", "variant": "gothic_rashguard_shirt", "prob": 10 },
+      { "item": "tank_top", "prob": 10 },
+      { "item": "rashguard", "prob": 10 },
       { "item": "postman_shirt", "prob": 10 },
-      { "item": "flag_shirt", "prob": 15 },
       { "item": "dress_shirt", "prob": 10 },
       { "item": "longshirt", "prob": 10 },
       { "item": "striped_shirt", "prob": 15 }
@@ -351,11 +341,8 @@
     "//": "undergarments for costumes, cosplay and costume parties",
     "subtype": "distribution",
     "entries": [
-      { "item": "bikini_top", "prob": 20 },
-      { "item": "bikini_bottom", "prob": 20 },
-      { "item": "bikini_top_short", "prob": 10 },
-      { "item": "bikini_bottom_short", "prob": 10 },
-      { "item": "flag_swimsuit", "prob": 15 },
+      { "item": "bikini_top", "prob": 30 },
+      { "item": "bikini_bottom", "prob": 30 },
       { "item": "wetsuit_spring", "prob": 5 },
       { "item": "wetsuit_spring_sleeveless", "prob": 5 },
       { "item": "corset", "prob": 20 },
@@ -365,42 +352,8 @@
       { "item": "tights", "prob": 25 },
       { "item": "stockings", "prob": 25 },
       { "item": "garter_belt", "prob": 25 },
-      { "item": "bikini_top_fur", "prob": 5 },
-      { "item": "bikini_top_leather", "prob": 10 },
-      { "item": "bikini_top", "variant": "maid_bikini_top", "prob": 5 },
-      { "item": "bikini_bottom", "variant": "maid_bikini_bottom", "prob": 5 },
-      { "item": "bikini_top", "variant": "skull_bikini_top", "prob": 5 },
-      { "item": "bikini_bottom", "variant": "skull_bikini_bottom", "prob": 5 },
-      { "item": "flag_swimsuit", "variant": "lifeguard_swimsuit", "prob": 10 }
-    ]
-  },
-  {
-    "type": "item_group",
-    "id": "independence_all_clothing",
-    "//": "mainly used for places for general clothing (like a dresser or a clothing store warehouse)",
-    "subtype": "distribution",
-    "entries": [
-      { "item": "flag_jumpsuit", "prob": 25 },
-      { "item": "flag_shirt", "prob": 25 },
-      { "item": "pants", "variant": "pants_flag", "prob": 25 },
-      { "item": "american_flag", "prob": 25 },
-      { "group": "costume_independence_undergarments_women", "prob": 25 },
-      { "item": "rashguard", "variant": "flag_rashguard_shirt", "prob": 15 },
-      { "item": "mask_dust", "variant": "flag_mask_dust", "prob": 15 },
-      { "item": "hat_hard", "variant": "flag_hat_hard", "prob": 10 },
-      { "item": "hat_hard_hooded", "variant": "flag_hat_hard", "prob": 1 }
-    ]
-  },
-  {
-    "type": "item_group",
-    "id": "costume_independence_undergarments_women",
-    "//": "women undergarments for independence day",
-    "subtype": "distribution",
-    "entries": [
-      { "item": "bikini_top", "variant": "flag_bikini_top", "prob": 40 },
-      { "item": "bikini_bottom", "variant": "flag_bikini_bottom", "prob": 40 },
-      { "item": "bodysuit_lycra", "variant": "flag_suit", "prob": 10 },
-      { "item": "flag_swimsuit", "variant": "flag_swimsuit", "prob": 10 }
+      { "item": "bikini_top_fur", "prob": 1 },
+      { "item": "bikini_top_leather", "prob": 2 }
     ]
   },
   {
@@ -410,8 +363,9 @@
     "subtype": "distribution",
     "entries": [
       { "group": "costume_cheerleader_set", "prob": 50 },
-      { "group": "costume_cheerleader_short_set", "prob": 25 },
-      { "item": "cheerleader_dress", "prob": 25 }
+      { "item": "cheerleader_dress", "prob": 25 },
+      { "item": "jacket_varsity", "prob": 25 },
+      { "item": "jersey", "prob": 25 }
     ]
   },
   {
@@ -419,14 +373,7 @@
     "id": "costume_cheerleader_set",
     "//": "clothing set for a normal cheerleader outfit",
     "subtype": "collection",
-    "entries": [ { "item": "tank_top", "variant": "tank_top_cheerleader", "prob": 100 }, { "item": "cheerleader_skirt", "prob": 100 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "costume_cheerleader_short_set",
-    "//": "clothing set for a sexy cheerleader costume",
-    "subtype": "collection",
-    "entries": [ { "item": "cheerleader_top_short", "prob": 100 }, { "item": "cheerleader_skirt_short", "prob": 100 } ]
+    "entries": [ { "item": "pom_poms", "prob": 60 }, { "item": "skirt", "prob": 100 }, { "item": "tank_top", "prob": 100 } ]
   },
   {
     "id": "costume_weapons",
@@ -468,6 +415,28 @@
       [ "wakizashi_fake", 4 ],
       [ "wakizashi_inferior", 8 ],
       [ "kris_fake", 8 ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "independence_all_clothing",
+    "//": "mainly used for places for general clothing (like a dresser or a clothing store warehouse)",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "flag_jumpsuit", "prob": 25 },
+      { "item": "american_flag", "prob": 25 },
+      { "group": "costume_independence_undergarments_women", "prob": 25 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "costume_independence_undergarments_women",
+    "//": "women undergarments for independence day",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "bikini_top", "prob": 40 },
+      { "item": "bikini_bottom", "prob": 40 },
+      { "item": "bodysuit_lycra", "variant": "flag_suit", "prob": 10 }
     ]
   }
 ]

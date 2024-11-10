@@ -71,7 +71,7 @@
       { "item": "boots_hiking" },
       { "item": "socks" },
       { "item": "boxer_shorts" },
-      { "item": "jeans_ripped" },
+      { "item": "jeans" },
       { "item": "jersey", "damage": [ 0, 2 ] },
       { "item": "coat_rain", "damage": [ 0, 2 ], "prob": 30 },
       { "item": "gloves_light", "prob": 50 },

@@ -97,12 +97,6 @@
   },
   {
     "type": "ammunition_type",
-    "id": "strange_arrow",
-    "name": "strange arrows",
-    "default": "arrow_meteor"
-  },
-  {
-    "type": "ammunition_type",
     "id": "atlatl",
     "name": "atlatl spears",
     "default": "steel_atlatl_spear"
@@ -610,6 +604,12 @@
     "id": "components",
     "name": "components",
     "default": "components"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "RPG-7",
+    "name": "RPG-7 rocket",
+    "default": "RPG-7_ammo"
   },
   {
     "type": "ammunition_type",

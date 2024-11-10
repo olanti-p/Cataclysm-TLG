@@ -361,11 +361,10 @@
   {
     "id": "mon_void_spider_spiderling_skewered",
     "type": "MONSTER",
-    "name": { "str": "skewered juvenile" },
+    "name": { "str": "bullet-riddled juvenile" },
     "copy-from": "mon_void_spider_spiderling",
     "color": "light_green",
-    "description": "Layers of flailing limbs struggle against an impaled emerald lance.",
-    "death_drops": "void_spider_spiderling_skewered_drops"
+    "description": "This creature struggles to move, its alien body torn apart by gunfire."
   },
   {
     "id": "mon_darkman",

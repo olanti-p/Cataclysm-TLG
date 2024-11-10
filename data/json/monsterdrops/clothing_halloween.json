@@ -156,7 +156,7 @@
               { "item": "dress_shoes", "prob": 30, "damage": [ 1, 4 ] },
               { "item": "heels", "prob": 25, "damage": [ 1, 4 ] },
               { "item": "thigh_high_boots", "prob": 25, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 20, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 20, "damage": [ 1, 4 ] }
             ]
           },
           { "group": "female_underwear", "damage": [ 1, 4 ] },
@@ -253,10 +253,7 @@
             "distribution": [
               { "group": "female_underwear", "prob": 75, "damage": [ 1, 4 ] },
               {
-                "collection": [
-                  { "item": "bikini_top", "variant": "maid_bikini_top", "damage": [ 1, 4 ] },
-                  { "item": "bikini_bottom", "variant": "maid_bikini_bottom", "damage": [ 1, 4 ] }
-                ],
+                "collection": [ { "item": "bikini_top", "damage": [ 1, 4 ] }, { "item": "bikini_bottom", "damage": [ 1, 4 ] } ],
                 "prob": 25
               }
             ]
@@ -464,7 +461,7 @@
           { "item": "vampire_fangs", "damage": [ 1, 4 ] },
           { "item": "cloak_vampire", "damage": [ 1, 4 ] },
           { "item": "dress_shirt", "prob": 85, "damage": [ 1, 4 ] },
-          { "item": "pants", "variant": "pants_black", "damage": [ 1, 4 ] },
+          { "item": "pants", "damage": [ 1, 4 ] },
           {
             "distribution": [
               { "group": "costume_jewelry_vampire", "prob": 80, "damage": [ 1, 4 ] },
@@ -531,7 +528,7 @@
                       { "item": "dress_shoes", "prob": 20, "damage": [ 1, 4 ] },
                       { "item": "heels", "prob": 20, "damage": [ 1, 4 ] },
                       { "item": "thigh_high_boots", "prob": 35, "damage": [ 1, 4 ] },
-                      { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 25, "damage": [ 1, 4 ] }
+                      { "item": "knee_high_boots", "prob": 25, "damage": [ 1, 4 ] }
                     ]
                   },
                   {
@@ -584,7 +581,7 @@
                       { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
                       { "item": "boots", "prob": 40, "damage": [ 1, 4 ] },
                       { "item": "thigh_high_boots", "prob": 10, "damage": [ 1, 4 ] },
-                      { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+                      { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
                     ]
                   },
                   { "group": "socks_unisex", "damage": [ 1, 4 ] }
@@ -663,7 +660,7 @@
               { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 40, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 10, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
@@ -788,7 +785,7 @@
               { "item": "dress_shoes", "prob": 30, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 30, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 30, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
@@ -890,7 +887,7 @@
               { "item": "dress_shoes", "prob": 20, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 10, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 60, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
@@ -946,7 +943,7 @@
               { "item": "dress_shoes", "prob": 20, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 10, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 60, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
@@ -997,7 +994,7 @@
               { "item": "dress_shoes", "prob": 30, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 30, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 30, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
@@ -1077,8 +1074,8 @@
           { "item": "pants_army", "damage": [ 1, 4 ] },
           { "item": "leather_belt", "damage": [ 1, 4 ] },
           { "item": "beret", "prob": 70, "damage": [ 1, 4 ] },
-          { "item": "mask_dust", "variant": "camo_mask_dust", "prob": 25, "damage": [ 1, 4 ] },
-          { "item": "leg_bag", "variant": "camo_leg_bag", "prob": 15, "damage": [ 1, 4 ] },
+          { "item": "mask_dust", "prob": 25, "damage": [ 1, 4 ] },
+          { "item": "leg_bag", "prob": 15, "damage": [ 1, 4 ] },
           { "item": "sheath", "prob": 20, "damage": [ 1, 4 ] },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
           {
@@ -1092,16 +1089,16 @@
             "distribution": [
               {
                 "collection": [
-                  { "item": "tank_top", "variant": "tank_top_camo", "prob": 75, "damage": [ 1, 4 ] },
+                  { "item": "tank_top", "prob": 75, "damage": [ 1, 4 ] },
                   { "group": "male_underwear_bottom", "damage": [ 1, 4 ] },
                   { "group": "accesories_personal_mens", "prob": 10, "damage": [ 1, 4 ] }
                 ]
               },
               {
                 "collection": [
-                  { "item": "tank_top", "variant": "tank_top_camo", "prob": 75, "damage": [ 1, 4 ] },
-                  { "item": "bikini_top", "variant": "camo_bikini_top", "damage": [ 1, 4 ] },
-                  { "item": "bikini_bottom", "variant": "camo_bikini_bottom", "damage": [ 1, 4 ] },
+                  { "item": "tank_top", "prob": 75, "damage": [ 1, 4 ] },
+                  { "item": "bikini_top", "damage": [ 1, 4 ] },
+                  { "item": "bikini_bottom", "damage": [ 1, 4 ] },
                   { "group": "accesories_personal_womens", "prob": 15, "damage": [ 1, 4 ] }
                 ]
               }
@@ -1193,7 +1190,7 @@
               { "item": "dress_shoes", "prob": 20, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 50, "damage": [ 1, 4 ] },
               { "item": "thigh_high_boots", "prob": 15, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] },
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 5, "damage": [ 1, 4 ] }
             ]
           },
@@ -1261,7 +1258,7 @@
               { "item": "boots_western", "prob": 50, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 30, "damage": [ 1, 4 ] },
               { "item": "thigh_high_boots", "prob": 10, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 10, "damage": [ 1, 4 ] }
+              { "item": "knee_high_boots", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
           {
@@ -1315,7 +1312,7 @@
                       { "item": "dress_shoes", "prob": 40, "damage": [ 1, 4 ] },
                       { "item": "boots", "prob": 20, "damage": [ 1, 4 ] },
                       { "item": "thigh_high_boots", "prob": 15, "damage": [ 1, 4 ] },
-                      { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 15, "damage": [ 1, 4 ] },
+                      { "item": "knee_high_boots", "prob": 15, "damage": [ 1, 4 ] },
                       { "item": "sneakers", "prob": 10, "damage": [ 1, 4 ] }
                     ]
                   },
@@ -1374,9 +1371,7 @@
           {
             "distribution": [
               { "item": "jeans", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "pants", "variant": "pants_black", "prob": 20, "damage": [ 1, 4 ] },
-              { "item": "pants", "variant": "pants_brown", "prob": 15, "damage": [ 1, 4 ] },
-              { "item": "pants", "variant": "pants_coffee", "prob": 15, "damage": [ 1, 4 ] },
+              { "item": "pants", "prob": 20, "damage": [ 1, 4 ] },
               { "item": "pants_leather", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
@@ -1387,7 +1382,7 @@
             "distribution": [
               { "item": "boots", "prob": 25, "damage": [ 1, 4 ] },
               { "item": "thigh_high_boots", "prob": 40, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 25, "damage": [ 1, 4 ] },
+              { "item": "knee_high_boots", "prob": 25, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 10, "damage": [ 1, 4 ] }
             ]
           },
@@ -1440,7 +1435,7 @@
               { "item": "boots_rubber", "prob": 35, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 15, "damage": [ 1, 4 ] },
               { "item": "thigh_high_boots", "prob": 20, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 15, "damage": [ 1, 4 ] },
+              { "item": "knee_high_boots", "prob": 15, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 15, "damage": [ 1, 4 ] }
             ]
           },
@@ -1493,7 +1488,7 @@
               { "item": "boots_rubber", "prob": 25, "damage": [ 1, 4 ] },
               { "item": "boots", "prob": 15, "damage": [ 1, 4 ] },
               { "item": "thigh_high_boots", "prob": 25, "damage": [ 1, 4 ] },
-              { "item": "knee_high_boots", "variant": "chelsea_boots", "prob": 15, "damage": [ 1, 4 ] },
+              { "item": "knee_high_boots", "prob": 15, "damage": [ 1, 4 ] },
               { "item": "sneakers", "prob": 20, "damage": [ 1, 4 ] }
             ]
           },

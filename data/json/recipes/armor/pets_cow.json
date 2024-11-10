@@ -39,16 +39,16 @@
     "result": "chainmail_armor_cow",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
-    "copy-from": "lc_chainmail_vest",
+    "copy-from": "chainmail_vest",
     "category": "CC_ANIMALS",
     "subcategory": "CSC_ANIMALS_BOVINE ARMOR",
     "time": "7 h 45 m",
     "reversible": true,
     "using": [ [ "chainmail_standard", 7 ], [ "clasps", 5 ] ],
     "components": [
-      [ [ "lc_link_sheet", 42 ] ],
-      [ [ "lc_chain_link", 1100 ] ],
-      [ [ "lc_wire", 8 ] ],
+      [ [ "link_sheet", 42 ] ],
+      [ [ "chain_link", 1100 ] ],
+      [ [ "wire", 8 ] ],
       [ [ "fur", 50 ], [ "tanned_pelt", 8 ], [ "leather", 50 ], [ "tanned_hide", 8 ] ]
     ],
     "proficiencies": [

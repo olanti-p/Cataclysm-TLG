@@ -4,102 +4,6 @@
     "type": "ARMOR",
     "name": { "str": "bikini bottoms", "str_pl": "pairs of bikini bottoms" },
     "description": "Simple bikini bottoms.",
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "generic_bikini_bottom",
-        "name": { "str": "bikini bottoms", "str_pl": "pairs of bikini bottoms" },
-        "description": "Simple bikini bottoms.",
-        "weight": 30
-      },
-      {
-        "id": "black_bikini_bottom",
-        "name": { "str": "black bikini bottoms", "str_pl": "pairs of black bikini bottoms" },
-        "description": "They're colored black.",
-        "color": "dark_gray",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "white_bikini_bottom",
-        "name": { "str": "white bikini bottoms", "str_pl": "pairs of white bikini bottoms" },
-        "description": "They're colored white.",
-        "color": "white",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "red_bikini_bottom",
-        "name": { "str": "red bikini bottoms", "str_pl": "pairs of red bikini bottoms" },
-        "description": "They're colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "blue_bikini_bottom",
-        "name": { "str": "blue bikini bottoms", "str_pl": "pairs of blue bikini bottoms" },
-        "description": "They're colored blue.",
-        "color": "blue",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "flag_bikini_bottom",
-        "name": { "str": "flag bikini bottoms", "str_pl": "pairs of flag bikini bottoms" },
-        "description": "They're printed with an American flag pattern.",
-        "weight": 7,
-        "append": true
-      },
-      {
-        "id": "pink_bikini_bottom",
-        "name": { "str": "pink bikini bottoms", "str_pl": "pairs of pink bikini bottoms" },
-        "description": "They're colored neon pink.  Pretty flashy.",
-        "color": "pink",
-        "weight": 6,
-        "append": true
-      },
-      {
-        "id": "tropical_bikini_bottom",
-        "name": { "str": "tropical bikini bottoms", "str_pl": "pairs of tropical bikini bottoms" },
-        "description": "They're green and has a tropical design.",
-        "color": "light_green",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "floral_bikini_bottom",
-        "name": { "str": "floral bikini bottoms", "str_pl": "pairs of floral bikini bottoms" },
-        "description": "They're colored yellow and has a floral design.",
-        "color": "yellow",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "camo_bikini_bottom",
-        "name": { "str": "camo bikini bottoms", "str_pl": "pairs of camo bikini bottoms" },
-        "description": "They're has a camouflage pattern, perfect for a soldier on beach leave.",
-        "color": "green",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "skull_bikini_bottom",
-        "name": { "str": "skull bikini bottoms", "str_pl": "pairs of skull bikini bottoms" },
-        "description": "They're colored black and printed with a skull pattern.  Works wonders to communicate your happiness on the beach.",
-        "symbol": "S",
-        "color": "dark_gray",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "maid_bikini_bottom",
-        "name": { "str": "maid bikini bottoms", "str_pl": "pairs of maid bikini bottoms" },
-        "description": "They're colored black with white frilly decorations.  You are not sure that this is common attire for the beach.",
-        "color": "dark_gray",
-        "append": true
-      }
-    ],
     "weight": "32 g",
     "volume": "250 ml",
     "price": 1000,
@@ -113,118 +17,10 @@
     "armor": [ { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
   },
   {
-    "id": "bikini_bottom_short",
-    "type": "ARMOR",
-    "name": { "str": "short bikini bottoms", "str_pl": "pairs of short bikini bottoms" },
-    "description": "A very short pair of bikini bottoms, commonly called a thong.",
-    "weight": "15 g",
-    "volume": "150 ml",
-    "price": 1000,
-    "price_postapoc": 10,
-    "material": [ "lycra" ],
-    "symbol": "[",
-    "looks_like": "bikini_bottom",
-    "color": "red",
-    "material_thickness": 0.01,
-    "flags": [ "VARSIZE", "SKINTIGHT", "WATER_FRIENDLY" ],
-    "armor": [ { "coverage": 25, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
-  },
-  {
     "id": "bikini_top",
     "type": "ARMOR",
     "name": { "str": "bikini top" },
     "description": "A simple bikini top.",
-    "variant_type": "generic",
-    "variants": [
-      { "id": "generic_bikini_top", "name": { "str": "bikini top" }, "description": "A simple bikini top.", "weight": 30 },
-      {
-        "id": "black_bikini_top",
-        "name": { "str": "black bikini top" },
-        "description": "It's colored black.",
-        "color": "dark_gray",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "white_bikini_top",
-        "name": { "str": "white bikini top" },
-        "description": "It's colored white.",
-        "color": "white",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "red_bikini_top",
-        "name": { "str": "red bikini top" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "blue_bikini_top",
-        "name": { "str": "blue bikini top" },
-        "description": "It's colored blue.",
-        "color": "blue",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "flag_bikini_top",
-        "name": { "str": "flag bikini top" },
-        "description": "It's printed with an American flag pattern.",
-        "weight": 7,
-        "append": true
-      },
-      {
-        "id": "pink_bikini_top",
-        "name": { "str": "pink bikini top" },
-        "description": "It's colored neon pink.  Pretty flashy.",
-        "color": "pink",
-        "weight": 6,
-        "append": true
-      },
-      {
-        "id": "tropical_bikini_top",
-        "name": { "str": "tropical bikini top" },
-        "description": "It's green and has a tropical design.",
-        "color": "light_green",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "floral_bikini_top",
-        "name": { "str": "floral bikini top" },
-        "description": "It's colored yellow and has a floral design.",
-        "color": "yellow",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "camo_bikini_top",
-        "name": { "str": "camo bikini top" },
-        "description": "It has a camouflage pattern, perfect for a soldier on beach leave.",
-        "color": "green",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "skull_bikini_top",
-        "name": { "str": "skull bikini top" },
-        "description": "It's colored black and printed with a skull pattern.  Works wonders to communicate your happiness on the beach.",
-        "symbol": "S",
-        "color": "dark_gray",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "maid_bikini_top",
-        "name": { "str": "maid bikini top" },
-        "description": "It's colored black with white frilly decorations.  You are not sure that this is common attire for the beach.",
-        "color": "dark_gray",
-        "append": true
-      }
-    ],
     "weight": "32 g",
     "volume": "250 ml",
     "price": 1800,
@@ -236,136 +32,6 @@
     "material_thickness": 0.1,
     "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT" ],
     "armor": [ { "coverage": 25, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ] } ]
-  },
-  {
-    "id": "bikini_top_short",
-    "type": "ARMOR",
-    "name": { "str": "short bikini top" },
-    "description": "A very short bikini top.  It doesn't cover much, but was in fashion before the world ended.",
-    "weight": "15 g",
-    "volume": "150 ml",
-    "price": 1800,
-    "price_postapoc": 10,
-    "material": [ "lycra" ],
-    "symbol": "[",
-    "looks_like": "bikini_top",
-    "color": "red",
-    "material_thickness": 0.01,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT" ],
-    "armor": [ { "coverage": 15, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ] } ]
-  },
-  {
-    "id": "flag_swimsuit",
-    "//": "the flag_swimsuit was first, so that's why this ID is used for all swimsuits",
-    "type": "ARMOR",
-    "name": { "str": "swimsuit" },
-    "description": "A simple swimsuit.",
-    "weight": "136 g",
-    "volume": "750 ml",
-    "price": 1150,
-    "price_postapoc": 60,
-    "material": [ { "type": "nylon", "portion": 8 }, { "type": "lycra", "portion": 2 } ],
-    "symbol": "[",
-    "looks_like": "wetsuit_spring",
-    "color": "light_red",
-    "armor": [
-      { "covers": [ "torso" ], "coverage": 60 },
-      { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] }
-    ],
-    "material_thickness": 0.1,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT" ],
-    "variant_type": "generic",
-    "variants": [
-      { "id": "generic_swimsuit", "name": { "str": "swimsuit" }, "description": "A simple swimsuit.", "weight": 30 },
-      {
-        "id": "black_swimsuit",
-        "name": { "str": "black swimsuit" },
-        "description": "It's colored black.",
-        "color": "dark_gray",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "white_swimsuit",
-        "name": { "str": "white swimsuit" },
-        "description": "It's colored white.",
-        "color": "white",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "red_swimsuit",
-        "name": { "str": "red swimsuit" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "blue_swimsuit",
-        "name": { "str": "blue swimsuit" },
-        "description": "It's colored blue.",
-        "color": "blue",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "flag_swimsuit",
-        "name": { "str": "flag swimsuit" },
-        "description": "It's printed with an American flag pattern.",
-        "weight": 7,
-        "append": true
-      },
-      {
-        "id": "pink_swimsuit",
-        "name": { "str": "pink swimsuit" },
-        "description": "It's colored neon pink.  Pretty flashy.",
-        "color": "pink",
-        "weight": 6,
-        "append": true
-      },
-      {
-        "id": "tropical_swimsuit",
-        "name": { "str": "tropical swimsuit" },
-        "description": "It's green and has a tropical design.",
-        "color": "light_green",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "floral_swimsuit",
-        "name": { "str": "floral swimsuit" },
-        "description": "It's colored yellow and has a floral design.",
-        "color": "yellow",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "striped_swimsuit",
-        "name": { "str": "striped swimsuit" },
-        "description": "It has horizontal black and white stripes.",
-        "color": "light_gray",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "camo_swimsuit",
-        "name": { "str": "camo swimsuit" },
-        "description": "It has a camouflage pattern, perfect for a soldier on beach leave.",
-        "color": "green",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "lifeguard_swimsuit",
-        "name": { "str": "lifeguard swimsuit" },
-        "description": "It's bright red and has a white cross with the word \"Lifeguard\" on the front.",
-        "symbol": "+",
-        "color": "red",
-        "weight": 4,
-        "append": true
-      }
-    ]
   },
   {
     "id": "rashguard",
@@ -386,115 +52,9 @@
       { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 6 }
     ],
     "warmth": 10,
-    "material_thickness": 1,
+    "material_thickness": 0.1,
     "environmental_protection": 1,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY" ],
-    "variant_type": "generic",
-    "variants": [
-      {
-        "id": "black_rashguard_shirt",
-        "name": { "str": "black rashguard shirt" },
-        "description": "It's colored black.",
-        "color": "dark_gray",
-        "weight": 20,
-        "append": true
-      },
-      {
-        "id": "white_rashguard_shirt",
-        "name": { "str": "white rashguard shirt" },
-        "description": "It's colored white.",
-        "color": "white",
-        "weight": 20,
-        "append": true
-      },
-      {
-        "id": "red_rashguard_shirt",
-        "name": { "str": "red rashguard shirt" },
-        "description": "It's colored red.",
-        "color": "red",
-        "weight": 20,
-        "append": true
-      },
-      {
-        "id": "blue_rashguard_shirt",
-        "name": { "str": "blue rashguard shirt" },
-        "description": "It's colored blue.",
-        "color": "blue",
-        "weight": 20,
-        "append": true
-      },
-      {
-        "id": "flag_rashguard_shirt",
-        "name": { "str": "flag rashguard shirt" },
-        "description": "It's printed with an American flag pattern.  You feel as if the flag itself protects your skin.",
-        "weight": 10,
-        "append": true
-      },
-      {
-        "id": "pink_rashguard_shirt",
-        "name": { "str": "pink rashguard shirt" },
-        "description": "It's colored neon pink.  Pretty flashy.",
-        "color": "pink",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "tropical_rashguard_shirt",
-        "name": { "str": "tropical rashguard shirt" },
-        "description": "It's green and has a tropical design.",
-        "color": "light_green",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "floral_rashguard_shirt",
-        "name": { "str": "floral rashguard shirt" },
-        "description": "It's colored yellow and has a floral design.",
-        "color": "yellow",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "jungle_rashguard_shirt",
-        "name": { "str": "jungle rashguard shirt" },
-        "description": "It has jungle decorations and motifs of animals fighting amongst themselves.",
-        "color": "light_green",
-        "weight": 5,
-        "append": true
-      },
-      {
-        "id": "camo_rashguard_shirt",
-        "name": { "str": "camo rashguard shirt" },
-        "description": "It has a camouflage pattern and outlines your muscles.",
-        "color": "green",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "lifeguard_rashguard_shirt",
-        "name": { "str": "lifeguard rashguard shirt" },
-        "description": "It's bright red and has a white cross with the word \"Lifeguard\" on the front.",
-        "symbol": "+",
-        "color": "red",
-        "weight": 4,
-        "append": true
-      },
-      {
-        "id": "skull_rashguard_shirt",
-        "name": { "str": "skull rashguard shirt" },
-        "description": "It's colored black and has a big skull on the front and back.  It makes you look tough.",
-        "symbol": "S",
-        "color": "dark_gray",
-        "weight": 2,
-        "append": true
-      },
-      {
-        "id": "gothic_rashguard_shirt",
-        "name": { "str": "gothic rashguard shirt" },
-        "description": "It has a jet-black color with dark red decorations.  Looks creepy.",
-        "append": true
-      }
-    ]
+    "flags": [ "VARSIZE", "WATER_FRIENDLY" ]
   },
   {
     "id": "speedo",
@@ -517,7 +77,7 @@
     "id": "swim_briefs",
     "type": "ARMOR",
     "name": { "str": "swim briefs", "str_pl": "pairs of swim briefs" },
-    "description": "A pair of blue swim briefs.  Commonly used by male competitive swimmers.",
+    "description": "A pair of blue swim briefs, also known as jammers.  Commonly used by male competitive swimmers.",
     "weight": "75 g",
     "volume": "250 ml",
     "price": 6000,
@@ -528,7 +88,7 @@
     "color": "blue",
     "armor": [ { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ],
     "warmth": 5,
-    "material_thickness": 0.2,
+    "material_thickness": 0.1,
     "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT" ]
   },
   {
@@ -609,7 +169,7 @@
         ],
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 3.0 }
+          { "type": "neoprene", "covered_by_mat": 90, "thickness": 2.8 }
         ],
         "encumbrance": 10,
         "coverage": 100
@@ -619,7 +179,7 @@
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 3.0 },
+          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.8 },
           { "type": "rubber", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "coverage": 100
@@ -669,7 +229,7 @@
         ],
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.4 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 5.0 }
+          { "type": "neoprene", "covered_by_mat": 90, "thickness": 4.6 }
         ],
         "encumbrance": 20,
         "coverage": 100
@@ -679,7 +239,7 @@
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.4 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 5.0 },
+          { "type": "neoprene", "covered_by_mat": 100, "thickness": 4.6 },
           { "type": "rubber", "covered_by_mat": 100, "thickness": 4.0 }
         ],
         "coverage": 100
@@ -736,7 +296,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 2.5 } ],
-        "encumbrance": 25,
+        "encumbrance": 60,
         "coverage": 100
       },
       {
@@ -776,7 +336,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 3.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 2.8 }
         ],
         "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
         "coverage": 100,
@@ -842,7 +402,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.4 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 5.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 4.6 }
         ],
         "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
         "coverage": 100,
@@ -910,7 +470,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 3.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 2.8 }
         ],
         "encumbrance_modifiers": [ "NONE" ],
         "coverage": 100,
@@ -948,7 +508,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.4 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 5.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 4.6 }
         ],
         "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
         "coverage": 100,
@@ -990,7 +550,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 1.8 }
         ],
         "encumbrance": 8,
         "coverage": 100,
@@ -999,7 +559,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 1.8 }
         ],
         "encumbrance": 8,
         "coverage": 100,
@@ -1043,7 +603,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "encumbrance": 5,
         "coverage": 95,
@@ -1052,7 +612,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
@@ -1062,7 +622,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "coverage": 95,
         "covers": [ "arm_l", "arm_r" ],
@@ -1090,54 +650,6 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "wetsuit_top_sleeved_thin",
-    "type": "ARMOR",
-    "name": { "str": "thin wetsuit long-sleeved shirt" },
-    "copy-from": "wetsuit_top_sleeved",
-    "description": "A thin long-sleeved neoprene shirt.  Good for surfing and other water sports.",
-    "weight": "350 g",
-    "volume": "2 L",
-    "armor": [
-      {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
-        ],
-        "encumbrance": 5,
-        "coverage": 100,
-        "covers": [ "torso" ]
-      },
-      {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
-        ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 100,
-        "encumbrance": 5
-      }
-    ],
-    "warmth": 15,
-    "environmental_protection": 6,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "WATERPROOF", "SKINTIGHT" ]
-  },
-  {
-    "id": "xl_wetsuit_top_sleeved_thin",
-    "type": "ARMOR",
-    "copy-from": "wetsuit_top_sleeved_thin",
-    "name": { "str": "XL thin wetsuit long-sleeved shirt" },
-    "proportional": { "weight": 1.25, "volume": 1.25, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_wetsuit_top_sleeved_thin",
-    "type": "ARMOR",
-    "copy-from": "wetsuit_top_sleeved_thin",
-    "name": { "str": "XS thin wetsuit long-sleeved shirt" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.75 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
     "id": "wetsuit_top_sleeved",
     "type": "ARMOR",
     "name": { "str": "wetsuit long-sleeved shirt" },
@@ -1155,7 +667,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 1.8 }
         ],
         "encumbrance": 7,
         "coverage": 100,
@@ -1164,7 +676,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.8 }
         ],
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
@@ -1192,45 +704,6 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "wetsuit_pants_thin",
-    "type": "ARMOR",
-    "name": { "str_sp": "thin wetsuit pants" },
-    "copy-from": "wetsuit_pants",
-    "description": "A pair of light and stretchy thin neoprene pants.  Good for surfing and other water sports.",
-    "weight": "325 g",
-    "volume": "2 L",
-    "armor": [
-      {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
-        ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
-        "encumbrance": 5
-      }
-    ],
-    "warmth": 15,
-    "environmental_protection": 6,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "WATERPROOF", "SKINTIGHT" ]
-  },
-  {
-    "id": "xl_wetsuit_pants_thin",
-    "type": "ARMOR",
-    "copy-from": "wetsuit_pants_thin",
-    "name": { "str_sp": "XL thin wetsuit pants" },
-    "proportional": { "weight": 1.25, "volume": 1.25, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_wetsuit_pants_thin",
-    "type": "ARMOR",
-    "copy-from": "wetsuit_pants_thin",
-    "name": { "str_sp": "XS thin wetsuit pants" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.75 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
     "id": "wetsuit_pants",
     "type": "ARMOR",
     "name": { "str_sp": "wetsuit pants" },
@@ -1248,7 +721,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 1.8 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 100,
@@ -1292,7 +765,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 100,
@@ -1302,7 +775,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 50,
@@ -1348,7 +821,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.8 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 100,
@@ -1359,8 +832,8 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 },
-          { "type": "nylon_2", "covered_by_mat": 20, "thickness": 1.5 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.8 },
+          { "type": "nylon_2", "covered_by_mat": 10, "thickness": 1.5 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 50,
@@ -1528,7 +1001,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "torso" ],
         "coverage": 95,
@@ -1538,7 +1011,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
@@ -1547,7 +1020,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 75,
@@ -1613,7 +1086,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "torso" ],
         "coverage": 90,
@@ -1622,7 +1095,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.9 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 75,
@@ -1799,7 +1272,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 3.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 2.8 }
         ],
         "covers": [ "hand_l", "hand_r" ],
         "coverage": 100,
@@ -1837,7 +1310,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.4 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 5.0 }
+          { "type": "neoprene", "covered_by_mat": 80, "thickness": 4.6 }
         ],
         "covers": [ "hand_l", "hand_r" ],
         "coverage": 100,

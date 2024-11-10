@@ -50,11 +50,11 @@
     ]
   },
   {
-    "id": "lc_chainmail_hood",
+    "id": "chainmail_hood",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "mild steel chainmail coif" },
-    "description": "A customized chainmail hood.  Can be worn comfortably under helmets.",
+    "name": { "str": "chainmail coif" },
+    "description": "A chainmail hood.  Can be worn comfortably under helmets.",
     "weight": "1315 g",
     "volume": "500 ml",
     "price": 5012,
@@ -69,7 +69,7 @@
     "flags": [ "VARSIZE", "STURDY", "OUTER" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "coverage": 100,
         "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
@@ -77,110 +77,18 @@
     ]
   },
   {
-    "id": "xl_lc_chainmail_hood",
+    "id": "xl_chainmail_hood",
     "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
-    "name": { "str": "XL mild steel chainmail coif" },
+    "copy-from": "chainmail_hood",
+    "name": { "str": "XL chainmail coif" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_lc_chainmail_hood",
+    "id": "xs_chainmail_hood",
     "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
-    "name": { "str": "XS mild steel chainmail coif" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "mc_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
-    "name": { "str": "medium steel chainmail coif" },
-    "replace_materials": { "lc_steel_chain": "mc_steel_chain" }
-  },
-  {
-    "id": "xl_mc_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "mc_chainmail_hood",
-    "name": { "str": "XL medium steel chainmail coif" },
-    "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_mc_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "mc_chainmail_hood",
-    "name": { "str": "XS medium steel chainmail coif" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "hc_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
-    "name": { "str": "high steel chainmail coif" },
-    "replace_materials": { "lc_steel_chain": "hc_steel_chain" }
-  },
-  {
-    "id": "xl_hc_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "hc_chainmail_hood",
-    "name": { "str": "XL high steel chainmail coif" },
-    "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_hc_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "hc_chainmail_hood",
-    "name": { "str": "XS high steel chainmail coif" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "ch_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
-    "name": { "str": "hardened steel chainmail coif" },
-    "replace_materials": { "lc_steel_chain": "ch_steel_chain" }
-  },
-  {
-    "id": "xl_ch_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "ch_chainmail_hood",
-    "name": { "str": "XL hardened steel chainmail coif" },
-    "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_ch_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "ch_chainmail_hood",
-    "name": { "str": "XS hardened steel chainmail coif" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "qt_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hood",
-    "name": { "str": "tempered steel chainmail coif" },
-    "replace_materials": { "lc_steel_chain": "qt_steel_chain" }
-  },
-  {
-    "id": "xl_qt_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "qt_chainmail_hood",
-    "name": { "str": "XL tempered steel chainmail coif" },
-    "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_qt_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "qt_chainmail_hood",
-    "name": { "str": "XS tempered steel chainmail coif" },
+    "copy-from": "chainmail_hood",
+    "name": { "str": "XS chainmail coif" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -245,8 +153,8 @@
   {
     "id": "hood_ninja",
     "type": "ARMOR",
-    "name": { "str": "ninja hood" },
-    "description": "A black hood commonly used by ninja.",
+    "name": { "str": "ninja cowl" },
+    "description": "A cloth hood that covers the mouth, leaving only the wearer's eyes exposed.",
     "weight": "80 g",
     "volume": "1000 ml",
     "price": 3500,
