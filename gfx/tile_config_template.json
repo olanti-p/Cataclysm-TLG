@@ -782,7 +782,7 @@
     { "id": "hat_knit", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
     { "id": "hat_hunting", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
     { "id": "hat_fur", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
-    { "id": "balclava", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
+    { "id": "balaclava", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
     { "id": "hat_hard", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
     { "id": "pickelhaube", "fg": -1, "bg": -1, "rotates": false, "multitile": false },
     { "id": "beret", "fg": -1, "bg": -1, "rotates": false, "multitile": false },

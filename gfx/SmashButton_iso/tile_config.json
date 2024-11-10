@@ -936,7 +936,7 @@
           ],
           "fg": 263
         },
-        { "id": [ "overlay_worn_balclava", "overlay_worn_mask_ski", "overlay_worn_mask_ski_loose" ], "fg": 303 },
+        { "id": [ "overlay_worn_balaclava", "overlay_worn_mask_ski", "overlay_worn_mask_ski_loose" ], "fg": 303 },
         {
           "id": [ "overlay_worn_bandana", "overlay_worn_keffiyeh", "overlay_worn_mask_dust", "overlay_worn_cowl_wool" ],
           "fg": 265
@@ -2387,7 +2387,7 @@
         },
         { "id": "bag_plastic", "fg": 1434 },
         { "id": "bagpipes", "fg": 982 },
-        { "id": [ "balclava", "mask_ski", "mask_ski_loose" ], "fg": 924 },
+        { "id": [ "balaclava", "mask_ski", "mask_ski_loose" ], "fg": 924 },
         { "id": [ "banana", "irradiated_banana" ], "fg": 1305 },
         { "id": [ "bandana", "keffiyeh", "mask_dust", "cowl_wool" ], "fg": 886 },
         { "id": "barometer", "fg": 1433 },

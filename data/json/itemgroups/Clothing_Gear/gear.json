@@ -16,7 +16,7 @@
       { "item": "goggles_nv", "prob": 10, "charges": [ 0, 100 ] },
       [ "helmet_riot", 5 ],
       [ "holo_sight", 20 ],
-      [ "balclava", 10 ],
+      [ "balaclava", 10 ],
       [ "balaclava_cut_resistant", 5 ],
       [ "nylon_holster", 10 ],
       [ "holster", 5 ],
@@ -293,15 +293,7 @@
         "prob": 10
       },
       {
-        "collection": [ { "item": "ballistic_vest_light_pouches" }, { "group": "civilian_ballistic_inserts", "prob": 50 } ],
-        "prob": 10
-      },
-      {
-        "collection": [ { "item": "ballistic_vest_light_operator" }, { "group": "civilian_ballistic_inserts", "prob": 50 } ],
-        "prob": 10
-      },
-      {
-        "collection": [ { "item": "level_3_vest", "variant": "fema_armor_vest" }, { "group": "civilian_ballistic_inserts", "prob": 75 } ],
+        "collection": [ { "item": "level_3_vest" }, { "group": "civilian_ballistic_inserts", "prob": 75 } ],
         "prob": 5
       }
     ]

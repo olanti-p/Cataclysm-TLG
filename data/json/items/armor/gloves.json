@@ -65,10 +65,10 @@
     ]
   },
   {
-    "id": "lc_chainmail_hands",
+    "id": "chainmail_hands",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of mild steel chainmail gloves", "str_pl": "pairs of mild steel chainmail gloves" },
+    "name": { "str": "pair of chainmail gloves", "str_pl": "pairs of chainmail gloves" },
     "description": "A pair of customized steel chainmail gloves that fully enclose the hands.",
     "weight": "957 g",
     "volume": "500 ml",
@@ -90,111 +90,18 @@
     ]
   },
   {
-    "id": "xl_lc_chainmail_hands",
+    "id": "xl_chainmail_hands",
     "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
-    "name": { "str": "pair of XL mild steel chainmail gloves", "str_pl": "pairs of XL mild steel chainmail gloves" },
+    "copy-from": "chainmail_hands",
+    "name": { "str": "pair of XL chainmail gloves", "str_pl": "pairs of XL chainmail gloves" },
     "proportional": { "weight": 1.5, "volume": 1.5 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_lc_chainmail_hands",
+    "id": "xs_chainmail_hands",
     "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
-    "name": { "str": "pair of XS mild steel chainmail gloves", "str_pl": "pairs of XS mild steel chainmail gloves" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "mc_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
-    "name": { "str": "pair of medium steel chainmail gloves", "str_pl": "pairs of medium steel chainmail gloves" },
-    "replace_materials": { "lc_steel_chain": "mc_steel_chain" }
-  },
-  {
-    "id": "xl_mc_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "mc_chainmail_hands",
-    "name": { "str": "pair of XL medium steel chainmail gloves", "str_pl": "pairs of XL medium steel chainmail gloves" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_mc_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "mc_chainmail_hands",
-    "name": { "str": "pair of XS medium steel chainmail gloves", "str_pl": "pairs of XS medium steel chainmail gloves" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "hc_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
-    "name": { "str": "pair of high steel chainmail gloves", "str_pl": "pairs of high steel chainmail gloves" },
-    "replace_materials": { "lc_steel_chain": "hc_steel_chain" }
-  },
-  {
-    "id": "xl_hc_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "hc_chainmail_hands",
-    "name": { "str": "pair of XL high steel chainmail gloves", "str_pl": "pairs of XL high steel chainmail gloves" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_hc_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "hc_chainmail_hands",
-    "name": { "str": "pair of XS high steel chainmail gloves", "str_pl": "pairs of XS high steel chainmail gloves" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "ch_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
-    "name": { "str": "pair of hardened steel chainmail gloves", "str_pl": "pairs of hardened steel chainmail gloves" },
-    "replace_materials": { "lc_steel_chain": "ch_steel_chain" }
-  },
-  {
-    "id": "xl_ch_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "ch_chainmail_hands",
-    "name": { "str": "pair of XL hardened steel chainmail gloves", "str_pl": "pairs of XL hardened steel chainmail gloves" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_ch_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "ch_chainmail_hands",
-    "name": { "str": "pair of XS hardened steel chainmail gloves", "str_pl": "pairs of XS hardened steel chainmail gloves" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "qt_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_hands",
-    "material": [ "qt_steel_chain" ],
-    "name": { "str": "pair of tempered steel chainmail gloves", "str_pl": "pairs of tempered steel chainmail gloves" },
-    "replace_materials": { "lc_steel_chain": "qt_steel_chain" }
-  },
-  {
-    "id": "xl_qt_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "qt_chainmail_hands",
-    "name": { "str": "pair of XL tempered steel chainmail gloves", "str_pl": "pairs of XL tempered steel chainmail gloves" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_qt_chainmail_hands",
-    "type": "ARMOR",
-    "copy-from": "qt_chainmail_hands",
-    "name": { "str": "pair of XS tempered steel chainmail gloves", "str_pl": "pairs of XS tempered steel chainmail gloves" },
+    "copy-from": "chainmail_hands",
+    "name": { "str": "pair of XS chainmail gloves", "str_pl": "pairs of XS chainmail gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -234,7 +141,7 @@
     "symbol": "[",
     "looks_like": "gauntlets_larmor",
     "color": "green",
-    "warmth": 20,
+    "warmth": 5,
     "material_thickness": 4,
     "environmental_protection": 4,
     "flags": [ "STURDY", "DURABLE_MELEE" ],
@@ -523,7 +430,7 @@
     "price_postapoc": 100,
     "to_hit": -2,
     "symbol": "[",
-    "looks_like": "lc_mitten_gaunt",
+    "looks_like": "mitten_gaunt",
     "material": [ "lc_steel" ],
     "repairs_with": [ "steel" ],
     "color": "light_gray",
@@ -541,24 +448,6 @@
       }
     ],
     "melee_damage": { "bash": 5 }
-  },
-  {
-    "id": "ch_mitten_gaunt_metal_sheets",
-    "type": "ARMOR",
-    "copy-from": "mitten_gaunt_metal_sheets",
-    "name": { "str": "pair of hardened steel sheet metal gauntlets", "str_pl": "pairs of hardened steel sheet metal gauntlets" },
-    "description": "These crude mitten gauntlets have been hardened to keep the zombie dogs from biting your fingers off.",
-    "material": [ "ch_steel" ],
-    "extend": { "flags": [ "STURDY" ] },
-    "armor": [
-      {
-        "material": [ { "type": "ch_steel", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "covers": [ "hand_l", "hand_r" ],
-        "specifically_covers": [ "hand_wrist_l", "hand_wrist_r", "hand_fingers_l", "hand_fingers_r", "hand_back_l", "hand_back_r" ],
-        "coverage": 100,
-        "encumbrance": 25
-      }
-    ]
   },
   {
     "id": "gloves_fur",
@@ -1400,10 +1289,10 @@
     ]
   },
   {
-    "id": "lc_demi_gaunt",
+    "id": "demi_gaunt",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of mild steel demi-gauntlets", "str_pl": "pairs of mild steel demi-gauntlets" },
+    "name": { "str": "pair of steel demi-gauntlets", "str_pl": "pairs of steel demi-gauntlets" },
     "description": "A pair of leather gloves with chainmail protecting the fingers and palm, and plating over the back of the hand and wrist.",
     "weight": "750 g",
     "volume": "750 ml",
@@ -1451,79 +1340,18 @@
     "melee_damage": { "bash": 7 }
   },
   {
-    "id": "xl_lc_demi_gaunt",
+    "id": "xl_demi_gaunt",
     "type": "ARMOR",
-    "copy-from": "lc_demi_gaunt",
-    "name": { "str": "pair of XL mild steel demi-gauntlets", "str_pl": "pairs of XL mild steel demi-gauntlets" },
+    "copy-from": "demi_gaunt",
+    "name": { "str": "pair of XL steel demi-gauntlets", "str_pl": "pairs of XL steel demi-gauntlets" },
     "proportional": { "weight": 1.5, "volume": 1.5 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "mc_demi_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_demi_gaunt",
-    "name": { "str": "pair of medium steel demi-gauntlets", "str_pl": "pairs of medium steel demi-gauntlets" },
-    "replace_materials": { "lc_steel": "mc_steel", "lc_steel_chain": "mc_steel_chain" }
-  },
-  {
-    "id": "xl_mc_demi_gaunt",
-    "type": "ARMOR",
-    "copy-from": "mc_demi_gaunt",
-    "name": { "str": "pair of XL medium steel demi-gauntlets", "str_pl": "pairs of XL medium steel demi-gauntlets" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "hc_demi_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_demi_gaunt",
-    "name": { "str": "pair of high steel demi-gauntlets", "str_pl": "pairs of high steel demi-gauntlets" },
-    "replace_materials": { "lc_steel": "hc_steel", "lc_steel_chain": "hc_steel_chain" }
-  },
-  {
-    "id": "xl_hc_demi_gaunt",
-    "type": "ARMOR",
-    "name": { "str": "pair of XL high steel demi-gauntlets", "str_pl": "pairs of XL high steel demi-gauntlets" },
-    "copy-from": "hc_demi_gaunt",
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "ch_demi_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_demi_gaunt",
-    "name": { "str": "pair of hardened steel demi-gauntlets", "str_pl": "pairs of hardened steel demi-gauntlets" },
-    "replace_materials": { "lc_steel": "ch_steel", "lc_steel_chain": "ch_steel_chain" }
-  },
-  {
-    "id": "xl_ch_demi_gaunt",
-    "type": "ARMOR",
-    "name": { "str": "pair of XL hardened steel demi-gauntlets", "str_pl": "pairs of XL hardened steel demi-gauntlets" },
-    "copy-from": "ch_demi_gaunt",
-    "material": [ "qt_steel", "qt_steel_chain" ],
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "qt_demi_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_demi_gaunt",
-    "name": { "str": "pair of tempered steel demi-gauntlets", "str_pl": "pairs of tempered steel demi-gauntlets" },
-    "replace_materials": { "lc_steel": "qt_steel", "lc_steel_chain": "qt_steel_chain" }
-  },
-  {
-    "id": "xl_qt_demi_gaunt",
-    "type": "ARMOR",
-    "name": { "str": "pair of XL tempered steel demi-gauntlets", "str_pl": "pairs of XL tempered steel demi-gauntlets" },
-    "copy-from": "qt_demi_gaunt",
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "lc_mitten_gaunt",
+    "id": "mitten_gaunt",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of mild steel mitten gauntlets", "str_pl": "pairs of mild steel mitten gauntlets" },
+    "name": { "str": "pair of steel mitten gauntlets", "str_pl": "pairs of steel mitten gauntlets" },
     "description": "A pair of leather mittens with chainmail protecting the fingers and palm, and steel plating over the back of the hand, fingers, and wrist for additional protection.",
     "weight": "1250 g",
     "volume": "1250 ml",
@@ -1572,70 +1400,10 @@
     "melee_damage": { "bash": 7 }
   },
   {
-    "id": "xl_lc_mitten_gaunt",
+    "id": "xl_mitten_gaunt",
     "type": "ARMOR",
-    "copy-from": "lc_mitten_gaunt",
-    "name": { "str": "pair of XL mild steel mitten gauntlets", "str_pl": "pairs of XL mild steel mitten gauntlets" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "mc_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_mitten_gaunt",
-    "name": { "str": "pair of medium steel mitten gauntlets", "str_pl": "pairs of medium steel mitten gauntlets" },
-    "replace_materials": { "lc_steel": "mc_steel", "lc_steel_chain": "mc_steel_chain" }
-  },
-  {
-    "id": "xl_mc_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "mc_mitten_gaunt",
-    "name": { "str": "pair of XL medium steel mitten gauntlets", "str_pl": "pairs of XL medium steel mitten gauntlets" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "hc_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_mitten_gaunt",
-    "name": { "str": "pair of high steel mitten gauntlets", "str_pl": "pairs of high steel mitten gauntlets" },
-    "replace_materials": { "lc_steel": "hc_steel", "lc_steel_chain": "hc_steel_chain" }
-  },
-  {
-    "id": "xl_hc_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "hc_mitten_gaunt",
-    "name": { "str": "pair of XL high steel mitten gauntlets", "str_pl": "pairs of XL high steel mitten gauntlets" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "ch_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_mitten_gaunt",
-    "name": { "str": "pair of hardened steel mitten gauntlets", "str_pl": "pairs of hardened steel mitten gauntlets" },
-    "replace_materials": { "lc_steel": "ch_steel", "lc_steel_chain": "ch_steel_chain" }
-  },
-  {
-    "id": "xl_ch_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "ch_mitten_gaunt",
-    "name": { "str": "pair of XL hardened steel mitten gauntlets", "str_pl": "pairs of XL hardened steel mitten gauntlets" },
-    "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "qt_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "lc_mitten_gaunt",
-    "name": { "str": "pair of tempered steel mitten gauntlets", "str_pl": "pairs of tempered steel mitten gauntlets" },
-    "replace_materials": { "lc_steel": "qt_steel", "lc_steel_chain": "qt_steel_chain" }
-  },
-  {
-    "id": "xl_qt_mitten_gaunt",
-    "type": "ARMOR",
-    "copy-from": "qt_mitten_gaunt",
-    "name": { "str": "pair of XL tempered steel mitten gauntlets", "str_pl": "pairs of XL tempered steel mitten gauntlets" },
+    "copy-from": "mitten_gaunt",
+    "name": { "str": "pair of XL steel mitten gauntlets", "str_pl": "pairs of XL steel mitten gauntlets" },
     "proportional": { "weight": 1.5, "volume": 1.5 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },

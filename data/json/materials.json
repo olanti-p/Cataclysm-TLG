@@ -465,7 +465,6 @@
     "specific_heat_solid": 2.108,
     "latent_heat": 333,
     "chip_resist": 14,
-    "breathability": "GOOD",
     "wind_resist": 90,
     "dmg_adj": [ "scratched", "cut", "cracked", "shattered" ],
     "bash_dmg_verb": "cracked",
@@ -491,7 +490,6 @@
     "specific_heat_solid": 2.108,
     "latent_heat": 333,
     "chip_resist": 7,
-    "breathability": "GOOD",
     "wind_resist": 90,
     "salvaged_into": "acidchitin_piece",
     "dmg_adj": [ "scratched", "cut", "cracked", "shattered" ],
@@ -515,7 +513,7 @@
     "specific_heat_liquid": 4.186,
     "specific_heat_solid": 2.108,
     "latent_heat": 333,
-    "breathability": "GOOD",
+    "breathability": "POOR",
     "wind_resist": 90,
     "dmg_adj": [ "scratched", "cut", "cracked", "shattered" ],
     "bash_dmg_verb": "cracked",
@@ -537,7 +535,6 @@
     "density": 1.8,
     "copy-from": "chitin_light",
     "chip_resist": 18,
-    "breathability": "AVERAGE",
     "resist": { "bash": 4, "cut": 6, "acid": 8, "heat": 2, "bullet": 1.8 }
   },
   {
@@ -547,7 +544,7 @@
     "density": 1.9,
     "copy-from": "chitin_light",
     "chip_resist": 22,
-    "breathability": "AVERAGE",
+    "breathability": "IMPERMEABLE",
     "resist": { "bash": 5.2, "cut": 7, "acid": 9, "heat": 2, "bullet": 2.1 }
   },
   {
@@ -1449,7 +1446,7 @@
     "specific_heat_solid": 1.7,
     "latent_heat": 27,
     "soft": true,
-    "chip_resist": 6,
+    "chip_resist": 2,
     "breathability": "MOISTURE_WICKING",
     "repaired_with": "lycra_patch",
     "salvaged_into": "lycra_patch",
@@ -1499,7 +1496,7 @@
     "specific_heat_solid": 1.1,
     "latent_heat": 273,
     "soft": true,
-    "chip_resist": 5,
+    "chip_resist": 4,
     "repaired_with": "neoprene",
     "salvaged_into": "neoprene",
     "dmg_adj": [ "scratched", "cut", "shredded", "tattered" ],
@@ -1512,7 +1509,7 @@
       { "fuel": 0.001, "smoke": 3, "burn": 0.002, "volume_per_turn": "5 ml" },
       { "fuel": 0.003, "smoke": 3, "burn": 0.005 }
     ],
-    "resist": { "bash": 3, "cut": 1, "acid": 4, "heat": 3, "bullet": 1 },
+    "resist": { "bash": 2, "cut": 1, "acid": 4, "heat": 2, "bullet": 1 },
     "repair_difficulty": 3
   },
   {
@@ -1881,7 +1878,7 @@
       { "fuel": 1, "smoke": 3, "burn": 0.2 },
       { "fuel": 1, "smoke": 4, "burn": 0.3 }
     ],
-    "resist": { "bash": 5, "cut": 1, "acid": 5, "heat": 2, "bullet": 1 },
+    "resist": { "bash": 5, "cut": 1, "acid": 9, "heat": 2, "bullet": 1 },
     "repair_difficulty": 3
   },
   {
@@ -2048,6 +2045,29 @@
   },
   {
     "type": "material",
+    "id": "steel_chain",
+    "name": "Steel Chain",
+    "density": 8,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "conductive": true,
+    "chip_resist": 17,
+    "sheet_thickness": 1.2,
+    "breathability": "GOOD",
+    "soft": true,
+    "uncomfortable": true,
+    "repaired_with": "lc_chain_link",
+    "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched",
+    "acid_dmg_verb": "corroded",
+    "burn_products": [ [ "scrap", 0.5 ] ],
+    "resist": { "bash": 6, "cut": 6, "acid": 7, "heat": 3, "bullet": 4.5 },
+    "repair_difficulty": 2
+  },
+  {
+    "type": "material",
     "id": "lc_steel_chain",
     "name": "Low Carbon Steel Chain",
     "//": "SAE 1010/UNS 10100, assumes .1% carbon content and zero slag.",
@@ -2085,7 +2105,7 @@
     "breathability": "GOOD",
     "soft": true,
     "uncomfortable": true,
-    "repaired_with": "mc_chain_link",
+    "repaired_with": "lc_chain_link",
     "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
     "bash_dmg_verb": "dented",
     "cut_dmg_verb": "scratched",
@@ -2109,7 +2129,7 @@
     "breathability": "GOOD",
     "soft": true,
     "uncomfortable": true,
-    "repaired_with": "hc_chain_link",
+    "repaired_with": "lc_chain_link",
     "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
     "bash_dmg_verb": "dented",
     "cut_dmg_verb": "scratched",
@@ -2133,7 +2153,7 @@
     "breathability": "GOOD",
     "soft": true,
     "uncomfortable": true,
-    "repaired_with": "ch_chain_link",
+    "repaired_with": "lc_chain_link",
     "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
     "bash_dmg_verb": "dented",
     "cut_dmg_verb": "scratched",
@@ -2157,7 +2177,7 @@
     "breathability": "GOOD",
     "soft": true,
     "uncomfortable": true,
-    "repaired_with": "mc_chain_link",
+    "repaired_with": "lc_chain_link",
     "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
     "bash_dmg_verb": "dented",
     "cut_dmg_verb": "scratched",
@@ -2391,7 +2411,7 @@
       { "fuel": 0.05, "smoke": 2, "burn": 0.03 },
       { "fuel": 0.15, "smoke": 5, "burn": 0.5 }
     ],
-    "resist": { "bash": 1, "cut": 1, "acid": 9, "heat": 2, "bullet": 3 },
+    "resist": { "bash": 0.8, "cut": 1, "acid": 9, "heat": 2, "bullet": 2 },
     "repair_difficulty": 2
   },
   {
@@ -2401,24 +2421,6 @@
     "copy-from": "nylon",
     "repaired_with": "null",
     "name": "Synthetic Fabric"
-  },
-  {
-    "type": "material",
-    "//": "similar to layered kevlar, nylon sewn in a way to extend its protectiveness. stopgap material for gambesons until material protection is more thoroughly reworked.",
-    "id": "nylon_quilted",
-    "name": "Quilted Nylon",
-    "copy-from": "nylon",
-    "repaired_with": "null",
-    "wind_resist": 65,
-    "resist": { "bash": 1.5, "cut": 2, "acid": 9, "heat": 2, "bullet": 3 }
-  },
-  {
-    "type": "material",
-    "//": "duplicate material used to give gambesons an extra 95% coverage layer without causing weirdness",
-    "id": "nylon_quilted_2",
-    "copy-from": "nylon_quilted",
-    "repaired_with": "null",
-    "name": "Quilted Nylon"
   },
   {
     "type": "material",
@@ -2433,25 +2435,6 @@
       { "fuel": 3, "smoke": 1, "burn": 0.06 }
     ],
     "resist": { "bash": 1, "cut": 1, "acid": 6, "heat": 2, "bullet": 1 }
-  },
-  {
-    "type": "material",
-    "id": "unobtanium",
-    "//": "this isn't supposed to be a super impressive material, just impossible to repair",
-    "name": "Strange Metal",
-    "density": 59,
-    "specific_heat_liquid": 0.49,
-    "specific_heat_solid": 0.39,
-    "latent_heat": 205,
-    "conductive": true,
-    "chip_resist": 10,
-    "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
-    "bash_dmg_verb": "dented",
-    "cut_dmg_verb": "scratched",
-    "acid_dmg_verb": "corroded",
-    "resist": { "bash": 2, "cut": 3, "acid": 0, "heat": 3, "bullet": 2 },
-    "//1": "No material in game can actually repair this. Difficulty is zero so that second skin can be 'repaired' (fed blood) with the feeding kit trivially.",
-    "repair_difficulty": 0
   },
   {
     "type": "material",

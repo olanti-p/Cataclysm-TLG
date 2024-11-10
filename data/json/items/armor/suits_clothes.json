@@ -36,7 +36,7 @@
     "symbol": "[",
     "color": "blue",
     "warmth": 15,
-    "material_thickness": 1,
+    "material_thickness": 0.1,
     "flags": [ "VARSIZE", "SKINTIGHT", "WATER_FRIENDLY" ],
     "armor": [
       {
@@ -172,8 +172,8 @@
     "looks_like": "touring_suit",
     "color": "pink",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 90, "encumbrance": [ 17, 30 ] },
-      { "covers": [ "arm_l", "arm_r", "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 17, 20 ] }
+      { "covers": [ "torso" ], "coverage": 90, "encumbrance": [ 11, 20 ] },
+      { "covers": [ "arm_l", "arm_r", "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 11, 20 ] }
     ],
     "pocket_data": [
       { "pocket_type": "CONTAINER", "max_contains_volume": "250 ml", "max_contains_weight": "1 kg", "moves": 80 },
@@ -188,7 +188,7 @@
     "id": "denim_overalls",
     "type": "ARMOR",
     "name": { "str": "pair of denim overalls", "str_pl": "pairs of denim overalls" },
-    "description": "The basic denim overalls that is the symbol of the Proletariat (and some hipsters).  It covers the legs and a large portion of the torso, secured around the shoulders with straps.  It has many pockets and is relatively protective.",
+    "description": "A pair of denim pants with a front apron and shoulder straps across the back.  It's tough and has plenty of storage space.",
     "//": "16.5 oz heavy denim overalls, modeled after the work overalls despite the description.",
     "weight": "1200 g",
     "volume": "3300 ml",
@@ -199,8 +199,8 @@
     "symbol": "[",
     "color": "light_blue",
     "armor": [
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 12 },
-      { "covers": [ "torso" ], "coverage": 80, "encumbrance": [ 14, 20 ] }
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 7, 12 ] },
+      { "covers": [ "torso" ], "coverage": 80, "encumbrance": [ 7, 12 ] }
     ],
     "pocket_data": [
       {
@@ -405,7 +405,7 @@
     "id": "jumpsuit",
     "type": "ARMOR",
     "name": { "str": "jumpsuit" },
-    "description": "A thin, short-sleeved jumpsuit similar to those worn by prisoners.  Provides decent storage and is not very encumbering.",
+    "description": "A thin, short-sleeved bodysuit.  It's comfortable and has a decent amount of pocket space.",
     "weight": "610 g",
     "volume": "3500 ml",
     "price": 8900,
@@ -416,9 +416,9 @@
     "looks_like": "touring_suit",
     "color": "yellow",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 1, 2 ] },
+      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 5, 6 ] },
       { "covers": [ "arm_l", "arm_r" ], "coverage": 50, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 80, "encumbrance": [ 1, 2 ] }
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 5, 9 ] }
     ],
     "pocket_data": [
       {
@@ -450,7 +450,7 @@
         "moves": 100
       }
     ],
-    "warmth": 15,
+    "warmth": 5,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "POCKETS" ]
   },
@@ -458,7 +458,7 @@
     "id": "jumpsuit_xl",
     "type": "ARMOR",
     "name": { "str": "XL jumpsuit" },
-    "description": "A thin, short-sleeved jumpsuit updated for the trans-human who needs full-body clothing.  Provides some storage and is adjustable to minimize encumbrance.",
+    "description": "A thin, short-sleeved bodysuit updated for the trans-human who needs full-body clothing.  Provides some storage and is adjustable to minimize encumbrance.",
     "weight": "810 g",
     "volume": "5 L",
     "price": 20000,
@@ -469,9 +469,9 @@
     "looks_like": "jumpsuit",
     "color": "yellow",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 1, 2 ] },
+      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 5, 6 ] },
       { "covers": [ "arm_l", "arm_r" ], "coverage": 50, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 80, "encumbrance": [ 1, 2 ] }
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 5, 9 ] }
     ],
     "pocket_data": [
       {
@@ -503,8 +503,8 @@
         "moves": 100
       }
     ],
-    "warmth": 15,
-    "material_thickness": 1,
+    "warmth": 5,
+    "material_thickness": 0.2,
     "flags": [ "POCKETS", "OVERSIZE" ]
   },
   {
@@ -529,9 +529,9 @@
     "price_postapoc": 60,
     "color": "white",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 1, 2 ] }
+      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 5, 6 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 5, 5 ] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 5, 9 ] }
     ],
     "pocket_data": [
       {
@@ -572,11 +572,11 @@
       "menu_text": "Unzip the head portion"
     },
     "armor": [
-      { "covers": [ "head" ], "coverage": 100, "encumbrance": [ 1, 1 ] },
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": [ 5, 5 ] },
       { "covers": [ "mouth", "eyes" ], "coverage": 100, "encumbrance": [ 5, 5 ] },
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 1, 2 ] }
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 5, 5 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 5, 5 ] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 5, 9 ] }
     ]
   },
   {
@@ -602,25 +602,25 @@
     "looks_like": "jumpsuit",
     "color": "white",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 95, "encumbrance": 2 },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 90, "encumbrance": 1 },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 1 }
+      { "covers": [ "torso" ], "coverage": 95, "encumbrance": 5 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 90, "encumbrance": 5 },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 5 }
     ],
     "warmth": 10,
-    "material_thickness": 0.2,
+    "material_thickness": 0.1,
     "flags": [ "VARSIZE", "POCKETS", "HOOD" ]
   },
   {
     "id": "technician_coveralls",
     "type": "ARMOR",
     "name": { "str_sp": "work coveralls" },
-    "description": "A fully covering jumpsuit made of waterproof canvas.  Offers solid protection from everyday dangers on the job and plenty of storage pockets.",
+    "description": "A long-sleeved jumpsuit made of water-resistant synthetics.  Offers solid protection from everyday dangers on the job and plenty of storage pockets.",
     "weight": "1328 g",
     "volume": "1000 ml",
     "price": 10000,
     "price_postapoc": 1000,
     "to_hit": -3,
-    "material": [ "canvas" ],
+    "material": [ "nylon" ],
     "symbol": "[",
     "looks_like": "jumpsuit",
     "color": "yellow",
@@ -628,19 +628,19 @@
     "armor": [
       {
         "covers": [ "torso" ],
-        "material": [ { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 } ],
         "coverage": 100,
         "encumbrance": [ 5, 9 ]
       },
       {
         "covers": [ "arm_l", "arm_r" ],
-        "material": [ { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 } ],
         "coverage": 100,
         "encumbrance": [ 5, 5 ]
       },
       {
         "covers": [ "leg_l", "leg_r" ],
-        "material": [ { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 } ],
         "coverage": 100,
         "encumbrance": [ 5, 9 ]
       }
@@ -697,19 +697,19 @@
     ],
     "warmth": 15,
     "material_thickness": 0.5,
-    "flags": [ "VARSIZE", "POCKETS", "STURDY", "WATERPROOF" ]
+    "flags": [ "VARSIZE", "POCKETS", "STURDY", "RAINPROOF" ]
   },
   {
     "id": "technician_coveralls_h",
     "type": "ARMOR",
     "name": { "str_sp": "heavy work coveralls" },
-    "description": "A thick, fully covering jumpsuit made of waterproof canvas lined with extra fabric for warmth in brisk weather.  Offers solid protection from everyday dangers on the job and plenty of storage pockets.",
+    "description": "A thick, fully covering jumpsuit made of made of water-resistant synthetics lined with extra fabric for warmth in brisk weather.  Offers solid protection from everyday dangers on the job and plenty of storage pockets.",
     "weight": "2436 g",
     "volume": "2000 ml",
     "price": 12000,
     "price_postapoc": 1250,
     "to_hit": -3,
-    "material": [ "cotton", "canvas" ],
+    "material": [ "cotton", "nylon" ],
     "symbol": "[",
     "looks_like": "technician_coveralls",
     "color": "yellow",
@@ -719,7 +719,7 @@
         "covers": [ "torso" ],
         "material": [
           { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 }
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 }
         ],
         "coverage": 100,
         "encumbrance": [ 7, 11 ]
@@ -728,7 +728,7 @@
         "covers": [ "arm_l", "arm_r" ],
         "material": [
           { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 }
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 }
         ],
         "coverage": 100,
         "encumbrance": [ 7, 7 ]
@@ -737,7 +737,7 @@
         "covers": [ "leg_l", "leg_r" ],
         "material": [
           { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 }
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 }
         ],
         "coverage": 100,
         "encumbrance": [ 7, 11 ]
@@ -795,19 +795,19 @@
     ],
     "warmth": 30,
     "material_thickness": 1.0,
-    "flags": [ "VARSIZE", "POCKETS", "STURDY", "WATERPROOF" ]
+    "flags": [ "VARSIZE", "POCKETS", "STURDY", "RAINPROOF" ]
   },
   {
     "id": "subsuit_xl",
     "type": "ARMOR",
     "name": { "str": "subject suit" },
-    "description": "A thin, short-sleeved and short-legged one-piece suit.  Judging by the odd tailoring and adjustment points… maybe you don't want to know who wore it.  Provides nominal storage and is not very encumbering.",
+    "description": "A short-sleeved yellow garment resembling a hospital gown.  A variety of plastic snaps pin its two halves together around the body and could seemingly be adjusted to fit just about anyone, or anything...",
     "weight": "810 g",
     "volume": "5 L",
     "price": 11000,
     "price_postapoc": 50,
     "to_hit": -3,
-    "material": [ "cotton", "plastic" ],
+    "material": [ "cotton" ],
     "symbol": "[",
     "looks_like": "jumpsuit",
     "color": "yellow",
@@ -825,10 +825,37 @@
     "flags": [ "VARSIZE", "POCKETS", "OVERSIZE", "SOFT" ]
   },
   {
+    "id": "subsuit_xs",
+    "type": "ARMOR",
+    "name": { "str": "XS subject suit" },
+    "description": "A short-sleeved yellow garment resembling a hospital gown, sized for a very young child.  A variety of plastic snaps pin its two halves together around the body and could seemingly be adjusted to fit just about anyone, or anything...",
+    "weight": "810 g",
+    "volume": "5 L",
+    "price": 11000,
+    "price_postapoc": 50,
+    "to_hit": -3,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "looks_like": "jumpsuit",
+    "color": "yellow",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 3, 7 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 50, "encumbrance": [ 2, 2 ] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 60, "encumbrance": [ 2, 5 ] }
+    ],
+    "pocket_data": [
+      { "pocket_type": "CONTAINER", "max_contains_volume": "500 ml", "max_contains_weight": "2 kg", "moves": 80 },
+      { "pocket_type": "CONTAINER", "max_contains_volume": "500 ml", "max_contains_weight": "2 kg", "moves": 80 }
+    ],
+    "warmth": 15,
+    "material_thickness": 0.2,
+    "flags": [ "VARSIZE", "POCKETS", "UNDERSIZE", "SOFT" ]
+  },
+  {
     "id": "union_suit",
     "type": "ARMOR",
     "name": { "str": "union suit" },
-    "description": "A one-piece suit of full-body long underwear that helps to maintain body temperature.  It laces closed in the front.",
+    "description": "An old-fashioned one-piece suit of full-body long underwear that helps to maintain body temperature.",
     "weight": "168 g",
     "volume": "1 L",
     "price": 2500,
