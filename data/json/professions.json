@@ -3923,7 +3923,7 @@
           { "group": "charged_smart_phone" },
           { "group": "charged_mp3" },
           { "group": "charged_ref_lighter" },
-          { "item": "onyx_silver_earring"},
+          { "item": "onyx_silver_earring" },
           { "item": "onyx_silver_ring" }
         ]
       },
@@ -4238,9 +4238,7 @@
           { "item": "holy_symbol", "variant": "general_necklace" }
         ]
       },
-      "male": {
-        "entries": [ { "item": "briefs" }, { "item": "dress_shirt" }, { "item": "suit" }, { "item": "pants" } ]
-      },
+      "male": { "entries": [ { "item": "briefs" }, { "item": "dress_shirt" }, { "item": "suit" }, { "item": "pants" } ] },
       "female": { "entries": [ { "item": "dress" }, { "item": "purse" }, { "item": "bra" }, { "item": "panties" } ] }
     }
   },
@@ -6699,16 +6697,11 @@
     "points": 1,
     "skills": [ { "level": 3, "name": "dodge" }, { "level": 3, "name": "swimming" }, { "level": 3, "name": "speech" } ],
     "items": {
-      "both": {
-        "entries": [
-          { "item": "pom_poms" },
-          { "item": "socks_ankle" },
-          { "item": "sneakers" },
-          { "item": "tank_top" }
-        ]
-      },
+      "both": { "entries": [ { "item": "pom_poms" }, { "item": "socks_ankle" }, { "item": "sneakers" }, { "item": "tank_top" } ] },
       "male": { "entries": [ { "item": "briefs" }, { "item": "shorts" }, { "item": "tank_top" }, { "item": "sweater" } ] },
-      "female": { "entries": [ { "item": "sports_bra" }, { "item": "panties" }, { "item": "cheerleader_dress" }, { "item": "jacket_varsity" } ] }
+      "female": {
+        "entries": [ { "item": "sports_bra" }, { "item": "panties" }, { "item": "cheerleader_dress" }, { "item": "jacket_varsity" } ]
+      }
     },
     "missions": [ "MISSION_SOCIAL_BUTTERFLY" ],
     "age_lower": 16,
@@ -6730,21 +6723,9 @@
           { "item": "mask_dust" }
         ]
       },
-      "male": {
-        "entries": [
-          { "item": "undershirt" },
-          { "item": "sneakers" },
-          { "item": "flag_jumpsuit" },
-          { "item": "briefs" }
-        ]
-      },
+      "male": { "entries": [ { "item": "undershirt" }, { "item": "sneakers" }, { "item": "flag_jumpsuit" }, { "item": "briefs" } ] },
       "female": {
-        "entries": [
-          { "item": "flag_jumpsuit" },
-          { "item": "bikini_top" },
-          { "item": "bikini_bottom" },
-          { "item": "heels" }
-        ]
+        "entries": [ { "item": "flag_jumpsuit" }, { "item": "bikini_top" }, { "item": "bikini_bottom" }, { "item": "heels" } ]
       }
     }
   },
@@ -6835,10 +6816,7 @@
           { "item": "straw_hat" },
           { "item": "dive_bag" },
           { "item": "beach_volleyball" },
-          {
-            "item": "waterproof_smart_phone_case",
-            "contents-group": "charged_smart_phone"
-          },
+          { "item": "waterproof_smart_phone_case", "contents-group": "charged_smart_phone" },
           { "item": "towel", "custom-flags": [ "no_auto_equip" ] },
           { "item": "flip_flops", "custom-flags": [ "no_auto_equip" ] }
         ]
@@ -6897,9 +6875,7 @@
     "proficiencies": [ "prof_wound_care" ],
     "items": {
       "both": { "entries": [ { "item": "whistle" }, { "item": "sunglasses" }, { "item": "diving_watch" } ] },
-      "male": {
-        "entries": [ { "item": "trunks" }, { "item": "swim_briefs" }, { "item": "rashguard" } ]
-      },
+      "male": { "entries": [ { "item": "trunks" }, { "item": "swim_briefs" }, { "item": "rashguard" } ] },
       "female": { "entries": [ { "item": "bikini_top" }, { "item": "bikini_bottom" } ] }
     }
   },
@@ -6946,19 +6922,11 @@
           { "item": "folded_inflatable_boat" },
           { "item": "rashguard" },
           { "item": "hat_ball" },
-          {
-            "item": "waterproof_smart_phone_case",
-            "contents-group": "charged_smart_phone"
-          }
+          { "item": "waterproof_smart_phone_case", "contents-group": "charged_smart_phone" }
         ]
       },
       "male": { "entries": [ { "item": "swim_briefs" } ] },
-      "female": {
-        "entries": [
-          { "item": "bikini_top" },
-          { "item": "bikini_bottom" }
-        ]
-      }
+      "female": { "entries": [ { "item": "bikini_top" }, { "item": "bikini_bottom" } ] }
     }
   },
   {

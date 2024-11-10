@@ -2094,13 +2094,7 @@
   {
     "type": "item_group",
     "id": "female_underwear_top_child",
-    "items": [
-      [ "bra", 30 ],
-      [ "sports_bra", 60 ],
-      [ "camisole", 30 ],
-      [ "halter_top", 60 ],
-      [ "bikini_top", 5 ]
-    ]
+    "items": [ [ "bra", 30 ], [ "sports_bra", 60 ], [ "camisole", 30 ], [ "halter_top", 60 ], [ "bikini_top", 5 ] ]
   },
   {
     "type": "item_group",
@@ -2518,12 +2512,7 @@
   {
     "type": "item_group",
     "id": "swimmer_wetsuit",
-    "items": [
-      [ "wetsuit", 35 ],
-      [ "wetsuit_thick", 5 ],
-      [ "wetsuit_spring", 25 ],
-      [ "wetsuit_spring_sleeveless", 25 ]
-    ]
+    "items": [ [ "wetsuit", 35 ], [ "wetsuit_thick", 5 ], [ "wetsuit_spring", 25 ], [ "wetsuit_spring_sleeveless", 25 ] ]
   },
   {
     "type": "item_group",
@@ -2585,24 +2574,13 @@
     "type": "item_group",
     "id": "diving_torso",
     "//": "Only diving appropriate torso clothing.",
-    "items": [
-      [ "wetsuit_top_sleeved", 60 ],
-      [ "wetsuit_top", 40 ],
-      [ "wetsuit_jacket", 30 ],
-      [ "bikini_top", 5 ]
-    ]
+    "items": [ [ "wetsuit_top_sleeved", 60 ], [ "wetsuit_top", 40 ], [ "wetsuit_jacket", 30 ], [ "bikini_top", 5 ] ]
   },
   {
     "type": "item_group",
     "id": "diving_pants",
     "//": "Only diving appropriate legs clothing.  To be expanded later with rash guards.",
-    "items": [
-      [ "wetsuit_pants", 80 ],
-      [ "wetsuit_shorts", 20 ],
-      [ "bikini_bottom", 5 ],
-      [ "swim_briefs", 5 ],
-      [ "speedo", 1 ]
-    ]
+    "items": [ [ "wetsuit_pants", 80 ], [ "wetsuit_shorts", 20 ], [ "bikini_bottom", 5 ], [ "swim_briefs", 5 ], [ "speedo", 1 ] ]
   },
   {
     "type": "item_group",
@@ -3589,10 +3567,7 @@
     "type": "item_group",
     "//": "womens shirts",
     "subtype": "distribution",
-    "items": [
-      { "item": "halter_top", "prob": 10 },
-      { "item": "tank_top", "prob": 30 }
-    ]
+    "items": [ { "item": "halter_top", "prob": 10 }, { "item": "tank_top", "prob": 30 } ]
   },
   {
     "id": "underwear_unisex",

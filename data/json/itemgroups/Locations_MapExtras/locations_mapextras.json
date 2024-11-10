@@ -218,7 +218,7 @@
       [ "bikini_top", 10 ],
       [ "bikini_bottom", 10 ],
       [ "rashguard", 10 ],
-      [ "swim_briefs" , 5 ],
+      [ "swim_briefs", 5 ],
       [ "speedo", 5 ],
       { "item": "tank_top" },
       [ "football_armor", 20 ],

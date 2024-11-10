@@ -555,7 +555,13 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures", "skill_penalty": 0 }, { "proficiency": "prof_chain_armour", "skill_penalty": 0 } ],
-    "components": [ [ [ "chainmail_hood", 1 ] ], [ [ "chainmail_arms", 1 ] ], [ [ "chainmail_legs", 1 ] ], [ [ "chainmail_vest", 1 ] ], [ [ "chainmail_hands", 1 ] ] ]
+    "components": [
+      [ [ "chainmail_hood", 1 ] ],
+      [ [ "chainmail_arms", 1 ] ],
+      [ [ "chainmail_legs", 1 ] ],
+      [ [ "chainmail_vest", 1 ] ],
+      [ [ "chainmail_hands", 1 ] ]
+    ]
   },
   {
     "result": "xl_chainmail_suit",
@@ -570,7 +576,13 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures", "skill_penalty": 0 }, { "proficiency": "prof_chain_armour", "skill_penalty": 0 } ],
-    "components": [ [ [ "xl_chainmail_hood", 1 ] ], [ [ "xl_chainmail_arms", 1 ] ], [ [ "xl_chainmail_legs", 1 ] ], [ [ "xl_chainmail_vest", 1 ] ], [ [ "xl_chainmail_hands", 1 ] ] ]
+    "components": [
+      [ [ "xl_chainmail_hood", 1 ] ],
+      [ [ "xl_chainmail_arms", 1 ] ],
+      [ [ "xl_chainmail_legs", 1 ] ],
+      [ [ "xl_chainmail_vest", 1 ] ],
+      [ [ "xl_chainmail_hands", 1 ] ]
+    ]
   },
   {
     "result": "xs_chainmail_suit",
@@ -585,7 +597,13 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures", "skill_penalty": 0 }, { "proficiency": "prof_chain_armour", "skill_penalty": 0 } ],
-    "components": [ [ [ "xs_chainmail_hood", 1 ] ], [ [ "xs_chainmail_arms", 1 ] ], [ [ "xs_chainmail_legs", 1 ] ], [ [ "xs_chainmail_vest", 1 ] ], [ [ "xs_chainmail_hands", 1 ] ] ]
+    "components": [
+      [ [ "xs_chainmail_hood", 1 ] ],
+      [ [ "xs_chainmail_arms", 1 ] ],
+      [ [ "xs_chainmail_legs", 1 ] ],
+      [ [ "xs_chainmail_vest", 1 ] ],
+      [ [ "xs_chainmail_hands", 1 ] ]
+    ]
   },
   {
     "result": "chainmail_suit_faraday",
@@ -1291,11 +1309,7 @@
       { "proficiency": "prof_armorsmithing", "skill_penalty": 0 },
       { "proficiency": "prof_articulation", "skill_penalty": 0 }
     ],
-    "components": [
-      [ [ "xl_armor_light_chestplate", 1 ] ],
-      [ [ "xl_armor_lightarmguard", 2 ] ],
-      [ [ "xl_armor_light_leg_guard", 2 ] ]
-    ]
+    "components": [ [ [ "xl_armor_light_chestplate", 1 ] ], [ [ "xl_armor_lightarmguard", 2 ] ], [ [ "xl_armor_light_leg_guard", 2 ] ] ]
   },
   {
     "result": "armor_plate",
@@ -1437,11 +1451,7 @@
       { "proficiency": "prof_armorsmithing", "skill_penalty": 0 },
       { "proficiency": "prof_articulation", "skill_penalty": 0 }
     ],
-    "components": [
-      [ [ "xl_armor_heavy_chestplate", 1 ] ],
-      [ [ "xl_armor_heavyarmguard", 2 ] ],
-      [ [ "xl_armor_heavy_leg_guard", 2 ] ]
-    ]
+    "components": [ [ [ "xl_armor_heavy_chestplate", 1 ] ], [ [ "xl_armor_heavyarmguard", 2 ] ], [ [ "xl_armor_heavy_leg_guard", 2 ] ] ]
   },
   {
     "result": "armor_riot",

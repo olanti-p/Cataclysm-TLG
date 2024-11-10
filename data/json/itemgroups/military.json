@@ -179,26 +179,16 @@
     "entries": [
       {
         "distribution": [
+          { "item": "ballistic_vest_esapi", "contents-group": "used_kitted_medium_vest", "prob": 100 },
           {
-            "item": "ballistic_vest_esapi",
-            "contents-group": "used_kitted_medium_vest",
-            "prob": 100
-          },
-          {
-            "collection": [
-              { "item": "ballistic_vest_esapi", "contents-group": "some_esapi_plates" },
-              { "group": "loaded_lbv" }
-            ],
+            "collection": [ { "item": "ballistic_vest_esapi", "contents-group": "some_esapi_plates" }, { "group": "loaded_lbv" } ],
             "prob": 50
           }
         ],
         "prob": 40
       },
       {
-        "collection": [
-          { "item": "level_3_vest", "contents-group": "some_esapi_front_plates" },
-          { "group": "loaded_lbv" }
-        ],
+        "collection": [ { "item": "level_3_vest", "contents-group": "some_esapi_front_plates" }, { "group": "loaded_lbv" } ],
         "prob": 50
       },
       { "group": "military_ballistic_vest_light", "prob": 10 },
@@ -211,16 +201,9 @@
     "//": "ESAPI vest plus plates",
     "subtype": "distribution",
     "entries": [
+      { "item": "ballistic_vest_esapi", "contents-group": "used_kitted_medium_vest", "prob": 7 },
       {
-        "item": "ballistic_vest_esapi",
-        "contents-group": "used_kitted_medium_vest",
-        "prob": 7
-      },
-      {
-        "collection": [
-          { "item": "ballistic_vest_esapi", "contents-group": "some_esapi_plates" },
-          { "item": "tacvest" }
-        ],
+        "collection": [ { "item": "ballistic_vest_esapi", "contents-group": "some_esapi_plates" }, { "item": "tacvest" } ],
         "prob": 2
       },
       {
@@ -253,20 +236,14 @@
         "distribution": [
           { "item": "ballistic_vest_esapi", "contents-group": "kitted_medium_vest", "prob": 100 },
           {
-            "collection": [
-              { "item": "ballistic_vest_esapi", "contents-group": "pristine_esapi_plates" },
-              { "group": "loaded_lbv" }
-            ],
+            "collection": [ { "item": "ballistic_vest_esapi", "contents-group": "pristine_esapi_plates" }, { "group": "loaded_lbv" } ],
             "prob": 50
           }
         ],
         "prob": 40
       },
       {
-        "collection": [
-          { "item": "level_3_vest", "contents-group": "pristine_esapi_front_plates" },
-          { "group": "loaded_lbv" }
-        ],
+        "collection": [ { "item": "level_3_vest", "contents-group": "pristine_esapi_front_plates" }, { "group": "loaded_lbv" } ],
         "prob": 50
       },
       { "group": "military_ballistic_vest_light_pristine", "prob": 10 },
@@ -295,26 +272,14 @@
     "type": "item_group",
     "//": "light ballistic vests you could get away with in the army",
     "subtype": "distribution",
-    "entries": [
-      {
-        "item": "ballistic_vest_light",
-        "contents-group": "used_kitted_light_vest",
-        "prob": 50
-      }
-    ]
+    "entries": [ { "item": "ballistic_vest_light", "contents-group": "used_kitted_light_vest", "prob": 50 } ]
   },
   {
     "id": "military_ballistic_vest_light_pristine",
     "type": "item_group",
     "//": "light ballistic vests you could get away with in the army",
     "subtype": "distribution",
-    "entries": [
-      {
-        "item": "ballistic_vest_light",
-        "contents-group": "kitted_light_vest",
-        "prob": 50
-      }
-    ]
+    "entries": [ { "item": "ballistic_vest_light", "contents-group": "kitted_light_vest", "prob": 50 } ]
   },
   {
     "id": "ballistic_vest_light_pristine",

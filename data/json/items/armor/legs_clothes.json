@@ -975,7 +975,7 @@
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": [2, 12],
+        "encumbrance": [ 2, 12 ],
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
@@ -1025,7 +1025,7 @@
     "flags": [ "VARSIZE" ],
     "armor": [
       {
-        "encumbrance": [3, 10],
+        "encumbrance": [ 3, 10 ],
         "coverage": 100,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],

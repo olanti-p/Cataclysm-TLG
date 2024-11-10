@@ -253,10 +253,7 @@
             "distribution": [
               { "group": "female_underwear", "prob": 75, "damage": [ 1, 4 ] },
               {
-                "collection": [
-                  { "item": "bikini_top", "damage": [ 1, 4 ] },
-                  { "item": "bikini_bottom", "damage": [ 1, 4 ] }
-                ],
+                "collection": [ { "item": "bikini_top", "damage": [ 1, 4 ] }, { "item": "bikini_bottom", "damage": [ 1, 4 ] } ],
                 "prob": 25
               }
             ]

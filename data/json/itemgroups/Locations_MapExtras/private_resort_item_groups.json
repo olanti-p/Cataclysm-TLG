@@ -78,12 +78,7 @@
     "type": "item_group",
     "id": "private_resort_dancer_legs",
     "//": "For the dancer zombie, only leg clothing to be normally worn with underwear.",
-    "items": [
-      [ "nanoskirt", 90 ],
-      [ "skirt_leather", 50 ],
-      [ "skirt", 10 ],
-      [ "chaps_leather", 15 ]
-    ]
+    "items": [ [ "nanoskirt", 90 ], [ "skirt_leather", 50 ], [ "skirt", 10 ], [ "chaps_leather", 15 ] ]
   },
   {
     "type": "item_group",

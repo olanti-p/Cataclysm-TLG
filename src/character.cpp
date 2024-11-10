@@ -2528,7 +2528,7 @@ void Character::process_turn()
     // Check the grabbing character for orphan grabs on their end.
     if( has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         bool remove = false;
-        if( grab_1.victim != nullptr ) {
+        if( grab_1.victim == nullptr ) {
             remove = true;
         }
         // This is for if we moved away, dropping our grab, but the victim moved adjacent to us before our next turn began.

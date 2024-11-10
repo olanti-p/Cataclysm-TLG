@@ -199,10 +199,7 @@
     "id": "armor_coat_brigandine_shoulders",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-      "str": "brigandine coat with shoulder guards",
-      "str_pl": "brigandine coats with shoulder guards"
-    },
+    "name": { "str": "brigandine coat with shoulder guards", "str_pl": "brigandine coats with shoulder guards" },
     "description": "A coat made from tough fabric with steel plates riveted on the inside, with shoulder guards attached to it.  Can be comfortably worn over chainmail for extra protection.",
     "weight": "8084 g",
     "volume": "7336 ml",
@@ -264,10 +261,7 @@
     "id": "xl_armor_coat_brigandine_shoulders",
     "type": "ARMOR",
     "copy-from": "armor_coat_brigandine_shoulders",
-    "name": {
-      "str": "XL brigandine coat with shoulder guards",
-      "str_pl": "XL brigandine coats with shoulder guards"
-    },
+    "name": { "str": "XL brigandine coat with shoulder guards", "str_pl": "XL brigandine coats with shoulder guards" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
@@ -275,10 +269,7 @@
     "id": "armor_coat_brigandine_shoulders_xs",
     "type": "ARMOR",
     "copy-from": "armor_coat_brigandine_shoulders",
-    "name": {
-      "str": "XS brigandine coat with shoulder guards",
-      "str_pl": "XS brigandine coats with shoulder guards"
-    },
+    "name": { "str": "XS brigandine coat with shoulder guards", "str_pl": "XS brigandine coats with shoulder guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
