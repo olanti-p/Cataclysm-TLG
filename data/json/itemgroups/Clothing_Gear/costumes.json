@@ -416,5 +416,27 @@
       [ "wakizashi_inferior", 8 ],
       [ "kris_fake", 8 ]
     ]
+  },
+  {
+    "type": "item_group",
+    "id": "independence_all_clothing",
+    "//": "mainly used for places for general clothing (like a dresser or a clothing store warehouse)",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "flag_jumpsuit", "prob": 25 },
+      { "item": "american_flag", "prob": 25 },
+      { "group": "costume_independence_undergarments_women", "prob": 25 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "costume_independence_undergarments_women",
+    "//": "women undergarments for independence day",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "bikini_top", "prob": 40 },
+      { "item": "bikini_bottom", "prob": 40 },
+      { "item": "bodysuit_lycra", "variant": "flag_suit", "prob": 10 }
+    ]
   }
 ]
