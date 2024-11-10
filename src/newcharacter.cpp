@@ -337,12 +337,10 @@ static std::string pools_to_string( const avatar &u, pool_type pool )
             multi_pool p( u );
             bool is_valid = p.stat_points_left >= 0 && p.trait_points_left >= 0 && p.skill_points_left >= 0;
             return string_format(
-                       _( "Points left: <color_%s>%d</color>%c<color_%s>%d</color>%c<color_%s>%d</color>=<color_%s>%d</color>" ),
+                       _( "Stats: <color_%s>%d</color>  Traits: <color_%s>%d</color>  Skills: <color_%s>%d</color>\n  Total: <color_%s>%d</color>" ),
                        p.stat_points_left >= 0 ? "light_gray" : "red", p.pure_stat_points,
-                       p.pure_trait_points >= 0 ? '+' : '-',
-                       p.trait_points_left >= 0 ? "light_gray" : "red", std::abs( p.pure_trait_points ),
-                       p.pure_skill_points >= 0 ? '+' : '-',
-                       p.skill_points_left >= 0 ? "light_gray" : "red", std::abs( p.pure_skill_points ),
+                       p.trait_points_left >= 0 ? "light_gray" : "red", p.pure_trait_points,
+                       p.skill_points_left >= 0 ? "light_gray" : "red", p.pure_skill_points,
                        is_valid ? "light_gray" : "red", p.skill_points_left );
         }
         case pool_type::ONE_POOL: {
@@ -351,7 +349,7 @@ static std::string pools_to_string( const avatar &u, pool_type pool )
         case pool_type::TRANSFER:
             return _( "Character Transfer: No changes can be made." );
         case pool_type::FREEFORM:
-            return _( "Survivor" );
+            return _( "Freeform" );
     }
     return "If you see this, this is a bug";
 }
@@ -687,9 +685,9 @@ bool avatar::create( character_type type, const std::string &tempname )
     tab_manager tabs( character_tabs );
 
     const std::string point_pool = get_option<std::string>( "CHARACTER_POINT_POOLS" );
-    pool_type pool = pool_type::FREEFORM;
+    pool_type pool = pool_type::MULTI_POOL;
     if( point_pool == "multi_pool" ) {
-        // if using legacy multipool only set it to that
+        // if using multipool only set it to that
         pool = pool_type::MULTI_POOL;
     }
 
@@ -1008,8 +1006,8 @@ static void draw_points( const catacurses::window &w, pool_type pool, const avat
             mvwprintz( w, point( pMsg_length + 2, 3 ), c_green, " (+%d)", std::abs( netPointCost ) );
         }
     }
-    print_colored_text( w, point( 2, 4 ), color, c_light_gray,
-                        player_difficulty::getInstance().difficulty_to_string( u ) );
+    //print_colored_text( w, point( 2, 4 ), color, c_light_gray,
+    //                    player_difficulty::getInstance().difficulty_to_string( u ) );
 }
 
 template <class Compare>
@@ -1081,25 +1079,25 @@ void set_points( tab_manager &tabs, avatar &u, pool_type &pool )
     std::vector<point_limit_tuple> opts;
 
     const point_limit_tuple multi_pool = std::make_tuple( pool_type::MULTI_POOL,
-                                         _( "Legacy: Multiple pools" ),
+                                         _( "Multiple pools" ),
                                          _( "Stats, traits and skills have separate point pools.\n"
-                                            "Putting stat points into traits and skills is allowed and putting trait points into skills is allowed.\n"
+                                            "Stat points may be spent on traits and skills. Trait points may be spent on skills.\n"
                                             "Scenarios and professions affect skill points.\n\n"
-                                            "This is a legacy mode.  Point totals are no longer balanced." ) );
+                                            "A more complex method designed with balance in mind." ) );
 
-    const point_limit_tuple one_pool = std::make_tuple( pool_type::ONE_POOL, _( "Legacy: Single pool" ),
+    const point_limit_tuple one_pool = std::make_tuple( pool_type::ONE_POOL, _( "Single pool" ),
                                        _( "Stats, traits and skills share a single point pool.\n\n"
-                                          "This is a legacy mode.  Point totals are no longer balanced." ) );
+                                          "The simplest method, lets you jump right in." ) );
 
-    const point_limit_tuple freeform = std::make_tuple( pool_type::FREEFORM, _( "Survivor" ),
-                                       _( "No point limits are enforced, create a character with the intention of telling a story or challenging yourself." ) );
+    const point_limit_tuple freeform = std::make_tuple( pool_type::FREEFORM, _( "Freeform" ),
+                                       _( "No point limits are enforced. Create a character with the intention of telling a story or challenging yourself." ) );
 
     if( point_pool == "multi_pool" ) {
         opts = { { multi_pool } };
-    } else if( point_pool == "story_teller" ) {
-        opts = { { freeform } };
+    } else if( point_pool == "one_pool" ) {
+        opts = { { one_pool } };
     } else {
-        opts = { { freeform, multi_pool, one_pool } };
+        opts = { { multi_pool, one_pool, freeform } };
     }
 
     int highlighted = 0;
@@ -1389,7 +1387,7 @@ void set_stats( tab_manager &tabs, avatar &u, pool_type pool )
         }
 
         draw_points( w, pool, u );
-        const point desc_line = point( iSecondColumn, 3 );
+        const point desc_line = point( iSecondColumn, 4 );
         if( *stats[sel] <= min_stat_points ) {
             mvwprintz( w, desc_line, c_red,
                        //~ %s - stat
