@@ -8,9 +8,9 @@
 constexpr int HIGH_STAT = 12;
 
 enum class pool_type {
-    FREEFORM = 0,
-    ONE_POOL,
+    ONE_POOL = 0,
     MULTI_POOL,
+    FREEFORM,
     TRANSFER,
 };
 
