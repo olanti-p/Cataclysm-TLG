@@ -147,13 +147,13 @@
       { "group": "survivorzed_extra", "damage": [ 1, 4 ] },
       {
         "distribution": [
-          { "group": "survivorzed_suits", "prob": 25, "damage": [ 1, 4 ] },
+          { "group": "survivorzed_suits", "prob": 15, "damage": [ 1, 4 ] },
           {
             "collection": [
-              { "group": "survivorzed_tops", "prob": 25, "damage": [ 1, 4 ] },
-              { "group": "survivorzed_bottoms", "prob": 25, "damage": [ 1, 4 ] }
+              { "group": "survivorzed_tops", "prob": 15, "damage": [ 1, 4 ] },
+              { "group": "survivorzed_bottoms", "prob": 15, "damage": [ 1, 4 ] }
             ],
-            "prob": 75
+            "prob": 65
           }
         ]
       },
@@ -389,7 +389,6 @@
       [ "vest_leather", 20 ],
       [ "vest_leather_mod", 8 ],
       [ "stab_vest", 15 ],
-      [ "dragonskin", 1 ],
       [ "chainmail_junk_vest", 1 ],
       [ "chestguard_hard", 10 ],
       [ "armor_riot_torso", 10 ],
@@ -397,8 +396,6 @@
       [ "carpet_cuirass", 7 ],
       [ "bookplate", 7 ],
       [ "football_armor", 15 ],
-      [ "ballistic_vest_light_pouches", 15 ],
-      [ "ballistic_vest_light_operator", 15 ],
       [ "ballistic_vest_light", 15 ],
       [ "vest_jean", 3 ],
       [ "vest_jean_mod", 2 ],
@@ -502,12 +499,9 @@
       [ "pants_cargo", 15 ],
       [ "pants_army", 10 ],
       [ "winter_pants_army", 2 ],
-      [ "technician_pants_gray", 15 ],
       [ "jeans", 20 ],
       [ "jeans_mod", 10 ],
-      [ "jeans_red", 5 ],
       [ "motorbike_pants", 10 ],
-      [ "survivor_adhoc_leather_pants", 15 ],
       [ "pants_faux_fur", 5 ],
       [ "pants_ski", 5 ],
       [ "pants", 5 ]
@@ -524,8 +518,6 @@
       [ "technician_shirt_gray", 5 ],
       [ "rashguard", 15 ],
       [ "wetsuit_jacket", 5 ],
-      [ "survivor_adhoc_leather_shirt", 10 ],
-      [ "cloth_shirt_padded", 15 ],
       [ "combat_shirt", 5 ],
       [ "fencing_jacket", 1 ]
     ]

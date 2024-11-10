@@ -634,7 +634,7 @@
         ]
       },
       "male": { "entries": [ { "item": "boxer_shorts" }, { "item": "jeans" } ] },
-      "female": { "entries": [ { "item": "bra" }, { "item": "panties" }, { "item": "skinny_jeans" } ] }
+      "female": { "entries": [ { "item": "bra" }, { "item": "panties" }, { "item": "jeans_skinny" } ] }
     }
   },
   {
@@ -661,7 +661,7 @@
         ]
       },
       "male": { "entries": [ { "item": "boxer_shorts" }, { "item": "jeans" } ] },
-      "female": { "entries": [ { "item": "bra" }, { "item": "panties" }, { "item": "skinny_jeans" } ] }
+      "female": { "entries": [ { "item": "bra" }, { "item": "panties" }, { "item": "jeans_skinny" } ] }
     }
   },
   {
@@ -3092,7 +3092,7 @@
         ]
       },
       "male": { "entries": [ { "item": "boxer_shorts" }, { "item": "jeans" } ] },
-      "female": { "entries": [ { "item": "panties" }, { "item": "bra" }, { "item": "skinny_jeans" } ] }
+      "female": { "entries": [ { "item": "panties" }, { "item": "bra" }, { "item": "jeans_skinny" } ] }
     }
   },
   {
@@ -5051,7 +5051,7 @@
       "both": {
         "entries": [
           { "item": "hoodie" },
-          { "item": "skinny_jeans" },
+          { "item": "jeans_skinny" },
           { "item": "socks" },
           { "item": "elbow_pads" },
           { "item": "knee_pads" },
@@ -5083,7 +5083,7 @@
       "both": {
         "entries": [
           { "item": "hoodie" },
-          { "item": "skinny_jeans" },
+          { "item": "jeans_skinny" },
           { "item": "socks" },
           { "item": "elbow_pads" },
           { "item": "knee_pads" },
@@ -5138,7 +5138,7 @@
         ]
       },
       "male": { "entries": [ { "item": "briefs" }, { "item": "jeans" } ] },
-      "female": { "entries": [ { "item": "boy_shorts" }, { "item": "skinny_jeans" } ] }
+      "female": { "entries": [ { "item": "boy_shorts" }, { "item": "jeans_skinny" } ] }
     },
     "age_lower": 16,
     "age_upper": 18
@@ -5489,7 +5489,7 @@
       "both": {
         "entries": [
           { "item": "shorts_cargo" },
-          { "item": "technician_shirt_gray" },
+          { "item": "longshirt" },
           { "item": "socks" },
           { "item": "boots" },
           { "item": "hat_boonie" },
@@ -5654,7 +5654,7 @@
         ]
       },
       "male": { "entries": [ { "item": "boxer_shorts" }, { "item": "jeans" } ] },
-      "female": { "entries": [ { "item": "bra" }, { "item": "boy_shorts" }, { "item": "skinny_jeans" } ] }
+      "female": { "entries": [ { "item": "bra" }, { "item": "boy_shorts" }, { "item": "jeans_skinny" } ] }
     }
   },
   {
@@ -6266,7 +6266,7 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "technician_shirt_gray" },
+          { "item": "longshirt" },
           { "item": "socks" },
           { "item": "gloves_medical" },
           { "item": "multitool" },
@@ -6302,7 +6302,7 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "technician_shirt_gray" },
+          { "item": "longshirt" },
           { "item": "socks" },
           { "item": "gloves_medical" },
           { "item": "wristwatch" },
@@ -6411,7 +6411,7 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "technician_shirt_gray" },
+          { "item": "longshirt" },
           { "item": "jeans" },
           { "item": "socks" },
           { "item": "sneakers" },
@@ -6576,7 +6576,7 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "technician_shirt_gray" },
+          { "item": "dress_shirt" },
           { "item": "cleansuit" },
           { "item": "socks" },
           { "item": "gloves_rubber" },
@@ -6707,8 +6707,8 @@
           { "item": "tank_top" }
         ]
       },
-      "male": { "entries": [ { "item": "briefs" }, { "item": "shorts" } ] },
-      "female": { "entries": [ { "item": "sports_bra" }, { "item": "panties" }, { "item": "cheerleader_skirt" } ] }
+      "male": { "entries": [ { "item": "briefs" }, { "item": "shorts" }, { "item": "tank_top" }, { "item": "sweater" } ] },
+      "female": { "entries": [ { "item": "sports_bra" }, { "item": "panties" }, { "item": "cheerleader_dress" }, { "item": "jacket_varsity" } ] }
     },
     "missions": [ "MISSION_SOCIAL_BUTTERFLY" ],
     "age_lower": 16,
@@ -6732,10 +6732,10 @@
       },
       "male": {
         "entries": [
-          { "item": "flag_shirt" },
+          { "item": "undershirt" },
           { "item": "sneakers" },
-          { "item": "flag_swimsuit" },
-          { "item": "pants" }
+          { "item": "flag_jumpsuit" },
+          { "item": "briefs" }
         ]
       },
       "female": {
@@ -6867,7 +6867,7 @@
     "items": {
       "both": { "entries": [ { "item": "goggles_swim" }, { "item": "swim_cap" } ] },
       "male": { "entries": [ { "item": "speedo" } ] },
-      "female": { "entries": [ { "item": "flag_swimsuit" } ] }
+      "female": { "entries": [ { "item": "bikini_top" }, { "item": "bikini_bottom" } ] }
     },
     "proficiencies": [ "prof_athlete_basic" ]
   },
@@ -6900,7 +6900,7 @@
       "male": {
         "entries": [ { "item": "trunks" }, { "item": "swim_briefs" }, { "item": "rashguard" } ]
       },
-      "female": { "entries": [ { "item": "flag_swimsuit" } ] }
+      "female": { "entries": [ { "item": "bikini_top" }, { "item": "bikini_bottom" } ] }
     }
   },
   {
@@ -7150,7 +7150,7 @@
           { "item": "socks" },
           { "item": "sneakers" },
           { "item": "hoodie" },
-          { "item": "tshirt" },
+          { "item": "longshirt" },
           { "item": "crowbar" },
           { "item": "camera_bag" },
           { "item": "slingpack" },
@@ -7262,7 +7262,7 @@
         ]
       },
       "male": { "entries": [ { "item": "boxer_shorts" }, { "item": "jeans" } ] },
-      "female": { "entries": [ { "item": "panties" }, { "item": "bra" }, { "item": "skinny_jeans" } ] }
+      "female": { "entries": [ { "item": "panties" }, { "item": "bra" }, { "item": "jeans_skinny" } ] }
     }
   },
   {

@@ -88,7 +88,6 @@
       { "item": "knife_baselard", "prob": 2 },
       { "item": "gambeson", "prob": 3 },
       { "item": "tunic", "prob": 1 },
-      { "item": "armor_lamellar", "prob": 2 },
       { "item": "armor_junk_lightplate", "prob": 1 },
       { "item": "cuirass_lightplate", "prob": 2 },
       { "item": "armguard_lightplate", "prob": 1 },

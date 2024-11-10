@@ -21,7 +21,6 @@
     "id": "metal_workshop",
     "type": "item_group",
     "items": [
-      { "group": "tools_blacksmith", "prob": 50 },
       { "group": "supplies_metal", "prob": 40 },
       [ "welding_book", 5 ],
       [ "mag_fabrication", 15 ],
