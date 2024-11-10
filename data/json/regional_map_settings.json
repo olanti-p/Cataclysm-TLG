@@ -30,11 +30,11 @@
     "region_terrain_and_furniture": {
       "terrain": {
         "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 4000, "t_dirt": 2000 },
-        "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 4 },
-        "t_region_groundcover_forest": { "t_forestfloor": 10, "t_grass": 1, "t_grass_long": 1, "t_moss": 1, "t_grass_dead": 3 },
-        "t_region_groundcover_swamp": { "t_grass_long": 300, "t_grass_tall": 100, "t_moss": 200, "t_dirt": 200, "t_grass_dead": 100 },
+        "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 6, "t_dirt": 1 },
+        "t_region_groundcover_forest": { "t_forestfloor": 20, "t_grass": 1, "t_grass_long": 1, "t_moss": 1, "t_grass_dead": 4 },
+        "t_region_groundcover_swamp": { "t_grass_long": 300, "t_grass_tall": 100, "t_moss": 200, "t_dirt": 200, "t_grass_dead": 110 },
         "t_region_groundcover_barren": { "t_dirt": 30, "t_grass_dead": 2, "t_railroad_rubble": 1 },
-        "t_region_grass": { "t_grass": 20, "t_grass_dead": 1, "t_dirt": 1 },
+        "t_region_grass": { "t_grass": 20, "t_grass_dead": 10, "t_dirt": 2 },
         "t_region_soil": { "t_dirt": 1 },
         "t_region_shrub_forest_dense": {
           "t_underbrush": 30,
@@ -85,7 +85,7 @@
           "t_tree_plum": 2,
           "t_tree_sycamore": 1,
           "t_tree_sassafras": 1,
-          "t_region_tree_dead": 72
+          "t_region_tree_dead": 86
         },
         "t_region_tree_forest_other": {
           "t_tree_willow": 15,
@@ -104,7 +104,9 @@
           "t_tree_elderberry": 10,
           "t_tree_mulberry": 10,
           "t_tree_sassafras": 2,
-          "t_tree_juniper": 5
+          "t_tree_juniper": 5,
+          "t_tree_dead": 20,
+          "t_tree_very_dead": 8
         },
         "t_region_tree_forest": { "t_region_tree_forest_dense": 2, "t_region_tree_forest_other": 1 },
         "t_region_tree": {
@@ -142,9 +144,9 @@
           "t_tree_elderberry": 2,
           "t_tree_mulberry": 2,
           "t_tree_sassafras": 3,
-          "t_tree_deadpine": 90,
-          "t_tree_very_dead": 20,
-          "t_region_tree_dead": 148
+          "t_tree_deadpine": 120,
+          "t_tree_very_dead": 60,
+          "t_region_tree_dead": 184
         },
         "t_region_tree_shade": {
           "t_tree": 64,
@@ -166,8 +168,8 @@
           "t_tree_elderberry": 2,
           "t_tree_mulberry": 2,
           "t_tree_sassafras": 3,
-          "t_tree_very_dead": 12,
-          "t_tree_dead": 128
+          "t_tree_very_dead": 36,
+          "t_tree_dead": 168
         },
         "t_region_tree_fruit": {
           "t_tree_young": 4,
@@ -180,20 +182,20 @@
           "t_tree_plum": 2,
           "t_tree_elderberry": 2,
           "t_tree_mulberry": 2,
-          "t_tree_dead": 24,
-          "t_tree_very_dead": 8
+          "t_tree_dead": 45,
+          "t_tree_very_dead": 16
         },
         "t_region_tree_dead": {
           "t_tree_dead": 40,
-          "t_tree_deadpine": 28,
+          "t_tree_deadpine": 30,
           "t_tree_hickory_dead": 8,
-          "t_tree_very_dead": 12,
+          "t_tree_very_dead": 18,
           "t_tree_dead_warped": 1,
           "t_tree_deadpine_warped": 1
         },
         "t_region_tree_nut": {
           "t_tree_hickory": 16,
-          "t_tree_hickory_dead": 16,
+          "t_tree_hickory_dead": 32,
           "t_tree_walnut": 8,
           "t_tree_butternut": 4,
           "t_tree_chestnut": 8,
@@ -201,10 +203,10 @@
           "t_tree_beech": 2,
           "t_tree_hazelnut": 2,
           "t_tree_coffee": 2,
-          "t_tree_dead": 24,
+          "t_tree_dead": 46,
           "t_tree_very_dead": 16
         },
-        "t_region_tree_evergreen": { "t_tree_pine": 32, "t_tree_hemlock": 28, "t_tree_juniper": 16, "t_tree_deadpine": 18 }
+        "t_region_tree_evergreen": { "t_tree_pine": 32, "t_tree_hemlock": 28, "t_tree_juniper": 16, "t_tree_deadpine": 48 }
       },
       "furniture": {
         "f_region_flower": {
@@ -761,9 +763,9 @@
           "mx_nest_wasp": 50,
           "mx_mass_grave": 50,
           "mx_grave": 50,
-          "mx_Trapdoor_spider_den": 40,
+          "mx_Trapdoor_spider_den": 50,
           "mx_collegekids": 30,
-          "mx_drugdeal": 30,
+          "mx_drugdeal": 10,
           "mx_corpses": 30,
           "mx_toxic_waste": 10,
           "mx_portal": 10,
@@ -783,9 +785,9 @@
           "mx_roadblock": 830,
           "mx_roadblock_mil": 170,
           "mx_bandits_block": 800,
-          "mx_drugdeal": 300,
+          "mx_drugdeal": 100,
           "mx_portal": 50,
-          "mx_crater": 100,
+          "mx_crater": 120,
           "mx_portal_in": 40,
           "mx_roadworks": 1000,
           "mx_mayhem": 500,
@@ -1330,11 +1332,12 @@
     },
     "weather": {
       "base_temperature": 6.5,
-      "base_humidity": 70.0,
-      "base_pressure": 1015.0,
-      "base_wind": 3.4,
-      "base_wind_distrib_peaks": 80,
-      "base_wind_season_variation": 50
+      "base_humidity": 74.0,
+      "base_pressure": 1008.0,
+      "summer_temp_manual_mod": 2,
+      "base_wind": 6.4,
+      "base_wind_distrib_peaks": 90,
+      "base_wind_season_variation": 40
     },
     "overmap_feature_flag_settings": { "clear_blacklist": false, "blacklist": [  ], "clear_whitelist": false, "whitelist": [  ] }
   }
