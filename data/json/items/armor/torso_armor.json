@@ -1105,16 +1105,6 @@
     ]
   },
   {
-    "id": "vest_leather_mod_ch",
-    "type": "ARMOR",
-    "name": { "str": "hardened armored leather vest" },
-    "description": "An armored vest made from thick leather and metal plates which have been hardened for superb protection.",
-    "price_postapoc": 2000,
-    "copy-from": "vest_leather_mod",
-    "looks_like": "vest_leather_mod",
-    "replace_materials": { "lc_steel": "ch_steel" }
-  },
-  {
     "id": "armor_light_chestplate",
     "type": "ARMOR",
     "category": "armor",
