@@ -98,9 +98,7 @@
       { "id": "hammer_sledge_from_scratch", "description": " Craft: Hammer, Sledge" },
       { "id": "ch_wire", "description": " Craft: Hardened Steel, Wire" },
       { "id": "welding_rod_steel", "description": " Craft: Steel Welding Rod" },
-      { "id": "mc_wire", "description": " Craft: Medium Steel, Wire" },
-      { "id": "chain_link_fabrication", "description": " Craft: Steel, Link" },
-      { "id": "link_sheet_fabrication", "description": " Craft: Steel, Link Sheet" }
+      { "id": "mc_wire", "description": " Craft: Medium Steel, Wire" }
     ]
   },
   {

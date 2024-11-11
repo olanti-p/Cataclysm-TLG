@@ -622,9 +622,7 @@
       { "id": "rebar", "description": " Craft: Rebar" },
       { "id": "gold_ring", "description": " Craft: Gold Ring" },
       { "id": "hammer_sledge_from_scratch", "description": " Craft: Hammer, Sledge" },
-      { "id": "ch_wire", "description": " Craft: Hardened Steel, Wire" },
-      { "id": "chain_link_fabrication", "description": " Craft: Steel, Link" },
-      { "id": "link_sheet_fabrication", "description": " Craft: Steel, Link Sheet" }
+      { "id": "ch_wire", "description": " Craft: Hardened Steel, Wire" }
     ]
   },
   {

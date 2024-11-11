@@ -1454,6 +1454,20 @@ conditional_t::func f_is_underwater( bool is_npc )
     };
 }
 
+conditional_t::func f_is_on_land( bool is_npc )
+{
+    return [is_npc]( dialogue const & d ) {
+        return get_map().has_floor( d.actor( is_npc )->pos() );
+    };
+}
+
+conditional_t::func f_is_on_liquid( bool is_npc )
+{
+    return [is_npc]( dialogue const & d ) {
+        return !get_map().is_dry( d.actor( is_npc )->pos() );
+    };
+}
+
 conditional_t::func f_one_in_chance( const JsonObject &jo, std::string_view member )
 {
     dbl_or_var dov = get_dbl_or_var( jo, member );
@@ -2436,6 +2450,8 @@ parsers_simple = {
     {"u_is_outside", "is_outside", &conditional_fun::f_is_outside },
     {"u_is_outside", "npc_is_outside", &conditional_fun::f_is_outside },
     {"u_is_underwater", "npc_is_underwater", &conditional_fun::f_is_underwater },
+    {"u_is_on_land", "npc_is_on_land", &conditional_fun::f_is_on_land },
+    {"u_is_on_liquid", "npc_is_on_liquid", &conditional_fun::f_is_on_liquid },
     {"u_has_camp", &conditional_fun::f_u_has_camp },
     {"u_has_pickup_list", "has_pickup_list", &conditional_fun::f_has_pickup_list },
     {"u_has_pickup_list", "npc_has_pickup_list", &conditional_fun::f_has_pickup_list },

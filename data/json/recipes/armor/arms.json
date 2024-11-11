@@ -612,7 +612,7 @@
     "using": [ [ "tailoring_leather", 2 ] ]
   },
   {
-    "result": "chainmail_arms",
+    "result": "chainmail_sleeves",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -622,28 +622,25 @@
     "skills_required": [ [ "tailor", 2 ] ],
     "time": "840 m",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
-    "byproducts": [ [ "cotton_patchwork", 1 ], [ "scrap_cotton", 66 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 3 ], [ "tailoring_cotton_patchwork", 8 ] ],
+    "using": [ [ "armor_lc_chainmail_assembling", 3 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
     "proficiencies": [
       { "proficiency": "prof_chain_armour", "required": false, "time_multiplier": 3 },
-      { "proficiency": "prof_articulation", "required": false, "time_multiplier": 2, "skill_penalty": 0.15 }
+      { "proficiency": "prof_closures", "required": false, "time_multiplier": 2, "skill_penalty": 0.15 }
     ]
   },
   {
-    "result": "xs_chainmail_arms",
+    "result": "chainmail_sleeves_xs",
     "type": "recipe",
-    "copy-from": "chainmail_arms",
+    "copy-from": "chainmail_sleeves",
     "time": "840 m",
-    "byproducts": [ [ "cotton_patchwork", 1 ], [ "scrap_cotton", 49 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 2 ], [ "tailoring_cotton_patchwork", 6 ] ]
+    "using": [ [ "armor_lc_chainmail_assembling", 2 ], [ "strap_small", 2 ], [ "clasps", 4 ] ]
   },
   {
-    "result": "xl_chainmail_arms",
+    "result": "chainmail_sleeves_xl",
     "type": "recipe",
-    "copy-from": "chainmail_arms",
+    "copy-from": "chainmail_sleeves",
     "time": "945 m",
-    "byproducts": [ [ "cotton_patchwork", 3 ], [ "scrap_cotton", 86 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 4 ], [ "tailoring_cotton_patchwork", 11 ] ]
+    "using": [ [ "armor_lc_chainmail_assembling", 4 ], [ "strap_small", 8 ], [ "clasps", 4 ] ]
   },
   {
     "result": "armguard_bronze",
