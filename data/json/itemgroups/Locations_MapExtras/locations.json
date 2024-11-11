@@ -1092,7 +1092,6 @@
       { "item": "armor_samurai", "prob": 50, "damage": [ 2, 4 ] },
       { "item": "gambeson", "prob": 50, "damage": [ 2, 4 ] },
       { "item": "armor_cuirass", "prob": 25, "damage": [ 2, 4 ] },
-      { "item": "chainmail_junk_suit", "prob": 10, "damage": [ 2, 4 ] },
       { "item": "chainmail_junk_vest", "prob": 3, "damage": [ 2, 4 ] }
     ]
   },
@@ -1102,8 +1101,7 @@
     "items": [
       { "item": "legguard_lightplate", "prob": 30, "damage": [ 2, 4 ] },
       { "item": "legguard_metal", "prob": 10, "damage": [ 2, 4 ] },
-      { "item": "legguard_bronze", "prob": 20, "damage": [ 2, 4 ] },
-      { "item": "chainmail_junk_legs", "prob": 10, "damage": [ 2, 4 ] }
+      { "item": "legguard_bronze", "prob": 20, "damage": [ 2, 4 ] }
     ]
   },
   {
@@ -1111,7 +1109,7 @@
     "id": "museum_armor_feet",
     "items": [
       { "item": "boots_plate", "prob": 60, "damage": [ 2, 4 ] },
-      { "item": "chainmail_junk_feet", "prob": 40, "damage": [ 2, 4 ] }
+      { "item": "chainmail_junk_chausses", "prob": 10, "damage": [ 2, 4 ] }
     ]
   },
   {
@@ -1123,7 +1121,7 @@
       { "item": "helmet_kabuto", "prob": 50, "damage": [ 2, 4 ] },
       { "item": "helmet_nasal", "prob": 50, "damage": [ 2, 4 ] },
       { "item": "helmet_galea", "prob": 40, "damage": [ 2, 4 ] },
-      { "item": "chainmail_junk_hood", "prob": 30, "damage": [ 2, 4 ] }
+      { "item": "chainmail_junk_coif", "prob": 30, "damage": [ 2, 4 ] }
     ]
   },
   {
@@ -1132,8 +1130,8 @@
     "items": [
       { "item": "armguard_lightplate", "prob": 30, "damage": [ 2, 4 ] },
       { "item": "gloves_plate", "prob": 60, "damage": [ 2, 4 ] },
-      { "item": "chainmail_junk_arms", "prob": 30, "damage": [ 2, 4 ] },
-      { "item": "chainmail_junk_hands", "prob": 30, "damage": [ 2, 4 ] }
+      { "item": "chainmail_junk_sleeves", "prob": 30, "damage": [ 2, 4 ] },
+      { "item": "chainmail_junk_gloves", "prob": 30, "damage": [ 2, 4 ] }
     ]
   },
   {

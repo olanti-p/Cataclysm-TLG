@@ -2355,7 +2355,7 @@
     "using": [ [ "tailoring_nylon_patchwork", 16 ], [ "tailoring_neoprene_patchwork", 10 ] ]
   },
   {
-    "result": "chainmail_hood",
+    "result": "chainmail_coif",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -2366,22 +2366,22 @@
     "reversible": true,
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
     "using": [ [ "chainmail_standard", 2 ] ],
-    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 50 ] ], [ [ "wire", 1 ] ], [ [ "cotton_patchwork", 4 ] ] ],
+    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 50 ] ], [ [ "wire", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" } ]
   },
   {
-    "result": "xl_chainmail_hood",
+    "result": "chainmail_coif_xl",
     "type": "recipe",
-    "copy-from": "chainmail_hood",
+    "copy-from": "chainmail_coif",
     "time": "3 h 20 m",
     "using": [ [ "chainmail_standard", 4 ] ],
-    "components": [ [ [ "link_sheet", 3 ] ], [ [ "chain_link", 75 ] ], [ [ "wire", 2 ] ], [ [ "cotton_patchwork", 6 ] ] ]
+    "components": [ [ [ "link_sheet", 3 ] ], [ [ "chain_link", 75 ] ], [ [ "wire", 2 ] ] ]
   },
   {
-    "result": "xs_chainmail_hood",
+    "result": "chainmail_coif_xl",
     "type": "recipe",
-    "copy-from": "chainmail_hood",
-    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 50 ] ], [ [ "wire", 2 ] ], [ [ "cotton_patchwork", 4 ] ] ]
+    "copy-from": "chainmail_coif",
+    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 50 ] ], [ [ "wire", 2 ] ] ]
   },
   {
     "result": "pot_xlhelmet",
@@ -2756,35 +2756,6 @@
     "components": [ [  ] ]
   },
   {
-    "result": "chainmail_face",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "skill_used": "fabrication",
-    "difficulty": 7,
-    "time": "3 h",
-    "reversible": true,
-    "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_weparabic", 6 ] ],
-    "using": [ [ "chainmail_standard", 2 ] ],
-    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 30 ] ], [ [ "wire", 1 ] ], [ [ "cotton_patchwork", 3 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_chain_armour" } ]
-  },
-  {
-    "result": "xl_chainmail_face",
-    "type": "recipe",
-    "copy-from": "chainmail_face",
-    "time": "3 h 20 m",
-    "using": [ [ "chainmail_standard", 4 ] ],
-    "components": [ [ [ "link_sheet", 3 ] ], [ [ "chain_link", 50 ] ], [ [ "wire", 2 ] ], [ [ "cotton_patchwork", 5 ] ] ]
-  },
-  {
-    "result": "xs_chainmail_face",
-    "type": "recipe",
-    "copy-from": "chainmail_face",
-    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 30 ] ], [ [ "wire", 2 ] ], [ [ "cotton_patchwork", 3 ] ] ]
-  },
-  {
     "result": "chainmail_aventail",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
@@ -2796,22 +2767,22 @@
     "reversible": true,
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_weparabic", 6 ] ],
     "using": [ [ "chainmail_standard", 2 ] ],
-    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 40 ] ], [ [ "wire", 1 ] ], [ [ "cotton_patchwork", 3 ] ] ],
+    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 40 ] ], [ [ "wire", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" } ]
   },
   {
-    "result": "xl_chainmail_aventail",
+    "result": "chainmail_aventail_xl",
     "type": "recipe",
     "copy-from": "chainmail_aventail",
     "time": "3 h 20 m",
     "using": [ [ "chainmail_standard", 4 ] ],
-    "components": [ [ [ "link_sheet", 3 ] ], [ [ "chain_link", 60 ] ], [ [ "wire", 2 ] ], [ [ "cotton_patchwork", 5 ] ] ]
+    "components": [ [ [ "link_sheet", 3 ] ], [ [ "chain_link", 60 ] ], [ [ "wire", 2 ] ] ]
   },
   {
-    "result": "xs_chainmail_aventail",
+    "result": "chainmail_aventail_xs",
     "type": "recipe",
     "copy-from": "chainmail_aventail",
-    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 40 ] ], [ [ "wire", 2 ] ], [ [ "cotton_patchwork", 3 ] ] ]
+    "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 40 ] ], [ [ "wire", 2 ] ] ]
   },
   {
     "result": "steel_facemask",

@@ -370,110 +370,6 @@
     "armor": [ { "encumbrance": 20, "coverage": 80, "covers": [ "torso" ] } ]
   },
   {
-    "id": "chainmail_vest",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "chainmail vest" },
-    "description": "A steel chainmail vest.  It's a sleeveless piece of chainmail with small straps designed to better distribute the weight.",
-    "weight": "6894 g",
-    "volume": "1 L",
-    "longest_side": "10 cm",
-    "price": 10000,
-    "price_postapoc": 2000,
-    "to_hit": -1,
-    "material": [ "steel" ],
-    "symbol": "[",
-    "looks_like": "vest_leather",
-    "color": "light_red",
-    "warmth": 0,
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "9350 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      }
-    ],
-    "armor": [
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 14
-      },
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 50,
-        "encumbrance": 0
-      },
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
-        "coverage": 50,
-        "encumbrance": 0
-      }
-    ]
-  },
-  {
-    "id": "xl_chainmail_vest",
-    "type": "ARMOR",
-    "name": { "str": "XL chainmail vest" },
-    "copy-from": "chainmail_vest",
-    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "10500 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      }
-    ],
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_chainmail_vest",
-    "type": "ARMOR",
-    "copy-from": "chainmail_vest",
-    "name": { "str": "XS chainmail vest" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "7000 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      }
-    ],
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "chainmail_junk_vest",
-    "copy-from": "chainmail_vest",
-    "replace_materials": { "steel": "budget_steel_chain" },
-    "type": "ARMOR",
-    "name": { "str": "chainmail vest" },
-    "description": "A customized chainmail vest.  The metal shows signs of rust and corrosion.  It's a sleeveless piece of chainmail with small straps designed to better distribute the weight."
-  },
-  {
     "id": "cloth_shirt_padded",
     "type": "ARMOR",
     "category": "armor",
@@ -1368,7 +1264,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "mirror armor", "str_pl": "sets of mirror armor" },
-    "description": "Mirror armor is either round or square plates connected by fasteners to cover all four sides of the vital areas of the torso, mirror plate was usually worn on top of other armor like chainmail or brigandines.",
+    "description": "Broad steel plates have been fitted onto a leather vest, providing a fair amount of protection to the body.  The design was once popular throughout Asia and the Middle East, and might work best over chainmail or cloth armor.",
     "weight": "1000 g",
     "volume": "2 L",
     "price": 20000,
@@ -1380,7 +1276,7 @@
     "color": "light_gray",
     "warmth": 20,
     "longest_side": "60 cm",
-    "flags": [ "VARSIZE", "OUTER", "STURDY", "ABLATIVE_CHAINMAIL_TORSO", "EXTRA_PLATING" ],
+    "flags": [ "VARSIZE", "OUTER", "STURDY" ],
     "armor": [
       {
         "encumbrance": 5,
@@ -1411,5 +1307,162 @@
     "name": { "str": "XS mirror armor", "str_pl": "sets of XS mirror armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "chainmail_vest",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "chainmail vest" },
+    "description": "Armor made of countless links of steel wire woven into the shape of a vest.  It's flexible enough to fit under outerwear, and can be adjusted for a looser fit.",
+    "weight": "6894 g",
+    "volume": "1 L",
+    "longest_side": "10 cm",
+    "price": 10000,
+    "price_postapoc": 2000,
+    "to_hit": -1,
+    "material": [ "lc_steel_chain" ],
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "light_red",
+    "warmth": 0,
+    "flags": [ "STURDY" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_vest_loose",
+      "menu_text": "Loosen"
+    },
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 90,
+        "encumbrance": 4
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": 5
+      }
+    ]
+  },
+  {
+    "id": "chainmail_vest_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL chainmail vest" },
+    "copy-from": "chainmail_vest",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_vest_loose_xl",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "chainmail_vest_xs",
+    "type": "ARMOR",
+    "copy-from": "chainmail_vest",
+    "name": { "str": "XS chainmail vest" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_vest_loose_xl",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "chainmail_vest_loose",
+    "type": "ARMOR",
+    "copy-from": "chainmail_vest",
+    "name": { "str": "chainmail vest (loose)" },
+    "description": "Armor made of countless links of steel wire woven into the shape of a vest.  It's lightweight enough to fit under outerwear, and can be adjusted for a closer fit.",
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_vest",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "OUTER" ] }
+  },
+  {
+    "id": "chainmail_vest_loose_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL chainmail vest (loose)" },
+    "copy-from": "chainmail_vest_loose",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_vest_xl",
+      "menu_text": "Tighten"
+    },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "chainmail_vest_loose_xs",
+    "type": "ARMOR",
+    "copy-from": "chainmail_vest_loose",
+    "name": { "str": "XS chainmail vest (loose)" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_vest_xs",
+      "menu_text": "Tighten"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "chainmail_junk_vest",
+    "copy-from": "chainmail_vest",
+    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "type": "ARMOR",
+    "name": { "str": "chainmail vest" },
+    "description": "A vest made of countless links of low-quality steel chain.  It's lightweight enough to fit under outerwear, and can be adjusted for a closer fit.",
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_junk_vest_loose",
+      "menu_text": "Loosen"
+    }
+  },
+  {
+    "id": "chainmail_junk_vest_loose",
+    "copy-from": "chainmail_junk_vest",
+    "type": "ARMOR",
+    "name": { "str": "chainmail vest (loose)" },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_junk_vest",
+      "menu_text": "Tighten"
+    }
   }
 ]

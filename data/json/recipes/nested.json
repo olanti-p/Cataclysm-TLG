@@ -955,19 +955,7 @@
     "name": "chain hauberks",
     "description": "Recipes related to constructing chainmail hauberks in various sizes.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "chainmail_hauberk", "chainmail_hauberk_xs", "xl_chainmail_hauberk" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_all_chainmail_hauberk",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_SUIT",
-    "name": "steel chain hauberks",
-    "description": "Recipes related to fitting together chainmail armor to make chainmail hauberks in various types and sizes.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "nested_chainmail_hauberk" ],
+    "nested_category_data": [ "chainmail_hauberk", "chainmail_hauberk_xs", "chainmail_hauberk_xl" ],
     "difficulty": 1
   },
   {
@@ -977,9 +965,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "mild steel chain suits",
-    "description": "Recipes related to constructing chainmail suits in various sizes.",
+    "description": "Recipes related to constructing full-body chainmail suits in various sizes.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "chainmail_suit", "chainmail_suit_xs", "xl_chainmail_suit" ],
+    "nested_category_data": [ "chainmail_suit", "chainmail_suit_xs", "chainmail_suit_xl" ],
     "difficulty": 1
   },
   {
@@ -988,10 +976,10 @@
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "faraday chain suits",
-    "description": "Recipes related to constructing chainmail suits that resist electricity.",
+    "name": "Faraday chain suits",
+    "description": "Recipes related to constructing full-body chainmail suits that resist electricity.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "chainmail_suit_faraday", "chainmail_suit_faraday_xs", "xl_chainmail_suit_faraday" ],
+    "nested_category_data": [ "chainmail_suit_faraday", "chainmail_suit_faraday_xs", "chainmail_suit_faraday_xl" ],
     "difficulty": 6
   },
   {
@@ -1000,10 +988,10 @@
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
-    "name": "steel chain suits",
-    "description": "Recipes related to constructing chainmail suits in various types and sizes.",
+    "name": "chainmail suit assembly",
+    "description": "Recipes related to combining chainmail items into suits.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "nested_chainmail_suit" ],
+    "nested_category_data": [ "nested_chainmail_suit", "nested_chainmail_suit_faraday", "nested_chainmail_hauberk" ],
     "difficulty": 1
   },
   {
@@ -1642,28 +1630,16 @@
     "difficulty": 5
   },
   {
-    "id": "nested_chainmail_hood",
+    "id": "nested_chainmail_coif",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain coifs",
-    "description": "Recipes related to constructing various sizes of chainmail hoods designed to protect the wearer.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "chainmail_hood", "xl_chainmail_hood", "xs_chainmail_hood" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_all_chainmail_hood",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
     "name": "steel chain coifs",
-    "description": "Recipes related to constructing various types and sizes of chainmail hoods designed to protect the wearer.",
+    "description": "Recipes related to constructing various sizes of chainmail hoods.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "nested_chainmail_hood" ],
-    "difficulty": 7
+    "nested_category_data": [ "chainmail_coif", "chainmail_coif_xl", "chainmail_coif_xs" ],
+    "difficulty": 1
   },
   {
     "id": "nested_mask_gas",
@@ -1768,64 +1744,16 @@
     "difficulty": 6
   },
   {
-    "id": "nested_lc_chainmail_vest",
+    "id": "nested_chainmail_vest",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain vest",
+    "name": "steel chain vest",
     "description": "Recipes related to constructing various sizes of chainmail vests.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_vest", "xs_lc_chainmail_vest", "xl_lc_chainmail_vest" ],
+    "nested_category_data": [ "chainmail_vest", "chainmail_vest_xs", "chainmail_vest_xl" ],
     "difficulty": 1
-  },
-  {
-    "id": "nested_mc_chainmail_vest",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain vest",
-    "description": "Recipes related to constructing various sizes of chainmail vests.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_vest", "xs_mc_chainmail_vest", "xl_mc_chainmail_vest" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_vest",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain vest",
-    "description": "Recipes related to constructing various sizes of chainmail vests.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_vest", "xs_hc_chainmail_vest", "xl_hc_chainmail_vest" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_vest",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain vest",
-    "description": "Recipes related to constructing various sizes of chainmail vests.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_vest", "xs_ch_chainmail_vest", "xl_ch_chainmail_vest" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_chainmail_vest",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain vest",
-    "description": "Recipes related to constructing various sizes of chainmail vests.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_vest", "xs_qt_chainmail_vest", "xl_qt_chainmail_vest" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_chainmail_vest",
@@ -1837,11 +1765,7 @@
     "description": "Recipes related to constructing various sizes of chainmail vests.",
     "skill_used": "fabrication",
     "nested_category_data": [
-      "nested_lc_chainmail_vest",
-      "nested_mc_chainmail_vest",
-      "nested_hc_chainmail_vest",
-      "nested_ch_chainmail_vest",
-      "nested_qt_chainmail_vest"
+      "nested_chainmail_vest"
     ],
     "difficulty": 7
   },
@@ -2034,142 +1958,18 @@
     "difficulty": 1
   },
   {
-    "id": "nested_lc_chainmail_hands",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain gloves",
-    "description": "Recipes related to constructing various sizes of chain gloves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_hands", "xs_lc_chainmail_hands", "xl_lc_chainmail_hands" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_mc_chainmail_hands",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain gloves",
-    "description": "Recipes related to constructing various sizes of chain gloves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_hands", "xs_mc_chainmail_hands", "xl_mc_chainmail_hands" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_hands",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain gloves",
-    "description": "Recipes related to constructing various sizes of chain gloves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_hands", "xs_hc_chainmail_hands", "xl_hc_chainmail_hands" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_hands",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain gloves",
-    "description": "Recipes related to constructing various sizes of chain gloves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_hands", "xs_ch_chainmail_hands", "xl_ch_chainmail_hands" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_chainmail_hands",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain gloves",
-    "description": "Recipes related to constructing various sizes of chain gloves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_hands", "xs_qt_chainmail_hands", "xl_qt_chainmail_hands" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_chainmail_hands",
+    "id": "nested_all_chainmail_gloves",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
-    "name": "steel chain gloves",
-    "description": "Recipes related to constructing various types and sizes of chain gloves.",
+    "name": "chainmail gloves",
+    "description": "Recipes related to constructing various sizes of chain gloves.",
     "skill_used": "fabrication",
     "nested_category_data": [
-      "nested_lc_chainmail_hands",
-      "nested_mc_chainmail_hands",
-      "nested_hc_chainmail_hands",
-      "nested_ch_chainmail_hands",
-      "nested_qt_chainmail_hands"
+      "chainmail_gloves", "chainmail_gloves_xs", "chainmail_gloves_xl"
     ],
     "difficulty": 7
-  },
-  {
-    "id": "nested_lc_chainmail_arms",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain sleeves",
-    "description": "Recipes related to constructing various sizes of chain sleeves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_arms", "xs_lc_chainmail_arms", "xl_lc_chainmail_arms" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_mc_chainmail_arms",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain sleeves",
-    "description": "Recipes related to constructing various sizes of chain sleeves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_arms", "xs_mc_chainmail_arms", "xl_mc_chainmail_arms" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_arms",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain sleeves",
-    "description": "Recipes related to constructing various sizes of chain sleeves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_arms", "xs_hc_chainmail_arms", "xl_hc_chainmail_arms" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_arms",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain sleeves",
-    "description": "Recipes related to constructing various sizes of chain sleeves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_arms", "xs_ch_chainmail_arms", "xl_ch_chainmail_arms" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_chainmail_arms",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain sleeves",
-    "description": "Recipes related to constructing various sizes of chain sleeves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_arms", "xs_qt_chainmail_arms", "xl_qt_chainmail_arms" ],
-    "difficulty": 5
   },
   {
     "id": "nested_all_chainmail_arms",
@@ -2177,15 +1977,11 @@
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_ARMS",
-    "name": "steel chain sleeves",
+    "name": "chainmail sleeves",
     "description": "Recipes related to constructing various sizes of chain sleeves.",
     "skill_used": "fabrication",
     "nested_category_data": [
-      "nested_lc_chainmail_arms",
-      "nested_mc_chainmail_arms",
-      "nested_hc_chainmail_arms",
-      "nested_ch_chainmail_arms",
-      "nested_qt_chainmail_arms"
+      "chainmail_sleeves", "chainmail_sleeves_xs", "chainmail_sleeves_xl"
     ],
     "difficulty": 7
   },
@@ -2226,158 +2022,40 @@
     "difficulty": 5
   },
   {
-    "id": "nested_lc_chainmail_legs",
+    "id": "nested_chainmail_chausses",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain legs",
+    "name": "steel chain chausses",
     "description": "Recipes related to constructing various sizes of chainmail leggings.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_legs", "xs_lc_chainmail_legs", "xl_lc_chainmail_legs" ],
+    "nested_category_data": [ "chainmail_chausses", "chainmail_chausses_xs", "chainmail_chausses_xl" ],
     "difficulty": 1
   },
   {
-    "id": "nested_mc_chainmail_legs",
+    "id": "nested_chainmail_skirts",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain legs",
-    "description": "Recipes related to constructing various sizes of chainmail leggings.",
+    "name": "chainmail skirts",
+    "description": "Recipes related to constructing various sizes chainmail skirts.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_legs", "xs_mc_chainmail_legs", "xl_mc_chainmail_legs" ],
-    "difficulty": 2
+    "nested_category_data": [ "chainmail_skirt", "chainmail_skirt_xs", "chainmail_skirt_xl" ],
+    "difficulty": 1
   },
   {
-    "id": "nested_hc_chainmail_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain legs",
-    "description": "Recipes related to constructing various sizes of chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_legs", "xs_hc_chainmail_legs", "xl_hc_chainmail_legs" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain legs",
-    "description": "Recipes related to constructing various sizes of chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_legs", "xs_ch_chainmail_legs", "xl_ch_chainmail_legs" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_chainmail_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain legs",
-    "description": "Recipes related to constructing various sizes of chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_legs", "xs_qt_chainmail_legs", "xl_qt_chainmail_legs" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_chainmail_legs",
+    "id": "nested_all_chainmail_legwear",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_LEGS",
-    "name": "steel chain legs",
-    "description": "Recipes related to constructing various sizes and types of chainmail leggings.",
+    "name": "chainmail legwear",
+    "description": "Recipes related to constructing various types and sizes of chainmail leg armor.",
     "skill_used": "fabrication",
     "nested_category_data": [
-      "nested_lc_chainmail_legs",
-      "nested_mc_chainmail_legs",
-      "nested_hc_chainmail_legs",
-      "nested_ch_chainmail_legs",
-      "nested_qt_chainmail_legs"
-    ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_lc_chainmail_half_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain half-legs",
-    "description": "Recipes related to constructing various sizes of partial chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_half_legs", "xs_lc_chainmail_half_legs", "xl_lc_chainmail_half_legs" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_mc_chainmail_half_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain half-legs",
-    "description": "Recipes related to constructing various sizes of partial chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_half_legs", "xs_mc_chainmail_half_legs", "xl_mc_chainmail_half_legs" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_half_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain half-legs",
-    "description": "Recipes related to constructing various sizes of partial chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_half_legs", "xs_hc_chainmail_half_legs", "xl_hc_chainmail_half_legs" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_half_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain half-legs",
-    "description": "Recipes related to constructing various sizes of partial chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_half_legs", "xs_ch_chainmail_half_legs", "xl_ch_chainmail_half_legs" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_chainmail_half_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain half-legs",
-    "description": "Recipes related to constructing various sizes of partial chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_half_legs", "xs_qt_chainmail_half_legs", "xl_qt_chainmail_half_legs" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_chainmail_half_legs",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_LEGS",
-    "name": "steel chain half-legs",
-    "description": "Recipes related to constructing various sizes and types of partial chainmail leggings.",
-    "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_chainmail_half_legs",
-      "nested_mc_chainmail_half_legs",
-      "nested_hc_chainmail_half_legs",
-      "nested_ch_chainmail_half_legs",
-      "nested_qt_chainmail_half_legs"
+      "nested_chainmail_chausses", "nested_chainmail_skirts"
     ],
     "difficulty": 7
   },
@@ -2488,84 +2166,6 @@
       "nested_boots_fsurvivor"
     ],
     "difficulty": 5
-  },
-  {
-    "id": "nested_lc_chainmail_feet",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain chausses",
-    "description": "Recipes related to constructing various sizes of chainmail chausses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_feet", "xs_lc_chainmail_feet", "xl_lc_chainmail_feet" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_mc_chainmail_feet",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain chausses",
-    "description": "Recipes related to constructing various sizes of chainmail chausses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_feet", "xs_mc_chainmail_feet", "xl_mc_chainmail_feet" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_feet",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain chausses",
-    "description": "Recipes related to constructing various sizes of chainmail chausses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_feet", "xs_hc_chainmail_feet", "xl_hc_chainmail_feet" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_feet",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain chausses",
-    "description": "Recipes related to constructing various sizes of chainmail chausses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_feet", "xs_ch_chainmail_feet", "xl_ch_chainmail_feet" ],
-    "difficulty": 4
-  },
-  {
-    "id": "nested_qt_chainmail_feet",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain chausses",
-    "description": "Recipes related to constructing various sizes of chainmail chausses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_feet", "xs_qt_chainmail_feet", "xl_qt_chainmail_feet" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_chainmail_feet",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_FEET",
-    "name": "steel chain chausses",
-    "description": "Recipes related to constructing various types and sizes of chainmail chausses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_chainmail_feet",
-      "nested_mc_chainmail_feet",
-      "nested_hc_chainmail_feet",
-      "nested_ch_chainmail_feet",
-      "nested_qt_chainmail_feet"
-    ],
-    "difficulty": 7
   },
   {
     "id": "nested_sling_ready_explosives",
@@ -5080,158 +4680,28 @@
     "difficulty": 7
   },
   {
-    "id": "nested_lc_chainmail_face",
+    "id": "nested_chainmail_aventail",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain partial aventails",
-    "description": "Recipes related to constructing various sizes of chainmail partial aventails designed to attach to a metal cap and provide extra face and neck protection.",
+    "name": "chainmail aventails",
+    "description": "Recipes related to constructing various sizes of chainmail neck protectors.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_face", "xl_lc_chainmail_face", "xs_lc_chainmail_face" ],
+    "nested_category_data": [ "chainmail_aventail", "chainmail_aventail_xs", "chainmail_aventail_xl" ],
     "difficulty": 1
   },
   {
-    "id": "nested_mc_chainmail_face",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain partial aventails",
-    "description": "Recipes related to constructing various sizes of chainmail partial aventails designed to attach to a metal cap and provide extra face and neck protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_face", "xl_mc_chainmail_face", "xs_mc_chainmail_face" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_face",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain partial aventails",
-    "description": "Recipes related to constructing various sizes of chainmail partial aventails designed to attach to a metal cap and provide extra face and neck protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_face", "xl_hc_chainmail_face", "xs_hc_chainmail_face" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_face",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain partial aventails",
-    "description": "Recipes related to constructing various sizes of chainmail partial aventails designed to attach to a metal cap and provide extra face and neck protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_face", "xl_ch_chainmail_face", "xs_ch_chainmail_face" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_qt_chainmail_face",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain partial aventails",
-    "description": "Recipes related to constructing various sizes of chainmail partial aventails designed to attach to a metal cap and provide extra face and neck protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_face", "xl_qt_chainmail_face", "xs_qt_chainmail_face" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_chainmail_face",
+    "id": "nested_all_chainmail_headwear",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HEAD",
-    "name": "steel chain partial aventails",
-    "description": "Recipes related to constructing various types and sizes of chainmail partial aventails designed to attach to a metal cap and provide extra face and neck protection.",
+    "name": "chainmail headwear",
+    "description": "Recipes related to constructing various types and sizes of chainmail head armor.",
     "skill_used": "fabrication",
     "nested_category_data": [
-      "nested_lc_chainmail_face",
-      "nested_mc_chainmail_face",
-      "nested_hc_chainmail_face",
-      "nested_ch_chainmail_face",
-      "nested_qt_chainmail_face"
-    ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_lc_chainmail_aventail",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "mild steel chain aventails",
-    "description": "Recipes related to constructing various sizes of chainmail aventails designed to attach to a metal cap and provide extra face, neck and shoulder protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_chainmail_aventail", "xl_lc_chainmail_aventail", "xs_lc_chainmail_aventail" ],
-    "difficulty": 1
-  },
-  {
-    "id": "nested_mc_chainmail_aventail",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "medium steel chain aventails",
-    "description": "Recipes related to constructing various sizes of chainmail aventails designed to attach to a metal cap and provide extra face, neck and shoulder protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "mc_chainmail_aventail", "xl_mc_chainmail_aventail", "xs_mc_chainmail_aventail" ],
-    "difficulty": 2
-  },
-  {
-    "id": "nested_hc_chainmail_aventail",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "high steel chain aventails",
-    "description": "Recipes related to constructing various sizes of chainmail aventails designed to attach to a metal cap and provide extra face, neck and shoulder protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hc_chainmail_aventail", "xl_hc_chainmail_aventail", "xs_hc_chainmail_aventail" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_ch_chainmail_aventail",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "hardened steel chain aventails",
-    "description": "Recipes related to constructing various sizes of chainmail aventails designed to attach to a metal cap and provide extra face, neck and shoulder protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "ch_chainmail_aventail", "xl_ch_chainmail_aventail", "xs_ch_chainmail_aventail" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_qt_chainmail_aventail",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "tempered steel chain aventails",
-    "description": "Recipes related to constructing various sizes of chainmail aventails designed to attach to a metal cap and provide extra face, neck and shoulder protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "qt_chainmail_aventail", "xl_qt_chainmail_aventail", "xs_qt_chainmail_aventail" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_chainmail_aventail",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "name": "steel chain aventails",
-    "description": "Recipes related to constructing various types and sizes of chainmail aventails designed to attach to a metal cap and provide extra face, neck and shoulder protection.",
-    "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_lc_chainmail_aventail",
-      "nested_mc_chainmail_aventail",
-      "nested_hc_chainmail_aventail",
-      "nested_ch_chainmail_aventail",
-      "nested_qt_chainmail_aventail"
+      "nested_chainmail_coif", "nested_chainmail_aventail"
     ],
     "difficulty": 7
   },
@@ -5798,9 +5268,9 @@
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "name": "chainmail sheets",
-    "description": "Recipes related to making sheets of chainmail of different steel qualities.",
+    "description": "Recipes related to making sheets of chainmail.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "link_sheet_fabrication", "lc_link_sheet", "mc_link_sheet", "hc_link_sheet", "ch_link_sheet", "qt_link_sheet" ],
+    "nested_category_data": [ "lc_link_sheet" ],
     "difficulty": 3
   },
   {

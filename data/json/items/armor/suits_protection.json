@@ -324,259 +324,6 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "id": "armor_ch_metal_sheets",
-    "type": "ARMOR",
-    "copy-from": "armor_metal_sheets",
-    "name": { "str": "hardened sheet metal armor" },
-    "description": "A full set of armor hammered out from sheet metal and hardened for added protection.  Perfect for keeping all your fleshy bits safe from zombie teeth.",
-    "material": [ "ch_steel" ],
-    "extend": { "flags": [ "STURDY" ] }
-  },
-  {
-    "id": "armor_metal_sheets_heavy",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "heavy sheet metal armor" },
-    "description": "A full set of armor hammered out from sheet metal and tied in place with leather straps and belts, with a doubly-thick chest guard to keep all your important organs safe.  You might be as mobile as a refrigerator wearing all this, but that's the price to pay to keep your flesh attached.",
-    "weight": "31100 g",
-    "volume": "17500 ml",
-    "price": 6000,
-    "price_postapoc": 1300,
-    "to_hit": -5,
-    "material": [ "lc_steel" ],
-    "symbol": "[",
-    "looks_like": "armor_junk_lightplate",
-    "color": "light_gray",
-    "warmth": 10,
-    "longest_side": "120 cm",
-    "material_thickness": 1.5,
-    "flags": [ "OUTER", "BLOCK_WHILE_WORN", "STURDY" ],
-    "armor": [
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 3 } ],
-        "covers": [ "torso" ],
-        "coverage": 95,
-        "encumbrance": 30
-      },
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 95,
-        "encumbrance": 19
-      },
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 95,
-        "encumbrance": 21
-      }
-    ],
-    "melee_damage": { "bash": 8 }
-  },
-  {
-    "id": "armor_ch_metal_sheets_heavy",
-    "type": "ARMOR",
-    "copy-from": "armor_metal_sheets_heavy",
-    "name": { "str": "heavy hardened sheet metal armor" },
-    "description": "A full set of armor hammered out from sheet metal and hardened for extra protection, with a doubly-thick chest guard.  The Ned Kelly gang would be proud.",
-    "material": [ "ch_steel" ],
-    "armor": [
-      {
-        "material": [ { "type": "ch_steel", "covered_by_mat": 100, "thickness": 3 } ],
-        "covers": [ "torso" ],
-        "coverage": 95,
-        "encumbrance": 30
-      },
-      {
-        "material": [ { "type": "ch_steel", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 95,
-        "encumbrance": 19
-      },
-      {
-        "material": [ { "type": "ch_steel", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 95,
-        "encumbrance": 21
-      }
-    ]
-  },
-  {
-    "id": "armor_metal_sheets_chain",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "junkyard plate armor" },
-    "description": "A full set of steel armor made from sheet metal hammered into shape and attached with chainmail covering the gaps.  For the modern knight on a budget.",
-    "weight": "24300 g",
-    "volume": "17500 ml",
-    "price": 6000,
-    "price_postapoc": 1300,
-    "to_hit": -5,
-    "material": [ "lc_steel", "lc_steel_chain" ],
-    "symbol": "[",
-    "looks_like": "armor_junk_lightplate",
-    "color": "light_gray",
-    "warmth": 10,
-    "longest_side": "120 cm",
-    "material_thickness": 1.5,
-    "flags": [ "OUTER", "BLOCK_WHILE_WORN" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 20
-      },
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 100,
-        "encumbrance": 23
-      },
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
-        "encumbrance": 25
-      }
-    ],
-    "melee_damage": { "bash": 8 }
-  },
-  {
-    "id": "armor_metal_sheets_chain_heavy",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "heavy junkyard plate armor" },
-    "description": "A full set of steel armor made from sheet metal hammered into shape and attached with chainmail covering the gaps, with an extra-thick chestpiece.  About as heavy as a car but nowhere near as mobile, this suit is nonetheless quite protective.",
-    "weight": "33100 g",
-    "volume": "17500 ml",
-    "price": 6000,
-    "price_postapoc": 1300,
-    "to_hit": -5,
-    "material": [ "lc_steel", "lc_steel_chain" ],
-    "symbol": "[",
-    "looks_like": "armor_junk_lightplate",
-    "color": "light_gray",
-    "warmth": 10,
-    "longest_side": "120 cm",
-    "material_thickness": 1.5,
-    "flags": [ "OUTER", "BLOCK_WHILE_WORN", "STURDY" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 1.8 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 32
-      },
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 100,
-        "encumbrance": 23
-      },
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
-        "encumbrance": 25
-      }
-    ],
-    "melee_damage": { "bash": 8 }
-  },
-  {
-    "id": "armor_ch_metal_sheets_chain",
-    "type": "ARMOR",
-    "copy-from": "armor_metal_sheets_chain",
-    "name": { "str": "hardened junkyard plate armor" },
-    "description": "A full set of steel armor made from sheet metal hammered into shape, attached with chainmail, and case-hardened for extra strength.  It might be crude and uncomfortably heavy, but it was clearly made by a skilled metalworker and offers excellent protection.",
-    "material": [ "ch_steel", "ch_steel_chain" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "ch_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "ch_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 20
-      },
-      {
-        "material": [
-          { "type": "ch_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "ch_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 100,
-        "encumbrance": 23
-      },
-      {
-        "material": [
-          { "type": "ch_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "ch_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
-        "encumbrance": 25
-      }
-    ],
-    "extend": { "flags": [ "STURDY" ] }
-  },
-  {
-    "id": "armor_ch_metal_sheets_chain_heavy",
-    "type": "ARMOR",
-    "copy-from": "armor_metal_sheets_chain_heavy",
-    "name": { "str": "heavy hardened junkyard plate armor" },
-    "description": "A full set of steel armor made from sheet metal hammered into shape, attached with chainmail, with a double-thick chestpiece, and case-hardened for extra strength.  Top-of-the-line in armor that looks like it was made from banged-up lockers, for the skilled metalworker that values protection over being able to move.",
-    "material": [ "ch_steel", "ch_steel_chain" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "ch_steel", "covered_by_mat": 95, "thickness": 1.8 },
-          { "type": "ch_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 100,
-        "encumbrance": 32
-      },
-      {
-        "material": [
-          { "type": "ch_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "ch_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 100,
-        "encumbrance": 23
-      },
-      {
-        "material": [
-          { "type": "ch_steel", "covered_by_mat": 95, "thickness": 0.3 },
-          { "type": "ch_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
-        "encumbrance": 25
-      }
-    ]
-  },
-  {
     "id": "armor_lightplate",
     "type": "ARMOR",
     "category": "armor",
@@ -1075,577 +822,741 @@
   },
   {
     "id": "chainmail_hauberk",
-    "copy-from": "chainmail_vest",
     "type": "ARMOR",
+    "category": "armor",
     "name": { "str": "chainmail hauberk" },
-    "description": "A chainmail outfit, covering torso and arms.  Combine with a aketon or other padded layer for optimal protection.",
-    "weight": "9356 g",
-    "volume": "2750 ml",
-    "longest_side": "14 cm",
+    "description": "A knee-length long-sleeved tunic made of interlocking steel rings.  It can be adjusted to be worn as outerwear.",
+    "weight": "11227 g",
+    "volume": "3300 ml",
+    "longest_side": "16 cm",
     "price": 35988,
     "price_postapoc": 3000,
+    "to_hit": -1,
+    "material": [ "lc_steel_chain" ],
+    "symbol": "[",
     "looks_like": "armor_blarmor",
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "9350 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2200 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      }
-    ],
+    "color": "light_red",
+    "warmth": 0,
+    "flags": [ "STURDY" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_hauberk_loose",
+      "menu_text": "Loosen"
+    },
+    "//": "Suits have better coverage than separates because the parts are all attached to each other, leaving fewer gaps.",
     "armor": [
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "torso", "arm_l", "arm_r" ],
-        "coverage": 100,
-        "encumbrance": 14
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 95,
+        "encumbrance": 4
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 50,
-        "encumbrance": 0
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": 5
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 95,
+        "encumbrance": 9
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 40,
+        "encumbrance": 2
       }
     ]
   },
   {
-    "id": "xl_chainmail_hauberk",
+    "id": "chainmail_hauberk_xl",
     "type": "ARMOR",
     "name": { "str": "XL chainmail hauberk" },
     "copy-from": "chainmail_hauberk",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "10500 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2500 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "800 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      }
-    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_hauberk_loose_xl",
+      "menu_text": "Loosen"
+    },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_chainmail_hauberk",
+    "id": "chainmail_hauberk_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_hauberk",
     "name": { "str": "XS chainmail hauberk" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "7000 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "1700 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "550 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      }
-    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_hauberk_loose_xs",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "chainmail_hauberk_loose",
+    "type": "ARMOR",
+    "name": { "str": "chainmail hauberk (loose)" },
+    "description": "A knee-length long-sleeved tunic made of interlocking steel rings.  It can be adjusted to fit closer to the body.",
+    "copy-from": "chainmail_hauberk",
+    "extend": { "flags": [ "OUTER" ] },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_hauberk",
+      "menu_text": "Tighten"
+    }
+  },
+  {
+    "id": "chainmail_hauberk_loose_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL chainmail hauberk (loose)" },
+    "copy-from": "chainmail_hauberk_loose",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_hauberk_xl",
+      "menu_text": "Tighten"
+    },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "chainmail_hauberk_loose_xs",
+    "type": "ARMOR",
+    "copy-from": "chainmail_hauberk_loose",
+    "name": { "str": "XS chainmail hauberk (loose)" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_hauberk_xs",
+      "menu_text": "Tighten"
+    },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "chainmail_junk_hauberk",
-    "type": "ARMOR",
     "copy-from": "chainmail_hauberk",
-    "replace_materials": { "steel": "budget_steel_chain" },
+    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "type": "ARMOR",
     "name": { "str": "chainmail hauberk" },
-    "armor": [
-      {
-        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "torso", "arm_l", "arm_r" ],
-        "coverage": 97,
-        "encumbrance": 14
-      },
-      {
-        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 50,
-        "encumbrance": 0
-      }
-    ]
+    "description": "A knee-length long-sleeved tunic made of interlocking low-quality steel rings.  It can be adjusted to be worn as outerwear.",
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a looser fit.",
+      "target": "chainmail_junk_hauberk_loose",
+      "menu_text": "Loosen"
+    }
+  },
+  {
+    "id": "chainmail_junk_hauberk_loose",
+    "copy-from": "chainmail_junk_hauberk",
+    "type": "ARMOR",
+    "name": { "str": "chainmail hauberk (loose)" },
+    "description": "A knee-length long-sleeved tunic made of interlocking low-quality steel rings.  It can be adjusted to fit closer to the body.",
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your mail for a closer fit.",
+      "target": "chainmail_junk_hauberk",
+      "menu_text": "Tighten"
+    }
   },
   {
     "id": "chainmail_suit",
-    "copy-from": "chainmail_vest",
     "type": "ARMOR",
-    "name": { "str": "chainmail armor" },
-    "description": "A fully customized chainmail suit.  Combine with a gambeson or other padded layer for optimal protection.",
-    "weight": "14446 g",
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "9350 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2200 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "3300 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_LEGS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "900 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_KNEES" ]
-      }
-    ],
+    "category": "armor",
+    "name": { "str": "chainmail suit" },
+    "description": "A full-body suit of medieval chain armor, complete with a hood, gloves, and chausses.",
+    "weight": "19018 g",
+    "volume": "3900 ml",
+    "longest_side": "20 cm",
+    "price": 45000,
+    "price_postapoc": 8000,
+    "to_hit": -1,
+    "material": [ "lc_steel_chain" ],
+    "symbol": "[",
+    "looks_like": "touring_suit",
+    "color": "light_red",
+    "warmth": 15,
+    "flags": [ "STURDY" ],
+    "//": "Suits have better coverage than separates because the parts are all attached to each other, leaving fewer gaps.",
     "armor": [
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "head", "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "hand_l", "hand_r"
+        ],
+        "coverage": 95,
+        "encumbrance": 9,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_throat"
+        ],
+        "coverage": 95,
+        "encumbrance": 2,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_nape"
+        ],
+        "coverage": 95,
+        "encumbrance": 2,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown", "head_ear_r", "head_ear_l"
+        ],
         "coverage": 100,
-        "encumbrance": 14
-      }
+        "encumbrance": 3,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_forehead"
+        ],
+        "coverage": 95,
+        "encumbrance": 2,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 95,
+        "encumbrance": 4,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": 5,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 95,
+        "encumbrance": 9,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 9,
+        "rigid_layer_only": true
+      },
+    {
+      "material": [
+        {
+          "type": "lc_steel_chain",
+          "covered_by_mat": 100,
+          "thickness": 1.2
+        }
+      ],
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "specifically_covers": [
+        "foot_ankle_l",
+        "foot_ankle_r"
+      ],
+      "coverage": 60,
+      "encumbrance": 2,
+      "rigid_layer_only": true
+    }
     ]
   },
   {
-    "id": "xl_chainmail_suit",
+    "id": "chainmail_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail armor" },
+    "name": { "str": "XL chainmail suit" },
     "copy-from": "chainmail_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "10500 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2500 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "800 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "3800 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_LEGS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "1050 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_KNEES" ]
-      }
-    ],
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_chainmail_suit",
+    "id": "chainmail_suit_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_suit",
-    "name": { "str": "XS chainmail armor" },
+    "name": { "str": "XS chainmail suit" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "7000 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "1700 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "550 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2500 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_LEGS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "20 kg",
-        "max_item_length": "65 cm",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_KNEES" ]
-      }
-    ],
     "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "chainmail_junk_suit",
-    "type": "ARMOR",
-    "copy-from": "chainmail_suit",
-    "replace_materials": { "steel": "budget_steel_chain" },
-    "name": { "str": "chainmail armor" },
-    "description": "A fully customized chainmail suit.  The metal shows signs of rust and corrosion.  Combine with a gambeson or other padded layer for optimal protection.",
-    "armor": [
-      {
-        "material": [ { "type": "budget_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "head", "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
-        "coverage": 97,
-        "encumbrance": 14
-      }
-    ]
   },
   {
     "id": "chainmail_suit_faraday",
     "type": "ARMOR",
-    "copy-from": "chainmail_suit",
-    "name": { "str": "faraday chainmail suit" },
-    "description": "A fully customized chainmail suit that can be worn over your normal clothing.  The suit is conductively interconnected with a cage covering the face, protecting against electricity.",
+    "name": { "str": "Faraday chainmail" },
+    "description": "Jury-rigged armor made by affixing a full-body suit of chainmail over a rubber cleansuit, with copper wire threaded through to create a low impedence route to the ground that doesn't travel through the wearer.  It is hot, heavy, and uncomfortable, and the plastic face shield doesn't help.",
+    "weight": "22697 g",
+    "volume": "7980 ml",
+    "longest_side": "35 cm",
+    "material": [ "lc_steel_chain", "soft_rubber" ],
+    "symbol": "[",
+    "looks_like": "chainmail_suit",
+    "color": "light_red",
+    "warmth": 30,
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r" ],
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 95,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 3
+          }
+        ],
+        "covers": [
+          "hand_l", "hand_r"
+        ],
         "coverage": 100,
-        "encumbrance": 20
-      },
-      {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "head" ],
-        "coverage": 100,
-        "encumbrance": 30
+        "encumbrance": 35,
+        "rigid_layer_only": true
       },
       {
         "material": [
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.001 }
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 95,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
         ],
-        "covers": [ "eyes" ],
-        "coverage": 95,
-        "cover_ranged": 10,
-        "encumbrance": 2,
-        "breathability": "GOOD"
-      },
-      {
-        "material": [
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.001 }
+        "covers": [
+          "head"
         ],
-        "covers": [ "mouth" ],
-        "coverage": 95,
-        "cover_ranged": 10,
-        "encumbrance": 0,
-        "breathability": "GOOD"
-      },
-      {
-        "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [
-          "foot_toes_r",
-          "foot_toes_l",
-          "foot_ankle_r",
-          "foot_ankle_l",
-          "foot_heel_r",
-          "foot_heel_l",
-          "foot_arch_r",
-          "foot_arch_l"
+          "head_throat"
         ],
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "encumbrance": 10,
-        "coverage": 100
-      }
+        "coverage": 100,
+        "encumbrance": 6,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 95,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_nape"
+        ],
+        "coverage": 100,
+        "encumbrance": 6,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown", "head_ear_r", "head_ear_l"
+        ],
+        "coverage": 100,
+        "encumbrance": 6,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_forehead"
+        ],
+        "coverage": 95,
+        "encumbrance": 4,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "plastic",
+            "covered_by_mat": 100,
+            "thickness": 2
+          }
+        ],
+        "covers": [
+          "eyes", "mouth"
+        ],
+        "coverage": 95,
+        "encumbrance": 12,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 95,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 100,
+        "encumbrance": 11,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": 11,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.2 }, { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 95,
+        "encumbrance": 22,
+        "rigid_layer_only": true
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          },
+          {
+            "type": "soft_rubber",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 28,
+        "rigid_layer_only": true
+      },
+    {
+      "material": [
+        {
+          "type": "lc_steel_chain",
+          "covered_by_mat": 60,
+          "thickness": 1.2
+        },
+        {
+          "type": "soft_rubber",
+          "covered_by_mat": 100,
+          "thickness": 3
+        }
+      ],
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "specifically_covers": [
+        "foot_ankle_l",
+        "foot_ankle_r"
+      ],
+      "coverage": 100,
+      "encumbrance": 6,
+      "rigid_layer_only": true
+    },
+    {
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "specifically_covers": [
+        "foot_toes_r",
+        "foot_toes_l",
+        "foot_heel_r",
+        "foot_heel_l",
+        "foot_arch_r",
+        "foot_arch_l"
+      ],
+      "material": [
+        {
+          "type": "rubber",
+          "covered_by_mat": 100,
+          "thickness": 3
+        }
+      ],
+      "encumbrance": 28,
+      "coverage": 100
+    },
+    {
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "specifically_covers": [
+        "foot_sole_r",
+        "foot_sole_l"
+      ],
+      "material": [
+        {
+          "type": "rubber",
+          "covered_by_mat": 100,
+          "thickness": 6
+        }
+      ],
+      "coverage": 100
+    }
     ],
-    "extend": { "flags": [ "ELECTRIC_IMMUNE" ] }
+    "flags": [ "GROUNDING", "OUTER" ]
   },
   {
-    "id": "xl_chainmail_suit_faraday",
+    "id": "chainmail_suit_faraday_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_suit_faraday",
-    "name": { "str": "XL faraday chainmail suit" },
+    "name": { "str": "XL Faraday chainmail" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "8500 ml",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2500 ml",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "800 ml",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "3800 ml",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_LEGS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "1050 ml",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_KNEES" ]
-      }
-    ],
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "chainmail_suit_faraday_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_suit_faraday",
-    "looks_like": "chainmail_suit_faraday",
-    "name": { "str": "XS faraday chainmail suit" },
+    "name": { "str": "XS Faraday chainmail" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "6000 ml",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_TORSO" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "1700 ml",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ARMS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "550 ml",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_ELBOWS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "2500 ml",
-        "moves": 1500,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_LEGS" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "ablative": true,
-        "max_contains_volume": "700 ml",
-        "moves": 1000,
-        "description": "You can wear some armor over chainmail without penalty.",
-        "flag_restriction": [ "ABLATIVE_CHAINMAIL_KNEES" ]
-      }
-    ],
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "cleansuit",
     "repairs_like": "bunker_coat",
-    "//": "Should be somewhat more difficult to repair than ordinary plastic",
     "type": "ARMOR",
     "name": { "str": "cleansuit" },
-    "description": "A simple hazardous materials handling suit.  Though somewhat restrictive and fragile, wearing it will provide excellent protection against ambient radiation.",
+    "description": "A simple hazardous materials handling suit.  Though not designed to stand up to combat, it should protect from chemicals, radiation, and other environmental hazards.",
     "weight": "2100 g",
     "volume": "2500 ml",
     "price": 7700,
     "price_postapoc": 1250,
-    "material": [ "plastic" ],
+    "material": [ "soft_rubber" ],
     "symbol": "[",
     "looks_like": "jumpsuit",
     "color": "white",
@@ -1989,7 +1900,7 @@
       "msg": "You slip out of the top of the suit and tie the sleeves around your waist.",
       "target": "robofac_enviro_suit_casual"
     },
-    "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "GAS_PROOF", "RAD_PROOF", "ELECTRIC_IMMUNE", "STURDY" ]
+    "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "GAS_PROOF", "RAD_PROOF", "GROUNDING", "STURDY" ]
   },
   {
     "id": "robofac_enviro_suit_casual",
@@ -2079,7 +1990,7 @@
       "msg": "You untie the sleeves and put back on the top of the suit.",
       "target": "robofac_enviro_suit"
     },
-    "delete": { "flags": [ "RAINPROOF", "GAS_PROOF", "RAD_PROOF", "ELECTRIC_IMMUNE" ] }
+    "delete": { "flags": [ "RAINPROOF", "GAS_PROOF", "RAD_PROOF", "GROUNDING" ] }
   },
   {
     "id": "xedra_enviro_suit",

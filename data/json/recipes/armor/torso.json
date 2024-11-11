@@ -2247,7 +2247,7 @@
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" } ]
   },
   {
-    "result": "xs_chainmail_vest",
+    "result": "chainmail_vest_xs",
     "type": "recipe",
     "copy-from": "chainmail_vest",
     "category": "CC_ARMOR",
@@ -2257,7 +2257,7 @@
     "components": [ [ [ "link_sheet", 5 ] ], [ [ "chain_link", 131 ] ], [ [ "wire", 1 ] ] ]
   },
   {
-    "result": "xl_chainmail_vest",
+    "result": "chainmail_vest_xl",
     "type": "recipe",
     "copy-from": "chainmail_vest",
     "category": "CC_ARMOR",
@@ -2265,35 +2265,6 @@
     "time": "8 h 5 m",
     "using": [ [ "chainmail_standard", 10 ], [ "tailoring_cotton_patchwork", 9 ] ],
     "components": [ [ [ "link_sheet", 10 ] ], [ [ "chain_link", 210 ] ], [ [ "wire", 2 ] ] ]
-  },
-  {
-    "result": "chainmail_hauberk",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "fabrication",
-    "difficulty": 7,
-    "time": "10 m",
-    "components": [ [ [ "chainmail_arms", 1 ] ], [ [ "chainmail_vest", 1 ] ] ]
-  },
-  {
-    "result": "xs_chainmail_hauberk",
-    "type": "recipe",
-    "copy-from": "chainmail_hauberk",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "10 m",
-    "components": [ [ [ "xs_chainmail_arms", 1 ] ], [ [ "xs_chainmail_vest", 1 ] ] ]
-  },
-  {
-    "result": "xl_chainmail_hauberk",
-    "type": "recipe",
-    "copy-from": "chainmail_hauberk",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "10 m",
-    "components": [ [ [ "xl_chainmail_arms", 1 ] ], [ [ "xl_chainmail_vest", 1 ] ] ]
   },
   {
     "result": "armor_cuirass",

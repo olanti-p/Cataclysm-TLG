@@ -22,77 +22,6 @@
     "flags": [ "VARSIZE", "OUTER" ]
   },
   {
-    "id": "chainmail_junk_hood",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "chainmail coif" },
-    "description": "A customized chainmail hood.  Can be worn comfortably under helmets.",
-    "weight": "1315 g",
-    "volume": "500 ml",
-    "price": 5012,
-    "price_postapoc": 2500,
-    "to_hit": -1,
-    "material": [ "budget_steel_chain" ],
-    "symbol": "[",
-    "looks_like": "balclava",
-    "color": "light_red",
-    "material_thickness": 4,
-    "warmth": 5,
-    "environmental_protection": 1,
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "material": [ { "type": "budget_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "head" ],
-        "coverage": 100,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
-      }
-    ]
-  },
-  {
-    "id": "chainmail_hood",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "chainmail coif" },
-    "description": "A chainmail hood.  Can be worn comfortably under helmets.",
-    "weight": "1315 g",
-    "volume": "500 ml",
-    "price": 5012,
-    "price_postapoc": 2500,
-    "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
-    "symbol": "[",
-    "looks_like": "balclava",
-    "color": "light_red",
-    "warmth": 5,
-    "environmental_protection": 1,
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "covers": [ "head" ],
-        "coverage": 100,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "chainmail_hood",
-    "name": { "str": "XL chainmail coif" },
-    "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_chainmail_hood",
-    "type": "ARMOR",
-    "copy-from": "chainmail_hood",
-    "name": { "str": "XS chainmail coif" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
     "id": "hood_rain",
     "type": "ARMOR",
     "name": { "str": "rain hood" },
@@ -171,5 +100,212 @@
     "material_thickness": 0.2,
     "environmental_protection": 1,
     "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "chainmail_aventail",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "chainmail aventail" },
+    "description": "Armor made from a sheet of interlocking steel rings which secures around the neck.",
+    "weight": "1300 g",
+    "volume": "450 ml",
+    "longest_side": "5 cm",
+    "price": 5012,
+    "price_postapoc": 1300,
+    "to_hit": -1,
+    "material": [ "lc_steel_chain" ],
+    "symbol": "[",
+    "color": "light_red",
+    "warmth": 0,
+    "flags": [ "STURDY", "BELTED" ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_neck"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_throat"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_nape"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      }
+    ]
+  },
+  {
+    "id": "chainmail_aventail_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL chainmail aventail" },
+    "copy-from": "chainmail_aventail",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "chainmail_aventail_xs",
+    "type": "ARMOR",
+    "copy-from": "chainmail_aventail",
+    "name": { "str": "XS chainmail aventail" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "chainmail_junk_aventail",
+    "copy-from": "chainmail_aventail",
+    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "type": "ARMOR",
+    "name": { "str": "chainmail aventail" },
+    "description": "Poor-quality armor made from a sheet of interlocking steel rings which secures around the neck."
+  },
+  {
+    "id": "chainmail_coif",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "chainmail coif" },
+    "description": "A protective hood made of interlocking steel rings.",
+    "weight": "1560 g",
+    "volume": "540 ml",
+    "longest_side": "5 cm",
+    "price": 5012,
+    "price_postapoc": 1300,
+    "to_hit": -1,
+    "material": [ "lc_steel_chain" ],
+    "symbol": "[",
+    "color": "light_red",
+    "warmth": 0,
+    "flags": [ "STURDY" ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_throat"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_nape"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown", "head_ear_r", "head_ear_l"
+        ],
+        "coverage": 100,
+        "encumbrance": 3
+      },
+      {
+        "material": [
+          {
+            "type": "lc_steel_chain",
+            "covered_by_mat": 100,
+            "thickness": 1.2
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_forehead"
+        ],
+        "coverage": 95,
+        "encumbrance": 2
+      }
+    ]
+  },
+  {
+    "id": "chainmail_coif_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL chainmail coif" },
+    "copy-from": "chainmail_coif",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "chainmail_coif_xs",
+    "type": "ARMOR",
+    "copy-from": "chainmail_coif",
+    "name": { "str": "XS chainmail coif" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "chainmail_junk_coif",
+    "type": "ARMOR",
+    "copy-from": "chainmail_coif",
+    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "name": { "str": "chainmail coif" },
+    "description": "A protective hood made of interlocking steel rings that drape down to cover the neck.  It is of poor quality."
   }
 ]
