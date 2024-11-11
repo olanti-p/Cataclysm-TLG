@@ -847,10 +847,7 @@
     "id": "chainmail_sleeves",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-    "str": "chainmail sleeves",
-    "str_pl": "pairs of chainmail sleeves"
-    },
+    "name": { "str": "chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "description": "Protective sleeves made of interlocking links of steel wire.  The fit can be adjusted to allow them to serve as outerwear.",
     "weight": "3515 g",
     "volume": "847 ml",
@@ -871,91 +868,41 @@
       "menu_text": "Loosen"
     },
     "armor": [
-    {  "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "arm_l",
-        "arm_r"
-      ],
-      "specifically_covers": [
-        "arm_shoulder_l",
-        "arm_shoulder_r"
-      ],
-      "coverage": 70,
-      "encumbrance": 2
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "arm_l",
-        "arm_r"
-      ],
-      "specifically_covers": [
-        "arm_upper_l",
-        "arm_upper_r"
-      ],
-      "coverage": 100,
-      "encumbrance": 1
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "arm_l",
-        "arm_r"
-      ],
-      "specifically_covers": [
-        "arm_elbow_l",
-        "arm_elbow_r"
-      ],
-      "coverage": 100,
-      "encumbrance": 4
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "arm_l",
-        "arm_r"
-      ],
-      "specifically_covers": [
-        "arm_lower_l",
-        "arm_lower_r"
-      ],
-      "coverage": 95,
-      "encumbrance": 2
-    }
-  ]
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
+        "coverage": 70,
+        "encumbrance": 2
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_upper_l", "arm_upper_r" ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_elbow_l", "arm_elbow_r" ],
+        "coverage": 100,
+        "encumbrance": 4
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r" ],
+        "coverage": 95,
+        "encumbrance": 2
+      }
+    ]
   },
   {
     "id": "chainmail_sleeves_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "name": {
-    "str": "XS chainmail sleeves",
-    "str_pl": "pairs of XS chainmail sleeves"
-    },
+    "name": { "str": "XS chainmail sleeves", "str_pl": "pairs of XS chainmail sleeves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -969,10 +916,7 @@
     "id": "chainmail_sleeves_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "name": {
-    "str": "XL chainmail sleeves",
-    "str_pl": "pairs of XL chainmail sleeves"
-    },
+    "name": { "str": "XL chainmail sleeves", "str_pl": "pairs of XL chainmail sleeves" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -988,10 +932,7 @@
     "copy-from": "chainmail_sleeves",
     "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
     "description": "Protective sleeves made of interlocking links of low-quality steel wire.  The fit can be adjusted to allow them to serve as outerwear.",
-    "name": {
-    "str": "chainmail sleeves",
-    "str_pl": "pairs of chainmail sleeves"
-    },
+    "name": { "str": "chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "use_action": {
       "type": "transform",
       "msg": "You adjust your mail for a looser fit.",
@@ -1003,10 +944,7 @@
     "id": "chainmail_sleeves_loose",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "name": {
-    "str": "chainmail sleeves (loose)",
-    "str_pl": "pairs of chainmail sleeves (loose)"
-    },
+    "name": { "str": "chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves (loose)" },
     "description": "Protective sleeves made of interlocking links of steel wire.  The fit can be adjusted to fit closer to the body.",
     "use_action": {
       "type": "transform",
@@ -1020,10 +958,7 @@
     "id": "chainmail_sleeves_loose_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves_xs",
-    "name": {
-    "str": "chainmail sleeves (loose)",
-    "str_pl": "pairs of chainmail sleeves"
-    },
+    "name": { "str": "chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -1037,10 +972,7 @@
     "id": "chainmail_sleeves_loose_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves_xl",
-    "name": {
-    "str": "chainmail sleeves (loose)",
-    "str_pl": "pairs of chainmail sleeves (loose)"
-    },
+    "name": { "str": "chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -1054,10 +986,7 @@
     "id": "chainmail_junk_sleeves_loose",
     "type": "ARMOR",
     "copy-from": "chainmail_junk_sleeves",
-    "name": {
-    "str": "chainmail sleeves",
-    "str_pl": "pairs of chainmail sleeves"
-    },
+    "name": { "str": "chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "use_action": {
       "type": "transform",
       "msg": "You adjust your mail for a closer fit.",

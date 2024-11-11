@@ -200,7 +200,9 @@
       "and": [
         { "or": [ { "u_has_flag": "GROUNDING" }, { "u_has_worn_with_flag": "GROUNDING" } ] },
         "u_is_on_land",
-        { "or": [ { "not": "u_is_outside" }, { "and": [ "u_is_outside", { "math": [ "weather('precipitation')", "<", "1.5" ] } ] } ] },
+        {
+          "or": [ { "not": "u_is_outside" }, { "and": [ "u_is_outside", { "math": [ "weather('precipitation')", "<", "1.5" ] } ] } ]
+        },
         { "not": "u_is_on_liquid" },
         { "not": { "u_has_effect": "grounded" } }
       ]
@@ -214,7 +216,18 @@
     "condition": {
       "and": [
         { "u_has_effect": "grounded" },
-        { "or": [ { "and": [ { "not": { "u_has_flag": "GROUNDING" } }, { "not": { "u_has_worn_with_flag": "GROUNDING" } } ] }, { "or": [ { "not": "u_is_on_land" }, "u_is_on_liquid", { "and": [ "u_is_outside", { "math": [ "weather('precipitation')", ">=", "1.5" ] } ] } ] } ] }
+        {
+          "or": [
+            { "and": [ { "not": { "u_has_flag": "GROUNDING" } }, { "not": { "u_has_worn_with_flag": "GROUNDING" } } ] },
+            {
+              "or": [
+                { "not": "u_is_on_land" },
+                "u_is_on_liquid",
+                { "and": [ "u_is_outside", { "math": [ "weather('precipitation')", ">=", "1.5" ] } ] }
+              ]
+            }
+          ]
+        }
       ]
     },
     "effect": [ { "u_lose_effect": "grounded" } ]

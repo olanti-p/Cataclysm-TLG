@@ -1334,36 +1334,16 @@
     },
     "armor": [
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_upper"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
         "encumbrance": 4
       },
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_lower"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ],
         "coverage": 100,
         "encumbrance": 5
       }

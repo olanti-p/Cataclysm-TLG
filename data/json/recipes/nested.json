@@ -1764,9 +1764,7 @@
     "name": "steel chain vests",
     "description": "Recipes related to constructing various sizes of chainmail vests.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_chainmail_vest"
-    ],
+    "nested_category_data": [ "nested_chainmail_vest" ],
     "difficulty": 7
   },
   {
@@ -1966,9 +1964,7 @@
     "name": "chainmail gloves",
     "description": "Recipes related to constructing various sizes of chain gloves.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "chainmail_gloves", "chainmail_gloves_xs", "chainmail_gloves_xl"
-    ],
+    "nested_category_data": [ "chainmail_gloves", "chainmail_gloves_xs", "chainmail_gloves_xl" ],
     "difficulty": 7
   },
   {
@@ -1980,9 +1976,7 @@
     "name": "chainmail sleeves",
     "description": "Recipes related to constructing various sizes of chain sleeves.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "chainmail_sleeves", "chainmail_sleeves_xs", "chainmail_sleeves_xl"
-    ],
+    "nested_category_data": [ "chainmail_sleeves", "chainmail_sleeves_xs", "chainmail_sleeves_xl" ],
     "difficulty": 7
   },
   {
@@ -2054,9 +2048,7 @@
     "name": "chainmail legwear",
     "description": "Recipes related to constructing various types and sizes of chainmail leg armor.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_chainmail_chausses", "nested_chainmail_skirts"
-    ],
+    "nested_category_data": [ "nested_chainmail_chausses", "nested_chainmail_skirts" ],
     "difficulty": 7
   },
   {
@@ -4700,9 +4692,7 @@
     "name": "chainmail headwear",
     "description": "Recipes related to constructing various types and sizes of chainmail head armor.",
     "skill_used": "fabrication",
-    "nested_category_data": [
-      "nested_chainmail_coif", "nested_chainmail_aventail"
-    ],
+    "nested_category_data": [ "nested_chainmail_coif", "nested_chainmail_aventail" ],
     "difficulty": 7
   },
   {

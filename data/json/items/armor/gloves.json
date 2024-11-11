@@ -43,10 +43,7 @@
     "id": "chainmail_gloves",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-      "str": "chainmail gloves",
-      "str_pl": "pairs of chainmail gloves"
-      },
+    "name": { "str": "chainmail gloves", "str_pl": "pairs of chainmail gloves" },
     "description": "A pair of gloves made of interlocking rings of steel wire.",
     "weight": "2152 g",
     "volume": "1125 ml",
@@ -61,16 +58,8 @@
     "flags": [ "STURDY" ],
     "armor": [
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "hand_l", "hand_r"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "hand_l", "hand_r" ],
         "coverage": 95,
         "encumbrance": 9
       }
@@ -79,10 +68,7 @@
   {
     "id": "chainmail_gloves_xl",
     "type": "ARMOR",
-    "name": {
-      "str": "XL chainmail gloves",
-      "str_pl": "pairs of XL chainmail gloves"
-      },
+    "name": { "str": "XL chainmail gloves", "str_pl": "pairs of XL chainmail gloves" },
     "copy-from": "chainmail_gloves",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
@@ -91,10 +77,7 @@
     "id": "chainmail_gloves_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_gloves",
-    "name": {
-      "str": "XS chainmail gloves",
-      "str_pl": "pairs of XS chainmail gloves"
-      },
+    "name": { "str": "XS chainmail gloves", "str_pl": "pairs of XS chainmail gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -102,10 +85,7 @@
     "id": "chainmail_junk_gloves",
     "type": "ARMOR",
     "copy-from": "chainmail_gloves",
-    "name": {
-      "str": "chainmail gloves",
-      "str_pl": "pairs of chainmail gloves"
-      },
+    "name": { "str": "chainmail gloves", "str_pl": "pairs of chainmail gloves" },
     "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
     "description": "A pair of gloves made of interlocking rings of low-quality steel wire."
   },

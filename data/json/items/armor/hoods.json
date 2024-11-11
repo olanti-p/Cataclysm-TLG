@@ -120,53 +120,23 @@
     "flags": [ "STURDY", "BELTED" ],
     "armor": [
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_neck"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_neck" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_throat"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_throat" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_nape"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_nape" ],
         "coverage": 95,
         "encumbrance": 2
       }
@@ -215,70 +185,30 @@
     "flags": [ "STURDY" ],
     "armor": [
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_throat"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_throat" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_nape"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_nape" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_crown", "head_ear_r", "head_ear_l"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_crown", "head_ear_r", "head_ear_l" ],
         "coverage": 100,
         "encumbrance": 3
       },
       {
-        "material": [
-          {
-            "type": "lc_steel_chain",
-            "covered_by_mat": 100,
-            "thickness": 1.2
-          }
-        ],
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_forehead"
-        ],
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_forehead" ],
         "coverage": 95,
         "encumbrance": 2
       }

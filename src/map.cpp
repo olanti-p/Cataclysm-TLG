@@ -5921,7 +5921,8 @@ bool map::is_dry( const tripoint &p )
     for( const auto &pr : field_at( p ) ) {
         const field_entry &fd = pr.second;
         // If the field isn't totally flooded, assume we have a dry patch to use.
-        if( fd.get_field_type()->phase == phase_id::LIQUID && ( fd.get_field_intensity >= fd.get_field_type()->get_max_intensity() ) ) {
+        if( fd.get_field_type()->phase == phase_id::LIQUID &&
+            ( fd.get_field_intensity() >= fd.get_field_type()->get_max_intensity() ) ) {
             return false;
         }
     }
@@ -5937,7 +5938,7 @@ bool map::is_dry( const tripoint &p )
         map_stack items = i_at( p );
         auto found = std::find_if( items.begin(), items.end(), []( const item & it ) {
             return it.made_of( phase_id::LIQUID ) && !it.is_fuel();
-        });
+        } );
 
         if( found != items.end() ) {
             return false;

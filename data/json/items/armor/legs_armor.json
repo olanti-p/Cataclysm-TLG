@@ -233,10 +233,7 @@
     "id": "chainmail_chausses",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-    "str": "chainmail chausses",
-    "str_pl": "pairs of chainmail chausses"
-    },
+    "name": { "str": "chainmail chausses", "str_pl": "pairs of chainmail chausses" },
     "description": "Protective leggings made of interlocking links of steel wire, covering from the thighs to the tops of the feet.",
     "weight": "3515 g",
     "volume": "847 ml",
@@ -251,91 +248,41 @@
     "warmth": 0,
     "flags": [ "STURDY" ],
     "armor": [
-    {  "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ],
-      "specifically_covers": [
-        "leg_upper_l",
-        "leg_upper_r"
-      ],
-      "coverage": 40,
-      "encumbrance": 1
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ],
-      "specifically_covers": [
-        "leg_knee_l",
-        "leg_knee_r"
-      ],
-      "coverage": 90,
-      "encumbrance": 4
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ],
-      "specifically_covers": [
-        "leg_lower_l",
-        "leg_lower_r"
-      ],
-      "coverage": 100,
-      "encumbrance": 2
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "foot_l",
-        "foot_r"
-      ],
-      "specifically_covers": [
-        "foot_ankle_l",
-        "foot_ankle_r"
-      ],
-      "coverage": 60,
-      "encumbrance": 2
-    }
-  ]
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "coverage": 40,
+        "encumbrance": 1
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
+        "coverage": 90,
+        "encumbrance": 4
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "coverage": 100,
+        "encumbrance": 2
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
+        "coverage": 60,
+        "encumbrance": 2
+      }
+    ]
   },
   {
     "id": "chainmail_chausses_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_chausses",
-    "name": {
-    "str": "XS chainmail chausses",
-    "str_pl": "pairs of XS chainmail chausses"
-    },
+    "name": { "str": "XS chainmail chausses", "str_pl": "pairs of XS chainmail chausses" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -343,10 +290,7 @@
     "id": "chainmail_chausses_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_chausses",
-    "name": {
-    "str": "XL chainmail chausses",
-    "str_pl": "pairs of XL chainmail chausses"
-    },
+    "name": { "str": "XL chainmail chausses", "str_pl": "pairs of XL chainmail chausses" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -354,10 +298,7 @@
     "id": "chainmail_junk_chausses",
     "type": "ARMOR",
     "copy-from": "chainmail_chausses",
-    "name": {
-      "str": "chainmail chausses",
-      "str_pl": "pairs of chainmail chausses"
-      },
+    "name": { "str": "chainmail chausses", "str_pl": "pairs of chainmail chausses" },
     "description": "Protective leggings made of interlocking links of low-quality steel wire, covering from the thighs to the tops of the feet.",
     "replace_materials": { "lc_steel_chain": "budget_steel_chain" }
   },
@@ -386,64 +327,28 @@
       "menu_text": "Loosen"
     },
     "armor": [
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ],
-      "specifically_covers": [
-        "leg_hip_l",
-        "leg_hip_r"
-      ],
-      "coverage": 100,
-      "encumbrance": 1
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ],
-      "specifically_covers": [
-        "leg_upper_l",
-        "leg_upper_r"
-      ],
-      "coverage": 95,
-      "encumbrance": 2
-    },
-    {
-      "material": [
-        {
-          "type": "lc_steel_chain",
-          "covered_by_mat": 100,
-          "thickness": 1.2
-        }
-      ],
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ],
-      "specifically_covers": [
-        "leg_knee_l",
-        "leg_knee_r"
-      ],
-      "coverage": 40,
-      "encumbrance": 2
-    }
-  ]
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
+        "coverage": 40,
+        "encumbrance": 2
+      }
+    ]
   },
   {
     "id": "chainmail_skirt_xs",
