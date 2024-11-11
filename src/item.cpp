@@ -8784,7 +8784,7 @@ float item::_environmental_resist( const damage_type_id &dmg_type, const bool to
                         } else { // The damage is nonphysical
                             tmp_add = m->id->resist( derived->first ) * m->cover * 0.01f * derived->second;
                         }
-                    // If the material DOES have dedicated resistances to our damage type, run this.
+                        // If the material DOES have dedicated resistances to our damage type, run this.
                     } else {
                         if( dmg_type->physical ) {
                             if( total_coverage + m->cover <= 100 ) {

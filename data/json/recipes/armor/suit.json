@@ -569,12 +569,7 @@
     "book_learn": [ [ "textbook_fabrication", 6 ], [ "advanced_electronics", 6 ], [ "textbook_electronics", 6 ] ],
     "using": [ [ "chainmail_standard", 20 ] ],
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_shock_weapons" } ],
-    "components": [
-      [ [ "chainmail_suit", 1 ] ],
-      [ [ "cleansuit", 1 ] ],
-      [ [ "chain_link", 500 ] ],
-      [ [ "cable", 250 ] ]
-    ]
+    "components": [ [ [ "chainmail_suit", 1 ] ], [ [ "cleansuit", 1 ] ], [ [ "chain_link", 500 ] ], [ [ "cable", 250 ] ] ]
   },
   {
     "result": "chainmail_suit_faraday_xs",
@@ -582,24 +577,14 @@
     "copy-from": "chainmail_suit_faraday",
     "time": "720 m",
     "using": [ [ "chainmail_standard", 15 ] ],
-    "components": [
-      [ [ "chainmail_suit_xs", 1 ] ],
-      [ [ "cleansuit", 1 ] ],
-      [ [ "chain_link", 375 ] ],
-      [ [ "cable", 200 ] ]
-    ]
+    "components": [ [ [ "chainmail_suit_xs", 1 ] ], [ [ "cleansuit", 1 ] ], [ [ "chain_link", 375 ] ], [ [ "cable", 200 ] ] ]
   },
   {
     "result": "chainmail_suit_faraday_xl",
     "type": "recipe",
     "copy-from": "chainmail_suit_faraday",
     "using": [ [ "chainmail_standard", 20 ] ],
-    "components": [
-      [ [ "chainmail_suit_xl", 1 ] ],
-      [ [ "cleansuit", 1 ] ],
-      [ [ "chain_link", 750 ] ],
-      [ [ "cable", 300 ] ]
-    ]
+    "components": [ [ [ "chainmail_suit_xl", 1 ] ], [ [ "cleansuit", 1 ] ], [ [ "chain_link", 750 ] ], [ [ "cable", 300 ] ] ]
   },
   {
     "result": "grass_cloak",

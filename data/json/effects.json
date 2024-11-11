@@ -5020,9 +5020,7 @@
     "show_in_info": true,
     "max_intensity": 1,
     "show_intensity": false,
-    "desc": [
-      "You are fully protected from electrical discharges."
-    ],
+    "desc": [ "You are fully protected from electrical discharges." ],
     "flags": [ "ELECTRIC_IMMUNE" ]
   }
 ]

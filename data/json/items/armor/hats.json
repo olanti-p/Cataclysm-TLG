@@ -49,13 +49,7 @@
     "warmth": 5,
     "material_thickness": 0.1,
     "environmental_protection": 1,
-    "armor": [
-      {
-        "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 70,
-        "covers": [ "head" ]
-      }
-    ]
+    "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 70, "covers": [ "head" ] } ]
   },
   {
     "id": "beret",

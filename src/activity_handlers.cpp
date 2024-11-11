@@ -1909,7 +1909,8 @@ void activity_handlers::start_fire_do_turn( player_activity *act, Character *you
     if( !here.is_flammable( where ) ) {
         try_fuel_fire( *act, *you, true );
         if( !here.is_flammable( where ) ) {
-            if( here.has_field_at( where, fd_fire ) || here.has_flag_ter( ter_furn_flag::TFLAG_USABLE_FIRE, where ) ) {
+            if( here.has_field_at( where, fd_fire ) ||
+                here.has_flag_ter( ter_furn_flag::TFLAG_USABLE_FIRE, where ) ) {
                 you->add_msg_if_player( m_info, _( "It's already burning hot there." ) );
             } else if( !here.is_dry( where ) ) {
                 you->add_msg_if_player( m_info, _( "You need dry ground to light a fire." ) );
