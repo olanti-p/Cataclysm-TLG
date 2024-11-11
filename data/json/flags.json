@@ -303,9 +303,15 @@
     "info": "This tastes <good>better</good> while <color_red>hot</color>."
   },
   {
+    "id": "GROUNDING",
+    "type": "json_flag",
+    "//": "This is for gear which is not 100% airtight.  Something like a space suit should probably just have electrical armor.",
+    "info": "This gear can <good>protect from electric discharges</good> if the wearer is <info>on dry ground</info>."
+  },
+  {
     "id": "ELECTRIC_IMMUNE",
     "type": "json_flag",
-    "info": "This gear <good>completely protects</good> you from <info>electric discharges</info>."
+    "info": "This gear <good>completely protects</good> you from <info>electrical discharges</info>."
   },
   {
     "id": "BIO_IMMUNE",
@@ -320,7 +326,7 @@
   {
     "id": "EMP_IMMUNE",
     "type": "json_flag",
-    "info": "This gear <good>completely protects</good> you from <info>EMP blasts</info>."
+    "info": "This gear <good>completely protects</good> from <info>EMP blasts</info>."
   },
   {
     "id": "CUT_IMMUNE",

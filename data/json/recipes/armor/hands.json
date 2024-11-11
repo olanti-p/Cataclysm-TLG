@@ -1102,7 +1102,7 @@
     "using": [ [ "tailoring_neoprene_patchwork", 5 ], [ "tailoring_nylon_patchwork", 8 ] ]
   },
   {
-    "result": "chainmail_hands",
+    "result": "chainmail_gloves",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -1115,16 +1115,16 @@
     "using": [ [ "armor_lc_chainmail_assembling", 1 ], [ "strap_small", 2 ] ]
   },
   {
-    "result": "xs_chainmail_hands",
+    "result": "chainmail_gloves_xs",
     "type": "recipe",
-    "copy-from": "chainmail_hands",
+    "copy-from": "chainmail_gloves",
     "time": "2 h",
     "using": [ [ "armor_lc_chainmail_assembling", 1 ], [ "strap_small", 1 ] ]
   },
   {
-    "result": "xl_chainmail_hands",
+    "result": "chainmail_gloves_xl",
     "type": "recipe",
-    "copy-from": "chainmail_hands",
+    "copy-from": "chainmail_gloves",
     "time": "2 h 15 m",
     "using": [ [ "armor_lc_chainmail_assembling", 2 ], [ "strap_small", 2 ] ]
   },

@@ -40,7 +40,7 @@
     "type": "TOOL_ARMOR",
     "category": "clothing",
     "name": { "str": "bandana" },
-    "description": "A cotton bandana, worn over the mouth for warmth and minor protection from dust and other contaminants.",
+    "description": "A cotton bandana, worn over the mouth for warmth and minor protection from dust and other contaminants.  It can be adjusted to wear it on the head instead.",
     "weight": "35 g",
     "volume": "250 ml",
     "price": 600,

@@ -298,7 +298,7 @@
     "id": "lc_link_sheet",
     "type": "TOOL",
     "category": "spare_parts",
-    "name": { "str": "mild steel chainmail sheet" },
+    "name": { "str": "chainmail sheet" },
     "description": "A sheet of riveted chainmail.  With some skill, several of these sheets could be connected to make effective armor.",
     "weight": "1000 g",
     "volume": "500 ml",
@@ -310,38 +310,10 @@
     "flags": [ "NO_SALVAGE" ]
   },
   {
-    "id": "mc_link_sheet",
-    "type": "TOOL",
-    "copy-from": "lc_link_sheet",
-    "name": { "str": "medium steel chainmail sheet" },
-    "material": [ "mc_steel" ]
-  },
-  {
-    "id": "hc_link_sheet",
-    "type": "TOOL",
-    "copy-from": "lc_link_sheet",
-    "name": { "str": "high steel chainmail sheet" },
-    "material": [ "hc_steel" ]
-  },
-  {
-    "id": "ch_link_sheet",
-    "type": "TOOL",
-    "copy-from": "lc_link_sheet",
-    "name": { "str": "hardened steel chainmail sheet" },
-    "material": [ "ch_steel" ]
-  },
-  {
-    "id": "qt_link_sheet",
-    "type": "TOOL",
-    "copy-from": "lc_link_sheet",
-    "name": { "str": "tempered steel chainmail sheet" },
-    "material": [ "qt_steel" ]
-  },
-  {
     "id": "swage",
     "type": "TOOL",
     "name": { "str": "swage and die set" },
-    "description": "A set of swages and dies for metalsmithing.  These loops and metal blocks are used in some metalworking fabrication recipes.",
+    "description": "A big steel block with various holes and grooves in it, accompanied by some oddly-shaped metal pegs.  These items are essential for shaping metal during the forging process.",
     "weight": "2620 g",
     "volume": "2 L",
     "price": 16000,
