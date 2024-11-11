@@ -340,7 +340,7 @@
       [ "hat_hard", 22 ],
       [ "miner_hat", 9 ],
       [ "firehelmet", 10 ],
-      [ "chainmail_junk_hood", 1 ],
+      [ "chainmail_junk_coif", 1 ],
       [ "pickelhaube", 1 ]
     ]
   },
@@ -378,7 +378,7 @@
       [ "carpet_armguards", 8 ],
       [ "improvised_armguard_tire", 4 ],
       [ "elbow_pads", 20 ],
-      [ "chainmail_junk_arms", 1 ]
+      [ "chainmail_junk_sleeves", 1 ]
     ]
   },
   {
@@ -389,7 +389,7 @@
       [ "vest_leather", 20 ],
       [ "vest_leather_mod", 8 ],
       [ "stab_vest", 15 ],
-      [ "chainmail_junk_vest", 1 ],
+      [ "chainmail_junk_sleeves", 1 ],
       [ "chestguard_hard", 10 ],
       [ "armor_riot_torso", 10 ],
       [ "cuirass_scrap", 8 ],
@@ -439,7 +439,7 @@
       [ "knee_pads", 20 ],
       [ "armor_riot_leg", 8 ],
       [ "legguard_tire", 15 ],
-      [ "chainmail_junk_legs", 1 ],
+      [ "chainmail_junk_chausses", 1 ],
       [ "legguard_scrap", 10 ],
       [ "armor_riot_torso", 10 ],
       [ "carpet_legguards", 8 ],
@@ -457,7 +457,7 @@
       [ "gloves_work", 20 ],
       [ "gloves_fur", 8 ],
       [ "gloves_wool", 8 ],
-      [ "chainmail_junk_hands", 1 ],
+      [ "chainmail_junk_gloves", 1 ],
       [ "gloves_winter", 10 ],
       [ "gloves_rubber", 10 ],
       [ "gloves_leather", 25 ],

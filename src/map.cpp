@@ -3396,6 +3396,10 @@ bool map::is_flammable( const tripoint &p )
         return false;
     }
 
+    if( has_field_at( p, fd_fire ) ) {
+        return false;
+    }
+
     if( has_flag( ter_furn_flag::TFLAG_FLAMMABLE, p ) ) {
         return true;
     }
@@ -5903,6 +5907,44 @@ bool map::has_items( const tripoint &p ) const
 bool map::has_items( const tripoint_bub_ms &p ) const
 {
     return has_items( p.raw() );
+}
+
+bool map::is_dry( const tripoint &p )
+{
+    // TODO: Flooded vehicles.
+    if( veh_at( p ) ) {
+        return true;
+    }
+    if( has_flag( ter_furn_flag::TFLAG_SWIMMABLE, p ) || has_flag( ter_furn_flag::TFLAG_LIQUID, p ) ) {
+        return false;
+    }
+    for( const auto &pr : field_at( p ) ) {
+        const field_entry &fd = pr.second;
+        // If the field isn't totally flooded, assume we have a dry patch to use.
+        if( fd.get_field_type()->phase == phase_id::LIQUID &&
+            ( fd.get_field_intensity() >= fd.get_field_type()->get_max_intensity() ) ) {
+            return false;
+        }
+    }
+    // Fuels burn and are almost all nonconductive, which are the only two things we really care about at the moment.
+    // Consider revisiting this if that changes.
+    if( has_flag( ter_furn_flag::TFLAG_LIQUIDCONT, p ) ) {
+        for( const item &it : i_at( p ) ) {
+            if( it.made_of( phase_id::LIQUID ) && !it.is_fuel() ) {
+                return false;
+            }
+        }
+    } else {
+        map_stack items = i_at( p );
+        auto found = std::find_if( items.begin(), items.end(), []( const item & it ) {
+            return it.made_of( phase_id::LIQUID ) && !it.is_fuel();
+        } );
+
+        if( found != items.end() ) {
+            return false;
+        }
+    }
+    return true;
 }
 
 bool map::only_liquid_in_liquidcont( const tripoint &p )

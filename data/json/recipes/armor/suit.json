@@ -425,58 +425,6 @@
     ]
   },
   {
-    "result": "armor_metal_sheets_heavy",
-    "id_suffix": "assembly",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_SUIT",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "20 m",
-    "reversible": true,
-    "autolearn": true,
-    "components": [
-      [ [ "chestguard_metal_sheets_heavy", 1 ] ],
-      [ [ "armguard_metal", 1 ] ],
-      [ [ "armguard_metal_sheets_shoulders", 1 ] ],
-      [ [ "armguard_metal_sheets_elbows", 1 ] ],
-      [ [ "legguard_metal_sheets", 1 ] ],
-      [ [ "legguard_metal_sheets_hip", 1 ] ],
-      [ [ "legguard_metal_sheets_knees", 1 ] ]
-    ]
-  },
-  {
-    "result": "armor_metal_sheets_chain",
-    "id_suffix": "assembly",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_SUIT",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "120 m",
-    "autolearn": true,
-    "components": [ [ [ "armor_metal_sheets", 1 ] ], [ [ "link_sheet", 2 ] ], [ [ "nuts_bolts", 48 ] ] ],
-    "qualities": [ { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 2 } ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_chain_armour" } ]
-  },
-  {
-    "result": "armor_metal_sheets_chain_heavy",
-    "id_suffix": "assembly",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_SUIT",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "120 m",
-    "autolearn": true,
-    "components": [ [ [ "armor_metal_sheets_heavy", 1 ] ], [ [ "link_sheet", 2 ] ], [ [ "nuts_bolts", 48 ] ] ],
-    "qualities": [ { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 2 } ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_chain_armour" } ]
-  },
-  {
     "result": "armor_tiresuit",
     "id_suffix": "assembly",
     "type": "recipe",
@@ -526,21 +474,21 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" } ],
-    "components": [ [ [ "chainmail_vest", 1 ] ], [ [ "chainmail_arms", 1 ] ] ]
+    "components": [ [ [ "chainmail_vest", 1 ] ], [ [ "chainmail_sleeves", 1 ] ], [ [ "chainmail_skirt", 1 ] ] ]
   },
   {
-    "result": "xs_chainmail_hauberk",
+    "result": "chainmail_hauberk_xs",
     "type": "recipe",
     "copy-from": "chainmail_hauberk",
     "time": "20 m",
-    "components": [ [ [ "xs_chainmail_vest", 1 ] ], [ [ "xs_chainmail_arms", 1 ] ] ]
+    "components": [ [ [ "chainmail_vest_xs", 1 ] ], [ [ "chainmail_sleeves_xs", 1 ] ], [ [ "chainmail_skirt_xs", 1 ] ] ]
   },
   {
-    "result": "xl_chainmail_hauberk",
+    "result": "chainmail_hauberk_xl",
     "type": "recipe",
     "copy-from": "chainmail_hauberk",
     "time": "20 m",
-    "components": [ [ [ "xl_chainmail_vest", 1 ] ], [ [ "xl_chainmail_arms", 1 ] ] ]
+    "components": [ [ [ "chainmail_vest_xl", 1 ] ], [ [ "chainmail_sleeves_xl", 1 ] ], [ [ "chainmail_skirt_xl", 1 ] ] ]
   },
   {
     "result": "chainmail_suit",
@@ -556,15 +504,16 @@
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures", "skill_penalty": 0 }, { "proficiency": "prof_chain_armour", "skill_penalty": 0 } ],
     "components": [
-      [ [ "chainmail_hood", 1 ] ],
-      [ [ "chainmail_arms", 1 ] ],
-      [ [ "chainmail_legs", 1 ] ],
+      [ [ "chainmail_coif", 1 ] ],
+      [ [ "chainmail_sleeves", 1 ] ],
+      [ [ "chainmail_chausses", 1 ] ],
       [ [ "chainmail_vest", 1 ] ],
-      [ [ "chainmail_hands", 1 ] ]
+      [ [ "chainmail_skirt", 1 ] ],
+      [ [ "chainmail_gloves", 1 ] ]
     ]
   },
   {
-    "result": "xl_chainmail_suit",
+    "result": "chainmail_suit_xl",
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
@@ -577,15 +526,16 @@
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures", "skill_penalty": 0 }, { "proficiency": "prof_chain_armour", "skill_penalty": 0 } ],
     "components": [
-      [ [ "xl_chainmail_hood", 1 ] ],
-      [ [ "xl_chainmail_arms", 1 ] ],
-      [ [ "xl_chainmail_legs", 1 ] ],
-      [ [ "xl_chainmail_vest", 1 ] ],
-      [ [ "xl_chainmail_hands", 1 ] ]
+      [ [ "chainmail_coif_xl", 1 ] ],
+      [ [ "chainmail_sleeves_xl", 1 ] ],
+      [ [ "chainmail_chausses_xl", 1 ] ],
+      [ [ "chainmail_vest_xl", 1 ] ],
+      [ [ "chainmail_skirt_xl", 1 ] ],
+      [ [ "chainmail_gloves_xl", 1 ] ]
     ]
   },
   {
-    "result": "xs_chainmail_suit",
+    "result": "chainmail_suit_xs",
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
@@ -598,11 +548,12 @@
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures", "skill_penalty": 0 }, { "proficiency": "prof_chain_armour", "skill_penalty": 0 } ],
     "components": [
-      [ [ "xs_chainmail_hood", 1 ] ],
-      [ [ "xs_chainmail_arms", 1 ] ],
-      [ [ "xs_chainmail_legs", 1 ] ],
-      [ [ "xs_chainmail_vest", 1 ] ],
-      [ [ "xs_chainmail_hands", 1 ] ]
+      [ [ "chainmail_coif_xs", 1 ] ],
+      [ [ "chainmail_sleeves_xs", 1 ] ],
+      [ [ "chainmail_chausses_xs", 1 ] ],
+      [ [ "chainmail_vest_xs", 1 ] ],
+      [ [ "chainmail_skirt_xs", 1 ] ],
+      [ [ "chainmail_gloves_xs", 1 ] ]
     ]
   },
   {
@@ -616,54 +567,24 @@
     "skills_required": [ "electronics", 3 ],
     "time": "720 m",
     "book_learn": [ [ "textbook_fabrication", 6 ], [ "advanced_electronics", 6 ], [ "textbook_electronics", 6 ] ],
-    "using": [ [ "chainmail_standard", 20 ], [ "fabric_standard_nostretch", 26 ] ],
+    "using": [ [ "chainmail_standard", 20 ] ],
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_shock_weapons" } ],
-    "components": [
-      [ [ "chainmail_hood", 1 ] ],
-      [ [ "chainmail_vest", 1 ] ],
-      [ [ "chainmail_arms", 1 ] ],
-      [ [ "chainmail_legs", 1 ] ],
-      [ [ "chainmail_hands", 1 ] ],
-      [ [ "link_sheet", 2 ], [ "chainmail_feet", 1 ] ],
-      [ [ "chain_link", 500 ] ],
-      [ [ "cable", 250 ] ],
-      [ [ "qt_wire", 5 ] ]
-    ]
+    "components": [ [ [ "chainmail_suit", 1 ] ], [ [ "cleansuit", 1 ] ], [ [ "chain_link", 500 ] ], [ [ "cable", 250 ] ] ]
   },
   {
     "result": "chainmail_suit_faraday_xs",
     "type": "recipe",
     "copy-from": "chainmail_suit_faraday",
     "time": "720 m",
-    "using": [ [ "chainmail_standard", 15 ], [ "fabric_standard_nostretch", 19 ] ],
-    "components": [
-      [ [ "xs_chainmail_hood", 1 ] ],
-      [ [ "xs_chainmail_vest", 1 ] ],
-      [ [ "xs_chainmail_arms", 1 ] ],
-      [ [ "xs_chainmail_legs", 1 ] ],
-      [ [ "xs_chainmail_hands", 1 ] ],
-      [ [ "link_sheet", 2 ], [ "xs_chainmail_feet", 1 ] ],
-      [ [ "chain_link", 375 ] ],
-      [ [ "cable", 200 ] ],
-      [ [ "wire", 3 ] ]
-    ]
+    "using": [ [ "chainmail_standard", 15 ] ],
+    "components": [ [ [ "chainmail_suit_xs", 1 ] ], [ [ "cleansuit", 1 ] ], [ [ "chain_link", 375 ] ], [ [ "cable", 200 ] ] ]
   },
   {
-    "result": "xl_chainmail_suit_faraday",
+    "result": "chainmail_suit_faraday_xl",
     "type": "recipe",
     "copy-from": "chainmail_suit_faraday",
-    "using": [ [ "chainmail_standard", 20 ], [ "fabric_standard_nostretch", 30 ] ],
-    "components": [
-      [ [ "xl_chainmail_hood", 1 ] ],
-      [ [ "xl_chainmail_vest", 1 ] ],
-      [ [ "xl_chainmail_arms", 1 ] ],
-      [ [ "xl_chainmail_legs", 1 ] ],
-      [ [ "xl_chainmail_hands", 1 ] ],
-      [ [ "link_sheet", 4 ], [ "xl_chainmail_feet", 1 ] ],
-      [ [ "chain_link", 750 ] ],
-      [ [ "cable", 300 ] ],
-      [ [ "wire", 5 ] ]
-    ]
+    "using": [ [ "chainmail_standard", 20 ] ],
+    "components": [ [ [ "chainmail_suit_xl", 1 ] ], [ [ "cleansuit", 1 ] ], [ [ "chain_link", 750 ] ], [ [ "cable", 300 ] ] ]
   },
   {
     "result": "grass_cloak",

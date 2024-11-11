@@ -29,8 +29,8 @@
     "id": "bandana_head",
     "type": "TOOL_ARMOR",
     "category": "clothing",
-    "name": { "str": "head bandana" },
-    "description": "A cotton bandana, worn over the head.",
+    "name": { "str": "kercheif" },
+    "description": "A cotton bandana worn over the head.  It can be adjusted to cover the mouth and nose instead.",
     "weight": "42 g",
     "volume": "250 ml",
     "price": 600,
@@ -42,20 +42,14 @@
       "menu_text": "Cover mouth"
     },
     "material": [ "cotton" ],
+    "flags": [ "SKINTIGHT" ],
     "symbol": "[",
     "looks_like": "scarf",
     "color": "blue",
     "warmth": 5,
     "material_thickness": 0.1,
     "environmental_protection": 1,
-    "armor": [
-      {
-        "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
-        "covers": [ "head" ],
-        "specifically_covers": [ "head_forehead" ]
-      }
-    ]
+    "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 70, "covers": [ "head" ] } ]
   },
   {
     "id": "beret",
