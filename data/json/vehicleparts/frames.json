@@ -94,10 +94,8 @@
       "LOCKABLE_CARGO",
       "WHEEL",
       "STABLE",
-      "STEERABLE",
       "NO_INSTALL_HIDDEN",
       "BOARDABLE",
-      "SIMPLE_PART",
       "NO_UNINSTALL",
       "UNMOUNT_ON_DAMAGE"
     ],
