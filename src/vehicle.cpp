@@ -7389,7 +7389,11 @@ int vehicle::damage_direct( map &here, vehicle_part &vp, int dmg, const damage_t
             invalidate_towing( true );
         } else {
             item part_as_item = part_to_item( vp );
-            add_msg_if_player_sees( vppos, m_bad, _( "The %1$s's %2$s is disconnected!" ), name, vp.name() );
+            if( vpi.has_flag( "INITIAL_PART" ) ) {
+                add_msg_if_player_sees( vppos, m_bad, _( "The %s falls over!" ), name );
+            } else {
+                add_msg_if_player_sees( vppos, m_bad, _( "The %1$s's %2$s is disconnected!" ), name, vp.name() );
+            }
             if( vpi.has_flag( VPFLAG_POWER_TRANSFER ) ) {
                 remove_remote_part( vp );
                 part_as_item.set_damage( 0 );
