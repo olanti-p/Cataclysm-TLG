@@ -53,7 +53,7 @@
     "symbol": "0",
     "color": "light_gray",
     "variables": {
-      "vehicle_name": "inflatable boat",
+      "vehicle_name": "Inflatable boat",
       "folded_parts": "[{\"id\":\"inflatable_section\",\"base\":{\"typeid\":\"inflatable_section\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"folding_seat\",\"base\":{\"typeid\":\"sheet\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"inflatable_airbag\",\"base\":{\"typeid\":\"inflatable_airbag\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"hand_paddles\",\"base\":{\"typeid\":\"hand_paddles\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"inflatable_section\",\"base\":{\"typeid\":\"inflatable_section\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":1,\"mount_dy\":0},{\"id\":\"inflatable_airbag\",\"base\":{\"typeid\":\"inflatable_airbag\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":1,\"mount_dy\":0},{\"id\":\"inflatable_section\",\"base\":{\"typeid\":\"inflatable_section\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":1,\"mount_dy\":1},{\"id\":\"inflatable_airbag\",\"base\":{\"typeid\":\"inflatable_airbag\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":1,\"mount_dy\":1},{\"id\":\"inflatable_section\",\"base\":{\"typeid\":\"inflatable_section\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":1},{\"id\":\"inflatable_airbag\",\"base\":{\"typeid\":\"inflatable_airbag\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":1}]"
     }
   },
@@ -70,6 +70,40 @@
     "variables": {
       "vehicle_name": "Skateboard",
       "folded_parts": "[{\"id\":\"frame_wood_deck\",\"base\":{\"typeid\":\"frame_wood_deck\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"wheel_mount_skateboard\",\"base\":{\"typeid\":\"wheel_mount_skateboard\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"wheel_skateboard\",\"base\":{\"typeid\":\"wheel_skateboard\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0}]"
+    }
+  },
+  {
+    "id": "folded_trashcan_large",
+    "type": "WHEEL",
+    "category": "container",
+    "name": { "str": "outdoor trash bin" },
+    "looks_like": "f_recycle_bin",
+    "description": "A big plastic trash can with two wheels and a lid.  This one is tipped over, activate it to set it up for rolling.",
+    "weight": "15 kg",
+    "volume": "400 L",
+    "longest_side": "114 cm",
+    "price": "150 USD",
+    "price_postapoc": 7500,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "360 L",
+        "max_contains_weight": "149 kg",
+        "open_container": true,
+        "rigid": true,
+        "watertight": true
+      }
+    ],
+    "qualities": [ [ "CONTAIN", 2 ] ],
+    "material": [ "plastic" ],
+    "symbol": ")",
+    "color": "green",
+    "use_action": [ "UNFOLD_GENERIC" ],
+    "diameter": 4,
+    "width": 1,
+    "variables": {
+      "vehicle_name": "Rolling Trash Bin",
+      "folded_parts": "[{\"id\":\"roller_bin\",\"base\":{\"typeid\":\"roller_bin\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0}]"
     }
   }
 ]

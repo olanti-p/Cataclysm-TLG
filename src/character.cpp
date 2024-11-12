@@ -8260,6 +8260,8 @@ bool Character::move_in_vehicle( Creature *c, const tripoint &dest_loc ) const
                 free_cargo *= 1.2;
             }
             const creature_size size = get_size();
+            // TODO: A large human should be 145,000ml+, a huge one should be at least 300k
+            // The other sizes look fine though.
             if( ( size == creature_size::tiny && free_cargo < 15625_ml ) ||
                 ( size == creature_size::small && free_cargo < 31250_ml ) ||
                 ( size == creature_size::medium && free_cargo < 62500_ml ) ||
