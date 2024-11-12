@@ -477,6 +477,25 @@
     "description": "A wide, studded bicycle wheel intended for off-road biking."
   },
   {
+    "id": "wheel_small_pair",
+    "category": "veh_parts",
+    "type": "WHEEL",
+    "name": { "str": "pair of small wheels", "str_pl": "pairs of small wheels" },
+    "description": "Two small plastic wheels snapped onto a simple wire axle, the kind you'd see on a child's wagon or a rolling trash can.",
+    "weight": "575 g",
+    "volume": "625 ml",
+    "longest_side": "102 mm",
+    "price": 2400,
+    "price_postapoc": 100,
+    "to_hit": -1,
+    "material": [ "steel", "plastic" ],
+    "symbol": "]",
+    "color": "dark_gray",
+    "diameter": 2,
+    "width": 1,
+    "melee_damage": { "bash": 3 }
+  },
+  {
     "id": "wheel_caster",
     "category": "veh_parts",
     "type": "WHEEL",

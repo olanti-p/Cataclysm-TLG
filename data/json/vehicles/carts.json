@@ -136,11 +136,11 @@
   {
     "id": "rolling_trash_can",
     "type": "vehicle",
-    "name": "Rolling Trash Can",
+    "name": "Rolling Trash Bin",
     "blueprint": [ [ "o" ] ],
-    "parts": [ { "x": 0, "y": 0, "parts": [ "xlframe", "wheel_caster_large", "integrated_trashcan" ] } ],
+    "parts": [ { "x": 0, "y": 0, "parts": [ "roller_bin" ] } ],
     "items": [
-      { "x": 0, "y": 0, "chance": 20, "item_groups": [ "rolling_trash" ] },
+      { "x": 0, "y": 0, "chance": 40, "item_groups": [ "rolling_trash" ] },
       { "x": 0, "y": 0, "chance": 20, "item_groups": [ "rolling_trash" ] },
       { "x": 0, "y": 0, "chance": 20, "item_groups": [ "rolling_trash" ] }
     ]
