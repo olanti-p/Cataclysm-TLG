@@ -18,8 +18,7 @@
     ],
     "warmth": 10,
     "material_thickness": 1,
-    "environmental_protection": 1,
-    "flags": [ "VARSIZE", "OUTER" ]
+    "flags": [ "BELTED" ]
   },
   {
     "id": "hood_rain",
@@ -36,8 +35,7 @@
     "color": "yellow",
     "warmth": 8,
     "material_thickness": 0.3,
-    "environmental_protection": 2,
-    "flags": [ "RAINPROOF", "OUTER" ],
+    "flags": [ "RAINPROOF", "BELTED" ],
     "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ] } ]
   },
   {
@@ -56,8 +54,7 @@
     "color": "light_gray",
     "warmth": 5,
     "material_thickness": 3,
-    "environmental_protection": 2,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT", "STURDY" ],
+    "flags": [ "WATER_FRIENDLY", "SKINTIGHT", "STURDY" ],
     "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ] } ]
   },
   {
@@ -75,8 +72,7 @@
     "color": "light_gray",
     "warmth": 10,
     "material_thickness": 0.1,
-    "environmental_protection": 1,
-    "flags": [ "RAINPROOF", "OUTER" ],
+    "flags": [ "RAINPROOF", "BELTED" ],
     "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 95, "covers": [ "head" ] } ]
   },
   {
@@ -98,8 +94,7 @@
     ],
     "warmth": 8,
     "material_thickness": 0.2,
-    "environmental_protection": 1,
-    "flags": [ "VARSIZE" ]
+    "flags": [ "SKINTIGHT" ]
   },
   {
     "id": "chainmail_aventail",
