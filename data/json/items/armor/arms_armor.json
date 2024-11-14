@@ -32,7 +32,7 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "id": "carpet_armguards",
+    "id": "carpet_arm_guards",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of carpet arm guards", "str_pl": "pairs of carpet arm guards" },
@@ -225,8 +225,7 @@
           { "type": "plastic", "covered_by_mat": 90, "thickness": 1.5 },
           { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.5 }
         ],
-        "coverage": 100,
-        "cover_vitals": 90
+        "coverage": 100
       },
       {
         "covers": [ "arm_l", "arm_r" ],
@@ -235,8 +234,7 @@
           { "type": "plastic", "covered_by_mat": 50, "thickness": 1.5 },
           { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.5 }
         ],
-        "coverage": 100,
-        "cover_vitals": 90
+        "coverage": 100
       },
       {
         "covers": [ "arm_l", "arm_r" ],
@@ -245,8 +243,7 @@
           { "type": "plastic", "covered_by_mat": 90, "thickness": 1.5 },
           { "type": "neoprene", "covered_by_mat": 100, "thickness": 1.5 }
         ],
-        "coverage": 80,
-        "cover_vitals": 90
+        "coverage": 80
       }
     ]
   },
@@ -268,7 +265,7 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "armguard_larmor",
+    "id": "leather_arm_guards",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of leather arm guards", "str_pl": "pairs of leather arm guards" },
@@ -296,17 +293,17 @@
     ]
   },
   {
-    "id": "xl_armguard_larmor",
+    "id": "leather_arm_guards_xl",
     "type": "ARMOR",
     "name": { "str": "pair of XL leather arm guards", "str_pl": "pairs of XL leather arm guards" },
-    "copy-from": "armguard_larmor",
+    "copy-from": "leather_arm_guards",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_armguard_larmor",
+    "id": "leather_arm_guards_xs",
     "type": "ARMOR",
-    "copy-from": "armguard_larmor",
+    "copy-from": "leather_arm_guards",
     "name": { "str": "pair of XS leather arm guards", "str_pl": "pairs of XS leather arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -324,7 +321,7 @@
     "to_hit": 1,
     "material": [ "paper" ],
     "symbol": "[",
-    "looks_like": "armguard_larmor",
+    "looks_like": "leather_arm_guards",
     "color": "blue",
     "warmth": 5,
     "material_thickness": 3,
@@ -339,11 +336,11 @@
     ]
   },
   {
-    "id": "tire_vambraces",
+    "id": "tire_bracers",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of tire vambraces", "str_pl": "pairs of tire vambraces" },
-    "description": "Bracers made of thick chunks of tire held together with duct tape.",
+    "name": { "str": "pair of tire bracers", "str_pl": "pairs of tire bracers" },
+    "description": "Improvised forearm guards made of thick chunks of tire held together with duct tape.",
     "weight": "2400 g",
     "volume": "2 L",
     "price": 2300,
@@ -351,7 +348,7 @@
     "to_hit": 1,
     "material": [ "rubber" ],
     "symbol": "[",
-    "looks_like": "armguard_larmor",
+    "looks_like": "leather_arm_guards",
     "color": "light_gray",
     "warmth": 5,
     "material_thickness": 4,
@@ -366,43 +363,43 @@
     ]
   },
   {
-    "id": "tire_vambraces_xl",
+    "id": "tire_bracers_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL tire vambraces", "str_pl": "pairs of XL tire vambraces" },
-    "copy-from": "tire_vambraces",
+    "name": { "str": "pair of XL tire bracers", "str_pl": "pairs of XL tire bracers" },
+    "copy-from": "tire_bracers",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "tire_vambraces_xs",
+    "id": "tire_bracers_xs",
     "type": "ARMOR",
-    "copy-from": "tire_vambraces",
-    "name": { "str": "pair of XS tire vambraces", "str_pl": "pairs of XS tire vambraces" },
+    "copy-from": "tire_bracers",
+    "name": { "str": "pair of XS tire bracers", "str_pl": "pairs of XS tire bracers" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "scrap_vambraces",
+    "id": "sheet_metal_bracers",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of scrap vambraces", "str_pl": "pairs of scrap vambraces" },
-    "description": "A pair of crude bracers made from scraps of metal secured by simple strings.",
+    "name": { "str": "pair of sheet metal bracers", "str_pl": "pairs of sheet metal bracers" },
+    "description": "Leather bracers with sheet metal affixed over them, perfect for a metal concert at the end of the world.",
     "weight": "3064 g",
     "volume": "4750 ml",
     "price": 20000,
     "price_postapoc": 500,
     "to_hit": 1,
-    "material": [ "budget_steel", "cotton" ],
+    "material": [ "lc_steel", "leather" ],
     "symbol": "[",
-    "looks_like": "armguard_metal",
+    "looks_like": "leather_vambraces",
     "color": "light_gray",
     "warmth": 10,
     "flags": [ "OUTER", "BLOCK_WHILE_WORN" ],
     "armor": [
       {
         "material": [
-          { "type": "budget_steel", "covered_by_mat": 100, "thickness": 1.5 },
-          { "type": "cotton", "covered_by_mat": 10, "thickness": 1.0 }
+          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 },
+          { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
         "encumbrance": 6,
@@ -413,27 +410,27 @@
     "melee_damage": { "bash": 1, "cut": 1 }
   },
   {
-    "id": "scrap_vambraces_xl",
+    "id": "sheet_metal_bracers_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL scrap vambraces", "str_pl": "pairs of XL scrap vambraces" },
-    "copy-from": "scrap_vambraces",
+    "name": { "str": "pair of XL sheet metal bracers", "str_pl": "pairs of XL sheet metal bracers" },
+    "copy-from": "sheet_metal_bracers",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "scrap_vambraces_xs",
+    "id": "sheet_metal_bracers_xs",
     "type": "ARMOR",
-    "copy-from": "scrap_vambraces",
-    "name": { "str": "pair of XS scrap arm guards", "str_pl": "pairs of XS scrap arm guards" },
+    "copy-from": "sheet_metal_bracers",
+    "name": { "str": "pair of XS sheet metal bracers", "str_pl": "pairs of XS sheet metal bracers" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "tire_armguards",
+    "id": "tire_arm_guards",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of tire armguards", "str_pl": "pairs of tire armguards" },
-    "description": "A pair of armguards made from thick chunks of tire secured by simple strings; the loose collection of rubber plates provides decent but not the most convenient protection.",
+    "name": { "str": "pair of tire arm guards", "str_pl": "pairs of tire arm guards" },
+    "description": "A pair of arm guards made from thick chunks of tire secured by simple strings; the loose collection of rubber plates provides decent but not the most convenient protection.",
     "weight": "4800 g",
     "volume": "4750 ml",
     "price": 20000,
@@ -441,7 +438,7 @@
     "to_hit": 1,
     "material": [ "rubber" ],
     "symbol": "[",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_arm_guards",
     "color": "light_gray",
     "warmth": 10,
     "material_thickness": 4,
@@ -456,18 +453,18 @@
     ]
   },
   {
-    "id": "tire_armguards_xl",
+    "id": "tire_arm_guards_xl",
     "type": "ARMOR",
-    "copy-from": "tire_armguards",
-    "name": { "str": "pair of XL tire armguards", "str_pl": "pairs of XL tire armguards" },
+    "copy-from": "tire_arm_guards",
+    "name": { "str": "pair of XL tire arm guards", "str_pl": "pairs of XL tire arm guards" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "tire_armguards_xs",
+    "id": "tire_arm_guards_xs",
     "type": "ARMOR",
-    "copy-from": "tire_armguards",
-    "name": { "str": "pair of XS tire armguards", "str_pl": "pairs of XS tire armguards" },
+    "copy-from": "tire_arm_guards",
+    "name": { "str": "pair of XS tire arm guards", "str_pl": "pairs of XS tire arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -717,7 +714,7 @@
     "price": 3500,
     "price_postapoc": 250,
     "to_hit": 1,
-    "material": [ "plastic", "cotton" ],
+    "material": [ "plastic", "nylon" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "dark_gray",
@@ -725,12 +722,13 @@
     "flags": [ "WATER_FRIENDLY", "OUTER" ],
     "armor": [
       {
+        "material": [ { "type": "plastic", "covered_by_mat": 60, "thickness": 4 }, { "type": "nylon", "covered_by_mat": 100, "thickness": 1 } ],
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 2,
-        "coverage": 90,
-        "specifically_covers": [ "arm_elbow_r", "arm_elbow_l" ]
+        "specifically_covers": [ "arm_elbow_l", "arm_elbow_r" ],
+        "coverage": 100,
+        "encumbrance": 3
       }
-    ]
+  ]
   },
   {
     "id": "bronze_vambraces",
@@ -776,7 +774,7 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "vambrace_larmor",
+    "id": "leather_vambraces",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of leather vambraces", "str_pl": "pairs of leather vambraces" },
@@ -788,7 +786,7 @@
     "to_hit": 1,
     "material": [ "leather" ],
     "symbol": "[",
-    "looks_like": "armguard_larmor",
+    "looks_like": "leather_arm_guards",
     "color": "brown",
     "warmth": 10,
     "material_thickness": 3,
@@ -804,19 +802,18 @@
     ]
   },
   {
-    "id": "xl_vambrace_larmor",
+    "id": "leather_vambraces_xl",
     "type": "ARMOR",
     "name": { "str": "pair of XL leather vambraces", "str_pl": "pairs of XL leather vambraces" },
     "weight": "531 g",
     "volume": "1250 ml",
-    "copy-from": "vambrace_larmor",
+    "copy-from": "leather_vambraces",
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_vambrace_larmor",
+    "id": "leather_vambraces_xs",
     "type": "ARMOR",
-    "copy-from": "vambrace_larmor",
-    "looks_like": "vambrace_larmor",
+    "copy-from": "leather_vambraces",
     "name": { "str": "pair of XS leather vambraces", "str_pl": "pairs of XS leather vambraces" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -832,7 +829,7 @@
     "material": [ "kevlar" ]
   },
   {
-    "id": "platemail_armguards",
+    "id": "platemail_arm_guards",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "plate arm guards" },
@@ -843,7 +840,7 @@
     "price_postapoc": 12000,
     "to_hit": -5,
     "symbol": "[",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_arm_guards",
     "material": [ "lc_steel" ],
     "color": "light_gray",
     "warmth": 10,
@@ -865,18 +862,18 @@
     "melee_damage": { "bash": 4 }
   },
   {
-    "id": "platemail_armguards_xs",
+    "id": "platemail_arm_guards_xs",
     "type": "ARMOR",
     "name": { "str": "XS plate arm guards" },
-    "copy-from": "platemail_armguards",
+    "copy-from": "platemail_arm_guards",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "platemail_armguards_xl",
+    "id": "platemail_arm_guards_xl",
     "type": "ARMOR",
     "name": { "str": "XL plate arm guards" },
-    "copy-from": "platemail_armguards",
+    "copy-from": "platemail_arm_guards",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
@@ -892,14 +889,14 @@
     "price_postapoc": 6000,
     "to_hit": -5,
     "symbol": "[",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_arm_guards",
     "material": [ "lc_steel" ],
     "color": "light_gray",
     "warmth": 10,
     "longest_side": "60 cm",
     "sided": true,
     "material_thickness": 1.3,
-    "flags": [ "OUTER", "STURDY", "CONDUCTIVE", "BLOCK_WHILE_WORN" ],
+    "flags": [ "OUTER", "STURDY", "CONDUCTIVE" ],
     "armor": [
       {
         "material": [
@@ -916,7 +913,7 @@
   {
     "id": "platemail_pauldrons_xs",
     "type": "ARMOR",
-    "name": { "str": "XS platemail pauldrons" },
+    "name": { "str": "XS plate pauldrons" },
     "copy-from": "platemail_pauldrons",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -926,6 +923,54 @@
     "type": "ARMOR",
     "name": { "str": "XL plate pauldrons" },
     "copy-from": "platemail_pauldrons",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "leather_pauldrons",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "leather pauldrons" },
+    "description": "Shoulder guards made of thick leather.  They're a little restrictive, but provide important protection.",
+    "weight": "900 g",
+    "volume": "900 ml",
+    "price": 3000,
+    "price_postapoc": 600,
+    "to_hit": -5,
+    "symbol": "[",
+    "looks_like": "leather_arm_guards",
+    "material": [ "leather" ],
+    "color": "brown",
+    "warmth": 10,
+    "longest_side": "60 cm",
+    "sided": true,
+    "material_thickness": 4,
+    "flags": [ "OUTER", "STURDY" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 4 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
+        "coverage": 100,
+        "encumbrance": 6
+      }
+    ]
+  },
+  {
+    "id": "leather_pauldrons_xs",
+    "type": "ARMOR",
+    "name": { "str": "XS leather pauldrons" },
+    "copy-from": "leather_pauldrons",
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "leather_pauldrons_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL leather pauldrons" },
+    "copy-from": "leather_pauldrons",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },

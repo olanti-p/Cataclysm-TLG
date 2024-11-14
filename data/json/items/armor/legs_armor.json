@@ -39,7 +39,7 @@
     "price": 20,
     "price_postapoc": 10,
     "to_hit": 1,
-    "material": [ "plastic", "carpet_pilling" ],
+    "material": [ "carpet_pilling", "plastic" ],
     "symbol": "[",
     "looks_like": "leg_warmers",
     "color": "red",
@@ -50,8 +50,8 @@
     "armor": [
       {
         "material": [
-          { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "carpet_pilling", "covered_by_mat": 100, "thickness": 3.0 }
+          { "type": "carpet_pilling", "covered_by_mat": 100, "thickness": 3.0 },
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "encumbrance": 5,
@@ -72,7 +72,7 @@
     "price": 20,
     "price_postapoc": 10,
     "to_hit": 1,
-    "material": [ "plastic", "carpet_pilling" ],
+    "material": [ "carpet_pilling", "plastic" ],
     "symbol": "[",
     "looks_like": "leg_warmers",
     "color": "red",
@@ -83,8 +83,8 @@
     "armor": [
       {
         "material": [
-          { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "carpet_pilling", "covered_by_mat": 100, "thickness": 3.0 }
+          { "type": "carpet_pilling", "covered_by_mat": 100, "thickness": 3.0 },
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "encumbrance": 3,
@@ -520,27 +520,28 @@
     "price": 2500,
     "price_postapoc": 50,
     "to_hit": 1,
-    "material": [ "plastic", "cotton" ],
+    "material": [ "plastic", "nylon" ],
     "symbol": "[",
     "looks_like": "legguard_hard",
     "color": "dark_gray",
     "material_thickness": 5,
     "flags": [ "WATER_FRIENDLY", "OUTER", "ALLOWS_TAIL" ],
     "armor": [
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "encumbrance": 0,
-        "coverage": 90,
-        "specifically_covers": [ "leg_knee_r", "leg_knee_l" ]
-      }
+        {
+          "material": [ { "type": "plastic", "covered_by_mat": 60, "thickness": 4 }, { "type": "nylon", "covered_by_mat": 100, "thickness": 1 } ],
+          "covers": [ "leg_l", "leg_r" ],
+          "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
+          "coverage": 100,
+          "encumbrance": 3
+        }
     ]
   },
   {
-    "id": "legguard_bronze",
+    "id": "bronze_greaves",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of bronze greaves", "str_pl": "pairs of bronze greaves" },
-    "description": "A pair of bronze leg guards with a simple leather lining.",
+    "description": "A pair of bronze shin and knee guards with a simple leather lining.",
     "weight": "2520 g",
     "volume": "5500 ml",
     "price": 40000,
@@ -563,17 +564,17 @@
     ]
   },
   {
-    "id": "xl_legguard_bronze",
+    "id": "bronze_greaves_xl",
     "type": "ARMOR",
-    "copy-from": "legguard_bronze",
+    "copy-from": "bronze_greaves",
     "name": { "str": "pair of XL bronze greaves", "str_pl": "pairs of XL bronze greaves" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_legguard_bronze",
+    "id": "bronze_greaves_xs",
     "type": "ARMOR",
-    "copy-from": "legguard_bronze",
+    "copy-from": "bronze_greaves",
     "name": { "str": "pair of XS bronze greaves", "str_pl": "pairs of XS bronze greaves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -582,8 +583,8 @@
     "id": "legguard_hard",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of hard leg guards", "str_pl": "pairs of hard leg guards" },
-    "description": "A pair of polyurethane leg guards with neoprene backing.",
+    "name": { "str": "pair of plastic leg guards", "str_pl": "pairs of plastic guards" },
+    "description": "A pair of polyurethane leg guards with neoprene backing.  These were used in sport, policing, and even on some job sites.",
     "weight": "625 g",
     "volume": "3 L",
     "price": 3400,
@@ -599,12 +600,126 @@
     "flags": [ "OUTER", "WATER_FRIENDLY", "ALLOWS_TAIL" ],
     "armor": [
       {
+        "material": [ { "type": "plastic", "covered_by_mat": 60, "thickness": 4 }, { "type": "neoprene", "covered_by_mat": 80, "thickness": 0.3 } ],
         "covers": [ "leg_l", "leg_r" ],
-        "encumbrance": 4,
-        "coverage": 90,
-        "specifically_covers": [ "leg_lower_r", "leg_lower_l", "leg_knee_r", "leg_knee_l", "leg_upper_r", "leg_upper_l" ]
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r", "leg_lower_l", "leg_lower_r" ],
+        "coverage": 100,
+        "encumbrance": 7
+      }
+  ]
+  },
+  {
+    "id": "tire_tasset",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "tire tasset" },
+    "description": "A skirt made of salvaged chunks of rubber strung together and tied around the waist.  It can be adjusted to fit over bulky armor.",
+    "weight": "1382 g",
+    "volume": "1016 ml",
+    "longest_side": "12 cm",
+    "price": 4000,
+    "price_postapoc": 800,
+    "to_hit": -1,
+    "material": [ "rubber" ],
+    "symbol": "[",
+    "looks_like": "skirt_leather",
+    "color": "light_red",
+    "warmth": 5,
+    "flags": [ "STURDY", "OUTER" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your tire skirt for a looser fit.",
+      "target": "tire_tasset_loose",
+      "menu_text": "Loosen"
+    },
+    "armor": [
+      {
+        "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 4 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "coverage": 80,
+        "encumbrance": 4
+      },
+      {
+        "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 4 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "coverage": 60,
+        "encumbrance": 5
       }
     ]
+  },
+  {
+    "id": "tire_tasset_xs",
+    "type": "ARMOR",
+    "copy-from": "tire_tasset",
+    "name": { "str": "XS tire tasset" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your tire skirt for a looser fit.",
+      "target": "tire_tasset_loose_xs",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "tire_tasset_xl",
+    "type": "ARMOR",
+    "copy-from": "tire_tasset",
+    "name": { "str": "XL tire tasset" },
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your tire skirt for a looser fit.",
+      "target": "tire_tasset_loose_xl",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "tire_tasset_loose",
+    "type": "ARMOR",
+    "copy-from": "tire_tasset",
+    "name": { "str": "tire tasset (loose)" },
+    "description": "A skirt made of salvaged chunks of rubber strung together and tied around the waist.  It can be adjusted to fit closer to the body.",
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your tire skirt for a closer fit.",
+      "target": "tire_tasset",
+      "menu_text": "Tighten"
+    },
+    "delete": { "flags": [ "OUTER" ] },
+    "extend": { "flags": [ "BELTED", "ALLOWS_TAIL" ] }
+  },
+  {
+    "id": "tire_tasset_loose_xs",
+    "type": "ARMOR",
+    "copy-from": "tire_tasset_loose",
+    "name": { "str": "XS tire tasset" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your tire skirt for a closer fit.",
+      "target": "tire_tasset_xs",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "tire_tasset_loose_xl",
+    "type": "ARMOR",
+    "copy-from": "tire_tasset_loose",
+    "name": { "str": "XL tire tasset" },
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "use_action": {
+      "type": "transform",
+      "msg": "You adjust your tire skirt for a closer fit.",
+      "target": "tire_tasset_xl",
+      "menu_text": "Loosen"
+    },
+    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "platemail_tasset",
@@ -730,7 +845,7 @@
     "price": 20000,
     "price_postapoc": 4000,
     "to_hit": -1,
-    "material": [ "steel" ],
+    "material": [ "lc_steel" ],
     "symbol": "[",
     "looks_like": "legguard_hard",
     "color": "light_gray",
@@ -767,51 +882,6 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "legguard_metal_sheets",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "pair of sheet metal leg guards", "str_pl": "pairs of sheet metal leg guards" },
-    "description": "A pair of leg guards hammered out of metal and shaped to tie on to the upper and lower leg, avoiding joints.  Perfect for the Post-Apocalyptic Warrior look.",
-    "weight": "3500 g",
-    "//": "The weight assumes four sheets of about 25cm x 30cm x 0.9mm",
-    "volume": "2500 ml",
-    "price": 40000,
-    "price_postapoc": 1000,
-    "to_hit": 1,
-    "material": [ "lc_steel" ],
-    "symbol": "[",
-    "looks_like": "platemail_leg_guards",
-    "color": "light_gray",
-    "warmth": 10,
-    "material_thickness": 0.9,
-    "environmental_protection": 1,
-    "flags": [ "OUTER", "WATER_FRIENDLY", "ALLOWS_TAIL" ],
-    "armor": [
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "encumbrance": 7,
-        "coverage": 85,
-        "specifically_covers": [ "leg_lower_r", "leg_lower_l", "leg_upper_r", "leg_upper_l" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_legguard_metal_sheets",
-    "type": "ARMOR",
-    "copy-from": "legguard_metal_sheets",
-    "name": { "str": "pair of XL sheet metal leg guards", "str_pl": "pairs of XL sheet metal leg guards" },
-    "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_legguard_metal_sheets",
-    "type": "ARMOR",
-    "copy-from": "legguard_metal_sheets",
-    "name": { "str": "pair of XS sheet metal leg guards", "str_pl": "pairs of XS sheet metal leg guards" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
     "id": "paper_greaves",
     "type": "ARMOR",
     "category": "armor",
@@ -839,58 +909,11 @@
     ]
   },
   {
-    "id": "leg_guards_scrap",
+    "id": "tire_greaves",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of scrap leg guards", "str_pl": "pairs of scrap leg guards" },
-    "description": "A pair of leg guards made from scraps of metal secured by simple strings.",
-    "weight": "3104 g",
-    "volume": "5 L",
-    "price": 20000,
-    "price_postapoc": 50,
-    "to_hit": -1,
-    "material": [ "budget_steel", "cotton" ],
-    "symbol": "[",
-    "looks_like": "legguard_metal",
-    "color": "light_gray",
-    "warmth": 10,
-    "flags": [ "OUTER", "ALLOWS_TAIL" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "budget_steel", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "cotton", "covered_by_mat": 1, "thickness": 0.4 }
-        ],
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 75,
-        "encumbrance": 15,
-        "specifically_covers": [ "leg_lower_r", "leg_lower_l", "leg_upper_r", "leg_upper_l" ]
-      }
-    ],
-    "melee_damage": { "bash": 1, "cut": 1 }
-  },
-  {
-    "id": "leg_guards_scrap_xl",
-    "type": "ARMOR",
-    "copy-from": "leg_guards_scrap",
-    "name": { "str": "pair of XL scrap leg guards", "str_pl": "pairs of XL scrap leg guards" },
-    "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "leg_guards_scrap_xs",
-    "type": "ARMOR",
-    "copy-from": "leg_guards_scrap",
-    "name": { "str": "pair of XS scrap leg guards", "str_pl": "pairs of XS scrap leg guards" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "tire_leg_guards",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "pair of tire leg guards", "str_pl": "pairs of tire leg guards" },
-    "description": "A pair of leg guards made from thick chunks of tire secured by simple strings; the loose collection of rubber plates provides decent but not the most convenient protection.",
+    "name": { "str": "pair of tire greaves", "str_pl": "pairs of tire greaves" },
+    "description": "A pair of improvised shin guards made from thick chunks of rubber strung together and tied over the legs.",
     "weight": "4800 g",
     "volume": "5 L",
     "price": 20000,
@@ -898,7 +921,7 @@
     "to_hit": -1,
     "material": [ "rubber" ],
     "symbol": "[",
-    "looks_like": "legguard_metal",
+    "looks_like": "platemail_leg_guards",
     "color": "light_gray",
     "warmth": 10,
     "material_thickness": 4,
@@ -906,24 +929,24 @@
     "armor": [
       {
         "covers": [ "leg_l", "leg_r" ],
-        "encumbrance": 14,
+        "encumbrance": 6,
         "coverage": 80,
-        "specifically_covers": [ "leg_lower_r", "leg_lower_l", "leg_upper_r", "leg_upper_l" ]
+        "specifically_covers": [ "leg_lower_r", "leg_lower_l" ]
       }
     ]
   },
   {
-    "id": "xl_legguard_tire",
+    "id": "tire_greaves_xl",
     "type": "ARMOR",
-    "copy-from": "tire_leg_guards",
+    "copy-from": "tire_greaves",
     "name": { "str": "pair of XL tire leg guards", "str_pl": "pairs of XL tire leg guards" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_legguard_tire",
+    "id": "tire_greaves_xs",
     "type": "ARMOR",
-    "copy-from": "tire_leg_guards",
+    "copy-from": "tire_greaves",
     "name": { "str": "pair of XS tire leg guards", "str_pl": "pairs of XS tire leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -958,9 +981,9 @@
       },
       {
         "material": [
+          { "type": "plastic", "covered_by_mat": 60, "thickness": 5 },
           { "type": "kevlar", "covered_by_mat": 100, "thickness": 0.3 },
-          { "type": "denim", "covered_by_mat": 100, "thickness": 0.6 },
-          { "type": "plastic_pad", "covered_by_mat": 60, "thickness": 12 }
+          { "type": "denim", "covered_by_mat": 100, "thickness": 0.6 }
         ],
         "encumbrance": [ 0, 0 ],
         "coverage": 100,
@@ -1170,7 +1193,7 @@
     ]
   },
   {
-    "id": "legguard_larmor",
+    "id": "leather_leg_guards",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of leather leg guards", "str_pl": "pairs of leather leg guards" },
@@ -1191,17 +1214,17 @@
     "armor": [ { "covers": [ "leg_l", "leg_r" ], "encumbrance": 7, "coverage": 95 } ]
   },
   {
-    "id": "xl_legguard_larmor",
+    "id": "leather_leg_guards_xl",
     "type": "ARMOR",
     "name": { "str": "pair of XL leather leg guards", "str_pl": "pairs of XL leather leg guards" },
-    "copy-from": "legguard_larmor",
+    "copy-from": "leather_leg_guards",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_legguard_larmor",
+    "id": "leather_leg_guards_xs",
     "type": "ARMOR",
-    "copy-from": "legguard_larmor",
+    "copy-from": "leather_leg_guards",
     "name": { "str": "pair of XS leather leg guards", "str_pl": "pairs of XS leather leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }

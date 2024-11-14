@@ -151,7 +151,7 @@
     "using": [ [ "plastic_molding", 3 ], [ "tailoring_neoprene_patchwork", 3 ] ]
   },
   {
-    "result": "armguard_larmor",
+    "result": "leather_arm_guards",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -165,63 +165,23 @@
     "proficiencies": [ { "proficiency": "prof_leatherworking_basic" }, { "proficiency": "prof_leatherworking" } ]
   },
   {
-    "result": "xs_armguard_larmor",
+    "result": "leather_arm_guards_xs",
     "type": "recipe",
-    "copy-from": "armguard_larmor",
+    "copy-from": "leather_arm_guards",
     "time": "6 h",
     "byproducts": [ [ "leather", 6 ], [ "scrap_leather", 1 ] ],
     "using": [ [ "tailoring_leather_patchwork", 3 ] ]
   },
   {
-    "result": "xl_armguard_larmor",
+    "result": "leather_arm_guards_xl",
     "type": "recipe",
-    "copy-from": "armguard_larmor",
+    "copy-from": "leather_arm_guards",
     "time": "8 h",
     "byproducts": [ [ "leather", 2 ], [ "scrap_leather", 1 ] ],
     "using": [ [ "tailoring_leather_patchwork", 5 ] ]
   },
   {
-    "result": "armguard_lightplate",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 7,
-    "skills_required": [ [ "tailor", 3 ] ],
-    "time": "900 m",
-    "book_learn": [ [ "textbook_armwest", 6 ] ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ], [ "tailoring_leather_patchwork", 2 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0 },
-      { "proficiency": "prof_articulation" }
-    ]
-  },
-  {
-    "result": "xs_armguard_lightplate",
-    "type": "recipe",
-    "copy-from": "armguard_lightplate",
-    "time": "900 m",
-    "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ], [ "tailoring_leather_patchwork", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "xl_armguard_lightplate",
-    "type": "recipe",
-    "copy-from": "armguard_lightplate",
-    "time": "1010 m",
-    "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ], [ "tailoring_leather_patchwork", 3 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "carpet_armguards",
+    "result": "carpet_arm_guards",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -253,7 +213,7 @@
     "qualities": [ { "id": "CUT", "level": 2 } ]
   },
   {
-    "result": "armguard_metal",
+    "result": "sheet_metal_bracers",
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
@@ -263,156 +223,30 @@
     "skills_required": [ "tailor", 1 ],
     "time": "120 m",
     "autolearn": true,
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "cordage_6_leather", 8 ] ] ],
+    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "leather_vambraces", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_metalworking" } ],
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
   },
   {
-    "result": "ch_armguard_metal",
+    "result": "sheet_metal_bracers_xl",
     "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "4 h",
-    "book_learn": [ [ "textbook_armwest", 6 ], [ "welding_book", 6 ] ],
-    "using": [ [ "carbon", 3 ] ],
-    "components": [ [ [ "armguard_metal", 1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_case_hardening" }
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 } ],
-    "tools": [ [ [ "forge", 64 ] ], [ [ "metalworking_tongs_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "xs_armguard_metal",
-    "type": "recipe",
-    "copy-from": "armguard_metal",
+    "copy-from": "sheet_metal_bracers",
     "time": "120 m",
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "cordage_6_leather", 8 ] ] ],
+    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "leather_vambraces_xl", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_metalworking" } ],
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
   },
   {
-    "result": "xl_armguard_metal",
+    "result": "sheet_metal_bracers_xs",
     "type": "recipe",
-    "copy-from": "armguard_metal",
-    "time": "140 m",
-    "components": [ [ [ "sheet_metal", 2 ] ], [ [ "cordage_36_leather", 4 ] ] ],
+    "copy-from": "sheet_metal_bracers",
+    "time": "120 m",
+    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "leather_vambraces_xs", 1 ] ] ],
     "proficiencies": [ { "proficiency": "prof_metalworking" } ],
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
   },
   {
-    "result": "armguard_metal_sheets_bracer",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 1 ],
-    "time": "80 m",
-    "autolearn": true,
-    "byproducts": [ [ "sheet_metal_small", 12 ] ],
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "cordage_6_leather", 4 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "ch_armguard_metal_sheets_bracer",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "4 h",
-    "book_learn": [ [ "textbook_armwest", 6 ], [ "welding_book", 6 ] ],
-    "using": [ [ "carbon", 3 ] ],
-    "components": [ [ [ "armguard_metal_sheets_bracer", 1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_case_hardening" }
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 } ],
-    "tools": [ [ [ "forge", 64 ] ], [ [ "metalworking_tongs_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "armguard_metal_sheets_elbows",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 1 ],
-    "time": "60 m",
-    "autolearn": true,
-    "components": [ [ [ "sheet_metal_small", 2 ] ], [ [ "cordage_6_leather", 2 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_articulation" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "ch_armguard_metal_sheets_elbows",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "3 h",
-    "book_learn": [ [ "textbook_armwest", 6 ], [ "welding_book", 6 ] ],
-    "using": [ [ "carbon", 2 ] ],
-    "components": [ [ [ "armguard_metal_sheets_elbows", 1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_case_hardening" }
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 } ],
-    "tools": [ [ [ "forge", 16 ] ], [ [ "metalworking_tongs_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "armguard_metal_sheets_shoulders",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 1 ],
-    "time": "60 m",
-    "autolearn": true,
-    "components": [ [ [ "sheet_metal_small", 4 ] ], [ [ "cordage_6_leather", 6 ], [ "cordage_36_leather", 1 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_articulation" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "ch_armguard_metal_sheets_shoulders",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "3 h",
-    "book_learn": [ [ "textbook_armwest", 6 ], [ "welding_book", 6 ] ],
-    "using": [ [ "carbon", 1 ] ],
-    "components": [ [ [ "armguard_metal_sheets_shoulders", 1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_case_hardening" }
-    ],
-    "qualities": [ { "id": "HAMMER", "level": 2 } ],
-    "tools": [ [ [ "forge", 16 ] ], [ [ "metalworking_tongs_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "armguard_paper",
+    "result": "paper_vambraces",
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
     "category": "CC_ARMOR",
@@ -424,89 +258,36 @@
     "flags": [ "BLIND_HARD" ]
   },
   {
-    "result": "improvised_armguard_tire",
+    "result": "tire_bracers",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
+    "skill_used": "tailor",
+    "difficulty": 3,
     "time": "30 m",
-    "autolearn": true,
     "reversible": true,
+    "book_learn": [ [ "dieselpunk_tailor", 2 ] ],
     "using": [ [ "adhesive_cordage", 2 ] ],
     "components": [ [ [ "rubber_tire_chunk", 4 ] ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {
-    "result": "armguard_scrap",
+    "result": "tire_bracers_xs",
     "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 3,
+    "copy-from": "tire_bracers",
     "time": "30 m",
-    "autolearn": true,
-    "book_learn": [ [ "recipe_melee", 2 ] ],
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 6 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "SAW_M", "level": 1 } ],
-    "proficiencies": [ { "proficiency": "prof_armorsmithing", "skill_penalty": 0 }, { "proficiency": "prof_articulation" } ]
+    "using": [ [ "adhesive_cordage", 1 ] ],
+    "components": [ [ [ "rubber_tire_chunk", 3 ] ] ]
   },
   {
-    "result": "xs_armguard_scrap",
+    "result": "tire_bracers_xl",
     "type": "recipe",
-    "copy-from": "armguard_scrap",
-    "time": "30 m",
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 4 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "SAW_M", "level": 1 } ]
-  },
-  {
-    "result": "xl_armguard_scrap",
-    "type": "recipe",
-    "copy-from": "armguard_scrap",
-    "time": "35 m",
-    "using": [ [ "cordage", 2 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 8 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "SAW_M", "level": 1 } ]
-  },
-  {
-    "result": "armguard_tire",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_ARMS",
-    "skill_used": "fabrication",
-    "difficulty": 3,
+    "copy-from": "tire_bracers",
     "time": "45 m",
-    "reversible": true,
-    "autolearn": true,
     "book_learn": [ [ "dieselpunk_tailor", 2 ] ],
-    "using": [ [ "cordage", 3 ] ],
-    "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_leatherworking_basic" } ],
-    "qualities": [ { "id": "CUT", "level": 2 }, { "id": "LEATHER_AWL", "level": 1 }, { "id": "SEW_CURVED", "level": 1 } ],
-    "components": [ [ [ "rubber_tire_chunk", 8 ] ] ]
-  },
-  {
-    "result": "xs_armguard_tire",
-    "type": "recipe",
-    "copy-from": "armguard_tire",
-    "time": "45 m",
-    "using": [ [ "cordage", 2 ] ],
-    "qualities": [ { "id": "CUT", "level": 2 }, { "id": "LEATHER_AWL", "level": 1 }, { "id": "SEW_CURVED", "level": 1 } ],
+    "using": [ [ "adhesive_cordage", 3 ] ],
     "components": [ [ [ "rubber_tire_chunk", 6 ] ] ]
-  },
-  {
-    "result": "xl_armguard_tire",
-    "type": "recipe",
-    "copy-from": "armguard_tire",
-    "time": "55 m",
-    "book_learn": [ [ "dieselpunk_tailor", 2 ] ],
-    "using": [ [ "cordage", 3 ] ],
-    "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_leatherworking_basic" } ],
-    "qualities": [ { "id": "CUT", "level": 2 }, { "id": "LEATHER_AWL", "level": 1 }, { "id": "SEW_CURVED", "level": 1 } ],
-    "components": [ [ [ "rubber_tire_chunk", 10 ] ] ]
   },
   {
     "result": "armguard_soft",
@@ -582,7 +363,7 @@
     "components": [ [ [ "stockings", 4 ] ] ]
   },
   {
-    "result": "vambrace_larmor",
+    "result": "leather_vambraces",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -596,17 +377,17 @@
     "proficiencies": [ { "proficiency": "prof_leatherworking_basic" }, { "proficiency": "prof_leatherworking" } ]
   },
   {
-    "result": "xs_vambrace_larmor",
+    "result": "leather_vambraces_xs",
     "type": "recipe",
-    "copy-from": "vambrace_larmor",
+    "copy-from": "leather_vambraces",
     "time": "90 m",
     "byproducts": [ [ "scrap_leather", 1 ] ],
     "using": [ [ "tailoring_leather", 1 ] ]
   },
   {
-    "result": "xl_vambrace_larmor",
+    "result": "leather_vambraces_xs",
     "type": "recipe",
-    "copy-from": "vambrace_larmor",
+    "copy-from": "leather_vambraces",
     "time": "180 m",
     "byproducts": [ [ "scrap_leather", 2 ] ],
     "using": [ [ "tailoring_leather", 2 ] ]
@@ -643,7 +424,7 @@
     "using": [ [ "armor_lc_chainmail_assembling", 4 ], [ "strap_small", 8 ], [ "clasps", 4 ] ]
   },
   {
-    "result": "armguard_bronze",
+    "result": "bronze_vambraces",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_*",
@@ -660,26 +441,24 @@
       { "proficiency": "prof_redsmithing" },
       { "proficiency": "prof_articulation" }
     ],
-    "components": [ [ [ "scrap_bronze", 10 ] ] ]
+    "components": [ [ [ "scrap_bronze", 6 ] ] ]
   },
   {
-    "result": "xs_armguard_bronze",
+    "result": "bronze_vambraces_xs",
     "type": "recipe",
-    "copy-from": "armguard_bronze",
+    "copy-from": "bronze_vambraces",
     "time": "7 h 30 m",
-    "using": [ [ "forging_standard", 4 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 3 ], [ "clasps", 3 ] ],
-    "components": [ [ [ "scrap_bronze", 7 ] ] ]
+    "using": [ [ "forging_standard", 4 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 3 ], [ "clasps", 3 ] ]
   },
   {
-    "result": "xl_armguard_bronze",
+    "result": "bronze_vambraces_xl",
     "type": "recipe",
-    "copy-from": "armguard_bronze",
+    "copy-from": "bronze_vambraces",
     "time": "8 h 30 m",
-    "using": [ [ "forging_standard", 8 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
-    "components": [ [ [ "scrap_bronze", 14 ] ] ]
+    "using": [ [ "forging_standard", 8 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 4 ], [ "clasps", 4 ] ]
   },
   {
-    "result": "armor_lightarmguard",
+    "result": "platemail_arm_guards",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_*",
@@ -691,8 +470,7 @@
     "using": [
       [ "fabric_leather_fur_hide", 1 ],
       [ "blacksmithing_standard", 8 ],
-      [ "lc_steel_standard", 2 ],
-      [ "armor_chainmail_assembling", 1 ]
+      [ "lc_steel_standard", 2 ]
     ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -705,101 +483,83 @@
     ]
   },
   {
-    "result": "xl_armor_lightarmguard",
+    "result": "platemail_arm_guards_xl",
     "type": "recipe",
-    "copy-from": "armor_lightarmguard",
+    "copy-from": "platemail_arm_guards",
     "time": "7 d 8 h 16 m",
     "using": [
       [ "fabric_leather_fur_hide", 2 ],
       [ "blacksmithing_standard", 12 ],
-      [ "lc_steel_standard", 3 ],
-      [ "armor_chainmail_assembling", 2 ]
+      [ "lc_steel_standard", 3 ]
     ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
-    "result": "armor_armguard",
+    "result": "platemail_arm_guards_xs",
+    "type": "recipe",
+    "copy-from": "platemail_arm_guards",
+    "time": "7 d 8 h 16 m",
+    "using": [
+      [ "fabric_leather_fur_hide", 1 ],
+      [ "blacksmithing_standard", 6 ],
+      [ "lc_steel_standard", 1 ]
+    ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "swage", -1 ] ] ]
+  },
+  {
+    "result": "platemail_pauldrons",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "7 d 3 h 36 m",
+    "difficulty": 5,
+    "time": "5 d",
     "book_learn": [ [ "textbook_armwest", 7 ] ],
     "using": [
       [ "fabric_leather_fur_hide", 1 ],
+      [ "blacksmithing_standard", 8 ],
+      [ "lc_steel_standard", 2 ]
+    ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "swage", -1 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" }
+    ]
+  },
+  {
+    "result": "platemail_pauldrons_xl",
+    "type": "recipe",
+    "copy-from": "platemail_pauldrons",
+    "time": "7 d",
+    "using": [
+      [ "fabric_leather_fur_hide", 2 ],
       [ "blacksmithing_standard", 12 ],
-      [ "lc_steel_standard", 3 ],
-      [ "armor_chainmail_assembling", 1 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_armor_armguard",
-    "type": "recipe",
-    "copy-from": "armor_armguard",
-    "time": "8 d 1 h 54 m",
-    "using": [
-      [ "fabric_leather_fur_hide", 2 ],
-      [ "blacksmithing_standard", 16 ],
-      [ "lc_steel_standard", 4 ],
-      [ "armor_chainmail_assembling", 2 ]
+      [ "lc_steel_standard", 3 ]
     ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
-    "result": "armor_heavyarmguard",
+    "result": "platemail_pauldrons_xs",
     "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 7,
-    "time": "7 d 19 h 12 m",
-    "book_learn": [ [ "textbook_armwest", 7 ] ],
+    "copy-from": "platemail_pauldrons",
+    "time": "5 d 8 h",
     "using": [
       [ "fabric_leather_fur_hide", 1 ],
-      [ "blacksmithing_standard", 16 ],
-      [ "lc_steel_standard", 4 ],
-      [ "armor_chainmail_assembling", 1 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_armor_heavyarmguard",
-    "type": "recipe",
-    "copy-from": "armor_heavyarmguard",
-    "time": "8 d 19 h 32 m",
-    "using": [
-      [ "fabric_leather_fur_hide", 2 ],
-      [ "blacksmithing_standard", 20 ],
-      [ "lc_steel_standard", 5 ],
-      [ "armor_chainmail_assembling", 2 ]
+      [ "blacksmithing_standard", 6 ],
+      [ "lc_steel_standard", 1 ]
     ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
-    "result": "armguard_brigandine",
+    "result": "brigandine_arm_guards",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -825,9 +585,9 @@
     ]
   },
   {
-    "result": "xl_armguard_brigandine",
+    "result": "brigandine_arm_guards_xl",
     "type": "recipe",
-    "copy-from": "armguard_brigandine",
+    "copy-from": "brigandine_arm_guards",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "time": "14 h",
@@ -842,9 +602,9 @@
     "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
   },
   {
-    "result": "armguard_brigandine_xs",
+    "result": "brigandine_arm_guards_xs",
     "type": "recipe",
-    "copy-from": "armguard_brigandine",
+    "copy-from": "brigandine_arm_guards",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "time": "12 h",
@@ -854,109 +614,6 @@
       [ "lc_steel_standard", 2 ],
       [ "fastener_small", 2 ],
       [ "strap_small", 2 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "elbow_guards",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "fabrication",
-    "difficulty": 5,
-    "time": "4 h",
-    "book_learn": [ [ "textbook_armwest", 5 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ], [ "clasps", 2 ], [ "strap_small", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_articulation" },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" }
-    ]
-  },
-  {
-    "result": "xl_elbow_guards",
-    "type": "recipe",
-    "copy-from": "elbow_guards",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "4 h",
-    "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ], [ "clasps", 2 ], [ "strap_small", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "elbow_guards_xs",
-    "type": "recipe",
-    "copy-from": "elbow_guards",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "4 h",
-    "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ], [ "clasps", 2 ], [ "strap_small", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "vambrace_brigandine",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "5 h",
-    "book_learn": [ [ "textbook_armwest", 4 ], [ "textbook_weparabic", 4 ] ],
-    "using": [
-      [ "tailoring_canvas_patchwork", 2 ],
-      [ "blacksmithing_standard", 4 ],
-      [ "lc_steel_standard", 1 ],
-      [ "fastener_small", 1 ],
-      [ "strap_small", 1 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" }
-    ]
-  },
-  {
-    "result": "xl_vambrace_brigandine",
-    "type": "recipe",
-    "copy-from": "vambrace_brigandine",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "5 h",
-    "using": [
-      [ "tailoring_canvas_patchwork", 2 ],
-      [ "blacksmithing_standard", 8 ],
-      [ "lc_steel_standard", 2 ],
-      [ "fastener_small", 1 ],
-      [ "strap_small", 1 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "xs_vambrace_brigandine",
-    "type": "recipe",
-    "copy-from": "vambrace_brigandine",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "5 h",
-    "using": [
-      [ "tailoring_canvas_patchwork", 1 ],
-      [ "blacksmithing_standard", 4 ],
-      [ "lc_steel_standard", 1 ],
-      [ "fastener_small", 1 ],
-      [ "strap_small", 1 ]
     ],
     "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
