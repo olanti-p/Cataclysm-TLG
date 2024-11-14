@@ -1,10 +1,10 @@
 [
   {
-    "id": "armor_blarmor",
+    "id": "boiled_leather_armor_suit",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "boiled leather armor" },
-    "description": "Thick leather body armor that has been hardened via chemical treatment.  Light and strong.",
+    "name": { "str": "suit of boiled leather armor", "str_pl": "suits of boiled leather armor" },
+    "description": "A suit of thick leather body armor that has been hardened via chemical treatment.  Light and strong.",
     "weight": "6600 g",
     "volume": "9500 ml",
     "price": 26000,
@@ -13,7 +13,7 @@
     "material": [ "leather" ],
     "symbol": "[",
     "longest_side": "60 cm",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "color": "brown",
     "armor": [
       {
@@ -44,7 +44,7 @@
     "to_hit": -5,
     "material": [ "chitin" ],
     "symbol": "[",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "color": "green",
     "warmth": 10,
     "longest_side": "60 cm",
@@ -121,7 +121,7 @@
     "material": [ "fur" ],
     "symbol": "[",
     "longest_side": "30 cm",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "color": "brown",
     "armor": [
       { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 17, 17 ] },
@@ -181,7 +181,7 @@
     "material": [ "faux_fur" ],
     "symbol": "[",
     "longest_side": "30 cm",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "color": "brown",
     "armor": [
       { "covers": [ "torso" ], "coverage": 90, "encumbrance": [ 21, 25 ] },
@@ -227,11 +227,11 @@
     "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE" ]
   },
   {
-    "id": "armor_larmor",
+    "id": "leather_armor_suit",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "leather body armor" },
-    "description": "A full suit of thick leather body armor.  Light and comfortable.",
+    "name": { "str": "suit of leather armor", "str_pl": "suts of leather armor" },
+    "description": "A full suit of thick leather armor.  Relatively light and comfortable.",
     "weight": "4400 g",
     "volume": "7 L",
     "price": 12000,
@@ -259,21 +259,21 @@
     "melee_damage": { "bash": 2 }
   },
   {
-    "id": "xl_armor_larmor",
+    "id": "leather_armor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL leather body armor" },
-    "copy-from": "armor_larmor",
+    "name": { "str": "XL suit of leather armor", "str_pl": "XL suits of leather armor" },
+    "copy-from": "leather_armor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "armor_larmor_xs",
+    "id": "leather_armor_suit_xs",
     "type": "ARMOR",
-    "copy-from": "armor_larmor",
-    "looks_like": "armor_larmor",
-    "name": { "str": "XS leather body armor" },
+    "copy-from": "leather_armor_suit",
+    "looks_like": "leather_armor_suit",
+    "name": { "str": "XS suit of leather armor", "str_pl": "XS suits of leather armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "STURDY", "OUTER", "UNDERSIZE" ]
+    "flags": [ "UNDERSIZE" ]
   },
   {
     "id": "junk_platemail_suit",
@@ -286,13 +286,13 @@
     "price": 60000,
     "price_postapoc": 12000,
     "to_hit": -5,
-    "material": [ "budget_steel", "leather" ],
+    "material": [ "budget_steel" ],
     "symbol": "[",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "color": "light_gray",
     "warmth": 25,
     "longest_side": "60 cm",
-    "material_thickness": 4,
+    "material_thickness": 1.6,
     "flags": [ "VARSIZE", "OUTER", "STURDY" ],
     "armor": [ { "encumbrance": 35, "coverage": 95, "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ] } ],
     "melee_damage": { "bash": 8 }
@@ -310,7 +310,7 @@
     "to_hit": -5,
     "material": [ "lc_steel" ],
     "symbol": "[",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "color": "light_gray",
     "warmth": 20,
     "longest_side": "60 cm",
@@ -356,29 +356,29 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "armor_plarmor",
+    "id": "plated_leather_armor_suit",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "plated leather armor" },
-    "description": "Thick leather body armor that has been reinforced with strategically-placed metal plates.",
+    "name": { "str": "suit of plated leather armor", "str_pl": "suits of plated leather armor" },
+    "description": "Thick leather body armor reinforced by the addition of sheet metal plates.",
     "weight": "6280 g",
     "volume": "9 L",
     "price": 110000,
     "price_postapoc": 3000,
     "to_hit": -5,
-    "material": [ "leather", "budget_steel" ],
+    "material": [ "leather", "lc_steel" ],
     "symbol": "[",
     "color": "brown",
     "longest_side": "60 cm",
-    "looks_like": "armor_larmor",
+    "looks_like": "leather_armor_suit",
     "armor": [
       {
         "covers": [ "torso" ],
         "coverage": 95,
         "encumbrance": 22,
         "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 },
-          { "type": "budget_steel", "covered_by_mat": 85, "thickness": 1.75 }
+          { "type": "leather", "covered_by_mat": 100, "thickness": 4 },
+          { "type": "budget_steel", "covered_by_mat": 85, "thickness": 0.9 }
         ]
       },
       {
@@ -387,7 +387,7 @@
         "encumbrance": 22,
         "material": [
           { "type": "leather", "covered_by_mat": 100, "thickness": 4 },
-          { "type": "budget_steel", "covered_by_mat": 75, "thickness": 1.25 }
+          { "type": "budget_steel", "covered_by_mat": 75, "thickness": 0.9 }
         ],
         "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_upper_r", "arm_upper_l" ]
       },
@@ -404,7 +404,7 @@
         "encumbrance": 22,
         "material": [
           { "type": "leather", "covered_by_mat": 100, "thickness": 4 },
-          { "type": "budget_steel", "covered_by_mat": 70, "thickness": 1.25 }
+          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 }
         ],
         "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_upper_l", "leg_upper_r" ]
       },
@@ -422,19 +422,18 @@
     "melee_damage": { "bash": 2 }
   },
   {
-    "id": "xl_armor_plarmor",
+    "id": "plated_leather_armor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL plated leather armor" },
-    "copy-from": "armor_plarmor",
+    "name": { "str": "XL suit of plated leather armor", "str_pl": "XL suits of plated leather armor" },
+    "copy-from": "plated_leather_armor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "armor_plarmor_xs",
+    "id": "plated_leather_armor_suit_xs",
     "type": "ARMOR",
-    "copy-from": "armor_plarmor",
-    "looks_like": "armor_plarmor",
-    "name": { "str": "XS plated leather armor" },
+    "copy-from": "plated_leather_armor_suit",
+    "name": { "str": "XS suit of plated leather armor", "str_pl": "XS suits of plated leather armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -596,7 +595,7 @@
     "to_hit": -1,
     "material": [ "lc_steel_chain" ],
     "symbol": "[",
-    "looks_like": "armor_blarmor",
+    "looks_like": "boiled_leather_armor_suit",
     "color": "light_red",
     "warmth": 0,
     "flags": [ "STURDY" ],
