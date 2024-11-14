@@ -87,7 +87,7 @@
     "time": "5 h 30 m",
     "byproducts": [ [ "leather", 25 ] ],
     "using": [ [ "sewing_standard", 36 ], [ "clasps", 5 ] ],
-    "components": [ [ [ "armor_blarmor", 3 ] ], [ [ "cotton_patchwork", 21 ] ] ],
+    "components": [ [ [ "boiled_leather_armor_suit", 3 ] ], [ [ "cotton_patchwork", 21 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_closures" },
@@ -137,7 +137,7 @@
     "difficulty": 4,
     "time": "7 h 45 m",
     "using": [ [ "sewing_standard", 90 ], [ "clasps", 5 ] ],
-    "components": [ [ [ "bone", 46 ], [ "bone_human", 46 ], [ "bone_demihuman", 46 ] ], [ [ "armor_blarmor", 3 ] ] ],
+    "components": [ [ [ "bone", 46 ], [ "bone_human", 46 ], [ "bone_demihuman", 46 ] ], [ [ "boiled_leather_armor_suit", 3 ] ] ],
     "extend": { "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_carving" } ] }
   },
   {
@@ -233,7 +233,7 @@
     "result": "iron_armor_cow",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "copy-from": "armor_plarmor",
+    "copy-from": "plated_leather_armor_suit",
     "category": "CC_ANIMALS",
     "subcategory": "CSC_ANIMALS_BOVINE ARMOR",
     "skills_required": [ "tailor", 3 ],
