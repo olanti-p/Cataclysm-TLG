@@ -111,7 +111,7 @@
     "material": [ "lc_steel_chain" ],
     "symbol": "[",
     "color": "light_red",
-    "warmth": 0,
+    "warmth": 3,
     "flags": [ "STURDY", "BELTED" ],
     "armor": [
       {
@@ -126,14 +126,14 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat" ],
         "coverage": 95,
-        "encumbrance": 2
+        "encumbrance": 1
       },
       {
         "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_nape" ],
         "coverage": 95,
-        "encumbrance": 2
+        "encumbrance": 1
       }
     ]
   },
@@ -150,6 +150,63 @@
     "type": "ARMOR",
     "copy-from": "chainmail_aventail",
     "name": { "str": "XS chainmail aventail" },
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE" ] }
+  },
+  {
+    "id": "platemail_aventail",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "plate aventail" },
+    "description": "A steel gorget that fastens around the neck for extra protection.",
+    "weight": "1300 g",
+    "volume": "450 ml",
+    "longest_side": "5 cm",
+    "price": 5012,
+    "price_postapoc": 1300,
+    "to_hit": -1,
+    "material": [ "lc_steel" ],
+    "symbol": "[",
+    "color": "light_red",
+    "warmth": 5,
+    "flags": [ "STURDY", "BELTED" ],
+    "armor": [
+      {
+        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_neck" ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_throat" ],
+        "coverage": 95,
+        "encumbrance": 2
+      },
+      {
+        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_nape" ],
+        "coverage": 95,
+        "encumbrance": 2
+      }
+    ]
+  },
+  {
+    "id": "platemail_aventail_xl",
+    "type": "ARMOR",
+    "name": { "str": "XL plate aventail" },
+    "copy-from": "platemail_aventail",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "platemail_aventail_xs",
+    "type": "ARMOR",
+    "copy-from": "platemail_aventail",
+    "name": { "str": "XS plate aventail" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },

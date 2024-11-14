@@ -254,7 +254,7 @@
     "result": "bronze_armor_cow",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "copy-from": "cuirass_bronze",
+    "copy-from": "bronze_cuirass",
     "category": "CC_ANIMALS",
     "subcategory": "CSC_ANIMALS_BOVINE ARMOR",
     "skills_required": [ "tailor", 3 ],

@@ -1,49 +1,62 @@
 [
   {
-    "id": "armor_cuirass",
+    "id": "paper_breastplate",
     "type": "ARMOR",
-    "name": { "str": "bell cuirass", "str_pl": "bell cuirasses" },
     "category": "armor",
-    "description": "An ancient Greek breastplate made of bronze.",
-    "weight": "5896 g",
-    "volume": "6 L",
-    "price": 50000,
-    "price_postapoc": 3000,
-    "to_hit": -5,
-    "material": [ "bronze" ],
-    "symbol": "[",
-    "looks_like": "plate_cuirass",
-    "color": "yellow",
+    "name": { "str": "crude paper breastplate" },
+    "description": "Jury-rigged body armor made from thickly-stacked paper and rolls of duct tape.",
+    "weight": "5790 g",
+    "volume": "9500 ml",
+    "price": 100,
+    "price_postapoc": 200,
+    "to_hit": -1,
+    "material": [ "paper" ],
+    "symbol": "O",
+    "looks_like": "kevlar",
+    "color": "light_gray",
+    "warmth": 10,
     "longest_side": "60 cm",
-    "warmth": 15,
-    "material_thickness": 3,
-    "flags": [ "VARSIZE", "OUTER", "STURDY" ],
-    "armor": [ { "encumbrance": 15, "coverage": 90, "covers": [ "torso" ] } ],
-    "melee_damage": { "bash": 6 }
+    "material_thickness": 12,
+    "flags": [ "OUTER" ],
+      "armor": [
+        {
+          "material": [ { "type": "paper", "covered_by_mat": 100, "thickness": 12 } ],
+          "covers": [ "torso" ],
+          "specifically_covers": [ "torso_upper" ],
+          "coverage": 20,
+          "encumbrance": 9
+        },
+        {
+          "material": [ { "type": "paper", "covered_by_mat": 100, "thickness": 12 } ],
+          "covers": [ "torso" ],
+          "specifically_covers": [ "torso_lower" ],
+          "coverage": 70,
+          "encumbrance": 10
+        }
+    ]
   },
   {
-    "id": "xl_armor_cuirass",
+    "id": "paper_breastplate_xl",
     "type": "ARMOR",
-    "name": { "str": "XL bell cuirass", "str_pl": "XL bell cuirasses" },
-    "copy-from": "armor_cuirass",
+    "name": { "str": "XL crude paper breastplate", "str_pl": "XL crude paper breastplate" },
+    "copy-from": "paper_breastplate",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_armor_cuirass",
+    "id": "paper_breastplate_xs",
     "type": "ARMOR",
-    "copy-from": "armor_cuirass",
-    "looks_like": "armor_cuirass",
-    "name": { "str": "XS bell cuirass", "str_pl": "XS bell cuirasses" },
+    "copy-from": "paper_breastplate",
+    "name": { "str": "XS crude paper breastplate", "str_pl": "XS crude paper breastplate" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "cuirass_bronze",
+    "id": "bronze_cuirass",
     "type": "ARMOR",
     "name": { "str": "bronze cuirass", "str_pl": "bronze cuirasses" },
     "category": "armor",
-    "description": "A solid, single-piece cuirass made from bronze.  It isn't particularly well designed, but it does its job.",
+    "description": "A solid breastplate made from bronze.  It's weaker than steel, but still quite protective.",
     "weight": "4896 g",
     "volume": "6 L",
     "price": 40000,
@@ -51,7 +64,7 @@
     "to_hit": -5,
     "material": [ "bronze" ],
     "symbol": "[",
-    "looks_like": "armor_cuirass",
+    "looks_like": "platemail_cuirass",
     "color": "yellow",
     "longest_side": "60 cm",
     "warmth": 15,
@@ -61,18 +74,18 @@
     "melee_damage": { "bash": 6 }
   },
   {
-    "id": "xl_cuirass_bronze",
+    "id": "bronze_cuirass_xl",
     "type": "ARMOR",
     "name": { "str": "XL bronze cuirass", "str_pl": "XL bronze cuirasses" },
-    "copy-from": "cuirass_bronze",
+    "copy-from": "bronze_cuirass",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_cuirass_bronze",
+    "id": "bronze_cuirass_xs",
     "type": "ARMOR",
     "name": { "str": "XS bronze cuirass", "str_pl": "XS bronze cuirasses" },
-    "copy-from": "cuirass_bronze",
+    "copy-from": "bronze_cuirass",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -186,7 +199,7 @@
     "to_hit": -1,
     "material": [ "rubber" ],
     "symbol": "O",
-    "looks_like": "armor_scrapsuit",
+    "looks_like": "armor_lorica",
     "color": "light_gray",
     "warmth": 10,
     "longest_side": "40 cm",
@@ -276,7 +289,7 @@
     "to_hit": -2,
     "material": [ "plastic", "neoprene" ],
     "symbol": "H",
-    "looks_like": "plate_cuirass",
+    "looks_like": "platemail_cuirass",
     "color": "dark_gray",
     "warmth": 15,
     "longest_side": "20 cm",
@@ -289,7 +302,7 @@
     "id": "platemail_cuirass",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "platemail cuirass", "str_pl": "platemail cuirasses" },
+    "name": { "str": "plate cuirass", "str_pl": "plate cuirasses" },
     "description": "A solid steel breastplate.  Even as full armor went into decline, cuirasses remained in use among cavalry in Europe.",
     "weight": "4200 g",
     "volume": "6 L",
@@ -322,7 +335,7 @@
     ]
   },
   {
-    "id": "platemail_cuirass_XL",
+    "id": "platemail_cuirass_xl",
     "type": "ARMOR",
     "name": { "str": "XL platemail cuirass", "str_pl": "XL platemail cuirasses" },
     "copy-from": "platemail_cuirass",
@@ -330,7 +343,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "platemail_cuirass_XS",
+    "id": "platemail_cuirass_xs",
     "type": "ARMOR",
     "copy-from": "platemail_cuirass",
     "name": { "str": "XS platemail cuirass", "str_pl": "XS platemail cuirasses" },
@@ -338,60 +351,11 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "cuirass_scrap",
+    "id": "tire_cuirass",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "scrap cuirass", "str_pl": "scrap cuirasses" },
-    "description": "A cuirass made from scraps of metal secured by simple strings.",
-    "weight": "3366 g",
-    "volume": "5750 ml",
-    "price": 20000,
-    "price_postapoc": 50,
-    "to_hit": -1,
-    "material": [ "budget_steel", "cotton" ],
-    "repairs_with": [ "budget_steel" ],
-    "symbol": "[",
-    "looks_like": "plate_cuirass",
-    "color": "light_gray",
-    "longest_side": "40 cm",
-    "warmth": 10,
-    "flags": [ "OUTER" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "budget_steel", "covered_by_mat": 100, "thickness": 1.3 },
-          { "type": "cotton", "covered_by_mat": 10, "thickness": 1.0 }
-        ],
-        "covers": [ "torso" ],
-        "coverage": 70,
-        "encumbrance": 18
-      }
-    ],
-    "melee_damage": { "bash": 2, "cut": 3 }
-  },
-  {
-    "id": "xl_cuirass_scrap",
-    "type": "ARMOR",
-    "name": { "str": "XL scrap cuirass", "str_pl": "XL scrap cuirasses" },
-    "copy-from": "cuirass_scrap",
-    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_cuirass_scrap",
-    "type": "ARMOR",
-    "copy-from": "cuirass_scrap",
-    "looks_like": "cuirass_scrap",
-    "name": { "str": "XS scrap cuirass", "str_pl": "XS scrap cuirasses" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "cuirass_tire",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "tire cuirass", "str_pl": "tire cuirasses" },
-    "description": "A cuirass made from thick chunks of tire secured by simple strings; the loose collection of rubber plates provides decent but not the most convenient protection.",
+    "name": { "str": "tire cuirass", "str_pl": "tire cuirass" },
+    "description": "An improvised breastplate made from thick chunks of rubber secured by simple strings.",
     "weight": "4800 g",
     "volume": "5750 ml",
     "price": 20000,
@@ -399,7 +363,7 @@
     "to_hit": -1,
     "material": [ "rubber" ],
     "symbol": "[",
-    "looks_like": "plate_cuirass",
+    "looks_like": "platemail_cuirass",
     "color": "light_gray",
     "longest_side": "40 cm",
     "warmth": 10,
@@ -408,18 +372,18 @@
     "armor": [ { "encumbrance": 18, "coverage": 80, "covers": [ "torso" ] } ]
   },
   {
-    "id": "xl_cuirass_tire",
+    "id": "tire_cuirass_xl",
     "type": "ARMOR",
     "name": { "str": "XL tire cuirass", "str_pl": "XL tire cuirasses" },
-    "copy-from": "cuirass_scrap",
+    "copy-from": "tire_cuirass",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "flags": [ "OVERSIZE", "OUTER", "NONCONDUCTIVE" ]
   },
   {
-    "id": "xs_cuirass_tire",
+    "id": "tire_cuirass_xs",
     "type": "ARMOR",
-    "copy-from": "cuirass_tire",
-    "looks_like": "cuirass_tire",
+    "copy-from": "tire_cuirass",
+    "looks_like": "tire_cuirass",
     "name": { "str": "XS tire cuirass", "str_pl": "XS tire cuirasses" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -873,11 +837,11 @@
     ]
   },
   {
-    "id": "armor_larmor_chest",
+    "id": "leather_cuirass",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "leather armor cuirass", "str_pl": "leather armor cuirasses" },
-    "description": "A leather chest plate with attached shoulder guards.",
+    "name": { "str": "leather cuirass", "str_pl": "leather cuirasses" },
+    "description": "A durable breastplate made of thick leather.",
     "weight": "3250 g",
     "volume": "3500 ml",
     "price": 6000,
@@ -886,7 +850,7 @@
     "material": [ "leather" ],
     "symbol": "[",
     "longest_side": "60 cm",
-    "looks_like": "cuirass_bronze",
+    "looks_like": "bronze_cuirass",
     "color": "brown",
     "armor": [
       {
@@ -894,12 +858,6 @@
         "coverage": 95,
         "encumbrance": 17,
         "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 } ]
-      },
-      {
-        "covers": [ "arm_l", "arm_r" ],
-        "coverage": 90,
-        "encumbrance": 4,
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
       }
     ],
     "warmth": 25,
@@ -909,19 +867,18 @@
     "melee_damage": { "bash": 2 }
   },
   {
-    "id": "xl_armor_larmor_chest",
+    "id": "leather_cuirass_xl",
     "type": "ARMOR",
-    "name": { "str": "XL leather armor cuirass", "str_pl": "XL leather armor cuirasses" },
-    "copy-from": "armor_larmor_chest",
+    "name": { "str": "XL leather cuirass", "str_pl": "XL leather cuirasses" },
+    "copy-from": "leather_cuirass",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "armor_larmor_chest_xs",
+    "id": "leather_cuirass_xs",
     "type": "ARMOR",
-    "copy-from": "armor_larmor_chest",
-    "looks_like": "cuirass_bronze",
-    "name": { "str": "XS leather armor cuirass", "str_pl": "XS leather armor cuirasses" },
+    "copy-from": "leather_cuirass",
+    "name": { "str": "XS leather cuirass", "str_pl": "XS leather cuirasses" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -956,7 +913,7 @@
     ]
   },
   {
-    "id": "xl_mirror_armor",
+    "id": "mirror_armor_xl",
     "type": "ARMOR",
     "name": { "str": "XL mirror armor", "str_pl": "sets of XL mirror armor" },
     "copy-from": "mirror_armor",
@@ -965,7 +922,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_mirror_armor",
+    "id": "mirror_armor_xs",
     "type": "ARMOR",
     "copy-from": "mirror_armor",
     "looks_like": "mirror_armor",

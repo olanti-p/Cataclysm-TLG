@@ -282,53 +282,5 @@
         "specifically_covers": [ "head_nape", "head_ear_r", "head_ear_l" ]
       }
     ]
-  },
-  {
-    "id": "steel_facemask",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "steel facemask" },
-    "description": "A metal facemask designed to attach to a cap helmet to protect the lower half.",
-    "weight": "2000 g",
-    "volume": "300 ml",
-    "price": 5012,
-    "price_postapoc": 1300,
-    "to_hit": -1,
-    "material": [ "lc_steel" ],
-    "symbol": "[",
-    "warmth": 3,
-    "color": "light_red",
-    "flags": [ "VARSIZE", "STURDY", "HELMET_AVENTAIL", "CANT_WEAR" ],
-    "armor": [
-      {
-        "covers": [ "head" ],
-        "specifically_covers": [ "head_forehead" ],
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "encumbrance": 7,
-        "coverage": 100
-      },
-      {
-        "covers": [ "mouth" ],
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 } ],
-        "encumbrance": 7,
-        "coverage": 100
-      }
-    ]
-  },
-  {
-    "id": "xl_steel_facemask",
-    "type": "ARMOR",
-    "copy-from": "steel_facemask",
-    "name": { "str": "XL mild steel armored face mask" },
-    "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_steel_facemask",
-    "type": "ARMOR",
-    "copy-from": "steel_facemask",
-    "name": { "str": "XS mild steel armored face mask" },
-    "proportional": { "weight": 0.75, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
   }
 ]

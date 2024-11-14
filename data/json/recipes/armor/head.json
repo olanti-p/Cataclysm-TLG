@@ -713,7 +713,7 @@
     "components": [ [ [ "fur", 20 ], [ "tanned_pelt", 3 ], [ "leather", 20 ], [ "tanned_hide", 3 ] ], [ [ "cotton_patchwork", 20 ] ] ]
   },
   {
-    "result": "helmet_larmor",
+    "result": "leather_helmet",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -731,17 +731,17 @@
     ]
   },
   {
-    "result": "helmet_larmor_xs",
+    "result": "leather_helmet_xs",
     "type": "recipe",
-    "copy-from": "helmet_larmor",
+    "copy-from": "leather_helmet",
     "time": "30 m",
     "using": [ [ "tailoring_leather_patchwork", 2 ] ],
     "byproducts": [ [ "leather", 6 ] ]
   },
   {
-    "result": "xl_helmet_larmor",
+    "result": "leather_helmet_xl",
     "type": "recipe",
-    "copy-from": "helmet_larmor",
+    "copy-from": "leather_helmet",
     "time": "35 m",
     "using": [ [ "tailoring_leather_patchwork", 2 ] ]
   },
@@ -808,7 +808,7 @@
     "components": [ [ [ "fur", 6 ], [ "leather", 6 ] ] ]
   },
   {
-    "result": "helmet_plate",
+    "result": "platemail_great_helm",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -829,9 +829,9 @@
     ]
   },
   {
-    "result": "helmet_plate_xs",
+    "result": "platemail_great_helm_xs",
     "type": "recipe",
-    "copy-from": "helmet_plate",
+    "copy-from": "platemail_great_helm",
     "time": "9 h",
     "using": [ [ "blacksmithing_standard", 40 ], [ "steel_standard", 10 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
@@ -839,9 +839,9 @@
     "components": [ [ [ "fur", 3 ], [ "leather", 3 ] ] ]
   },
   {
-    "result": "xl_helmet_plate",
+    "result": "platemail_great_helm_xl",
     "type": "recipe",
-    "copy-from": "helmet_plate",
+    "copy-from": "platemail_great_helm",
     "time": "10 h 10 m",
     "using": [ [ "blacksmithing_standard", 84 ], [ "steel_standard", 21 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
@@ -849,21 +849,7 @@
     "components": [ [ [ "fur", 6 ], [ "leather", 6 ] ] ]
   },
   {
-    "result": "helmet_metal_sheets_full",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "240 m",
-    "autolearn": true,
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "gambeson_hood", 1 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 } ]
-  },
-  {
-    "result": "helmet_metal_sheets",
+    "result": "sheet_metal_helmet",
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
@@ -922,40 +908,6 @@
       [ [ "glasses_bal", 1 ], [ "goggles_ski", 1 ] ],
       [ [ "sheet_kevlar_layered", 2 ] ]
     ]
-  },
-  {
-    "result": "helmet_scrap",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "1 h 30 m",
-    "autolearn": true,
-    "book_learn": [ [ "recipe_melee", 2 ] ],
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 4 ] ] ],
-    "qualities": [ { "id": "CUT", "level": 2 }, { "id": "HAMMER", "level": 1 } ],
-    "proficiencies": [ { "proficiency": "prof_armorsmithing", "skill_penalty": 0 } ]
-  },
-  {
-    "result": "helmet_scrap_xs",
-    "type": "recipe",
-    "copy-from": "helmet_scrap",
-    "time": "1 h 30 m",
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 2 }, { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "cotton_patchwork", 2 ] ] ]
-  },
-  {
-    "result": "xl_helmet_scrap",
-    "type": "recipe",
-    "copy-from": "helmet_scrap",
-    "time": "1 h 40 m",
-    "using": [ [ "cordage", 2 ], [ "mixed_steel", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 2 }, { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "cotton_patchwork", 6 ] ] ]
   },
   {
     "result": "hood_fsurvivor",
@@ -2500,7 +2452,7 @@
     ]
   },
   {
-    "result": "helmet_kettle",
+    "result": "platemail_kettle_helm",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -2509,10 +2461,9 @@
     "difficulty": 5,
     "time": "7 h 12 m",
     "book_learn": [ [ "textbook_armwest", 4 ] ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
+    "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ], [ "strap_small", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
-    "components": [ [ [ "fur", 3 ], [ "leather", 3 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_metalworking" },
       { "proficiency": "prof_blacksmithing" },
@@ -2521,7 +2472,7 @@
     ]
   },
   {
-    "result": "xl_helmet_kettle",
+    "result": "platemail_kettle_helm_xl",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -2530,10 +2481,29 @@
     "difficulty": 5,
     "time": "8 h 20 m",
     "book_learn": [ [ "textbook_armwest", 4 ] ],
-    "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
+    "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ], [ "strap_small", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
-    "components": [ [ [ "fur", 4 ], [ "leather", 4 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_leatherworking_basic" },
+      { "proficiency": "prof_armorsmithing" }
+    ]
+  },
+  {
+    "result": "platemail_kettle_helm_xs",
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_HEAD",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "8 h 20 m",
+    "book_learn": [ [ "textbook_armwest", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 6 ], [ "steel_standard", 1 ], [ "strap_small", 1 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_metalworking" },
       { "proficiency": "prof_blacksmithing" },
@@ -2569,7 +2539,7 @@
     "proficiencies": [ { "proficiency": "prof_closures_waterproofing" }, { "proficiency": "prof_leatherworking_basic" } ]
   },
   {
-    "result": "lighthelm_close",
+    "result": "platemail_visored_helm",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -2590,71 +2560,11 @@
     ]
   },
   {
-    "result": "xl_lighthelm_close",
+    "result": "platemail_visored_helm_xl",
     "type": "recipe",
-    "copy-from": "lighthelm_close",
+    "copy-from": "platemail_visored_helm",
     "time": "5 d 14 h",
     "using": [ [ "fabric_leather_fur_hide", 2 ], [ "blacksmithing_standard", 12 ], [ "lc_steel_standard", 3 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "helm_close",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "skill_used": "fabrication",
-    "difficulty": 7,
-    "time": "5 d 12 h",
-    "book_learn": [ [ "textbook_armwest", 7 ] ],
-    "using": [ [ "fabric_leather_fur_hide", 1 ], [ "blacksmithing_standard", 12 ], [ "lc_steel_standard", 3 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_helm_close",
-    "type": "recipe",
-    "copy-from": "helm_close",
-    "time": "6 d 3 h",
-    "using": [ [ "fabric_leather_fur_hide", 2 ], [ "blacksmithing_standard", 16 ], [ "lc_steel_standard", 4 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "heavyhelm_close",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "skill_used": "fabrication",
-    "difficulty": 8,
-    "time": "6 d",
-    "book_learn": [ [ "textbook_armwest", 7 ] ],
-    "using": [ [ "fabric_leather_fur_hide", 1 ], [ "blacksmithing_standard", 16 ], [ "lc_steel_standard", 4 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_heavyhelm_close",
-    "type": "recipe",
-    "copy-from": "heavyhelm_close",
-    "time": "6 d 17 h",
-    "using": [ [ "fabric_leather_fur_hide", 2 ], [ "blacksmithing_standard", 20 ], [ "lc_steel_standard", 5 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
@@ -2716,7 +2626,7 @@
     "components": [ [ [ "fur", 6 ], [ "leather", 6 ] ] ]
   },
   {
-    "result": "helmet_turban",
+    "result": "turban_helmet",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -2736,9 +2646,9 @@
     ]
   },
   {
-    "result": "xs_helmet_turban",
+    "result": "turban_helmet_xs",
     "type": "recipe",
-    "copy-from": "helmet_turban",
+    "copy-from": "turban_helmet",
     "time": "7 h 12 m",
     "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ] ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2746,9 +2656,9 @@
     "components": [ [  ] ]
   },
   {
-    "result": "xl_helmet_turban",
+    "result": "turban_helmet_xl",
     "type": "recipe",
-    "copy-from": "helmet_turban",
+    "copy-from": "turban_helmet",
     "time": "8 h 5 m",
     "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
@@ -2785,7 +2695,7 @@
     "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 40 ] ], [ [ "wire", 2 ] ] ]
   },
   {
-    "result": "steel_facemask",
+    "result": "platemail_aventail",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -2793,7 +2703,7 @@
     "skill_used": "fabrication",
     "difficulty": 5,
     "time": "3 h 00 m",
-    "book_learn": [ [ "textbook_weparabic", 4 ] ],
+    "book_learn": [ [ "textbook_armwest", 4 ] ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2805,9 +2715,9 @@
     ]
   },
   {
-    "result": "xs_steel_facemask",
+    "result": "platemail_aventail_xs",
     "type": "recipe",
-    "copy-from": "steel_facemask",
+    "copy-from": "platemail_aventail",
     "time": "7 h 12 m",
     "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ] ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2815,9 +2725,9 @@
     "components": [ [  ] ]
   },
   {
-    "result": "xl_steel_facemask",
+    "result": "platemail_aventail_xl",
     "type": "recipe",
-    "copy-from": "steel_facemask",
+    "copy-from": "platemail_aventail",
     "time": "8 h 5 m",
     "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
