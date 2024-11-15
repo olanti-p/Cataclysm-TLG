@@ -7,11 +7,6 @@
   {
     "type": "snippet",
     "category": "tip",
-    "text": [ "Even without electricity, ovens can be useful fire containers." ]
-  },
-  {
-    "type": "snippet",
-    "category": "tip",
     "text": [ "Light itself doesn't draw zombies, it's sight, noise, or smell." ]
   },
   {
@@ -23,6 +18,41 @@
     "type": "snippet",
     "category": "tip",
     "text": [ "Turnout gear protects from fire but not from overheating." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "Want to protect your gear from acid?  Try wearing a raincoat over it." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "Don't wait until it's too late!  Run away and live to fight another day." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "There are a million ways to use a garbage bag." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "Trouble with sticky or slippery floors?  Try using them against your enemies." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "Crouching is quieter than walking and will let you hide behind some furniture." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "Don't get surrounded!  Always have an exit plan." ]
+  },
+  {
+    "type": "snippet",
+    "category": "tip",
+    "text": [ "There are billions of them and one of you, but only you have a working brain." ]
   },
   {
     "type": "snippet",
@@ -468,11 +498,6 @@
     "type": "snippet",
     "category": "tip",
     "text": [ "Power move.  You can take control and play as your NPC follower." ]
-  },
-  {
-    "type": "snippet",
-    "category": "tip",
-    "text": [ "Your skills can rust, but you'll learn them faster when you pick them up again." ]
   },
   {
     "type": "snippet",
