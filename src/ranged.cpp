@@ -975,6 +975,12 @@ int Character::fire_gun( const tripoint &target, int shots, item &gun )
         dispersion_sources dispersion = get_weapon_dispersion( gun );
         dispersion.add_range( recoil_total() );
         dispersion.add_spread( proj.shot_spread );
+        // Shooting is never completely deterministic.
+        // Peak Human (18+) perception can get a bit better than - 200 variance, but it caps at -100.
+        double variance_min = 900.0 - ( std::min( 800.0,
+                                        ( 40.0 * ( get_per() * ( ( get_limb_score( limb_score_manip ) + get_limb_score(
+                                                limb_score_vision ) ) / 2.0 ) ) ) ) );
+        dispersion.add_range( rng( variance_min, -200 ) );
 
         bool first = true;
         bool headshot = false;
@@ -2313,13 +2319,6 @@ dispersion_sources Character::get_weapon_dispersion( const item &obj ) const
     dispersion.add_range( ranged_dex_mod() );
 
     dispersion.add_range( get_modifier( character_modifier_ranged_dispersion_manip_mod ) );
-
-    // Shooting is never completely deterministic.
-    // Peak Human (18+) perception can get a bit better than - 200 variance, but it caps at -100.
-    double variance_min = 900.0 - ( std::min( 800.0,
-                                    ( 40.0 * ( get_per() * ( ( get_limb_score( limb_score_manip ) + get_limb_score(
-                                            limb_score_vision ) ) / 2.0 ) ) ) ) );
-    dispersion.add_range( rng( variance_min, -200 ) );
 
     if( is_driving() ) {
         // get volume of gun (or for auxiliary gunmods the parent gun)
