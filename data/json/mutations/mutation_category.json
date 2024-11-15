@@ -186,7 +186,7 @@
     "id": "BATRACHIAN",
     "name": "Batrachian",
     "threshold_mut": "THRESH_BATRACHIAN",
-    "mutagen_message": "Like a tadpole you must transform.",
+    "mutagen_message": "Like a tadpole, you must transform.",
     "memorial_message": "Found a bigger pond.",
     "vitamin": "mutagen_batrachian",
     "base_removal_chance": 33,
