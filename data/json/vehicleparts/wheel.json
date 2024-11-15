@@ -355,10 +355,7 @@
     "description": "A set of small wheels, mounted on pivots, like the ones on a rolling office chair.",
     "damage_modifier": 50,
     "folded_volume": "1250 ml",
-    "breaks_into": [
-      { "item": "plastic_chunk", "count": [ 1, 2 ] },
-      { "item": "scrap", "count": [ 1, 2 ] }
-    ],
+    "breaks_into": [ { "item": "plastic_chunk", "count": [ 1, 2 ] }, { "item": "scrap", "count": [ 1, 2 ] } ],
     "rolling_resistance": 29.0,
     "wheel_offroad_rating": 0.1,
     "wheel_terrain_modifiers": { "FLAT": [ 0, 6 ], "ROAD": [ 0, 3 ] },
@@ -383,10 +380,7 @@
     "durability": 70,
     "damage_modifier": 50,
     "folded_volume": "3150 ml",
-    "breaks_into": [
-      { "item": "plastic_chunk", "count": [ 1, 2 ] },
-      { "item": "scrap", "count": [ 1, 2 ] }
-    ],
+    "breaks_into": [ { "item": "plastic_chunk", "count": [ 1, 2 ] }, { "item": "scrap", "count": [ 1, 2 ] } ],
     "rolling_resistance": 14.0,
     "wheel_offroad_rating": 0.4,
     "wheel_terrain_modifiers": { "FLAT": [ 0, 6 ], "ROAD": [ 0, 3 ] },
