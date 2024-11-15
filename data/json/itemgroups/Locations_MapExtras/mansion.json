@@ -339,9 +339,9 @@
     "items": [
       { "group": "soa_weapons_decor" },
       {
-        "distribution": [ { "item": "armor_junk_plate", "prob": 100 }, { "item": "chainmail_junk_hauberk", "prob": 100 } ]
+        "distribution": [ { "item": "junk_platemail_suit", "prob": 100 }, { "item": "chainmail_junk_hauberk", "prob": 80 } ]
       },
-      { "item": "helmet_plate", "prob": 100 }
+      { "item": "platemail_visored_helm", "prob": 100 }
     ]
   },
   {
@@ -358,7 +358,7 @@
     "id": "soa_plate",
     "type": "item_group",
     "subtype": "collection",
-    "items": [ { "group": "soa_weapons_plate" }, [ "armor_junk_lightplate", 100 ], [ "helmet_barbute", 100 ] ]
+    "items": [ { "group": "soa_weapons_plate" }, [ "junk_platemail_suit", 100 ], [ "helmet_barbute", 60 ] ]
   },
   {
     "id": "soa_weapons_plate",

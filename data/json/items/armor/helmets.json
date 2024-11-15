@@ -1680,7 +1680,6 @@
     "use_action": { "type": "transform", "msg": "You raise the helm's visor.", "target": "platemail_visored_helm_raised", "menu_text": "Raise" },
     "material": [ "lc_steel" ],
     "symbol": "o",
-    "looks_like": "helmet_sallet",
     "color": "light_gray",
     "armor": [
       {
