@@ -527,13 +527,16 @@
     "material_thickness": 5,
     "flags": [ "WATER_FRIENDLY", "OUTER", "ALLOWS_TAIL" ],
     "armor": [
-        {
-          "material": [ { "type": "plastic", "covered_by_mat": 60, "thickness": 4 }, { "type": "nylon", "covered_by_mat": 100, "thickness": 1 } ],
-          "covers": [ "leg_l", "leg_r" ],
-          "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
-          "coverage": 100,
-          "encumbrance": 3
-        }
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 60, "thickness": 4 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 1 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
+        "coverage": 100,
+        "encumbrance": 3
+      }
     ]
   },
   {

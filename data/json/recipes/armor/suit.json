@@ -181,7 +181,12 @@
     "autolearn": true,
     "qualities": [ { "id": "LEATHER_AWL", "level": 1 } ],
     "proficiencies": [ { "proficiency": "prof_leatherworking_basic" } ],
-    "components": [ [ [ "leather_cuirass", 1 ] ], [ [ "leather_pauldrons", 1 ] ], [ [ "leather_arm_guards", 1 ] ], [ [ "leather_leg_guards", 1 ] ] ]
+    "components": [
+      [ [ "leather_cuirass", 1 ] ],
+      [ [ "leather_pauldrons", 1 ] ],
+      [ [ "leather_arm_guards", 1 ] ],
+      [ [ "leather_leg_guards", 1 ] ]
+    ]
   },
   {
     "result": "leather_armor_suit_xs",
@@ -190,7 +195,12 @@
     "time": "20 m",
     "qualities": [ { "id": "LEATHER_AWL", "level": 1 } ],
     "using": [ [ "cordage", 2 ] ],
-    "components": [ [ [ "leather_cuirass_xs", 1 ] ], [ [ "leather_pauldrons_xs", 1 ] ], [ [ "leather_arm_guards_xs", 1 ] ], [ [ "leather_leg_guards_xs", 1 ] ] ]
+    "components": [
+      [ [ "leather_cuirass_xs", 1 ] ],
+      [ [ "leather_pauldrons_xs", 1 ] ],
+      [ [ "leather_arm_guards_xs", 1 ] ],
+      [ [ "leather_leg_guards_xs", 1 ] ]
+    ]
   },
   {
     "result": "leather_armor_suit_xl",
@@ -199,7 +209,12 @@
     "time": "25 m",
     "qualities": [ { "id": "LEATHER_AWL", "level": 1 } ],
     "using": [ [ "cordage", 3 ] ],
-    "components": [ [ [ "leather_cuirass_xl", 1 ] ], [ [ "leather_pauldrons_xl", 1 ] ], [ [ "leather_arm_guards_xl", 1 ] ], [ [ "leather_leg_guards_xl", 1 ] ] ]
+    "components": [
+      [ [ "leather_cuirass_xl", 1 ] ],
+      [ [ "leather_pauldrons_xl", 1 ] ],
+      [ [ "leather_arm_guards_xl", 1 ] ],
+      [ [ "leather_leg_guards_xl", 1 ] ]
+    ]
   },
   {
     "result": "armor_lorica",
@@ -440,7 +455,12 @@
     "book_learn": [ [ "textbook_fabrication", 6 ], [ "advanced_electronics", 6 ], [ "textbook_electronics", 6 ] ],
     "using": [ [ "chainmail_standard", 20 ] ],
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_shock_weapons" } ],
-    "components": [ [ [ "chainmail_suit", 1 ] ], [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ], [ [ "chain_link", 500 ] ], [ [ "cable", 250 ] ] ]
+    "components": [
+      [ [ "chainmail_suit", 1 ] ],
+      [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ],
+      [ [ "chain_link", 500 ] ],
+      [ [ "cable", 250 ] ]
+    ]
   },
   {
     "result": "chainmail_suit_faraday_xs",
@@ -448,14 +468,24 @@
     "copy-from": "chainmail_suit_faraday",
     "time": "720 m",
     "using": [ [ "chainmail_standard", 15 ] ],
-    "components": [ [ [ "chainmail_suit_xs", 1 ] ], [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ], [ [ "chain_link", 375 ] ], [ [ "cable", 200 ] ] ]
+    "components": [
+      [ [ "chainmail_suit_xs", 1 ] ],
+      [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ],
+      [ [ "chain_link", 375 ] ],
+      [ [ "cable", 200 ] ]
+    ]
   },
   {
     "result": "chainmail_suit_faraday_xl",
     "type": "recipe",
     "copy-from": "chainmail_suit_faraday",
     "using": [ [ "chainmail_standard", 20 ] ],
-    "components": [ [ [ "chainmail_suit_xl", 1 ] ], [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ], [ [ "chain_link", 750 ] ], [ [ "cable", 300 ] ] ]
+    "components": [
+      [ [ "chainmail_suit_xl", 1 ] ],
+      [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ],
+      [ [ "chain_link", 750 ] ],
+      [ [ "cable", 300 ] ]
+    ]
   },
   {
     "result": "platemail_suit_faraday",
@@ -470,7 +500,13 @@
     "book_learn": [ [ "textbook_fabrication", 6 ], [ "advanced_electronics", 6 ], [ "textbook_electronics", 6 ] ],
     "using": [ [ "chainmail_standard", 20 ] ],
     "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_shock_weapons" } ],
-    "components": [ [ [ "platemail_suit", 1 ] ], [ [ "chainmail_coif", 1 ] ], [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ], [ [ "chain_link", 500 ] ], [ [ "cable", 250 ] ] ]
+    "components": [
+      [ [ "platemail_suit", 1 ] ],
+      [ [ "chainmail_coif", 1 ] ],
+      [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ],
+      [ [ "chain_link", 500 ] ],
+      [ [ "cable", 250 ] ]
+    ]
   },
   {
     "result": "platemail_suit_faraday_xs",
@@ -478,14 +514,26 @@
     "copy-from": "platemail_suit_faraday",
     "time": "720 m",
     "using": [ [ "chainmail_standard", 15 ] ],
-    "components": [ [ [ "platemail_suit_xs", 1 ] ], [ [ "chainmail_coif_xs", 1 ] ], [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ], [ [ "chain_link", 375 ] ], [ [ "cable", 200 ] ] ]
+    "components": [
+      [ [ "platemail_suit_xs", 1 ] ],
+      [ [ "chainmail_coif_xs", 1 ] ],
+      [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ],
+      [ [ "chain_link", 375 ] ],
+      [ [ "cable", 200 ] ]
+    ]
   },
   {
     "result": "platemail_suit_faraday_xl",
     "type": "recipe",
     "copy-from": "platemail_suit_faraday",
     "using": [ [ "chainmail_standard", 20 ] ],
-    "components": [ [ [ "platemail_suit_xl", 1 ] ], [ [ "chainmail_coif_xl", 1 ] ], [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ], [ [ "chain_link", 750 ] ], [ [ "cable", 300 ] ] ]
+    "components": [
+      [ [ "platemail_suit_xl", 1 ] ],
+      [ [ "chainmail_coif_xl", 1 ] ],
+      [ [ "cleansuit", 1 ], [ "hazmat_suit", 1 ], [ "xedra_enviro_suit", 1 ], [ "robofac_enviro_suit", 1 ] ],
+      [ [ "chain_link", 750 ] ],
+      [ [ "cable", 300 ] ]
+    ]
   },
   {
     "result": "grass_cloak",

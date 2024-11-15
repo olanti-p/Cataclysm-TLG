@@ -703,7 +703,14 @@
     "name": "platemail arm protection",
     "description": "Recipes related to constructing steel plate armor for the arms.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "platemail_pauldrons", "platemail_pauldrons_xl", "platemail_pauldrons_xs", "platemail_arm_guards", "platemail_arm_guards_xl", "platemail_arm_guards_xs" ],
+    "nested_category_data": [
+      "platemail_pauldrons",
+      "platemail_pauldrons_xl",
+      "platemail_pauldrons_xs",
+      "platemail_arm_guards",
+      "platemail_arm_guards_xl",
+      "platemail_arm_guards_xs"
+    ],
     "difficulty": 5
   },
   {
@@ -715,7 +722,14 @@
     "name": "platemail leg protection",
     "description": "Recipes related to constructing steel plate armor for the legs.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "platemail_tasset", "platemail_tasset_xl", "platemail_tasset_xs", "platemail_leg_guards", "platemail_leg_guards_xl", "platemail_leg_guards_xs" ],
+    "nested_category_data": [
+      "platemail_tasset",
+      "platemail_tasset_xl",
+      "platemail_tasset_xs",
+      "platemail_leg_guards",
+      "platemail_leg_guards_xl",
+      "platemail_leg_guards_xs"
+    ],
     "difficulty": 5
   },
   {
@@ -727,7 +741,20 @@
     "name": "platemail head protection",
     "description": "Recipes related to constructing steel plate armor for the head.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "platemail_visored_helm", "platemail_visored_helm_xl", "platemail_visored_helm_xs", "platemail_great_helm", "platemail_great_helm_xl", "platemail_great_helm_xs", "platemail_kettle_helm", "platemail_kettle_helm_xl", "platemail_kettle_helm_xs", "platemail_aventail", "platemail_aventail_xl", "platemail_aventail_xs" ],
+    "nested_category_data": [
+      "platemail_visored_helm",
+      "platemail_visored_helm_xl",
+      "platemail_visored_helm_xs",
+      "platemail_great_helm",
+      "platemail_great_helm_xl",
+      "platemail_great_helm_xs",
+      "platemail_kettle_helm",
+      "platemail_kettle_helm_xl",
+      "platemail_kettle_helm_xs",
+      "platemail_aventail",
+      "platemail_aventail_xl",
+      "platemail_aventail_xs"
+    ],
     "difficulty": 5
   },
   {
@@ -763,7 +790,14 @@
     "name": "platemail armor pieces",
     "description": "Recipes related to constructing different pieces of steel plate armor.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "nested_platemail_head_armor", "nested_platemail_cuirass", "nested_platemail_arm_armor", "nested_platemail_gauntlets", "nested_platemail_leg_armor", "nested_platemail_sollerets" ],
+    "nested_category_data": [
+      "nested_platemail_head_armor",
+      "nested_platemail_cuirass",
+      "nested_platemail_arm_armor",
+      "nested_platemail_gauntlets",
+      "nested_platemail_leg_armor",
+      "nested_platemail_sollerets"
+    ],
     "difficulty": 5
   },
   {
@@ -775,7 +809,14 @@
     "name": "platemail armor suits",
     "description": "Recipes related to constructing suits of steel plate armor.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "platemail_suit", "platemail_suit_xl", "platemail_suit_xs", "platemail_half_suit", "platemail_half_suit_xl", "platemail_half_suit_xs" ],
+    "nested_category_data": [
+      "platemail_suit",
+      "platemail_suit_xl",
+      "platemail_suit_xs",
+      "platemail_half_suit",
+      "platemail_half_suit_xl",
+      "platemail_half_suit_xs"
+    ],
     "difficulty": 1
   },
   {
