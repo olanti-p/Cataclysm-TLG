@@ -339,7 +339,7 @@
     "locations": [ "land" ],
     "city_sizes": [ 0, 16 ],
     "occurrences": [ 0, 0 ],
-    "flags": [ "URBAN", "MAN_MADE" ]
+    "flags": [ "URBAN", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
@@ -2698,7 +2698,7 @@
     "locations": [ "wilderness" ],
     "city_distance": [ 3, -1 ],
     "occurrences": [ 30, 100 ],
-    "flags": [ "UNIQUE", "SAFE_AT_WORLDGEN", "MAN_MADE", "FARM" ]
+    "flags": [ "GLOBALLY_UNIQUE", "SAFE_AT_WORLDGEN", "MAN_MADE", "FARM" ]
   },
   {
     "type": "overmap_special",
@@ -3653,26 +3653,6 @@
   },
   {
     "type": "overmap_special",
-    "id": "isolated_road",
-    "overmaps": [
-      { "point": [ 0, 0, 0 ], "overmap": "isolated_road_field_0" },
-      { "point": [ 1, 0, 0 ], "overmap": "isolated_house_farm_gunsmith" },
-      { "point": [ 0, 1, 0 ], "overmap": "isolated_house_farm_blacksmith" },
-      { "point": [ 1, 0, 1 ], "overmap": "isolated_house_farm_roof_gunsmith" },
-      { "point": [ 0, 1, 1 ], "overmap": "isolated_house_farm_roof_blacksmith" },
-      { "point": [ 1, 1, 0 ], "overmap": "isolated_road_field_1" },
-      { "point": [ 0, -1, 0 ], "locations": [ "land", "road" ] }
-    ],
-    "connections": [ { "point": [ 0, -1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 0, 0, 0 ] } ],
-    "locations": [ "field" ],
-    "city_distance": [ 3, -1 ],
-    "city_sizes": [ 1, 16 ],
-    "occurrences": [ 33, 100 ],
-    "rotate": false,
-    "flags": [ "SAFE_AT_WORLDGEN", "MAN_MADE", "GLOBALLY_UNIQUE" ]
-  },
-  {
-    "type": "overmap_special",
     "id": "gun_show",
     "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "gunshow_0_north" }, { "point": [ 1, 0, 0 ], "overmap": "gunshow_1_north" } ],
     "locations": [ "field" ],
@@ -3789,7 +3769,7 @@
     "city_distance": [ 5, -1 ],
     "connections": [ { "point": [ 2, -2, -1 ], "terrain": "sewer", "connection": "sewer_tunnel", "from": [ 2, -1, -1 ] } ],
     "occurrences": [ 20, 100 ],
-    "flags": [ "LAB", "UNIQUE", "MAN_MADE" ]
+    "flags": [ "LAB", "GLOBALLY_UNIQUE", "MAN_MADE" ]
   },
   {
     "type": "overmap_special",

@@ -18,6 +18,7 @@
     "damage": { "damage_type": "bullet", "amount": 26, "armor_penetration": 14 },
     "dispersion": 10,
     "recoil": 80,
+    "loudness": 80,
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
     "price_postapoc": 1800,
     "effects": [ "COOKOFF", "NEVER_MISFIRES" ]
@@ -31,6 +32,7 @@
     "weight": "6 g",
     "price": 1688,
     "price_postapoc": 2400,
+    "loudness": 90,
     "relative": { "range": -10, "damage": { "damage_type": "bullet", "amount": 27, "armor_penetration": 28 }, "dispersion": 9 },
     "proportional": { "recoil": 1.1 }
   },
