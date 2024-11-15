@@ -722,7 +722,7 @@
   {
     "id": "dissect_mon_broken_cyborg",
     "type": "harvest",
-    "message": "You search for any salvageable hardware in what's left of this failed experiment.",
+    "message": "You search for any salvageable hardware in what's left of the cyborg.",
     "entries": [
       {
         "drop": "bio_power_storage",

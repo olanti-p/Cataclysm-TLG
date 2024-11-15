@@ -430,7 +430,7 @@
     "points": -8,
     "description": "The scientists stopped their experiments on you abruptly, leaving you behind while they evacuated before lockdown.  Find a way to escape or starve to death.",
     "start_name": "Locked Lab",
-    "professions": [ "unemployed", "mutant_patient", "mutant_volunteer" ],
+    "professions": [ "unemployed", "mutant_patient", "mutant_volunteer", "broken_cyborg", "bionic_patient" ],
     "allowed_locs": [ "sloc_lab_random", "sloc_lab_escape_cells", "sloc_lab_finale", "sloc_ice_lab_stairs", "sloc_ice_lab_finale" ],
     "traits": [
       "ELFAEYES",
@@ -590,7 +590,7 @@
     "flags": [ "LONE_START" ],
     "start_of_cataclysm": { "hour": 0, "day": 61, "season": "spring", "year": 1 },
     "start_of_game": { "hour": 8, "day": 1, "season": "winter", "year": 1 },
-    "professions": [ "sheltered_militia", "sheltered_survivor", "unemployed" ]
+    "professions": [ "sheltered_militia", "sheltered_survivor", "bionic_prepper", "unemployed" ]
   },
   {
     "type": "scenario",
@@ -602,7 +602,7 @@
     "start_name": "Hospital",
     "forced_traits": [ "FLIMSY2" ],
     "forbidden_traits": [ "TOUGH", "DISRESISTANT" ],
-    "professions": [ "unemployed", "patient", "veteran" ],
+    "professions": [ "unemployed", "patient", "veteran", "bionic_patient" ],
     "requirement": "achievement_reach_hospital",
     "flags": [ "CHALLENGE", "CITY_START", "LONE_START" ]
   },
@@ -673,7 +673,7 @@
     "description": "You have been heavily experimented upon for the advancement of genetic science, willingly or not.  Once the Cataclysm struck, you escaped the lab and wandered aimlessly, ending up in a forest.",
     "start_name": "Wilderness",
     "allowed_locs": [ "sloc_forest", "sloc_field" ],
-    "professions": [ "unemployed", "mutant_patient", "mutant_volunteer" ],
+    "professions": [ "unemployed", "mutant_patient", "mutant_volunteer", "cykotic", "faulty_bionic", "broken_cyborg" ],
     "traits": [
       "ELFAEYES",
       "URSINE_EYE",
@@ -791,7 +791,10 @@
       "major-general",
       "nco",
       "combat-mechanic",
-      "combat-engineer"
+      "combat-engineer",
+      "bio_soldier",
+      "bio_sniper",
+      "bionic_spy"
     ],
     "map_extra": "mx_helicopter",
     "flags": [ "HELI_CRASH", "LONE_START" ],
@@ -837,7 +840,9 @@
       "major-general",
       "nco",
       "combat-mechanic",
-      "combat-engineer"
+      "combat-engineer",
+      "bio_soldier",
+      "bio_sniper"
     ],
     "requirement": "achievement_reach_military_base",
     "flags": [ "CHALLENGE", "LONE_START" ]
@@ -1221,5 +1226,16 @@
     "requirement": "achievement_kill_10_monsters",
     "map_extra": "mx_laststand",
     "flags": [ "CITY_START", "LONE_START" ]
+  },
+  {
+    "type": "scenario",
+    "id": "cyberpunk",
+    "name": "High Tech, Low Life",
+    "description": "Before the world ended, bionics were reserved for the rich and the famous.  You might not have been either, but you wanted in.  Hidden offices sequestered away in basements, anesthetic smuggled out of hospitals, and desperate people with little to lose could get you what you wanted.  If you went too deep, however, your augmentation may have come at a price…",
+    "flags": [ "CITY_START", "LONE_START" ],
+    "points": 2,
+    "start_name": "Shady Basement",
+    "allowed_locs": [ "sloc_basement_bionic" ],
+    "professions": [ "cyberjunkie", "faulty_bionic", "cykotic", "razorgirl", "bionic_installer" ]
   }
 ]
