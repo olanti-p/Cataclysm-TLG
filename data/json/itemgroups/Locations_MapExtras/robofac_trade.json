@@ -11,7 +11,9 @@
       { "group": "robofac_id_cards", "prob": 100 },
       { "group": "robofac_basic_grenades", "prob": 100 },
       { "group": "cop_armory", "prob": 100 },
-      { "group": "ammo_any_batteries_full", "prob": 100 }
+      { "group": "ammo_any_batteries_full", "prob": 100 },
+      { "group": "bionics_common", "prob": 100 },
+      { "group": "bionics_mil", "prob": 10 }
     ]
   },
   {
