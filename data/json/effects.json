@@ -1085,21 +1085,7 @@
   },
   {
     "type": "effect_type",
-    "id": "mutagen",
-    "name": [ "Mutating", "Transforming", "Metamorphosing" ],
-    "desc": [
-      "You consumed mutagen.  It was probably a good idea.",
-      "You can feel your insides shifting.",
-      "Your innards churn in an unnatural fashion - if you survive this, you'll be a changed… something."
-    ],
-    "main_parts_only": true,
-    "max_intensity": 3,
-    "resist_traits": [ "MUT_JUNKIE", "MUTAGEN_EFFECT" ],
-    "base_mods": { "hurt_min": [ 1 ], "hurt_max": [ 2 ], "hurt_chance": [ -22 ], "hurt_tick": [ 30 ] },
-    "scaling_mods": { "hurt_chance": [ 21, 0 ] },
-    "rating": "bad",
-    "remove_message": "Your body is starting to feel normal again.",
-    "blood_analysis_description": "Mutagen Contamination"
+    "id": "mutagen"
   },
   {
     "type": "effect_type",
@@ -1133,12 +1119,7 @@
       "pain_chance": [ 90 ],
       "pain_tick": [ 50 ]
     },
-    "scaling_mods": {
-      "vomit_chance": [ -450 ],
-      "hurt_chance": [ -240, -50 ],
-      "hurt_tick": [ -25 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "vomit_chance": [ -450 ], "hurt_chance": [ -240, -50 ], "hurt_tick": [ -25 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Alpha Mutagen"
@@ -1169,12 +1150,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "vomit_chance": [ -425 ],
-      "thirst_tick": [ -400 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "vomit_chance": [ -425 ], "thirst_tick": [ -400 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Frog Mutagen"
@@ -1203,11 +1179,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "hunger_tick": [ -200 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "hunger_tick": [ -200 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Beast Mutagen"
@@ -1261,11 +1233,7 @@
       "pain_chance": [ 150 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "vomit_chance": [ -450 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -5 ]
-    },
+    "scaling_mods": { "vomit_chance": [ -450 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -5 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Bovine Mutagen"
@@ -1375,10 +1343,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Feline Mutagen"
@@ -1469,11 +1434,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "vomit_chance": [ -420 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "vomit_chance": [ -420 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Insect Mutagen"
@@ -1528,11 +1489,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "hunger_tick": [ -175 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "hunger_tick": [ -175 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Lupine Mutagen"
@@ -1631,11 +1588,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "hunger_tick": [ -200 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "hunger_tick": [ -200 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Raptor Mutagen"
@@ -1661,10 +1614,7 @@
       "pain_chance": [ 60 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -15 ]
-    },
+    "scaling_mods": { "hurt_chance": [ 21, 0 ], "pain_chance": [ -15 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Rabbit Mutagen"
@@ -1738,10 +1688,7 @@
       "pain_chance": [ 10 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Slime Mutagen"
@@ -1822,11 +1769,7 @@
       "pain_chance": [ 100 ],
       "pain_tick": [ 75 ]
     },
-    "scaling_mods": {
-      "fatigue_chance": [ -500 ],
-      "hurt_chance": [ 21, 0 ],
-      "pain_chance": [ -30 ]
-    },
+    "scaling_mods": { "fatigue_chance": [ -500 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
     "rating": "bad",
     "flags": [ "MUTAGEN_EFFECT" ],
     "blood_analysis_description": "Ursine Mutagen"

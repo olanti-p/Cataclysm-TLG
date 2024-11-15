@@ -57,8 +57,8 @@
       "activation_message": "You inject the mutagenic infusion.",
       "tools_needed": { "syringe": -1 },
       "vitamins": [ [ "mutagen", 750, 850 ] ]
-       }
-   },
+    }
+  },
   {
     "id": "iv_mutagen_alpha",
     "copy-from": "iv_mutagen_flavor",
@@ -74,7 +74,7 @@
       "activation_message": "You inject the alpha infusion.",
       "tools_needed": { "syringe": -1 },
       "vitamins": [ [ "mutagen_alpha", 450, 550 ] ]
-      }
+    }
   },
   {
     "id": "iv_mutagen_beast",
@@ -826,11 +826,7 @@
     "color": "pink",
     "healthy": -3,
     "addiction_potential": 8,
-    "use_action": {
-      "type": "consume_drug",
-      "activation_message": "You drink the purifier.",
-      "vitamins": [ [ "mutagen_human", 225 ] ]
-    }
+    "use_action": { "type": "consume_drug", "activation_message": "You drink the purifier.", "vitamins": [ [ "mutagen_human", 225 ] ] }
   },
   {
     "id": "iv_purifier",

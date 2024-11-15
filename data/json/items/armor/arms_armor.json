@@ -43,7 +43,7 @@
     "price": 20,
     "price_postapoc": 10,
     "to_hit": 1,
-    "material": [  "carpet_pilling", "plastic" ],
+    "material": [ "carpet_pilling", "plastic" ],
     "symbol": "[",
     "looks_like": "arm_warmers",
     "color": "red",
@@ -722,13 +722,16 @@
     "flags": [ "WATER_FRIENDLY", "OUTER" ],
     "armor": [
       {
-        "material": [ { "type": "plastic", "covered_by_mat": 60, "thickness": 4 }, { "type": "nylon", "covered_by_mat": 100, "thickness": 1 } ],
+        "material": [
+          { "type": "plastic", "covered_by_mat": 60, "thickness": 4 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 1 }
+        ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_elbow_l", "arm_elbow_r" ],
         "coverage": 100,
         "encumbrance": 3
       }
-  ]
+    ]
   },
   {
     "id": "bronze_vambraces",
@@ -899,9 +902,7 @@
     "flags": [ "OUTER", "STURDY", "CONDUCTIVE" ],
     "armor": [
       {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 }
-        ],
+        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
         "coverage": 100,
@@ -948,9 +949,7 @@
     "flags": [ "OUTER", "STURDY" ],
     "armor": [
       {
-        "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 4 }
-        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
         "coverage": 100,
