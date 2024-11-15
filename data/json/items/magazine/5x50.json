@@ -1,10 +1,10 @@
 [
   {
-    "id": "5x50_50_mag",
+    "id": "5x50_40_mag",
     "looks_like": "mp5mag",
     "type": "MAGAZINE",
-    "name": { "str": "5x50mm 50-round magazine" },
-    "description": "An extended 100-round box magazine for use with 5x50mm flechette firearms.  Designated as RMFB50.",
+    "name": { "str": "5x50mm 40-round magazine" },
+    "description": "An extended 40-round box magazine for use with 5x50mm flechette firearms.  Designated as RMFB40.",
     "weight": "280 g",
     "volume": "630ml",
     "price": 15000,
@@ -15,14 +15,14 @@
     "ammo_type": [ "5x50" ],
     "reload_time": 60,
     "flags": [ "MAG_COMPACT" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "5x50": 50 } } ]
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "5x50": 40 } } ]
   },
   {
-    "id": "5x50_24_mag",
+    "id": "5x50_20_mag",
     "looks_like": "mp5mag",
     "type": "MAGAZINE",
-    "name": { "str": "5x50mm 24-round magazine" },
-    "description": "A 24-round box magazine for use with 5x50mm flechette firearms.  Designated as RMFB24.",
+    "name": { "str": "5x50mm 20-round magazine" },
+    "description": "A 20-round box magazine for use with 5x50mm flechette firearms.  Designated as RMFB20.",
     "weight": "140 g",
     "volume": "315ml",
     "price": 12500,
@@ -33,6 +33,6 @@
     "ammo_type": [ "5x50" ],
     "reload_time": 50,
     "flags": [ "MAG_COMPACT" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "5x50": 24 } } ]
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "5x50": 20 } } ]
   }
 ]

@@ -582,38 +582,6 @@
     ]
   },
   {
-    "result": "boots_larmor",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_FEET",
-    "skill_used": "tailor",
-    "difficulty": 2,
-    "time": "12 h",
-    "autolearn": true,
-    "using": [ [ "fastener_small", 2 ], [ "tailoring_leather_patchwork", 4 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_cobbling" },
-      { "proficiency": "prof_leatherworking_basic" },
-      { "proficiency": "prof_leatherworking" }
-    ]
-  },
-  {
-    "result": "xs_boots_larmor",
-    "type": "recipe",
-    "copy-from": "boots_larmor",
-    "time": "12 h",
-    "using": [ [ "fastener_small", 1 ], [ "tailoring_leather_patchwork", 3 ] ]
-  },
-  {
-    "result": "xl_boots_larmor",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "copy-from": "boots_larmor",
-    "using": [ [ "fastener_small", 2 ], [ "tailoring_leather_patchwork", 5 ] ],
-    "time": "13 h 30 m"
-  },
-  {
     "result": "boots_lsurvivor",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
@@ -727,42 +695,6 @@
     "time": "9 h",
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "boots_scrap",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_FEET",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "30 m",
-    "reversible": true,
-    "autolearn": true,
-    "book_learn": [ [ "recipe_melee", 2 ] ],
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 4 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_cobbling" }, { "proficiency": "prof_metalworking" }, { "proficiency": "prof_articulation" } ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ]
-  },
-  {
-    "result": "xs_boots_scrap",
-    "type": "recipe",
-    "copy-from": "boots_scrap",
-    "time": "30 m",
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 2 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ]
-  },
-  {
-    "result": "xl_boots_scrap",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "copy-from": "boots_scrap",
-    "time": "35 m",
-    "using": [ [ "cordage", 2 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 6 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ]
   },
   {
     "result": "boots_survivor",
@@ -1048,6 +980,106 @@
     "proficiencies": [ { "proficiency": "prof_carving" } ],
     "qualities": [ { "id": "SAW_W", "level": 1 }, { "id": "CUT", "level": 2 } ],
     "components": [ [ [ "2x4", 1 ] ], [ [ "strap_small", 2, "LIST" ] ] ]
+  },
+  {
+    "result": "platemail_sollerets",
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "1 d 12 h",
+    "book_learn": [
+      [
+        "textbook_armwest",
+        7
+      ]
+    ],
+    "using": [
+      [
+        "strap_small",
+        2
+      ],
+      [
+        "blacksmithing_standard",
+        4
+      ],
+      [
+        "lc_steel_standard",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CHISEL",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_armorsmithing"
+      },
+      {
+        "proficiency": "prof_closures",
+        "time_multiplier": 1.25,
+        "skill_penalty": 0.15
+      },
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ]
+  },
+  {
+    "result": "platemail_sollerets_xs",
+    "type": "recipe",
+    "copy-from": "platemail_sollerets",
+    "time": "1 d 12 h",
+    "using": [
+      [
+        "strap_small",
+        1
+      ],
+      [
+        "blacksmithing_standard",
+        3
+      ],
+      [
+        "lc_steel_standard",
+        1
+      ]
+    ]
+  },
+  {
+    "result": "platemail_sollerets_xl",
+    "type": "recipe",
+    "copy-from": "platemail_sollerets",
+    "time": "2 d",
+    "using": [
+      [
+        "strap_small",
+        4
+      ],
+      [
+        "blacksmithing_standard",
+        6
+      ],
+      [
+        "lc_steel_standard",
+        1
+      ]
+    ]
   },
   {
     "result": "tabi_dress",
