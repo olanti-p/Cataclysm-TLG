@@ -87,7 +87,7 @@
     "time": "4 h 30 m",
     "byproducts": [ [ "leather", 21 ] ],
     "using": [ [ "sewing_standard", 30 ], [ "clasps", 4 ] ],
-    "components": [ [ [ "armor_blarmor", 3 ] ], [ [ "cotton_patchwork", 18 ] ] ],
+    "components": [ [ [ "boiled_leather_armor_suit", 3 ] ], [ [ "cotton_patchwork", 18 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_closures" },
@@ -137,7 +137,7 @@
     "difficulty": 4,
     "time": "6 h 30 m",
     "using": [ [ "sewing_standard", 75 ], [ "clasps", 4 ] ],
-    "components": [ [ [ "bone", 39 ], [ "bone_human", 39 ], [ "bone_demihuman", 39 ] ], [ [ "armor_blarmor", 3 ] ] ],
+    "components": [ [ [ "bone", 39 ], [ "bone_human", 39 ], [ "bone_demihuman", 39 ] ], [ [ "boiled_leather_armor_suit", 3 ] ] ],
     "extend": { "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_carving" } ] }
   },
   {
@@ -233,7 +233,7 @@
     "result": "iron_armor_horse",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "copy-from": "armor_plarmor",
+    "copy-from": "plated_leather_armor_suit",
     "category": "CC_ANIMALS",
     "subcategory": "CSC_ANIMALS_EQUINE ARMOR",
     "skills_required": [ "tailor", 3 ],
@@ -254,7 +254,7 @@
     "result": "bronze_armor_horse",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "copy-from": "cuirass_bronze",
+    "copy-from": "bronze_cuirass",
     "category": "CC_ANIMALS",
     "subcategory": "CSC_ANIMALS_EQUINE ARMOR",
     "skills_required": [ "tailor", 3 ],

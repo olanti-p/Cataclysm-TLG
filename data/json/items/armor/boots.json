@@ -500,44 +500,6 @@
     "melee_damage": { "bash": 1 }
   },
   {
-    "id": "boots_larmor",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "pair of leather armor boots", "str_pl": "pairs of leather armor boots" },
-    "description": "Thick leather boots made specifically to protect the feet.  Light yet tough.",
-    "weight": "902 g",
-    "volume": "2 L",
-    "price": 12500,
-    "price_postapoc": 1750,
-    "to_hit": -1,
-    "material": [ "leather" ],
-    "symbol": "[",
-    "looks_like": "boots",
-    "color": "brown",
-    "warmth": 25,
-    "material_thickness": 5,
-    "environmental_protection": 2,
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
-    "armor": [ { "encumbrance": 35, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ],
-    "melee_damage": { "bash": 4 }
-  },
-  {
-    "id": "xl_boots_larmor",
-    "type": "ARMOR",
-    "name": { "str": "pair of XL leather armor boots", "str_pl": "pairs of XL leather armor boots" },
-    "copy-from": "boots_larmor",
-    "proportional": { "weight": 1.3, "volume": 1.3 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_boots_larmor",
-    "type": "ARMOR",
-    "copy-from": "boots_larmor",
-    "name": { "str": "pair of XS leather armor boots", "str_pl": "pairs of XS leather armor boots" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
     "id": "boots_plate",
     "type": "ARMOR",
     "category": "armor",
@@ -644,71 +606,6 @@
         "coverage": 100
       }
     ]
-  },
-  {
-    "id": "boots_scrap",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "pair of scrap boots", "str_pl": "pairs of scrap boots" },
-    "description": "Boots made of random metal scraps attached to simple cloth wraps.  They're uncomfortable, but provide decent protection.",
-    "weight": "1845 g",
-    "volume": "3 L",
-    "price": 12000,
-    "price_postapoc": 500,
-    "to_hit": -1,
-    "material": [ "budget_steel", "cotton" ],
-    "symbol": "[",
-    "looks_like": "boots_steel",
-    "color": "light_gray",
-    "warmth": 10,
-    "flags": [ "VARSIZE" ],
-    "armor": [
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [
-          "foot_toes_r",
-          "foot_toes_l",
-          "foot_ankle_r",
-          "foot_ankle_l",
-          "foot_heel_r",
-          "foot_heel_l",
-          "foot_arch_r",
-          "foot_arch_l"
-        ],
-        "material": [
-          { "type": "budget_steel", "covered_by_mat": 75, "thickness": 1.5 },
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 }
-        ],
-        "encumbrance": 75,
-        "coverage": 80
-      },
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
-        "material": [
-          { "type": "budget_steel", "covered_by_mat": 75, "thickness": 1.5 },
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 }
-        ],
-        "coverage": 80
-      }
-    ],
-    "melee_damage": { "bash": 4 }
-  },
-  {
-    "id": "xl_boots_scrap",
-    "type": "ARMOR",
-    "name": { "str": "pair of XL scrap boots", "str_pl": "pairs of XL scrap boots" },
-    "copy-from": "boots_scrap",
-    "proportional": { "weight": 1.3, "volume": 1.3 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_boots_scrap",
-    "type": "ARMOR",
-    "copy-from": "boots_scrap",
-    "name": { "str": "pair of XS scrap boots", "str_pl": "pairs of XS scrap boots" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "boots_steel",
@@ -868,7 +765,7 @@
     "to_hit": -1,
     "material": [ "wool", "plastic" ],
     "symbol": "[",
-    "looks_like": "boots_larmor",
+    "looks_like": "boots",
     "color": "light_gray",
     "warmth": 80,
     "environmental_protection": 1,
@@ -1390,7 +1287,7 @@
     "to_hit": -1,
     "material": [ "leather" ],
     "symbol": "[",
-    "looks_like": "boots_larmor",
+    "looks_like": "boots_combat",
     "color": "black",
     "warmth": 20,
     "material_thickness": 2,
@@ -1978,7 +1875,7 @@
     "to_hit": -1,
     "material": [ "leather" ],
     "symbol": "[",
-    "looks_like": "boots_larmor",
+    "looks_like": "boots",
     "color": "dark_gray",
     "warmth": 20,
     "material_thickness": 2,
@@ -2134,20 +2031,20 @@
     ]
   },
   {
-    "id": "chainmail_junk_feet",
+    "id": "platemail_sollerets",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of chainmail chausses", "str_pl": "pairs of chainmail chausses" },
-    "description": "Customized chainmail chausses that cover the feet, like booties made of chainmail.  The metal shows signs of rust and corrosion.",
+    "name": { "str": "pair of plate sollerets", "str_pl": "pairs of plate sollerets" },
+    "description": "Also known as sabatons, these steel boot covers are meant to be strapped on over a pair of shoes.",
     "weight": "1801 g",
     "volume": "500 ml",
     "price": 5012,
     "price_postapoc": 2000,
-    "material": [ "budget_steel_chain", "leather" ],
     "to_hit": -1,
+    "material": [ "lc_steel" ],
     "symbol": "[",
     "color": "light_red",
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "flags": [ "STURDY", "BELTED" ],
     "armor": [
       {
         "covers": [ "foot_l", "foot_r" ],
@@ -2162,76 +2059,27 @@
           "foot_arch_l"
         ],
         "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 },
-          { "type": "budget_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
+          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 },
+          { "type": "leather", "covered_by_mat": 1, "thickness": 2.0 }
         ],
-        "encumbrance": 50,
-        "coverage": 100
-      },
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.0 } ],
-        "coverage": 100
+        "encumbrance": 10,
+        "coverage": 90
       }
     ]
   },
   {
-    "id": "chainmail_feet",
+    "id": "platemail_sollerets_xl",
     "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "pair of chainmail chausses", "str_pl": "pairs of chainmail chausses" },
-    "description": "Customized chainmail chausses that cover the feet, like booties made of chainmail.",
-    "weight": "1801 g",
-    "volume": "500 ml",
-    "price": 5012,
-    "price_postapoc": 2000,
-    "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
-    "symbol": "[",
-    "color": "light_red",
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [
-          "foot_toes_r",
-          "foot_toes_l",
-          "foot_ankle_r",
-          "foot_ankle_l",
-          "foot_heel_r",
-          "foot_heel_l",
-          "foot_arch_r",
-          "foot_arch_l"
-        ],
-        "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
-        "encumbrance": 50,
-        "coverage": 100
-      },
-      {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.0 } ],
-        "coverage": 100
-      }
-    ]
-  },
-  {
-    "id": "xl_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "chainmail_feet",
-    "name": { "str": "pair of XL chainmail chausses", "str_pl": "pairs of XL chainmail chausses" },
-    "proportional": { "weight": 2, "volume": 2 },
+    "copy-from": "platemail_sollerets",
+    "name": { "str": "pair of XL platemail_sollerets", "str_pl": "pairs of XL platemail_sollerets" },
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_chainmail_feet",
+    "id": "platemail_sollerets_xs",
     "type": "ARMOR",
-    "copy-from": "chainmail_feet",
-    "name": { "str": "pair of XS chainmail chausses", "str_pl": "pairs of XS chainmail chausses" },
+    "copy-from": "platemail_sollerets",
+    "name": { "str": "pair of XS platemail_sollerets", "str_pl": "pairs of XS platemail_sollerets" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -2250,7 +2098,7 @@
     "looks_like": "socks",
     "color": "light_gray",
     "warmth": 5,
-    "material_thickness": 1,
+    "material_thickness": 0.5,
     "environmental_protection": 2,
     "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT", "STURDY" ],
     "armor": [ { "encumbrance": 2, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]

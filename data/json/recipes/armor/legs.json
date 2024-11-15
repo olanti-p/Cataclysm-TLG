@@ -435,7 +435,7 @@
     "using": [ [ "strap_small", 2 ], [ "plastic_molding", 4 ], [ "tailoring_neoprene", 1 ] ]
   },
   {
-    "result": "legguard_lightplate",
+    "result": "platemail_leg_guards",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -444,7 +444,7 @@
     "difficulty": 7,
     "time": "190 m",
     "book_learn": [ [ "textbook_armwest", 6 ] ],
-    "using": [ [ "blacksmithing_standard", 28 ], [ "steel_standard", 7 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 28 ], [ "lc_steel_standard", 7 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
     "proficiencies": [
       { "proficiency": "prof_metalworking" },
       { "proficiency": "prof_blacksmithing" },
@@ -455,20 +455,58 @@
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
-    "result": "xs_legguard_lightplate",
+    "result": "platemail_leg_guards_xs",
     "type": "recipe",
-    "copy-from": "legguard_lightplate",
+    "copy-from": "platemail_leg_guards",
     "time": "190 m",
-    "using": [ [ "blacksmithing_standard", 20 ], [ "steel_standard", 5 ], [ "strap_small", 3 ], [ "clasps", 3 ] ],
+    "using": [ [ "blacksmithing_standard", 20 ], [ "lc_steel_standard", 5 ], [ "strap_small", 3 ], [ "clasps", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
-    "result": "xl_legguard_lightplate",
+    "result": "platemail_leg_guards_xl",
     "type": "recipe",
-    "copy-from": "legguard_lightplate",
+    "copy-from": "platemail_leg_guards",
     "time": "3 h 30 m",
-    "using": [ [ "blacksmithing_standard", 36 ], [ "steel_standard", 9 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 36 ], [ "lc_steel_standard", 9 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "swage", -1 ] ] ]
+  },
+  {
+    "result": "platemail_tasset",
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_LEGS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "160 m",
+    "book_learn": [ [ "textbook_armwest", 5 ] ],
+    "using": [ [ "blacksmithing_standard", 24 ], [ "lc_steel_standard", 4 ], [ "strap_small", 8 ], [ "clasps", 2 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" }
+    ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "swage", -1 ] ] ]
+  },
+  {
+    "result": "platemail_leg_guards_xs",
+    "type": "recipe",
+    "copy-from": "platemail_leg_guards",
+    "time": "190 m",
+    "using": [ [ "blacksmithing_standard", 20 ], [ "lc_steel_standard", 3 ], [ "strap_small", 6 ], [ "clasps", 2 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "swage", -1 ] ] ]
+  },
+  {
+    "result": "platemail_leg_guards_xl",
+    "type": "recipe",
+    "copy-from": "platemail_leg_guards",
+    "time": "3 h 30 m",
+    "using": [ [ "blacksmithing_standard", 30 ], [ "lc_steel_standard", 6 ], [ "strap_small", 12 ], [ "clasps", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
@@ -505,115 +543,7 @@
     "qualities": [ { "id": "CUT", "level": 2 } ]
   },
   {
-    "result": "legguard_metal_sheets",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_LEGS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 1 ],
-    "time": "120 m",
-    "autolearn": true,
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "cordage_6_leather", 8 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "xs_legguard_metal_sheets",
-    "type": "recipe",
-    "copy-from": "legguard_metal_sheets",
-    "time": "120 m",
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "cordage_6_leather", 8 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "xl_legguard_metal_sheets",
-    "type": "recipe",
-    "copy-from": "legguard_metal_sheets",
-    "time": "140 m",
-    "components": [ [ [ "sheet_metal", 2 ] ], [ [ "cordage_36_leather", 4 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "legguard_metal_sheets_knees",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_LEGS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 1 ],
-    "time": "60 m",
-    "autolearn": true,
-    "components": [ [ [ "sheet_metal_small", 2 ] ], [ [ "cordage_6_leather", 2 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_articulation" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "legguard_metal_sheets_hip",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_LEGS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 1 ],
-    "time": "90 m",
-    "autolearn": true,
-    "components": [ [ [ "sheet_metal", 1 ] ], [ [ "leather_belt", 1 ] ], [ [ "nuts_bolts", 8 ], [ "nails", 8, "LIST" ] ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_articulation" } ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 }, { "id": "DRILL", "level": 1 } ]
-  },
-  {
-    "result": "legguard_metal",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 4 ],
-    "time": "8 h",
-    "autolearn": true,
-    "book_learn": [ [ "textbook_armwest", 4 ], [ "recipe_melee", 4 ] ],
-    "using": [
-      [ "forging_standard", 6 ],
-      [ "bronzesmithing_tools", 1 ],
-      [ "strap_small", 4 ],
-      [ "clasps", 4 ],
-      [ "steel_tiny", 12 ]
-    ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_articulation" }
-    ]
-  },
-  {
-    "result": "xs_legguard_metal",
-    "type": "recipe",
-    "copy-from": "legguard_metal",
-    "time": "8 h",
-    "using": [ [ "forging_standard", 4 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 3 ], [ "clasps", 3 ], [ "steel_tiny", 9 ] ]
-  },
-  {
-    "result": "xl_legguard_metal",
-    "type": "recipe",
-    "copy-from": "legguard_metal",
-    "time": "9 h",
-    "using": [
-      [ "forging_standard", 8 ],
-      [ "bronzesmithing_tools", 1 ],
-      [ "strap_small", 4 ],
-      [ "clasps", 4 ],
-      [ "steel_tiny", 16 ]
-    ]
-  },
-  {
-    "result": "legguard_paper",
+    "result": "paper_greaves",
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
     "category": "CC_ARMOR",
@@ -625,7 +555,7 @@
     "flags": [ "BLIND_HARD" ]
   },
   {
-    "result": "improvised_legguard_tire",
+    "result": "tire_greaves",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -634,78 +564,56 @@
     "time": "30 m",
     "autolearn": true,
     "reversible": true,
+    "book_learn": [ [ "dieselpunk_tailor", 2 ] ],
     "using": [ [ "adhesive_cordage", 2 ] ],
     "components": [ [ [ "rubber_tire_chunk", 4 ] ] ],
     "flags": [ "BLIND_HARD" ]
   },
   {
-    "result": "legguard_scrap",
+    "result": "tire_greaves_xs",
+    "type": "recipe",
+    "copy-from": "tire_greaves",
+    "using": [ [ "adhesive_cordage", 1 ] ],
+    "components": [ [ [ "rubber_tire_chunk", 3 ] ] ]
+  },
+  {
+    "result": "tire_greaves_xl",
+    "type": "recipe",
+    "copy-from": "tire_greaves",
+    "using": [ [ "adhesive_cordage", 3 ] ],
+    "components": [ [ [ "rubber_tire_chunk", 6 ] ] ]
+  },
+  {
+    "result": "tire_tasset",
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_LEGS",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "reversible": { "time": "20 m" },
-    "time": "40 m",
-    "autolearn": true,
-    "book_learn": [ [ "recipe_melee", 2 ] ],
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 6 ] ] ],
-    "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_articulation" } ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ]
-  },
-  {
-    "result": "xs_legguard_scrap",
-    "type": "recipe",
-    "copy-from": "legguard_scrap",
-    "time": "40 m",
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 4 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ]
-  },
-  {
-    "result": "xl_legguard_scrap",
-    "type": "recipe",
-    "copy-from": "legguard_scrap",
-    "time": "45 m",
-    "using": [ [ "cordage", 1 ], [ "mixed_steel", 1 ] ],
-    "components": [ [ [ "cotton_patchwork", 8 ] ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ]
-  },
-  {
-    "result": "legguard_tire",
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_LEGS",
-    "skill_used": "fabrication",
+    "skill_used": "tailor",
     "difficulty": 3,
     "time": "50 m",
     "reversible": true,
     "autolearn": true,
     "book_learn": [ [ "dieselpunk_tailor", 2 ] ],
     "using": [ [ "strap_large", 3 ], [ "cordage", 3 ] ],
-    "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_leatherworking_basic" } ],
+    "proficiencies": [ { "proficiency": "prof_closures" } ],
     "qualities": [ { "id": "CUT", "level": 2 }, { "id": "LEATHER_AWL", "level": 1 }, { "id": "SEW_CURVED", "level": 1 } ],
     "components": [ [ [ "rubber_tire_chunk", 8 ] ] ]
   },
   {
-    "result": "xs_legguard_tire",
+    "result": "tire_tasset_xs",
     "type": "recipe",
-    "copy-from": "legguard_tire",
-    "time": "50 m",
+    "copy-from": "tire_tasset",
     "using": [ [ "strap_large", 2 ], [ "cordage", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 2 }, { "id": "LEATHER_AWL", "level": 1 }, { "id": "SEW_CURVED", "level": 1 } ],
     "components": [ [ [ "rubber_tire_chunk", 6 ] ] ]
   },
   {
-    "result": "xl_legguard_tire",
+    "result": "tire_tasset_xl",
     "type": "recipe",
-    "copy-from": "legguard_tire",
+    "copy-from": "tire_tasset",
     "time": "1 h",
-    "using": [ [ "strap_large", 3 ], [ "cordage", 3 ] ],
-    "proficiencies": [ { "proficiency": "prof_closures" }, { "proficiency": "prof_leatherworking_basic" } ],
+    "using": [ [ "strap_large", 4 ], [ "cordage", 4 ] ],
     "qualities": [ { "id": "CUT", "level": 2 }, { "id": "LEATHER_AWL", "level": 1 }, { "id": "SEW_CURVED", "level": 1 } ],
     "components": [ [ [ "rubber_tire_chunk", 10 ] ] ]
   },
@@ -1130,7 +1038,7 @@
     "using": [ [ "armor_lc_chainmail_assembling", 5 ], [ "strap_small", 4 ], [ "clasps", 2 ] ]
   },
   {
-    "result": "legguard_bronze",
+    "result": "bronze_greaves",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_*",
@@ -1150,113 +1058,23 @@
     "components": [ [ [ "scrap_bronze", 12 ] ] ]
   },
   {
-    "result": "xs_legguard_bronze",
+    "result": "bronze_greaves_xs",
     "type": "recipe",
-    "copy-from": "legguard_bronze",
+    "copy-from": "bronze_greaves",
     "time": "8 h",
     "using": [ [ "forging_standard", 4 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 3 ], [ "clasps", 3 ] ],
     "components": [ [ [ "scrap_bronze", 9 ] ] ]
   },
   {
-    "result": "xl_legguard_bronze",
+    "result": "bronze_greaves_xl",
     "type": "recipe",
-    "copy-from": "legguard_bronze",
+    "copy-from": "bronze_greaves",
     "time": "9 h",
     "using": [ [ "forging_standard", 8 ], [ "bronzesmithing_tools", 1 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
     "components": [ [ [ "scrap_bronze", 16 ] ] ]
   },
   {
-    "result": "armor_light_leg_guard",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 5,
-    "time": "6 d 12 h",
-    "book_learn": [ [ "textbook_armwest", 7 ] ],
-    "using": [ [ "fabric_leather_fur_hide", 1 ], [ "blacksmithing_standard", 8 ], [ "lc_steel_standard", 2 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_armor_light_leg_guard",
-    "type": "recipe",
-    "copy-from": "armor_light_leg_guard",
-    "time": "7 d 8 h 16 m",
-    "using": [ [ "fabric_leather_fur_hide", 2 ], [ "blacksmithing_standard", 12 ], [ "lc_steel_standard", 3 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "armor_leg_guard",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "7 d 3 h 36 m",
-    "book_learn": [ [ "textbook_armwest", 7 ] ],
-    "using": [ [ "fabric_leather_fur_hide", 1 ], [ "blacksmithing_standard", 12 ], [ "lc_steel_standard", 3 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_armor_leg_guard",
-    "type": "recipe",
-    "copy-from": "armor_leg_guard",
-    "time": "8 d 1 h 54 m",
-    "using": [ [ "fabric_leather_fur_hide", 2 ], [ "blacksmithing_standard", 16 ], [ "lc_steel_standard", 4 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "armor_heavy_leg_guard",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 7,
-    "time": "7 d 19 h 12 m",
-    "book_learn": [ [ "textbook_armwest", 7 ] ],
-    "using": [ [ "fabric_leather_fur_hide", 1 ], [ "blacksmithing_standard", 16 ], [ "lc_steel_standard", 4 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_leatherworking_basic", "skill_penalty": 0.15 }
-    ]
-  },
-  {
-    "result": "xl_armor_heavy_leg_guard",
-    "type": "recipe",
-    "copy-from": "armor_heavy_leg_guard",
-    "time": "8 d 19 h 32 m",
-    "using": [ [ "fabric_leather_fur_hide", 2 ], [ "blacksmithing_standard", 20 ], [ "lc_steel_standard", 5 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ] ]
-  },
-  {
-    "result": "legguard_larmor",
+    "result": "leather_leg_guards",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -1270,23 +1088,23 @@
     "proficiencies": [ { "proficiency": "prof_leatherworking_basic" }, { "proficiency": "prof_leatherworking" } ]
   },
   {
-    "result": "xs_legguard_larmor",
+    "result": "leather_leg_guards_xs",
     "type": "recipe",
-    "copy-from": "legguard_larmor",
+    "copy-from": "leather_leg_guards",
     "time": "8 h",
     "byproducts": [ [ "leather", 6 ], [ "scrap_leather", 1 ] ],
     "using": [ [ "tailoring_leather_patchwork", 4 ] ]
   },
   {
-    "result": "xl_legguard_larmor",
+    "result": "leather_leg_guards_xl",
     "type": "recipe",
-    "copy-from": "legguard_larmor",
+    "copy-from": "leather_leg_guards",
     "time": "10 h",
     "byproducts": [ [ "leather", 2 ], [ "scrap_leather", 1 ] ],
     "using": [ [ "tailoring_leather_patchwork", 6 ] ]
   },
   {
-    "result": "legguard_brigandine",
+    "result": "brigandine_leg_guards",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
@@ -1312,9 +1130,9 @@
     ]
   },
   {
-    "result": "xl_legguard_brigandine",
+    "result": "brigandine_leg_guards_xl",
     "type": "recipe",
-    "copy-from": "legguard_brigandine",
+    "copy-from": "brigandine_leg_guards",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "time": "14 h",
@@ -1329,9 +1147,9 @@
     "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
   },
   {
-    "result": "legguard_brigandine_xs",
+    "result": "brigandine_leg_guards_xs",
     "type": "recipe",
-    "copy-from": "legguard_brigandine",
+    "copy-from": "brigandine_leg_guards",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "time": "12 h",
@@ -1341,109 +1159,6 @@
       [ "lc_steel_standard", 2 ],
       [ "fastener_small", 2 ],
       [ "strap_small", 2 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "knee_guards",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "fabrication",
-    "difficulty": 5,
-    "time": "4 h",
-    "book_learn": [ [ "textbook_armwest", 5 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ], [ "clasps", 2 ], [ "strap_small", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_articulation" },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" }
-    ]
-  },
-  {
-    "result": "xl_knee_guards",
-    "type": "recipe",
-    "copy-from": "knee_guards",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "4 h",
-    "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ], [ "clasps", 2 ], [ "strap_small", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "knee_guards_xs",
-    "type": "recipe",
-    "copy-from": "knee_guards",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "4 h",
-    "using": [ [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ], [ "clasps", 2 ], [ "strap_small", 1 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "greaves_brigandine",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "5 h",
-    "book_learn": [ [ "textbook_armwest", 4 ], [ "textbook_weparabic", 4 ] ],
-    "using": [
-      [ "tailoring_canvas_patchwork", 2 ],
-      [ "blacksmithing_standard", 8 ],
-      [ "lc_steel_standard", 2 ],
-      [ "fastener_small", 1 ],
-      [ "strap_small", 1 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "proficiencies": [
-      { "proficiency": "prof_armorsmithing" },
-      { "proficiency": "prof_closures", "time_multiplier": 1.25, "skill_penalty": 0.15 },
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" }
-    ]
-  },
-  {
-    "result": "xl_greaves_brigandine",
-    "type": "recipe",
-    "copy-from": "greaves_brigandine",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "5 h",
-    "using": [
-      [ "tailoring_canvas_patchwork", 3 ],
-      [ "blacksmithing_standard", 12 ],
-      [ "lc_steel_standard", 3 ],
-      [ "fastener_small", 2 ],
-      [ "strap_small", 2 ]
-    ],
-    "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "xs_greaves_brigandine",
-    "type": "recipe",
-    "copy-from": "greaves_brigandine",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "time": "5 h",
-    "using": [
-      [ "tailoring_canvas_patchwork", 2 ],
-      [ "blacksmithing_standard", 4 ],
-      [ "lc_steel_standard", 1 ],
-      [ "fastener_small", 1 ],
-      [ "strap_small", 1 ]
     ],
     "qualities": [ { "id": "CHISEL", "level": 3 }, { "id": "DRILL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ], [ [ "hotcut_any", 1, "LIST" ] ] ]

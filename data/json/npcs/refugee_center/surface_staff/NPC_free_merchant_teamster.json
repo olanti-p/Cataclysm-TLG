@@ -55,7 +55,7 @@
         "topic": "TALK_FREE_MERCHANT_TEAMSTER_DIRECTIONS",
         "condition": { "math": [ "time_since(n_timer_teamster_directions_recycler)", ">=", "time('2 d')" ] },
         "effect": [
-          { "math": [ "npc_randomize_dialogue_direction", "=", "rand(4)" ] },
+          { "math": [ "npc_randomize_dialogue_direction", "=", "rand(2)" ] },
           { "math": [ "n_timer_teamster_directions_recycler", "=", "time('now')" ] }
         ],
         "switch": true
@@ -70,7 +70,7 @@
         "text": "So, have your caravans seen anything interesting out there in the wasteland?",
         "topic": "TALK_FREE_MERCHANT_TEAMSTER_DIRECTIONS",
         "effect": [
-          { "math": [ "npc_randomize_dialogue_direction", "=", "rand(4)" ] },
+          { "math": [ "npc_randomize_dialogue_direction", "=", "rand(2)" ] },
           { "math": [ "n_timer_teamster_directions_recycler", "=", "time('now')" ] }
         ],
         "switch": true,
@@ -161,11 +161,6 @@
           "yes": {
             "gendered_line": "There's been rumors.  Folks talkin' about some kind of secret lab, out in the wilds, with survivors in it.  I haven't seen it myself, mind you.",
             "relevant_genders": [ "npc" ]
-          },
-          "no": {
-            "math": [ "npc_randomize_dialogue_direction", "==", "4" ],
-            "yes": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
-            "no": "ERROR: out of bounds on randomize_directions."
           }
         }
       }
@@ -193,18 +188,6 @@
           ]
         },
         "effect": { "assign_mission": "directions_hub01" },
-        "switch": true
-      },
-      {
-        "text": "Where was that?",
-        "topic": "TALK_FREE_MERCHANT_TEAMSTER_DIRECTIONS_2",
-        "condition": {
-          "and": [
-            { "math": [ "npc_randomize_dialogue_direction", "==", "4" ] },
-            { "not": { "u_has_var": "directions", "type": "teamster", "context": "mission", "value": "artisans" } }
-          ]
-        },
-        "effect": { "assign_mission": "directions_artisans" },
         "switch": true
       },
       {
@@ -424,36 +407,6 @@
       "success": "Huh, go figure.",
       "success_lie": "Huh, go figure.",
       "failure": "It is what it is."
-    }
-  },
-  {
-    "id": "directions_artisans",
-    "type": "mission_definition",
-    "name": { "str": "Check out that bullet bank" },
-    "description": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea, but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
-    "goal": "MGOAL_GO_TO",
-    "difficulty": 2,
-    "value": 0,
-    "start": {
-      "assign_mission_target": {
-        "om_special": "isolated_road",
-        "om_terrain": "isolated_house_farm_gunsmith",
-        "reveal_radius": 2,
-        "search_range": 1000
-      },
-      "effect": { "u_add_var": "directions", "type": "teamster", "context": "mission", "value": "artisans" }
-    },
-    "origins": [ "ORIGIN_SECONDARY" ],
-    "dialogue": {
-      "describe": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea, but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
-      "offer": "A few of my people have come back now talkin' about some yuppie trying to start a bank that uses bullets for money.  Silly idea, but the lad lives on a homestead with a woman who wouldn't let my guys leave without a full belly.",
-      "accepted": "Hopefully they are still around.",
-      "rejected": "Seems reasonable.",
-      "advice": "Don't worry about the turrets they seem friendly to people.",
-      "inquire": "How is the search going?",
-      "success": "Huh, go figure.",
-      "success_lie": "Huh, go figure.",
-      "failure": "Seems reasonable."
     }
   }
 ]

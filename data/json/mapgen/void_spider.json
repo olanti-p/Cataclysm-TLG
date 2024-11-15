@@ -30,7 +30,7 @@
           {
             "collection": [
               { "item": "needlegun" },
-              { "item": "5x50_24_mag", "count": [ 1, 2 ] },
+              { "item": "5x50_20_mag", "count": [ 1, 2 ] },
               { "item": "optical_cloak" },
               { "item": "bot_grenade_hack" }
             ],
@@ -53,7 +53,7 @@
     "on_overflow": "spill",
     "entries": [
       { "item": "longrifle_flintlock", "prob": 10 },
-      { "item": "helmet_kettle", "prob": 10 },
+      { "item": "platemail_kettle_helm", "prob": 10 },
       { "item": "towel", "prob": 10 },
       { "item": "tattered_garment", "prob": 10 },
       {

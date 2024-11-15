@@ -467,28 +467,20 @@
       },
       {
         "distribution": [
-          { "item": "armor_plarmor", "prob": 25, "damage": [ 1, 4 ] },
-          { "item": "armor_blarmor", "prob": 25, "damage": [ 1, 4 ] }
+          { "item": "plated_leather_armor_suit", "prob": 25, "damage": [ 1, 4 ] },
+          { "item": "boiled_leather_armor_suit", "prob": 25, "damage": [ 1, 4 ] }
         ],
         "prob": 50
       },
       {
         "distribution": [
-          { "item": "armor_junk_plate", "prob": 50, "damage": [ 2, 4 ] },
-          { "item": "armor_lorica", "prob": 40, "damage": [ 2, 4 ] },
-          { "item": "armor_samurai", "prob": 30, "damage": [ 2, 4 ] },
-          { "item": "armor_cuirass", "prob": 30, "damage": [ 2, 4 ] },
+          { "item": "chainmail_junk_hauberk", "prob": 60, "damage": [ 2, 4 ] },
+          { "item": "armor_lorica", "prob": 20, "damage": [ 2, 4 ] },
+          { "item": "armor_samurai", "prob": 20, "damage": [ 2, 4 ] },
+          { "item": "platemail_cuirass", "prob": 20, "damage": [ 2, 4 ] },
           {
             "distribution": [
-              { "item": "armor_junk_lightplate", "prob": 40, "damage": [ 2, 4 ] },
-              {
-                "collection": [
-                  { "item": "cuirass_lightplate", "prob": 80, "damage": [ 2, 4 ] },
-                  { "item": "armguard_lightplate", "prob": 60, "damage": [ 1, 4 ] },
-                  { "item": "legguard_lightplate", "prob": 60, "damage": [ 1, 4 ] }
-                ],
-                "prob": 60
-              }
+              { "item": "junk_platemail_suit", "prob": 40, "damage": [ 2, 4 ] }
             ],
             "prob": 50
           }
@@ -497,14 +489,14 @@
       },
       {
         "distribution": [
-          { "item": "helmet_plate", "prob": 100, "damage": [ 1, 4 ] },
+          { "item": "chainmail_junk_coif", "prob": 100, "damage": [ 1, 4 ] },
+          { "item": "platemail_great_helm", "prob": 20, "damage": [ 1, 4 ] },
+          { "item": "platemail_visored_helm", "prob": 20, "damage": [ 1, 4 ] },
           { "item": "helmet_nasal", "prob": 40, "damage": [ 1, 4 ] },
           { "item": "helmet_barbute", "prob": 40, "damage": [ 1, 4 ] },
           { "item": "helmet_corinthian", "prob": 40, "damage": [ 1, 4 ] },
           { "item": "helmet_galea", "prob": 40, "damage": [ 1, 4 ] },
-          { "item": "helmet_armet", "prob": 40, "damage": [ 1, 4 ] },
-          { "item": "helmet_sallet", "prob": 40, "damage": [ 1, 4 ] },
-          { "item": "helmet_kettle", "prob": 20, "damage": [ 1, 4 ] },
+          { "item": "platemail_kettle_helm", "prob": 20, "damage": [ 1, 4 ] },
           { "item": "helmet_kabuto", "prob": 20, "damage": [ 1, 4 ] },
           { "item": "helmet_conical", "prob": 20, "damage": [ 1, 4 ] }
         ],
@@ -513,11 +505,11 @@
       {
         "distribution": [
           { "item": "boots_plate", "prob": 50, "damage": [ 1, 4 ] },
-          { "item": "boots_larmor", "prob": 20, "damage": [ 1, 4 ] }
+          { "item": "boots", "prob": 20, "damage": [ 1, 4 ] }
         ],
         "prob": 80
       },
-      { "distribution": [ { "item": "gloves_plate", "prob": 60, "damage": [ 1, 4 ] } ], "prob": 60 }
+      { "distribution": [ { "item": "platemail_gauntlets", "prob": 60, "damage": [ 1, 4 ] } ], "prob": 60 }
     ]
   },
   {
