@@ -4,7 +4,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "brigandine vest" },
-    "description": "Body armor made from tough fabric with steel plates riveted on the inside.  Can be comfortably worn over chainmail for extra protection.",
+    "description": "Body armor made from tough fabric with steel plates riveted on the inside.",
     "weight": "6873 g",
     "volume": "6137 ml",
     "price": 60000,
@@ -16,7 +16,7 @@
     "looks_like": "armor_larmor",
     "color": "light_gray",
     "longest_side": "60 cm",
-    "flags": [ "OUTER", "STURDY", "ABLATIVE_CHAINMAIL_TORSO", "VARSIZE" ],
+    "flags": [ "OUTER", "STURDY", "VARSIZE" ],
     "armor": [
       {
         "material": [
@@ -26,19 +26,6 @@
         "covers": [ "torso" ],
         "coverage": 95,
         "encumbrance": 12
-      }
-    ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "ablative": true,
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "3 L",
-        "max_contains_weight": "3000 g",
-        "max_item_length": "60 cm",
-        "moves": 3000,
-        "description": "Attachment for additional plating placed on top.",
-        "flag_restriction": [ "EXTRA_PLATING" ]
       }
     ]
   },
@@ -63,7 +50,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of splint arm guards", "str_pl": "pairs of splint arm guards" },
-    "description": "A pair of arm guards made of tough fabric sandwiched between alternating strips of steel.  Can be comfortably worn over chainmail for extra protection.",
+    "description": "A pair of arm guards made of tough fabric sandwiched between alternating strips of steel.",
     "weight": "1744 g",
     "volume": "2138 ml",
     "longest_side": "30 cm",
@@ -75,7 +62,7 @@
     "looks_like": "armguard_hard",
     "color": "light_gray",
     "environmental_protection": 1,
-    "flags": [ "OUTER", "BLOCK_WHILE_WORN", "STURDY", "ABLATIVE_CHAINMAIL_ARMS", "VARSIZE" ],
+    "flags": [ "OUTER", "BLOCK_WHILE_WORN", "STURDY", "VARSIZE" ],
     "armor": [
       {
         "material": [
@@ -124,7 +111,7 @@
     "looks_like": "platemail_leg_guards",
     "color": "light_gray",
     "environmental_protection": 1,
-    "flags": [ "OUTER", "STURDY", "ABLATIVE_CHAINMAIL_LEGS", "VARSIZE" ],
+    "flags": [ "OUTER", "STURDY", "VARSIZE" ],
     "armor": [
       {
         "material": [

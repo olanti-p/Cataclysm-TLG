@@ -54,7 +54,7 @@
     "addiction_potential": 12,
     "use_action": {
       "type": "consume_drug",
-      "activation_message": "You inject the mutagenic catalyst.",
+      "activation_message": "You inject the mutagenic infusion.",
       "tools_needed": { "syringe": -1 },
       "vitamins": [ [ "mutagen", 750, 850 ] ]
        }
