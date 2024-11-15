@@ -1110,7 +1110,7 @@ void Character::mutate( const int &true_random_chance, bool use_vitamins )
         add_msg_debug( debugmode::DF_MUTATION, "mutate: true_random roll succeeded",
                        true_random_chance );
         cat = mutation_category_ANY;
-        allow_good = true; // because i'm WILD YEAH
+        allow_good = true;
         allow_bad = true;
         allow_neutral = true;
         try_opposite = false;
@@ -1119,9 +1119,6 @@ void Character::mutate( const int &true_random_chance, bool use_vitamins )
         cat_list.add_or_replace( cat, 0 );
         add_msg_debug( debugmode::DF_MUTATION, "Picked category %s", cat.c_str() );
     } else {
-        // This is fairly direct in explaining why it fails - hopefully it'll help folks to learn the system without needing to read docs
-        add_msg_if_player( m_bad,
-                           _( "Your body tries to mutate, but it lacks a primer to do so and only contorts for a moment." ) );
         return;
     }
     // Genetic Downwards Spiral has special logic that makes every possible mutation negative

@@ -5,82 +5,16 @@
     "info": "This is not intended to be visible during normal gameplay.  <bad>Please file a bug report</bad> unless you are seeing this in the debug menu."
   },
   {
-    "id": "ABLATIVE_CHAINMAIL_ARMS",
-    "type": "json_flag",
-    "info": "You can use this armor <info>with chainmail</info> without encumbrance penalty.",
-    "restriction": "Item must be a chainmail compatible armor piece"
-  },
-  {
-    "id": "ABLATIVE_CHAINMAIL_ELBOWS",
-    "type": "json_flag",
-    "info": "You can use this armor <info>with chainmail</info> without encumbrance penalty.",
-    "restriction": "Item must be a chainmail compatible armor piece"
-  },
-  {
-    "id": "ABLATIVE_CHAINMAIL_LEGS",
-    "type": "json_flag",
-    "info": "You can use this armor <info>with chainmail</info> without encumbrance penalty.",
-    "restriction": "Item must be a chainmail compatible armor piece"
-  },
-  {
-    "id": "ABLATIVE_CHAINMAIL_KNEES",
-    "type": "json_flag",
-    "info": "You can use this armor <info>with chainmail</info> without encumbrance penalty.",
-    "restriction": "Item must be a chainmail compatible armor piece"
-  },
-  {
-    "id": "ABLATIVE_CHAINMAIL_TORSO",
-    "type": "json_flag",
-    "info": "You can use this armor <info>with chainmail</info> without encumbrance penalty.",
-    "restriction": "Item must be a chainmail compatible armor piece"
-  },
-  {
     "id": "ABLATIVE_LARGE",
     "type": "json_flag",
     "info": "This plate will fit in <info>large</info> armor pockets.",
     "restriction": "Item must be a large ablative plate"
   },
   {
-    "id": "ABLATIVE_MANTLE",
-    "type": "json_flag",
-    "info": "This will hook to a <info>Hub 01 proprietary</info> mantle connector.",
-    "restriction": "Item must be an armored mantle"
-  },
-  {
-    "id": "STAR_PLATE",
-    "type": "json_flag",
-    "info": "This can be supported by the ryūsei battle kit.",
-    "restriction": "Item must be resonance plate"
-  },
-  {
-    "id": "STAR_SHOULDER",
-    "type": "json_flag",
-    "info": "This can be supported by the ryūsei battle kit.",
-    "restriction": "Item must be resonance shoulder"
-  },
-  {
-    "id": "STAR_SKIRT",
-    "type": "json_flag",
-    "info": "This can be supported by the ryūsei battle kit.",
-    "restriction": "Item must be resonance skirt"
-  },
-  {
     "id": "ABLATIVE_MEDIUM",
     "type": "json_flag",
     "info": "This plate will fit in <info>medium</info> armor pockets.",
     "restriction": "Item must be a medium ablative plate"
-  },
-  {
-    "id": "ABLATIVE_SKIRT",
-    "type": "json_flag",
-    "info": "This will hook to a <info>Hub 01 proprietary</info> skirt connector.",
-    "restriction": "Item must be an armored skirt"
-  },
-  {
-    "id": "ABLATIVE_HELMET",
-    "type": "json_flag",
-    "info": "This will hook to a <info>Hub 01 proprietary</info> helmet connector.",
-    "restriction": "Item must be an armored helmet"
   },
   {
     "id": "ACTIVE_CLOAKING",
@@ -1603,6 +1537,10 @@
     "id": "MUTAGEN_PRIMER",
     "type": "json_flag",
     "info": "Injecting it will <neutral>prime your body for mutation</neutral>."
+  },
+  {
+    "id": "MUTAGEN_EFFECT",
+    "type": "json_flag"
   },
   {
     "id": "MYCUS_OK",
