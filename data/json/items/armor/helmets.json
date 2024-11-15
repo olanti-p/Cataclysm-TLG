@@ -1677,7 +1677,12 @@
     "volume": "3 L",
     "price": 55000,
     "price_postapoc": 5500,
-    "use_action": { "type": "transform", "msg": "You raise the helm's visor.", "target": "platemail_visored_helm_raised", "menu_text": "Raise" },
+    "use_action": {
+      "type": "transform",
+      "msg": "You raise the helm's visor.",
+      "target": "platemail_visored_helm_raised",
+      "menu_text": "Raise"
+    },
     "material": [ "lc_steel" ],
     "symbol": "o",
     "color": "light_gray",
@@ -1756,7 +1761,12 @@
     "type": "ARMOR",
     "name": { "str": "XL visored plate helm (raised)", "str_pl": "XL visored plate helm (raised)" },
     "copy-from": "platemail_visored_helm_raised",
-    "use_action": { "type": "transform", "msg": "You lower the helm's visor.", "target": "platemail_visored_helm_xl", "menu_text": "Lower" },
+    "use_action": {
+      "type": "transform",
+      "msg": "You lower the helm's visor.",
+      "target": "platemail_visored_helm_xl",
+      "menu_text": "Lower"
+    },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },

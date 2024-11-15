@@ -478,12 +478,7 @@
           { "item": "armor_lorica", "prob": 20, "damage": [ 2, 4 ] },
           { "item": "armor_samurai", "prob": 20, "damage": [ 2, 4 ] },
           { "item": "platemail_cuirass", "prob": 20, "damage": [ 2, 4 ] },
-          {
-            "distribution": [
-              { "item": "junk_platemail_suit", "prob": 40, "damage": [ 2, 4 ] }
-            ],
-            "prob": 50
-          }
+          { "distribution": [ { "item": "junk_platemail_suit", "prob": 40, "damage": [ 2, 4 ] } ], "prob": 50 }
         ],
         "prob": 100
       },
@@ -503,10 +498,7 @@
         "prob": 50
       },
       {
-        "distribution": [
-          { "item": "boots_plate", "prob": 50, "damage": [ 1, 4 ] },
-          { "item": "boots", "prob": 20, "damage": [ 1, 4 ] }
-        ],
+        "distribution": [ { "item": "boots_plate", "prob": 50, "damage": [ 1, 4 ] }, { "item": "boots", "prob": 20, "damage": [ 1, 4 ] } ],
         "prob": 80
       },
       { "distribution": [ { "item": "platemail_gauntlets", "prob": 60, "damage": [ 1, 4 ] } ], "prob": 60 }
