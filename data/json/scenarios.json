@@ -794,7 +794,7 @@
       "combat-engineer",
       "bio_soldier",
       "bio_sniper",
-      "bio_spy"
+      "bionic_spy"
     ],
     "map_extra": "mx_helicopter",
     "flags": [ "HELI_CRASH", "LONE_START" ],
