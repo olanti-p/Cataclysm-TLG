@@ -1,6 +1,7 @@
 name: General build matrix
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 #  push:
 #    branches:
 #    - master
