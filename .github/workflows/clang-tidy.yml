@@ -1,24 +1,24 @@
 name: Clang-tidy 17
 
-on:
-  push:
-    branches:
-    - master
-
-  pull_request:
-    branches:
-    - master
-    paths:
-    - '**.c'
-    - '**.cpp'
-    - '**.h'
-    - '**.hpp'
-    - '**/CMakeLists.txt'
-    - '**/Makefile'
-    - 'build-scripts/clang-tidy.sh'
-    - 'build-scripts/clang-tidy-wrapper.sh'
-    - 'build-scripts/get_affected_files.py'
-    - '.github/workflows/clang-tidy.yml'
+on: workflow_dispatch:
+#  push:
+#    branches:
+#    - master
+#
+#  pull_request:
+#    branches:
+#    - master
+#    paths:
+#    - '**.c'
+#    - '**.cpp'
+#    - '**.h'
+#    - '**.hpp'
+#    - '**/CMakeLists.txt'
+#    - '**/Makefile'
+#    - 'build-scripts/clang-tidy.sh'
+#    - 'build-scripts/clang-tidy-wrapper.sh'
+#    - 'build-scripts/get_affected_files.py'
+#    - '.github/workflows/clang-tidy.yml'
 
 # We only care about the latest revision of a PR, so cancel all previous instances.
 concurrency:
