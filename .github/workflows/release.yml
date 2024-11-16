@@ -1,22 +1,22 @@
 name: "Experimental Release"
 concurrency: release
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - '.github/workflows/release.yml'
-      - 'android/**'
-      - 'build-data/**'
-      - 'cataclysm-launcher'
-      - 'data/**'
-      - 'doc/**'
-      - 'gfx/**'
-      - 'lang/po/*.po'
-      - 'LICENSE*'
-      - 'Makefile'
-      - 'README*'
-      - 'src/**'
+on: workflow-dispatch:
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.github/workflows/release.yml'
+#      - 'android/**'
+#      - 'build-data/**'
+#      - 'cataclysm-launcher'
+#      - 'data/**'
+#      - 'doc/**'
+#      - 'gfx/**'
+#      - 'lang/po/*.po'
+#      - 'LICENSE*'
+#      - 'Makefile'
+#      - 'README*'
+#      - 'src/**'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
