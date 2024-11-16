@@ -109,7 +109,8 @@
     "type": "overmap_terrain",
     "id": "sugar_house_roof",
     "copy-from": "sugar_house",
-    "name": "sugar house roof"
+    "name": "sugar house roof",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 8 }
   },
   {
     "type": "overmap_terrain",
@@ -333,7 +334,8 @@
     "copy-from": "generic_rural_building",
     "name": "orchard processing roof",
     "sym": "T",
-    "color": "i_light_green"
+    "color": "i_light_green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 8 }
   },
   {
     "type": "overmap_terrain",
@@ -399,7 +401,8 @@
     "copy-from": "generic_rural_building",
     "name": "outbuilding roof",
     "sym": "u",
-    "color": "brown"
+    "color": "brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -569,7 +572,8 @@
     "id": [ "moonshine_still_roof", "moonshine_still_roof_1", "moonshine_still_roof_2" ],
     "copy-from": "generic_rural_building",
     "name": "moonshine still roof",
-    "sym": "S"
+    "sym": "S",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -699,7 +703,8 @@
     "id": "house_farm_roof",
     "copy-from": "generic_rural_building",
     "name": "rural house roof",
-    "sym": "^"
+    "sym": "^",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 8 }
   },
   {
     "type": "overmap_terrain",
@@ -791,6 +796,7 @@
     "copy-from": "generic_rural_building",
     "name": "farm supply store roof",
     "sym": "s",
-    "color": "yellow"
+    "color": "yellow",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 8 }
   }
 ]
