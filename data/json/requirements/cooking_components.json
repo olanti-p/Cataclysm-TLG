@@ -98,7 +98,7 @@
         [ "egg_crow", 1 ],
         [ "egg_raven", 1 ],
         [ "egg_bluejay", 1 ],
-        [ "egg_cardinal", 1 ],
+        [ "egg_cardinal", 2 ],
         [ "egg_robin", 1 ],
         [ "egg_sparrow", 2 ],
         [ "egg_duck", 1 ],
@@ -106,9 +106,7 @@
         [ "egg_turkey", 1 ],
         [ "egg_pheasant", 1 ],
         [ "egg_goose", 1 ],
-        [ "egg_goose_golden", 1 ],
-        [ "egg_hummingbird", 5 ],
-        [ "egg_woodpecker", 5 ],
+        [ "egg_woodpecker", 2 ],
         [ "egg_coot", 1 ],
         [ "egg_cormorant", 1 ],
         [ "egg_moorhen", 1 ],
@@ -122,18 +120,8 @@
     "//": "All of the different frog eggs",
     "components": [
       [
-        [ "egg_leo_frog", 1 ],
-        [ "egg_pattern_frog", 1 ],
-        [ "egg_bullfrog_frog", 1 ],
-        [ "egg_strange_frog", 1 ],
-        [ "egg_fowler_toad", 1 ],
-        [ "egg_foul_toad", 1 ],
-        [ "egg_freedom_toad", 1 ],
-        [ "egg_odd_toad", 1 ],
-        [ "egg_peeper_frog", 1 ],
-        [ "egg_vocal_frog", 1 ],
-        [ "egg_gray_frog", 1 ],
-        [ "egg_shift_frog", 1 ]
+        [ "egg_bullfrog", 4 ],
+        [ "egg_mutant_frog", 1 ]
       ]
     ]
   },

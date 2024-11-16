@@ -737,7 +737,7 @@
         "<": "t_slope_up"
       },
       "furniture": {  },
-      "monster": { "r": { "monster": "mon_sewer_rat" } },
+      "monsters": { "r": { "monster": "GROUP_RATKIN_LAB", "chance": 100 } },
       "items": { "l": { "item": "gobag_contents", "chance": 75 } }
     }
   },

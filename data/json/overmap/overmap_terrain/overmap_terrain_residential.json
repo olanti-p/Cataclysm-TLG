@@ -29,7 +29,7 @@
     "abstract": "generic_city_house_roof",
     "copy-from": "generic_city_house_no_sidewalk",
     "name": "house roof",
-    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 2 },
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 6 },
     "delete": { "flags": [ "GENERIC_LOOT" ] }
   },
   {
@@ -610,7 +610,8 @@
     "color": "light_green",
     "see_cost": 5,
     "mondensity": 2,
-    "extras": "build"
+    "extras": "build",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",

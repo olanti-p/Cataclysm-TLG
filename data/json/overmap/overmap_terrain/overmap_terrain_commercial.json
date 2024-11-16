@@ -29,7 +29,8 @@
     "id": [ "s_gas_roof_1", "s_gas_rural_roof", "s_gas_g1_roof" ],
     "copy-from": "generic_city_building",
     "name": "gas station roof",
-    "color": "light_blue"
+    "color": "light_blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -46,7 +47,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_pharm_roof",
     "name": "pharmacy roof",
-    "color": "light_red"
+    "color": "light_red",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -63,7 +65,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "office_doctor_roof",
     "name": "doctor's office roof",
-    "color": "i_light_red"
+    "color": "i_light_red",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -79,7 +82,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "office_cubical_roof",
     "name": "office roof",
-    "color": "light_gray"
+    "color": "light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -114,7 +118,8 @@
     "copy-from": "generic_city_building_no_sidewalk",
     "name": "office building roof",
     "sym": "t",
-    "color": "i_light_gray"
+    "color": "i_light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -222,7 +227,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_grocery_roof",
     "name": "grocery store roof",
-    "color": "green"
+    "color": "green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -251,7 +257,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_grocery_roof",
     "name": "cosmetics store roof",
-    "color": "green"
+    "color": "green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -268,7 +275,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_hardware_roof",
     "name": "hardware store roof",
-    "color": "cyan"
+    "color": "cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -285,7 +293,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_electronics_roof",
     "name": "electronics store roof",
-    "color": "yellow"
+    "color": "yellow",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -307,7 +316,8 @@
     "id": "s_sports_roof",
     "name": "sporting goods store roof",
     "copy-from": "generic_city_building",
-    "color": "light_cyan"
+    "color": "light_cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -322,7 +332,8 @@
     "id": "s_liquor_roof",
     "name": "liquor store roof",
     "copy-from": "generic_city_building",
-    "color": "magenta"
+    "color": "magenta",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -350,7 +361,8 @@
     "name": "gun store roof",
     "looks_like": "s_gun_roof",
     "copy-from": "generic_city_building",
-    "color": "red"
+    "color": "red",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 1 }
   },
   {
     "type": "overmap_terrain",
@@ -383,7 +395,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_clothes_roof",
     "name": "clothing store",
-    "color": "blue"
+    "color": "blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -400,7 +413,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_clothes_roof",
     "name": "fabric store roof",
-    "color": "blue"
+    "color": "blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -417,7 +431,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_bookstore_roof",
     "name": "bookstore roof",
-    "color": "i_brown"
+    "color": "i_brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -458,7 +473,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_restaurant_roof",
     "name": "restaurant roof",
-    "color": "pink"
+    "color": "pink",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 3 }
   },
   {
     "type": "overmap_terrain",
@@ -492,7 +508,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_restaurant_coffee_roof",
     "name": "coffee shop",
-    "color": "white_magenta"
+    "color": "white_magenta",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -509,7 +526,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_teashop_roof",
     "name": "teashop roof",
-    "color": "light_cyan_magenta"
+    "color": "light_cyan_magenta",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -526,7 +544,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "bar_roof",
     "name": "bar roof",
-    "color": "i_magenta"
+    "color": "i_magenta",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -544,7 +563,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_butcher_roof",
     "name": "butcher shop roof",
-    "color": "i_red"
+    "color": "i_red",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -561,7 +581,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_bike_shop_roof",
     "name": "bike shop roof",
-    "color": "i_cyan"
+    "color": "i_cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 1 }
   },
   {
     "type": "overmap_terrain",
@@ -578,7 +599,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_pizza_parlor_roof",
     "name": "pizza parlor roof",
-    "color": "pink_magenta"
+    "color": "pink_magenta",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 3 }
   },
   {
     "type": "overmap_terrain",
@@ -616,7 +638,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "pawn_roof",
     "name": "pawn shop roof",
-    "color": "white"
+    "color": "white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -635,7 +658,8 @@
     "copy-from": "generic_city_building",
     "name": { "str": "mil. surplus roof", "//NOLINT(cata-text-style)": "not a period" },
     "sym": "M",
-    "color": "i_light_gray"
+    "color": "i_light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -650,7 +674,8 @@
     "id": [ "furniture_roof", "furniture_upper_roof" ],
     "copy-from": "generic_city_building",
     "name": "furniture store roof",
-    "color": "brown"
+    "color": "brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -667,7 +692,8 @@
     "copy-from": "generic_city_building",
     "name": "music store roof",
     "sym": "m",
-    "color": "brown"
+    "color": "brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -824,7 +850,8 @@
     "copy-from": "generic_city_building",
     "name": "hotel",
     "sym": "h",
-    "color": "light_blue"
+    "color": "light_blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -928,7 +955,8 @@
     "name": "home improvement superstore roof",
     "sym": "H",
     "color": "light_green_yellow",
-    "see_cost": 5
+    "see_cost": 5,
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 0, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -955,7 +983,8 @@
     "looks_like": "garage_gas_roof_1",
     "name": "garage roof",
     "sym": "O",
-    "color": "white"
+    "color": "white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -974,7 +1003,8 @@
     "looks_like": "dispensary_roof",
     "name": "dispensary roof",
     "sym": "D",
-    "color": "i_green"
+    "color": "i_green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -992,7 +1022,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "candy_shop_roof",
     "name": "candy shop roof",
-    "color": "red_white"
+    "color": "red_white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1008,14 +1039,16 @@
     "id": "bakery_roof",
     "name": "bakery roof",
     "copy-from": "generic_city_building",
-    "color": "yellow_white"
+    "color": "yellow_white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
     "id": "bakery_upper_roof",
     "name": "bakery roof",
     "copy-from": "generic_city_building",
-    "color": "yellow_white"
+    "color": "yellow_white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1049,7 +1082,8 @@
     "looks_like": "dollarstore_roof",
     "name": "dollar store roof",
     "sym": "$",
-    "color": "yellow"
+    "color": "yellow",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1066,7 +1100,8 @@
     "name": "LAN center roof",
     "copy-from": "generic_city_building",
     "sym": "L",
-    "color": "light_gray"
+    "color": "light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1083,7 +1118,8 @@
     "name": "LAN center roof",
     "copy-from": "generic_city_building",
     "sym": "L",
-    "color": "light_gray"
+    "color": "light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1124,7 +1160,8 @@
     "copy-from": "generic_city_building",
     "name": "veterans of foreign wars center roof",
     "sym": "w",
-    "color": "i_green"
+    "color": "i_green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1139,7 +1176,8 @@
     "id": "s_thrift_roof",
     "copy-from": "generic_city_building",
     "name": "thrift store roof",
-    "color": "light_gray"
+    "color": "light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1153,7 +1191,8 @@
     "id": "s_daycare_roof",
     "copy-from": "generic_city_building",
     "name": "daycare center roof",
-    "color": "blue"
+    "color": "blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1169,7 +1208,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_petstore_roof",
     "name": "pet supply store roof",
-    "color": "i_yellow"
+    "color": "i_yellow",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1222,7 +1262,8 @@
     "id": "veterinarian_roof",
     "name": "veterinarian clinic roof",
     "copy-from": "generic_city_building",
-    "color": "i_pink"
+    "color": "i_pink",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1239,7 +1280,8 @@
     "copy-from": "generic_city_building",
     "looks_like": "s_laundromat_roof",
     "name": "laundromat roof",
-    "color": "white_white"
+    "color": "white_white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1267,7 +1309,8 @@
     "name": "jewelry store roof",
     "copy-from": "generic_city_building",
     "sym": "J",
-    "color": "white"
+    "color": "white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1385,7 +1428,8 @@
     "name": "antique store roof",
     "copy-from": "generic_city_building",
     "sym": "A",
-    "color": "brown"
+    "color": "brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1401,7 +1445,8 @@
     "name": "dive shop roof",
     "copy-from": "generic_city_building",
     "sym": "D",
-    "color": "blue"
+    "color": "blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1418,7 +1463,8 @@
     "name": "arcade roof",
     "copy-from": "generic_city_building",
     "sym": "A",
-    "color": "cyan"
+    "color": "cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1435,7 +1481,8 @@
     "name": "gardening supply roof",
     "copy-from": "generic_city_building",
     "sym": "F",
-    "color": "green"
+    "color": "green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 3 }
   },
   {
     "type": "overmap_terrain",
@@ -1453,7 +1500,8 @@
     "name": "craft shop upper roof",
     "copy-from": "generic_city_building",
     "sym": "s",
-    "color": "cyan"
+    "color": "cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1462,7 +1510,8 @@
     "looks_like": "craft_shop_roof",
     "name": "craft shop roof",
     "sym": "s",
-    "color": "cyan"
+    "color": "cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1487,7 +1536,8 @@
     "name": "small market roof",
     "copy-from": "generic_city_building",
     "sym": "m",
-    "color": "i_light_gray"
+    "color": "i_light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1504,7 +1554,8 @@
     "copy-from": "generic_city_building",
     "name": "sex shop roof",
     "sym": "x",
-    "color": "i_pink"
+    "color": "i_pink",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1546,7 +1597,8 @@
     "copy-from": "generic_city_building",
     "name": "car showroom roof",
     "sym": "c",
-    "color": "i_cyan"
+    "color": "i_cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1565,7 +1617,8 @@
     "looks_like": "cs_car_dealership_roof",
     "name": "car dealership",
     "sym": "c",
-    "color": "i_cyan"
+    "color": "i_cyan",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1582,7 +1635,8 @@
     "copy-from": "generic_city_building",
     "name": "tire shop roof",
     "sym": "O",
-    "color": "white"
+    "color": "white",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1633,7 +1687,8 @@
     "looks_like": "station_radio_roof",
     "name": "radio station roof",
     "sym": "X",
-    "color": "i_light_gray"
+    "color": "i_light_gray",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1665,7 +1720,8 @@
     "copy-from": "generic_city_building",
     "name": "gardening allotment roof",
     "sym": "a",
-    "color": "brown_green"
+    "color": "brown_green",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 4 }
   },
   {
     "type": "overmap_terrain",
@@ -1681,7 +1737,8 @@
     "name": "animal pound roof",
     "copy-from": "generic_city_building",
     "sym": "T",
-    "color": "i_brown"
+    "color": "i_brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1737,7 +1794,8 @@
     "name": "outdoorsman's store",
     "copy-from": "generic_city_building",
     "sym": "o",
-    "color": "brown"
+    "color": "brown",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1896,7 +1954,8 @@
     "name": "strip mall roof",
     "sym": "v",
     "color": "light_red",
-    "copy-from": "generic_city_building"
+    "copy-from": "generic_city_building",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1914,7 +1973,8 @@
     "name": "open air",
     "copy-from": "generic_city_building",
     "sym": ".",
-    "color": "blue"
+    "color": "blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   },
   {
     "type": "overmap_terrain",
@@ -1986,6 +2046,7 @@
     "name": "barber shop roof",
     "looks_like": "barber_shop_roof",
     "sym": "b",
-    "color": "light_blue"
+    "color": "light_blue",
+    "spawns": { "group": "GROUP_ROOF_ANIMAL", "population": [ 1, 3 ], "chance": 2 }
   }
 ]

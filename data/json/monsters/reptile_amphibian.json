@@ -202,7 +202,6 @@
     "reproduction": { "baby_monster": "mon_rattlesnake_big_s", "baby_count": 15, "baby_timer": 120 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN" ],
     "upgrades": { "half_life": 80, "into": "mon_rattlesnake_mega" },
-    "zombify_into": "mon_meat_cocoon_small",
     "flags": [ "SEES", "HEARS", "SMELLS", "BADVENOM", "HARDTOSHOOT", "KEENNOSE", "CLIMBS", "PATH_AVOID_DANGER_1", "ANIMAL", "SWIMS" ],
     "armor": { "bash": 2, "cut": 4, "bullet": 3, "electric": 1 }
   },
@@ -254,7 +253,6 @@
     "reproduction": { "baby_monster": "mon_rattlesnake_big_s", "baby_count": 20, "baby_timer": 90 },
     "//babies": "Rattlesnake's gestation period is around 90 days, but it varies depending on the breed.  The timber rattlesnake has a gestation period of up to five months.",
     "//babies2": "Deathrattle is heavily mutated, so a short gestation period and all-year large clutch birth are plausible",
-    "zombify_into": "mon_meat_cocoon_large",
     "flags": [ "SEES", "HEARS", "SMELLS", "BADVENOM", "KEENNOSE", "CLIMBS", "PATH_AVOID_DANGER_1", "ANIMAL", "PUSH_MON", "SWIMS" ],
     "armor": { "bash": 6, "cut": 8, "bullet": 6, "electric": 3, "acid": 6 }
   },
@@ -290,7 +288,15 @@
     "flags": [ "SEES", "SMELLS", "WARM", "VENOM", "SWIMS", "SWARMS" ]
   },
   {
-    "id": "mutant_tadpole",
+    "id": "mon_tadpole",
+    "type": "MONSTER",
+    "copy-from": "mon_fry",
+    "description": "A teeny tiny baby frog, smaller than a penny.  It's basically just a head with a tail.",
+    "name": { "str": "tadpole" },
+    "upgrades": { "age_grow": 14, "into": "mon_bullfrog" }
+  },
+  {
+    "id": "mon_mutant_tadpole",
     "type": "MONSTER",
     "description": "A tadpole the size of a bass.  At this size, it's easy to spot the little growths that will eventually become its limbs.",
     "name": { "str": "giant tadpole" },
@@ -355,8 +361,8 @@
   {
     "id": "mon_big_bullfrog",
     "type": "MONSTER",
-    "name": { "str": "mutant bullfrog" },
-    "description": "A mutant bullfrog larger than most dogs.  It looks unwell, as if this growth spurt was less than comfortable.",
+    "name": { "str": "mutant frog" },
+    "description": "A hopping amphibian that has grown big enough to eat a small dog.  It looks unwell, as if this growth spurt was less than comfortable.",
     "default_faction": "frog",
     "bodytype": "frog",
     "species": [ "AMPHIBIAN" ],
@@ -395,7 +401,7 @@
     "fear_triggers": [ "FRIEND_DIED", "FIRE", "SOUND" ],
     "anger_triggers": [ "STALK", "PLAYER_WEAK", "PLAYER_CLOSE", "MATING_SEASON" ],
     "baby_flags": [ "SPRING", "SUMMER" ],
-    "upgrades": { "half_life": 30, "into": "mon_giant_bullfrog" },
+    "upgrades": { "half_life": 30, "into": "mon_giant_frog" },
     "zombify_into": "mon_zombullfrog",
     "flags": [ "FISHABLE", "SEES", "SMELLS", "HEARS", "SWIMS", "WATER_CAMOUFLAGE", "CLIMBS" ]
   },
@@ -457,7 +463,7 @@
     "baby_flags": [ "SPRING", "SUMMER" ],
     "upgrades": { "half_life": 30, "into": "mon_megafrog" },
     "zombify_into": "mon_zombullfrog",
-    "reproduction": { "baby_egg": "egg_strange_bigfrog", "baby_count": 4, "baby_timer": 20 },
+    "reproduction": { "baby_egg": "egg_mutant_frog", "baby_count": 4, "baby_timer": 20 },
     "flags": [ "FISHABLE", "SEES", "SMELLS", "HEARS", "GRABS", "SWIMS", "WATER_CAMOUFLAGE", "CLIMBS", "BASHES" ]
   },
   {
@@ -518,7 +524,7 @@
     "fear_triggers": [ "FIRE" ],
     "anger_triggers": [ "STALK", "PLAYER_WEAK", "PLAYER_CLOSE", "MATING_SEASON" ],
     "zombify_into": "mon_frog_dad",
-    "reproduction": { "baby_egg": "egg_strange_bigfrog", "baby_count": 8, "baby_timer": 20 },
+    "reproduction": { "baby_egg": "egg_mutant_frog", "baby_count": 8, "baby_timer": 20 },
     "baby_flags": [ "SPRING", "SUMMER" ],
     "flags": [ "SEES", "SMELLS", "GRABS", "HEARS", "SWIMS", "DESTROYS" ]
   }
