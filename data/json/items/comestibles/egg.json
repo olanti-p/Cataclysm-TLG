@@ -1185,23 +1185,6 @@
   },
   {
     "type": "COMESTIBLE",
-    "id": "egg_goose_golden",
-    "name": "golden goose egg",
-    "copy-from": "egg_goose_canadian",
-    "proportional": { "weight": 2, "calories": 2, "volume": 2 },
-    "rot_spawn": "GROUP_EGG_GOOSE"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_hummingbird",
-    "name": "hummingbird egg",
-    "copy-from": "egg_crow",
-    "volume": "1 ml",
-    "weight": "1 g",
-    "rot_spawn": "GROUP_EGG_HUMMINGBIRD"
-  },
-  {
-    "type": "COMESTIBLE",
     "id": "egg_woodpecker",
     "name": "woodpecker egg",
     "copy-from": "egg_crow",
@@ -1298,11 +1281,11 @@
   },
   {
     "type": "COMESTIBLE",
-    "abstract": "egg_proxy_frog",
+    "id": "egg_bullfrog",
     "copy-from": "egg_fish",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
+    "name": { "str": "cluster of frog eggs", "str_pl": "clusters of frog eggs" },
     "color": "brown",
-    "description": "A large clump of frog eggs.  They're gelatinous and transparent.",
+    "description": "A large clump of gelatinous frog eggs.",
     "price": 25,
     "price_postapoc": 50,
     "fun": -16,
@@ -1310,150 +1293,19 @@
   },
   {
     "type": "COMESTIBLE",
-    "id": "egg_leo_frog",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "description": "This is a dense cluster of dark frog's eggs, not dissimilar in appearance to caviar.",
-    "rot_spawn": "GROUP_EGG_LEO_FROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_pattern_frog",
-    "copy-from": "egg_leo_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "rot_spawn": "GROUP_EGG_PATTERN_FROG",
-    "vitamins": [ [ "iron", 4 ], [ "mutant_toxin", 8 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_bullfrog_frog",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "description": "A thin film of frog eggs floats together atop the water in a roughly circular mass.",
-    "rot_spawn": "GROUP_EGG_BULLFROG_FROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_strange_frog",
-    "copy-from": "egg_bullfrog_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "rot_spawn": "GROUP_EGG_STRANGE_FROG",
-    "vitamins": [ [ "iron", 4 ], [ "mutant_toxin", 8 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_fowler_toad",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "description": "These eggs float in long strands, drifting in the still water.",
-    "use_action": [ "POISON" ],
-    "rot_spawn": "GROUP_EGG_FOWLER_TOAD"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_foul_toad",
-    "copy-from": "egg_fowler_toad",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "rot_spawn": "GROUP_EGG_FOUL_TOAD",
-    "vitamins": [ [ "iron", 4 ], [ "mutant_toxin", 8 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_freedom_toad",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "description": "A spiral strand of frog eggs adorns a patch of underwater vegetation.",
-    "use_action": [ "POISON" ],
-    "rot_spawn": "GROUP_EGG_FREEDOM_TOAD"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_odd_toad",
-    "copy-from": "egg_freedom_toad",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "rot_spawn": "GROUP_EGG_ODD_TOAD",
-    "vitamins": [ [ "iron", 4 ], [ "mutant_toxin", 8 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_peeper_frog",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "description": "A loose grouping of surprisingly few frog's eggs, anchored to submerged vegetation.",
-    "rot_spawn": "GROUP_EGG_PEEPER_FROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_vocal_frog",
-    "copy-from": "egg_peeper_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "rot_spawn": "GROUP_EGG_VOCAL_FROG",
-    "vitamins": [ [ "iron", 4 ], [ "mutant_toxin", 8 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_gray_frog",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "description": "A small patch of frog's eggs rests on the water's surface.",
-    "rot_spawn": "GROUP_EGG_GRAY_FROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_shift_frog",
-    "copy-from": "egg_gray_frog",
-    "name": { "str": "cluster of frog's eggs", "str_pl": "clusters of frog's eggs" },
-    "rot_spawn": "GROUP_EGG_SHIFT_FROG",
-    "vitamins": [ [ "iron", 4 ], [ "mutant_toxin", 8 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_proxy_bigfrog",
-    "copy-from": "egg_proxy_frog",
-    "name": { "str": "cluster of giant frog's eggs", "str_pl": "clusters of giant frog's eggs" },
+    "id": "egg_giant_frog",
+    "copy-from": "egg_bullfrog",
+    "name": { "str": "cluster of giant frog eggs", "str_pl": "clusters of giant frog eggs" },
     "weight": "160 g",
     "volume": "1 L",
     "symbol": "O",
     "quench": 8,
     "calories": 200,
-    "description": "A large clump of very large frog eggs.  They're gelatinous, transparent and larger than even chicken's eggs.",
+    "description": "A clump of very large frog eggs, reeking of ammonia.  They look almost like peeled grapes, except that each is the size of an orange.",
     "price": 50,
     "price_postapoc": 100,
     "fun": -30,
-    "vitamins": [ [ "iron", 29 ] ]
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_pattern_bigfrog",
-    "copy-from": "egg_proxy_bigfrog",
-    "name": { "str": "cluster of giant frog's eggs", "str_pl": "clusters of giant frog's eggs" },
-    "description": "From a distance you could mistake it for a cluster of gigantic caviar.  It is only on close inspection that you can make out the faint translucence of these softball-sized frog eggs.",
-    "rot_spawn": "GROUP_EGG_PATTERN_BIGFROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_strange_bigfrog",
-    "copy-from": "egg_proxy_bigfrog",
-    "name": { "str": "cluster of giant frog's eggs", "str_pl": "clusters of giant frog's eggs" },
-    "description": "A thick flotilla of enormous frog eggs floats together atop the water in a roughly circular mass.",
-    "rot_spawn": "GROUP_EGG_STRANGE_BIGFROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_foul_bigfrog",
-    "copy-from": "egg_proxy_bigfrog",
-    "name": { "str": "cluster of giant frog's eggs", "str_pl": "clusters of giant frog's eggs" },
-    "description": "Looking like a submerged buoy-line, this long strand of softball-sized, gelatinous eggs floats gently in the still water.",
-    "use_action": [ "POISON" ],
-    "rot_spawn": "GROUP_EGG_FOUL_BIGFROG"
-  },
-  {
-    "type": "COMESTIBLE",
-    "id": "egg_odd_bigfrog",
-    "copy-from": "egg_proxy_bigfrog",
-    "name": { "str": "cluster of giant frog's eggs", "str_pl": "clusters of giant frog's eggs" },
-    "description": "This is a spiral strand of giant frog eggs.  Its increased weight and size nearly smothers the submerged vegetation it clings to.",
-    "use_action": [ "POISON" ],
-    "rot_spawn": "GROUP_EGG_ODD_BIGFROG"
+    "vitamins": [ [ "iron", 29 ], [ "toxin", 38 ] ],
+    "rot_spawn": "GROUP_EGG_BIGFROG"
   }
 ]
