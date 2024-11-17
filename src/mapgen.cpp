@@ -2176,7 +2176,7 @@ class jmapgen_corpse : public jmapgen_piece
                 MonsterGroupManager::GetMonstersFromGroup( group, true );
             const mtype_id &corpse_type = random_entry_ref( monster_group );
             item corpse = item::make_corpse( corpse_type,
-                                             std::max( calendar::turn - age, calendar::start_of_cataclysm ) );
+                                             std::max( calendar::turn - age, calendar::fall_of_civilization ) );
             dat.m.add_item_or_charges( tripoint( x.get(), y.get(), dat.m.get_abs_sub().z() ),
                                        corpse );
         }
