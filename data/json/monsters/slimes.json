@@ -26,7 +26,6 @@
     "weakpoint_sets": [ "wps_slime" ],
     "families": [ "prof_intro_biology", "prof_wp_slime_basic", "prof_wp_slime_advanced" ],
     "harvest": "exempt",
-    "special_attacks": [ [ "FORMBLOB", 30 ] ],
     "death_function": {
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
@@ -99,7 +98,6 @@
     "weakpoint_sets": [ "wps_slime" ],
     "families": [ "prof_intro_biology", "prof_wp_slime_basic", "prof_wp_slime_advanced" ],
     "harvest": "exempt",
-    "special_attacks": [ [ "FORMBLOB", 20 ] ],
     "death_function": {
       "message": "The %s splits in two!",
       "corpse_type": "NO_CORPSE",
@@ -164,7 +162,6 @@
     "families": [ "prof_intro_biology", "prof_wp_slime_basic", "prof_wp_slime_advanced" ],
     "harvest": "exempt",
     "death_drops": "slime_sample_small",
-    "special_attacks": [ [ "FORMBLOB", 4 ] ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
     "flags": [ "SMELLS", "HEARS", "PLASTIC", "NO_BREATHE", "NOHEAD", "NOGIB" ],
     "armor": { "bash": 10, "electric": 2 }

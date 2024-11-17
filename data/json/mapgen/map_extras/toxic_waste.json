@@ -106,8 +106,10 @@
     "type": "monstergroup",
     "name": "GROUP_TOXIC_WASTE",
     "monsters": [
-      { "monster": "mon_sewer_rat", "weight": 60 },
-      { "monster": "mon_blob", "weight": 30 },
+      { "monster": "mon_rat", "weight": 20 },
+      { "monster": "mon_bat", "weight": 30 },
+      { "monster": "mon_giant_cockroach", "weight": 30 },
+      { "monster": "mon_blob", "weight": 90 },
       { "monster": "mon_zombie_hazmat", "weight": 10 }
     ]
   },
@@ -159,7 +161,6 @@
       },
       "//": "Three spawning spots, 90% chance to have at least one toxic gas vent.",
       "//2": "Make radiation sort-of rare since in real life atomic compounds are strictly regulated. However, this is the Cataclysm where atomic stuff is more widely used so do not make it unobtanium.",
-      "//3": "Since there are two potential corpse spawning spots, make the overall chance to encounter at least one corpse 10%. Obtaining the lore note is thus at 4% per map extra.",
       "nested": {
         "^": { "chunks": [ [ "null", 70 ], [ "toxic_gas_vent", 30 ] ] },
         "#": { "chunks": [ [ "null", 80 ], [ "toxic_waste_fence_radioactive", 20 ] ] },

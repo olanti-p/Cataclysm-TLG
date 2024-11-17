@@ -758,7 +758,7 @@
         "<": "t_slope_up"
       },
       "furniture": {  },
-      "monster": { "r": { "monster": "mon_sewer_rat" } },
+      "monster": { "r": { "monster": "mon_rat" } },
       "item": { "l": { "item": "bone", "chance": 50, "repeat": [ 1, 3 ] } }
     }
   },

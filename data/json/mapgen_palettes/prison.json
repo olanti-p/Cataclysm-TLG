@@ -121,8 +121,8 @@
     },
     "monster": {
       "`": { "monster": "mon_zhark", "chance": 1 },
-      ":": { "monster": "mon_dog_gshepherd", "chance": 1 },
-      "U": { "monster": "mon_dog_gshepherd", "chance": 10 }
+      ":": { "monster": "mon_dog_trained", "chance": 1 },
+      "U": { "monster": "mon_dog_trained", "chance": 10 }
     }
   },
   {

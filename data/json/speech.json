@@ -2458,12 +2458,7 @@
     "type": "speech",
     "speaker": [
       "mon_dog",
-      "mon_dog_bull",
-      "mon_dog_pitbullmix",
-      "mon_dog_bcollie",
-      "mon_dog_boxer",
-      "mon_dog_auscattle",
-      "mon_dog_samoyed",
+      "mon_dog_trained",
       "mon_dog_howling",
       "mon_dog_mutant_mongrel",
       "mon_dog_mutant_loper",
@@ -2477,10 +2472,10 @@
   {
     "type": "speech",
     "speaker": [
-      "mon_dog_beagle",
-      "mon_dog_chihuahua",
-      "mon_dog_dachshund",
-      "mon_dog_gshepherd",
+      "mon_dog_baby",
+      "mon_dog_little_baby",
+      "mon_dog_big_baby",
+      "mon_dog_little",
       "mon_mi_go",
       "mon_mi_go_slaver",
       "mon_mi_go_myrmidon"
@@ -2490,7 +2485,7 @@
   },
   {
     "type": "speech",
-    "speaker": [ "mon_dog_gpyrenees", "mon_dog_rottweiler", "mon_mi_go", "mon_mi_go_slaver", "mon_mi_go_myrmidon" ],
+    "speaker": [ "mon_dog_big", "mon_dog_big_trained", "mon_mi_go", "mon_mi_go_slaver", "mon_mi_go_myrmidon" ],
     "sound": "WOOF!",
     "volume": 40
   },
