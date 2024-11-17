@@ -12983,6 +12983,7 @@ void game::autosave()
 void game::start_calendar()
 {
     calendar::start_of_cataclysm = scen->start_of_cataclysm();
+    calendar::fall_of_civilization = scen->fall_of_civilization();
     calendar::start_of_game = scen->start_of_game();
     calendar::turn = calendar::start_of_game;
     calendar::initial_season = static_cast<season_type>( ( to_days<int>( calendar::start_of_game -

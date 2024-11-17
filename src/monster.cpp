@@ -464,7 +464,7 @@ void monster::try_upgrade( bool pin_time )
         } else {
             // offset by starting season
             // TODO: revisit this and make it simpler
-            upgrade_time += to_days<int>( calendar::start_of_cataclysm - calendar::turn_zero );
+            upgrade_time += to_days<int>( calendar::fall_of_civilization - calendar::turn_zero );
         }
     }
 
@@ -3013,7 +3013,7 @@ void monster::generate_inventory( bool disableDrops )
     }
 
     std::vector<item> new_items = item_group::items_from( type->death_drops,
-                                  calendar::start_of_cataclysm,
+                                  calendar::fall_of_civilization,
                                   spawn_flags::use_spawn_rate );
 
     for( item &it : new_items ) {
@@ -3038,7 +3038,7 @@ void monster::drop_items_on_death( item *corpse )
     }
 
     std::vector<item> new_items = item_group::items_from( type->death_drops,
-                                  calendar::start_of_cataclysm,
+                                  calendar::fall_of_civilization,
                                   spawn_flags::use_spawn_rate );
 
     for( item &e : new_items ) {

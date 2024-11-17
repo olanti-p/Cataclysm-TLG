@@ -3,7 +3,7 @@
     "id": "shelter_supplies",
     "type": "item_group",
     "subtype": "collection",
-    "//": "now used for shelters that have been looted by kids, see SUS groups for general shelter supplies",
+    "//": "now used for shelters that have been looted, see SUS groups for general shelter supplies",
     "items": [
       [ "wrapper", 90 ],
       [ "evac_pamphlet", 80 ],
@@ -15,7 +15,6 @@
       [ "plastic_fork", 20 ],
       [ "bowl_plastic", 10 ],
       [ "jacket_evac", 15 ],
-      [ "folding_poncho", 10 ],
       [ "sponge", 10 ],
       [ "mask_dust", 9 ],
       [ "handflare_dead", 9 ],
@@ -28,7 +27,7 @@
       [ "wearable_light", 2 ],
       [ "calcium_tablet", 1 ],
       [ "vitamins", 1 ],
-      { "item": "protein_bar_evac", "count": [ 0, 3 ] }
+      { "item": "protein_bar", "count": [ 0, 3 ] }
     ]
   },
   {
