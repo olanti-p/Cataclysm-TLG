@@ -62,9 +62,11 @@ class scenario
         bool reveal_locale = true;
 
         time_point _default_start_of_cataclysm;
+        time_point _default_fall_of_civilization;
         time_point _default_start_of_game;
 
         time_point _start_of_cataclysm;
+        time_point _fall_of_civilization;
         time_point _start_of_game;
 
         vproto_id _starting_vehicle = vproto_id::NULL_ID();
@@ -109,8 +111,10 @@ class scenario
         void reset_calendar() const;
 
         time_point start_of_cataclysm() const;
+        time_point fall_of_civilization() const;
         time_point start_of_game() const;
         void change_start_of_cataclysm( const time_point &t ) const;
+        void change_fall_of_civilization( const time_point &t ) const;
         void change_start_of_game( const time_point &t ) const;
 
         vproto_id vehicle() const;

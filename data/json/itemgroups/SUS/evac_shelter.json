@@ -10,12 +10,13 @@
       { "item": "jacket_evac", "prob": 75 },
       { "item": "emer_blanket", "prob": 75 },
       { "item": "mask_gas", "prob": 2 },
-      { "item": "flashlight", "prob": 50 },
+      { "item": "glowstick", "prob": 10 },
+      { "item": "flashlight", "prob": 30 },
       { "item": "light_disposable_cell", "prob": 10 },
       { "item": "lighter", "prob": 20, "charges": [ 60, 100 ] },
       { "item": "whistle", "prob": 70 },
       { "item": "water_clean", "count": [ 1, 2 ], "prob": 80 },
-      { "item": "protein_bar_evac", "count": [ 2, 3 ] },
+      { "item": "protein_bar", "count": [ 1, 2 ], "prob": 40 },
       {
         "collection": [
           { "item": "plastic_spoon", "prob": 90 },
@@ -34,7 +35,7 @@
     "//2": "This locker has been picked through by an evacuee already. Not everyone wants the jacket, plenty leave the blanket or the gas mask, but the useful stuff is usually gone.  Some people left junk behind.",
     "subtype": "collection",
     "entries": [
-      { "item": "evac_pamphlet", "prob": 95 },
+      { "item": "evac_pamphlet", "prob": 75 },
       { "item": "jacket_evac", "prob": 15 },
       { "item": "emer_blanket", "prob": 45 },
       { "item": "mask_gas", "prob": 1 },
@@ -49,7 +50,7 @@
       { "item": "can_food", "prob": 5 },
       { "item": "can_opener", "prob": 3 },
       { "item": "bottle_plastic", "count": [ 1, 2 ], "prob": 50 },
-      { "item": "protein_bar_evac", "count": [ 2, 3 ], "prob": 70 },
+      { "item": "protein_bar", "count": [ 0, 2 ], "prob": 20 },
       {
         "collection": [
           { "item": "plastic_spoon", "prob": 70 },
@@ -65,7 +66,7 @@
     "id": "SUS_evac_shelter_cabinet",
     "type": "item_group",
     "//": "SUS item groups are collections that contain a reasonable realistic distribution of items that might spawn in a given storage furniture.",
-    "//2": "The cabinets contain a stock of delicious evac protein bars, and may contain clean water, cans of food, and spare blankets.",
+    "//2": "The cabinets contain a stock of protein bars, and may contain clean water, cans of food, and spare blankets.",
     "subtype": "collection",
     "entries": [
       {
@@ -77,15 +78,14 @@
             ],
             "prob": 30
           },
-          { "item": "water_clean", "count": [ 6, 12 ], "prob": 20 },
-          { "item": "protein_bar_evac", "count": [ 20, 24 ], "prob": 60 },
+          { "item": "water_clean", "count": [ 0, 2 ], "prob": 20 },
+          { "item": "protein_bar", "count": [ 0, 3 ], "prob": 60 },
           {
             "collection": [
               { "item": "extinguisher", "prob": 70, "charges": 100 },
-              { "group": "full_1st_aid", "count": [ 1, 3 ], "prob": 65 },
-              { "item": "two_way_radio", "prob": 65 },
+              { "group": "full_1st_aid", "count": [ 1, 3 ], "prob": 35 },
+              { "item": "two_way_radio", "prob": 20 },
               { "item": "light_disposable_cell", "count": [ 2, 4 ], "prob": 65 },
-              { "item": "electric_lantern", "prob": 35 },
               { "item": "barometer", "prob": 8 }
             ],
             "prob": 10
@@ -103,10 +103,10 @@
           },
           {
             "collection": [
-              { "item": "can_beans", "count": [ 8, 12 ], "prob": 50 },
-              { "item": "can_tomato", "count": [ 8, 12 ], "prob": 40 },
-              { "item": "soup_chicken", "count": [ 8, 12 ], "prob": 20 },
-              { "item": "can_opener", "prob": 90 }
+              { "item": "can_beans", "count": [ 0, 4 ], "prob": 50 },
+              { "item": "can_tomato", "count": [ 0, 4 ], "prob": 40 },
+              { "item": "soup_chicken", "count": [ 0, 4 ], "prob": 20 },
+              { "item": "can_opener", "prob": 40 }
             ],
             "prob": 5
           }
@@ -126,27 +126,23 @@
         "distribution": [
           {
             "collection": [
-              { "item": "folding_poncho", "count": [ 1, 10 ], "prob": 60 },
-              { "item": "emer_blanket", "count": [ 1, 10 ], "prob": 60 },
-              { "item": "jacket_evac", "count": [ 1, 10 ], "prob": 50 }
+              { "item": "emer_blanket", "count": [ 0, 6 ], "prob": 60 },
+              { "item": "jacket_evac", "count": [ 0, 6 ], "prob": 50 }
             ],
             "prob": 30
           },
           {
             "collection": [
-              { "item": "water_clean", "count": [ 1, 6 ], "prob": 60 },
-              { "item": "bottle_plastic", "count": [ 1, 6 ], "prob": 90 }
+              { "item": "water_clean", "count": [ 0, 4 ], "prob": 60 },
+              { "item": "bottle_plastic", "count": [ 0, 6 ], "prob": 90 }
             ],
             "prob": 50
           },
-          { "item": "protein_bar_evac", "count": [ 1, 23 ], "prob": 60 },
+          { "item": "protein_bar", "count": [ 0, 3 ], "prob": 60 },
           {
             "collection": [
               { "item": "extinguisher", "prob": 50, "charges": 100 },
-              { "group": "full_1st_aid", "prob": 5 },
-              { "item": "two_way_radio", "prob": 25 },
-              { "item": "electric_lantern", "prob": 5 },
-              { "item": "wearable_light", "prob": 5 }
+              { "item": "two_way_radio", "prob": 25 }
             ],
             "prob": 10
           },
@@ -165,14 +161,13 @@
           },
           {
             "collection": [
-              { "item": "can_beans", "count": [ 1, 2 ], "prob": 10 },
-              { "item": "can_tomato", "count": [ 1, 2 ], "prob": 5 },
-              { "item": "soup_chicken", "count": [ 1, 2 ], "prob": 2 },
+              { "item": "can_beans", "count": [ 0, 2 ], "prob": 10 },
+              { "item": "can_tomato", "count": [ 0, 2 ], "prob": 5 },
+              { "item": "soup_chicken", "count": [ 0, 2 ], "prob": 2 },
               { "item": "box_small", "prob": 5 },
               { "item": "bag_plastic", "prob": 5 },
               { "item": "bowl_plastic", "prob": 5 },
-              { "item": "vitamins", "prob": 5 },
-              { "item": "can_food", "count": [ 1, 30 ], "prob": 90 },
+              { "item": "can_food", "count": [ 1, 16 ], "prob": 90 },
               { "item": "can_opener", "prob": 90 }
             ],
             "prob": 5

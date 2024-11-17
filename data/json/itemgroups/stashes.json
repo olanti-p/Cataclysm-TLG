@@ -226,10 +226,10 @@
     "subtype": "distribution",
     "//": "food of some kind.",
     "entries": [
-      { "group": "MRE", "count": 2, "prob": 100 },
-      { "group": "bugout_cans", "prob": 100 },
-      { "item": "protein_bar_evac", "count": 1, "prob": 100 },
-      { "group": "snacks", "count": 4, "prob": 100 }
+      { "group": "MRE", "count": 2, "prob": 90 },
+      { "group": "bugout_cans", "prob": 90 },
+      { "item": "protein_bar", "count": 1, "prob": 90 },
+      { "group": "snacks", "count": 3, "prob": 100 }
     ]
   },
   {
@@ -257,7 +257,7 @@
     "id": "bugout_cans",
     "subtype": "collection",
     "//": "cans and a can opener.",
-    "entries": [ { "group": "big_canned_food", "count": 2, "prob": 100 }, { "item": "can_opener", "prob": 100 } ]
+    "entries": [ { "group": "big_canned_food", "count": 2, "prob": 100 }, { "item": "can_opener", "prob": 20 } ]
   },
   {
     "type": "item_group",

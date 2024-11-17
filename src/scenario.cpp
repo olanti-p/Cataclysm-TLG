@@ -111,7 +111,7 @@ void scenario::load( const JsonObject &jo, const std::string_view )
     if( !was_loaded ) {
 
         int _start_of_cataclysm_hour = 0;
-        int _start_of_cataclysm_day = 61;
+        int _start_of_cataclysm_day = 41;
         season_type _start_of_cataclysm_season = SPRING;
         int _start_of_cataclysm_year = 1;
         if( jo.has_member( "start_of_cataclysm" ) ) {
@@ -126,6 +126,24 @@ void scenario::load( const JsonObject &jo, const std::string_view )
                                       1_days * ( _start_of_cataclysm_day - 1 ) +
                                       1_days * get_option<int>( "SEASON_LENGTH" ) * _start_of_cataclysm_season +
                                       calendar::year_length() * ( _start_of_cataclysm_year - 1 )
+                                      ;
+
+        int _fall_of_civilization_hour = 0;
+        int _fall_of_civilization_day = 61;
+        season_type _fall_of_civilization_season = SPRING;
+        int _fall_of_civilization_year = 1;
+        if( jo.has_member( "fall_of_civilization" ) ) {
+            JsonObject jocid = jo.get_member( "fall_of_civilization" );
+            optional( jocid, was_loaded, "hour", _fall_of_civilization_hour );
+            optional( jocid, was_loaded, "day", _fall_of_civilization_day );
+            optional( jocid, was_loaded, "season", _fall_of_civilization_season );
+            optional( jocid, was_loaded, "year", _fall_of_civilization_year );
+        }
+        _default_fall_of_civilization = calendar::turn_zero +
+                                      1_hours * _fall_of_civilization_hour +
+                                      1_days * ( _fall_of_civilization_day - 1 ) +
+                                      1_days * get_option<int>( "SEASON_LENGTH" ) * _fall_of_civilization_season +
+                                      calendar::year_length() * ( _fall_of_civilization_year - 1 )
                                       ;
 
         int _start_of_game_hour = 8;
@@ -564,12 +582,19 @@ bool scenario::get_reveal_locale() const
 void scenario::normalize_calendar() const
 {
     scenario *hack = const_cast<scenario *>( this );
-    // We don't currently allow to start game before cataclysm
+    // We don't currently allow to start game before cataclysm.
     if( hack->_default_start_of_game < hack->_default_start_of_cataclysm ) {
-        hack->_default_start_of_game = hack->_default_start_of_cataclysm;
+        hack->_default_start_of_game = hack->_default_fall_of_civilization;
     }
     if( hack->_start_of_game < hack->_start_of_cataclysm ) {
         hack->_start_of_game = hack->_start_of_cataclysm;
+    }
+    if( hack->_default_fall_of_civilization < hack->_default_start_of_cataclysm ) {
+        hack->_default_fall_of_civilization = hack->_default_start_of_cataclysm;
+    }
+    // TODO: Let the player start before the fall of civilization. Civilian monsters, less zombies, more NPCs?
+    if( hack->_default_start_of_game < hack->_default_fall_of_civilization ) {
+        hack->_default_start_of_game = hack->_default_fall_of_civilization;
     }
 }
 
@@ -577,6 +602,7 @@ void scenario::reset_calendar() const
 {
     scenario *hack = const_cast<scenario *>( this );
     hack->_start_of_cataclysm = _default_start_of_cataclysm;
+    hack->_fall_of_civilization = _default_fall_of_civilization;
     hack->_start_of_game = _default_start_of_game;
     hack->normalize_calendar();
 }
@@ -585,6 +611,13 @@ void scenario::change_start_of_cataclysm( const time_point &t ) const
 {
     scenario *hack = const_cast<scenario *>( this );
     hack->_start_of_cataclysm = t;
+    hack->normalize_calendar();
+}
+
+void scenario::change_fall_of_civilization( const time_point &t ) const
+{
+    scenario *hack = const_cast<scenario *>( this );
+    hack->_fall_of_civilization = t;
     hack->normalize_calendar();
 }
 
@@ -598,6 +631,11 @@ void scenario::change_start_of_game( const time_point &t ) const
 time_point scenario::start_of_cataclysm() const
 {
     return _start_of_cataclysm;
+}
+
+time_point scenario::fall_of_civilization() const
+{
+    return _fall_of_civilization;
 }
 
 time_point scenario::start_of_game() const
