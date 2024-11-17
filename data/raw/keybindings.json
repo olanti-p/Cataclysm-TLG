@@ -2324,15 +2324,14 @@
     "type": "keybinding",
     "name": "Examine nearby terrain or furniture",
     "category": "DEFAULTMODE",
-    "id": "examine",
-    "bindings": [ { "input_method": "keyboard_any", "key": "e" } ]
+    "id": "examine"
   },
   {
     "type": "keybinding",
     "name": "Examine nearby terrain, furniture, and items",
     "category": "DEFAULTMODE",
     "id": "examine_and_pickup",
-    "bindings": [ { "input_method": "gamepad", "key": "JOY_2" } ]
+    "bindings": [ { "input_method": "keyboard_any", "key": "e" }, { "input_method": "gamepad", "key": "JOY_2" } ]
   },
   {
     "type": "keybinding",

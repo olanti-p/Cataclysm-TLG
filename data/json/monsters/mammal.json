@@ -328,7 +328,19 @@
     "harvest": "cat_medium_with_skull",
     "families": [ "prof_intro_biology", "prof_physiology" ],
     "dissect": "dissect_feline_sample_single",
-    "flags": [ "SEES", "HEARS", "GOODHEARING", "SMELLS", "ANIMAL", "PATH_AVOID_DANGER_1", "WARM", "HIT_AND_RUN", "SMALL_HIDER", "CORNERED_FIGHTER", "CLIMBS" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN",
+      "SMALL_HIDER",
+      "CORNERED_FIGHTER",
+      "CLIMBS"
+    ]
   },
   {
     "id": "mon_cat",

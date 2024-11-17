@@ -2,10 +2,7 @@
   {
     "type": "monstergroup",
     "name": "GROUP_CROW_MUTANT",
-    "monsters": [
-      { "monster": "mon_crow_mutant_small", "weight": 650 },
-      { "monster": "mon_crow_mutant", "weight": 350 }
-    ]
+    "monsters": [ { "monster": "mon_crow_mutant_small", "weight": 650 }, { "monster": "mon_crow_mutant", "weight": 350 } ]
   },
   {
     "name": "GROUP_CENTIPEDE_ADULT",
@@ -49,9 +46,6 @@
     "name": "GROUP_RATKIN_EVOLVED",
     "type": "monstergroup",
     "default": "mon_big_rat",
-    "monsters": [
-      { "monster": "mon_big_rat", "weight": 320 },
-      { "monster": "mon_tunnel_rat", "weight": 180 }
-    ]
+    "monsters": [ { "monster": "mon_big_rat", "weight": 320 }, { "monster": "mon_tunnel_rat", "weight": 180 } ]
   }
 ]
