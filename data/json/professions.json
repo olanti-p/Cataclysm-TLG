@@ -2361,10 +2361,7 @@
     "points": 2,
     "skills": [ { "level": 3, "name": "tailor" }, { "level": 3, "name": "survival" }, { "level": 3, "name": "cooking" } ],
     "proficiencies": [ "prof_knitting", "prof_knitting_speed" ],
-    "pets": [
-      { "name": "mon_cat", "amount": 18 },
-      { "name": "mon_cat_kitten", "amount": 10 }
-    ],
+    "pets": [ { "name": "mon_cat", "amount": 18 }, { "name": "mon_cat_kitten", "amount": 10 } ],
     "items": {
       "both": {
         "entries": [

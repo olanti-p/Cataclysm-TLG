@@ -322,10 +322,7 @@
     "vision_night": 30,
     "fear_triggers": [ "PLAYER_CLOSE", "FIRE", "HURT", "FRIEND_ATTACKED", "SOUND" ],
     "flags": [ "FISHABLE", "SEES", "SMELLS", "HEARS", "SWIMS", "AQUATIC", "WATER_CAMOUFLAGE" ],
-  "upgrades": {
-    "age_grow": 8,
-    "into": "mon_big_bullfrog"
-  }
+    "upgrades": { "age_grow": 8, "into": "mon_big_bullfrog" }
   },
   {
     "id": "mon_bullfrog",
