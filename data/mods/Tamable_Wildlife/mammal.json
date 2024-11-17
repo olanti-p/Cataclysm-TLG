@@ -43,10 +43,10 @@
     "extend": { "flags": [ "CANPLAY" ] }
   },
   {
-    "id": "mon_black_rat",
+    "id": "mon_rat",
     "type": "MONSTER",
-    "copy-from": "mon_black_rat",
-    "name": { "str": "black rat" },
+    "copy-from": "mon_rat",
+    "name": { "str": "rat" },
     "petfood": {
       "food": [ "DOGFOOD" ],
       "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
@@ -271,18 +271,6 @@
       "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
       "pet": "The %s runs around your leg."
     }
-  },
-  {
-    "id": "mon_sewer_rat",
-    "type": "MONSTER",
-    "copy-from": "mon_sewer_rat",
-    "name": { "str": "sewer rat" },
-    "petfood": {
-      "food": [ "DOGFOOD" ],
-      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
-      "pet": "The %s lets out a happy squeak as you give its head a small scritch."
-    },
-    "extend": { "flags": [ "CANPLAY" ] }
   },
   {
     "id": "mon_sheep_lamb",

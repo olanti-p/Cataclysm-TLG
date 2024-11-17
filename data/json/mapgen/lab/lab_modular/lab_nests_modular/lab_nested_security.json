@@ -421,9 +421,9 @@
         { "chunks": [ [ "1x6_bash", 50 ], [ "null", 50 ] ], "x": [ 2, 3 ], "y": 4 }
       ],
       "place_monster": [
-        { "monster": [ "mon_dog_zombie_cop", "mon_dog_gshepherd" ], "x": 1, "y": 1, "chance": 100 },
-        { "monster": [ "mon_dog_zombie_cop", "mon_dog_gshepherd" ], "x": 5, "y": 1, "chance": 100 },
-        { "monster": [ "mon_dog_zombie_cop", "mon_dog_gshepherd" ], "x": 1, "y": 5, "chance": 100 }
+        { "monster": [ "mon_dog_zombie_cop", "mon_dog_trained" ], "x": 1, "y": 1, "chance": 100 },
+        { "monster": [ "mon_dog_zombie_cop", "mon_dog_trained" ], "x": 5, "y": 1, "chance": 100 },
+        { "monster": [ "mon_dog_zombie_cop", "mon_dog_trained" ], "x": 1, "y": 5, "chance": 100 }
       ]
     }
   },
@@ -454,9 +454,9 @@
         { "chunks": [ [ "1x6_bash", 50 ], [ "null", 50 ] ], "x": [ 2, 4 ], "y": 7 }
       ],
       "place_monster": [
-        { "monster": [ "mon_dog_zombie_cop", "mon_dog_gshepherd" ], "x": 1, "y": 8, "chance": 100 },
-        { "monster": [ "mon_dog_zombie_cop", "mon_dog_gshepherd" ], "x": 5, "y": 8, "chance": 100 },
-        { "monster": [ "mon_dog_zombie_cop", "mon_dog_gshepherd" ], "x": 1, "y": 4, "chance": 100 }
+        { "monster": [ "mon_dog_zombie_cop", "mon_dog_trained" ], "x": 1, "y": 8, "chance": 100 },
+        { "monster": [ "mon_dog_zombie_cop", "mon_dog_trained" ], "x": 5, "y": 8, "chance": 100 },
+        { "monster": [ "mon_dog_zombie_cop", "mon_dog_trained" ], "x": 1, "y": 4, "chance": 100 }
       ]
     }
   },

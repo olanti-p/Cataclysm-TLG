@@ -79,7 +79,7 @@
       ],
       "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
       "terrain": { "#": "t_dirtmound", "~": "t_water_moving_sh" },
-      "place_monster": [ { "monster": "mon_squirrel_red", "x": 2, "y": 3 } ],
+      "place_monster": [ { "monster": "mon_squirrel", "x": 2, "y": 3 } ],
       "place_loot": [ { "item": "hazelnut", "x": 1, "y": 2 } ]
     }
   },

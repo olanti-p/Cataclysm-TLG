@@ -23,7 +23,8 @@
       { "monster": "mon_zombie_brute_shocker", "weight": 10, "cost_multiplier": 5 },
       { "monster": "mon_zombie_hulk", "weight": 1, "cost_multiplier": 50 },
       { "monster": "mon_skeleton_hulk", "weight": 1, "cost_multiplier": 50 },
-      { "monster": "mon_lab_rat", "weight": 30, "cost_multiplier": 20, "pack_size": [ 4, 8 ] }
+      { "monster": "mon_lab_rat", "weight": 30, "cost_multiplier": 20, "pack_size": [ 4, 8 ] },
+      { "monster": "mon_rabbit_domestic", "weight": 30, "cost_multiplier": 20 }
     ]
   },
   {
@@ -61,7 +62,8 @@
       { "monster": "mon_zombie_necro", "weight": 15, "cost_multiplier": 15 },
       { "monster": "mon_zombie_brute_shocker", "weight": 10, "cost_multiplier": 5 },
       { "monster": "mon_mole_cricket", "weight": 20, "cost_multiplier": 3 },
-      { "monster": "mon_lab_rat", "weight": 30, "cost_multiplier": 20, "pack_size": [ 4, 8 ] }
+      { "monster": "mon_lab_rat", "weight": 30, "cost_multiplier": 20, "pack_size": [ 4, 8 ] },
+      { "monster": "mon_rabbit_domestic", "weight": 30, "cost_multiplier": 20 }
     ]
   },
   {
@@ -98,7 +100,8 @@
       { "monster": "mon_zombie_bio_op2", "weight": 25, "cost_multiplier": 5, "starts": "60 days" },
       { "monster": "mon_zombie_armored", "weight": 5, "cost_multiplier": 5 },
       { "monster": "mon_zombie_brute_shocker", "weight": 5, "cost_multiplier": 5 },
-      { "monster": "mon_lab_rat", "weight": 50, "cost_multiplier": 20, "pack_size": [ 4, 8 ] }
+      { "monster": "mon_lab_rat", "weight": 50, "cost_multiplier": 20, "pack_size": [ 4, 8 ] },
+      { "monster": "mon_rabbit_domestic", "weight": 30, "cost_multiplier": 20 }
     ]
   },
   {
@@ -199,7 +202,8 @@
       { "monster": "mon_zombie_necro", "weight": 1, "cost_multiplier": 15 },
       { "monster": "mon_zombie_brute_shocker", "weight": 1, "cost_multiplier": 5 },
       { "monster": "mon_mole_cricket", "weight": 2, "cost_multiplier": 3 },
-      { "monster": "mon_lab_rat", "weight": 20, "cost_multiplier": 20, "pack_size": [ 2, 8 ] }
+      { "monster": "mon_lab_rat", "weight": 20, "cost_multiplier": 20, "pack_size": [ 2, 8 ] },
+      { "monster": "mon_rabbit_domestic", "weight": 30, "cost_multiplier": 20 }
     ]
   },
   {
