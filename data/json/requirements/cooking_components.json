@@ -118,12 +118,7 @@
     "id": "eggs_frog",
     "type": "requirement",
     "//": "All of the different frog eggs",
-    "components": [
-      [
-        [ "egg_bullfrog", 4 ],
-        [ "egg_mutant_frog", 1 ]
-      ]
-    ]
+    "components": [ [ [ "egg_bullfrog", 4 ], [ "egg_mutant_frog", 1 ] ] ]
   },
   {
     "id": "eggs_invert",
