@@ -1850,7 +1850,7 @@ void options_manager::add_options_interface()
              false );
         add( "SHOW_GUN_VARIANTS", page_id, to_translation( "Show gun brand names" ),
              to_translation( "If true, show brand names for guns, instead of generic functional names - 'm4a1' or 'h&k416a5' instead of 'NATO assault rifle'." ),
-             false );
+             true );
         add( "AMMO_IN_NAMES", page_id, to_translation( "Add ammo to weapon/magazine names" ),
              to_translation( "If true, the default ammo is added to weapon and magazine names.  For example \"Mosin-Nagant M44 (4/5)\" becomes \"Mosin-Nagant M44 (4/5 7.62x54mm)\"." ),
              true
@@ -2386,7 +2386,7 @@ void options_manager::add_options_graphics()
 
         add( "TILES", page_id, to_translation( "Choose tileset" ),
              to_translation( "Choose the tileset you want to use." ),
-             build_tilesets_list(), "UltimateCataclysm", COPT_CURSES_HIDE
+             build_tilesets_list(), "MxShockXotto+", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         add( "USE_DISTANT_TILES", page_id, to_translation( "Use separate tileset for far" ),
@@ -2396,7 +2396,7 @@ void options_manager::add_options_graphics()
 
         add( "DISTANT_TILES", page_id, to_translation( "Choose distant tileset" ),
              to_translation( "Choose the tileset you want to use for far zoom." ),
-             build_tilesets_list(), "UltimateCataclysm", COPT_CURSES_HIDE
+             build_tilesets_list(), "MxShockXotto+", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         add( "SWAP_ZOOM", page_id, to_translation( "Zoom Threshold" ),
@@ -2427,7 +2427,7 @@ void options_manager::add_options_graphics()
 
         add( "OVERMAP_TILES", page_id, to_translation( "Choose overmap tileset" ),
              to_translation( "Choose the overmap tileset you want to use." ),
-             om_tilesets, "Larwick Overmap", COPT_CURSES_HIDE
+             om_tilesets, "ChibiUltica", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         get_option( "OVERMAP_TILES" ).setPrerequisite( "USE_OVERMAP_TILES" );
@@ -2450,7 +2450,7 @@ void options_manager::add_options_graphics()
             { "color_pixel_sepia_dark", to_translation( "Sepia Dark" ) },
             { "color_pixel_blue_dark", to_translation( "Blue Dark" ) },
             { "color_pixel_custom", to_translation( "Custom" ) },
-        }, "color_pixel_sepia_light", COPT_CURSES_HIDE
+        }, "color_pixel_darken", COPT_CURSES_HIDE
            );
 
         add( "MEMORY_RGB_DARK_RED", page_id, to_translation( "Custom dark color RGB overlay - RED" ),

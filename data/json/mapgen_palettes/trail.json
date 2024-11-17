@@ -83,7 +83,7 @@
   {
     "type": "palette",
     "id": "trail_small_den_hare_palette",
-    "monster": { "A": { "monster": "mon_hare", "chance": 100 }, "a": { "monster": "mon_hare", "chance": 25 } },
+    "monster": { "A": { "monster": "mon_rabbit", "chance": 100 }, "a": { "monster": "mon_rabbit", "chance": 25 } },
     "terrain": { "d": "t_den_small" }
   },
   {

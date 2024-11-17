@@ -2255,7 +2255,7 @@
     ],
     "traits": [ "PROF_POLICE" ],
     "proficiencies": [ "prof_spotting", "prof_gun_cleaning", "prof_batons_familiar", "prof_auto_pistols_familiar" ],
-    "pets": [ { "name": "mon_dog_gshepherd", "amount": 1 } ],
+    "pets": [ { "name": "mon_dog_trained", "amount": 1 } ],
     "items": {
       "both": {
         "entries": [
@@ -2362,20 +2362,8 @@
     "skills": [ { "level": 3, "name": "tailor" }, { "level": 3, "name": "survival" }, { "level": 3, "name": "cooking" } ],
     "proficiencies": [ "prof_knitting", "prof_knitting_speed" ],
     "pets": [
-      { "name": "mon_cat", "amount": 5 },
-      { "name": "mon_cat_tabby", "amount": 4 },
-      { "name": "mon_cat_longhair", "amount": 3 },
-      { "name": "mon_cat_persian", "amount": 3 },
-      { "name": "mon_cat_siamese", "amount": 3 },
-      { "name": "mon_cat_calico", "amount": 2 },
-      { "name": "mon_cat_maine_coon", "amount": 2 },
-      { "name": "mon_cat_devon_rex", "amount": 2 },
-      { "name": "mon_cat_bengal", "amount": 1 },
-      { "name": "mon_cat_sphynx", "amount": 1 },
-      { "name": "mon_cat_chonker_kitten", "amount": 1 },
-      { "name": "mon_cat_longhair_kitten", "amount": 1 },
-      { "name": "mon_cat_calico_kitten", "amount": 1 },
-      { "name": "mon_cat_tabby_kitten", "amount": 1 }
+      { "name": "mon_cat", "amount": 18 },
+      { "name": "mon_cat_kitten", "amount": 10 }
     ],
     "items": {
       "both": {
@@ -4155,7 +4143,7 @@
     "points": 3,
     "skills": [ { "level": 4, "name": "survival" }, { "level": 2, "name": "speech" } ],
     "traits": [ "ANIMALEMPATH" ],
-    "pets": [ { "name": "mon_black_rat", "amount": 13 } ],
+    "pets": [ { "name": "mon_rat", "amount": 13 } ],
     "items": {
       "both": [ "striped_shirt", "striped_pants", "sneakers", "socks", "fried_seeds" ],
       "male": { "entries": [ { "item": "briefs" } ] },

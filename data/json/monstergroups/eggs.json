@@ -15,8 +15,7 @@
       { "monster": "mon_cardinal_chick", "weight": 15 },
       { "monster": "mon_sparrow_chick", "weight": 15 },
       { "monster": "mon_goose_canadian_chick", "weight": 100 },
-      { "monster": "mon_goose_chick", "weight": 100, "cost_multiplier": 1 },
-      { "monster": "mon_goose_golden_chick", "weight": 100, "cost_multiplier": 1 }
+      { "monster": "mon_goose_chick", "weight": 100, "cost_multiplier": 1 }
     ]
   },
   {
@@ -225,16 +224,6 @@
     "name": "GROUP_EGG_GOOSE",
     "type": "monstergroup",
     "monsters": [ { "monster": "mon_goose_chick" } ]
-  },
-  {
-    "name": "GROUP_EGG_GOOSE_GOLD",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_goose_golden_chick" } ]
-  },
-  {
-    "name": "GROUP_EGG_HUMMINGBIRD",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_hummingbird_chick" } ]
   },
   {
     "name": "GROUP_EGG_WOODPECKER",
@@ -537,83 +526,13 @@
     "monsters": [ { "monster": "mon_fry_mutant_salmon" } ]
   },
   {
-    "name": "GROUP_EGG_LEO_FROG",
+    "name": "GROUP_EGG_FROG",
     "type": "monstergroup",
-    "monsters": [ { "monster": "mon_leo_tadpole" } ]
+    "monsters": [ { "monster": "mon_tadpole" } ]
   },
   {
-    "name": "GROUP_EGG_PATTERN_FROG",
+    "name": "GROUP_EGG_MUTANT_FROG",
     "type": "monstergroup",
-    "monsters": [ { "monster": "mon_pattern_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_BULLFROG_FROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_bullfrog_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_STRANGE_FROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_strange_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_FOWLER_TOAD",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_fowler_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_FOUL_TOAD",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_foul_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_FREEDOM_TOAD",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_freedom_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_ODD_TOAD",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_odd_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_PEEPER_FROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_peeper_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_VOCAL_FROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_vocal_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_GRAY_FROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_gray_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_SHIFT_FROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_shift_tadpole" } ]
-  },
-  {
-    "name": "GROUP_EGG_PATTERN_BIGFROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_pattern_bigtad" } ]
-  },
-  {
-    "name": "GROUP_EGG_STRANGE_BIGFROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_strange_bigtad" } ]
-  },
-  {
-    "name": "GROUP_EGG_FOUL_BIGFROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_foul_bigtad" } ]
-  },
-  {
-    "name": "GROUP_EGG_ODD_BIGFROG",
-    "type": "monstergroup",
-    "monsters": [ { "monster": "mon_odd_bigtad" } ]
+    "monsters": [ { "monster": "mon_mutant_tadpole" } ]
   }
 ]

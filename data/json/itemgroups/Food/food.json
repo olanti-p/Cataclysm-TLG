@@ -1009,7 +1009,6 @@
       { "item": "egg_goose_canadian", "prob": 1 },
       { "item": "egg_coot", "prob": 1 },
       { "item": "egg_grebe", "prob": 1 },
-      { "item": "egg_hummingbird", "prob": 1 },
       { "item": "egg_turkey", "prob": 1 },
       { "item": "egg_grouse", "prob": 1 }
     ]
