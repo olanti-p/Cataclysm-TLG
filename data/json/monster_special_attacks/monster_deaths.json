@@ -548,7 +548,7 @@
     "valid_targets": [ "ground" ],
     "shape": "blast",
     "effect": "summon",
-    "effect_str": "mon_sewer_rat",
+    "effect_str": "mon_rat",
     "flags": [ "HOSTILE_SUMMON", "PERMANENT", "SPAWN_WITH_DEATH_DROPS", "NO_EXPLOSION_SFX" ],
     "min_damage": 7,
     "max_damage": 7,

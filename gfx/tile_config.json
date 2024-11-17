@@ -375,7 +375,7 @@
     { "id": "mon_crawler", "rotates": false },
     { "id": "mon_sewer_fish", "rotates": false },
     { "id": "mon_sewer_snake", "rotates": false },
-    { "id": "mon_sewer_rat", "rotates": false },
+    { "id": "mon_rat", "rotates": false },
     { "id": "mon_rat_king", "rotates": false },
     { "id": "mon_mosquito", "rotates": false },
     { "id": "mon_dragonfly", "rotates": false },

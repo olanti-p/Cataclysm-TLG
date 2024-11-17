@@ -685,7 +685,7 @@
     "object": {
       "mapgensize": [ 1, 1 ],
       "rotation": [ 0, 3 ],
-      "place_monster": [ { "monster": "mon_black_rat", "x": 0, "y": 0, "chance": 100 } ]
+      "place_monster": [ { "monster": "mon_rat", "x": 0, "y": 0, "chance": 100 } ]
     }
   },
   {
@@ -708,7 +708,7 @@
       "mapgensize": [ 1, 1 ],
       "rotation": [ 0, 3 ],
       "place_liquids": [ { "liquid": "iv_mutagen_alpha", "x": 0, "y": 0, "chance": 50 }, { "liquid": "blood", "x": 0, "y": 0, "chance": 50 } ],
-      "place_monster": [ { "monster": "mon_zap_rat", "x": 0, "y": 0, "chance": 50 } ]
+      "place_monster": [ { "monster": "mon_pack_rat", "x": 0, "y": 0, "chance": 50 } ]
     }
   },
   {
@@ -726,23 +726,23 @@
   {
     "type": "mapgen",
     "method": "json",
-    "//": "A nested map for mutagen research areas.  Hares for cages.",
+    "//": "A nested map for mutagen research areas.  Wild rabbits for cages.",
     "nested_mapgen_id": "lab_hares_1x1",
     "object": {
       "mapgensize": [ 1, 1 ],
       "rotation": [ 0, 3 ],
-      "place_monster": [ { "monster": "mon_hare", "x": 0, "y": 0, "chance": 100 } ]
+      "place_monster": [ { "monster": "mon_rabbit", "x": 0, "y": 0, "chance": 100 } ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "//": "A nested map for mutagen research areas.  Rabbits for cages.",
+    "//": "A nested map for mutagen research areas.  Domestic rabbits for cages.",
     "nested_mapgen_id": "lab_rabbits_1x1",
     "object": {
       "mapgensize": [ 1, 1 ],
       "rotation": [ 0, 3 ],
-      "place_monster": [ { "monster": "mon_rabbit", "x": 0, "y": 0, "chance": 100 } ]
+      "place_monster": [ { "monster": "mon_rabbit_domestic", "x": 0, "y": 0, "chance": 100 } ]
     }
   },
   {

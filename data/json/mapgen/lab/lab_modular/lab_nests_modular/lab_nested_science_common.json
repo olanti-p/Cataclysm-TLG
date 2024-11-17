@@ -8,12 +8,12 @@
   {
     "type": "mapgen",
     "method": "json",
-    "//": "A nested map for lab common research areas.  Rats in cages.",
+    "//": "A nested map for lab common research areas.  Rabbits in cages.",
     "nested_mapgen_id": "lab_black_rats_1x1_caged",
     "object": {
       "mapgensize": [ 1, 1 ],
       "rotation": [ 0, 3 ],
-      "place_monster": [ { "monster": "mon_black_rat", "x": 0, "y": 0, "chance": 100 } ],
+      "place_monster": [ { "monster": "mon_rat", "x": 0, "y": 0, "chance": 100 } ],
       "place_loot": [ { "item": "pet_carrier", "x": 0, "y": 0, "chance": 100 } ]
     }
   },
