@@ -553,9 +553,7 @@
     "aggro_character": true,
     "aggression": 100,
     "morale": 100,
-    "scents_tracked": [
-      "sc_human"
-    ],
+    "scents_tracked": [ "sc_human" ],
     "melee_dice": 1,
     "melee_dice_sides": 3,
     "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
@@ -571,7 +569,19 @@
     "special_attacks": [ [ "SHRIEK", 100 ], [ "EAT_CARRION", 40 ], [ "EAT_FOOD", 120 ] ],
     "biosignature": { "biosig_item": "feces_bird", "biosig_timer": 8 },
     "upgrades": { "half_life": 21, "into_group": "GROUP_CROW_MUTANT" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_1", "WARM", "FLIES", "EATS", "SMALL_HIDER", "SWARMS", "HIT_AND_RUN", "CORNERED_FIGHTER" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FLIES",
+      "EATS",
+      "SMALL_HIDER",
+      "SWARMS",
+      "HIT_AND_RUN",
+      "CORNERED_FIGHTER"
+    ]
   },
   {
     "id": "mon_crow_mutant",
@@ -591,9 +601,7 @@
     "color": "dark_gray",
     "aggression": 100,
     "morale": 105,
-    "scents_tracked": [
-      "sc_human"
-    ],
+    "scents_tracked": [ "sc_human" ],
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 8,
