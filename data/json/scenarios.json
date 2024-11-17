@@ -11,18 +11,6 @@
   },
   {
     "type": "scenario",
-    "id": "easy_start",
-    "name": "Evacuee (easy mode)",
-    "points": 1,
-    "description": "You were one of the few to be evacuated early.  The world is falling apart out there, but you have a head start on the coming decay..",
-    "allowed_locs": [ "sloc_shelter_a", "sloc_shelter_b", "sloc_shelter_c" ],
-    "start_name": "Evac Shelter",
-    "start_of_cataclysm": { "hour": 0, "day": 61, "season": "spring", "year": 1 },
-    "fall_of_civilization": { "hour": 0, "day": 61, "season": "spring", "year": 1 },
-    "start_of_game": { "hour": 8, "day": 61, "season": "spring", "year": 1 }
-  },
-  {
-    "type": "scenario",
     "id": "squatter",
     "name": "Squatter",
     "points": -1,
