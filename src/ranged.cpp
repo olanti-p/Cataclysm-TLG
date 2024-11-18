@@ -646,7 +646,7 @@ bool Character::handle_gun_damage( item &it )
         return false;
     }
     if( it.has_fault_flag( "RUINED_GUN" ) ) {
-        add_msg_if_player( m_bad, _( "Your %s is little more than an awkward club now." ), it.tname() );
+        add_msg_if_player( m_bad, _( "Your %s is completely ruined and cannot fire." ), it.tname() );
         return false;
     }
 

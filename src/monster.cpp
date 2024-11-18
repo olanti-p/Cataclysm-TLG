@@ -3180,7 +3180,7 @@ void monster::process_one_effect( effect &it, bool is_new )
             apply_damage( it.get_source().resolve_creature(), bodypart_id( "torso" ), 1 );
         }
     } else if( id == effect_fake_common_cold ) {
-        if( calendar::once_every( time_duration::from_seconds( rng( 30, 300 ) ) ) && one_in( 2 ) ) {
+        if( calendar::once_every( time_duration::from_seconds( rng( 30, 3000 ) ) ) && one_in( 4 ) ) {
             sounds::sound( pos(), 4, sounds::sound_t::speech, _( "a hacking cough." ), false, "misc", "cough" );
         }
 
@@ -3190,7 +3190,7 @@ void monster::process_one_effect( effect &it, bool is_new )
         }
     } else if( id == effect_fake_flu ) {
         // Need to define the two separately because it's theoretically (and realistically) possible to have both flu and cold at once, both for players and monsters.
-        if( calendar::once_every( time_duration::from_seconds( rng( 30, 300 ) ) ) && one_in( 2 ) ) {
+        if( calendar::once_every( time_duration::from_seconds( rng( 30, 3000 ) ) ) && one_in( 4 ) ) {
             sounds::sound( pos(), 4, sounds::sound_t::speech, _( "a hacking cough." ), false, "misc", "cough" );
         }
 
