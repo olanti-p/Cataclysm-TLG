@@ -6,7 +6,9 @@ TLG's primary aim is to preserve Cataclysm's depth and respect for plausibility 
 
 ## Downloads
 
-**Source** - The source can be cloned from the [GitHub repo](https://github.com/fairyarmadillo/Cataclysm-TLG/).
+**Releases** - To get the game, head over to our Releases page and download the version marked for your operating system. You do not need the source code to play: https://github.com/Cataclysm-TLG/Cataclysm-TLG/releases/
+
+**Source** - The source can also be cloned from the [GitHub repo](https://github.com/Cataclysm-TLG/Cataclysm-TLG/).
 
 ## Compile
 
@@ -19,7 +21,7 @@ We also have the following build guides:
 
 ## Contributions
 
-Cataclysm: The Last Generation is currently a solo project and not accepting contributions, however it is developed under the Creative Commons Attribution ShareAlike 3.0 license. The code and content of the game are free to use, modify, and redistribute for any purpose whatsoever. See https://creativecommons.org/licenses/by-sa/3.0/ for details.
+Cataclysm: The Last Generation is developed under the Creative Commons Attribution ShareAlike 3.0 license. The code and content of the game are free to use, modify, and redistribute for any purpose whatsoever. See https://creativecommons.org/licenses/by-sa/3.0/ for details.
 Some code distributed with the project is not part of the project and is released under different software licenses; the files covered by different software licenses have their own license notices.
 
 This project would not be possible without the work of thousands of contributions from the original project, [Cataclysm: Dark Days Ahead](https://github.org/CleverRaven/Cataclysm-DDA)
