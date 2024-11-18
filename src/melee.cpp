@@ -724,7 +724,6 @@ bool Character::melee_attack_abstract( Creature &t, bool allow_special,
         float dodge_or_melee = std::max( ( t.dodge_roll() * 1.2f ), ( t.get_melee() * 5.f ) );
         const bool critical_hit = scored_crit( dodge_or_melee, cur_weap );
         if( critical_hit ) {
-            add_msg( _( "Passed crit roll!" ) );
             melee::melee_stats.actual_crit_count += 1;
         }
         // select target body part
