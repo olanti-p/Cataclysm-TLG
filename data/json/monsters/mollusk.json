@@ -71,7 +71,6 @@
     "dissect": "dissect_gastropod_sample_single",
     "stomach_size": 800,
     "proportional": { "hp": 0.4, "speed": 1.1, "morale": 0.67, "melee_dice_sides": 0.67 },
-    "zombify_into": "mon_meat_cocoon_small",
     "upgrades": { "half_life": 14, "into": "mon_snail_giant" },
     "armor": { "bash": 2, "cut": 6, "bullet": 4, "acid": 2, "electric": 3 },
     "delete": { "flags": [ "SMALLSLUDGETRAIL" ] },
@@ -201,7 +200,6 @@
         "max_mul": 4.4,
         "effects": [ { "id": "venom_dmg", "duration": 150, "affect_hit_bp": true } ]
       }, [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ] ],
-    "zombify_into": "mon_meat_cocoon_small",
     "upgrades": { "half_life": 14, "into": "mon_slug_giant" },
     "flags": [ "SEES", "SMELLS", "EATS", "SLUDGEPROOF", "SMALLSLUDGETRAIL", "CORNERED_FIGHTER", "CLIMBS" ],
     "armor": { "bash": 2, "cut": 3, "bullet": 2, "acid": 6, "electric": 3 }
@@ -297,7 +295,6 @@
     "fear_triggers": [ "FIRE" ],
     "dissect": "dissect_gastropod_sample_huge",
     "regenerates": 25,
-    "zombify_into": "mon_meat_cocoon_med",
     "flags": [ "NOHEAD", "SEES", "POISON", "HEARS", "SMELLS", "SLUDGEPROOF", "SLUDGETRAIL", "SWIMS", "FLAMMABLE", "NOGIB", "CORNERED_FIGHTER" ],
     "armor": { "bash": 35, "cut": 2, "bullet": 27, "electric": 1 }
   }
