@@ -106,5 +106,19 @@
       ]
     },
     "effect": [ { "u_add_effect": "blind", "target_part": "eyes", "duration": "3 seconds" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "acid_bile_wash",
+    "recurrence": [ "1 seconds", "1 seconds" ],
+    "condition": {
+      "and": [
+        { "or": [ { "u_has_effect": "bile" }, { "u_has_effect": "corroding" }, { "u_has_effect": "glowing" } ] },
+        {
+          "and": [ "u_is_underwater" ]
+        }
+      ]
+    },
+    "effect": [ { "u_lose_effect": "corroding" }, { "u_lose_effect": "bile" }, { "u_lose_effect": "glowing" }, { "u_message": "The harmful liquid is washed away." } ]
   }
 ]

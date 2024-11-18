@@ -57,13 +57,13 @@
     "special_attacks": [ [ "BROWSE", 130 ], [ "EAT_CROP", 130 ] ],
     "upgrades": { "half_life": 14, "into": "mon_snail_small" },
     "fear_triggers": [ "PLAYER_CLOSE" ],
-    "flags": [ "SEES", "SMELLS", "EATS" ]
+    "flags": [ "SEES", "SMELLS", "EATS", "ARTHROPOD_BLOOD" ]
   },
   {
     "id": "mon_snail_small",
     "type": "MONSTER",
     "name": { "str": "giant snail" },
-    "description": "A snail grown to human size.  Its mouth and underside dripping acid.",
+    "description": "A snail grown to human size, oozing with slime.",
     "copy-from": "mon_snail_giant",
     "volume": "62500 ml",
     "weight": "81500 g",
@@ -72,13 +72,16 @@
     "stomach_size": 800,
     "proportional": { "hp": 0.4, "speed": 1.1, "morale": 0.67, "melee_dice_sides": 0.67 },
     "zombify_into": "mon_meat_cocoon_small",
-    "upgrades": { "half_life": 14, "into": "mon_snail_giant" }
+    "upgrades": { "half_life": 14, "into": "mon_snail_giant" },
+    "armor": { "bash": 2, "cut": 6, "bullet": 4, "acid": 2, "electric": 3 },
+    "delete": { "flags": [ "SMALLSLUDGETRAIL" ] },
+    "extend": { "flags": [ "CLIMBS", "SLUDGETRAIL" ] }
   },
   {
     "id": "mon_snail_larva",
     "type": "MONSTER",
     "name": { "str": "snail larva", "str_pl": "snail larvae" },
-    "description": "A small snail larva.",
+    "description": "A tiny little snail.  Its body bulges and squirms unnaturally.",
     "copy-from": "mon_larva_abstract",
     "default_faction": "slug",
     "bodytype": "blob",
@@ -89,13 +92,13 @@
     "color": "brown",
     "harvest": "mutant_mollusk",
     "upgrades": { "age_grow": 30, "into": "mon_snail_small" },
-    "delete": { "flags": [ "HEARS", "CLIMBS" ] }
+    "delete": { "flags": [ "HEARS" ] }
   },
   {
     "id": "mon_snail_giant",
     "type": "MONSTER",
     "name": { "str": "colossal snail" },
-    "description": "An enormous gastropod with a massive shell on its back.  It slowly crawls over the ground while leaving acid in its path.",
+    "description": "An enormous gastropod with a massive shell on its back.  It slowly crawls over the ground while leaving a trail of mucus in its path.  A bladed radula hands from its mouth like a biological chainsaw, backed up by a probing tongue like a harpoon on the end of a tentacle.",
     "default_faction": "slug",
     "bodytype": "blob",
     "species": [ "MOLLUSK" ],
@@ -110,9 +113,9 @@
     "aggression": 20,
     "morale": 100,
     "melee_skill": 4,
-    "melee_dice": 1,
-    "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 1 } ],
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
     "bleed_rate": 60,
     "vision_day": 30,
     "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_basic_bug" ],
@@ -121,11 +124,25 @@
     "reproduction": { "baby_egg": "egg_snail", "baby_count": 3, "baby_timer": 15 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN" ],
     "stomach_size": 1000,
-    "special_attacks": [ [ "ACID", 10 ], [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ] ],
+    "special_attacks": [ [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ], {
+      "id": "ranged_pull",
+      "cooldown": 10,
+      "range": 4,
+      "move_cost": 115,
+      "damage_max_instance": [ { "damage_type": "stab", "amount": 3, "armor_penetration": 4 } ],
+      "min_mul": 3,
+      "max_mul": 5.4,
+      "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } } ] },
+      "hit_dmg_u": "%s launches its harpoon tongue and pulls you in!",
+      "hit_dmg_npc": "%s catches <npcname> with its harpoon tongue and pulls them in!",
+      "miss_msg_u": "%s's harpoon tongue tries to spear you, but you dodge!",
+      "miss_msg_npc": "%s's harpoon tongue tries to spear <npcname>, but they dodge!",
+      "no_dmg_msg_u": "%s catches you with its tongue and pulls you in!",
+      "no_dmg_msg_npc": "%s catches <npcname> with its tongue and pulls them in!"
+    } ],
     "anger_triggers": [ "HURT" ],
-    "zombify_into": "mon_meat_cocoon_med",
-    "flags": [ "SEES", "SMELLS", "BASHES", "ACIDPROOF", "ACIDTRAIL", "EATS" ],
-    "armor": { "bash": 2, "cut": 8, "bullet": 5, "electric": 3 }
+    "flags": [ "SEES", "SMELLS", "BASHES", "SLUDGEPROOF", "SLUDGETRAIL", "EATS", "CORNERED_FIGHTER" ],
+    "armor": { "bash": 5, "cut": 9, "bullet": 6, "acid": 4, "electric": 3 }
   },
   {
     "id": "mon_slug_forest",
@@ -156,22 +173,38 @@
     "dissect": "dissect_gastropod_sample_single",
     "upgrades": { "half_life": 14, "into": "mon_slug_small" },
     "fear_triggers": [ "PLAYER_CLOSE" ],
-    "flags": [ "SEES", "SMELLS", "EATS" ]
+    "flags": [ "SEES", "CLIMBS" ]
   },
   {
     "id": "mon_slug_small",
     "type": "MONSTER",
     "name": { "str": "giant slug" },
-    "description": "A disturbingly large mutated slug as large as a human.  Venom drips from what must be its mouth, and it is covered with sticky mucus.",
+    "description": "A disturbingly large mutated slug as large as a human.  Venom drips from its spearlike tongue, and it is covered with sticky mucus.",
     "copy-from": "mon_slug_giant",
     "volume": "62500 ml",
     "weight": "81500 g",
     "harvest": "mutant_mollusk",
     "dissect": "dissect_gastropod_sample_single",
     "stomach_size": 700,
-    "proportional": { "hp": 0.4, "speed": 1.1, "morale": 0.67, "melee_dice_sides": 0.67 },
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "stab", "amount": 3 } ],
+    "proportional": { "hp": 0.4, "speed": 1.1, "morale": 0.67 },
+    "special_attacks": [
+      {
+        "type": "bite",
+        "attack_upper": false,
+        "cooldown": 10,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 3, "armor_penetration": 2 } ],
+        "min_mul": 3,
+        "max_mul": 4.4,
+        "effects": [ { "id": "venom_dmg", "duration": 150, "affect_hit_bp": true } ]
+      }, [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ] ],
     "zombify_into": "mon_meat_cocoon_small",
-    "upgrades": { "half_life": 14, "into": "mon_slug_giant" }
+    "upgrades": { "half_life": 14, "into": "mon_slug_giant" },
+    "flags": [ "SEES", "SMELLS", "EATS", "SLUDGEPROOF", "SMALLSLUDGETRAIL", "CORNERED_FIGHTER", "CLIMBS" ],
+    "armor": { "bash": 2, "cut": 3, "bullet": 2, "acid": 6, "electric": 3 }
   },
   {
     "id": "mon_slug_larva",
@@ -188,13 +221,13 @@
     "color": "brown",
     "harvest": "mutant_mollusk",
     "upgrades": { "age_grow": 30, "into": "mon_slug_small" },
-    "delete": { "flags": [ "HEARS", "CLIMBS" ] }
+    "delete": { "flags": [ "HEARS" ] }
   },
   {
     "id": "mon_slug_giant",
     "type": "MONSTER",
     "name": { "str": "colossal slug" },
-    "description": "A mutated leopard slug, as wide as a golf cart.  Venom dripping from its fanged maw as it slithers around slowly, leaving a trail of glistening slime.",
+    "description": "A mutated slug as wide as a golf cart.  A spearlike tongue protrudes from its mouth as it oozes around slowly, leaving a trail of glistening slime.",
     "default_faction": "slug",
     "bodytype": "snake",
     "species": [ "MOLLUSK" ],
@@ -208,10 +241,10 @@
     "color": "brown",
     "aggression": 20,
     "morale": 100,
-    "melee_skill": 4,
+    "melee_skill": 5,
     "melee_dice": 1,
-    "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 1 } ],
+    "melee_dice_sides": 8,
+    "melee_damage": [ { "damage_type": "stab", "amount": 8 } ],
     "bleed_rate": 60,
     "vision_day": 30,
     "stomach_size": 1000,
@@ -220,11 +253,18 @@
     "dissect": "dissect_gastropod_sample_small",
     "reproduction": { "baby_egg": "egg_slug", "baby_count": 3, "baby_timer": 15 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN" ],
-    "special_attacks": [ [ "ACID", 10 ], [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ] ],
+     "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 3, "armor_penetration": 4 } ],
+        "min_mul": 3,
+        "max_mul": 5.4,
+        "effects": [ { "id": "venom_dmg", "duration": 250, "affect_hit_bp": true } ]
+      }, [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ] ],
     "anger_triggers": [ "PLAYER_CLOSE" ],
-    "zombify_into": "mon_meat_cocoon_med",
-    "flags": [ "SEES", "SMELLS", "BASHES", "ACIDPROOF", "ACIDTRAIL", "EATS" ],
-    "armor": { "bash": 8, "cut": 2, "bullet": 2, "electric": 3 }
+    "flags": [ "SEES", "SMELLS", "BASHES", "SLUDGEPROOF", "SLUDGETRAIL", "EATS", "CORNERED_FIGHTER" ],
+    "armor": { "bash": 8, "cut": 2, "bullet": 2, "acid": 12, "electric": 3 }
   },
   {
     "id": "mon_sludge_crawler",
@@ -256,9 +296,9 @@
     "harvest": "mutant_mollusk",
     "fear_triggers": [ "FIRE" ],
     "dissect": "dissect_gastropod_sample_huge",
-    "regenerates": 50,
+    "regenerates": 25,
     "zombify_into": "mon_meat_cocoon_med",
-    "flags": [ "NOHEAD", "SEES", "POISON", "HEARS", "SMELLS", "SLUDGEPROOF", "SLUDGETRAIL", "SWIMS", "FLAMMABLE", "NOGIB" ],
+    "flags": [ "NOHEAD", "SEES", "POISON", "HEARS", "SMELLS", "SLUDGEPROOF", "SLUDGETRAIL", "SWIMS", "FLAMMABLE", "NOGIB", "CORNERED_FIGHTER" ],
     "armor": { "bash": 35, "cut": 2, "bullet": 27, "electric": 1 }
   }
 ]

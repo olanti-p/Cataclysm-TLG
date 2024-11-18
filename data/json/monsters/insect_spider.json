@@ -31,14 +31,14 @@
   {
     "id": "mon_dark_wyrm",
     "type": "MONSTER",
-    "name": { "str": "dark wyrm" },
-    "description": "A huge mutated worm living deep underground.  It has a round, gaping mouth lined with dagger-like teeth, and its flesh is slick with bubbling blue slime.",
+    "name": { "str": "cave worm" },
+    "description": "A gigantic mutated worm.  It has a round, gaping mouth lined with dagger-like teeth, and its flesh is slick with bubbling blue slime.",
     "default_faction": "dark_wyrm",
     "bodytype": "snake",
     "species": [ "MUTANT" ],
     "volume": "108500 ml",
     "weight": "120 kg",
-    "hp": 120,
+    "hp": 210,
     "speed": 100,
     "material": [ "flesh" ],
     "symbol": "S",
@@ -46,23 +46,33 @@
     "aggression": 100,
     "morale": 100,
     "melee_skill": 8,
-    "melee_dice": 2,
+    "melee_dice": 3,
     "melee_dice_sides": 6,
     "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": { "id": "acid_spit", "min_level": 7 },
+        "monster_message": "The %s spews acid!",
+        "cooldown": 10,
+        "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+      }
+    ],
     "dodge": 4,
     "bleed_rate": 60,
     "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_basic_bug" ],
     "harvest": "underground_acid",
     "dissect": "dissect_troglobite_sample_small",
+    "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
     "fear_triggers": [ "FIRE" ],
     "flags": [ "SMELLS", "HEARS", "GOODHEARING", "BASHES", "BORES", "POISON", "SUNDEATH", "ACIDPROOF", "ACIDTRAIL" ],
-    "armor": { "bash": 6, "electric": 3 }
+    "armor": { "bash": 6, "cut": 8, "bullet": 6, "electric": 3 }
   },
   {
     "id": "mon_graboid",
     "type": "MONSTER",
     "name": { "str": "graboid" },
-    "description": "A monstrous beast the size of a semi truck with a tripartite mouth that opens to reveal hundreds of writhing tongues with razor sharp edges.  It keeps most of its enormous body hidden underground.",
+    "description": "A monstrous worm with a tripartite mouth that opens to reveal hundreds of writhing tongues with razor sharp edges.  It keeps most of its enormous body hidden underground.",
     "default_faction": "worm",
     "bodytype": "snake",
     "species": [ "WORM" ],
@@ -947,8 +957,15 @@
     "dodge": 2,
     "stomach_size": 3000,
     "dissect": "dissect_insect_sample_small",
-    "special_attacks": [ [ "ACID", 10 ] ],
-    "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH" ] }
+    "special_attacks": [
+      {
+      "type": "spell",
+      "spell_data": { "id": "acid_barf", "min_level": 6 },
+      "monster_message": "The %s spits acid!",
+      "cooldown": 10,
+      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+    }, [ "EAT_CARRION", 120 ] ],
+    "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH", "EATS" ] }
   },
   {
     "id": "mon_mosquito_small",
@@ -2118,6 +2135,7 @@
     "proportional": { "hp": 0.5, "speed": 1.1, "morale": 0.67, "melee_dice_sides": 0.67 },
     "volume": "30 L",
     "weight": "40 kg",
+    "stomach_size": 300,
     "upgrades": { "half_life": 30, "into": "mon_ant" }
   },
   {
@@ -2150,7 +2168,7 @@
     "vision_day": 10,
     "vision_night": 5,
     "harvest": "arachnid",
-    "stomach_size": 300,
+    "stomach_size": 450,
     "dissect": "dissect_insect_sample_single",
     "upgrades": { "half_life": 30, "into": "mon_ant_soldier" },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
@@ -2168,7 +2186,15 @@
     "proportional": { "hp": 0.5, "speed": 1.1, "morale": 0.67, "melee_dice_sides": 0.67 },
     "volume": "30 L",
     "weight": "40 kg",
-    "upgrades": { "half_life": 30, "into": "mon_ant_acid" }
+    "stomach_size": 300,
+    "upgrades": { "half_life": 30, "into": "mon_ant_acid" },
+    "special_attacks": [       {
+      "type": "spell",
+      "spell_data": { "id": "acid_spray", "min_level": 2 },
+      "monster_message": "The %s sprays acid!",
+      "cooldown": 23,
+      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+    }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ]
   },
   {
     "id": "mon_ant_acid",
@@ -2200,9 +2226,15 @@
     "delete": { "weakpoints": [ { "id": "stinger" } ] },
     "vision_day": 10,
     "vision_night": 5,
-    "stomach_size": 300,
+    "stomach_size": 400,
     "upgrades": { "half_life": 30, "into": "mon_ant_acid_soldier" },
-    "special_attacks": [ [ "ACID", 23 ], [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ],
+    "special_attacks": [       {
+      "type": "spell",
+      "spell_data": { "id": "acid_spray", "min_level": 4 },
+      "monster_message": "The %s sprays acid!",
+      "cooldown": 23,
+      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+    }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ],
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
     "harvest": "arachnid_acid",
@@ -2270,7 +2302,7 @@
     "id": "mon_ant_acid_soldier",
     "type": "MONSTER",
     "name": { "str": "acidic soldier ant" },
-    "description": "A massive woolly brown ant that towers over the worker ants with a giant head crest.  Along with her huge mandibles, a corrosive liquid seeps from the end of her bloated abdomen.",
+    "description": "A massive woolly brown ant that towers over the worker ants.  Along with her huge mandibles, a corrosive liquid seeps from the end of her bloated abdomen.",
     "default_faction": "acid_ant",
     "bodytype": "insect",
     "species": [ "INSECT" ],
@@ -2295,8 +2327,15 @@
     "weakpoints": [ { "id": "abdomen", "name": "the abdomen", "coverage": 30 } ],
     "delete": { "weakpoints": [ { "id": "stinger" } ] },
     "vision_day": 10,
+    "stomach_size": 500,
     "vision_night": 5,
-    "special_attacks": [ [ "ACID", 15 ] ],
+    "special_attacks": [       {
+      "type": "spell",
+      "spell_data": { "id": "acid_spray", "min_level": 5 },
+      "monster_message": "The %s sprays acid!",
+      "cooldown": 15,
+      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+    }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ],
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
     "harvest": "arachnid_acid",
@@ -2309,7 +2348,7 @@
     "id": "mon_ant_acid_soldier_mega",
     "type": "MONSTER",
     "name": { "str": "super soldier acid ant" },
-    "description": "A cow-sized, woolly brown ant.  Corrosive liquid seeping from her huge mandibles.  Given the relative strength of ants to their body size, you don't doubt that this one could shove cars around or rip through solid walls.",
+    "description": "A cow-sized woolly brown ant, corrosive liquid seeping from her abdomen.  Given the relative strength of ants to their body size, you don't doubt that this one could shove cars around or rip through solid walls.",
     "copy-from": "mon_ant_acid_soldier",
     "proportional": { "hp": 5, "dodge": 0.5, "vision_day": 2 },
     "volume": "625 L",
@@ -2319,6 +2358,13 @@
     "bleed_rate": 60,
     "grab_strength": 100,
     "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": { "id": "acid_spray", "min_level": 6 },
+        "monster_message": "The %s sprays acid!",
+        "cooldown": 13,
+        "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+      }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ],
       { "id": "smash", "throw_strength": 48, "cooldown": 30 },
       { "id": "leg_sweep" },
       {
@@ -2326,11 +2372,11 @@
         "cooldown": 5,
         "condition": { "not": { "u_has_effect": "maimed_mandible" } },
         "damage_max_instance": [ { "damage_type": "cut", "amount": 12, "armor_penetration": 14 } ]
-      },
-      [ "ACID", 20 ]
+      }
     ],
     "dissect": "dissect_insect_sample_large",
     "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH", "RANGED_ATTACKER" ] },
+    "death_function": { "message": "The %s bursts apart in a shower of acid!", "effect": { "id": "acid_burst", "hit_self": true, "min_level": 7 } },
     "armor": { "bash": 15, "cut": 24, "bullet": 15, "electric": 4 }
   },
   {
@@ -2407,7 +2453,8 @@
     "melee_dice_sides": 8,
     "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
     "grab_strength": 35,
-    "special_attacks": [ { "id": "bite_grab" } ],
+    "stomach_size": 600,
+    "special_attacks": [ { "id": "bite_grab" }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ],
     "dodge": 2,
     "bleed_rate": 80,
     "weakpoint_sets": [ "wps_arthropod", "wps_arthropod_hymenoptera" ],
@@ -2421,7 +2468,7 @@
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "fungalize_into": "mon_ant_fungus",
     "upgrades": { "half_life": 42, "into": "mon_ant_soldier_mega" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "CLIMBS", "PATH_AVOID_FIRE", "PATH_AVOID_FALL" ],
+    "flags": [ "SEES", "HEARS", "SMELLS", "CLIMBS", "PATH_AVOID_FIRE", "PATH_AVOID_FALL", "EATS" ],
     "armor": { "bash": 10, "cut": 12, "bullet": 10, "electric": 2 }
   },
   {
@@ -2437,6 +2484,7 @@
     "melee_dice": 2,
     "bleed_rate": 60,
     "grab_strength": 75,
+    "stomach_size": 800,
     "special_attacks": [
       { "id": "smash", "throw_strength": 48, "cooldown": 30 },
       { "id": "leg_sweep" },
@@ -2455,7 +2503,8 @@
         "condition": {
           "and": [ { "not": { "u_has_effect": "maimed_mandible" } }, { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ]
         }
-      }
+      },
+      [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] 
     ],
     "dissect": "dissect_insect_sample_large",
     "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH" ] },
