@@ -389,7 +389,7 @@ void Character::describe_damage( damage_unit &du, item &armor ) const
     // Fire has its own method, but heat damage exists outside of fire IE lasers
     if( du.type == STATIC( damage_type_id( "bash" ) ) ) {
         damage_verb = material.bash_dmg_verb();
-    } else if( du.type == STATIC( damage_type_id( "heat" ) ) || STATIC( damage_type_id( "acid" ) ) ) {
+    } if( du.type == STATIC( damage_type_id( "heat" ) ) || du.type == STATIC( damage_type_id( "acid" ) ) ) {
         damage_verb = material.acid_dmg_verb();
     } else {
         damage_verb = material.cut_dmg_verb();
