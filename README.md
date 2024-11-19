@@ -2,7 +2,7 @@
 
 Cataclysm: The Last Generation is a single-player turn-based postapocalyptic survival game. Based on the all-time classic [Cataclysm: Dark Days Ahead](https://cataclysmdda.org), The Last Generation tells the story of a world where the dead walk, alien horrors stalk the land, and the fabric of reality as we know it has come undone. Despite all this, a few unlucky souls yet survive, and whether the last generation of humanity is destined to die off, or to become something fit to survive in this brave new world is up to you.
 
-TLG's primary aim is to preserve Cataclysm's depth and respect for plausibility while refining what it has always done best as a game, foregrounding character progression and immersive life sim elements. Dig through the wreckage of shadowy government conspiracies to uncover the truth about the Cataclysm, form your own band of survivors, and adapt to the myriad threats by expanding your arsenal, installing military-grade bionics, or mutating into your own kind of monster.
+TLG's primary aim is to preserve Cataclysm's depth and respect for plausibility while refining what it has always done best as a game, foregrounding character progression and immersive life sim elements in a world that will put your survival skills to the test. Dig through the wreckage of shadowy government conspiracies to uncover the truth about the Cataclysm, form your own band of survivors, and adapt to the myriad threats by expanding your arsenal, installing military-grade bionics, or mutating into your own kind of monster.
 
 ## Downloads
 
