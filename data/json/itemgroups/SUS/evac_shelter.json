@@ -125,10 +125,7 @@
       {
         "distribution": [
           {
-            "collection": [
-              { "item": "emer_blanket", "count": [ 0, 6 ], "prob": 60 },
-              { "item": "jacket_evac", "count": [ 0, 6 ], "prob": 50 }
-            ],
+            "collection": [ { "item": "emer_blanket", "count": [ 0, 6 ], "prob": 60 }, { "item": "jacket_evac", "count": [ 0, 6 ], "prob": 50 } ],
             "prob": 30
           },
           {
@@ -140,10 +137,7 @@
           },
           { "item": "protein_bar", "count": [ 0, 3 ], "prob": 60 },
           {
-            "collection": [
-              { "item": "extinguisher", "prob": 50, "charges": 100 },
-              { "item": "two_way_radio", "prob": 25 }
-            ],
+            "collection": [ { "item": "extinguisher", "prob": 50, "charges": 100 }, { "item": "two_way_radio", "prob": 25 } ],
             "prob": 10
           },
           {

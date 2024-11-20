@@ -55,6 +55,11 @@
     "//": "It's one size smaller for ranged attacks, no less then creature_size::tiny"
   },
   {
+    "id": "GRAB_IMMUNE",
+    "type": "monster_flag",
+    "//": "Cannot be grabbed."
+  },
+  {
     "id": "GRABS",
     "type": "monster_flag",
     "//": "Its attacks may grab us!"

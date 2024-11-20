@@ -63,6 +63,7 @@
 #include "mapdata.h"
 #include "mapsharing.h"
 #include "messages.h"
+#include "mondefense.h"
 #include "monster.h"
 #include "move_mode.h"
 #include "mtype.h"
@@ -731,6 +732,11 @@ static void grab()
             you.add_msg_if_player( ( "You're too exhausted to wrestle anything." ) );
             return;
         }
+        if( creatures.creature_at( grabp )->is_monster() &&
+            creatures.creature_at( grabp )->as_monster()->has_flag( mon_flag_GRAB_IMMUNE ) ) {
+            add_msg( _( "You can't grab %s." ), creatures.creature_at( grabp )->disp_name() );
+            return;
+        }
         int grab_strength = 1 + you.get_arm_str() + you.get_skill_level( skill_unarmed );
         Creature *rawcreature = creatures.creature_at( grabp );
         std::shared_ptr<Creature> victimptr( rawcreature, []( Creature * ) {} );
@@ -745,7 +751,7 @@ static void grab()
         const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
         item weap =  null_item_reference();
         you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
-        you.as_character()->burn_energy_arms( -400 );
+        you.as_character()->burn_energy_arms( -250 );
         if( creatures.creature_at( grabp )->is_monster() ) {
             monster *z = creatures.creature_at( grabp )->as_monster();
             // TODO: Force this to use unarmed skill for one-handed or multilimb grabs. Will need to
@@ -758,6 +764,9 @@ static void grab()
                 return;
             }
             add_msg( _( "You grab the %s." ), z->name() );
+            if( rng( 0, 100 ) <= static_cast<int>( z->type->def_chance ) ) {
+                z->type->sp_defense( *z, you.as_character(), nullptr );
+            }
             z->add_effect( effect_grabbed, 1_days, body_part_bp_null, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
             you.grab_1.set( victimptr, grab_strength );
@@ -1051,9 +1060,9 @@ static void smash()
     item_location weapon = player_character.used_weapon();
     if( bash_result.did_bash ) {
         if( !mech_smash ) {
-            player_character.set_activity_level( MODERATE_EXERCISE );
+            player_character.set_activity_level( EXTRA_EXERCISE );
             player_character.handle_melee_wear( weapon );
-            weary_mult = 1.0f / player_character.exertion_adjusted_move_multiplier( MODERATE_EXERCISE );
+            weary_mult = 1.0f / player_character.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
 
             const int mod_sta = 2 * player_character.get_standard_stamina_cost();
             player_character.burn_energy_arms( mod_sta );

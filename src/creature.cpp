@@ -98,6 +98,8 @@ static const efftype_id effect_zapped( "zapped" );
 
 static const field_type_str_id field_fd_last_known( "fd_last_known" );
 
+static const flag_id json_flag_GRAB_FILTER( "GRAB_FILTER" );
+
 static const json_character_flag json_flag_BIONIC_LIMB( "BIONIC_LIMB" );
 static const json_character_flag json_flag_IGNORE_TEMP( "IGNORE_TEMP" );
 static const json_character_flag json_flag_LIMB_LOWER( "LIMB_LOWER" );
@@ -1370,6 +1372,27 @@ void Creature::longpull( const std::string &name, const tripoint &p )
     }
 }
 
+bool Creature::grapple_drag( Creature *c )
+{
+    const Character *ch = as_character();
+    const monster *mon = as_monster();
+    const int str = ch != nullptr ? ch->get_str() : mon != nullptr ? mon->get_grab_strength() : 10;
+    // Medium is 3.
+    int your_size = static_cast<std::underlying_type_t<creature_size>>( get_size() );
+    const int odds = units::to_kilogram( c->get_weight() ) / ( str * your_size );
+    if( one_in( clamp<int>( odds * odds, 1, 1000 ) ) ) {
+        return true;
+    } else {
+        add_msg_if_player( m_bad, _( "You strain to drag %s." ),
+                           c->disp_name() );
+        if( c->is_avatar() ) {
+            add_msg( m_info, _( "%1s fails to drag you." ), disp_name( false, true ) );
+        }
+        return false;
+    }
+    return false;
+}
+
 bool Creature::stumble_invis( const Creature &player, const bool stumblemsg )
 {
     // DEBUG insivibility can't be seen through
@@ -1407,7 +1430,7 @@ bool Creature::attack_air( const tripoint &p )
         item_location cur_weapon = as_character()->used_weapon();
         item cur_weap = cur_weapon ? *cur_weapon : null_item_reference();
         move_cost = as_character()->attack_speed( cur_weap ) * ( 1 /
-                    as_character()->exertion_adjusted_move_multiplier( EXTRA_EXERCISE ) );
+                    as_character()->exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE ) );
     }
     mod_moves( -move_cost );
 

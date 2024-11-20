@@ -1001,8 +1001,8 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             }
             int size_factor = std::max( 0, ( their_size - 3 ) ) * 15;
             // A zombie hulk has a throwforce of 96. Fully evolved crab mutant starting from 10 strength has 25 strength. At 5/5 skills.
-            // A fully evolved crab mutant hits ~87. Crabs can rapidly catch up and exceed this by adding bionics, but are subject to stat
-            // loss from pain etc., and are limited by stamina while monsters are not.
+            // A fully evolved crab mutant hits ~87. Big mutants can rapidly catch up and exceed this by adding bionics, but are subject to
+            // stamina, pain etc. while monsters are not.
             float strength_factor = 0;
             if( you.get_arm_str() > 10 ) {
                 strength_factor = you.get_arm_str() / 100;
@@ -1016,8 +1016,9 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             // Relative size is probably better than absolute until we make weapons
             // care about character size.
             int stamina_mod = std::round( std::min( -800.f,
-                                                    ( 300 * you.get_skill_level( skill_throw ) + 400 * you.get_skill_level( skill_unarmed ) +
-                                                            ( -5500 * ( their_size / your_size ) ) ) ) );
+                                                    ( 300 * std::max( 0.5f, you.get_skill_level( skill_throw ) ) + 400 * std::max( 0.5f,
+                                                            you.get_skill_level( skill_unarmed ) ) +
+                                                            ( -5000 * ( their_size / your_size ) ) ) ) );
             // Ensure that characters with high skill but low strength aren't throwing people across the street.
             // 10 strength = average.
             // Fling's range is throwforce/10. Use the same calc here so that trajectory() knows how
@@ -1110,7 +1111,7 @@ void avatar_action::plthrow( avatar &you, item_location loc,
                 you.grab_1.victim->as_npc()->on_attacked( you );
             }
             you.grab_1.clear();
-            const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+            const float weary_mult = you.exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE );
             item weap =  null_item_reference();
             you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
             you.as_character()->burn_energy_arms( stamina_mod );

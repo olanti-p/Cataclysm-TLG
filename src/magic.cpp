@@ -1939,7 +1939,8 @@ int spell::effect_intensity( Creature &caster ) const
 {
     dialogue d( get_talker_for( caster ), nullptr );
     // < 0 intensity will add the effect with intensity 1 in add_effect, but we still use std::max to avoid error messages about it
-    const int leveled_effect_intensity = std::max( 1, min_leveled_effect_intensity( caster ) + rng( 0, type->effect_intensity_variance.evaluate( d ) ) );
+    const int leveled_effect_intensity = std::max( 1, min_leveled_effect_intensity( caster ) + rng( 0,
+                                         type->effect_intensity_variance.evaluate( d ) ) );
     if( type->min_effect_intensity.evaluate( d ) >= 0 ||
         type->max_effect_intensity.evaluate( d ) >= type->min_effect_intensity.evaluate( d ) ) {
         return std::min( leveled_effect_intensity,

@@ -2079,13 +2079,15 @@ void outfit::splash_attack( Character &guy, const spell &sp, Creature &caster, b
             // Whether or not the item was affected by the fluid, it still blocked some or all of it.
             // Breathability and coverage let fluid soak through, but some is lost, weakening the attack as it goes.
             liquid_remaining = std::max( 0,
-                                         liquid_remaining - ( ( ( armor.get_coverage( bp ) + ( 100 - armor.breathability( bp ) ) ) / 2 ) * 10 ) );
+                                         liquid_remaining - ( ( ( armor.get_coverage( bp ) + ( 100 - armor.breathability(
+                                                 bp ) ) ) / 2 ) * 10 ) );
             damage.amount *= static_cast<float>( liquid_remaining ) / static_cast<float>( liquid_amount );
         }
         ++iter;
     }
     if( spell_effect != effect_null ) {
-        intensity = std::ceil( intensity * ( static_cast<float>( liquid_remaining ) / static_cast<float>( liquid_amount ) ) );
+        intensity = std::ceil( intensity * ( static_cast<float>( liquid_remaining ) / static_cast<float>
+                                             ( liquid_amount ) ) );
         if( intensity >= 1 ) {
             guy.add_effect( spell_effect, dur_td, bp, permanent, intensity );
         }

@@ -214,7 +214,7 @@
     "items": {
       "a": { "item": "fireplace_fill", "chance": 30, "repeat": [ 2, 5 ] },
       "d": [
-        { "item": "SUS_dresser_mens", "chance": 30,  "repeat": [ 1, 2 ] },
+        { "item": "SUS_dresser_mens", "chance": 30, "repeat": [ 1, 2 ] },
         { "item": "SUS_dresser_womens", "chance": 30, "repeat": [ 1, 2 ] }
       ],
       "e": { "item": "pool_table", "chance": 20, "repeat": [ 1, 2 ] },

@@ -123,22 +123,28 @@
     "reproduction": { "baby_egg": "egg_snail", "baby_count": 3, "baby_timer": 15 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN" ],
     "stomach_size": 1000,
-    "special_attacks": [ [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ], {
-      "id": "ranged_pull",
-      "cooldown": 10,
-      "range": 4,
-      "move_cost": 115,
-      "damage_max_instance": [ { "damage_type": "stab", "amount": 3, "armor_penetration": 4 } ],
-      "min_mul": 3,
-      "max_mul": 5.4,
-      "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } } ] },
-      "hit_dmg_u": "%s launches its harpoon tongue and pulls you in!",
-      "hit_dmg_npc": "%s catches <npcname> with its harpoon tongue and pulls them in!",
-      "miss_msg_u": "%s's harpoon tongue tries to spear you, but you dodge!",
-      "miss_msg_npc": "%s's harpoon tongue tries to spear <npcname>, but they dodge!",
-      "no_dmg_msg_u": "%s catches you with its tongue and pulls you in!",
-      "no_dmg_msg_npc": "%s catches <npcname> with its tongue and pulls them in!"
-    } ],
+    "special_attacks": [
+      [ "GRAZE", 130 ],
+      [ "BROWSE", 130 ],
+      [ "EAT_CROP", 130 ],
+      [ "EAT_CARRION", 130 ],
+      {
+        "id": "ranged_pull",
+        "cooldown": 10,
+        "range": 4,
+        "move_cost": 115,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 3, "armor_penetration": 4 } ],
+        "min_mul": 3,
+        "max_mul": 5.4,
+        "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } } ] },
+        "hit_dmg_u": "%s launches its harpoon tongue and pulls you in!",
+        "hit_dmg_npc": "%s catches <npcname> with its harpoon tongue and pulls them in!",
+        "miss_msg_u": "%s's harpoon tongue tries to spear you, but you dodge!",
+        "miss_msg_npc": "%s's harpoon tongue tries to spear <npcname>, but they dodge!",
+        "no_dmg_msg_u": "%s catches you with its tongue and pulls you in!",
+        "no_dmg_msg_npc": "%s catches <npcname> with its tongue and pulls them in!"
+      }
+    ],
     "anger_triggers": [ "HURT" ],
     "flags": [ "SEES", "SMELLS", "BASHES", "SLUDGEPROOF", "SLUDGETRAIL", "EATS", "CORNERED_FIGHTER" ],
     "armor": { "bash": 5, "cut": 9, "bullet": 6, "acid": 4, "electric": 3 }
@@ -199,7 +205,12 @@
         "min_mul": 3,
         "max_mul": 4.4,
         "effects": [ { "id": "venom_dmg", "duration": 150, "affect_hit_bp": true } ]
-      }, [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ] ],
+      },
+      [ "GRAZE", 130 ],
+      [ "BROWSE", 130 ],
+      [ "EAT_CROP", 130 ],
+      [ "EAT_CARRION", 130 ]
+    ],
     "upgrades": { "half_life": 14, "into": "mon_slug_giant" },
     "flags": [ "SEES", "SMELLS", "EATS", "SLUDGEPROOF", "SMALLSLUDGETRAIL", "CORNERED_FIGHTER", "CLIMBS" ],
     "armor": { "bash": 2, "cut": 3, "bullet": 2, "acid": 6, "electric": 3 }
@@ -251,7 +262,7 @@
     "dissect": "dissect_gastropod_sample_small",
     "reproduction": { "baby_egg": "egg_slug", "baby_count": 3, "baby_timer": 15 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN" ],
-     "special_attacks": [
+    "special_attacks": [
       {
         "type": "bite",
         "cooldown": 10,
@@ -259,7 +270,12 @@
         "min_mul": 3,
         "max_mul": 5.4,
         "effects": [ { "id": "venom_dmg", "duration": 250, "affect_hit_bp": true } ]
-      }, [ "GRAZE", 130 ], [ "BROWSE", 130 ], [ "EAT_CROP", 130 ], [ "EAT_CARRION", 130 ] ],
+      },
+      [ "GRAZE", 130 ],
+      [ "BROWSE", 130 ],
+      [ "EAT_CROP", 130 ],
+      [ "EAT_CARRION", 130 ]
+    ],
     "anger_triggers": [ "PLAYER_CLOSE" ],
     "flags": [ "SEES", "SMELLS", "BASHES", "SLUDGEPROOF", "SLUDGETRAIL", "EATS", "CORNERED_FIGHTER" ],
     "armor": { "bash": 8, "cut": 2, "bullet": 2, "acid": 12, "electric": 3 }
@@ -295,7 +311,19 @@
     "fear_triggers": [ "FIRE" ],
     "dissect": "dissect_gastropod_sample_huge",
     "regenerates": 25,
-    "flags": [ "NOHEAD", "SEES", "POISON", "HEARS", "SMELLS", "SLUDGEPROOF", "SLUDGETRAIL", "SWIMS", "FLAMMABLE", "NOGIB", "CORNERED_FIGHTER" ],
+    "flags": [
+      "NOHEAD",
+      "SEES",
+      "POISON",
+      "HEARS",
+      "SMELLS",
+      "SLUDGEPROOF",
+      "SLUDGETRAIL",
+      "SWIMS",
+      "FLAMMABLE",
+      "NOGIB",
+      "CORNERED_FIGHTER"
+    ],
     "armor": { "bash": 35, "cut": 2, "bullet": 27, "electric": 1 }
   }
 ]
