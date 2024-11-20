@@ -7,7 +7,7 @@
       { "item": "knife_steak", "prob": 85, "damage": [ 0, 4 ] },
       { "item": "knife_butcher", "prob": 10, "damage": [ 0, 4 ] },
       { "item": "knife_bread", "prob": 10, "damage": [ 0, 4 ] },
-      { "item": "knife_carving", "prob": 10 , "damage": [ 0, 4 ] },
+      { "item": "knife_carving", "prob": 10, "damage": [ 0, 4 ] },
       { "item": "knife_steak", "prob": 85 },
       { "item": "knife_butcher", "prob": 10 },
       { "item": "knife_bread", "prob": 10 },

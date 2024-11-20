@@ -497,6 +497,9 @@ class Creature : public viewer
         */
         void longpull( const std::string &name, const tripoint &p );
 
+        // For pulling creatures while grabbing them and moving.
+        bool grapple_drag( Creature *c );
+
         /**
          * If training_level is anything but 0, the check will only train target's skill to that level
         */

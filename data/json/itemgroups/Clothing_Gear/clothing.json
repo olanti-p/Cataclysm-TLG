@@ -3244,7 +3244,10 @@
     "subtype": "collection",
     "items": [
       { "item": "basket_laundry", "prob": 20 },
-      { "collection": [ { "group": "laundry", "prob": 25, "damage": [ 0, 4 ] }, { "group": "laundry", "prob": 70 } ], "prob": 100 }
+      {
+        "collection": [ { "group": "laundry", "prob": 25, "damage": [ 0, 4 ] }, { "group": "laundry", "prob": 70 } ],
+        "prob": 100
+      }
     ]
   },
   {

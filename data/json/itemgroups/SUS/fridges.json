@@ -68,25 +68,13 @@
             "container-item": "null",
             "entry-wrapper": "box_small"
           },
-          {
-            "item": "onion_rings",
-            "count-min": 1,
-            "prob": 5,
-            "container-item": "null",
-            "entry-wrapper": "box_small"
-          },
+          { "item": "onion_rings", "count-min": 1, "prob": 5, "container-item": "null", "entry-wrapper": "box_small" },
           { "item": "milkshake", "charges-min": 1, "prob": 3 },
           { "item": "milkshake_fastfood", "charges-min": 1, "prob": 3 },
           { "item": "frozen_lemonade", "charges-min": 1, "prob": 5 },
           { "item": "milkshake_deluxe", "charges-min": 1, "prob": 5 },
           { "item": "pizza_meat", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "box_small" },
-          {
-            "item": "pizza_veggy",
-            "count-min": 1,
-            "prob": 8,
-            "container-item": "null",
-            "entry-wrapper": "box_small"
-          },
+          { "item": "pizza_veggy", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "box_small" },
           {
             "item": "pizza_cheese",
             "count-min": 1,
@@ -104,13 +92,7 @@
           { "item": "cheeseburger", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
           { "item": "hamburger", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
           { "item": "fish_fried", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "box_small" },
-          {
-            "item": "fish_sandwich",
-            "count-min": 1,
-            "prob": 8,
-            "container-item": "null",
-            "entry-wrapper": "wrapper"
-          },
+          { "item": "fish_sandwich", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
           { "item": "lobster_roll", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
           { "item": "sloppyjoe", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
           { "item": "sandwich_t", "count-min": 1, "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },

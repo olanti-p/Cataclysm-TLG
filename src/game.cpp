@@ -274,6 +274,7 @@ static const itype_id itype_towel_wet( "towel_wet" );
 
 static const json_character_flag json_flag_CLIMB_NO_LADDER( "CLIMB_NO_LADDER" );
 static const json_character_flag json_flag_GRAB( "GRAB" );
+static const json_character_flag json_flag_GRAB_FILTER( "GRAB_FILTER" );
 static const json_character_flag json_flag_HYPEROPIC( "HYPEROPIC" );
 static const json_character_flag json_flag_INFECTION_IMMUNE( "INFECTION_IMMUNE" );
 static const json_character_flag json_flag_NYCTOPHOBIA( "NYCTOPHOBIA" );
@@ -10477,11 +10478,12 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
             // We were grabbing a vehicle that isn't there anymore
             grabbed = false;
         }
-    } else if( grabbed ) {
+    } else if( grabbed && !u.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         // We were grabbing something WEIRD, let's pretend we weren't
         grabbed = false;
     }
-    if( u.grab_point != tripoint_zero && !grabbed && !furniture_move ) {
+    if( u.grab_point != tripoint_zero && !grabbed && !furniture_move &&
+        !u.has_effect_with_flag( json_flag_GRAB_FILTER ) ) {
         add_msg( m_warning, _( "Can't find grabbed object." ) );
         u.grab( object_type::NONE );
     }
@@ -10595,6 +10597,10 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
             u.burn_move_stamina( 0.50 * ( previous_moves - u.moves ) );
         }
     }
+    // Try and fail to drag someone with us.
+    if( u.grab_1.victim.get() && !u.grapple_drag( u.grab_1.victim.get() ) ) {
+        return false;
+    }
     // Max out recoil & reset aim point
     u.recoil = MAX_RECOIL;
     u.last_target_pos = std::nullopt;
@@ -10675,6 +10681,10 @@ bool game::walk_move( const tripoint &dest_loc, const bool via_ramp, const bool 
     point submap_shift = place_player( dest_loc );
     point ms_shift = sm_to_ms_copy( submap_shift );
     oldpos = oldpos - ms_shift;
+    if( u.grab_1.victim.get() ) {
+        tripoint_abs_ms old_abs_ms_pos = m.getglobal( oldpos );
+        u.grab_1.victim.get()->move_to( old_abs_ms_pos );
+    }
 
     if( moving ) {
         cata_event_dispatch::avatar_moves( old_abs_pos, u, m );

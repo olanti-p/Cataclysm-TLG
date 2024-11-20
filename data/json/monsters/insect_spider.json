@@ -959,12 +959,14 @@
     "dissect": "dissect_insect_sample_small",
     "special_attacks": [
       {
-      "type": "spell",
-      "spell_data": { "id": "acid_barf", "min_level": 6 },
-      "monster_message": "The %s spits acid!",
-      "cooldown": 10,
-      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
-    }, [ "EAT_CARRION", 120 ] ],
+        "type": "spell",
+        "spell_data": { "id": "acid_barf", "min_level": 6 },
+        "monster_message": "The %s spits acid!",
+        "cooldown": 10,
+        "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+      },
+      [ "EAT_CARRION", 120 ]
+    ],
     "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH", "EATS" ] }
   },
   {
@@ -2188,13 +2190,18 @@
     "weight": "40 kg",
     "stomach_size": 300,
     "upgrades": { "half_life": 30, "into": "mon_ant_acid" },
-    "special_attacks": [       {
-      "type": "spell",
-      "spell_data": { "id": "acid_spray", "min_level": 2 },
-      "monster_message": "The %s sprays acid!",
-      "cooldown": 23,
-      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
-    }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ]
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": { "id": "acid_spray", "min_level": 2 },
+        "monster_message": "The %s sprays acid!",
+        "cooldown": 23,
+        "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+      },
+      [ "EAT_FOOD", 30 ],
+      [ "BROWSE", 90 ],
+      [ "EAT_CARRION", 90 ]
+    ]
   },
   {
     "id": "mon_ant_acid",
@@ -2228,13 +2235,18 @@
     "vision_night": 5,
     "stomach_size": 400,
     "upgrades": { "half_life": 30, "into": "mon_ant_acid_soldier" },
-    "special_attacks": [       {
-      "type": "spell",
-      "spell_data": { "id": "acid_spray", "min_level": 4 },
-      "monster_message": "The %s sprays acid!",
-      "cooldown": 23,
-      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
-    }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": { "id": "acid_spray", "min_level": 4 },
+        "monster_message": "The %s sprays acid!",
+        "cooldown": 23,
+        "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+      },
+      [ "EAT_FOOD", 30 ],
+      [ "BROWSE", 90 ],
+      [ "EAT_CARRION", 90 ]
+    ],
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
     "harvest": "arachnid_acid",
@@ -2329,13 +2341,18 @@
     "vision_day": 10,
     "stomach_size": 500,
     "vision_night": 5,
-    "special_attacks": [       {
-      "type": "spell",
-      "spell_data": { "id": "acid_spray", "min_level": 5 },
-      "monster_message": "The %s sprays acid!",
-      "cooldown": 15,
-      "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
-    }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": { "id": "acid_spray", "min_level": 5 },
+        "monster_message": "The %s sprays acid!",
+        "cooldown": 15,
+        "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+      },
+      [ "EAT_FOOD", 30 ],
+      [ "BROWSE", 90 ],
+      [ "EAT_CARRION", 90 ]
+    ],
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
     "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
     "harvest": "arachnid_acid",
@@ -2364,7 +2381,10 @@
         "monster_message": "The %s sprays acid!",
         "cooldown": 13,
         "condition": { "and": [ { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
-      }, [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ],
+      },
+      [ "EAT_FOOD", 30 ],
+      [ "BROWSE", 90 ],
+      [ "EAT_CARRION", 90 ],
       { "id": "smash", "throw_strength": 48, "cooldown": 30 },
       { "id": "leg_sweep" },
       {
@@ -2376,7 +2396,10 @@
     ],
     "dissect": "dissect_insect_sample_large",
     "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH", "RANGED_ATTACKER" ] },
-    "death_function": { "message": "The %s bursts apart in a shower of acid!", "effect": { "id": "acid_burst", "hit_self": true, "min_level": 7 } },
+    "death_function": {
+      "message": "The %s bursts apart in a shower of acid!",
+      "effect": { "id": "acid_burst", "hit_self": true, "min_level": 7 }
+    },
     "armor": { "bash": 15, "cut": 24, "bullet": 15, "electric": 4 }
   },
   {
@@ -2504,7 +2527,9 @@
           "and": [ { "not": { "u_has_effect": "maimed_mandible" } }, { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ]
         }
       },
-      [ "EAT_FOOD", 30 ], [ "BROWSE", 90 ], [ "EAT_CARRION", 90 ] 
+      [ "EAT_FOOD", 30 ],
+      [ "BROWSE", 90 ],
+      [ "EAT_CARRION", 90 ]
     ],
     "dissect": "dissect_insect_sample_large",
     "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH" ] },

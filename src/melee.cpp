@@ -616,8 +616,9 @@ bool Character::melee_attack_abstract( Creature &t, bool allow_special,
         }
     }
 
-    // Fighting is hard work
-    set_activity_level( EXTRA_EXERCISE );
+    // Fighting is as strenuous as it gets. Combat actions almost always take just a second or
+    // two, so we use EXPLOSIVE_EXERCISE to better simulate the exhausting effects of fighting.
+    set_activity_level( EXPLOSIVE_EXERCISE );
 
     item_location cur_weapon = allow_unarmed ? used_weapon() : get_wielded_item();
     item cur_weap = cur_weapon ? *cur_weapon : null_item_reference();
@@ -946,7 +947,7 @@ bool Character::melee_attack_abstract( Creature &t, bool allow_special,
     add_msg_debug( debugmode::DF_MELEE, "Stamina burn base/total (capped at -50): %d/%d", base_stam,
                    total_stam + deft_bonus );
     // Weariness handling - 1 / the value, because it returns what % of the normal speed
-    const float weary_mult = exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+    const float weary_mult = exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE );
     mod_moves( forced_movecost >= 0 ? -forced_movecost : -move_cost * ( 1 / weary_mult ) );
     // trigger martial arts on-attack effects
     martial_arts_data->ma_onattack_effects( *this );
@@ -987,7 +988,7 @@ void Character::reach_attack( const tripoint &p, int forced_movecost )
     }
 
     // Fighting is hard work
-    set_activity_level( EXTRA_EXERCISE );
+    set_activity_level( EXPLOSIVE_EXERCISE );
 
     creature_tracker &creatures = get_creature_tracker();
     Creature *critter = creatures.creature_at( p );
@@ -1000,7 +1001,7 @@ void Character::reach_attack( const tripoint &p, int forced_movecost )
 
     // Weariness handling
     // 1 / mult because mult is the percent penalty, in the form 1.0 == 100%
-    const float weary_mult = 1.0f / exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+    const float weary_mult = 1.0f / exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE );
     int move_cost = attack_speed( weapon ) * weary_mult;
     float skill = std::min( 10.0f, get_skill_level( skill_melee ) );
     int t = 0;
@@ -1571,7 +1572,7 @@ std::vector<matec_id> Character::evaluate_techniques( Creature &t, const item_lo
             float move_cost = attack_speed( used_weap );
             move_cost *= tec.move_cost_multiplier( *this );
             move_cost += tec.move_cost_penalty( *this );
-            float move_mult = exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+            float move_mult = exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE );
             move_cost *= ( 1.0f / move_mult );
             if( get_moves() + get_speed() - move_cost < 0 ) {
                 add_msg_debug( debugmode::DF_MELEE,
@@ -1580,7 +1581,7 @@ std::vector<matec_id> Character::evaluate_techniques( Creature &t, const item_lo
             }
         }
 
-        // if critical then select only from critical tecs
+        // If critical then select only from critical tecs,
         // but allow the technique if its crit ok
         if( !tec.crit_ok && ( crit != tec.crit_tec ) ) {
             add_msg_debug( debugmode::DF_MELEE, "Attack is%s critical, attack discarded", crit ? "" : "n't" );
@@ -1593,7 +1594,7 @@ std::vector<matec_id> Character::evaluate_techniques( Creature &t, const item_lo
             continue;
         }
 
-        // don't apply disarming techniques to someone without a weapon
+        // Don't apply disarming techniques to someone without a weapon
         // TODO: these are the stat requirements for tec_disarm
         // dice(   dex_cur +    get_skill_level("unarmed"),  8) >
         // dice(p->dex_cur + p->get_skill_level("melee"),   10))
