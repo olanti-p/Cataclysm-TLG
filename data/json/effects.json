@@ -4926,5 +4926,12 @@
     "show_intensity": false,
     "desc": [ "You are fully protected from electrical discharges." ],
     "flags": [ "ELECTRIC_IMMUNE" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "airborne",
+    "max_intensity": 1,
+    "max_duration": "1 s",
+    "//": "Temporary effect for creatures who are leaping or getting flung.  Should only be applied during such events so that creatures aren't left hovering around."
   }
 ]

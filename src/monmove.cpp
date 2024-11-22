@@ -56,6 +56,7 @@
 
 static const damage_type_id damage_cut( "cut" );
 
+static const efftype_id effect_airborne( "airborne" );
 static const efftype_id effect_bouldering( "bouldering" );
 static const efftype_id effect_countdown( "countdown" );
 static const efftype_id effect_cramped_space( "cramped_space" );
@@ -1844,6 +1845,9 @@ static tripoint find_closest_stair( const tripoint &near_this, const ter_furn_fl
 bool monster::move_to( const tripoint &p, bool force, bool step_on_critter,
                        const float stagger_adjustment )
 {
+    if( has_effect( effect_airborne ) ) {
+        force = true;
+    }
     const bool on_ground = !digging() && !flies();
 
     const bool z_move = p.z != pos().z;

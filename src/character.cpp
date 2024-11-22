@@ -5040,18 +5040,16 @@ float Character::maximum_exertion_level() const
 {
     switch( weariness_level() ) {
         case 0:
-            return EXPLOSIVE_EXERCISE;
-        case 1:
             return EXTRA_EXERCISE;
-        case 2:
+        case 1:
             return ACTIVE_EXERCISE;
-        case 3:
+        case 2:
             return BRISK_EXERCISE;
-        case 4:
+        case 3:
             return MODERATE_EXERCISE;
-        case 5:
+        case 4:
             return LIGHT_EXERCISE;
-        case 6:
+        case 5:
         default:
             return NO_EXERCISE;
     }
@@ -5065,11 +5063,11 @@ float Character::exertion_adjusted_move_multiplier( float level ) const
     if( level <= 0 ) {
         level = activity_history.activity( in_sleep_state() );
     }
-    const float max = maximum_exertion_level() - 1;
+    const float max = maximum_exertion_level();
     if( level < max ) {
         return 1.0f;
     }
-    return max / level;
+    return max / std::min( 10.0f, level);
 }
 
 float Character::instantaneous_activity_level() const

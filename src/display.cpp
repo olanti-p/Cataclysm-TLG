@@ -505,7 +505,6 @@ std::string display::activity_level_str( float level )
 std::string display::activity_malus_str( const Character &u )
 {
     const float act_level = u.instantaneous_activity_level();
-    // Cap the move penalty at Extreme.
     const float exertion_mult = u.exertion_adjusted_move_multiplier( act_level );
     const int malus_value = ( 1 / exertion_mult ) * 100 - 100;
     return string_format( "+%3d%%", malus_value );
