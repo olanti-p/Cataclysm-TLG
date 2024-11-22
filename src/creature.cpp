@@ -1431,6 +1431,7 @@ bool Creature::attack_air( const tripoint &p )
         item cur_weap = cur_weapon ? *cur_weapon : null_item_reference();
         move_cost = as_character()->attack_speed( cur_weap ) * ( 1 /
                     as_character()->exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE ) );
+        as_character()->set_activity_level( EXPLOSIVE_EXERCISE );
     }
     mod_moves( -move_cost );
 
