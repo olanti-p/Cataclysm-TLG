@@ -5065,7 +5065,7 @@ float Character::exertion_adjusted_move_multiplier( float level ) const
     if( level <= 0 ) {
         level = activity_history.activity( in_sleep_state() );
     }
-    const float max = maximum_exertion_level();
+    const float max = maximum_exertion_level() - 1;
     if( level < max ) {
         return 1.0f;
     }
@@ -5079,7 +5079,7 @@ float Character::instantaneous_activity_level() const
 
 int Character::activity_level_index() const
 {
-    // Activity levels are 1, 2, 4, 6, 8, 10
+    // Activity levels are 1, 2, 4, 6, 8, 10, 12
     // So we can easily cut them in half and round down for an index
     return std::floor( instantaneous_activity_level() / 2 );
 }
@@ -5529,7 +5529,7 @@ void Character::check_needs_extremes()
                 }
             } else if( sleep_deprivation < SLEEP_DEPRIVATION_MAJOR ) {
                 add_msg_if_player( m_bad,
-                                   _( "Your mind feels weary, and you dread every wakeful minute that passes.  You crave sleep, and feel like you're about to collapse." ) );
+                                   _( "Your mind feels hazy, and you dread every wakeful minute that passes.  You crave sleep, and feel like you're about to collapse." ) );
                 mod_fatigue( 10 );
 
                 if( one_in( 5 ) ) {

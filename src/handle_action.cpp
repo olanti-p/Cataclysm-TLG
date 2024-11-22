@@ -748,6 +748,7 @@ static void grab()
                 return;
             }
         }
+        // Most melee combat is EXPLOSIVE, but here we're just grabbing on.
         const float weary_mult = you.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
         item weap =  null_item_reference();
         you.mod_moves( -100 - you.attack_speed( weap ) / weary_mult );
@@ -1060,9 +1061,9 @@ static void smash()
     item_location weapon = player_character.used_weapon();
     if( bash_result.did_bash ) {
         if( !mech_smash ) {
-            player_character.set_activity_level( EXTRA_EXERCISE );
+            player_character.set_activity_level( EXPLOSIVE_EXERCISE );
             player_character.handle_melee_wear( weapon );
-            weary_mult = 1.0f / player_character.exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+            weary_mult = 1.0f / player_character.exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE );
 
             const int mod_sta = 2 * player_character.get_standard_stamina_cost();
             player_character.burn_energy_arms( mod_sta );

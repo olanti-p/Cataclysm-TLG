@@ -1696,7 +1696,7 @@ std::string avatar::total_daily_calories_string() const
     const std::string header_string =
         colorize( "       Minutes at each exercise level                  Calories per day",
                   c_white ) + "\n" +
-        colorize( "  Day  ZZZ - Light Moderate Brisk Active Extra Explosive    Gained  Spent  Total",
+        colorize( "  Day  Sleep - Light Moderate Brisk Active Extra Explosive    Gained  Spent  Total",
                   c_yellow ) + "\n";
     const std::string format_string =
         " %4d  %4d   %4d  %4d     %4d  %4d   %4d  %4d    %6d %6d";

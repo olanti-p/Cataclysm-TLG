@@ -58,6 +58,7 @@ void activity_tracker::weary_clear()
 {
     tracker = 0;
     intake = 0;
+    output = 0;
     low_activity_ticks = 0.0f;
 }
 
@@ -68,7 +69,7 @@ void activity_tracker::set_intake( int ncal )
 
 std::string activity_tracker::debug_weary_info() const
 {
-    return string_format( "Intake: %.1f Tracker: %.1f", intake / 1000.0f, tracker / 1000.0f );
+    return string_format( "Intake: %.1f Tracker: %.1f", intake / 1000.0f, output / 1000.0f );
 }
 
 void activity_tracker::calorie_adjust( int ncal )
@@ -77,6 +78,7 @@ void activity_tracker::calorie_adjust( int ncal )
         intake += ncal;
     } else {
         // ncal is negative, we need positive
+        output -= ncal;
         tracker -= ncal;
     }
 }
@@ -127,14 +129,58 @@ void activity_tracker::new_turn( bool sleeping )
         previous_turn_activity = current_activity;
         current_activity = base_activity_level;
         accumulated_activity = 0.0f;
+        moderate_activity = 0.0f;
+        active_activity = 0.0f;
+        extra_activity = 0.0f;
+        explosive_activity = 0.0f;
+        moderate_activity_new = 0.0f;
+        active_activity_new = 0.0f;
+        extra_activity_new = 0.0f;
+        explosive_activity_new = 0.0f;
         num_events = 1;
     } else {
         // This is for the last turn that had activity logged.
         accumulated_activity += current_activity;
+        // High-impact activity is less efficient in terms of weariness over time.
+        // Because the system is just kcal spent = weariness, we need to track strenous
+        // activity separately and apply a malus to weariness later in suffer.cpp.
+        if( current_activity == MODERATE_EXERCISE ) {
+            moderate_activity += current_activity;
+        }
+        if( current_activity == ACTIVE_EXERCISE ) {
+            active_activity += current_activity;
+        }
+        if( current_activity == EXTRA_EXERCISE ) {
+            extra_activity += current_activity;
+        }
+        if( current_activity == EXPLOSIVE_EXERCISE ) {
+            explosive_activity += current_activity;
+        }
         // Then handle the interventing turns that had no activity logged.
         int num_turns = to_turns<int>( calendar::turn - current_turn );
         if( num_turns > 1 ) {
             accumulated_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
+            //
+            if( moderate_activity > moderate_activity_new ) {
+                moderate_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
+                tracker += std::max( 0.0f, ( moderate_activity - moderate_activity_new ) * 8.0f );
+                moderate_activity_new = moderate_activity;
+            }
+            if( active_activity > active_activity_new ) {
+                active_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
+                tracker += std::max( 0.0f, ( active_activity - active_activity_new ) * 25.0f );
+                active_activity_new = active_activity;
+            }
+            if( extra_activity > extra_activity_new ) {
+                extra_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
+                tracker += std::max( 0.0f, ( extra_activity - extra_activity_new ) * 50.0f );
+                extra_activity_new = extra_activity;
+            }
+            if( explosive_activity > explosive_activity_new ) {
+                explosive_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
+                tracker += std::max( 0.0f, ( explosive_activity - explosive_activity_new ) * 240.0f );
+                explosive_activity_new = explosive_activity;
+            }
             num_events += num_turns - 1;
         }
         previous_turn_activity = current_activity;

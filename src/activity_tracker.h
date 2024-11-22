@@ -12,6 +12,14 @@ class activity_tracker
     private:
         float current_activity = 0.0;
         float accumulated_activity = 0.0;
+        float moderate_activity = 0.0;
+        float active_activity = 0.0;
+        float extra_activity = 0.0;
+        float explosive_activity = 0.0;
+        float moderate_activity_new = 0.0;
+        float active_activity_new = 0.0;
+        float extra_activity_new = 0.0;
+        float explosive_activity_new = 0.0;
         float previous_activity = 0.0;
         float previous_turn_activity = 0.0;
         time_point current_turn = calendar::turn_zero;
@@ -24,6 +32,7 @@ class activity_tracker
     public:
         int tracker = 0;
         int intake = 0;
+        int output = 0;
         // Logs activity level. If called multiple times in one turn, will preserve the highest.
         void log_activity( float new_level );
         // Informs the tracker that a new turn has started.

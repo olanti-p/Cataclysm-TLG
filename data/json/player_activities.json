@@ -299,13 +299,6 @@
     "based_on": "speed"
   },
   {
-    "id": "ACT_DISMEMBER",
-    "type": "activity_type",
-    "activity_level": "ACTIVE_EXERCISE",
-    "verb": "dismembering",
-    "based_on": "speed"
-  },
-  {
     "id": "ACT_DISSECT",
     "type": "activity_type",
     "activity_level": "LIGHT_EXERCISE",
@@ -405,7 +398,7 @@
   {
     "id": "ACT_PULP",
     "type": "activity_type",
-    "activity_level": "EXTRA_EXERCISE",
+    "activity_level": "EXPLOSIVE_EXERCISE",
     "verb": "smashing",
     "based_on": "neither",
     "can_resume": false

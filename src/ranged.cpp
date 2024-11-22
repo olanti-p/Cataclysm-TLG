@@ -1348,6 +1348,8 @@ dealt_projectile_attack Character::throw_item( const tripoint &target, const ite
     const units::mass weight = to_throw.weight();
     const std::optional<int> throw_assist = character_throw_assist( *this );
 
+    // Set activity level to 12 * str_ratio, with 12 being max (EXPLOSIVE_EXERCISE)
+    // This ratio should never be below 0 and above 1
     if( !throw_assist ) {
         const int stamina_cost = get_standard_stamina_cost( &thrown );
         mod_stamina( stamina_cost + throwing_skill );
@@ -1477,7 +1479,10 @@ dealt_projectile_attack Character::throw_item( const tripoint &target, const ite
     // Reset last target pos
     last_target_pos = std::nullopt;
     recoil = MAX_RECOIL;
-
+    // MLB pitchers can throw around 100 times a day. We can be a bit more generous since
+    // we're not giving the player the ability to gently toss items instead.
+    const float str_ratio = static_cast<float>( weight / 3000.0_gram ) / str_cur;
+    set_activity_level( 12 * std::clamp( str_ratio, 0.5f, 1.0f ) );
     return dealt_attack;
 }
 
@@ -1504,6 +1509,7 @@ void practice_archery_proficiency( Character &p, const item &relevant )
         // 90s/arrow / 2.5turns/arrow = 36s/turn. It is important to note, this is 200 arrows pre-focus.
         time_duration prof_exp = 36_seconds;
 
+        // TODO: Jsonize tiered proficiencies like this one.
         // We don't know how to handle a bow yet
         if( !p.has_proficiency( proficiency_prof_bow_basic ) ) {
             p.practice_proficiency( proficiency_prof_bow_basic, prof_exp );
@@ -1525,10 +1531,10 @@ void practice_archery_proficiency( Character &p, const item &relevant )
 // Apply stamina cost to archery which decreases due to proficiency
 static void mod_stamina_archery( Character &you, const item &relevant )
 {
-    // Set activity level to 10 * str_ratio, with 10 being max (EXTRA_EXERCISE)
+    // Set activity level to 12 * str_ratio, with 10 being max (EXPLOSIVE_EXERCISE)
     // This ratio should never be below 0 and above 1
     const float str_ratio = static_cast<float>( relevant.get_min_str() ) / you.str_cur;
-    you.set_activity_level( 10 * str_ratio );
+    you.set_activity_level( 12 * std::min( 1.0f, str_ratio ) );
 
     // Calculate stamina drain based on archery, athletics skill, and effective bow strength ratio
     const float archery_skill = you.get_skill_level( skill_archery );
