@@ -129,11 +129,11 @@ void activity_tracker::new_turn( bool sleeping )
         previous_turn_activity = current_activity;
         current_activity = base_activity_level;
         accumulated_activity = 0.0f;
-        moderate_activity = 0.0f;
+        brisk_activity = 0.0f;
         active_activity = 0.0f;
         extra_activity = 0.0f;
         explosive_activity = 0.0f;
-        moderate_activity_new = 0.0f;
+        brisk_activity_new = 0.0f;
         active_activity_new = 0.0f;
         extra_activity_new = 0.0f;
         explosive_activity_new = 0.0f;
@@ -144,8 +144,8 @@ void activity_tracker::new_turn( bool sleeping )
         // High-impact activity is less efficient in terms of weariness over time.
         // Because the system is just kcal spent = weariness, we need to track strenous
         // activity separately and apply a malus to weariness later in suffer.cpp.
-        if( current_activity == MODERATE_EXERCISE ) {
-            moderate_activity += current_activity;
+        if( current_activity == BRISK_EXERCISE ) {
+            brisk_activity += current_activity;
         }
         if( current_activity == ACTIVE_EXERCISE ) {
             active_activity += current_activity;
@@ -161,10 +161,10 @@ void activity_tracker::new_turn( bool sleeping )
         if( num_turns > 1 ) {
             accumulated_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
             //
-            if( moderate_activity > moderate_activity_new ) {
-                moderate_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
-                tracker += std::max( 0.0f, ( moderate_activity - moderate_activity_new ) * 8.0f );
-                moderate_activity_new = moderate_activity;
+            if( brisk_activity > brisk_activity_new ) {
+                brisk_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
+                tracker += std::max( 0.0f, ( brisk_activity - brisk_activity_new ) * 12.5f );
+                brisk_activity_new = brisk_activity;
             }
             if( active_activity > active_activity_new ) {
                 active_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
@@ -178,7 +178,7 @@ void activity_tracker::new_turn( bool sleeping )
             }
             if( explosive_activity > explosive_activity_new ) {
                 explosive_activity += ( num_turns - 1 ) * std::min( NO_EXERCISE, current_activity );
-                tracker += std::max( 0.0f, ( explosive_activity - explosive_activity_new ) * 240.0f );
+                tracker += std::max( 0.0f, ( explosive_activity - explosive_activity_new ) * 120.0f );
                 explosive_activity_new = explosive_activity;
             }
             num_events += num_turns - 1;

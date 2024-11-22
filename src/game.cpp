@@ -220,6 +220,7 @@ static const damage_type_id damage_bash( "bash" );
 static const damage_type_id damage_cut( "cut" );
 
 static const efftype_id effect_adrenaline_mycus( "adrenaline_mycus" );
+static const efftype_id effect_airborne( "airborne" );
 static const efftype_id effect_asked_to_train( "asked_to_train" );
 static const efftype_id effect_blind( "blind" );
 static const efftype_id effect_bouldering( "bouldering" );
@@ -11682,6 +11683,7 @@ bool game::fling_creature( Creature *c, const units::angle &dir, float flvel, bo
     int range = flvel / 10;
     tripoint pt = c->pos();
     creature_tracker &creatures = get_creature_tracker();
+    c->add_effect( effect_airborne, 1_turns );
     while( range > 0 ) {
         c->underwater = false;
         // TODO: Check whenever it is actually in the viewport
@@ -11756,6 +11758,9 @@ bool game::fling_creature( Creature *c, const units::angle &dir, float flvel, bo
             break;
         }
         range--;
+        if( range == 1 ) {
+            c->remove_effect( effect_airborne );
+        }
         if( animate && ( seen || u.sees( *c ) ) ) {
             invalidate_main_ui_adaptor();
             inp_mngr.pump_events();
