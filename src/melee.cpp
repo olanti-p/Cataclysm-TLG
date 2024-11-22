@@ -616,8 +616,8 @@ bool Character::melee_attack_abstract( Creature &t, bool allow_special,
         }
     }
 
-    // Fighting is as strenuous as it gets. Combat actions almost always take just a second or
-    // two, so we use EXPLOSIVE_EXERCISE to better simulate the exhausting effects of fighting.
+    // Fighting is as strenuous as it gets. Melee actions almost always take just a second or
+    // two, so we use EXPLOSIVE_EXERCISE to better simulate the exhausting effects of combat.
     set_activity_level( EXPLOSIVE_EXERCISE );
 
     item_location cur_weapon = allow_unarmed ? used_weapon() : get_wielded_item();

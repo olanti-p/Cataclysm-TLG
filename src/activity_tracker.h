@@ -12,11 +12,11 @@ class activity_tracker
     private:
         float current_activity = 0.0;
         float accumulated_activity = 0.0;
-        float moderate_activity = 0.0;
+        float brisk_activity = 0.0;
         float active_activity = 0.0;
         float extra_activity = 0.0;
         float explosive_activity = 0.0;
-        float moderate_activity_new = 0.0;
+        float brisk_activity_new = 0.0;
         float active_activity_new = 0.0;
         float extra_activity_new = 0.0;
         float explosive_activity_new = 0.0;
@@ -30,6 +30,7 @@ class activity_tracker
         // Semi-consecutive 5 minute ticks of low activity (or 2.5 if we're sleeping). Float to handle mixed cases.
         float low_activity_ticks = 0.0f;
     public:
+        // Tracker is the amount of weariness we're applying. Intake and output are kcals absorbed/burned.
         int tracker = 0;
         int intake = 0;
         int output = 0;
