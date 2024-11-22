@@ -1630,6 +1630,7 @@ avatar::daily_calories::daily_calories()
     activity_levels.emplace( BRISK_EXERCISE, 0 );
     activity_levels.emplace( ACTIVE_EXERCISE, 0 );
     activity_levels.emplace( EXTRA_EXERCISE, 0 );
+    activity_levels.emplace( EXPLOSIVE_EXERCISE, 0 );
 }
 
 void avatar::daily_calories::serialize( JsonOut &json ) const
@@ -1695,7 +1696,7 @@ std::string avatar::total_daily_calories_string() const
     const std::string header_string =
         colorize( "       Minutes at each exercise level                  Calories per day",
                   c_white ) + "\n" +
-        colorize( "  Day  Sleep None Light Moderate Brisk Active Extra    Gained  Spent  Total",
+        colorize( "  Day  Sleep - Light Moderate Brisk Active Extra Explosive    Gained  Spent  Total",
                   c_yellow ) + "\n";
     const std::string format_string =
         " %4d  %4d   %4d  %4d     %4d  %4d   %4d  %4d    %6d %6d";
@@ -1705,7 +1706,8 @@ std::string avatar::total_daily_calories_string() const
     const float mod_ex_thresh = ( LIGHT_EXERCISE + MODERATE_EXERCISE ) / 2.0f;
     const float brisk_ex_thresh = ( MODERATE_EXERCISE + BRISK_EXERCISE ) / 2.0f;
     const float active_ex_thresh = ( BRISK_EXERCISE + ACTIVE_EXERCISE ) / 2.0f;
-    const float extra_ex_thresh = ( ACTIVE_EXERCISE + EXTRA_EXERCISE ) / 2.0f;
+    const float extra_ex_thresh = ( ACTIVE_EXERCISE + ( EXTRA_EXERCISE ) ) / 2.0f;
+    const float explosive_ex_thresh = ( EXTRA_EXERCISE + ( EXPLOSIVE_EXERCISE ) ) / 2.0f;
 
     std::string ret = header_string;
 
@@ -1722,6 +1724,7 @@ std::string avatar::total_daily_calories_string() const
         int brisk_exercise = 0;
         int active_exercise = 0;
         int extra_exercise = 0;
+        int explosive_exercise = 0;
         for( const std::pair<const float, int> &level : day.activity_levels ) {
             if( level.second > 0 ) {
                 if( level.first < no_ex_thresh ) {
@@ -1736,8 +1739,11 @@ std::string avatar::total_daily_calories_string() const
                     brisk_exercise += level.second;
                 } else if( level.first < extra_ex_thresh ) {
                     active_exercise += level.second;
-                } else {
+                } else if( level.first < explosive_ex_thresh ) {
                     extra_exercise += level.second;
+                } else {
+                    explosive_exercise += level.second;
+
                 }
             }
         }
@@ -1749,6 +1755,7 @@ std::string avatar::total_daily_calories_string() const
                                               5 * brisk_exercise,
                                               5 * active_exercise,
                                               5 * extra_exercise,
+                                              5 * explosive_exercise,
                                               day.gained, day.spent );
         // Alternate gray and white text for row data
         if( day_offset % 2 == 0 ) {

@@ -51,7 +51,7 @@ enum class butcher_type : int {
     FIELD_DRESS,    // field dressing a corpse
     SKIN,           // skinning a corpse
     QUARTER,        // quarter a corpse
-    DISMEMBER,      // destroy a corpse
+    // DISMEMBER,      // destroy a corpse
     DISSECT,        // dissect a corpse for CBMs
     NUM_TYPES       // always keep at the end, number of butchery types
 };

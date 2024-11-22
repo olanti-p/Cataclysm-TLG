@@ -126,6 +126,8 @@ static const json_character_flag json_flag_PAIN_IMMUNE( "PAIN_IMMUNE" );
 static const json_character_flag json_flag_RAD_DETECT( "RAD_DETECT" );
 static const json_character_flag json_flag_SUNBURN( "SUNBURN" );
 
+static const limb_score_id limb_score_breathing( "breathing" );
+
 static const trait_id trait_ADDICTIVE( "ADDICTIVE" );
 static const trait_id trait_ASTHMA( "ASTHMA" );
 static const trait_id trait_CHAOTIC( "CHAOTIC" );
@@ -334,13 +336,13 @@ void suffer::while_grabbed( Character &you )
     creature_tracker &creatures = get_creature_tracker();
     int crowd = 0;
     int impassable_ter = 0;
-    // Medium size characters == 3.
+    // Medium size == 3.
     int your_size = static_cast<std::underlying_type_t<creature_size>>( you.get_size() );
     int crush_grabs_req = your_size - 1;
-    // Minimum of 1 grabber required.
-    crush_grabs_req = std::max( 1, crush_grabs_req );
+    // Minimum of 2 grabbers required.
+    crush_grabs_req = std::max( 2, crush_grabs_req );
 
-    int crush_resist = 0;
+    int crush_resist = 5;
     for( auto&& dest : here.points_in_radius( you.pos(), 1, 0 ) ) { // *NOPAD*
         const monster *const mon = creatures.creature_at<monster>( dest );
         if( mon ) {
@@ -372,17 +374,23 @@ void suffer::while_grabbed( Character &you )
 
     // 5% chance to resist, with bonuses under certain conditions.
     // Standing up and unencumbered is a good start. So is being able to breathe through your extremities.
-    // Todo: Add exception for power armor, snail shell if retracted.
-    if( !you.has_effect( effect_downed ) && !you.is_prone() ) {
-        crush_resist += 1;
+    // Hiding in your shell is extremely helpful.
+    // Todo: Plate armor should help. Space suits and power armor should offer total immunity.
+    if( ( you.has_effect( effect_downed ) || you.is_prone() ) &&
+        !you.has_trait( trait_SLIMESPAWNER ) ) {
+        crush_resist -= 4;
     }
-    if( 100 * ( you.weight_carried() / you.weight_capacity() ) <= 25 ) {
-        crush_resist += 1;
+    if( 100 * ( you.weight_carried() / you.weight_capacity() ) > 75 ) {
+        crush_resist -= 4;
     }
-    if( you.has_trait( trait_SLIMESPAWNER ) || you.has_trait( trait_TRANSPIRATION ) ) {
-        crush_resist += 1;
+    if( you.has_trait( trait_TRANSPIRATION ) || you.has_trait( trait_SLIMESPAWNER ) ) {
+        crush_resist += 4;
     }
-    if( crowd == crush_grabs_req ) {
+    if( you.has_active_mutation( trait_SHELL2 ) || you.has_active_mutation( trait_SHELL3 ) ) {
+        crush_resist += 20;
+    }
+    if( crowd == crush_grabs_req &&
+        rng( 1, ( 100 + ( 100 - you.get_limb_score( limb_score_breathing ) ) ) ) <= crush_resist ) {
         // only a chance to lose breath at minimum grabs
         you.oxygen -= rng( 0, 1 );
     } else if( crowd <= crush_grabs_req * 2 ) {
@@ -403,7 +411,7 @@ void suffer::while_grabbed( Character &you )
         you.apply_damage( nullptr, you.get_random_body_part_of_type( body_part_type::type::torso ), rng( 1,
                           4 ) );
     } else if( you.oxygen <= 15 ) {
-        you.add_msg_if_player( m_bad, _( "You're being crushed beneath your attackers!" ) );
+        you.add_msg_if_player( m_bad, _( "You're being crushed!" ) );
     } else if( you.oxygen <= 25 ) {
         you.add_msg_if_player( m_bad, _( "You're having difficulty breathing!" ) );
     }

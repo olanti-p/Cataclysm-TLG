@@ -486,15 +486,16 @@ std::pair<std::string, nc_color> display::weary_malus_text_color( const Characte
 
 std::string display::activity_level_str( float level )
 {
-    static const std::array<translation, 6> activity_descriptions { {
+    static const std::array<translation, 7> activity_descriptions { {
             to_translation( "activity description", "None" ),
             to_translation( "activity description", "Light" ),
             to_translation( "activity description", "Moderate" ),
             to_translation( "activity description", "Brisk" ),
             to_translation( "activity description", "Active" ),
             to_translation( "activity description", "Extreme" ),
+            to_translation( "activity description", "Explosive" ),
         } };
-    // Activity levels are 1, 2, 4, 6, 8, 10
+    // Activity levels are 1, 2, 4, 6, 8, 10, 12
     // So we can easily cut them in half and round down for an index
     int idx = std::floor( level / 2 );
 
@@ -504,7 +505,8 @@ std::string display::activity_level_str( float level )
 std::string display::activity_malus_str( const Character &u )
 {
     const float act_level = u.instantaneous_activity_level();
-    const float exertion_mult = u.exertion_adjusted_move_multiplier( act_level ) ;
+    // Cap the move penalty at Extreme.
+    const float exertion_mult = u.exertion_adjusted_move_multiplier( act_level );
     const int malus_value = ( 1 / exertion_mult ) * 100 - 100;
     return string_format( "+%3d%%", malus_value );
 }

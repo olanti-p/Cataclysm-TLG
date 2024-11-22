@@ -140,11 +140,11 @@ void scenario::load( const JsonObject &jo, const std::string_view )
             optional( jocid, was_loaded, "year", _fall_of_civilization_year );
         }
         _default_fall_of_civilization = calendar::turn_zero +
-                                      1_hours * _fall_of_civilization_hour +
-                                      1_days * ( _fall_of_civilization_day - 1 ) +
-                                      1_days * get_option<int>( "SEASON_LENGTH" ) * _fall_of_civilization_season +
-                                      calendar::year_length() * ( _fall_of_civilization_year - 1 )
-                                      ;
+                                        1_hours * _fall_of_civilization_hour +
+                                        1_days * ( _fall_of_civilization_day - 1 ) +
+                                        1_days * get_option<int>( "SEASON_LENGTH" ) * _fall_of_civilization_season +
+                                        calendar::year_length() * ( _fall_of_civilization_year - 1 )
+                                        ;
 
         int _start_of_game_hour = 8;
         int _start_of_game_day = 61;

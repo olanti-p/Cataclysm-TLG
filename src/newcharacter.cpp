@@ -3132,7 +3132,8 @@ static std::string assemble_scenario_details( const avatar &u, const input_conte
 
     assembled += string_format(
                      _( "Press <color_light_green>%1$s</color> to change Cataclysm start date, <color_light_green>%2$s</color> to change fall of civilization date, <color_light_green>%3$s</color> to change game start date, <color_light_green>%4$s</color> to reset calendar." ),
-                     ctxt.get_desc( "CHANGE_START_OF_CATACLYSM" ), ctxt.get_desc( "CHANGE_FALL_OF_CIVILIZATION" ), ctxt.get_desc( "CHANGE_START_OF_GAME" ),
+                     ctxt.get_desc( "CHANGE_START_OF_CATACLYSM" ), ctxt.get_desc( "CHANGE_FALL_OF_CIVILIZATION" ),
+                     ctxt.get_desc( "CHANGE_START_OF_GAME" ),
                      ctxt.get_desc( "RESET_CALENDAR" ) ) + "\n";
     assembled += "\n" + colorize( _( "Scenario Story:" ), COL_HEADER ) + "\n";
     assembled += colorize( current_scenario->description( u.male ), c_green ) + "\n";
@@ -3445,10 +3446,9 @@ void set_scenario( tab_manager &tabs, avatar &u, pool_type pool )
                 scen = get_scenario();
             }
             scen->change_fall_of_civilization( calendar_ui::select_time_point( scen->fall_of_civilization(),
-                                             _( "Select fall of civilization date" ), calendar_ui::granularity::hour ) );
+                                               _( "Select fall of civilization date" ), calendar_ui::granularity::hour ) );
             details_recalc = true;
-        }        
-         else if( action == "CHANGE_START_OF_GAME" ) {
+        } else if( action == "CHANGE_START_OF_GAME" ) {
             const scenario *scen = sorted_scens[cur_id];
             if( cur_id != id_for_curr_description ) {
                 scen = get_scenario();
@@ -4335,7 +4335,7 @@ void set_description( tab_manager &tabs, avatar &you, const bool allow_reroll,
         } else if( action == "CHANGE_FALL_OF_CIVILIZATION" ) {
             const scenario *scen = get_scenario();
             scen->change_fall_of_civilization( calendar_ui::select_time_point( scen->fall_of_civilization(),
-                                        _( "Select fall of civilization date" ), calendar_ui::granularity::hour ) );
+                                               _( "Select fall of civilization date" ), calendar_ui::granularity::hour ) );
         } else if( action == "CHANGE_START_OF_GAME" ) {
             const scenario *scen = get_scenario();
             scen->change_start_of_game( calendar_ui::select_time_point( scen->start_of_game(),

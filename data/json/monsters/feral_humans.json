@@ -104,7 +104,13 @@
     "families": [ "prof_intro_biology", "prof_physiology" ],
     "dodge": 4,
     "vision_night": 15,
-    "special_attacks": [ { "id": "scratch", "min_mul": 0.5, "cooldown": 10 }, { "type": "bite", "min_mul": 0.7, "cooldown": 15 }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ], [ "EAT_CARRION", 250 ] ],
+    "special_attacks": [
+      { "id": "scratch", "min_mul": 0.5, "cooldown": 10 },
+      { "type": "bite", "min_mul": 0.7, "cooldown": 15 },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ],
+      [ "EAT_CARRION", 250 ]
+    ],
     "death_drops": "default_zombie_death_drops",
     "dissect": "dissect_troglobite_sample_small",
     "zombify_into": "mon_zombie_shady",
@@ -413,7 +419,9 @@
         "require_targeting_player": false,
         "description": "The feral prepper haphazardly fires their firearm!"
       },
-      { "id": "feral_weapon_feral_m9" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ]
+      { "id": "feral_weapon_feral_m9" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
     ],
     "death_drops": "mon_feral_prepper_death_drops",
     "zombify_into": "mon_zombie_survivor",
@@ -478,7 +486,9 @@
         "target_moving_vehicles": true,
         "description": "The mad militiaman fires their rifle!"
       },
-      { "id": "feral_weapon_feral_militia_gun" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ]
+      { "id": "feral_weapon_feral_militia_gun" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
     ],
     "death_drops": "mon_feral_militia_death_drops",
     "zombify_into": "mon_zombie_milbase_personnel",
@@ -535,7 +545,9 @@
         "target_moving_vehicles": true,
         "description": "The feral biker fires their shotgun!"
       },
-      { "id": "feral_weapon_shotgun_melee" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ]
+      { "id": "feral_weapon_shotgun_melee" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
     ],
     "death_drops": "mon_feral_jackboot_death_drops",
     "extend": { "flags": [ "CLIMBS" ] }
@@ -637,7 +649,9 @@
         "target_moving_vehicles": true,
         "description": "The feral officer fires their M18!"
       },
-      { "id": "feral_weapon_m18" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ]
+      { "id": "feral_weapon_m18" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
     ],
     "death_drops": "mon_feral_officer_death_drops",
     "zombify_into": "mon_zombie_officer",
@@ -694,7 +708,9 @@
         "ranges": [ [ 2, 5, "DEFAULT" ] ],
         "description": "The feral human throws a rock!"
       },
-      { "id": "feral_weapon_shovel" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ]
+      { "id": "feral_weapon_shovel" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
     ],
     "looks_like": "mon_feral_human_tool",
     "death_drops": "feral_archaelogist_death_drops"
