@@ -113,7 +113,7 @@ static const activity_id ACT_BUTCHER_FULL( "ACT_BUTCHER_FULL" );
 static const activity_id ACT_CONSUME_DRINK_MENU( "ACT_CONSUME_DRINK_MENU" );
 static const activity_id ACT_CONSUME_FOOD_MENU( "ACT_CONSUME_FOOD_MENU" );
 static const activity_id ACT_CONSUME_MEDS_MENU( "ACT_CONSUME_MEDS_MENU" );
-static const activity_id ACT_DISMEMBER( "ACT_DISMEMBER" );
+// static const activity_id ACT_DISMEMBER( "ACT_DISMEMBER" );
 static const activity_id ACT_DISSECT( "ACT_DISSECT" );
 static const activity_id ACT_EAT_MENU( "ACT_EAT_MENU" );
 static const activity_id ACT_FERTILIZE_PLOT( "ACT_FERTILIZE_PLOT" );
@@ -280,7 +280,7 @@ activity_handlers::do_turn_functions = {
     { ACT_FIELD_DRESS, butcher_do_turn },
     { ACT_SKIN, butcher_do_turn },
     { ACT_QUARTER, butcher_do_turn },
-    { ACT_DISMEMBER, butcher_do_turn },
+    // { ACT_DISMEMBER, butcher_do_turn },
     { ACT_DISSECT, butcher_do_turn },
     { ACT_TIDY_UP, tidy_up_do_turn },
     { ACT_TIDY_UP, tidy_up_do_turn },
@@ -306,7 +306,7 @@ activity_handlers::finish_functions = {
     { ACT_FIELD_DRESS, butcher_finish },
     { ACT_SKIN, butcher_finish },
     { ACT_QUARTER, butcher_finish },
-    { ACT_DISMEMBER, butcher_finish },
+    // { ACT_DISMEMBER, butcher_finish },
     { ACT_DISSECT, butcher_finish },
     { ACT_FISH, fish_finish },
     { ACT_PICKAXE, pickaxe_finish },
@@ -350,7 +350,7 @@ std::string enum_to_string<butcher_type>( butcher_type data )
 {
     switch( data ) {
     case butcher_type::BLEED: return "BLEED";
-    case butcher_type::DISMEMBER: return "DISMEMBER";
+    // case butcher_type::DISMEMBER: return "DISMEMBER";
     case butcher_type::DISSECT: return "DISSECT";
     case butcher_type::FIELD_DRESS: return "FIELD_DRESS";
     case butcher_type::FULL: return "FULL";
@@ -725,12 +725,12 @@ int butcher_time_to_cut( Character &you, const item &corpse_item, const butcher_
                 time_to_cut = 1200;
             }
             break;
-        case butcher_type::DISMEMBER:
-            time_to_cut /= 10;
-            if( time_to_cut < 600 ) {
-                time_to_cut = 600;
-            }
-            break;
+        // case butcher_type::DISMEMBER:
+        //     time_to_cut /= 10;
+        //     if( time_to_cut < 600 ) {
+        //         time_to_cut = 600;
+        //     }
+        //     break;
         case butcher_type::DISSECT:
             time_to_cut *= 6;
             break;
@@ -1003,14 +1003,14 @@ static bool butchery_drops_harvest( item *corpse_item, const mtype &mt, Characte
                 continue;
             }
         }
-        // RIP AND TEAR
-        if( action == butcher_type::DISMEMBER ) {
-            if( entry.type == harvest_drop_flesh ) {
-                roll /= 6;
-            } else {
-                continue;
-            }
-        }
+        // // RIP AND TEAR
+        // if( action == butcher_type::DISMEMBER ) {
+        //     if( entry.type == harvest_drop_flesh ) {
+        //         roll /= 6;
+        //     } else {
+        //         continue;
+        //     }
+        // }
         // field dressing ignores skin, flesh, and blood
         if( action == butcher_type::FIELD_DRESS ) {
             if( entry.type == harvest_drop_bone ) {
@@ -1088,8 +1088,14 @@ static bool butchery_drops_harvest( item *corpse_item, const mtype &mt, Characte
 
             const translation msg = action == butcher_type::FIELD_DRESS ?
                                     entry.type->field_dress_msg( roll > 0 ) :
-                                    action == butcher_type::QUICK || action == butcher_type::FULL ||
-                                    action == butcher_type::DISMEMBER ? entry.type->butcher_msg( roll > 0 ) : translation();
+                                    action == butcher_type::QUICK ||
+                                    action == butcher_type::FULL ? entry.type->butcher_msg( roll > 0 ) : translation();
+
+            // const translation msg = action == butcher_type::FIELD_DRESS ?
+            //                         entry.type->field_dress_msg( roll > 0 ) :
+            //                         action == butcher_type::QUICK || action == butcher_type::FULL ||
+            //                         action == butcher_type::DISMEMBER ? entry.type->butcher_msg( roll > 0 ) : translation();
+
             if( !msg.empty() ) {
                 you.add_msg_if_player( m_bad, msg.translated() );
             }
@@ -1267,9 +1273,10 @@ void activity_handlers::butcher_finish( player_activity *act, Character *you )
         action = butcher_type::BLEED;
     } else if( act->id() == ACT_SKIN ) {
         action = butcher_type::SKIN;
-    } else if( act->id() == ACT_DISMEMBER ) {
-        action = butcher_type::DISMEMBER;
     }
+    // } else if( act->id() == ACT_DISMEMBER ) {
+    //     action = butcher_type::DISMEMBER;
+    // }
 
     // index is a bool that determines if we are ready to start the next target
     if( act->index ) {
@@ -1293,9 +1300,9 @@ void activity_handlers::butcher_finish( player_activity *act, Character *you )
     }
 
     map &here = get_map();
-    if( action == butcher_type::DISMEMBER ) {
-        here.add_splatter( type_gib, you->pos(), rng( corpse->size + 2, ( corpse->size + 1 ) * 2 ) );
-    }
+    // if( action == butcher_type::DISMEMBER ) {
+    //     here.add_splatter( type_gib, you->pos(), rng( corpse->size + 2, ( corpse->size + 1 ) * 2 ) );
+    // }
 
     // all action types - yields
     if( !butchery_drops_harvest( &corpse_item, *corpse, *you, action ) ) {
@@ -1381,15 +1388,15 @@ void activity_handlers::butcher_finish( player_activity *act, Character *you )
                 act->targets.pop_back();
             }
             break;
-        case butcher_type::DISMEMBER:
-            add_msg( m_good, SNIPPET.random_from_category( "harvest_drop_default_dismember" ).value_or(
-                         translation() ).translated() );
-            // Remove the target from the map
-            target.remove_item();
-            if( !act->targets.empty() ) {
-                act->targets.pop_back();
-            }
-            break;
+        // case butcher_type::DISMEMBER:
+        //     add_msg( m_good, SNIPPET.random_from_category( "harvest_drop_default_dismember" ).value_or(
+        //                  translation() ).translated() );
+        //     // Remove the target from the map
+        //     target.remove_item();
+        //     if( !act->targets.empty() ) {
+        //         act->targets.pop_back();
+        //     }
+        //     break;
         case butcher_type::DISSECT:
             add_msg( m_good, SNIPPET.random_from_category( "harvest_drop_default_dissect_success" ).value_or(
                          translation() ).translated() );

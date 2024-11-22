@@ -194,7 +194,7 @@
 static const activity_id ACT_BLEED( "ACT_BLEED" );
 static const activity_id ACT_BUTCHER( "ACT_BUTCHER" );
 static const activity_id ACT_BUTCHER_FULL( "ACT_BUTCHER_FULL" );
-static const activity_id ACT_DISMEMBER( "ACT_DISMEMBER" );
+// static const activity_id ACT_DISMEMBER( "ACT_DISMEMBER" );
 static const activity_id ACT_DISSECT( "ACT_DISSECT" );
 static const activity_id ACT_FIELD_DRESS( "ACT_FIELD_DRESS" );
 static const activity_id ACT_PULP( "ACT_PULP" );
@@ -9481,14 +9481,14 @@ static void butcher_submenu( const std::vector<map_stack::iterator> &corpses, in
                                           "skin, hide, pelt, etc., so don't use it if you want to "
                                           "harvest them later." ),
                                        msgFactor ) );
-    smenu.addentry_col( static_cast<int>( butcher_type::DISMEMBER ), true,
-                        'm', _( "Dismember corpse" ),
-                        cut_time( butcher_type::DISMEMBER ),
-                        string_format( "%s  %s",
-                                       _( "If you're aiming to just destroy a body outright and don't "
-                                          "care about harvesting it, dismembering it will hack it apart "
-                                          "in a very short amount of time but yields little to no usable flesh." ),
-                                       msgFactor ) );
+    // smenu.addentry_col( static_cast<int>( butcher_type::DISMEMBER ), true,
+    //                     'm', _( "Dismember corpse" ),
+    //                     cut_time( butcher_type::DISMEMBER ),
+    //                     string_format( "%s  %s",
+    //                                    _( "If you're aiming to just destroy a body outright and don't "
+    //                                       "care about harvesting it, dismembering it will hack it apart "
+    //                                       "in a very short amount of time but yields little to no usable flesh." ),
+    //                                    msgFactor ) );
     smenu.addentry_col( static_cast<int>( butcher_type::DISSECT ), enough_light,
                         'd', _( "Dissect corpse" ),
                         enough_light ? cut_time( butcher_type::DISSECT ) : cannot_see,
@@ -9519,9 +9519,9 @@ static void butcher_submenu( const std::vector<map_stack::iterator> &corpses, in
         case static_cast<int>( butcher_type::QUARTER ):
             player_character.assign_activity( ACT_QUARTER, 0, true );
             break;
-        case static_cast<int>( butcher_type::DISMEMBER ):
-            player_character.assign_activity( ACT_DISMEMBER, 0, true );
-            break;
+        // case static_cast<int>( butcher_type::DISMEMBER ):
+        //     player_character.assign_activity( ACT_DISMEMBER, 0, true );
+        //     break;
         case static_cast<int>( butcher_type::DISSECT ):
             player_character.assign_activity( ACT_DISSECT, 0, true );
             break;
