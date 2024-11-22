@@ -1971,7 +1971,7 @@ void Character::on_try_dodge()
     const float dodge_skill_modifier = ( 20.0f - get_skill_level( skill_dodge ) ) / 20.0f;
     burn_energy_legs( std::floor( static_cast<float>( base_burn_rate ) * 6.0f *
                                   dodge_skill_modifier ) );
-    set_activity_level( EXTRA_EXERCISE );
+    set_activity_level( EXPLOSIVE_EXERCISE );
 }
 
 void Character::on_dodge( Creature *source, float difficulty, float training_level )
@@ -2560,7 +2560,9 @@ void Character::process_turn()
             }
             grab_1.clear();
         } else {
-            burn_energy_arms( -400 );
+            // TODO: Move stamina cost to creature escape attempts, incorporate relative size etc.
+            set_activity_level( EXPLOSIVE_EXERCISE );
+            burn_energy_arms( -300 );
         }
     }
     effect_on_conditions::process_effect_on_conditions( *this );
@@ -4528,7 +4530,7 @@ std::string Character::debug_weary_info() const
 {
     int amt = activity_history.weariness();
     std::string max_act = activity_level_str( maximum_exertion_level() );
-    float move_mult = exertion_adjusted_move_multiplier( EXTRA_EXERCISE );
+    float move_mult = exertion_adjusted_move_multiplier( EXPLOSIVE_EXERCISE );
 
     int bmr = base_bmr();
     std::string weary_internals = activity_history.debug_weary_info();
@@ -5038,16 +5040,18 @@ float Character::maximum_exertion_level() const
 {
     switch( weariness_level() ) {
         case 0:
-            return EXTRA_EXERCISE;
+            return EXPLOSIVE_EXERCISE;
         case 1:
-            return ACTIVE_EXERCISE;
+            return EXTRA_EXERCISE;
         case 2:
-            return BRISK_EXERCISE;
+            return ACTIVE_EXERCISE;
         case 3:
-            return MODERATE_EXERCISE;
+            return BRISK_EXERCISE;
         case 4:
-            return LIGHT_EXERCISE;
+            return MODERATE_EXERCISE;
         case 5:
+            return LIGHT_EXERCISE;
+        case 6:
         default:
             return NO_EXERCISE;
     }
@@ -5061,7 +5065,7 @@ float Character::exertion_adjusted_move_multiplier( float level ) const
     if( level <= 0 ) {
         level = activity_history.activity( in_sleep_state() );
     }
-    const float max = maximum_exertion_level();
+    const float max = maximum_exertion_level() - 1;
     if( level < max ) {
         return 1.0f;
     }
@@ -5075,7 +5079,7 @@ float Character::instantaneous_activity_level() const
 
 int Character::activity_level_index() const
 {
-    // Activity levels are 1, 2, 4, 6, 8, 10
+    // Activity levels are 1, 2, 4, 6, 8, 10, 12
     // So we can easily cut them in half and round down for an index
     return std::floor( instantaneous_activity_level() / 2 );
 }
@@ -5525,7 +5529,7 @@ void Character::check_needs_extremes()
                 }
             } else if( sleep_deprivation < SLEEP_DEPRIVATION_MAJOR ) {
                 add_msg_if_player( m_bad,
-                                   _( "Your mind feels weary, and you dread every wakeful minute that passes.  You crave sleep, and feel like you're about to collapse." ) );
+                                   _( "Your mind feels hazy, and you dread every wakeful minute that passes.  You crave sleep, and feel like you're about to collapse." ) );
                 mod_fatigue( 10 );
 
                 if( one_in( 5 ) ) {
@@ -6326,7 +6330,7 @@ float Character::rest_quality() const
             rest += 0.2f;
         }
     }
-    // These stack!
+    // These stack! For that reason we don't include explosive_exercise.
     if( activity_level() >= BRISK_EXERCISE ) {
         rest -= 0.1f;
     }
@@ -11444,8 +11448,9 @@ void Character::process_effects()
         if( is_crouching() ) {
             rolls--;
         }
-        if( ( is_running() && !has_effect( effect_quadruped_full ) ) || ( ( worn_with_flag( flag_ROLLER_ONE ) || worn_with_flag( flag_ROLLER_INLINE ) ||
-                                worn_with_flag( flag_ROLLER_QUAD ) ) && !has_trait( trait_PROF_SKATER ) ) ) {
+        if( ( is_running() && !has_effect( effect_quadruped_full ) ) ||
+            ( ( worn_with_flag( flag_ROLLER_ONE ) || worn_with_flag( flag_ROLLER_INLINE ) ||
+                worn_with_flag( flag_ROLLER_QUAD ) ) && !has_trait( trait_PROF_SKATER ) ) ) {
             rolls++;
         }
         // Slimy people are used to everything being slippery.

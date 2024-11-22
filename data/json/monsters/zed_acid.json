@@ -32,7 +32,13 @@
         "spell_data": { "id": "acid_barf", "min_level": 4 },
         "monster_message": "The %s barfs acid!",
         "cooldown": 10,
-        "condition": { "and": [ { "u_has_flag": "grab_filter" }, { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+        "condition": {
+          "and": [
+            { "u_has_flag": "grab_filter" },
+            { "not": { "u_is_underwater": "true" } },
+            { "not": { "npc_is_underwater": "true" } }
+          ]
+        }
       },
       { "id": "grab", "cooldown": 4 }
     ],
@@ -98,7 +104,10 @@
       }
     ],
     "death_drops": "default_zombie_death_drops",
-    "death_function": { "message": "The %s bursts apart in a shower of acid!", "effect": { "id": "acid_burst", "hit_self": true, "min_level": 6 } },
+    "death_function": {
+      "message": "The %s bursts apart in a shower of acid!",
+      "effect": { "id": "acid_burst", "hit_self": true, "min_level": 6 }
+    },
     "burn_into": "mon_zombie_scorched",
     "fungalize_into": "mon_zombie_fungus_acidic",
     "flags": [
@@ -218,7 +227,13 @@
         "spell_data": { "id": "acid_barf", "min_level": 3 },
         "monster_message": "The %s pukes acid!",
         "cooldown": 10,
-        "condition": { "and": [ { "u_has_flag": "grab_filter" }, { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+        "condition": {
+          "and": [
+            { "u_has_flag": "grab_filter" },
+            { "not": { "u_is_underwater": "true" } },
+            { "not": { "npc_is_underwater": "true" } }
+          ]
+        }
       }
     ],
     "death_drops": "default_zombie_death_drops",
@@ -273,14 +288,20 @@
     "grab_strength": 20,
     "special_attacks": [
       { "id": "bite_grab", "attack_upper": false, "cooldown": 5 },
-        {
-          "type": "spell",
-          "spell_data": { "id": "acid_barf", "min_level": 3 },
-          "monster_message": "The %s barfs acid!",
-          "cooldown": 10,
-          "condition": { "and": [ { "u_has_flag": "grab_filter" }, { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
-        },
-        { "id": "scratch_grab_required", "attack_upper": false }
+      {
+        "type": "spell",
+        "spell_data": { "id": "acid_barf", "min_level": 3 },
+        "monster_message": "The %s barfs acid!",
+        "cooldown": 10,
+        "condition": {
+          "and": [
+            { "u_has_flag": "grab_filter" },
+            { "not": { "u_is_underwater": "true" } },
+            { "not": { "npc_is_underwater": "true" } }
+          ]
+        }
+      },
+      { "id": "scratch_grab_required", "attack_upper": false }
     ],
     "death_drops": "mon_dog_death_drops",
     "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
@@ -327,13 +348,22 @@
         "spell_data": { "id": "acid_barf", "min_level": 6 },
         "monster_message": "The %s barfs acid!",
         "cooldown": 10,
-        "condition": { "and": [ { "u_has_flag": "grab_filter" }, { "not": { "u_is_underwater": "true" } }, { "not": { "npc_is_underwater": "true" } } ] }
+        "condition": {
+          "and": [
+            { "u_has_flag": "grab_filter" },
+            { "not": { "u_is_underwater": "true" } },
+            { "not": { "npc_is_underwater": "true" } }
+          ]
+        }
       },
       { "id": "bite_grab", "cooldown": 5, "min_mul": 0.75, "max_mul": 1.5 },
       { "id": "scratch_grab_required", "min_mul": 0.75, "max_mul": 1.5 }
     ],
     "bleed_rate": 50,
     "proportional": { "hp": 1.8, "speed": 1.3, "volume": 1.4, "weigth": 1.1 },
-    "death_function": { "message": "The %s bursts apart in a shower of acid!", "effect": { "id": "acid_burst", "hit_self": true, "min_level": 6 } }
+    "death_function": {
+      "message": "The %s bursts apart in a shower of acid!",
+      "effect": { "id": "acid_burst", "hit_self": true, "min_level": 6 }
+    }
   }
 ]
