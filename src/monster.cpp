@@ -1256,7 +1256,8 @@ bool monster::digs() const
 
 bool monster::flies() const
 {
-    return ( has_flag( mon_flag_FLIES ) && !has_effect_with_flag( json_flag_DISABLE_FLIGHT ) ) || has_effect( effect_airborne );
+    return ( has_flag( mon_flag_FLIES ) && !has_effect_with_flag( json_flag_DISABLE_FLIGHT ) ) ||
+           has_effect( effect_airborne );
 }
 
 bool monster::climbs() const
