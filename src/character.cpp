@@ -5067,7 +5067,7 @@ float Character::exertion_adjusted_move_multiplier( float level ) const
     if( level < max ) {
         return 1.0f;
     }
-    return max / std::min( 10.0f, level);
+    return max / std::min( 10.0f, level );
 }
 
 float Character::instantaneous_activity_level() const
