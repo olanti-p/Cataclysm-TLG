@@ -262,7 +262,7 @@ bool Character::handle_melee_wear( item_location shield, float wear_multiplier )
     if( shield->has_flag( flag_DURABLE_MELEE ) ) {
         damage_chance *= 4;
     }
-
+    
     if( damage_chance > 0 && !one_in( damage_chance ) ) {
         return false;
     }
@@ -932,8 +932,14 @@ bool Character::melee_attack_abstract( Creature &t, bool allow_special,
         }
     }
 
-    if( !t.is_hallucination() ) {
-        handle_melee_wear( cur_weapon );
+    if( hits && !t.is_hallucination() ) {
+        if( !cur_weapon->is_soft() ) {
+            handle_melee_wear( cur_weapon );
+            // You are either hitting someone with a whip or kicking them while wearing a sock.
+            // Neither is especially bad for the item.
+        } else if( one_in( 4 ) ) {
+            handle_melee_wear( cur_weapon );
+        }
     }
 
     /** @EFFECT_MELEE reduces stamina cost of melee attacks */
