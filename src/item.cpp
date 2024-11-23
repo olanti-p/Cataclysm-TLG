@@ -8997,9 +8997,9 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     int num_parts_covered = get_covered_body_parts().count();
     // Acid spreads out to cover the surface of the item, ignoring this mitigation.
     if( !one_in( num_parts_covered ) && !du.type->env ) {
-        // Soft items are protected from bash damage in the same way the PLASTIC flag protects monsters.
+        // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
         if( du.type == damage_bash && is_soft() ) {
-            num_parts_covered = round( num_parts_covered * rng( 1.5, 1.25 ) );
+            num_parts_covered = round( num_parts_covered * 1.33 );
         }
         return armor_status::UNDAMAGED;
     }
@@ -9012,9 +9012,9 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     // attacks if we've gotten this far. Note that cut and bash roll separately, so it's really more than that
     // as most monster attacks do bash+cut.
     float damaged_chance = 0.1 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.06;
-    // Soft items are protected from bash damage in the same way the PLASTIC flag protects monsters.
+    // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
     if( du.type == damage_bash && is_soft() ) {
-        damaged_chance *= rng( 0.5, 0.75 );
+        damaged_chance *= 0.66;
     }
     if( post_mitigated_dmg > armors_own_resist ) {
         // handle overflow, if you take a lot of damage your armor should be damaged.

@@ -262,7 +262,7 @@ bool Character::handle_melee_wear( item_location shield, float wear_multiplier )
     if( shield->has_flag( flag_DURABLE_MELEE ) ) {
         damage_chance *= 4;
     }
-    
+
     if( damage_chance > 0 && !one_in( damage_chance ) ) {
         return false;
     }
