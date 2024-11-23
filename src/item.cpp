@@ -8997,26 +8997,36 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     int num_parts_covered = get_covered_body_parts().count();
     // Acid spreads out to cover the surface of the item, ignoring this mitigation.
     if( !one_in( num_parts_covered ) && !du.type->env ) {
+        // Soft items are protected from bash damage in the same way the PLASTIC flag protects monsters.
+        if( du.type == damage_bash && is_soft() ) {
+            num_parts_covered = round( num_parts_covered * rng( 1.5, 1.25 ) );
+        }
         return armor_status::UNDAMAGED;
     }
 
     // Don't damage armor as much when bypassed by armor piercing
     // Most armor piercing damage comes from bypassing armor, not forcing through
+    // Worm Note: That's literally the opposite of how armor piercing works??? FMJ is not "bypassing" anything.
     const float post_mitigated_dmg = du.amount;
-    // more gradual damage chance calc
-    float damaged_chance = 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1;
+    // Typical clothing (ie long-sleeved shirt, jeans) runs a 10-50% chance of getting damaged by basic zombie
+    // attacks if we've gotten this far. Note that cut and bash roll separately, so it's really more than that
+    // as most monster attacks do bash+cut.
+    float damaged_chance = 0.1 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.06;
+    // Soft items are protected from bash damage in the same way the PLASTIC flag protects monsters.
+    if( du.type == damage_bash && is_soft() ) {
+        damaged_chance *= rng( 0.5, 0.75 );
+    }
     if( post_mitigated_dmg > armors_own_resist ) {
-        // handle overflow, if you take a lot of damage your armor should be damaged
+        // handle overflow, if you take a lot of damage your armor should be damaged.
         if( damaged_chance >= 1.0 ) {
             return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
         }
-        float roll_damaged_chance = 1.0 / ( 1.0 - damaged_chance );
-        if( one_in( roll_damaged_chance ) ) {
+        if( x_in_y( damaged_chance, 1.0f ) ) {
             return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
         }
     } else {
-        // Sturdy items and power armors never take chip damage.
-        // Other armors have 0.5% of getting damaged from hits below their armor value.
+        // Having passed all the above tests, we now roll for chip damage at a fixed 0.5% chance, even if
+        // the armor blocked all the damage. Sturdy items and power armors never take chip damage.
         if( has_flag( flag_STURDY ) || is_power_armor() || !one_in( 200 ) ) {
             return armor_status::UNDAMAGED;
         }
