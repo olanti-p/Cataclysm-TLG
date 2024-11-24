@@ -62,7 +62,7 @@
     "//": "Steady stream of thick smoke (example: smoke bomb)",
     "field": "fd_smoke",
     "intensity": 3,
-    "qty": 24
+    "qty": 22
   },
   {
     "id": "emit_tear_gas_stream",
@@ -94,7 +94,7 @@
     "//": "Slow infrequent leak of toxic gas (example: bloated zombie movement)",
     "field": "fd_toxic_gas",
     "intensity": 3,
-    "chance": 15
+    "chance": 12
   },
   {
     "id": "emit_toxic_stream",
@@ -102,7 +102,16 @@
     "//": "Steady stream of toxic gas",
     "field": "fd_toxic_gas",
     "intensity": 3,
-    "qty": 24
+    "qty": 18
+  },
+  {
+    "id": "emit_toxic_stream_reduced",
+    "type": "emit",
+    "//": "Less frequent stream of tox gas (used by nuckalavee)",
+    "field": "fd_toxic_gas",
+    "intensity": 3,
+    "qty": 14,
+    "chance": 75
   },
   {
     "id": "emit_relax_gas_blast",
@@ -129,21 +138,12 @@
     "chance": 15
   },
   {
-    "id": "emit_tear_gas_toad",
-    "type": "emit",
-    "//": "Periodic leaking of tear gas",
-    "field": "fd_tear_gas",
-    "intensity": 3,
-    "chance": 15,
-    "qty": 3
-  },
-  {
     "id": "emit_tindalos_gas_leak",
     "type": "emit",
     "//": "Slow infrequent leak of tindalos gas (example: hound of tindalos movement)",
     "field": "fd_tindalos_gas",
     "intensity": 3,
-    "qty": 10,
+    "qty": 8,
     "chance": 15
   },
   {
