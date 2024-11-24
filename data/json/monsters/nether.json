@@ -1950,9 +1950,7 @@
     "weakpoint_sets": [ "wps_netherium_abomination" ],
     "emit_fields": [ { "emit_id": "emit_toxic_stream_reduced", "delay": "1 s" } ],
     "harvest": "exempt",
-    "special_attacks": [
-    { "type": "leap", "cooldown": 7, "max_range": 4 },
-    { "id": "smash", "cooldown": 10, "throw_strength": 96 } ],
+    "special_attacks": [ { "type": "leap", "cooldown": 7, "max_range": 4 }, { "id": "smash", "cooldown": 10, "throw_strength": 96 } ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
     "flags": [
       "SEES",
