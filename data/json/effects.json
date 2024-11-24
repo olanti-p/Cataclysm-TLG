@@ -4765,8 +4765,8 @@
     "int_decay_step": -2,
     "int_decay_tick": 1,
     "vitamins": [
-      { "vitamin": "blood", "rate": [ [ -250, -650 ] ], "tick": [ "1 s" ] },
-      { "vitamin": "redcells", "rate": [ [ -250, -650 ] ], "tick": [ "1 s" ] }
+      { "vitamin": "blood", "rate": [ [ -175, -475 ] ], "tick": [ "1 s" ] },
+      { "vitamin": "redcells", "rate": [ [ -175, -475 ] ], "tick": [ "1 s" ] }
     ]
   },
   {
