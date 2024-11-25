@@ -555,7 +555,7 @@
     "id": "chainmail_sleeves",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
+    "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "description": "Protective sleeves made of interlocking links of steel wire.  The fit can be adjusted to allow them to serve as outerwear.",
     "weight": "3515 g",
     "volume": "847 ml",
@@ -610,7 +610,7 @@
     "id": "chainmail_sleeves_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "name": { "str": "XS chainmail sleeves", "str_pl": "pairs of XS chainmail sleeves" },
+    "name": { "str": "pair of XS chainmail sleeves", "str_pl": "pairs of XS chainmail sleeves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -624,7 +624,7 @@
     "id": "chainmail_sleeves_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "name": { "str": "XL chainmail sleeves", "str_pl": "pairs of XL chainmail sleeves" },
+    "name": { "str": "pair of XL chainmail sleeves", "str_pl": "pairs of XL chainmail sleeves" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -640,7 +640,7 @@
     "copy-from": "chainmail_sleeves",
     "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
     "description": "Protective sleeves made of interlocking links of low-quality steel wire.  The fit can be adjusted to allow them to serve as outerwear.",
-    "name": { "str": "chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
+    "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "use_action": {
       "type": "transform",
       "msg": "You adjust your mail for a looser fit.",
@@ -652,7 +652,7 @@
     "id": "chainmail_sleeves_loose",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "name": { "str": "chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves (loose)" },
+    "name": { "str": "pair of chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves (loose)" },
     "description": "Protective sleeves made of interlocking links of steel wire.  The fit can be adjusted to fit closer to the body.",
     "use_action": {
       "type": "transform",
@@ -666,7 +666,7 @@
     "id": "chainmail_sleeves_loose_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves_xs",
-    "name": { "str": "chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves" },
+    "name": { "str": "pair of XS chainmail sleeves (loose)", "str_pl": "pairs of XS chainmail sleeves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -680,7 +680,7 @@
     "id": "chainmail_sleeves_loose_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves_xl",
-    "name": { "str": "chainmail sleeves (loose)", "str_pl": "pairs of chainmail sleeves (loose)" },
+    "name": { "str": "pair of XL chainmail sleeves (loose)", "str_pl": "pairs of XL chainmail sleeves (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -694,7 +694,7 @@
     "id": "chainmail_junk_sleeves_loose",
     "type": "ARMOR",
     "copy-from": "chainmail_junk_sleeves",
-    "name": { "str": "chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
+    "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "use_action": {
       "type": "transform",
       "msg": "You adjust your mail for a closer fit.",
@@ -835,7 +835,7 @@
     "id": "platemail_arm_guards",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "plate arm guards" },
+    "name": { "str": "pair of plate arm guards", "str_pl": "pairs of plate arm guards" },
     "description": "Overlapping steel plates which strap to the upper and lower arms.  They don't cover the shoulders.",
     "weight": "3333 g",
     "volume": "2916 ml",
@@ -867,7 +867,7 @@
   {
     "id": "platemail_arm_guards_xs",
     "type": "ARMOR",
-    "name": { "str": "XS plate arm guards" },
+    "name": { "str": "XS pair of plate arm guards", "str_pl": "XS pairs of plate arm guards" },
     "copy-from": "platemail_arm_guards",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -875,7 +875,7 @@
   {
     "id": "platemail_arm_guards_xl",
     "type": "ARMOR",
-    "name": { "str": "XL plate arm guards" },
+    "name": { "str": "XL pair of plate arm guards", "str_pl": "XL pairs of plate arm guards" },
     "copy-from": "platemail_arm_guards",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
@@ -884,7 +884,7 @@
     "id": "platemail_pauldrons",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "plate pauldrons" },
+    "name": { "str": "pair of plate pauldrons", "str_pl": "pairs of plate pauldrons" },
     "description": "Domed steel plates that strap down over the shoulders, offering solid protection at the cost of mobility.",
     "weight": "1667 g",
     "volume": "1452 ml",
@@ -914,7 +914,7 @@
   {
     "id": "platemail_pauldrons_xs",
     "type": "ARMOR",
-    "name": { "str": "XS plate pauldrons" },
+    "name": { "str": "pair of XS plate pauldrons", "str_pl": "pairs of XS plate pauldrons" },
     "copy-from": "platemail_pauldrons",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -922,7 +922,7 @@
   {
     "id": "platemail_pauldrons_xl",
     "type": "ARMOR",
-    "name": { "str": "XL plate pauldrons" },
+    "name": { "str": "pair of XL plate pauldrons", "str_pl": "pairs of XL plate pauldrons" },
     "copy-from": "platemail_pauldrons",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
@@ -931,7 +931,7 @@
     "id": "leather_pauldrons",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "leather pauldrons" },
+    "name": { "str": "pair of leather pauldrons", "str_pl": "pairs of leather pauldrons" },
     "description": "Shoulder guards made of thick leather.  They're a little restrictive, but provide important protection.",
     "weight": "900 g",
     "volume": "900 ml",
@@ -960,7 +960,7 @@
   {
     "id": "leather_pauldrons_xs",
     "type": "ARMOR",
-    "name": { "str": "XS leather pauldrons" },
+    "name": { "str": "pair of XS leather pauldrons", "str_pl": "pairs of XS leather pauldrons" },
     "copy-from": "leather_pauldrons",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
@@ -968,7 +968,7 @@
   {
     "id": "leather_pauldrons_xl",
     "type": "ARMOR",
-    "name": { "str": "XL leather pauldrons" },
+    "name": { "str": "pair of XL leather pauldrons", "str_pl": "pairs of XL leather pauldrons" },
     "copy-from": "leather_pauldrons",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }

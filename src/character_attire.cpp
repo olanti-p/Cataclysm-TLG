@@ -393,9 +393,28 @@ void outfit::recalc_ablative_blocking( const Character *guy )
         }
     }
 
-    if( should_warn && !rigid_locations.empty() ) {
-        guy->add_msg_if_player( m_warning,
-                                _( "You are wearing rigid armor with armor that has pockets for armor.  Until hard armor is removed inserting plates on those locations will be disabled." ) );
+    if( should_warn ) {
+        std::set<sub_bodypart_id> ablative_locations;
+
+        // Collect all sub-body parts covered by ablative armor
+        for( const item &w : worn ) {
+            if( w.is_ablative() ) {
+                for( const sub_bodypart_id &sbp : w.get_covered_sub_body_parts() ) {
+                    ablative_locations.emplace( sbp );
+                }
+            }
+        }
+
+        // Check if there is an overlap between ablative locations and rigid locations
+        std::set<sub_bodypart_id> intersection;
+        std::set_intersection( rigid_locations.begin(), rigid_locations.end(),
+                            ablative_locations.begin(), ablative_locations.end(),
+                            std::inserter( intersection, intersection.begin() ) );
+
+        if( !intersection.empty() ) {
+            guy->add_msg_if_player( m_warning,
+                                    _( "You will be unable to insert ablative armor plates over body parts covered by your rigid armor." ) );
+        }
     }
 }
 
@@ -1887,8 +1906,9 @@ void outfit::absorb_damage( Character &guy, damage_unit &elem, bodypart_id bp,
 
     // Only the outermost armor can be set on fire
     bool outermost = true;
-    // The worn vector has the innermost item first, so
-    // iterate reverse to damage the outermost (last in worn vector) first.
+    // The worn vector has the innermost item first, so iterate reverse to damage
+    // the outermost (last in worn vector) first. Yes this is backwards from how
+    // material layers on individual items work.
     for( auto iter = worn.rbegin(); iter != worn.rend(); ) {
         item &armor = *iter;
 
