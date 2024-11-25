@@ -712,7 +712,7 @@
     "id": "tire_tasset_loose_xs",
     "type": "ARMOR",
     "copy-from": "tire_tasset_loose",
-    "name": { "str": "XS tire tasset" },
+    "name": { "str": "XS tire tasset (loose)" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -726,7 +726,7 @@
     "id": "tire_tasset_loose_xl",
     "type": "ARMOR",
     "copy-from": "tire_tasset_loose",
-    "name": { "str": "XL tire tasset" },
+    "name": { "str": "XL tire tasset (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -740,7 +740,7 @@
     "id": "platemail_tasset",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "platemail tasset" },
+    "name": { "str": "plate tasset" },
     "description": "A skirt of steel faulds that hangs over the hips.  It can be adjusted to fit over bulky armor.",
     "weight": "1382 g",
     "volume": "1016 ml",
@@ -825,7 +825,7 @@
     "id": "platemail_tasset_loose_xs",
     "type": "ARMOR",
     "copy-from": "platemail_tasset_loose",
-    "name": { "str": "XS plate tasset" },
+    "name": { "str": "XS plate tasset (loose)" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -839,7 +839,7 @@
     "id": "platemail_tasset_loose_xl",
     "type": "ARMOR",
     "copy-from": "platemail_tasset_loose",
-    "name": { "str": "XL plate tasset" },
+    "name": { "str": "XL plate tasset (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",

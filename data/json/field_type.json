@@ -312,9 +312,9 @@
       "NO_BLOCK_MITIGATION",
       "NO_DODGE_MITIGATION"
     ],
-    "min_damage": 0,
-    "damage_increment": 5,
-    "max_damage": 15,
+    "min_damage": 6,
+    "damage_increment": 6,
+    "max_damage": 60,
     "damage_type": "acid",
     "min_liquid_volume": 200,
     "liquid_volume_increment": 200,
