@@ -1299,7 +1299,7 @@
     "bash_dmg_verb": "ripped",
     "cut_dmg_verb": "cut",
     "acid_dmg_verb": "burned",
-    "resist": { "bash": 1, "cut": 3, "acid": 5, "heat": 1, "bullet": 2, "stab": 5 },
+    "resist": { "bash": 0.5, "cut": 2.5, "acid": 5, "heat": 1, "bullet": 2, "stab": 3 },
     "repair_difficulty": 4
   },
   {
@@ -1320,8 +1320,8 @@
     "bash_dmg_verb": "ripped",
     "cut_dmg_verb": "cut",
     "acid_dmg_verb": "burned",
-    "resist": { "bash": 1.5, "cut": 2, "acid": 5, "heat": 3, "bullet": 5 },
-    "repair_difficulty": 4
+    "resist": { "bash": 1.5, "cut": 1.5, "acid": 5, "heat": 3, "bullet": 5 },
+    "repair_difficulty": 5
   },
   {
     "type": "material",
@@ -1949,8 +1949,9 @@
   {
     "type": "material",
     "id": "lc_steel",
-    "name": "Low Carbon Steel",
-    "//": "SAE 1010/UNS 10100, assumes .1% carbon content and zero slag.",
+    "name": "Steel",
+    "//1": "SAE 1010/UNS 10100, assumes .1% carbon content and zero slag.",
+    "//": "This material is being used as a placeholder for all steels until steel grades return.",
     "density": 8.0,
     "specific_heat_liquid": 0.82,
     "specific_heat_solid": 0.45,
@@ -2066,7 +2067,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 6, "cut": 6, "acid": 7, "heat": 3, "bullet": 2 },
+    "resist": { "bash": 4, "cut": 6, "acid": 7, "heat": 3, "bullet": 2 },
     "repair_difficulty": 2
   },
   {
@@ -2089,7 +2090,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 6, "cut": 6, "acid": 7, "heat": 3, "bullet": 4.5 },
+    "resist": { "bash": 4, "cut": 6, "acid": 7, "heat": 3, "bullet": 4.5 },
     "repair_difficulty": 2
   },
   {
@@ -2113,7 +2114,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 6, "cut": 6, "acid": 7, "heat": 3, "bullet": 4.5 },
+    "resist": { "bash": 4, "cut": 6, "acid": 7, "heat": 3, "bullet": 4.5 },
     "repair_difficulty": 2
   },
   {
@@ -2137,7 +2138,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 7, "cut": 7, "acid": 7, "heat": 3, "bullet": 4.5 },
+    "resist": { "bash": 4, "cut": 7, "acid": 7, "heat": 3, "bullet": 4.5 },
     "repair_difficulty": 2
   },
   {
@@ -2161,7 +2162,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 10, "cut": 10, "acid": 7, "heat": 3, "bullet": 6.5 },
+    "resist": { "bash": 4.5, "cut": 10, "acid": 7, "heat": 3, "bullet": 6.5 },
     "repair_difficulty": 2
   },
   {
@@ -2185,7 +2186,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 10, "cut": 10, "acid": 7, "heat": 3, "bullet": 6.5 },
+    "resist": { "bash": 4.5, "cut": 10, "acid": 7, "heat": 3, "bullet": 6.5 },
     "repair_difficulty": 2
   },
   {
@@ -2209,7 +2210,7 @@
     "cut_dmg_verb": "scratched",
     "acid_dmg_verb": "corroded",
     "burn_products": [ [ "scrap", 0.5 ] ],
-    "resist": { "bash": 11, "cut": 11, "acid": 7, "heat": 3, "bullet": 7.5 },
+    "resist": { "bash": 5, "cut": 11, "acid": 7, "heat": 3, "bullet": 7.5 },
     "repair_difficulty": 2
   },
   {

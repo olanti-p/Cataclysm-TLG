@@ -166,9 +166,7 @@ const weakpoint *Character::absorb_hit( const weakpoint_attack &, const bodypart
 {
     std::list<item> worn_remains;
     bool armor_destroyed = false;
-
     bool damage_mitigated = false;
-
     double forcefield = enchantment_cache->modify_value( enchant_vals::mod::FORCEFIELD, 0.0 );
 
     if( rng( 0, 99 ) < forcefield * 100.0 ) {
@@ -213,14 +211,13 @@ const weakpoint *Character::absorb_hit( const weakpoint_attack &, const bodypart
                 elem.amount = 0;
             }
         }
-
-        armor_enchantment_adjust( *this, elem );
-
-        worn.absorb_damage( *this, elem, bp, worn_remains, armor_destroyed );
-
-        passive_absorb_hit( bp, elem );
-
-        post_absorbed_damage_enchantment_adjust( *this, elem );
+        // Let's not run fifty huge functions for 9 unused damage types every time anybody gets bapped by a zombie.
+       // if( elem.amount > 0.00f ) {
+            armor_enchantment_adjust( *this, elem );
+            worn.absorb_damage( *this, elem, bp, worn_remains, armor_destroyed );
+            passive_absorb_hit( bp, elem );
+            post_absorbed_damage_enchantment_adjust( *this, elem );
+       // }
         elem.amount = std::max( elem.amount, 0.0f );
     }
     map &here = get_map();
