@@ -932,7 +932,7 @@ bool Character::melee_attack_abstract( Creature &t, bool allow_special,
         }
     }
 
-    if( hits && !t.is_hallucination() ) {
+    if( hits && cur_weapon && !t.is_hallucination() ) {
         if( !cur_weapon->is_soft() ) {
             handle_melee_wear( cur_weapon );
             // You are either hitting someone with a whip or kicking them while wearing a sock.

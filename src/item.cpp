@@ -8979,7 +8979,6 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     if( has_flag( flag_UNBREAKABLE ) ) {
         return armor_status::UNDAMAGED;
     }
-
     // We want armor's own resistance to this type, not the resistance it grants
     const float armors_own_resist = resist( du.type, true, bp );
     if( armors_own_resist > 1000.0f ) {
@@ -8990,43 +8989,33 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     if( has_flag( flag_FRAGILE ) && du.amount / armors_own_resist > 0.15f ) {
         return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
     }
-
     // Scale chance of article taking damage based on the number of parts it covers.
-    // This represents large articles being able to take more punishment
-    // before becoming ineffective or being destroyed.
+    // Large articles are able to take more punishment before being destroyed.
     int num_parts_covered = get_covered_body_parts().count();
     // Acid spreads out to cover the surface of the item, ignoring this mitigation.
     if( !one_in( num_parts_covered ) && !du.type->env ) {
-        // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
-        if( du.type == damage_bash && is_soft() ) {
-            num_parts_covered = round( num_parts_covered * 1.33 );
-        }
         return armor_status::UNDAMAGED;
     }
-
     // Don't damage armor as much when bypassed by armor piercing
-    // Most armor piercing damage comes from bypassing armor, not forcing through
-    // Worm Note: That's literally the opposite of how armor piercing works??? FMJ is not "bypassing" anything.
+    // AP attacks usually concentrate force in a small area 
     const float post_mitigated_dmg = du.amount;
-    // Typical clothing (ie long-sleeved shirt, jeans) runs a 10-50% chance of getting damaged by basic zombie
-    // attacks if we've gotten this far. Note that cut and bash roll separately, so it's really more than that
-    // as most monster attacks do bash+cut.
-    float damaged_chance = 0.1 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.06;
-    // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
-    if( du.type == damage_bash && is_soft() ) {
-        damaged_chance *= 0.66;
-    }
     if( post_mitigated_dmg > armors_own_resist ) {
-        // handle overflow, if you take a lot of damage your armor should be damaged.
+        // Figure out chance of damage relative to the damage we took. 
+        float damaged_chance = 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1;
+        // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
+        if( du.type == damage_bash && is_soft() ) {
+            damaged_chance *= 0.66;
+        }
+        // A large caliber blew a huge hole in our vest. Our plate mail got completely shredded open.
         if( damaged_chance >= 1.0 ) {
             return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
         }
-        if( x_in_y( damaged_chance, 1.0f ) ) {
-            return mod_damage( itype::damage_scale ) ? armor_status::DESTROYED : armor_status::DAMAGED;
+        // The attack got through, but not entirely.
+        if( one_in( 1 / ( 1 - damaged_chance ) ) ) {
+            return armor_status::UNDAMAGED;
         }
     } else {
-        // Having passed all the above tests, we now roll for chip damage at a fixed 0.5% chance, even if
-        // the armor blocked all the damage. Sturdy items and power armors never take chip damage.
+        // Fixed 0.5% chance of chip dmg, even if the armor blocked everything. Sturdy items and power armors never take chip damage.
         if( has_flag( flag_STURDY ) || is_power_armor() || !one_in( 200 ) ) {
             return armor_status::UNDAMAGED;
         }
@@ -9039,20 +9028,20 @@ item::armor_status item::damage_armor_transforms( damage_unit &du ) const
     // We want armor's own resistance to this type, not the resistance it grants
     const float armors_own_resist = resist( du.type, true );
 
-    // to avoid dumb chip damage plates shouldn't ever transform if they take less than
+    // To avoid dumb chip damage plates shouldn't ever transform if they take less than
     // 20% of their protection in damage
     if( du.amount / armors_own_resist < 0.2f ) {
         return armor_status::UNDAMAGED;
     }
 
-    // plates are rated to survive 3 shots at the caliber they protect
-    // linearly scale off the scale value to find the chance it breaks
+    // Plates are rated to survive 3 shots at the caliber they protect
+    // Linearly scale off the scale value to find the chance it breaks
     float break_chance = 33.3f * ( du.amount / armors_own_resist );
 
     float roll_to_break = rng_float( 0.0, 100.0 );
 
     if( roll_to_break < break_chance ) {
-        //the plate is broken
+        // The plate is broken.
         return armor_status::TRANSFORMED;
     }
     return armor_status::UNDAMAGED;
