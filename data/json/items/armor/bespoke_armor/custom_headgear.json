@@ -69,48 +69,93 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "survivor hood" },
-    "description": "A customized armored leather and Kevlar hood, designed to balance comfort and protection.",
+    "description": "A custom waterproof hood lined with kevlar and leather padding, it offers a comfortable layer of protection for the head.",
     "weight": "820 g",
     "volume": "2 L",
     "price": 58000,
     "price_postapoc": 4000,
     "to_hit": -1,
-    "material": [ "kevlar_layered", "leather" ],
+    "material": [ "vinyl", "kevlar", "leather_treated" ],
     "symbol": "[",
     "looks_like": "hood_rain",
     "color": "brown",
     "warmth": 15,
-    "material_thickness": 4,
     "environmental_protection": 3,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER" ],
-    "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ] } ],
-    "melee_damage": { "bash": 10 }
+    "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "OUTER" ],
+    "armor": [       {
+      "material": [
+        { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
+        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+        { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
+      ],
+      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+      "coverage": 95,
+      "encumbrance": [ 6, 6 ]
+    } ]
+  },
+  {
+    "id": "hood_fsurvivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "survivor fire hood" },
+    "description": "A custom padded hood with Nomex facing to resist fire and chemical attacks.",
+    "weight": "820 g",
+    "volume": "2 L",
+    "price": 58000,
+    "price_postapoc": 4000,
+    "to_hit": -1,
+    "material": [ "nomex", "kevlar", "leather_treated" ],
+    "symbol": "[",
+    "looks_like": "hood_rain",
+    "color": "light_gray",
+    "warmth": 20,
+    "environmental_protection": 3,
+    "techniques": [ "WBLOCK_1" ],
+    "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "OUTER" ],
+    "armor": [       {
+      "material": [
+        { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+        { "type": "cotton", "covered_by_mat": 95, "thickness": 0.2 },
+        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+        { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
+      ],
+      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+      "coverage": 95,
+      "encumbrance": [ 7, 7 ]
+    } ]
   },
   {
     "id": "hood_wsurvivor",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "winter survivor hood" },
-    "description": "A customized armored Kevlar hood.  Warm thanks to the real fur lining.",
+    "description": "A custom waterproof hood lined with kevlar and leather padding, it offers a comfortable layer of protection for the head.  It's very warm thanks to its fur lining",
     "weight": "870 g",
     "volume": "1500 ml",
     "price": 58000,
     "price_postapoc": 3500,
     "to_hit": -1,
-    "material": [ "kevlar_layered", "fur" ],
+    "material": [ "kevlar", "fur" ],
     "symbol": "[",
     "looks_like": "hood_survivor",
     "color": "light_gray",
     "warmth": 75,
-    "material_thickness": 5,
     "environmental_protection": 5,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER" ],
-    "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ] } ],
-    "melee_damage": { "bash": 10 }
+    "armor": [       {
+      "material": [
+        { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
+        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+        { "type": "fur", "covered_by_mat": 95, "thickness": 2.5 }
+      ],
+      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+      "coverage": 95,
+      "encumbrance": [ 9, 9 ]
+    } ]
   },
   {
-    "id": "xl_hood_wsurvivor",
+    "id": "hood_wsurvivor_xl",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor",
     "name": { "str": "XL winter survivor hood" },
@@ -118,7 +163,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_hood_wsurvivor",
+    "id": "hood_wsurvivor_xs",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor",
     "name": { "str": "XS winter survivor hood" },
@@ -126,7 +171,7 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "hood_xlsurvivor",
+    "id": "hood_survivor_xl",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
     "name": { "str": "XL survivor hood" },
@@ -134,7 +179,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "hood_xssurvivor",
+    "id": "hood_survivor_xs",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
     "name": { "str": "XS survivor hood" },
@@ -142,40 +187,18 @@
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
-    "id": "hood_lsurvivor",
+    "id": "hood_fsurvivor_xl",
     "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "light survivor hood" },
-    "description": "A customized armored cloth and Kevlar hood, light yet durable.",
-    "weight": "628 g",
-    "volume": "750 ml",
-    "price": 58000,
-    "price_postapoc": 3000,
-    "to_hit": -1,
-    "material": [ "kevlar_layered", "cotton" ],
-    "symbol": "[",
-    "looks_like": "hood_survivor",
-    "color": "green",
-    "warmth": 10,
-    "material_thickness": 4,
-    "environmental_protection": 3,
-    "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER" ],
-    "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ] } ],
-    "melee_damage": { "bash": 10 }
-  },
-  {
-    "id": "xl_hood_lsurvivor",
-    "type": "ARMOR",
-    "copy-from": "hood_lsurvivor",
-    "name": { "str": "XL light survivor hood" },
+    "copy-from": "hood_survivor",
+    "name": { "str": "XL survivor fire hood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_hood_lsurvivor",
+    "id": "hood_fsurvivor_xs",
     "type": "ARMOR",
-    "copy-from": "hood_lsurvivor",
-    "name": { "str": "XS light survivor hood" },
+    "copy-from": "hood_survivor",
+    "name": { "str": "XS survivor fire hood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -185,263 +208,35 @@
     "name": { "str": "winter faux fur survivor hood" },
     "description": "A customized armored Kevlar hood.  Warm thanks to the faux-fur lining.",
     "copy-from": "hood_wsurvivor",
-    "material": [ "kevlar_layered", "faux_fur" ],
+    "material": [ "kevlar", "faux_fur" ],
+    "armor": [       {
+      "material": [
+        { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
+        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+        { "type": "faux_fur", "covered_by_mat": 95, "thickness": 2.5 }
+      ],
+      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+      "coverage": 95,
+      "encumbrance": [ 9, 9 ]
+    } ],
     "symbol": "[",
     "warmth": 65,
     "looks_like": "hood_survivor",
     "color": "pink"
   },
   {
-    "id": "xl_hood_wsurvivor_nofur",
+    "id": "hood_wsurvivor_nofur_xl",
     "type": "ARMOR",
-    "copy-from": "hood_wsurvivor",
-    "material": [ "kevlar_layered", "faux_fur" ],
-    "color": "pink",
-    "warmth": 65,
+    "copy-from": "hood_wsurvivor_nofur",
     "name": { "str": "XL faux fur winter survivor hood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_hood_wsurvivor_nofur",
+    "id": "hood_wsurvivor_nofur_xs",
     "type": "ARMOR",
     "copy-from": "hood_wsurvivor_nofur",
     "name": { "str": "XS faux fur winter survivor hood" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "UNDERSIZE" ]
-  },
-  {
-    "id": "hood_h20survivor",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "Kevlar wetsuit hood" },
-    "description": "A customized armored neoprene and Kevlar hood, very strong and durable.",
-    "//": "When/if new head clothing layering system will be implemented, move this to normal and skintight layers.",
-    "weight": "860 g",
-    "volume": "1500 ml",
-    "price": 58000,
-    "price_postapoc": 1500,
-    "to_hit": -1,
-    "material": [ "kevlar", "neoprene", "nylon" ],
-    "symbol": "[",
-    "looks_like": "wetsuit_hood",
-    "color": "dark_gray",
-    "warmth": 41,
-    "environmental_protection": 12,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 3.5 },
-          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.5 }
-        ],
-        "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
-        "covers": [ "head" ]
-      }
-    ],
-    "melee_damage": { "bash": 10 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_hood_h20survivor",
-    "type": "ARMOR",
-    "copy-from": "hood_h20survivor",
-    "name": { "str": "XL Kevlar wetsuit hood" },
-    "proportional": { "weight": 1.3, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_hood_h20survivor",
-    "type": "ARMOR",
-    "copy-from": "hood_h20survivor",
-    "name": { "str": "XS Kevlar wetsuit hood" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "hood_h20survivor_light",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "light Kevlar wetsuit overhood" },
-    "description": "A customized light armored neoprene and Kevlar overhood, very strong and durable.",
-    "//": "When/if new head clothing layering system will be implemented, move this to normal layer.",
-    "//2": "Basically a reduced in weight and thickness wetsuit hood with a layer of Kevlar attached.",
-    "weight": "860 g",
-    "volume": "1500 ml",
-    "price": 58000,
-    "price_postapoc": 1500,
-    "to_hit": -1,
-    "material": [ "kevlar", "neoprene", "nylon" ],
-    "symbol": "[",
-    "looks_like": "wetsuit_hood",
-    "color": "dark_gray",
-    "warmth": 30,
-    "environmental_protection": 10,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.0 },
-          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.5 }
-        ],
-        "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
-        "covers": [ "head" ]
-      }
-    ],
-    "melee_damage": { "bash": 10 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_hood_h20survivor_light",
-    "type": "ARMOR",
-    "copy-from": "hood_h20survivor_light",
-    "name": { "str": "XL light Kevlar wetsuit overhood" },
-    "proportional": { "weight": 1.3, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_hood_h20survivor_light",
-    "type": "ARMOR",
-    "copy-from": "hood_h20survivor_light",
-    "name": { "str": "XS light Kevlar wetsuit overhood" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "hood_h20survivor_thick",
-    "type": "ARMOR",
-    "category": "armor",
-    "name": { "str": "thick Kevlar wetsuit hood" },
-    "description": "A customized thick armored neoprene and Kevlar hood, very strong and durable.",
-    "//": "When/if new head clothing layering system will be implemented, move this to skintight and normal layers.",
-    "weight": "860 g",
-    "volume": "1500 ml",
-    "price": 58000,
-    "price_postapoc": 1500,
-    "to_hit": -1,
-    "material": [ "kevlar", "neoprene", "nylon" ],
-    "symbol": "[",
-    "looks_like": "wetsuit_hood",
-    "color": "dark_gray",
-    "warmth": 70,
-    "environmental_protection": 14,
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "neoprene", "covered_by_mat": 100, "thickness": 5.0 },
-          { "type": "kevlar", "covered_by_mat": 100, "thickness": 3.0 }
-        ],
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
-        "coverage": 100,
-        "covers": [ "head" ]
-      }
-    ],
-    "melee_damage": { "bash": 10 },
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "volume_encumber_modifier": 0,
-        "max_contains_volume": "700 ml",
-        "max_contains_weight": "1000 g",
-        "moves": 150,
-        "description": "Outer strap mount.",
-        "flag_restriction": [ "HEAD_STRAP_MOUNT" ]
-      }
-    ]
-  },
-  {
-    "id": "xl_hood_h20survivor_thick",
-    "type": "ARMOR",
-    "copy-from": "hood_h20survivor_thick",
-    "name": { "str": "XL thick Kevlar wetsuit hood" },
-    "proportional": { "weight": 1.3, "volume": 1.3, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-  },
-  {
-    "id": "xs_hood_h20survivor_thick",
-    "type": "ARMOR",
-    "copy-from": "hood_h20survivor_thick",
-    "name": { "str": "XS thick Kevlar wetsuit hood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },

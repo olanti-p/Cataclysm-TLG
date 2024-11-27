@@ -805,7 +805,7 @@
     ]
   },
   {
-    "result": "xs_pants_survivor",
+    "result": "pants_survivor_xs",
     "type": "recipe",
     "copy-from": "pants_survivor",
     "time": "14 h",
@@ -831,7 +831,7 @@
     ]
   },
   {
-    "result": "xl_pants_survivor",
+    "result": "pants_survivor_xl",
     "type": "recipe",
     "copy-from": "pants_survivor",
     "time": "15 h 45 m",

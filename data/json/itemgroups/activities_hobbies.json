@@ -160,7 +160,8 @@
       { "item": "5l_methanol_tank", "prob": 1 },
       { "item": "10l_methanol_tank", "prob": 1 },
       { "item": "28l_methanol_tank", "prob": 1 },
-      { "item": "60l_methanol_tank", "prob": 1 }
+      { "item": "60l_methanol_tank", "prob": 1 },
+      [ "rubber_spray_can", 5 ]
     ]
   },
   {
