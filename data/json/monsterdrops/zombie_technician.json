@@ -103,7 +103,7 @@
             "prob": 70
           },
           { "item": "technician_coveralls", "prob": 20, "damage": [ 1, 4 ] },
-          { "item": "technician_coveralls_h", "prob": 10, "damage": [ 1, 4 ] }
+          { "item": "jumpsuit", "prob": 10, "damage": [ 1, 4 ] }
         ]
       },
       { "group": "underwear", "damage": [ 1, 4 ] }

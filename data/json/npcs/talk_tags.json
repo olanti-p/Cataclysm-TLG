@@ -1657,7 +1657,7 @@
     "category": "<need_booze>",
     "//": "NPC complaint when they are low on CBM power and have an ethanol burner system.  Additional versions should continue to specify that the NPC needs ethanol or methanol and they need them to recharge their power CBMs.",
     "text": [
-      "Pass some ethanol, I need to power my ethanol burner.",
+      "Pass me some ethanol, I need to power my ethanol burner.",
       "Waiter!  I need a refill, my ethanol burner is running out of charge!",
       "I require ethanol for my internal power supply.  Anything on you?",
       "Ethanol?  Hit me with more.",
@@ -1668,7 +1668,7 @@
       "No ethanol?  No power.",
       "Gotta top up my ethanol reserve.",
       "I need some ethanol to power up my CBMs.",
-      "Got any alcohol to spare?  Need to recharge my drives.  Methanol, would do."
+      "Got any alcohol to spare?  Need to recharge my drives.  Methanol would do."
     ]
   },
   {

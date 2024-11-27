@@ -1194,7 +1194,7 @@
       }
     ],
     "warmth": 15,
-    "material_thickness": 0.5,
+    "material_thickness": 0.6,
     "flags": [ "VARSIZE", "POCKETS", "STURDY", "WATERPROOF" ],
     "armor": [ { "encumbrance": [ 7, 11 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },

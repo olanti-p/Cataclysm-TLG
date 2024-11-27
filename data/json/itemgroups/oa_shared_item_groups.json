@@ -55,7 +55,7 @@
       [ "straw_doll", 5 ],
       [ "razor_blade", 10 ],
       [ "survnote", 5 ],
-      [ "eclipse_glasses", 5 ],
+      [ "eclipse_glasses", 1 ],
       { "group": "newspaper", "prob": 60 },
       [ "news_regional", 15 ],
       { "item": "paper", "prob": 20, "count": [ 5, 15 ] },

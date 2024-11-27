@@ -479,17 +479,21 @@
     "type": "item_group",
     "//": "Anything a survivor looted or cobbled together to wear on their hands",
     "items": [
-      [ "boots", 20 ],
-      [ "boots_steel", 15 ],
+      [ "boots", 30 ],
+      [ "boots_steel", 25 ],
+      [ "boots_plate", 5 ],
+      [ "boots_survivor", 1 ],
+      [ "boots_wsurvivor", 1 ],
+      [ "boots_wsurvivor_nofur", 1 ],
       [ "boots_hiking", 15 ],
       [ "boots_combat", 10 ],
       [ "boots_winter", 10 ],
-      [ "motorbike_boots", 5 ],
+      [ "motorbike_boots", 10 ],
       [ "knee_high_boots", 5 ],
       [ "thigh_high_boots", 3 ],
       [ "boots_fur", 10 ],
       [ "sneakers_steel", 10 ],
-      [ "boots_rubber", 5 ]
+      [ "boots_rubber", 8 ]
     ]
   },
   {

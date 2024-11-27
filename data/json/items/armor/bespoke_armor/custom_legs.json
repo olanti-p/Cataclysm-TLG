@@ -4,12 +4,12 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str_sp": "survivor cargo pants" },
-    "description": "A pair of Kevlar armored pants covered with pouches and pockets.  Custom-built to be durable, comfortable, and easy to wear.",
+    "description": "A heavy-duty pair of pants custom armored with a kevlar liner and a rubberized coating, offering all-around protection from the myriad threats of the Cataclysm.",
     "weight": "2100 g",
     "volume": "3 L",
     "price": 38000,
     "price_postapoc": 2000,
-    "material": [ "cotton", "kevlar" ],
+    "material": [ "soft_rubber", "nylon", "kevlar" ],
     "symbol": "[",
     "looks_like": "pants_army",
     "color": "green",
@@ -17,69 +17,84 @@
       {
         "pocket_type": "CONTAINER",
         "max_contains_volume": "1250 ml",
-        "max_contains_weight": "3 kg",
-        "max_item_length": "21 cm",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
         "max_contains_volume": "1250 ml",
-        "max_contains_weight": "3 kg",
-        "max_item_length": "21 cm",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "800 ml",
-        "max_contains_weight": "2 kg",
-        "max_item_length": "15 cm",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "800 ml",
-        "max_contains_weight": "2 kg",
-        "max_item_length": "15 cm",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
         "moves": 80
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "800 ml",
-        "max_contains_weight": "2 kg",
-        "max_item_length": "15 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "800 ml",
-        "max_contains_weight": "2 kg",
-        "max_item_length": "15 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "500 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "13 cm",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "165 mm",
         "moves": 100
       },
       {
         "pocket_type": "CONTAINER",
-        "max_contains_volume": "500 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "13 cm",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "165 mm",
         "moves": 100
       }
     ],
     "warmth": 15,
     "material_thickness": 4,
-    "valid_mods": [ "steel_padded" ],
     "environmental_protection": 3,
-    "flags": [ "VARSIZE", "POCKETS", "STURDY", "WATERPROOF" ],
-    "armor": [ { "encumbrance": [ 10, 20 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
+    "flags": [ "VARSIZE", "POCKETS", "STURDY", "RAINPROOF" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 85, "thickness": 0.1 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 },
+          { "type": "kevlar", "covered_by_mat": 97, "thickness": 2.0 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "encumbrance": [ 14, 21 ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r",
+          "leg_upper_l",
+          "leg_upper_r",
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 95
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 90, "thickness": 0.1 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 2.0 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "encumbrance": [ 0, 0 ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
+        "coverage": 70
+      }
+    ]
   },
   {
-    "id": "xl_pants_survivor",
+    "id": "pants_survivor_xl",
     "type": "ARMOR",
     "copy-from": "pants_survivor",
     "name": { "str_sp": "XL survivor cargo pants" },
@@ -87,75 +102,11 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "xs_pants_survivor",
+    "id": "pants_survivor_xs",
     "type": "ARMOR",
     "copy-from": "pants_survivor",
     "name": { "str_sp": "XS survivor cargo pants" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "armor_mercenary_bottom",
-    "type": "ARMOR",
-    "name": { "str_sp": "mercenary pants" },
-    "description": "A sturdy pair of pants fit for a soldier of fortune.  Made from work pants padded with Kevlar panels.  It gives good protection and decent storage, but the added thickness makes it uncomfortable to wear any armor over it.",
-    "//": "weight is currently an estimation could be better",
-    "weight": "3000 g",
-    "volume": "7500 ml",
-    "price": 180000,
-    "price_postapoc": 2000,
-    "to_hit": -3,
-    "material": [ "kevlar_layered", "canvas" ],
-    "symbol": "[",
-    "looks_like": "pants_army",
-    "color": "green",
-    "armor": [
-      {
-        "material": [
-          { "type": "canvas", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "kevlar_layered", "covered_by_mat": 90, "thickness": 4.4 }
-        ],
-        "volume_encumber_modifier": 0.3,
-        "encumbrance": 9,
-        "coverage": 100,
-        "cover_vitals": 90,
-        "covers": [ "leg_l", "leg_r" ]
-      }
-    ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1250 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "19 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1250 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "19 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1080 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "165 mm",
-        "moves": 100
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1080 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "165 mm",
-        "moves": 100
-      }
-    ],
-    "warmth": 25,
-    "material_thickness": 5,
-    "valid_mods": [ "steel_padded" ],
-    "environmental_protection": 2,
-    "flags": [ "POCKETS", "STURDY", "WATERPROOF", "OUTER", "NORMAL" ]
   }
 ]

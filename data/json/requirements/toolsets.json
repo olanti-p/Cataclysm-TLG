@@ -436,11 +436,14 @@
         [ "mask_gas_xl", -1 ],
         [ "mask_bunker", -1 ],
         [ "mask_survivor", 1 ],
-        [ "mask_survivorxs", 1 ],
-        [ "mask_survivorxl", 1 ],
+        [ "mask_survivor_xs", 1 ],
+        [ "mask_survivor_xl", 1 ],
         [ "mask_hsurvivor", 1 ],
-        [ "mask_hsurvivorxl", 1 ],
-        [ "mask_hsurvivorxs", 1 ]
+        [ "mask_hsurvivor_xl", 1 ],
+        [ "mask_hsurvivor_xs", 1 ],
+        [ "mask_fsurvivor", 1 ],
+        [ "mask_fsurvivor_xl", 1 ],
+        [ "mask_fsurvivor_xs", 1 ]
       ]
     ]
   },
@@ -457,14 +460,17 @@
         [ "mask_gas_half", 1 ],
         [ "mask_bunker", 1 ],
         [ "mask_survivor", 1 ],
-        [ "mask_survivorxs", 1 ],
-        [ "mask_survivorxl", 1 ],
+        [ "mask_survivor_xs", 1 ],
+        [ "mask_survivor_xl", 1 ],
+        [ "mask_fsurvivor", 1 ],
+        [ "mask_fsurvivor_xs", 1 ],
+        [ "mask_fsurvivor_xl", 1 ],
         [ "mask_hsurvivor", 1 ],
-        [ "mask_hsurvivorxl", 1 ],
-        [ "mask_hsurvivorxs", 1 ],
+        [ "mask_hsurvivor_xl", 1 ],
+        [ "mask_hsurvivor_xs", 1 ],
         [ "mask_lsurvivor", 1 ],
-        [ "mask_lsurvivorxl", 1 ],
-        [ "mask_lsurvivorxs", 1 ]
+        [ "mask_lsurvivor_xl", 1 ],
+        [ "mask_lsurvivor_xs", 1 ]
       ]
     ]
   },

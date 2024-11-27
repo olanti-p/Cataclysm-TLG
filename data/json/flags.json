@@ -2419,5 +2419,10 @@
     "id": "NO_GRAB",
     "type": "json_flag",
     "//": "Effects with this flag prevent the creature from initiating a grab."
+  },
+  {
+    "id": "CRAFT_UNLOAD",
+    "type": "json_flag",
+    "//": "The contents of this item can be accessed by the crafting system, even if it's sealed."
   }
 ]

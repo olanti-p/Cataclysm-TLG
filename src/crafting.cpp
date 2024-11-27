@@ -2962,7 +2962,7 @@ void remove_ammo( item &dis_item, Character &p )
         return true;
     } );
 
-    if( dis_item.has_flag( flag_NO_UNLOAD ) ) {
+    if( dis_item.has_flag( flag_NO_UNLOAD ) && !dis_item.has_flag( flag_CRAFT_UNLOAD ) ) {
         return;
     }
     if( dis_item.is_gun() && !dis_item.ammo_current().is_null() ) {

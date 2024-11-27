@@ -391,6 +391,12 @@
   },
   {
     "type": "ammunition_type",
+    "id": "liquid_rubber_spray",
+    "name": "liquid rubber",
+    "default": "liquid_rubber_spray"
+  },
+  {
+    "type": "ammunition_type",
     "id": "permanent_ink",
     "name": "ink",
     "default": "permanent_ink"
