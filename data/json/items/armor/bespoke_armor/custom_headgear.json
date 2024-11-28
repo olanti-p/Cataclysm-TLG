@@ -98,7 +98,7 @@
     "id": "hood_fsurvivor",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "survivor fire hood" },
+    "name": { "str": "survivor firehood" },
     "description": "A custom padded hood with Nomex facing to resist fire and chemical attacks.",
     "weight": "820 g",
     "volume": "2 L",
@@ -149,7 +149,7 @@
         { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
         { "type": "fur", "covered_by_mat": 95, "thickness": 2.5 }
       ],
-      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+      "covers": [ "head" ],
       "coverage": 95,
       "encumbrance": [ 9, 9 ]
     } ]
@@ -190,7 +190,7 @@
     "id": "hood_fsurvivor_xl",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
-    "name": { "str": "XL survivor fire hood" },
+    "name": { "str": "XL survivor firehood" },
     "proportional": { "weight": 1.25, "volume": 1.3, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
@@ -198,7 +198,7 @@
     "id": "hood_fsurvivor_xs",
     "type": "ARMOR",
     "copy-from": "hood_survivor",
-    "name": { "str": "XS survivor fire hood" },
+    "name": { "str": "XS survivor firehood" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -215,7 +215,7 @@
         { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
         { "type": "faux_fur", "covered_by_mat": 95, "thickness": 2.5 }
       ],
-      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+      "covers": [ "head" ],
       "coverage": 95,
       "encumbrance": [ 9, 9 ]
     } ],
