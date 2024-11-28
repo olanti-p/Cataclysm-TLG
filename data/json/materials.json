@@ -864,7 +864,7 @@
     "type": "material",
     "id": "fur",
     "name": "Fur",
-    "//": "Fur, when pressed flat, is typically 2-4mm depending on the animal, and is stuck to to a 1-2mm piece of tanned hide.",
+    "//": "Fur, when pressed flat, is typically 1-3mm depending on the animal (hide included).",
     "density": 1.1,
     "specific_heat_liquid": 0.02,
     "specific_heat_solid": 0.02,
@@ -884,14 +884,14 @@
       { "fuel": 1, "smoke": 1, "burn": 0.06 }
     ],
     "burn_products": [ [ "corpse_ash", 0.035 ] ],
-    "resist": { "bash": 2, "cut": 1.25, "acid": 3, "heat": 1, "bullet": 1 },
+    "resist": { "bash": 1.5, "cut": 2, "acid": 0.5, "heat": 1, "bullet": 1 },
     "repair_difficulty": 3
   },
   {
     "type": "material",
     "id": "faux_fur",
     "name": "Faux Fur",
-    "//": "Faux fur, when pressed flat, is typically 2-4mm depending on the pile, and is stuck to to a 1-2mm piece of polyester.",
+    "//": "Faux fur, when pressed flat, is typically 1-3mm (including the backing) depending on the pile.",
     "density": 1.1,
     "specific_heat_liquid": 0.02,
     "specific_heat_solid": 0.02,
@@ -906,11 +906,11 @@
     "cut_dmg_verb": "sliced",
     "acid_dmg_verb": "burned",
     "burn_data": [
-      { "fuel": 0.6, "smoke": 1, "burn": 0.02 },
-      { "fuel": 1, "smoke": 1, "burn": 0.04 },
-      { "fuel": 1, "smoke": 1, "burn": 0.06 }
+      { "fuel": 0.1, "smoke": 1, "burn": 0.01 },
+      { "fuel": 0.1, "smoke": 2, "burn": 0.03 },
+      { "fuel": 0.2, "smoke": 5, "burn": 0.5 }
     ],
-    "resist": { "bash": 2, "cut": 2, "acid": 4, "heat": 1, "bullet": 2 },
+    "resist": { "bash": 1.5, "cut": 1.5, "acid": 3, "heat": 1.5, "bullet": 1 },
     "repair_difficulty": 3
   },
   {
