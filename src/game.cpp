@@ -284,7 +284,7 @@ static const json_character_flag json_flag_WEB_RAPPEL( "WEB_RAPPEL" );
 
 static const material_id material_glass( "glass" );
 
-static const mod_id MOD_INFORMATION_dda( "dda" );
+static const mod_id MOD_INFORMATION_tlg( "tlg" );
 
 static const mongroup_id GROUP_BLACK_ROAD( "GROUP_BLACK_ROAD" );
 
@@ -3210,11 +3210,11 @@ void game::load_world_modfiles( loading_ui &ui )
         }
     } ), mods.end() );
 
-    // require at least one core mod (saves before version 6 may implicitly require dda pack)
+    // require at least one core mod (saves before version 6 may implicitly require tlg pack)
     if( std::none_of( mods.begin(), mods.end(), []( const mod_id & e ) {
     return e->core;
 } ) ) {
-        mods.insert( mods.begin(), MOD_INFORMATION_dda );
+        mods.insert( mods.begin(), MOD_INFORMATION_tlg );
     }
 
     // this code does not care about mod dependencies,

@@ -8,6 +8,6 @@
     "description": "Gives the overmap a graphical overhaul.  Please refer to readme for installation.",
     "category": "graphical",
     "obsolete": true,
-    "dependencies": [ "dda" ]
+    "dependencies": [ "tlg" ]
   }
 ]
