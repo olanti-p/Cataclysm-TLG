@@ -216,44 +216,32 @@
     "id": "gloves_fsurvivor",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-      "str": "pair of survivor fire gloves",
-      "str_pl": "pairs of survivor fire gloves"
-    },
+    "name": { "str": "pair of survivor fire gloves", "str_pl": "pairs of survivor fire gloves" },
     "description": "A pair of customized, Kevlar-armored Nomex gloves, a post-apocalyptic update to the sort of thing firefighters wore before the Cataclysm.",
     "weight": "410 g",
     "volume": "1 L",
     "price": 18000,
     "price_postapoc": 2500,
-    "material": [
-      "soft_rubber",
-      "nomex",
-      "leather",
-      "kevlar"
-    ],
+    "material": [ "soft_rubber", "nomex", "leather", "kevlar" ],
     "symbol": "[",
     "looks_like": "fire_gauntlets",
     "color": "light_gray",
     "warmth": 15,
     "environmental_protection": 10,
-    "flags": [
-      "VARSIZE",
-      "WATERPROOF",
-      "STURDY"
-    ],
+    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
     "armor": [
-        {
-          "material": [
-            { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.2 },
-            { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
-            { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 },
-            { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.0 }
-          ],
-          "encumbrance": 28,
-          "coverage": 95,
-          "covers": [ "hand_l", "hand_r" ]
-        }
-      ]
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.2 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.0 }
+        ],
+        "encumbrance": 28,
+        "coverage": 95,
+        "covers": [ "hand_l", "hand_r" ]
+      }
+    ]
   },
   {
     "id": "gloves_fsurvivor_xl",

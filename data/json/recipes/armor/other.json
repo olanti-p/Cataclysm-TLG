@@ -52,6 +52,19 @@
     "byproducts": [ [ "cotton_patchwork", 6 ], [ "scrap_cotton", 2 ] ]
   },
   {
+    "result": "gum_blanket",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_OTHER",
+    "skill_used": "tailor",
+    "time": "60 m",
+    "difficulty": 2,
+    "book_learn": [ [ "atomic_survival", 2 ], [ "manual_survival", 2 ], [ "textbook_survival", 2 ], [ "mag_survival", 2 ] ],
+    "using": [ [ "liquid_rubber", 18 ] ],
+    "components": [ [ [ "sheet", 1 ] ] ]
+  },
+  {
     "result": "quilt",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",

@@ -70,14 +70,7 @@
         ],
         "covers": [ "leg_l", "leg_r" ],
         "encumbrance": [ 14, 21 ],
-        "specifically_covers": [
-          "leg_hip_l",
-          "leg_hip_r",
-          "leg_upper_l",
-          "leg_upper_r",
-          "leg_lower_l",
-          "leg_lower_r"
-        ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r", "leg_upper_l", "leg_upper_r", "leg_lower_l", "leg_lower_r" ],
         "coverage": 95
       },
       {

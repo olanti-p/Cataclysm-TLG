@@ -16,7 +16,7 @@
       [ "tshirt", 20 ],
       [ "polo_shirt", 20 ],
       [ "dress_shirt", 20 ],
-      [ "denim_shirt", 20 ],
+      [ "denim_shirt", 10 ],
       [ "tank_top", 20 ],
       [ "longshirt", 20 ],
       [ "hoodie", 40 ],
@@ -48,9 +48,12 @@
       [ "null", 60 ],
       [ "jacket_army", 40 ],
       [ "cloak", 20 ],
+      [ "longcoat", 20 ],
+      [ "sleeveless_longcoat", 20 ],
       [ "ballistic_vest_esapi", 10 ],
       [ "tacvest", 40 ],
-      [ "kevlar", 20 ],
+      [ "stab_vest", 10 ],
+      [ "soft_3a_vest", 20 ],
       [ "chestrig", 30 ]
     ]
   },

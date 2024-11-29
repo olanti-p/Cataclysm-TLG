@@ -277,7 +277,7 @@
         "specifically_covers": [ "leg_draped_l", "leg_draped_r" ],
         "layers": [ "BELTED" ]
       },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 7, 7 ]  }
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 7, 7 ] }
     ],
     "pocket_data": [
       {
@@ -2348,7 +2348,7 @@
     "environmental_protection": 2,
     "flags": [ "VARSIZE", "POCKETS", "OUTER", "RAINPROOF", "COLLAR" ]
   },
-    {
+  {
     "id": "sleeveless_longcoat_xl",
     "type": "ARMOR",
     "name": { "str": "XL sleeveless longcoat" },

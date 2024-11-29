@@ -54,9 +54,10 @@
       { "item": "hoodie", "prob": 5 },
       { "item": "jacket_light", "prob": 5 },
       { "item": "jacket_leather", "prob": 5 },
-      { "item": "trenchcoat", "prob": 5 },
+      { "item": "jacket_flannel", "prob": 5 },
+      { "item": "longcoat", "prob": 5 },
       { "item": "jacket_jean", "prob": 5 },
-      { "item": "kevlar", "prob": 5 }
+      { "item": "jacket_windbreaker", "prob": 5 }
     ]
   },
   {

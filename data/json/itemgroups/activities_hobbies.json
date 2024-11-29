@@ -251,6 +251,7 @@
       [ "dutch_oven", 5 ],
       [ "waffleiron", 25 ],
       [ "binoculars", 20 ],
+      { "item": "rubber_spray_can", "prob": 4 },
       [ "firecracker_pack", 5 ],
       [ "folding_solar_panel", 3 ],
       { "item": "hotplate", "prob": 10 },

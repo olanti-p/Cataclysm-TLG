@@ -408,8 +408,8 @@ void outfit::recalc_ablative_blocking( const Character *guy )
         // Check if there is an overlap between ablative locations and rigid locations
         std::set<sub_bodypart_id> intersection;
         std::set_intersection( rigid_locations.begin(), rigid_locations.end(),
-                            ablative_locations.begin(), ablative_locations.end(),
-                            std::inserter( intersection, intersection.begin() ) );
+                               ablative_locations.begin(), ablative_locations.end(),
+                               std::inserter( intersection, intersection.begin() ) );
 
         if( !intersection.empty() ) {
             guy->add_msg_if_player( m_warning,
