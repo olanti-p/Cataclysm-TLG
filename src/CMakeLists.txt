@@ -13,11 +13,11 @@ if (WIN32)
             OBJECT_DEPENDS "${RSRC_RC_DEP}")
 endif ()
 
-file(GLOB CATACLYSM_DDA_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+file(GLOB CATACLYSM_TLG_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
-list(REMOVE_ITEM CATACLYSM_DDA_SOURCES ${MAIN_CPP} ${MESSAGES_CPP})
+list(REMOVE_ITEM CATACLYSM_TLG_SOURCES ${MAIN_CPP} ${MESSAGES_CPP})
 
-file(GLOB CATACLYSM_DDA_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+file(GLOB CATACLYSM_TLG_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 
 # Get GIT version strings
 add_custom_target(
@@ -34,8 +34,8 @@ add_custom_command(
 if (TILES)
     add_library(
             cataclysm-tiles-common OBJECT
-            ${CATACLYSM_DDA_SOURCES}
-            ${CATACLYSM_DDA_HEADERS})
+            ${CATACLYSM_TLG_SOURCES}
+            ${CATACLYSM_TLG_HEADERS})
     target_include_directories(cataclysm-tiles-common INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
     target_link_libraries(cataclysm-tiles-common PUBLIC third-party)
@@ -160,8 +160,8 @@ endif ()
 # Build curses version if requested
 if (CURSES)
     add_library(cataclysm-common OBJECT
-            ${CATACLYSM_DDA_SOURCES}
-            ${CATACLYSM_DDA_HEADERS})
+            ${CATACLYSM_TLG_SOURCES}
+            ${CATACLYSM_TLG_HEADERS})
     target_include_directories(cataclysm-common INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
     target_link_libraries(cataclysm-common PUBLIC third-party)

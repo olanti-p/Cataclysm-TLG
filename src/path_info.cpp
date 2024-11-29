@@ -83,20 +83,20 @@ void PATH_INFO::init_user_dir( std::string dir )
 #if defined(_WIN32)
         user_dir = getenv_or_abort( "LOCALAPPDATA" );
         // On Windows userdir without dot
-        dir = std::string( user_dir ) + "/cataclysm-dda/";
+        dir = std::string( user_dir ) + "/cataclysm-tlg/";
 #elif defined(MACOSX)
         user_dir = getenv_or_abort( "HOME" );
         dir = std::string( user_dir ) + "/Library/Application Support/Cataclysm/";
 #elif defined(USE_XDG_DIR)
         if( ( user_dir = getenv( "XDG_DATA_HOME" ) ) ) {
-            dir = std::string( user_dir ) + "/cataclysm-dda/";
+            dir = std::string( user_dir ) + "/cataclysm-tlg/";
         } else {
             user_dir = getenv_or_abort( "HOME" );
-            dir = std::string( user_dir ) + "/.local/share/cataclysm-dda/";
+            dir = std::string( user_dir ) + "/.local/share/cataclysm-tlg/";
         }
 #else
         user_dir = getenv_or_abort( "HOME" );
-        dir = std::string( user_dir ) + "/.cataclysm-dda/";
+        dir = std::string( user_dir ) + "/.cataclysm-tlg/";
 #endif
     }
 
@@ -115,7 +115,7 @@ void PATH_INFO::set_standard_filenames()
 
     if( !base_path_value.empty() ) {
 #if defined(DATA_DIR_PREFIX)
-        datadir_value = base_path_value + "share/cataclysm-dda/";
+        datadir_value = base_path_value + "share/cataclysm-tlg/";
         prefix = datadir_value;
         prefix_path = datadir_path_value;
 #else
@@ -151,10 +151,10 @@ void PATH_INFO::set_standard_filenames()
     const char *user_dir;
     std::string dir;
     if( ( user_dir = getenv( "XDG_CONFIG_HOME" ) ) ) {
-        dir = std::string( user_dir ) + "/cataclysm-dda/";
+        dir = std::string( user_dir ) + "/cataclysm-tlg/";
     } else {
         user_dir = getenv_or_abort( "HOME" );
-        dir = std::string( user_dir ) + "/.config/cataclysm-dda/";
+        dir = std::string( user_dir ) + "/.config/cataclysm-tlg/";
     }
     config_dir_value = dir;
     config_dir_path_value = cata_path{ cata_path::root_path::config, fs::path{} };
@@ -457,7 +457,7 @@ cata_path PATH_INFO::langdir_path()
 }
 std::string PATH_INFO::lang_file()
 {
-    return "cataclysm-dda.mo";
+    return "cataclysm-tlg.mo";
 }
 cata_path PATH_INFO::data_sound()
 {

@@ -6,17 +6,8 @@ list(APPEND CMAKE_MODULE_PATH
     ${CMAKE_SOURCE_DIR}/CMakeModules)
 include(GetGitRevisionDescription)
 
-git_describe(GIT_VERSION --tags --always --match "[0-9A-Z]*.[0-9A-Z]*")
-
-if(EXISTS ${GIT_EXECUTABLE})
-    execute_process(COMMAND ${GIT_EXECUTABLE} -c core.safecrlf=false diff --quiet
-        RESULT_VARIABLE DIRTY_FLAG
-    )
-
-    if(DIRTY_FLAG)
-        string(APPEND GIT_VERSION "-dirty")
-    endif()
-endif()
+# Hardcoded version
+set(GIT_VERSION "1.0-beta")
 
 message(NOTICE ${GIT_VERSION})
 
@@ -26,12 +17,12 @@ endif()
 
 if(GIT_VERSION)
     string(REPLACE "-NOTFOUND" "" GIT_VERSION ${GIT_VERSION})
-    file(READ  ${CMAKE_SOURCE_DIR}/src/version.h VERSION_H)
+    file(READ ${CMAKE_SOURCE_DIR}/src/version.h VERSION_H)
     string(REGEX MATCH "#define VERSION \"(.+)\"" VERSION_H "${VERSION_H}")
 
     if(NOT GIT_VERSION STREQUAL VERSION_H)
         file(WRITE ${CMAKE_SOURCE_DIR}/src/version.h
-                "// NOLINT(cata-header-guard)\n\#define VERSION \"${GIT_VERSION}\"\n")
+                "// NOLINT(cata-header-guard)\n#define VERSION \"${GIT_VERSION}\"\n")
     endif()
 endif()
 
@@ -45,6 +36,5 @@ file(WRITE ${CMAKE_SOURCE_DIR}/VERSION.txt "\
 build type: Release\n\
 build number: ${_timestamp}\n\
 commit sha: ${_sha1}\n\
-commit url: https://github.com/fairyarmadillo/Cataclysm-TLG/commit/${_sha1}"
+commit url: https://github.com/Cataclysm-TLG/Cataclysm-TLG/commit/${_sha1}"
 )
-
