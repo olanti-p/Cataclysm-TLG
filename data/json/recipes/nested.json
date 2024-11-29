@@ -364,17 +364,17 @@
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "synthetic longcoats",
-    "description": "Recipes related to tailoring long coats from syntheitc fabric.",
+    "name": "longcoats",
+    "description": "Recipes related to tailoring full-length coats from synthetic fabric.",
     "skill_used": "tailor",
     "nested_category_data": [
       "longcoat",
-      "longcoat_xs",
-      "longcoat_xl",
       "sleeveless_longcoat",
       "sleeveless_longcoat_from_longcoat",
+      "longcoat_xs",
       "sleeveless_longcoat_xs",
       "sleeveless_longcoat_xs_from_longcoat_xs",
+      "longcoat_xl",
       "sleeveless_longcoat_xl",
       "sleeveless_longcoat_xl_from_longcoat_xl"
     ],
@@ -387,16 +387,16 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "fur longcoats",
-    "description": "Recipes related to tailoring long coats from fur.",
+    "description": "Recipes related to tailoring full-length coats from fur.",
     "skill_used": "tailor",
     "nested_category_data": [
       "longcoat_fur",
-      "longcoat_fur_xs",
-      "longcoat_fur_xl",
       "sleeveless_longcoat_fur",
       "sleeveless_longcoat_fur_from_longcoat_fur",
+      "longcoat_fur_xs",
       "sleeveless_longcoat_fur_xs",
       "sleeveless_longcoat_fur_xs_from_longcoat_fur_xs",
+      "longcoat_fur_xl",
       "sleeveless_longcoat_fur_xl",
       "sleeveless_longcoat_fur_xl_from_longcoat_fur_xl"
     ],
@@ -409,16 +409,16 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "leather longcoats",
-    "description": "Recipes related to tailoring sturdy long coats from leather.",
+    "description": "Recipes related to tailoring full-length coats from leather.",
     "skill_used": "tailor",
     "nested_category_data": [
       "longcoat_leather",
-      "longcoat_leather_xs",
-      "longcoat_leather_xl",
       "sleeveless_longcoat_leather",
       "sleeveless_longcoat_leather_from_longcoat_leather",
+      "longcoat_leather_xs",
       "sleeveless_longcoat_leather_xs",
       "sleeveless_longcoat_leather_xs_from_longcoat_leather_xs",
+      "longcoat_leather_xl",
       "sleeveless_longcoat_leather_xl",
       "sleeveless_longcoat_leather_xl_from_longcoat_leather_xl"
     ],
@@ -431,16 +431,16 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "faux fur longcoats",
-    "description": "Recipes related to tailoring long coats from faux fur.",
+    "description": "Recipes related to tailoring full-length coats from faux fur.",
     "skill_used": "tailor",
     "nested_category_data": [
       "longcoat_faux_fur",
-      "longcoat_faux_fur_xs",
-      "longcoat_faux_fur_xl",
       "sleeveless_longcoat_faux_fur",
       "sleeveless_longcoat_faux_fur_from_longcoat_faux_fur",
+      "longcoat_faux_fur_xs",
       "sleeveless_longcoat_faux_fur_xs",
       "sleeveless_longcoat_faux_fur_xs_from_longcoat_faux_fur_xs",
+      "longcoat_faux_fur_xl",
       "sleeveless_longcoat_faux_fur_xl",
       "sleeveless_longcoat_faux_fur_xl_from_longcoat_faux_fur_xl"
     ],
@@ -453,16 +453,16 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor longcoats",
-    "description": "Recipes related to tailoring armored long coats for surviving the Cataclysm.",
+    "description": "Recipes related to tailoring armored full-length coats for surviving the Cataclysm.",
     "skill_used": "tailor",
     "nested_category_data": [
       "longcoat_survivor",
-      "longcoat_survivor_xs",
-      "longcoat_survivor_xl",
       "sleeveless_longcoat_survivor",
       "sleeveless_longcoat_survivor_from_longcoat_survivor",
+      "longcoat_survivor_xs",
       "sleeveless_longcoat_survivor_xs",
       "sleeveless_longcoat_survivor_xs_from_longcoat_survivor_xs",
+      "longcoat_survivor_xl",
       "sleeveless_longcoat_survivor_xl",
       "sleeveless_longcoat_survivor_xl_from_longcoat_survivor_xl"
     ],
@@ -475,12 +475,12 @@
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "name": "longcoats",
-    "description": "Recipes related to tailoring long coats.",
+    "description": "Recipes related to tailoring full-length coats.",
     "skill_used": "tailor",
     "nested_category_data": [
       "nested_nylon_longcoat",
-      "nested_fur_longcoat",
       "nested_leather_longcoat",
+      "nested_fur_longcoat",
       "nested_faux_fur_longcoat",
       "nested_survivor_longcoat"
     ],
@@ -1132,7 +1132,7 @@
     "difficulty": 8
   },
   {
-    "id": "nested_all_survivor_jumpsuits",
+    "id": "nested_all_survivor_suits",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
@@ -1290,12 +1290,12 @@
     "description": "Recipes related to constructing various sizes of custom-built hoods for staying warm in the Cataclysm.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "hood_wsurvivor_nofur",
-      "hood_wsurvivor_nofur_xs",
-      "hood_wsurvivor_nofur_xl",
       "hood_wsurvivor",
       "hood_wsurvivor_xs",
-      "hood_wsurvivor_xl"
+      "hood_wsurvivor_xl",
+      "hood_wsurvivor_nofur",
+      "hood_wsurvivor_nofur_xs",
+      "hood_wsurvivor_nofur_xl"
     ],
     "difficulty": 5
   },
@@ -1543,12 +1543,12 @@
     "description": "Recipes related to constructing various sizes of winter survivor gloves.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "gloves_wsurvivor_nofur",
-      "gloves_wsurvivor_nofur_xs",
-      "gloves_wsurvivor_nofur_xl",
       "gloves_wsurvivor",
       "gloves_wsurvivor_xs",
-      "gloves_wsurvivor_xl"
+      "gloves_wsurvivor_xl",
+      "gloves_wsurvivor_nofur",
+      "gloves_wsurvivor_nofur_xs",
+      "gloves_wsurvivor_nofur_xl"
     ],
     "difficulty": 7
   },
@@ -1670,12 +1670,12 @@
     "description": "Recipes related to constructing various sizes of boots custom-made for staying warm in the Cataclysm.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "boots_wsurvivor_nofur",
-      "boots_wsurvivor_nofur_xs",
-      "boots_wsurvivor_nofur_xl",
       "boots_wsurvivor",
       "boots_wsurvivor_xs",
-      "boots_wsurvivor_xl"
+      "boots_wsurvivor_xl",
+      "boots_wsurvivor_nofur",
+      "boots_wsurvivor_nofur_xs",
+      "boots_wsurvivor_nofur_xl"
     ],
     "difficulty": 5
   },
