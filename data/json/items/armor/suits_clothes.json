@@ -405,7 +405,7 @@
     "id": "jumpsuit",
     "type": "ARMOR",
     "name": { "str": "jumpsuit" },
-    "description": "A thin, short-sleeved bodysuit.  It's comfortable and has a decent amount of pocket space.",
+    "description": "A lightweight short-sleeved bodysuit.  It's comfortable and has a decent amount of pocket space.",
     "weight": "610 g",
     "volume": "3500 ml",
     "price": 8900,
@@ -458,62 +458,15 @@
     "id": "jumpsuit_xl",
     "type": "ARMOR",
     "name": { "str": "XL jumpsuit" },
-    "description": "A thin, short-sleeved bodysuit updated for the trans-human who needs full-body clothing.  Provides some storage and is adjustable to minimize encumbrance.",
-    "weight": "810 g",
-    "volume": "5 L",
-    "price": 20000,
-    "price_postapoc": 50,
-    "to_hit": -3,
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "jumpsuit",
-    "color": "yellow",
-    "armor": [
-      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 5, 6 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 50, "encumbrance": [ 1, 1 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 5, 9 ] }
-    ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1 L",
-        "max_contains_weight": "3 kg",
-        "max_item_length": "18 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1 L",
-        "max_contains_weight": "3 kg",
-        "max_item_length": "18 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "250 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "10 cm",
-        "moves": 100
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "250 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "10 cm",
-        "moves": 100
-      }
-    ],
-    "warmth": 5,
-    "material_thickness": 0.2,
-    "flags": [ "POCKETS", "OVERSIZE" ]
+    "copy-from": "jumpsuit",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
     "id": "jumpsuit_xs",
     "type": "ARMOR",
-    "copy-from": "jumpsuit",
-    "looks_like": "jumpsuit",
     "name": { "str": "XS jumpsuit" },
-    "description": "A thin, short-sleeved jumpsuit; similar to those worn by prisoners.  Provides decent storage and is not very encumbering.",
+    "copy-from": "jumpsuit",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -614,7 +567,7 @@
     "id": "technician_coveralls",
     "type": "ARMOR",
     "name": { "str_sp": "work coveralls" },
-    "description": "A long-sleeved jumpsuit made of water-resistant synthetics.  Offers solid protection from everyday dangers on the job and plenty of storage pockets.",
+    "description": "A long-sleeved jumpsuit made of chemical-resistant synthetics.  Offers solid protection from everyday dangers on the job and plenty of pockets for easy storage.",
     "weight": "1328 g",
     "volume": "1000 ml",
     "price": 10000,
@@ -623,26 +576,41 @@
     "material": [ "nylon" ],
     "symbol": "[",
     "looks_like": "jumpsuit",
-    "color": "yellow",
+    "color": "light_gray",
     "environmental_protection": 3,
     "armor": [
       {
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 } ],
         "covers": [ "torso" ],
-        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 } ],
-        "coverage": 100,
-        "encumbrance": [ 5, 9 ]
+        "encumbrance": [ 9, 13 ],
+        "coverage": 100
       },
       {
-        "covers": [ "arm_l", "arm_r" ],
-        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 } ],
-        "coverage": 100,
-        "encumbrance": [ 5, 5 ]
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 } ],
+        "covers": [ "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "encumbrance": [ 9, 13 ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r",
+          "arm_upper_l",
+          "arm_upper_r",
+          "arm_lower_l",
+          "arm_lower_r",
+          "leg_hip_l",
+          "leg_hip_r",
+          "leg_upper_l",
+          "leg_upper_r",
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 95
       },
       {
-        "covers": [ "leg_l", "leg_r" ],
-        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 } ],
-        "coverage": 100,
-        "encumbrance": [ 5, 9 ]
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "covers": [ "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "encumbrance": [ 0, 0 ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r", "arm_elbow_l", "arm_elbow_r" ],
+        "coverage": 70
       }
     ],
     "pocket_data": [
@@ -700,102 +668,20 @@
     "flags": [ "VARSIZE", "POCKETS", "STURDY", "RAINPROOF" ]
   },
   {
-    "id": "technician_coveralls_h",
+    "id": "technician_coveralls_xl",
     "type": "ARMOR",
-    "name": { "str_sp": "heavy work coveralls" },
-    "description": "A thick, fully covering jumpsuit made of made of water-resistant synthetics lined with extra fabric for warmth in brisk weather.  Offers solid protection from everyday dangers on the job and plenty of storage pockets.",
-    "weight": "2436 g",
-    "volume": "2000 ml",
-    "price": 12000,
-    "price_postapoc": 1250,
-    "to_hit": -3,
-    "material": [ "cotton", "nylon" ],
-    "symbol": "[",
-    "looks_like": "technician_coveralls",
-    "color": "yellow",
-    "environmental_protection": 3,
-    "armor": [
-      {
-        "covers": [ "torso" ],
-        "material": [
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 }
-        ],
-        "coverage": 100,
-        "encumbrance": [ 7, 11 ]
-      },
-      {
-        "covers": [ "arm_l", "arm_r" ],
-        "material": [
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 }
-        ],
-        "coverage": 100,
-        "encumbrance": [ 7, 7 ]
-      },
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "material": [
-          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 }
-        ],
-        "coverage": 100,
-        "encumbrance": [ 7, 11 ]
-      }
-    ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1250 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "19 cm",
-        "description": "Pants pocket.",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1250 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "19 cm",
-        "description": "Pants pocket.",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1080 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "165 mm",
-        "description": "Pants pocket.",
-        "moves": 100
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1080 ml",
-        "max_contains_weight": "4 kg",
-        "max_item_length": "165 mm",
-        "description": "Pants pocket.",
-        "moves": 100
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "650 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "15 cm",
-        "description": "Chest pocket.",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "650 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "15 cm",
-        "description": "Chest pocket.",
-        "moves": 80
-      }
-    ],
-    "warmth": 30,
-    "material_thickness": 1.0,
-    "flags": [ "VARSIZE", "POCKETS", "STURDY", "RAINPROOF" ]
+    "name": { "str": "XL work coveralls" },
+    "copy-from": "technician_coveralls",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "technician_coveralls_xs",
+    "type": "ARMOR",
+    "name": { "str": "XS work coveralls" },
+    "copy-from": "technician_coveralls",
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE" ] }
   },
   {
     "id": "subsuit_xl",

@@ -39,13 +39,9 @@
       [ "armor_riot_arm", 5 ],
       [ "armor_riot_leg", 5 ],
       [ "armor_riot_torso", 10 ],
-      [ "kevlar", 100 ],
-      {
-        "item": "level_3_vest",
-        "variant": "police_armor_vest",
-        "contents-group": "some_steel_front_plates",
-        "prob": 75
-      }
+      [ "kevlar", 90 ],
+      [ "soft_3a_vest", 90 ],
+      [ "stab_vest", 20 ]
     ]
   },
   {

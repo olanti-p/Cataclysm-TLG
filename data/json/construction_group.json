@@ -766,6 +766,16 @@
   },
   {
     "type": "construction_group",
+    "id": "build_plastic_lean_to",
+    "name": "Build Plastic Lean-To"
+  },
+  {
+    "type": "construction_group",
+    "id": "build_gum_blanket_lean_to",
+    "name": "Build Gum Blanket Lean-To"
+  },
+  {
+    "type": "construction_group",
     "id": "build_thatched_roof",
     "name": "Build Thatched Roof"
   },

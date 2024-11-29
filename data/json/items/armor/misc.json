@@ -183,7 +183,7 @@
     "id": "tie_necktie",
     "type": "ARMOR",
     "name": { "str": "necktie" },
-    "description": "An ordinary green necktie.  Knowing how to properly tie it takes some practice, but it's an important skill to learn.  Clip-ons are for children.",
+    "description": "A length of fabric typically looped around the collar of a dress shirt.  Knowing how to properly tie it takes some practice, but it's an important skill to learn.  Clip-ons are for children.",
     "weight": "15 g",
     "volume": "25 ml",
     "price": 1000,
@@ -228,7 +228,10 @@
     "material_thickness": 0.01,
     "environmental_protection": 1,
     "flags": [ "SUPER_FANCY", "OUTER", "OVERSIZE" ],
-    "armor": [ { "encumbrance": 5, "coverage": 100, "covers": [ "eyes", "mouth" ] } ]
+    "armor": [
+      { "encumbrance": 25, "coverage": 100, "covers": [ "eyes" ] },
+      { "encumbrance": 0, "coverage": 100, "covers": [ "mouth" ] }
+    ]
   },
   {
     "id": "tarp",
@@ -245,14 +248,57 @@
     "looks_like": "blanket",
     "color": "light_blue",
     "warmth": 10,
-    "material_thickness": 0.1,
-    "environmental_protection": 1,
-    "flags": [ "OVERSIZE", "OUTER", "WATERPROOF", "ALLOWS_NATURAL_ATTACKS" ],
+    "material_thickness": 0.4,
+    "environmental_protection": 2,
+    "use_action": { "type": "deploy_furn", "furn_type": "f_tarp_groundsheet" },
+    "flags": [ "OVERSIZE", "BELTED", "RAINPROOF", "ALLOWS_NATURAL_ATTACKS", "HOOD", "COLLAR", "POCKETS" ],
+    "armor": [
+      { "encumbrance": 25, "coverage": 90, "covers": [ "torso", "arm_l", "arm_r" ] },
+      {
+        "encumbrance": 25,
+        "coverage": 90,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_draped_l", "leg_draped_r" ]
+      }
+    ]
+  },
+  {
+    "id": "gum_blanket",
+    "type": "ARMOR",
+    "name": { "str": "gum blanket" },
+    "description": "A fabric sheet which has been coated in liquid rubber, allowing it to serve as a raincoat, a work surface, or with a little know-how, part of an improvised shelter.",
+    "weight": "2200 g",
+    "volume": "4 L",
+    "price": 3000,
+    "price_postapoc": 100,
+    "to_hit": -1,
+    "material": [ "soft_rubber", "cotton" ],
+    "symbol": "[",
+    "looks_like": "blanket",
+    "color": "green",
+    "warmth": 30,
+    "environmental_protection": 3,
+    "use_action": { "type": "deploy_furn", "furn_type": "f_rubber_groundsheet" },
+    "flags": [ "OVERSIZE", "BELTED", "RAINPROOF", "ALLOWS_NATURAL_ATTACKS", "HOOD", "COLLAR", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": 30,
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "encumbrance": 45,
         "coverage": 90,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+        "covers": [ "torso", "arm_l", "arm_r" ]
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "encumbrance": 45,
+        "coverage": 90,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_draped_l", "leg_draped_r" ]
       }
     ]
   },

@@ -15,34 +15,30 @@
     "looks_like": "vest_leather",
     "color": "light_gray",
     "warmth": 15,
-    "material_thickness": 4,
-    "flags": [ "STURDY" ],
+    "flags": [ "STURDY", "SKINTIGHT" ],
     "armor": [
       {
         "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.3 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
         ],
-        "encumbrance": 3,
-        "coverage": 94,
-        "cover_vitals": 70,
+        "encumbrance": 8,
+        "coverage": 95,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ]
       },
       {
         "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.3 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
         ],
         "//": "encumbrance handled above",
         "encumbrance": 0,
         "coverage": 85,
-        "cover_vitals": 60,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ]
       }
-    ],
-    "melee_damage": { "bash": 6 }
+    ]
   },
   {
     "id": "ballistic_vest_esapi",
@@ -111,24 +107,22 @@
     "armor": [
       {
         "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 10,
-        "coverage": 100,
-        "cover_vitals": 90,
+        "coverage": 95,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "volume_encumber_modifier": 0.3
       },
       {
         "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 0,
-        "coverage": 80,
-        "cover_vitals": 90,
+        "coverage": 95,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "volume_encumber_modifier": 0
@@ -175,7 +169,6 @@
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 2.0 }
         ],
         "coverage": 100,
-        "cover_vitals": 100,
         "covers": [ "torso", "arm_l", "arm_r" ],
         "encumbrance": [ 71, 80 ]
       }
@@ -233,7 +226,6 @@
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 2 }
         ],
         "coverage": 100,
-        "cover_vitals": 100,
         "covers": [ "torso", "arm_l", "arm_r" ],
         "encumbrance": [ 31, 55 ]
       }
@@ -254,7 +246,6 @@
     "material": [ "kevlar", "plastic_pad", "thermo_resin", "qt_steel" ],
     "symbol": ",",
     "color": "dark_gray",
-    "material_thickness": 5,
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
     "armor": [
       {
@@ -266,7 +257,6 @@
         ],
         "encumbrance": 0,
         "coverage": 45,
-        "cover_vitals": 100,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper", "torso_lower" ]
       }
@@ -308,12 +298,11 @@
     "material": [ "kevlar", "nylon" ],
     "symbol": ",",
     "color": "dark_gray",
-    "material_thickness": 3,
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR", "STURDY" ],
     "armor": [
       {
         "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "kevlar", "covered_by_mat": 100, "thickness": 2.3 }
         ],
         "encumbrance": 0,
@@ -419,7 +408,7 @@
     "type": "ARMOR",
     "copy-from": "scrap_esapi_plate",
     "looks_like": "scrap_esapi_plate",
-    "repairs_like": "hsurvivor_jumpsuit",
+    "repairs_like": "platemail_cuirass",
     "name": { "str": "steel ESAPI plate" },
     "description": "A hand-forged steel ballistic plate, designed to be used in a ballistic vest.",
     "weight": "1300 g",
@@ -524,7 +513,7 @@
     "type": "ARMOR",
     "copy-from": "scrap_esbi_plate",
     "looks_like": "scrap_esbi_plate",
-    "repairs_like": "hsurvivor_jumpsuit",
+    "repairs_like": "platemail_cuirass",
     "name": { "str": "mild ESBI plate" },
     "description": "A hexagonal piece of steel forged into a side plate and padded with synthetic fabric.",
     "weight": "1300 g",
@@ -672,8 +661,7 @@
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 12,
-        "coverage": 100,
-        "cover_vitals": 90,
+        "coverage": 98,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "volume_encumber_modifier": 0.3
@@ -684,8 +672,7 @@
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 0,
-        "coverage": 90,
-        "cover_vitals": 90,
+        "coverage": 98,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "volume_encumber_modifier": 0
@@ -800,8 +787,7 @@
           { "type": "kevlar", "covered_by_mat": 95, "thickness": 2 }
         ],
         "encumbrance": 6,
-        "coverage": 100,
-        "cover_vitals": 70,
+        "coverage": 98,
         "covers": [ "torso" ]
       }
     ]
@@ -830,8 +816,7 @@
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 12,
-        "coverage": 100,
-        "cover_vitals": 70,
+        "coverage": 98,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ]
       },
@@ -895,8 +880,7 @@
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 4,
-        "coverage": 100,
-        "cover_vitals": 90,
+        "coverage": 98,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ]
       },
@@ -941,12 +925,10 @@
           { "type": "ceramic", "covered_by_mat": 30, "thickness": 6.4 }
         ],
         "encumbrance": 8,
-        "coverage": 100,
-        "cover_vitals": 90,
+        "coverage": 98,
         "covers": [ "torso" ]
       }
-    ],
-    "melee_damage": { "bash": 6 }
+    ]
   },
   {
     "id": "xl_ballistic_vest",
@@ -971,8 +953,7 @@
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
         "encumbrance": 8,
-        "coverage": 100,
-        "cover_vitals": 90,
+        "coverage": 98,
         "covers": [ "torso" ],
         "volume_encumber_modifier": 0.25
       }
@@ -1002,8 +983,7 @@
           { "type": "steel", "covered_by_mat": 85, "thickness": 1.5 }
         ],
         "encumbrance": 14,
-        "coverage": 100,
-        "cover_vitals": 95,
+        "coverage": 98,
         "covers": [ "torso" ],
         "volume_encumber_modifier": 0.25
       }
@@ -1015,7 +995,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of ballistic shoulder protectors", "str_pl": "pairs of ballistic shoulder protectors" },
-    "description": "Nylon armor with soft armor inserts protecting the deltoid and upper arm.  Designed to be attached to heavy military body armor.",
+    "description": "Nylon armor with soft armor inserts protecting the deltoid and upper arm.  Specifically designed to be attached to a heavy plate carrier.",
     "weight": "1034 g",
     "volume": "812 ml",
     "//": "Density test expects 1.275, so volume derived from this",
@@ -1046,7 +1026,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "ballistic groin protector" },
-    "description": "Front and back nylon armor with soft armor inserts for groin and butt protection.  Designed to be attached to heavy military body armor.",
+    "description": "Front and back nylon armor with soft armor inserts for groin and butt protection.  Specifically designed to be attached to a heavy plate carrier.",
     "weight": "417 g",
     "volume": "392 ml",
     "//": "33cm x 22cm x 5.4mm",
@@ -1064,7 +1044,6 @@
         ],
         "encumbrance": 2,
         "coverage": 75,
-        "cover_vitals": 100,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
         "volume_encumber_modifier": 0
@@ -1076,7 +1055,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "ballistic collar" },
-    "description": "Front and back nylon collar assemblies with soft armor inserts for neck protection.  Designed to be attached to heavy military body armor.",
+    "description": "Front and back nylon collar assemblies with soft armor inserts for neck protection.  Specifically designed to be attached to a heavy plate carrier.",
     "weight": "621 g",
     "volume": "488 ml",
     "price": 60000,

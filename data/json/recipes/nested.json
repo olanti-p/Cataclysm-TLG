@@ -359,176 +359,235 @@
     "difficulty": 1
   },
   {
-    "id": "nested_cotton_duster",
+    "id": "nested_nylon_longcoat",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "canvas dusters",
-    "description": "Recipes related to tailoring long coats from cotton, known as dusters.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "duster", "xs_duster", "xl_duster", "sleeveless_duster", "sleeveless_duster_from_duster" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_fur_duster",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "fur dusters",
-    "description": "Recipes related to tailoring long coats from fur, known as dusters.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "duster_fur", "xs_duster_fur", "xl_duster_fur", "sleeveless_duster_fur", "sleeveless_duster_fur_from_duster_fur" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_leather_duster",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "leather dusters",
-    "description": "Recipes related to tailoring sturdy long coats from leather, known as dusters.",
+    "name": "longcoats",
+    "description": "Recipes related to tailoring full-length coats from synthetic fabric.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "duster_leather",
-      "xs_duster_leather",
-      "xl_duster_leather",
-      "sleeveless_duster_leather",
-      "sleeveless_duster_leather_from_duster_leather"
+      "longcoat",
+      "sleeveless_longcoat",
+      "sleeveless_longcoat_from_longcoat",
+      "longcoat_xs",
+      "sleeveless_longcoat_xs",
+      "sleeveless_longcoat_xs_from_longcoat_xs",
+      "longcoat_xl",
+      "sleeveless_longcoat_xl",
+      "sleeveless_longcoat_xl_from_longcoat_xl"
+    ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_fur_longcoat",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "fur longcoats",
+    "description": "Recipes related to tailoring full-length coats from fur.",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "longcoat_fur",
+      "sleeveless_longcoat_fur",
+      "sleeveless_longcoat_fur_from_longcoat_fur",
+      "longcoat_fur_xs",
+      "sleeveless_longcoat_fur_xs",
+      "sleeveless_longcoat_fur_xs_from_longcoat_fur_xs",
+      "longcoat_fur_xl",
+      "sleeveless_longcoat_fur_xl",
+      "sleeveless_longcoat_fur_xl_from_longcoat_fur_xl"
+    ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_leather_longcoat",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "leather longcoats",
+    "description": "Recipes related to tailoring full-length coats from leather.",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "longcoat_leather",
+      "sleeveless_longcoat_leather",
+      "sleeveless_longcoat_leather_from_longcoat_leather",
+      "longcoat_leather_xs",
+      "sleeveless_longcoat_leather_xs",
+      "sleeveless_longcoat_leather_xs_from_longcoat_leather_xs",
+      "longcoat_leather_xl",
+      "sleeveless_longcoat_leather_xl",
+      "sleeveless_longcoat_leather_xl_from_longcoat_leather_xl"
     ],
     "difficulty": 6
   },
   {
-    "id": "nested_faux_fur_duster",
+    "id": "nested_faux_fur_longcoat",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "faux fur dusters",
-    "description": "Recipes related to tailoring long coats from faux fur, known as dusters.",
+    "name": "faux fur longcoats",
+    "description": "Recipes related to tailoring full-length coats from faux fur.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "duster_faux_fur",
-      "xs_duster_faux_fur",
-      "xl_duster_faux_fur",
-      "sleeveless_duster_faux_fur",
-      "sleeveless_duster_faux_fur_from_duster_faux_fur"
+      "longcoat_faux_fur",
+      "sleeveless_longcoat_faux_fur",
+      "sleeveless_longcoat_faux_fur_from_longcoat_faux_fur",
+      "longcoat_faux_fur_xs",
+      "sleeveless_longcoat_faux_fur_xs",
+      "sleeveless_longcoat_faux_fur_xs_from_longcoat_faux_fur_xs",
+      "longcoat_faux_fur_xl",
+      "sleeveless_longcoat_faux_fur_xl",
+      "sleeveless_longcoat_faux_fur_xl_from_longcoat_faux_fur_xl"
     ],
     "difficulty": 3
   },
   {
-    "id": "nested_survivor_duster",
+    "id": "nested_survivor_longcoat",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "survivor dusters",
-    "description": "Recipes related to tailoring durable long coats from kevlar and other materials, known as dusters.",
+    "name": "survivor longcoats",
+    "description": "Recipes related to tailoring armored full-length coats for surviving the Cataclysm.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "duster_survivor",
-      "xs_duster_survivor",
-      "xl_duster_survivor",
-      "sleeveless_duster_survivor",
-      "sleeveless_duster_survivor_from_duster_survivor"
+      "longcoat_survivor",
+      "sleeveless_longcoat_survivor",
+      "sleeveless_longcoat_survivor_from_longcoat_survivor",
+      "longcoat_survivor_xs",
+      "sleeveless_longcoat_survivor_xs",
+      "sleeveless_longcoat_survivor_xs_from_longcoat_survivor_xs",
+      "longcoat_survivor_xl",
+      "sleeveless_longcoat_survivor_xl",
+      "sleeveless_longcoat_survivor_xl_from_longcoat_survivor_xl"
     ],
     "difficulty": 6
   },
   {
-    "id": "nested_all_duster",
+    "id": "nested_all_longcoat",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
-    "name": "dusters",
-    "description": "Recipes related to tailoring long coats, known as dusters.",
+    "name": "longcoats",
+    "description": "Recipes related to tailoring full-length coats.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "nested_cotton_duster",
-      "nested_fur_duster",
-      "nested_leather_duster",
-      "nested_faux_fur_duster",
-      "nested_survivor_duster"
+      "nested_nylon_longcoat",
+      "nested_leather_longcoat",
+      "nested_fur_longcoat",
+      "nested_faux_fur_longcoat",
+      "nested_survivor_longcoat"
     ],
     "difficulty": 3
   },
   {
-    "id": "nested_cotton_trenchcoat",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "canvas dusters",
-    "description": "Recipes related to tailoring long coats from cotton, known as trenchcoats.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "trenchcoat", "sleeveless_trenchcoat", "sleeveless_trenchcoat_from_trenchcoat" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_fur_trenchcoat",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "fur trenchcoats",
-    "description": "Recipes related to tailoring long coats from fur, known as trenchcoats.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "trenchcoat_fur", "sleeveless_trenchcoat_fur", "sleeveless_trenchcoat_fur_from_trenchcoat_fur" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_leather_trenchcoat",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "leather trenchcoats",
-    "description": "Recipes related to tailoring long coats from leather, known as trenchcoats.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "trenchcoat_leather", "sleeveless_trenchcoat_leather", "sleeveless_trenchcoat_leather_from_trenchcoat_leather" ],
-    "difficulty": 6
-  },
-  {
-    "id": "nested_faux_fur_trenchcoat",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "faux fur trenchcoats",
-    "description": "Recipes related to tailoring long coats from cotton, known as trenchcoats.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "trenchcoat_faux_fur", "sleeveless_trenchcoat_faux_fur", "sleeveless_trenchcoat_faux_fur_from_trenchcoat_faux_fur" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_survivor_trenchcoat",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "survivor trenchcoats",
-    "description": "Recipes related to tailoring long coats from kevlar, known as trenchcoats.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "trenchcoat_survivor", "sleeveless_trenchcoat_survivor", "sleeveless_trenchcoat_survivor_from_trenchcoat_survivor" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_trenchcoats",
+    "id": "nested_leather_jacket",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
-    "name": "trenchcoats",
-    "description": "Recipes related to tailoring long coats, known as trenchcoats.",
+    "name": "leather jackets",
+    "description": "Recipes related to tailoring jackets from leather.",
+    "skill_used": "tailor",
+    "nested_category_data": [ "jacket_leather", "jacket_leather_xs", "jacket_leather_xl" ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_leather_vest",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "name": "leather vest",
+    "description": "Recipes related to tailoring vests from leather.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "nested_cotton_trenchcoat",
-      "nested_fur_trenchcoat",
-      "nested_leather_trenchcoat",
-      "nested_faux_fur_trenchcoat",
-      "nested_survivor_trenchcoat"
+      "vest_leather",
+      "vest_leather_from_jacket_leather",
+      "vest_leather_xs",
+      "vest_leather_xs_from_jacket_leather_xs",
+      "vest_leather_xl",
+      "vest_leather_xl_from_jacket_leather_xl"
+    ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_leather_vest_mod",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "name": "leather vest",
+    "description": "Recipes related to tailoring armored vests from leather.",
+    "skill_used": "tailor",
+    "nested_category_data": [ "vest_leather_mod", "vest_leather_mod_xs", "vest_leather_mod_xl" ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_fur_coat",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "name": "fur jackets",
+    "description": "Recipes related to tailoring jackets from fur.",
+    "skill_used": "tailor",
+    "nested_category_data": [ "coat_fur", "coat_fur_xs", "coat_fur_xl" ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_fur_vest",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "name": "fur vests",
+    "description": "Recipes related to tailoring vests from fur.",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "vest_fur",
+      "vest_fur_from_coat_fur",
+      "vest_fur_xs",
+      "vest_fur_xs_from_coat_fur_xs",
+      "vest_fur_xl",
+      "vest_fur_xl_from_coat_fur_xl"
+    ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_faux_fur_coat",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "name": "faux fur jackets",
+    "description": "Recipes related to tailoring jackets from faux fur.",
+    "skill_used": "tailor",
+    "nested_category_data": [ "coat_faux_fur", "coat_faux_fur_xs", "coat_faux_fur_xl" ],
+    "difficulty": 3
+  },
+  {
+    "id": "nested_faux_fur_vest",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "name": "faux fur vests",
+    "description": "Recipes related to tailoring vests from faux fur.",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "vest_faux_fur",
+      "vest_faux_fur_from_coat_faux_fur",
+      "vest_faux_fur_xs",
+      "vest_faux_fur_xs_from_coat_faux_fur_xs",
+      "vest_faux_fur_xl",
+      "vest_faux_fur_xl_from_coat_faux_fur_xl"
     ],
     "difficulty": 3
   },
@@ -1037,111 +1096,51 @@
     "difficulty": 1
   },
   {
-    "id": "nested_survivor_jumpsuits",
+    "id": "nested_survivor_suits",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "standard kevlar jumpsuits",
+    "name": "survivor suits",
     "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from harm.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "survivor_jumpsuit", "xssurvivor_jumpsuit", "xlsurvivor_jumpsuit" ],
+    "nested_category_data": [ "survivor_suit", "survivor_suit_xs", "survivor_suit_xl" ],
     "difficulty": 6
   },
   {
-    "id": "nested_light_survivor_jumpsuits",
+    "id": "nested_light_survivor_suits",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "light kevlar jumpsuits",
+    "name": "light survivor suits",
     "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from harm while still being flexible.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "lsurvivor_jumpsuit", "xs_lsurvivor_jumpsuit", "xl_lsurvivor_jumpsuit" ],
+    "nested_category_data": [ "lsurvivor_suit", "lsurvivor_suit_xs", "lsurvivor_suit_xl" ],
     "difficulty": 5
   },
   {
-    "id": "nested_heavy_survivor_jumpsuits",
+    "id": "nested_survivor_firesuits",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
-    "name": "steel-plated kevlar jumpsuits",
-    "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer REALLY safe from harm, although they are a bit heavy.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "hsurvivor_jumpsuit", "xs_hsurvivor_jumpsuit", "xl_hsurvivor_jumpsuit" ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_fire_survivor_jumpsuits",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "kevlar firesuits",
+    "name": "survivor firesuits",
     "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from harm and intense fires.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "fsurvivor_jumpsuit", "xs_fsurvivor_jumpsuit", "xl_fsurvivor_jumpsuit" ],
+    "nested_category_data": [ "fsurvivor_suit", "fsurvivor_suit_xs", "fsurvivor_suit_xl" ],
     "difficulty": 8
   },
   {
-    "id": "nested_winter_survivor_jumpsuits",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "winter kevlar jumpsuits",
-    "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from harm and freezing cold temperatures.",
-    "skill_used": "fabrication",
-    "nested_category_data": [
-      "wsurvivor_jumpsuit_nofur",
-      "xs_wsurvivor_jumpsuit_nofur",
-      "xl_wsurvivor_jumpsuit_nofur",
-      "wsurvivor_jumpsuit",
-      "xs_wsurvivor_jumpsuit",
-      "xl_wsurvivor_jumpsuit"
-    ],
-    "difficulty": 6
-  },
-  {
-    "id": "nested_h20_survivor_jumpsuits",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "kevlar wetsuits",
-    "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from harm and keep water out.",
-    "skill_used": "fabrication",
-    "nested_category_data": [
-      "h20survivor_jumpsuit",
-      "xs_h20survivor_jumpsuit",
-      "xl_h20survivor_jumpsuit",
-      "h20survivor_jumpsuit_light",
-      "xs_h20survivor_jumpsuit_light",
-      "xl_h20survivor_jumpsuit_light",
-      "thick_h20survivor_jumpsuit",
-      "xs_thick_h20survivor_jumpsuit",
-      "xl_thick_h20survivor_jumpsuit"
-    ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_all_survivor_jumpsuits",
+    "id": "nested_all_survivor_suits",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
-    "name": "kevlar jumpsuits",
+    "name": "survivor suits",
     "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from various types of harm.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_survivor_jumpsuits",
-      "nested_light_survivor_jumpsuits",
-      "nested_heavy_survivor_jumpsuits",
-      "nested_fire_survivor_jumpsuits",
-      "nested_winter_survivor_jumpsuits",
-      "nested_h20_survivor_jumpsuits"
-    ],
+    "nested_category_data": [ "nested_survivor_suits", "nested_light_survivor_suits", "nested_survivor_firesuits" ],
     "difficulty": 6
   },
   {
@@ -1276,44 +1275,10 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor firehoods",
-    "description": "Recipes related to constructing various sizes of specialized hoods designed to protect the wearer from flames.",
+    "description": "Recipes related to constructing various sizes of custom-built flame-resistant hoods for surviving the Cataclysm.",
     "skill_used": "tailor",
-    "nested_category_data": [ "hood_fsurvivor", "xs_hood_fsurvivor", "xl_hood_fsurvivor" ],
+    "nested_category_data": [ "hood_fsurvivor", "hood_fsurvivor_xs", "hood_fsurvivor_xl" ],
     "difficulty": 8
-  },
-  {
-    "id": "nested_hood_h20survivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "survivor wetsuit hoods",
-    "description": "Recipes related to constructing various sizes of specialized hoods designed to protect the wearer from water.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "hood_h20survivor",
-      "xs_hood_h20survivor",
-      "xl_hood_h20survivor",
-      "hood_h20survivor_light",
-      "xs_hood_h20survivor_light",
-      "xl_hood_h20survivor_light",
-      "hood_h20survivor_thick",
-      "xs_hood_h20survivor_thick",
-      "xl_hood_h20survivor_thick"
-    ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_hood_lsurvivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "light survivor hoods",
-    "description": "Recipes related to constructing various sizes of specialized hoods designed to protect the wearer while not being too encumbering.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "hood_lsurvivor", "xs_hood_lsurvivor", "xl_hood_lsurvivor" ],
-    "difficulty": 5
   },
   {
     "id": "nested_hood_wsurvivor",
@@ -1322,15 +1287,15 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "winter survivor hoods",
-    "description": "Recipes related to constructing various sizes of specialized hoods designed to protect the wearer and keep them warm in freezing temperatures.",
+    "description": "Recipes related to constructing various sizes of custom-built hoods for staying warm in the Cataclysm.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "hood_wsurvivor_nofur",
-      "xs_hood_wsurvivor_nofur",
-      "xl_hood_wsurvivor_nofur",
       "hood_wsurvivor",
-      "xs_hood_wsurvivor",
-      "xl_hood_wsurvivor"
+      "hood_wsurvivor_xs",
+      "hood_wsurvivor_xl",
+      "hood_wsurvivor_nofur",
+      "hood_wsurvivor_nofur_xs",
+      "hood_wsurvivor_nofur_xl"
     ],
     "difficulty": 5
   },
@@ -1341,9 +1306,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor hoods",
-    "description": "Recipes related to constructing various sizes of specialized hoods designed to protect the wearer.",
+    "description": "Recipes related to constructing various sizes of custom-built hoods for surviving the Cataclysm.",
     "skill_used": "tailor",
-    "nested_category_data": [ "hood_survivor", "hood_xssurvivor", "hood_xlsurvivor" ],
+    "nested_category_data": [ "hood_survivor", "hood_survivor_xs", "hood_survivor_xl" ],
     "difficulty": 5
   },
   {
@@ -1353,15 +1318,9 @@
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HEAD",
     "name": "survivor hoods",
-    "description": "Recipes related to constructing various types and sizes of specialized hoods designed to protect the wearer.",
+    "description": "Recipes related to constructing various types and sizes of custom-built hoods for surviving the Cataclysm.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_hood_survivor",
-      "nested_hood_wsurvivor",
-      "nested_hood_lsurvivor",
-      "nested_hood_h20survivor",
-      "nested_hood_fsurvivor"
-    ],
+    "nested_category_data": [ "nested_hood_survivor", "nested_hood_wsurvivor", "nested_hood_fsurvivor" ],
     "difficulty": 5
   },
   {
@@ -1407,9 +1366,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor masks",
-    "description": "Recipes related to constructing various sizes of standard survivor masks.",
+    "description": "Recipes related to constructing various sizes of custom gas masks that will finish even unusual anatomy.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "mask_survivor", "mask_survivorxs", "mask_survivorxl" ],
+    "nested_category_data": [ "mask_survivor", "mask_survivor_xs", "mask_survivor_xl" ],
     "difficulty": 6
   },
   {
@@ -1419,21 +1378,21 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor firemasks",
-    "description": "Recipes related to constructing various sizes of survivor masks designed to withstand heavy smoke and fires.",
+    "description": "Recipes related to constructing various sizes of flame-resistant gas masks that will fit even unusual anatomy.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "mask_fsurvivor", "mask_fsurvivorxs", "mask_fsurvivorxl" ],
+    "nested_category_data": [ "mask_fsurvivor", "mask_fsurvivor_xs", "mask_fsurvivor_xl" ],
     "difficulty": 7
   },
   {
-    "id": "nested_mask_h20survivor",
+    "id": "nested_mask_h2osurvivor",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor divemasks",
-    "description": "Recipes related to constructing various sizes of survivor masks designed to protect the wearer and allow them to breath underwater.",
+    "description": "Recipes related to constructing various sizes of custom diving masks that will fit even unusual anatomy.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "mask_h20survivor", "mask_h20survivorxs", "mask_h20survivorxl" ],
+    "nested_category_data": [ "mask_h2osurvivor", "mask_h2osurvivor_xs", "mask_h2osurvivor_xl" ],
     "difficulty": 7
   },
   {
@@ -1443,9 +1402,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "heavy survivor masks",
-    "description": "Recipes related to constructing various sizes of heavy survivor masks.",
+    "description": "Recipes related to constructing various sizes of armored custom gas masks that will fit even unusual anatomy.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "mask_hsurvivor", "mask_hsurvivorxl", "mask_hsurvivorxs" ],
+    "nested_category_data": [ "mask_hsurvivor", "mask_hsurvivor_xl", "mask_hsurvivor_xs" ],
     "difficulty": 7
   },
   {
@@ -1455,9 +1414,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "half survivor masks",
-    "description": "Recipes related to constructing various sizes of half survivor masks.",
+    "description": "Recipes related to constructing various sizes of custom gas masks that will fit even unusual anatomy.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "mask_lsurvivor", "mask_lsurvivorxl", "mask_lsurvivorxs" ],
+    "nested_category_data": [ "mask_lsurvivor", "mask_lsurvivor_xl", "mask_lsurvivor_xs" ],
     "difficulty": 6
   },
   {
@@ -1467,14 +1426,14 @@
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HEAD",
     "name": "survivor masks",
-    "description": "Recipes related to constructing specialized survivor masks.",
+    "description": "Recipes related to constructing custom-made gas and diving masks that will fit even unusual anatomy.",
     "skill_used": "fabrication",
     "nested_category_data": [
       "nested_mask_survivor",
       "nested_mask_fsurvivor",
       "nested_mask_hsurvivor",
       "nested_mask_lsurvivor",
-      "nested_mask_h20survivor"
+      "nested_mask_h2osurvivor"
     ],
     "difficulty": 6
   },
@@ -1571,7 +1530,7 @@
     "name": "survivor firegloves",
     "description": "Recipes related to constructing various sizes of survivor firegloves.",
     "skill_used": "tailor",
-    "nested_category_data": [ "gloves_fsurvivor", "xs_gloves_fsurvivor", "xl_gloves_fsurvivor" ],
+    "nested_category_data": [ "gloves_fsurvivor", "gloves_fsurvivor_xs", "gloves_fsurvivor_xl" ],
     "difficulty": 7
   },
   {
@@ -1584,60 +1543,14 @@
     "description": "Recipes related to constructing various sizes of winter survivor gloves.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "gloves_wsurvivor_nofur",
-      "xs_gloves_wsurvivor_nofur",
-      "xl_gloves_wsurvivor_nofur",
       "gloves_wsurvivor",
-      "xs_gloves_wsurvivor",
-      "xl_gloves_wsurvivor"
+      "gloves_wsurvivor_xs",
+      "gloves_wsurvivor_xl",
+      "gloves_wsurvivor_nofur",
+      "gloves_wsurvivor_nofur_xs",
+      "gloves_wsurvivor_nofur_xl"
     ],
     "difficulty": 7
-  },
-  {
-    "id": "nested_gloves_h20survivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "survivor wetsuit gloves",
-    "description": "Recipes related to constructing various sizes of survivor wetsuit gloves.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "gloves_h20survivor",
-      "xs_gloves_h20survivor",
-      "xl_gloves_h20survivor",
-      "gloves_h20survivor_light",
-      "xs_gloves_h20survivor_light",
-      "xl_gloves_h20survivor_light",
-      "gloves_h20survivor_thick",
-      "xs_gloves_h20survivor_thick",
-      "xl_gloves_h20survivor_thick"
-    ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_gloves_hsurvivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "heavy survivor gloves",
-    "description": "Recipes related to constructing various sizes of heavy survivor gloves.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "gloves_hsurvivor", "xs_gloves_hsurvivor", "xl_gloves_hsurvivor" ],
-    "difficulty": 7
-  },
-  {
-    "id": "nested_gloves_lsurvivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "light survivor gloves",
-    "description": "Recipes related to constructing various sizes of light survivor gloves.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "gloves_lsurvivor", "xs_gloves_lsurvivor", "xl_gloves_lsurvivor" ],
-    "difficulty": 5
   },
   {
     "id": "nested_gloves_survivor",
@@ -1648,7 +1561,7 @@
     "name": "survivor gloves",
     "description": "Recipes related to constructing various sizes of survivor gloves.",
     "skill_used": "tailor",
-    "nested_category_data": [ "gloves_survivor", "xs_gloves_survivor", "xl_gloves_survivor" ],
+    "nested_category_data": [ "gloves_survivor", "gloves_survivor_xs", "gloves_survivor_xl" ],
     "difficulty": 5
   },
   {
@@ -1660,14 +1573,7 @@
     "name": "fingerless survivor gloves",
     "description": "Recipes related to modifying survivor gloves to be fingerless.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "gloves_survivor_fingerless",
-      "xs_gloves_survivor_fingerless",
-      "xl_gloves_survivor_fingerless",
-      "gloves_lsurvivor_fingerless",
-      "xs_gloves_lsurvivor_fingerless",
-      "xl_gloves_lsurvivor_fingerless"
-    ],
+    "nested_category_data": [ "gloves_survivor_fingerless", "gloves_survivor_fingerless_xs", "gloves_survivor_fingerless_xl" ],
     "difficulty": 1
   },
   {
@@ -1679,15 +1585,7 @@
     "name": "survivor gloves",
     "description": "Recipes related to constructing various sizes and types of survivor gloves.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_gloves_survivor_fingerless",
-      "nested_gloves_survivor",
-      "nested_gloves_lsurvivor",
-      "nested_gloves_hsurvivor",
-      "nested_gloves_h20survivor",
-      "nested_gloves_wsurvivor",
-      "nested_gloves_fsurvivor"
-    ],
+    "nested_category_data": [ "nested_gloves_survivor_fingerless", "nested_gloves_survivor", "nested_gloves_wsurvivor", "nested_gloves_fsurvivor" ],
     "difficulty": 1
   },
   {
@@ -1715,39 +1613,15 @@
     "difficulty": 7
   },
   {
-    "id": "nested_lsurvivor_pants",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "light survivor pants",
-    "description": "Recipes related to constructing various sizes of light survivor cargo pants.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "lsurvivor_pants", "xs_lsurvivor_pants", "xl_lsurvivor_pants" ],
-    "difficulty": 5
-  },
-  {
     "id": "nested_survivor_pants",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "survivor pants",
-    "description": "Recipes related to constructing various sizes of survivor cargo pants.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "pants_survivor", "xs_pants_survivor", "xl_pants_survivor" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_all_survivor_pants",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_LEGS",
-    "name": "survivor pants",
-    "description": "Recipes related to constructing various sizes and variations of survivor cargo pants.",
+    "name": "survivor cargo pants",
+    "description": "Recipes related to constructing various sizes of pants custom-made for surviving the Cataclysm.",
     "skill_used": "tailor",
-    "nested_category_data": [ "nested_lsurvivor_pants", "nested_survivor_pants" ],
+    "nested_category_data": [ "pants_survivor", "pants_survivor_xs", "pants_survivor_xl" ],
     "difficulty": 5
   },
   {
@@ -1787,80 +1661,22 @@
     "difficulty": 7
   },
   {
-    "id": "nested_boots_fsurvivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "survivor fireboots",
-    "description": "Recipes related to constructing various sizes of survivor fireboots.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "boots_fsurvivor", "xs_boots_fsurvivor", "xl_boots_fsurvivor" ],
-    "difficulty": 5
-  },
-  {
     "id": "nested_boots_wsurvivor",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor winter boots",
-    "description": "Recipes related to constructing various sizes of survivor winter boots.",
+    "description": "Recipes related to constructing various sizes of boots custom-made for staying warm in the Cataclysm.",
     "skill_used": "tailor",
     "nested_category_data": [
-      "boots_wsurvivor_nofur",
-      "xs_boots_wsurvivor_nofur",
-      "xl_boots_wsurvivor_nofur",
       "boots_wsurvivor",
-      "xs_boots_wsurvivor",
-      "xl_boots_wsurvivor"
+      "boots_wsurvivor_xs",
+      "boots_wsurvivor_xl",
+      "boots_wsurvivor_nofur",
+      "boots_wsurvivor_nofur_xs",
+      "boots_wsurvivor_nofur_xl"
     ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_boots_h20survivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "survivor wetsuit boots",
-    "description": "Recipes related to constructing various sizes of survivor wetsuit boots.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "boots_h20survivor",
-      "xs_boots_h20survivor",
-      "xl_boots_h20survivor",
-      "boots_h20survivor_light",
-      "xs_boots_h20survivor_light",
-      "xl_boots_h20survivor_light",
-      "boots_h20survivor_thick",
-      "xs_boots_h20survivor_thick",
-      "xl_boots_h20survivor_thick"
-    ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_boots_hsurvivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "heavy survivor boots",
-    "description": "Recipes related to constructing various sizes of heavy survivor boots.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "boots_hsurvivor", "xs_boots_hsurvivor", "xl_boots_hsurvivor" ],
-    "difficulty": 5
-  },
-  {
-    "id": "nested_boots_lsurvivor",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "light survivor boots",
-    "description": "Recipes related to constructing various sizes of light survivor boots.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "boots_lsurvivor", "xs_boots_lsurvivor", "xl_boots_lsurvivor" ],
     "difficulty": 5
   },
   {
@@ -1870,9 +1686,9 @@
     "category": "CC_*",
     "subcategory": "CSC_*_NESTED",
     "name": "survivor boots",
-    "description": "Recipes related to constructing various sizes of standard survivor boots.",
+    "description": "Recipes related to constructing various sizes of boots custom-made for surviving the Cataclysm.",
     "skill_used": "tailor",
-    "nested_category_data": [ "boots_survivor", "boots_xssurvivor", "boots_xlsurvivor" ],
+    "nested_category_data": [ "boots_survivor", "boots_survivor_xs", "boots_survivor_xl" ],
     "difficulty": 5
   },
   {
@@ -1884,14 +1700,7 @@
     "name": "survivor boots",
     "description": "Recipes related to constructing various sizes and variations of survivor boots.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_boots_survivor",
-      "nested_boots_lsurvivor",
-      "nested_boots_hsurvivor",
-      "nested_boots_h20survivor",
-      "nested_boots_wsurvivor",
-      "nested_boots_fsurvivor"
-    ],
+    "nested_category_data": [ "nested_boots_survivor", "nested_boots_wsurvivor" ],
     "difficulty": 5
   },
   {
@@ -2890,109 +2699,6 @@
     "difficulty": 3
   },
   {
-    "id": "nested_hoods_canvas",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "name": "canvas coifs",
-    "description": "Recipes related to armored cloth hoods made of canvas.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "aketon_hood_canvas", "xl_aketon_hood_canvas", "xs_aketon_hood_canvas" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_aketon_nylon",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "name": "nylon aketons",
-    "description": "Recipes related to synthetic fabric armor meant to be worn under other armor.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "aketon_nylon",
-      "xl_aketon_nylon",
-      "xs_aketon_nylon",
-      "aketon_nylon_vest",
-      "xl_aketon_nylon_vest",
-      "xs_aketon_nylon_vest"
-    ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_gambeson_nylon",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "name": "nylon gambesons",
-    "description": "Recipes related to thicker synthetic fabric armor meant to be worn standalone.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "gambeson_nylon",
-      "xl_gambeson_nylon",
-      "xs_gambeson_nylon",
-      "gambeson_nylon_thinsleeved",
-      "xl_gambeson_nylon_thinsleeved",
-      "xs_gambeson_nylon_thinsleeved",
-      "gambeson_nylon_vest",
-      "xl_gambeson_nylon_vest",
-      "xs_gambeson_nylon_vest"
-    ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_armingpants_nylon",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_LEGS",
-    "name": "nylon arming pants",
-    "description": "Recipes related to armored cloth pants made of synthetic fabric.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "aketon_pants_nylon",
-      "xl_aketon_pants_nylon",
-      "xs_aketon_pants_nylon",
-      "gambeson_pants_nylon",
-      "xl_gambeson_pants_nylon",
-      "xs_gambeson_pants_nylon"
-    ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_arminggloves_nylon",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HANDS",
-    "name": "nylon arming gloves",
-    "description": "Recipes related to armored cloth gloves made of synthetic fabric.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "aketon_gloves_nylon",
-      "xl_aketon_gloves_nylon",
-      "xs_aketon_gloves_nylon",
-      "gambeson_gloves_nylon",
-      "xl_gambeson_gloves_nylon",
-      "xs_gambeson_gloves_nylon"
-    ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_hoods_nylon",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_HEAD",
-    "name": "nylon coifs",
-    "description": "Recipes related to armored cloth hoods made of synthetic fabric.",
-    "skill_used": "tailor",
-    "nested_category_data": [ "aketon_hood_nylon", "xl_aketon_hood_nylon", "xs_aketon_hood_nylon" ],
-    "difficulty": 3
-  },
-  {
     "id": "nested_aketon_wool",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
@@ -3002,28 +2708,6 @@
     "description": "Recipes related to wool armor meant to be worn under other armor.",
     "skill_used": "tailor",
     "nested_category_data": [ "aketon_wool", "xl_aketon_wool", "xs_aketon_wool", "aketon_wool_vest", "xl_aketon_wool_vest", "xs_aketon_wool_vest" ],
-    "difficulty": 3
-  },
-  {
-    "id": "nested_gambeson_wool",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "name": "wool gambesons",
-    "description": "Recipes related to thicker wool armor meant to be worn standalone.",
-    "skill_used": "tailor",
-    "nested_category_data": [
-      "gambeson_wool",
-      "xl_gambeson_wool",
-      "xs_gambeson_wool",
-      "gambeson_wool_thinsleeved",
-      "xl_gambeson_wool_thinsleeved",
-      "xs_gambeson_wool_thinsleeved",
-      "gambeson_wool_vest",
-      "xl_gambeson_wool_vest",
-      "xs_gambeson_wool_vest"
-    ],
     "difficulty": 3
   },
   {

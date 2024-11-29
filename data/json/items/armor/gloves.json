@@ -239,12 +239,12 @@
     "id": "gloves_claws",
     "type": "ARMOR",
     "name": { "str": "pair of claw gloves", "str_pl": "pairs of claw gloves" },
-    "description": "A pair of well-made black stretch vinyl gloves, with black steel claws connected to the fingers.  Used in BDSM performances or as part of a costume.",
+    "description": "A pair of well-made black stretch vinyl gloves with black steel claws connected to the fingers.  Used in BDSM performances or as part of a costume, they're not likely to help in a fight.",
     "weight": "160 g",
     "volume": "270 ml",
     "price": 6000,
     "price_postapoc": 140,
-    "material": [ "plastic" ],
+    "material": [ "vinyl" ],
     "symbol": "[",
     "looks_like": "gloves_medical",
     "color": "dark_gray",
@@ -313,16 +313,10 @@
     "flags": [ "VARSIZE", "STURDY", "ALLOWS_NATURAL_ATTACKS", "ALLOWS_TALONS", "DURABLE_MELEE" ],
     "armor": [
       {
-        "encumbrance": 4,
-        "coverage": 75,
-        "covers": [ "hand_l", "hand_r" ],
-        "specifically_covers": [ "hand_wrist_l", "hand_wrist_r" ]
-      },
-      {
-        "encumbrance": 4,
+        "encumbrance": 8,
         "coverage": 100,
         "covers": [ "hand_l", "hand_r" ],
-        "specifically_covers": [ "hand_palm_l", "hand_palm_r", "hand_back_l", "hand_back_r" ]
+        "specifically_covers": [ "hand_palm_l", "hand_palm_r", "hand_back_l", "hand_back_r", "hand_wrist_l", "hand_wrist_r" ]
       },
       {
         "encumbrance": 0,
@@ -518,32 +512,6 @@
     "name": { "str": "pair of XS faux fur gloves", "str_pl": "pairs of XS fur gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
-  },
-  {
-    "id": "glove_jackson",
-    "type": "ARMOR",
-    "name": { "str": "white glove" },
-    "description": "A single white glove covered with hundreds of rhinestones.",
-    "weight": "59 g",
-    "volume": "250 ml",
-    "price": 50000,
-    "price_postapoc": 50,
-    "to_hit": 1,
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "gloves_leather",
-    "color": "white",
-    "warmth": 20,
-    "material_thickness": 0.5,
-    "flags": [ "WATER_FRIENDLY", "FANCY" ],
-    "armor": [
-      {
-        "coverage": 100,
-        "covers": [ "hand_l", "hand_r" ],
-        "specifically_covers": [ "hand_fingers_l", "hand_fingers_r", "hand_back_l", "hand_back_r", "hand_palm_l", "hand_palm_r" ]
-      },
-      { "coverage": 50, "covers": [ "hand_l", "hand_r" ], "specifically_covers": [ "hand_wrist_l", "hand_wrist_r" ] }
-    ]
   },
   {
     "id": "gloves_leather",

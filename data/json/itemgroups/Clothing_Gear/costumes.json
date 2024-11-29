@@ -81,7 +81,7 @@
   {
     "type": "item_group",
     "id": "costume_cloacks",
-    "//": "cloacks for costumes, cosplay and costume parties",
+    "//": "cloaks for costumes, cosplay and costume parties",
     "subtype": "distribution",
     "entries": [
       { "item": "cloak_vampire", "prob": 25 },
@@ -89,7 +89,7 @@
       { "item": "cloak_black", "prob": 40 },
       { "item": "jedi_cloak", "prob": 30 },
       { "item": "cloak", "prob": 15 },
-      { "item": "cloak_leather", "prob": 20 },
+      { "item": "cloak_leather", "prob": 10 },
       { "item": "cloak_wool", "prob": 10 },
       { "item": "pride_flag", "prob": 2 },
       { "item": "national_flag", "prob": 1 },
@@ -111,9 +111,12 @@
       { "item": "robe", "prob": 10 },
       { "item": "samghati", "prob": 1 },
       { "item": "haori", "prob": 1 },
-      { "item": "trenchcoat_steampunk", "prob": 15 },
+      { "item": "longcoat", "prob": 10 },
+      { "item": "longcoat_faux_fur", "prob": 15 },
+      { "item": "sleeveless_longcoat_faux_fur", "prob": 15 },
       { "item": "plaguedoctor_robe", "prob": 15 },
       { "item": "nun_habit", "prob": 10 },
+      { "item": "house_coat", "prob": 5 },
       { "item": "suit_bostonchan", "prob": 20 }
     ]
   },
@@ -127,6 +130,8 @@
       { "item": "santa_jacket_short", "prob": 25 },
       { "item": "jacket_chef", "prob": 25 },
       { "item": "jacket_leather", "prob": 40 },
+      { "item": "coat_faux_fur", "prob": 30 },
+      { "item": "vest_faux_fur", "prob": 30 },
       { "item": "jacket_army", "prob": 25 },
       { "item": "jacket_ninja", "prob": 25 }
     ]

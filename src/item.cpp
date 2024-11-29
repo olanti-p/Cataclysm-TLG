@@ -8997,10 +8997,10 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
         return armor_status::UNDAMAGED;
     }
     // Don't damage armor as much when bypassed by armor piercing
-    // AP attacks usually concentrate force in a small area 
+    // AP attacks usually concentrate force in a small area
     const float post_mitigated_dmg = du.amount;
     if( post_mitigated_dmg > armors_own_resist ) {
-        // Figure out chance of damage relative to the damage we took. 
+        // Figure out chance of damage relative to the damage we took.
         float damaged_chance = 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1;
         // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
         if( du.type == damage_bash && is_soft() ) {

@@ -235,6 +235,7 @@
       { "group": "ammo_pocket_batteries_full", "prob": 50 },
       [ "pilot_light", 50 ],
       { "item": "duct_tape", "prob": 200, "charges": [ 50, 200 ] },
+      [ "rubber_spray_can", 20 ],
       [ "superglue", 100 ],
       [ "string_6", 100 ],
       [ "string_36", 100 ],
@@ -264,6 +265,7 @@
       { "item": "solder_wire", "prob": 50, "count": [ 2, 6 ] },
       { "item": "pilot_light", "prob": 50, "count": [ 1, 2 ] },
       { "item": "metal_tank_little", "prob": 50, "count": [ 1, 2 ] },
+      [ "rubber_spray_can", 20 ],
       [ "metal_tank", 10 ],
       [ "jerrycan", 10 ],
       [ "rubber_cement", 50 ],
@@ -430,7 +432,8 @@
       [ "gas_forge", 15 ],
       { "item": "chem_turpentine", "prob": 20, "charges-min": 20 },
       { "item": "silicone", "prob": 15, "charges-min": 29, "container-item": "squeeze_tube", "sealed": true },
-      { "item": "silicone", "prob": 35, "charges-min": 8, "container-item": "squeeze_tube_small", "sealed": true }
+      { "item": "silicone", "prob": 35, "charges-min": 8, "container-item": "squeeze_tube_small", "sealed": true },
+      [ "rubber_spray_can", 20 ]
     ]
   },
   {
@@ -637,6 +640,7 @@
       { "item": "seatbelt", "prob": 10, "count": [ 3, 10 ] },
       { "item": "five-point_harness", "prob": 3, "count": [ 2, 4 ] },
       { "item": "rubber_cement", "prob": 15, "count": [ 3, 9 ] },
+      { "item": "rubber_spray_can", "prob": 3 },
       [ "vac_mold", 1 ],
       [ "wheel_wide", 10 ],
       [ "wheel_bicycle", 10 ],
