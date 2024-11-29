@@ -54,6 +54,12 @@
     "components": [ [ [ "scrap_copper", 1 ], [ "copper", 50 ] ] ]
   },
   {
+    "id": "liquid_rubber",
+    "type": "requirement",
+    "//": "Liquid butyl rubber products, whether aerosol or brushed on.",
+    "components": [ [ [ "liquid_rubber_spray", 1 ] ] ]
+  },
+  {
     "id": "plant_cordage",
     "type": "requirement",
     "//": "Fibrous plant material for basket weaving or rope making.",

@@ -48,7 +48,7 @@
     "type": "item_group",
     "id": "NC_SOLDIER_QMASTER_coat",
     "subtype": "distribution",
-    "entries": [ { "item": "trenchcoat", "prob": 80 }, { "item": "vest", "prob": 60 } ]
+    "entries": [ { "item": "jacket_army", "prob": 80 }, { "item": "vest", "prob": 60 } ]
   },
   {
     "type": "item_group",
@@ -64,6 +64,8 @@
       { "group": "tools_mechanic", "prob": 20, "count": [ 1, 3 ] },
       { "group": "ammo_any_batteries_full", "prob": 20, "count": [ 1, 3 ] },
       [ "vest", 40 ],
+      [ "soft_3a_vest", 15 ],
+      [ "stab_vest", 15 ],
       [ "kevlar", 15 ],
       [ "jacket_army", 30 ],
       [ "pants_army", 30 ],

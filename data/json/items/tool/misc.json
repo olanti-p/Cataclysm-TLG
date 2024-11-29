@@ -630,8 +630,8 @@
   {
     "id": "spray_can",
     "type": "TOOL",
-    "name": { "str": "spray can" },
-    "description": "An aerosol spray can filled with paint.  Activate it to make graffiti on the floor.",
+    "name": { "str": "spraypaint" },
+    "description": "An aerosol spray can used to store paint under pressure.  Activate it to make graffiti on the floor.",
     "weight": "340 g",
     "volume": "250 ml",
     "longest_side": "21 cm",
@@ -644,6 +644,31 @@
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "aerosol_paint": 10 }, "watertight": true, "rigid": true } ],
     "use_action": [ "SPRAY_CAN" ],
     "flags": [ "WRITE_MESSAGE", "NO_RELOAD", "NO_UNLOAD" ]
+  },
+  {
+    "id": "rubber_spray_can",
+    "type": "TOOL",
+    "name": { "str": "rubber sealant spray" },
+    "description": "An aerosol spray can that contains (if there's any left) quick-drying liquid butyl rubber, which can be sprayed onto fabric and other materials to make them waterproof.",
+    "weight": "340 g",
+    "volume": "250 ml",
+    "longest_side": "21 cm",
+    "price": 1000,
+    "price_postapoc": 50,
+    "material": [ "aluminum", "soft_rubber" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "open_container": true,
+        "ammo_restriction": { "liquid_rubber_spray": 10 },
+        "watertight": true,
+        "rigid": true
+      }
+    ],
+    "flags": [ "NO_RELOAD", "NO_UNLOAD" ]
   },
   {
     "id": "stepladder",

@@ -44,7 +44,8 @@
     "entries": [
       { "item": "null", "prob": 10 },
       { "item": "jacket_army", "prob": 50 },
-      { "item": "kevlar", "prob": 10 },
+      { "item": "stab_vest", "prob": 10 },
+      { "item": "soft_3a_vest", "prob": 10 },
       { "group": "military_ballistic_vest", "prob": 25 }
     ]
   },

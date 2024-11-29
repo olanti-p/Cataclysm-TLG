@@ -2,12 +2,6 @@
   {
     "type": "item_group",
     "subtype": "collection",
-    "id": "jackson_drops",
-    "entries": [ { "item": "socks", "prob": 100 } ]
-  },
-  {
-    "type": "item_group",
-    "subtype": "collection",
     "id": "mon_dragon_dummy_drops",
     "entries": [
       { "item": "paper", "count": [ 100, 300 ] },

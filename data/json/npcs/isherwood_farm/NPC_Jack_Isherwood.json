@@ -51,7 +51,8 @@
         "distribution": [
           { "item": "jacket_light" },
           { "item": "jacket_leather" },
-          { "item": "trenchcoat" },
+          { "item": "longcoat" },
+          { "item": "longcoat_leather" },
           { "item": "jacket_jean" },
           { "item": "vest_jean" },
           { "item": "jacket_flannel" }
@@ -81,7 +82,8 @@
         "distribution": [
           { "item": "jacket_light" },
           { "item": "jacket_leather" },
-          { "item": "trenchcoat" },
+          { "item": "longcoat" },
+          { "item": "longcoat_leather" },
           { "item": "jacket_jean" },
           { "item": "vest_jean" },
           { "item": "jacket_flannel" }

@@ -171,7 +171,12 @@
     "skills_required": [ "fabrication", 6 ],
     "time": "20 h",
     "autolearn": true,
-    "using": [ [ "tailoring_leather_small", 2 ], [ "tailoring_nomex_patchwork", 2 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [
+      [ "tailoring_leather_small", 2 ],
+      [ "tailoring_nomex_patchwork", 2 ],
+      [ "tailoring_kevlar_fabric", 1 ],
+      [ "liquid_rubber", 3 ]
+    ],
     "proficiencies": [
       { "proficiency": "prof_closures_waterproofing" },
       { "proficiency": "prof_leatherworking_basic" },
@@ -180,19 +185,29 @@
     "components": [ [ [ "duct_tape", 120 ] ], [ [ "nomex_gloves", 1 ], [ "fire_gauntlets", 1 ] ] ]
   },
   {
-    "result": "xs_gloves_fsurvivor",
+    "result": "gloves_fsurvivor_xs",
     "type": "recipe",
     "copy-from": "gloves_fsurvivor",
     "time": "20 h",
-    "using": [ [ "tailoring_leather_small", 1 ], [ "tailoring_nomex_patchwork", 1 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [
+      [ "tailoring_leather_small", 1 ],
+      [ "tailoring_nomex_patchwork", 1 ],
+      [ "tailoring_kevlar_fabric", 1 ],
+      [ "liquid_rubber", 2 ]
+    ],
     "components": [ [ [ "duct_tape", 90 ] ], [ [ "nomex_gloves", 1 ], [ "fire_gauntlets", 1 ] ] ]
   },
   {
-    "result": "xl_gloves_fsurvivor",
+    "result": "gloves_fsurvivor_xl",
     "type": "recipe",
     "copy-from": "gloves_fsurvivor",
     "time": "22 h 45 m",
-    "using": [ [ "tailoring_leather_small", 3 ], [ "tailoring_nomex_patchwork", 3 ], [ "tailoring_kevlar_fabric", 2 ] ],
+    "using": [
+      [ "tailoring_leather_small", 3 ],
+      [ "tailoring_nomex_patchwork", 3 ],
+      [ "tailoring_kevlar_fabric", 2 ],
+      [ "liquid_rubber", 4 ]
+    ],
     "components": [ [ [ "duct_tape", 170 ] ], [ [ "nomex_gloves", 1 ], [ "fire_gauntlets", 1 ] ] ]
   },
   {
@@ -265,7 +280,7 @@
     "skills_required": [ "fabrication", 5 ],
     "time": "20 h",
     "autolearn": true,
-    "using": [ [ "sewing_standard", 50 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [ [ "sewing_standard", 50 ], [ "liquid_rubber", 3 ] ],
     "proficiencies": [
       { "proficiency": "prof_closures_waterproofing" },
       { "proficiency": "prof_polymerworking" },
@@ -275,196 +290,39 @@
     "components": [
       [ [ "duct_tape", 80 ] ],
       [ [ "faux_fur", 4 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
+      [ [ "kevlar_patch", 8 ] ],
+      [ [ "gloves_tactical", 1 ], [ "gloves_faux_fur", 1 ], [ "gloves_light", 1 ] ]
     ],
     "byproducts": [ [ "scrap_faux_fur", 5 ] ]
   },
   {
-    "result": "xs_gloves_wsurvivor_nofur",
+    "result": "gloves_wsurvivor_nofur_xs",
     "type": "recipe",
     "copy-from": "gloves_wsurvivor_nofur",
     "time": "20 h",
-    "using": [ [ "sewing_standard", 37 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [ [ "sewing_standard", 37 ], [ "tailoring_kevlar_fabric", 1 ], [ "liquid_rubber", 2 ] ],
     "components": [
       [ [ "duct_tape", 60 ] ],
       [ [ "faux_fur", 3 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
+      [ [ "kevlar_patch", 6 ] ],
+      [ [ "gloves_tactical", 1 ], [ "xs_gloves_faux_fur", 1 ], [ "xs_gloves_light", 1 ] ]
     ],
     "byproducts": [ [ "scrap_faux_fur", 4 ] ]
   },
   {
-    "result": "xl_gloves_wsurvivor_nofur",
+    "result": "gloves_wsurvivor_nofur_xl",
     "type": "recipe",
     "copy-from": "gloves_wsurvivor_nofur",
     "time": "26 h",
-    "using": [ [ "sewing_standard", 75 ], [ "tailoring_kevlar_fabric", 2 ] ],
+    "using": [ [ "sewing_standard", 75 ], [ "tailoring_kevlar_fabric", 2 ], [ "liquid_rubber", 4 ] ],
     "components": [
       [ [ "duct_tape", 120 ] ],
-      [ [ "faux_fur", 5 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
+      [ [ "duct_tape", 80 ] ],
+      [ [ "faux_fur", 6 ] ],
+      [ [ "kevlar_patch", 12 ] ],
+      [ [ "gloves_tactical", 1 ], [ "xl_gloves_faux_fur", 1 ], [ "xl_gloves_light", 1 ] ]
     ],
     "byproducts": [ [ "scrap_faux_fur", 4 ] ]
-  },
-  {
-    "result": "gloves_h20survivor",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "tailor",
-    "difficulty": 7,
-    "skills_required": [ "tailor", 7 ],
-    "time": "8 h",
-    "autolearn": true,
-    "using": [ [ "tailoring_neoprene_patchwork", 3 ], [ "tailoring_kevlar_fabric", 5 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_closures" },
-      { "proficiency": "prof_closures_waterproofing" },
-      { "proficiency": "prof_polymerworking" },
-      { "proficiency": "prof_elastics" }
-    ],
-    "components": [ [ [ "wetsuit_gloves", 1 ] ], [ [ "rubber_cement", 1 ] ] ]
-  },
-  {
-    "result": "xl_gloves_h20survivor",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor",
-    "time": "12 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 4 ], [ "tailoring_kevlar_fabric", 8 ] ]
-  },
-  {
-    "result": "xs_gloves_h20survivor",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor",
-    "time": "6 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 2 ], [ "tailoring_kevlar_fabric", 4 ] ]
-  },
-  {
-    "result": "gloves_h20survivor_light",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor",
-    "time": "12 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 1 ], [ "tailoring_kevlar_fabric", 5 ] ]
-  },
-  {
-    "result": "xl_gloves_h20survivor_light",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor_light",
-    "time": "18 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 1 ], [ "tailoring_kevlar_fabric", 8 ] ]
-  },
-  {
-    "result": "xs_gloves_h20survivor_light",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor_light",
-    "time": "10 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 1 ], [ "tailoring_kevlar_fabric", 4 ] ]
-  },
-  {
-    "result": "gloves_h20survivor_thick",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor",
-    "time": "12 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 1 ], [ "tailoring_kevlar_fabric", 10 ] ],
-    "components": [ [ [ "wetsuit_gloves_thick", 1 ] ], [ [ "rubber_cement", 1 ] ] ]
-  },
-  {
-    "result": "xl_gloves_h20survivor_thick",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor_thick",
-    "time": "18 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 1 ], [ "tailoring_kevlar_fabric", 16 ] ]
-  },
-  {
-    "result": "xs_gloves_h20survivor_thick",
-    "type": "recipe",
-    "copy-from": "gloves_h20survivor_thick",
-    "time": "8 h",
-    "using": [ [ "tailoring_neoprene_patchwork", 1 ], [ "tailoring_kevlar_fabric", 8 ] ]
-  },
-  {
-    "result": "gloves_hsurvivor",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "tailor",
-    "difficulty": 7,
-    "skills_required": [ "fabrication", 5 ],
-    "time": "20 h",
-    "autolearn": true,
-    "using": [ [ "tailoring_leather_small", 2 ], [ "tailoring_cotton_patchwork", 1 ], [ "tailoring_kevlar_fabric", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_closures_waterproofing" },
-      { "proficiency": "prof_polymerworking" },
-      { "proficiency": "prof_leatherworking_basic" },
-      { "proficiency": "prof_articulation" }
-    ],
-    "components": [
-      [ [ "scrap", 4 ] ],
-      [ [ "duct_tape", 50 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
-    ]
-  },
-  {
-    "result": "xs_gloves_hsurvivor",
-    "type": "recipe",
-    "copy-from": "gloves_hsurvivor",
-    "time": "20 h",
-    "using": [ [ "tailoring_leather_small", 1 ], [ "tailoring_cotton_patchwork", 1 ], [ "tailoring_kevlar_fabric", 1 ] ],
-    "components": [
-      [ [ "scrap", 3 ] ],
-      [ [ "duct_tape", 38 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
-    ]
-  },
-  {
-    "result": "xl_gloves_hsurvivor",
-    "type": "recipe",
-    "copy-from": "gloves_hsurvivor",
-    "time": "22 h 30 m",
-    "using": [ [ "tailoring_leather_small", 3 ], [ "tailoring_cotton_patchwork", 2 ], [ "tailoring_kevlar_fabric", 2 ] ],
-    "components": [
-      [ [ "scrap", 5 ] ],
-      [ [ "duct_tape", 80 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
-    ]
   },
   {
     "result": "gloves_leather",
@@ -590,69 +448,6 @@
     "using": [ [ "tailoring_cotton_patchwork", 2 ] ]
   },
   {
-    "result": "gloves_lsurvivor",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "tailor",
-    "difficulty": 5,
-    "skills_required": [ "fabrication", 3 ],
-    "time": "18 h",
-    "autolearn": true,
-    "using": [ [ "tailoring_leather_small", 2 ], [ "tailoring_cotton_patchwork", 1 ], [ "tailoring_kevlar_fabric", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_closures_waterproofing" },
-      { "proficiency": "prof_polymerworking" },
-      { "proficiency": "prof_leatherworking_basic" },
-      { "proficiency": "prof_leatherworking" }
-    ],
-    "components": [
-      [ [ "duct_tape", 80 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
-    ]
-  },
-  {
-    "result": "xs_gloves_lsurvivor",
-    "type": "recipe",
-    "copy-from": "gloves_lsurvivor",
-    "time": "18 h",
-    "using": [ [ "tailoring_leather_small", 1 ], [ "tailoring_cotton_patchwork", 1 ], [ "tailoring_kevlar_fabric", 1 ] ],
-    "components": [
-      [ [ "duct_tape", 60 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
-    ]
-  },
-  {
-    "result": "xl_gloves_lsurvivor",
-    "type": "recipe",
-    "copy-from": "gloves_lsurvivor",
-    "time": "20 h 15 m",
-    "using": [ [ "tailoring_leather_small", 3 ], [ "tailoring_cotton_patchwork", 2 ], [ "tailoring_kevlar_fabric", 2 ] ],
-    "components": [
-      [ [ "duct_tape", 120 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
-    ]
-  },
-  {
     "result": "gloves_survivor_fingerless",
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
@@ -665,48 +460,20 @@
     "components": [ [ [ "gloves_survivor", 1 ] ] ]
   },
   {
-    "result": "xs_gloves_survivor_fingerless",
+    "result": "gloves_survivor_fingerless_xs",
     "type": "recipe",
     "copy-from": "gloves_survivor_fingerless",
     "time": "30 m",
     "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "xs_gloves_survivor", 1 ] ] ]
+    "components": [ [ [ "gloves_survivor_xs", 1 ] ] ]
   },
   {
-    "result": "xl_gloves_survivor_fingerless",
+    "result": "gloves_survivor_fingerless_xl",
     "type": "recipe",
     "copy-from": "gloves_survivor_fingerless",
     "time": "40 m",
     "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "xl_gloves_survivor", 1 ] ] ]
-  },
-  {
-    "result": "gloves_lsurvivor_fingerless",
-    "type": "recipe",
-    "activity_level": "NO_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "tailor",
-    "time": "30 m",
-    "autolearn": true,
-    "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "gloves_lsurvivor", 1 ] ] ]
-  },
-  {
-    "result": "xs_gloves_lsurvivor_fingerless",
-    "type": "recipe",
-    "copy-from": "gloves_lsurvivor_fingerless",
-    "time": "30 m",
-    "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "xs_gloves_lsurvivor", 1 ] ] ]
-  },
-  {
-    "result": "xl_gloves_lsurvivor_fingerless",
-    "type": "recipe",
-    "copy-from": "gloves_lsurvivor_fingerless",
-    "time": "40 m",
-    "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "xl_gloves_lsurvivor", 1 ] ] ]
+    "components": [ [ [ "gloves_survivor_xl", 1 ] ] ]
   },
   {
     "result": "gloves_survivor",
@@ -719,7 +486,12 @@
     "skills_required": [ "fabrication", 4 ],
     "time": "20 h",
     "autolearn": true,
-    "using": [ [ "sewing_standard", 50 ], [ "tailoring_leather_small", 6 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [
+      [ "sewing_standard", 50 ],
+      [ "tailoring_leather_small", 6 ],
+      [ "tailoring_kevlar_fabric", 1 ],
+      [ "liquid_rubber", 3 ]
+    ],
     "proficiencies": [
       { "proficiency": "prof_closures_waterproofing" },
       { "proficiency": "prof_polymerworking" },
@@ -729,29 +501,31 @@
     ],
     "components": [
       [ [ "duct_tape", 80 ] ],
-      [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
-      ]
+      [ [ "leather", 4 ] ],
+      [ [ "kevlar_patch", 8 ] ],
+      [ [ "gloves_leather", 1 ], [ "leather_gauntlets", 1 ], [ "gloves_tactical", 1 ], [ "gloves_light", 1 ] ]
     ]
   },
   {
-    "result": "xs_gloves_survivor",
+    "result": "gloves_survivor_xs",
     "type": "recipe",
     "copy-from": "gloves_survivor",
     "time": "20 h",
-    "using": [ [ "sewing_standard", 37 ], [ "tailoring_leather_small", 4 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [
+      [ "sewing_standard", 37 ],
+      [ "tailoring_leather_small", 4 ],
+      [ "tailoring_kevlar_fabric", 1 ],
+      [ "liquid_rubber", 2 ]
+    ],
     "components": [
       [ [ "duct_tape", 60 ] ],
+      [ [ "leather", 3 ] ],
+      [ [ "kevlar_patch", 6 ] ],
       [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
+        [ "xs_gloves_leather", 1 ],
+        [ "leather_gauntlets_xs", 1 ],
+        [ "gloves_tactical", 1 ],
+        [ "xs_gloves_light", 1 ]
       ]
     ]
   },
@@ -858,7 +632,7 @@
     "skills_required": [ "fabrication", 5 ],
     "time": "20 h",
     "autolearn": true,
-    "using": [ [ "sewing_standard", 50 ], [ "tailoring_fur_small", 4 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [ [ "sewing_standard", 50 ], [ "tailoring_fur_small", 4 ], [ "tailoring_kevlar_fabric", 1 ], [ "liquid_rubber", 3 ] ],
     "proficiencies": [
       { "proficiency": "prof_closures_waterproofing" },
       { "proficiency": "prof_polymerworking" },
@@ -868,51 +642,60 @@
     ],
     "components": [
       [ [ "duct_tape", 80 ] ],
+      [ [ "leather", 4 ] ],
+      [ [ "fur", 4 ] ],
+      [ [ "kevlar_patch", 8 ] ],
       [
+        [ "gloves_fur", 1 ],
         [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
+        [ "leather_gauntlets", 1 ],
+        [ "gloves_tactical", 1 ],
+        [ "gloves_light", 1 ]
       ]
     ]
   },
   {
-    "result": "xs_gloves_wsurvivor",
+    "result": "gloves_wsurvivor_xs",
     "type": "recipe",
     "copy-from": "gloves_wsurvivor",
     "time": "20 h",
-    "using": [ [ "sewing_standard", 37 ], [ "tailoring_fur_small", 3 ], [ "tailoring_kevlar_fabric", 1 ] ],
+    "using": [ [ "sewing_standard", 37 ], [ "tailoring_fur_small", 3 ], [ "tailoring_kevlar_fabric", 1 ], [ "liquid_rubber", 2 ] ],
     "components": [
       [ [ "duct_tape", 60 ] ],
+      [ [ "leather", 3 ] ],
+      [ [ "fur", 3 ] ],
+      [ [ "kevlar_patch", 6 ] ],
       [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
+        [ "xs_gloves_fur", 1 ],
+        [ "xs_gloves_leather", 1 ],
+        [ "leather_gauntlets_xs", 1 ],
+        [ "gloves_tactical", 1 ],
+        [ "xs_gloves_light", 1 ]
       ]
     ]
   },
   {
-    "result": "xl_gloves_wsurvivor",
+    "result": "gloves_wsurvivor_xl",
     "type": "recipe",
     "copy-from": "gloves_wsurvivor",
     "time": "22 h 30 m",
-    "using": [ [ "sewing_standard", 75 ], [ "tailoring_fur_small", 5 ], [ "tailoring_kevlar_fabric", 2 ] ],
+    "using": [ [ "sewing_standard", 75 ], [ "tailoring_fur_small", 5 ], [ "tailoring_kevlar_fabric", 2 ], [ "liquid_rubber", 4 ] ],
     "components": [
       [ [ "duct_tape", 120 ] ],
+      [ [ "leather", 6 ] ],
+      [ [ "fur", 6 ] ],
+      [ [ "kevlar_patch", 12 ] ],
       [
-        [ "gloves_leather", 1 ],
-        [ "gloves_light", 1 ],
-        [ "gloves_liner", 1 ],
-        [ "wetsuit_gloves", 1 ],
-        [ "fire_gauntlets", 1 ]
+        [ "xl_gloves_fur", 1 ],
+        [ "xl_gloves_leather", 1 ],
+        [ "leather_gauntlets_xl", 1 ],
+        [ "gloves_tactical", 1 ],
+        [ "xl_gloves_light", 1 ]
       ]
     ]
   },
   {
-    "result": "xl_gloves_survivor",
+    "result": "gloves_survivor_xl",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "category": "CC_*",
@@ -922,7 +705,12 @@
     "skills_required": [ "fabrication", 4 ],
     "time": "22h 30 m",
     "autolearn": true,
-    "using": [ [ "sewing_standard", 100 ], [ "tailoring_leather_small", 16 ], [ "tailoring_kevlar_fabric", 2 ] ],
+    "using": [
+      [ "sewing_standard", 100 ],
+      [ "tailoring_leather_small", 16 ],
+      [ "tailoring_kevlar_fabric", 2 ],
+      [ "liquid_rubber", 4 ]
+    ],
     "proficiencies": [
       { "proficiency": "prof_closures_waterproofing" },
       { "proficiency": "prof_polymerworking" },
@@ -930,7 +718,17 @@
       { "proficiency": "prof_leatherworking" },
       { "proficiency": "prof_articulation" }
     ],
-    "components": [ [ [ "cotton_patchwork", 6 ] ], [ [ "scrap", 2 ] ], [ [ "duct_tape", 160 ] ] ]
+    "components": [
+      [ [ "duct_tape", 120 ] ],
+      [ [ "leather", 6 ] ],
+      [ [ "kevlar_patch", 12 ] ],
+      [
+        [ "xl_gloves_leather", 1 ],
+        [ "leather_gauntlets_xl", 1 ],
+        [ "gloves_tactical", 1 ],
+        [ "xl_gloves_light", 1 ]
+      ]
+    ]
   },
   {
     "result": "mittens",
