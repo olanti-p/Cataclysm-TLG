@@ -291,7 +291,7 @@
     "id": "grass_sheet",
     "type": "ARMOR",
     "name": { "str": "grass sheet" },
-    "description": "Some grass yarn woven into a crude sheet.",
+    "description": "Some grass yarn woven into a crude sheet.  It's not enough to keep the rain out, but it might be better than nothing.",
     "weight": "500 g",
     "volume": "700 ml",
     "price": 500,
@@ -303,7 +303,7 @@
     "color": "white",
     "warmth": 10,
     "material_thickness": 0.2,
-    "flags": [ "OVERSIZE", "BELTED", "RAINPROOF", "ALLOWS_NATURAL_ATTACKS", "HOOD", "COLLAR", "POCKETS" ],
+    "flags": [ "OVERSIZE", "BELTED", "ALLOWS_NATURAL_ATTACKS", "HOOD", "COLLAR", "POCKETS" ],
     "armor": [
       { "encumbrance": 15, "coverage": 90, "covers": [ "torso", "arm_l", "arm_r" ] },
       {
@@ -318,7 +318,7 @@
     "id": "grass_blanket",
     "type": "ARMOR",
     "name": { "str": "grass blanket" },
-    "description": "Some grass sheets sewn together.  Itchy, but more comfortable than the cold.",
+    "description": "Some grass sheets sewn together. It's itchy, but water resistant and more comfortable than the cold.",
     "weight": "1020 g",
     "volume": "1400 ml",
     "price": 1000,
