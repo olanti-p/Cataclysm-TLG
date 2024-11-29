@@ -213,23 +213,46 @@
   },
   {
     "type": "furniture",
-    "id": "f_rubber_groundsheet",
-    "name": "rubber groundsheet",
-    "description": "A large sheet of rubberized cloth lying on the ground.  It could be a clean place to sit, or a crude but useful surface for crafting or butchery.",
+    "id": "f_tarp_groundsheet",
+    "name": "tarpaulin",
+    "description": "A large plastic tarp lying on the ground.  It could be a clean place to sit, or a crude but useful surface for crafting or butchery.",
     "symbol": "D",
     "bgcolor": "light_blue",
     "move_cost_mod": 0,
     "required_str": 3,
-    "deployed_item": "plastic_sheet",
+    "deployed_item": "tarp",
     "crafting_pseudo_item": "large_surface_pseudo",
     "flags": [ "TRANSPARENT", "SHORT", "FLAT_SURF", "CAN_SIT" ],
-    "deconstruct": { "items": [ { "item": "plastic_sheet", "count": 1 } ] },
+    "deconstruct": { "items": [ { "item": "tarp", "count": 1 } ] },
     "bash": {
       "str_min": 5,
       "str_max": 10,
       "sound": "whuff!",
       "sound_fail": "crinkle.",
-      "items": [ { "item": "plastic_sheet", "count": 1 } ]
+      "items": [ { "item": "tarp", "count": 1 } ]
+    },
+    "examine_action": "workbench",
+    "workbench": { "multiplier": 0.85, "mass": 500000, "volume": "500 L" }
+  },
+  {
+    "type": "furniture",
+    "id": "f_rubber_groundsheet",
+    "name": "rubber groundsheet",
+    "description": "A large sheet of rubberized cloth lying on the ground.  It could be a clean place to sit, or a crude but useful surface for crafting or butchery.",
+    "symbol": "D",
+    "bgcolor": "green",
+    "move_cost_mod": 0,
+    "required_str": 3,
+    "deployed_item": "gum_blanket",
+    "crafting_pseudo_item": "large_surface_pseudo",
+    "flags": [ "TRANSPARENT", "SHORT", "FLAT_SURF", "CAN_SIT" ],
+    "deconstruct": { "items": [ { "item": "gum_blanket", "count": 1 } ] },
+    "bash": {
+      "str_min": 5,
+      "str_max": 10,
+      "sound": "whuff!",
+      "sound_fail": "crinkle.",
+      "items": [ { "item": "gum_blanket", "count": 1 } ]
     },
     "examine_action": "workbench",
     "workbench": { "multiplier": 0.85, "mass": 500000, "volume": "500 L" }
