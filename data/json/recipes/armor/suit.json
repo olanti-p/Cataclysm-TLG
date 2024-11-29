@@ -792,43 +792,6 @@
     "components": [ [ [ "shark_suit", 1 ] ], [ [ "cable", 50 ] ] ]
   },
   {
-    "result": "thermal_outfit",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_SUIT",
-    "skill_used": "electronics",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 2 ],
-    "time": "7 h",
-    "book_learn": [ [ "textbook_fabrication", 3 ], [ "tailor_portfolio", 4 ], [ "textbook_tailor", 3 ], [ "atomic_survival", 3 ] ],
-    "using": [ [ "sewing_standard", 52 ], [ "tailoring_cotton_patchwork", 48 ], [ "soldering_standard", 100 ] ],
-    "proficiencies": [ { "proficiency": "prof_elec_soldering" }, { "proficiency": "prof_closures" } ],
-    "components": [ [ [ "element", 18 ], [ "crude_heating_element", 27 ] ], [ [ "cable", 37 ] ] ]
-  },
-  {
-    "result": "thermal_outfit",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "id_suffix": "thermal_outfit_from_bits",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_SUIT",
-    "skill_used": "electronics",
-    "difficulty": 4,
-    "skills_required": [ "tailor", 2 ],
-    "time": "25 m",
-    "book_learn": [ [ "textbook_fabrication", 3 ], [ "tailor_portfolio", 4 ], [ "textbook_tailor", 3 ], [ "atomic_survival", 3 ] ],
-    "using": [ [ "sewing_standard", 15 ], [ "soldering_standard", 10 ] ],
-    "proficiencies": [ { "proficiency": "prof_elec_soldering" }, { "proficiency": "prof_closures" } ],
-    "components": [
-      [ [ "thermal_suit", 1 ] ],
-      [ [ "thermal_gloves", 1 ] ],
-      [ [ "thermal_socks", 1 ] ],
-      [ [ "thermal_mask", 1 ] ],
-      [ [ "cable", 5 ] ]
-    ]
-  },
-  {
     "result": "thermal_suit",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
