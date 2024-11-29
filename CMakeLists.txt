@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(CataclysmDDA)
+project(CataclysmTLG)
 
 list(APPEND CMAKE_MODULE_PATH
         ${CMAKE_SOURCE_DIR}/CMakeModules)
@@ -162,7 +162,7 @@ if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
     message(STATUS "Build ${PROJECT_NAME} in development mode --")
     message(STATUS "Binaries will be located in: " ${CMAKE_SOURCE_DIR})
     set(CMAKE_VERBOSE_MAKEFILE ON)
-    # Since CataclysmDDA does not respect PREFIX for development builds
+    # Since CataclysmTLG does not respect PREFIX for development builds
     # and has funny path handlers, we should create resulting Binaries
     # in the source directory
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR} CACHE PATH
@@ -174,13 +174,13 @@ else ()
     # Use CMAKE_INSTALL_PREFIX as storage of data,gfx, etc.. Useful only on *nix OS.
     if(USE_PREFIX_DATA_DIR)
         if ("${CMAKE_SYSTEM_NAME}" MATCHES "(Linux|FreeBSD|Darwin)")
-            set(CMAKE_INSTALL_DATAROOTDIR "${CMAKE_INSTALL_PREFIX}/share/cataclysm-dda")
+            set(CMAKE_INSTALL_DATAROOTDIR "${CMAKE_INSTALL_PREFIX}/share/cataclysm-tlg")
             add_definitions(-DPREFIX=${CMAKE_INSTALL_PREFIX})
             configure_file(
                 "${CMAKE_SOURCE_DIR}/src/prefix.h.in"
                 "${CMAKE_SOURCE_DIR}/src/prefix.h"
                 @ONLY)
-            add_definitions(-DDATA_DIR_PREFIX)
+            add_definitions(-TLGTA_DIR_PREFIX)
         endif ()
     else()
         set(CMAKE_INSTALL_DATADIR   data)
