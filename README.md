@@ -6,18 +6,9 @@ TLG's primary aim is to preserve Cataclysm's depth and respect for plausibility 
 
 ## Downloads
 
-**Releases** - To get the game, head over to our Releases page and download the version marked for your operating system. You do not need the source code to play: https://github.com/Cataclysm-TLG/Cataclysm-TLG/releases/
+**Releases** - To get the game, head over to the Releases page and download the version marked for your operating system. You do not need the source code to play: https://github.com/Cataclysm-TLG/Cataclysm-TLG/releases/
 
-**Source** - The source can also be cloned from the [GitHub repo](https://github.com/Cataclysm-TLG/Cataclysm-TLG/).
-
-## Compile
-
-Please read [COMPILING.md](doc/COMPILING/COMPILING.md) - it covers general information and more specific recipes for Linux, OS X, Windows and BSD. See [COMPILER_SUPPORT.md](doc/COMPILING/COMPILER_SUPPORT.md) for details on which compilers we support. And you can always dig for more information in [doc/](https://github.com/CleverRaven/Cataclysm-DDA/tree/master/doc).
-
-We also have the following build guides:
-* Building on Windows with `MSYS2` at [COMPILING-MSYS.md](doc/COMPILING/COMPILING-MSYS.md)
-* Building on Windows with `vcpkg` at [COMPILING-VS-VCPKG.md](doc/COMPILING/COMPILING-VS-VCPKG.md)
-* Building with `cmake` at [COMPILING-CMAKE.md](doc/COMPILING/COMPILING-CMAKE.md)  (*unofficial guide*)
+**Source** - The source can also be cloned from the [GitHub repo](https://github.com/Cataclysm-TLG/Cataclysm-TLG/). You probably only want to do this if you're working on the game.
 
 ## Contributions
 
@@ -30,7 +21,7 @@ This project would not be possible without the work of thousands of contribution
 
 #### Is there a tutorial?
 
-Yes, you can find the tutorial in the **Special** menu at the main menu (be aware that due to many code changes the tutorial may not function). You can also access documentation in-game via the `?` key.
+Yes, you can find the tutorial in the **Special** menu at the main menu. You can also access documentation in-game via the `?` key.
 
 #### How can I change the key bindings?
 
