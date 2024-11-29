@@ -650,7 +650,7 @@
       { "item": "tshirt" },
       { "item": "pants_cargo" },
       { "item": "leather_belt" },
-      { "item": "trenchcoat_leather" },
+      { "item": "longcoat" },
       { "item": "wristwatch" },
       { "item": "bead_bracelet" }
     ]
@@ -791,7 +791,7 @@
       { "item": "pants_cargo" },
       { "item": "sweatshirt" },
       { "item": "bow_sling" },
-      { "item": "trenchcoat_leather" },
+      { "item": "longcoat_leather" },
       { "item": "holy_symbol_wood" },
       { "item": "scabbard" },
       { "item": "scarf_fur" },

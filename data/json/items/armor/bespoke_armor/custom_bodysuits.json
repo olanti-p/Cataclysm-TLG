@@ -454,7 +454,10 @@
     "//": "Essentially a firefighter's jumpsuit with cut-resistant Kevlar sewn in as a liner.  Butyl rubber is sprayed over parts of the exterior, but it's limited to help prevent overheating.",
     "armor": [
       {
-        "material": [ { "type": "nomex", "covered_by_mat": 100, "thickness": 0.2 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.0 } ],
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.2 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.0 }
+        ],
         "encumbrance": [ 2, 2 ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat", "head_nape" ],

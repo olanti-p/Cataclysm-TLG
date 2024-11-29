@@ -75,7 +75,7 @@
     "id": "BELTED",
     "type": "json_flag",
     "//": "Layer for backpacks and things worn over outerwear.",
-    "info": "This gear is <info>strapped</info> onto you."
+    "info": "This gear is worn <info>over all your other gear.</info>"
   },
   {
     "id": "BIONIC_INSTALLATION_DATA",
@@ -116,7 +116,7 @@
   {
     "id": "COLLAR",
     "type": "json_flag",
-    "info": "This clothing has a <info>wide collar</info> that can keep your mouth warm if it is unencumbered."
+    "info": "This clothing will be pulled up to <info>keep your mouth warm</info> if it is unencumbered."
   },
   {
     "id": "COLLAPSE_CONTENTS",
@@ -330,12 +330,6 @@
     "restriction": "Item must be some kind of flashlight"
   },
   {
-    "id": "HELMET_AVENTAIL",
-    "type": "json_flag",
-    "info": "This item is attachable to metal cap helmets as a face and neck protective layer.",
-    "restriction": "Item must be some kind of chainmail veil"
-  },
-  {
     "id": "BOOT_FINS",
     "type": "json_flag",
     "info": "This item is attachable to commercial diving boots as fins.",
@@ -462,7 +456,7 @@
   {
     "id": "HOOD",
     "type": "json_flag",
-    "info": "This clothing has a <info>hood</info> to keep your head warm if your head is unencumbered."
+    "info": "This clothing will be pulled up to <info>keep your head warm</info> if it is unencumbered."
   },
   {
     "id": "HYGROMETER",
@@ -551,7 +545,7 @@
     "id": "OUTER",
     "type": "json_flag",
     "//": "Outer garment layer.",
-    "info": "This gear is generally <info>worn over</info> clothing."
+    "info": "This gear is <info>outerwear</info>."
   },
   {
     "id": "OVERSIZE",
@@ -580,7 +574,7 @@
     "id": "POCKETS",
     "type": "json_flag",
     "//": "Increases warmth for hands if the player's hands are cold and the player is wielding nothing.",
-    "info": "This clothing has <info>pockets</info> to warm your hands when you are wielding nothing."
+    "info": "This item has a place to <info>warm your hands</info> when you are wearing it and wielding nothing."
   },
   {
     "id": "POLEARM",
@@ -835,7 +829,7 @@
     "id": "SKINTIGHT",
     "type": "json_flag",
     "//": "Undergarment layer.",
-    "info": "This clothing <info>lies close</info> to the skin."
+    "info": "This clothing is worn <info>close to the skin</info>."
   },
   {
     "id": "SLEEP_AID",
@@ -2419,10 +2413,5 @@
     "id": "NO_GRAB",
     "type": "json_flag",
     "//": "Effects with this flag prevent the creature from initiating a grab."
-  },
-  {
-    "id": "CRAFT_UNLOAD",
-    "type": "json_flag",
-    "//": "The contents of this item can be accessed by the crafting system, even if it's sealed."
   }
 ]

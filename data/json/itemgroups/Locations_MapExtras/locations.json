@@ -960,7 +960,6 @@
       [ "file", 10 ],
       [ "child_book", 2 ],
       { "item": "lsd", "prob": 1, "count": [ 1, 5 ] },
-      { "item": "foodperson_mask", "prob": 1, "charges": [ 0, 500 ] },
       [ "55gal_drum", 10 ],
       [ "30gal_drum", 15 ],
       { "group": "tools_toolbox", "prob": 1 },
@@ -2794,7 +2793,6 @@
     "type": "item_group",
     "subtype": "distribution",
     "items": [
-      { "distribution": [ { "item": "trenchcoat", "prob": 80 }, { "item": "trenchcoat_leather", "prob": 60 } ], "prob": 40 },
       {
         "distribution": [ { "item": "coat_rain", "prob": 80 }, { "item": "peacoat", "prob": 50 }, { "item": "greatcoat", "prob": 35 } ],
         "prob": 80

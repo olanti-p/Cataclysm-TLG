@@ -83,16 +83,18 @@
     "environmental_protection": 3,
     "techniques": [ "WBLOCK_1" ],
     "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "OUTER" ],
-    "armor": [       {
-      "material": [
-        { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
-        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
-        { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
-      ],
-      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
-      "coverage": 95,
-      "encumbrance": [ 6, 6 ]
-    } ]
+    "armor": [
+      {
+        "material": [
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
+          { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+          { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
+        ],
+        "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "coverage": 95,
+        "encumbrance": [ 6, 6 ]
+      }
+    ]
   },
   {
     "id": "hood_fsurvivor",
@@ -113,17 +115,19 @@
     "environmental_protection": 3,
     "techniques": [ "WBLOCK_1" ],
     "flags": [ "VARSIZE", "RAINPROOF", "STURDY", "OUTER" ],
-    "armor": [       {
-      "material": [
-        { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
-        { "type": "cotton", "covered_by_mat": 95, "thickness": 0.2 },
-        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
-        { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
-      ],
-      "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
-      "coverage": 95,
-      "encumbrance": [ 7, 7 ]
-    } ]
+    "armor": [
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 95, "thickness": 0.2 },
+          { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+          { "type": "leather_treated", "covered_by_mat": 95, "thickness": 1.0 }
+        ],
+        "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "coverage": 95,
+        "encumbrance": [ 7, 7 ]
+      }
+    ]
   },
   {
     "id": "hood_wsurvivor",
@@ -143,16 +147,18 @@
     "warmth": 75,
     "environmental_protection": 5,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER" ],
-    "armor": [       {
-      "material": [
-        { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
-        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
-        { "type": "fur", "covered_by_mat": 95, "thickness": 2.5 }
-      ],
-      "covers": [ "head" ],
-      "coverage": 95,
-      "encumbrance": [ 9, 9 ]
-    } ]
+    "armor": [
+      {
+        "material": [
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
+          { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+          { "type": "fur", "covered_by_mat": 95, "thickness": 2.5 }
+        ],
+        "covers": [ "head" ],
+        "coverage": 95,
+        "encumbrance": [ 9, 9 ]
+      }
+    ]
   },
   {
     "id": "hood_wsurvivor_xl",
@@ -209,16 +215,18 @@
     "description": "A customized armored Kevlar hood.  Warm thanks to the faux-fur lining.",
     "copy-from": "hood_wsurvivor",
     "material": [ "kevlar", "faux_fur" ],
-    "armor": [       {
-      "material": [
-        { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
-        { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
-        { "type": "faux_fur", "covered_by_mat": 95, "thickness": 2.5 }
-      ],
-      "covers": [ "head" ],
-      "coverage": 95,
-      "encumbrance": [ 9, 9 ]
-    } ],
+    "armor": [
+      {
+        "material": [
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.4 },
+          { "type": "kevlar", "covered_by_mat": 95, "thickness": 1.0 },
+          { "type": "faux_fur", "covered_by_mat": 95, "thickness": 2.5 }
+        ],
+        "covers": [ "head" ],
+        "coverage": 95,
+        "encumbrance": [ 9, 9 ]
+      }
+    ],
     "symbol": "[",
     "warmth": 65,
     "looks_like": "hood_survivor",

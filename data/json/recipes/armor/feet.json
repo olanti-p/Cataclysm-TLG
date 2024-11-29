@@ -287,10 +287,7 @@
     "skills_required": [ "fabrication", 4 ],
     "time": "30 h",
     "autolearn": true,
-    "using": [
-      [ "tailoring_kevlar_fabric", 18 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 18 ], [ "fastener_small", 6 ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_leatherworking" },
@@ -311,10 +308,7 @@
     "type": "recipe",
     "copy-from": "boots_survivor",
     "time": "24 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 16 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 16 ], [ "fastener_small", 6 ] ],
     "components": [
       [ [ "filament_durable", 80, "LIST" ] ],
       [ [ "thread_kevlar", 14 ] ],
@@ -327,10 +321,7 @@
     "type": "recipe",
     "copy-from": "boots_survivor",
     "time": "24 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 24 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 24 ], [ "fastener_small", 6 ] ],
     "components": [
       [ [ "filament_durable", 120, "LIST" ] ],
       [ [ "thread_kevlar", 18 ] ],
@@ -419,10 +410,7 @@
     "skills_required": [ "fabrication", 5 ],
     "time": "36 h",
     "autolearn": true,
-    "using": [
-      [ "tailoring_kevlar_fabric", 14 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 14 ], [ "fastener_small", 6 ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_leatherworking" },
@@ -445,10 +433,7 @@
     "type": "recipe",
     "copy-from": "boots_wsurvivor",
     "time": "30 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 12 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 12 ], [ "fastener_small", 6 ] ],
     "components": [
       [ [ "filament_durable", 80, "LIST" ] ],
       [ [ "thread_kevlar", 14 ] ],
@@ -468,10 +453,7 @@
     "skills_required": [ "fabrication", 5 ],
     "time": "36 h",
     "autolearn": true,
-    "using": [
-      [ "tailoring_kevlar_fabric", 14 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 14 ], [ "fastener_small", 6 ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_leatherworking" },
@@ -494,10 +476,7 @@
     "type": "recipe",
     "copy-from": "boots_wsurvivor",
     "time": "30 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 12 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 12 ], [ "fastener_small", 6 ] ],
     "components": [
       [ [ "filament_durable", 80, "LIST" ] ],
       [ [ "thread_kevlar", 14 ] ],
@@ -513,10 +492,7 @@
     "difficulty": 8,
     "skills_required": [ "fabrication", 6 ],
     "time": "54 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 14 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 14 ], [ "fastener_small", 6 ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_leatherworking" },
@@ -541,10 +517,7 @@
     "difficulty": 8,
     "skills_required": [ "fabrication", 6 ],
     "time": "54 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 14 ],
-      [ "fastener_small", 6 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 14 ], [ "fastener_small", 6 ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_leatherworking" },
@@ -569,10 +542,7 @@
     "difficulty": 7,
     "skills_required": [ "fabrication", 5 ],
     "time": "45 h",
-    "using": [
-      [ "tailoring_kevlar_fabric", 27 ],
-      [ "fastener_small", 10 ]
-    ],
+    "using": [ [ "tailoring_kevlar_fabric", 27 ], [ "fastener_small", 10 ] ],
     "proficiencies": [
       { "proficiency": "prof_leatherworking_basic" },
       { "proficiency": "prof_leatherworking" },

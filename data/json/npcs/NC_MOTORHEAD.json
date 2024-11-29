@@ -86,6 +86,8 @@
       { "item": "null", "prob": 10 },
       { "item": "cowboy_hat", "prob": 10 },
       { "item": "hat_ball", "prob": 40 },
+      { "item": "helmet_skid", "prob": 20 },
+      { "item": "helmet_army_outdated", "prob": 10 },
       { "item": "hat_hard", "prob": 20 },
       { "item": "helmet_motor", "prob": 20 }
     ]

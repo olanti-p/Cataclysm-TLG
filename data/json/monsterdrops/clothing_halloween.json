@@ -1244,7 +1244,10 @@
           { "item": "western_holster", "contents-group": "bandolier_cowboy", "prob": 10 },
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
           {
-            "distribution": [ { "item": "jacket_leather", "prob": 70, "damage": [ 1, 4 ] }, { "item": "duster", "prob": 30, "damage": [ 1, 4 ] } ]
+            "distribution": [
+              { "item": "jacket_leather", "prob": 70, "damage": [ 1, 4 ] },
+              { "item": "longcoat_leather", "prob": 30, "damage": [ 1, 4 ] }
+            ]
           },
           {
             "distribution": [
@@ -1363,8 +1366,8 @@
           { "group": "socks_unisex", "damage": [ 1, 4 ] },
           {
             "collection": [
-              { "item": "trenchcoat", "prob": 45, "damage": [ 1, 4 ] },
-              { "item": "trenchcoat_leather", "prob": 35, "damage": [ 1, 4 ] },
+              { "item": "longcoat", "prob": 45, "damage": [ 1, 4 ] },
+              { "item": "longcoat_leather", "prob": 35, "damage": [ 1, 4 ] },
               { "item": "jacket_leather", "prob": 20, "damage": [ 1, 4 ] }
             ]
           },

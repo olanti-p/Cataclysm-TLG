@@ -592,7 +592,7 @@
     "skills_required": [ "fabrication", 5 ],
     "time": "12 h 10 m",
     "autolearn": true,
-    "using": [ [ "sewing_kevlar", 135 ], [ "tailoring_canvas_patchwork", 19 ], [ "tailoring_kevlar_fabric", 50 ], [ "liquid_rubber", 10 ] ],
+    "using": [ [ "sewing_kevlar", 135 ], [ "tailoring_kevlar_fabric", 50 ], [ "liquid_rubber", 10 ] ],
     "components": [
       [ [ "longcoat", 1 ] ],
       [ [ "sheet_kevlar", 75 ], [ "sheet_kevlar_patchwork", 75 ] ],
@@ -620,7 +620,7 @@
     "type": "recipe",
     "copy-from": "longcoat_survivor",
     "time": "12 h 10 m",
-    "using": [ [ "sewing_kevlar", 101 ], [ "tailoring_canvas_patchwork", 14 ], [ "tailoring_kevlar_fabric", 40 ], [ "liquid_rubber", 6 ] ],
+    "using": [ [ "sewing_kevlar", 101 ], [ "tailoring_kevlar_fabric", 40 ], [ "liquid_rubber", 6 ] ],
     "components": [
       [ [ "longcoat_xs", 1 ] ],
       [ [ "sheet_kevlar", 70 ], [ "sheet_kevlar_patchwork", 70 ] ],
@@ -643,7 +643,7 @@
     "type": "recipe",
     "copy-from": "longcoat_survivor",
     "time": "13 h 40 m",
-    "using": [ [ "sewing_kevlar", 175 ], [ "tailoring_canvas_patchwork", 26 ], [ "tailoring_kevlar_fabric", 75 ], [ "liquid_rubber", 14 ] ],
+    "using": [ [ "sewing_kevlar", 175 ], [ "tailoring_kevlar_fabric", 75 ], [ "liquid_rubber", 14 ] ],
     "components": [
       [ [ "longcoat_xl", 1 ] ],
       [ [ "sheet_kevlar", 80 ], [ "sheet_kevlar_patchwork", 80 ] ],

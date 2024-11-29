@@ -388,11 +388,13 @@
     "//": "Anything a survivor looted or cobbled together to wear on their torso",
     "items": [
       [ "vest_leather", 20 ],
+      [ "vest_fur", 6 ],
       [ "vest_leather_mod", 8 ],
       [ "stab_vest", 8 ],
       [ "soft_3a_vest", 5 ],
       [ "kevlar", 10 ],
-      [ "chainmail_junk_sleeves", 1 ],
+      [ "chainmail_junk_vest", 1 ],
+      [ "chainmail_vest", 1 ],
       [ "chestguard_hard", 10 ],
       [ "armor_riot_torso", 10 ],
       [ "carpet_cuirass", 7 ],
@@ -404,8 +406,10 @@
       [ "soft_3a_vest", 3 ],
       [ "level_3_vest", 3 ],
       [ "lame_foil", 1 ],
-      [ "sleeveless_trenchcoat_leather", 12 ],
-      [ "sleeveless_trenchcoat", 12 ]
+      [ "sleeveless_longcoat", 15 ],
+      [ "sleeveless_longcoat_leather", 15 ],
+      [ "sleeveless_longcoat_fur", 3 ],
+      [ "sleeveless_longcoat_faux_fur", 2 ]
     ]
   },
   {
@@ -413,14 +417,10 @@
     "type": "item_group",
     "//": "Outerwear a survivor looted or cobbled together to wear on their torso and arms",
     "items": [
-      [ "trenchcoat", 15 ],
-      [ "trenchcoat_leather", 15 ],
-      [ "trenchcoat_fur", 5 ],
-      [ "trenchcoat_faux_fur", 5 ],
-      [ "duster", 15 ],
-      [ "duster_leather", 10 ],
-      [ "duster_fur", 10 ],
-      [ "duster_faux_fur", 8 ],
+      [ "longcoat", 15 ],
+      [ "longcoat_leather", 15 ],
+      [ "longcoat_fur", 5 ],
+      [ "longcoat_faux_fur", 5 ],
       [ "jacket_leather", 30 ],
       [ "jacket_leather_tire", 15 ],
       [ "jacket_leather_mod", 25 ],

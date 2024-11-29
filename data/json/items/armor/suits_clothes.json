@@ -580,17 +580,13 @@
     "environmental_protection": 3,
     "armor": [
       {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 }
-        ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 } ],
         "covers": [ "torso" ],
         "encumbrance": [ 9, 13 ],
         "coverage": 100
       },
       {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 }
-        ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.6 } ],
         "covers": [ "leg_l", "leg_r", "arm_l", "arm_r" ],
         "encumbrance": [ 9, 13 ],
         "specifically_covers": [
@@ -610,9 +606,7 @@
         "coverage": 95
       },
       {
-        "material": [
-          { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 }
-        ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r", "arm_l", "arm_r" ],
         "encumbrance": [ 0, 0 ],
         "specifically_covers": [ "leg_knee_l", "leg_knee_r", "arm_elbow_l", "arm_elbow_r" ],

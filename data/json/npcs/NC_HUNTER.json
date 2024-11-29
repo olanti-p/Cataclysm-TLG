@@ -24,7 +24,10 @@
       { "item": "hoodie", "prob": 20 },
       { "item": "jacket_light", "prob": 20 },
       { "item": "jacket_leather", "prob": 20 },
-      { "item": "trenchcoat", "prob": 20 },
+      { "item": "peacoat", "prob": 10 },
+      { "item": "longcoat", "prob": 15 },
+      { "item": "jacket_army", "prob": 20 },
+      { "item": "longcoat_leather", "prob": 10 },
       { "item": "jacket_jean", "prob": 20 },
       { "item": "vest_jean", "prob": 10 },
       { "item": "jacket_flannel", "prob": 20 },
@@ -85,10 +88,6 @@
     "entries": [
       { "item": "sinew", "prob": 10 },
       { "item": "water_clean", "prob": 20 },
-      { "item": "meat_cooked", "prob": 10 },
-      { "item": "meat", "prob": 40 },
-      { "item": "fish_cooked", "prob": 10 },
-      { "item": "fish", "prob": 10 },
       { "item": "tallow", "prob": 10, "count": 2 },
       { "item": "fat", "prob": 10 },
       { "item": "dry_meat", "prob": 10 },
@@ -101,8 +100,6 @@
       { "item": "meat_smoked", "prob": 10 },
       { "item": "bone", "prob": 10 },
       { "item": "fur", "prob": 10 },
-      { "item": "froglegs", "prob": 5 },
-      { "item": "froglegs_cooked", "prob": 5 },
       { "item": "froglegs_smoked", "prob": 5 },
       { "item": "dry_froglegs", "prob": 5 }
     ]

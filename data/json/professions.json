@@ -2438,7 +2438,7 @@
           { "item": "dress_shirt" },
           { "item": "tie_skinny" },
           { "item": "waistcoat" },
-          { "item": "trenchcoat" },
+          { "item": "longcoat" },
           { "item": "police_belt" },
           { "item": "badge_detective" },
           { "item": "gloves_leather" },
@@ -3897,23 +3897,21 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "trenchcoat" },
+          { "item": "jacket_leather" },
           { "item": "gloves_fingerless" },
           { "item": "socks" },
           { "item": "boots_combat" },
           { "item": "weed" },
           { "item": "tobacco" },
           { "item": "rolling_paper" },
-          { "item": "wristwatch" },
           { "group": "charged_smart_phone" },
-          { "group": "charged_mp3" },
           { "group": "charged_ref_lighter" },
           { "item": "onyx_silver_earring" },
           { "item": "onyx_silver_ring" }
         ]
       },
       "male": { "entries": [ { "item": "pants_cargo" }, { "item": "tank_top" }, { "item": "boxer_shorts" } ] },
-      "female": { "entries": [ { "item": "skirt" }, { "item": "corset" }, { "item": "boxer_shorts" }, { "item": "stockings" } ] }
+      "female": { "entries": [ { "item": "skirt" }, { "item": "corset" }, { "item": "panties" }, { "item": "stockings" } ] }
     }
   },
   {
@@ -4729,7 +4727,7 @@
         "ammo": 100,
         "entries": [
           { "item": "pants_army" },
-          { "item": "sleeveless_trenchcoat" },
+          { "item": "sleeveless_longcoat" },
           { "item": "socks" },
           { "item": "boots_combat" },
           { "item": "tac_helmet" },
@@ -4872,7 +4870,7 @@
       "both": {
         "entries": [
           { "item": "pants_fur" },
-          { "item": "trenchcoat_fur" },
+          { "item": "coat_straw" },
           { "item": "backpack_leather" },
           { "item": "boots_fur" },
           { "item": "gloves_fur" },
@@ -5720,7 +5718,7 @@
           { "item": "chaps_leather" },
           { "item": "gloves_leather" },
           { "item": "boots_western" },
-          { "item": "duster" },
+          { "item": "longcoat_leather" },
           { "item": "badge_deputy" },
           { "item": "novel_western" },
           { "group": "charged_smart_phone" },
@@ -7696,7 +7694,7 @@
           { "item": "pants_cargo" },
           { "item": "socks" },
           { "item": "boots" },
-          { "item": "trenchcoat" },
+          { "item": "jacket_flannel" },
           { "item": "knit_scarf" },
           { "item": "backpack" },
           { "item": "canteen" },

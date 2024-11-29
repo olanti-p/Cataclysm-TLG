@@ -57,11 +57,7 @@
     "id": "liquid_rubber",
     "type": "requirement",
     "//": "Liquid butyl rubber products, whether aerosol or brushed on.",
-    "components": [
-      [
-        [ "liquid_rubber_spray", 1 ]
-      ]
-    ]
+    "components": [ [ [ "liquid_rubber_spray", 1 ] ] ]
   },
   {
     "id": "plant_cordage",

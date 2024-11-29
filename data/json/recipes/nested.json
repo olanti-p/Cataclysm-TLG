@@ -367,7 +367,17 @@
     "name": "synthetic longcoats",
     "description": "Recipes related to tailoring long coats from syntheitc fabric.",
     "skill_used": "tailor",
-    "nested_category_data": [ "longcoat", "longcoat_xs", "longcoat_xl", "sleeveless_longcoat", "sleeveless_longcoat_from_longcoat", "sleeveless_longcoat_xs", "sleeveless_longcoat_xs_from_longcoat_xs", "sleeveless_longcoat_xl", "sleeveless_longcoat_xl_from_longcoat_xl" ],
+    "nested_category_data": [
+      "longcoat",
+      "longcoat_xs",
+      "longcoat_xl",
+      "sleeveless_longcoat",
+      "sleeveless_longcoat_from_longcoat",
+      "sleeveless_longcoat_xs",
+      "sleeveless_longcoat_xs_from_longcoat_xs",
+      "sleeveless_longcoat_xl",
+      "sleeveless_longcoat_xl_from_longcoat_xl"
+    ],
     "difficulty": 3
   },
   {
@@ -379,7 +389,17 @@
     "name": "fur longcoats",
     "description": "Recipes related to tailoring long coats from fur.",
     "skill_used": "tailor",
-    "nested_category_data": [ "longcoat_fur", "longcoat_fur_xs", "longcoat_fur_xl", "sleeveless_longcoat_fur", "sleeveless_longcoat_fur_from_longcoat_fur",  "sleeveless_longcoat_fur_xs", "sleeveless_longcoat_fur_xs_from_longcoat_fur_xs",  "sleeveless_longcoat_fur_xl", "sleeveless_longcoat_fur_xl_from_longcoat_fur_xl" ],
+    "nested_category_data": [
+      "longcoat_fur",
+      "longcoat_fur_xs",
+      "longcoat_fur_xl",
+      "sleeveless_longcoat_fur",
+      "sleeveless_longcoat_fur_from_longcoat_fur",
+      "sleeveless_longcoat_fur_xs",
+      "sleeveless_longcoat_fur_xs_from_longcoat_fur_xs",
+      "sleeveless_longcoat_fur_xl",
+      "sleeveless_longcoat_fur_xl_from_longcoat_fur_xl"
+    ],
     "difficulty": 3
   },
   {
@@ -487,7 +507,14 @@
     "name": "leather vest",
     "description": "Recipes related to tailoring vests from leather.",
     "skill_used": "tailor",
-    "nested_category_data": [ "vest_leather", "vest_leather_from_jacket_leather", "vest_leather_xs", "vest_leather_xs_from_jacket_leather_xs", "vest_leather_xl", "vest_leather_xl_from_jacket_leather_xl" ],
+    "nested_category_data": [
+      "vest_leather",
+      "vest_leather_from_jacket_leather",
+      "vest_leather_xs",
+      "vest_leather_xs_from_jacket_leather_xs",
+      "vest_leather_xl",
+      "vest_leather_xl_from_jacket_leather_xl"
+    ],
     "difficulty": 3
   },
   {
@@ -523,7 +550,14 @@
     "name": "fur vests",
     "description": "Recipes related to tailoring vests from fur.",
     "skill_used": "tailor",
-    "nested_category_data": [ "vest_fur", "vest_fur_from_coat_fur", "vest_fur_xs", "vest_fur_xs_from_coat_fur_xs", "vest_fur_xl", "vest_fur_xl_from_coat_fur_xl" ],
+    "nested_category_data": [
+      "vest_fur",
+      "vest_fur_from_coat_fur",
+      "vest_fur_xs",
+      "vest_fur_xs_from_coat_fur_xs",
+      "vest_fur_xl",
+      "vest_fur_xl_from_coat_fur_xl"
+    ],
     "difficulty": 3
   },
   {
@@ -547,7 +581,14 @@
     "name": "faux fur vests",
     "description": "Recipes related to tailoring vests from faux fur.",
     "skill_used": "tailor",
-    "nested_category_data": [ "vest_faux_fur", "vest_faux_fur_from_coat_faux_fur", "vest_faux_fur_xs", "vest_faux_fur_xs_from_coat_faux_fur_xs", "vest_faux_fur_xl", "vest_faux_fur_xl_from_coat_faux_fur_xl" ],
+    "nested_category_data": [
+      "vest_faux_fur",
+      "vest_faux_fur_from_coat_faux_fur",
+      "vest_faux_fur_xs",
+      "vest_faux_fur_xs_from_coat_faux_fur_xs",
+      "vest_faux_fur_xl",
+      "vest_faux_fur_xl_from_coat_faux_fur_xl"
+    ],
     "difficulty": 3
   },
   {
@@ -1099,11 +1140,7 @@
     "name": "survivor suits",
     "description": "Recipes related to constructing custom-made jumpsuits meant to keep the wearer safe from various types of harm.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_survivor_suits",
-      "nested_light_survivor_suits",
-      "nested_survivor_firesuits"
-    ],
+    "nested_category_data": [ "nested_survivor_suits", "nested_light_survivor_suits", "nested_survivor_firesuits" ],
     "difficulty": 6
   },
   {
@@ -1283,11 +1320,7 @@
     "name": "survivor hoods",
     "description": "Recipes related to constructing various types and sizes of custom-built hoods for surviving the Cataclysm.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_hood_survivor",
-      "nested_hood_wsurvivor",
-      "nested_hood_fsurvivor"
-    ],
+    "nested_category_data": [ "nested_hood_survivor", "nested_hood_wsurvivor", "nested_hood_fsurvivor" ],
     "difficulty": 5
   },
   {
@@ -1540,11 +1573,7 @@
     "name": "fingerless survivor gloves",
     "description": "Recipes related to modifying survivor gloves to be fingerless.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "gloves_survivor_fingerless",
-      "gloves_survivor_fingerless_xs",
-      "gloves_survivor_fingerless_xl"
-    ],
+    "nested_category_data": [ "gloves_survivor_fingerless", "gloves_survivor_fingerless_xs", "gloves_survivor_fingerless_xl" ],
     "difficulty": 1
   },
   {
@@ -1556,12 +1585,7 @@
     "name": "survivor gloves",
     "description": "Recipes related to constructing various sizes and types of survivor gloves.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_gloves_survivor_fingerless",
-      "nested_gloves_survivor",
-      "nested_gloves_wsurvivor",
-      "nested_gloves_fsurvivor"
-    ],
+    "nested_category_data": [ "nested_gloves_survivor_fingerless", "nested_gloves_survivor", "nested_gloves_wsurvivor", "nested_gloves_fsurvivor" ],
     "difficulty": 1
   },
   {
@@ -1676,10 +1700,7 @@
     "name": "survivor boots",
     "description": "Recipes related to constructing various sizes and variations of survivor boots.",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "nested_boots_survivor",
-      "nested_boots_wsurvivor"
-    ],
+    "nested_category_data": [ "nested_boots_survivor", "nested_boots_wsurvivor" ],
     "difficulty": 5
   },
   {

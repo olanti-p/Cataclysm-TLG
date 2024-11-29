@@ -16,9 +16,7 @@
       [ "fastener_large", 1 ],
       [ "clasps", 8 ]
     ],
-    "components": [
-      [ [ "technician_coveralls", 1 ] ]
-    ],
+    "components": [ [ [ "technician_coveralls", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_closures" },
       { "proficiency": "prof_closures_waterproofing" },
@@ -39,9 +37,7 @@
       [ "clasps", 8 ]
     ],
     "byproducts": [ [ "scrap_kevlar", 22 ] ],
-    "components": [
-      [ [ "technician_coveralls_xs", 1 ] ]
-    ]
+    "components": [ [ [ "technician_coveralls_xs", 1 ] ] ]
   },
   {
     "result": "lsurvivor_suit_xl",
@@ -56,9 +52,7 @@
       [ "clasps", 8 ]
     ],
     "byproducts": [ [ "scrap_kevlar", 25 ] ],
-    "components": [
-      [ [ "technician_coveralls_xl", 1 ] ]
-    ]
+    "components": [ [ [ "technician_coveralls_xl", 1 ] ] ]
   },
   {
     "result": "survivor_suit",
@@ -77,9 +71,7 @@
       [ "fastener_large", 1 ],
       [ "clasps", 8 ]
     ],
-    "components": [
-      [ [ "technician_coveralls", 1 ] ]
-    ],
+    "components": [ [ [ "technician_coveralls", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_closures" },
       { "proficiency": "prof_closures_waterproofing" },
@@ -101,9 +93,7 @@
       [ "clasps", 8 ]
     ],
     "byproducts": [ [ "scrap_kevlar", 18 ] ],
-    "components": [
-      [ [ "technician_coveralls_xs", 1 ] ]
-    ]
+    "components": [ [ [ "technician_coveralls_xs", 1 ] ] ]
   },
   {
     "result": "survivor_suit_xl",
@@ -119,9 +109,7 @@
       [ "clasps", 8 ]
     ],
     "byproducts": [ [ "scrap_kevlar", 25 ] ],
-    "components": [
-      [ [ "technician_coveralls_xl", 1 ] ]
-    ]
+    "components": [ [ [ "technician_coveralls_xl", 1 ] ] ]
   },
   {
     "result": "survivor_rig",
@@ -157,7 +145,14 @@
     "skills_required": [ "fabrication", 7 ],
     "time": "12 h 20 m",
     "autolearn": true,
-    "using": [ [ "tailoring_kevlar_fabric", 30 ], [ "liquid_rubber", 8 ], [ "tailoring_cotton_patchwork", 10 ], [ "fabric_nomex", 10 ], [ "fastener_large", 1 ], [ "clasps", 8 ] ],
+    "using": [
+      [ "tailoring_kevlar_fabric", 30 ],
+      [ "liquid_rubber", 8 ],
+      [ "tailoring_cotton_patchwork", 10 ],
+      [ "fabric_nomex", 10 ],
+      [ "fastener_large", 1 ],
+      [ "clasps", 8 ]
+    ],
     "components": [ [ [ "nomex_suit", 1 ], [ "mil_flight_suit", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_closures" },
@@ -170,7 +165,14 @@
     "type": "recipe",
     "copy-from": "fsurvivor_suit",
     "time": "12 h 20 m",
-    "using": [ [ "tailoring_kevlar_fabric", 20 ], [ "liquid_rubber", 6 ], [ "tailoring_cotton_patchwork", 8 ], [ "fabric_nomex", 8 ], [ "fastener_large", 1 ], [ "clasps", 8 ] ],
+    "using": [
+      [ "tailoring_kevlar_fabric", 20 ],
+      [ "liquid_rubber", 6 ],
+      [ "tailoring_cotton_patchwork", 8 ],
+      [ "fabric_nomex", 8 ],
+      [ "fastener_large", 1 ],
+      [ "clasps", 8 ]
+    ],
     "components": [ [ [ "nomex_suit_xs", 1 ] ] ]
   },
   {
@@ -178,7 +180,14 @@
     "type": "recipe",
     "copy-from": "fsurvivor_suit",
     "time": "14 h 18 m",
-    "using": [ [ "tailoring_kevlar_fabric", 20 ], [ "liquid_rubber", 12 ], [ "tailoring_cotton_patchwork", 12 ], [ "fabric_nomex", 16 ], [ "fastener_large", 1 ], [ "clasps", 12 ] ],
+    "using": [
+      [ "tailoring_kevlar_fabric", 20 ],
+      [ "liquid_rubber", 12 ],
+      [ "tailoring_cotton_patchwork", 12 ],
+      [ "fabric_nomex", 16 ],
+      [ "fastener_large", 1 ],
+      [ "clasps", 12 ]
+    ],
     "components": [ [ [ "xl_nomex_suit", 1 ] ] ]
   }
 ]

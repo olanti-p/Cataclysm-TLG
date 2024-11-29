@@ -2054,7 +2054,7 @@
     "id": "coat_straw",
     "type": "ARMOR",
     "name": { "str": "straw cape" },
-    "description": "A bulky traditional Japanese raincoat made from straw, which covers the entire body.  Also known as mino.",
+    "description": "Layers of dry grass draped over each other, used since ancient times to keep the rain off.",
     "weight": "907 g",
     "volume": "4 L",
     "price": 9000,
