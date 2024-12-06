@@ -23,7 +23,7 @@ set -- "${POSITIONAL[@]}"
 if [ -n "$1" ]; then
   PULLREQUEST_ID="$1"
 else
-  echo "$0 [--raw-apply] <#Pull Request ID or Commit>"
+  echo "$0 [--raw-apply] <Pull Request ID>"
   exit 1
 fi
 
