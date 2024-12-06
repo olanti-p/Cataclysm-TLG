@@ -2721,7 +2721,7 @@ target_handler::trajectory target_ui::run()
             break;
         }
         case ExitCode::Fire: {
-            if( mode != TargetMode::SelectOnly || mode != TargetMode::ThrowCreature ) {
+            if( mode != TargetMode::SelectOnly ) {
                 bool harmful = !( mode == TargetMode::Spell && casting->damage( player_character ) <= 0 );
                 on_target_accepted( harmful );
             }
