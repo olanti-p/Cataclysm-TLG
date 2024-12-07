@@ -50,8 +50,8 @@
   {
     "id": "xl_gambeson",
     "type": "ARMOR",
+    "name": { "str": "gambeson" },
     "copy-from": "gambeson",
-    "name": { "str": "padded gambeson" },
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
@@ -59,7 +59,8 @@
     "id": "gambeson_xs",
     "type": "ARMOR",
     "copy-from": "gambeson",
-    "name": { "str": "padded gambeson" },
+    "looks_like": "gambeson",
+    "name": { "str": "gambeson" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
@@ -104,7 +105,7 @@
   {
     "id": "xl_gambeson_vest",
     "type": "ARMOR",
-    "name": { "str": "padded gambeson vest" },
+    "name": { "str": "gambeson vest" },
     "copy-from": "gambeson_vest",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
@@ -112,15 +113,16 @@
   {
     "id": "gambeson_vest_xs",
     "type": "ARMOR",
+    "looks_like": "gambeson",
     "copy-from": "gambeson_vest",
-    "name": { "str": "padded gambeson vest" },
+    "name": { "str": "gambeson vest" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gambeson_pants",
     "type": "ARMOR",
-    "name": { "str": "padded arming pants", "str_pl": "pairs of padded arming pants" },
+    "name": { "str": "padded arming pants" },
     "description": "Thick pants made of quilted fabric, meant to be worn alongside a gambeson under or without armor.",
     "weight": "2736 g",
     "volume": "1750 ml",
@@ -148,7 +150,7 @@
   {
     "id": "xl_gambeson_pants",
     "type": "ARMOR",
-    "name": { "str": "padded arming pants", "str_pl": "pairs of padded arming pants" },
+    "name": { "str": "arming pants", "str_pl": "pairs of padded arming pants" },
     "copy-from": "gambeson_pants",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
@@ -156,7 +158,7 @@
   {
     "id": "gambeson_pants_xs",
     "type": "ARMOR",
-    "name": { "str": "padded arming pants", "str_pl": "pairs of padded arming pants" },
+    "name": { "str": "arming pants", "str_pl": "pairs of padded arming pants" },
     "copy-from": "gambeson_pants",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }

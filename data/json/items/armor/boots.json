@@ -2070,125 +2070,16 @@
   {
     "id": "platemail_sollerets_xl",
     "type": "ARMOR",
-<<<<<<< HEAD
     "copy-from": "platemail_sollerets",
-    "name": { "str": "pair of XL platemail_sollerets", "str_pl": "pairs of XL platemail_sollerets" },
+    "name": { "str": "pair of platemail_sollerets", "str_pl": "pairs of platemail_sollerets" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
-=======
-    "copy-from": "lc_chainmail_feet",
-    "name": { "str": "pair of mild steel chainmail chausses", "str_pl": "pairs of mild steel chainmail chausses" },
-    "proportional": { "weight": 2, "volume": 2 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
->>>>>>> Move XL-XS to JSON tags
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "platemail_sollerets_xs",
     "type": "ARMOR",
-<<<<<<< HEAD
     "copy-from": "platemail_sollerets",
-    "name": { "str": "pair of XS platemail_sollerets", "str_pl": "pairs of XS platemail_sollerets" },
-=======
-    "copy-from": "lc_chainmail_feet",
-    "name": { "str": "pair of mild steel chainmail chausses", "str_pl": "pairs of mild steel chainmail chausses" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
-  },
-  {
-    "id": "mc_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_feet",
-    "name": { "str": "pair of medium steel chainmail chausses", "str_pl": "pairs of medium steel chainmail chausses" },
-    "description": "Customized chainmail chausses that cover the feet, like booties made of chainmail.",
-    "replace_materials": { "lc_steel_chain": "mc_steel_chain" }
-  },
-  {
-    "id": "xl_mc_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "mc_chainmail_feet",
-    "name": { "str": "pair of medium steel chainmail chausses", "str_pl": "pairs of medium steel chainmail chausses" },
-    "proportional": { "weight": 2, "volume": 2 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "xs_mc_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "mc_chainmail_feet",
-    "looks_like": "chainmail_feet",
-    "name": { "str": "pair of medium steel chainmail chausses", "str_pl": "pairs of medium steel chainmail chausses" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
-  },
-  {
-    "id": "hc_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_feet",
-    "name": { "str": "pair of high steel chainmail chausses", "str_pl": "pairs of high steel chainmail chausses" },
-    "description": "Customized chainmail chausses that cover the feet, like booties made of chainmail.",
-    "replace_materials": { "lc_steel_chain": "hc_steel_chain" }
-  },
-  {
-    "id": "xl_hc_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "hc_chainmail_feet",
-    "name": { "str": "pair of high steel chainmail chausses", "str_pl": "pairs of high steel chainmail chausses" },
-    "proportional": { "weight": 2, "volume": 2 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "xs_hc_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "hc_chainmail_feet",
-    "name": { "str": "pair of high steel chainmail chausses", "str_pl": "pairs of high steel chainmail chausses" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
-  },
-  {
-    "id": "ch_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_feet",
-    "name": { "str": "pair of hardened steel chainmail chausses", "str_pl": "pairs of hardened steel chainmail chausses" },
-    "description": "Customized chainmail chausses that cover the feet, like booties made of chainmail.",
-    "replace_materials": { "lc_steel_chain": "ch_steel_chain" }
-  },
-  {
-    "id": "xl_ch_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "ch_chainmail_feet",
-    "name": { "str": "pair of hardened steel chainmail chausses", "str_pl": "pairs of hardened steel chainmail chausses" },
-    "proportional": { "weight": 2, "volume": 2 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "xs_ch_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "ch_chainmail_feet",
-    "name": { "str": "pair of hardened steel chainmail chausses", "str_pl": "pairs of hardened steel chainmail chausses" },
-    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
-  },
-  {
-    "id": "qt_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "lc_chainmail_feet",
-    "name": { "str": "pair of tempered steel chainmail chausses", "str_pl": "pairs of tempered steel chainmail chausses" },
-    "description": "Customized chainmail chausses that cover the feet, like booties made of chainmail.",
-    "replace_materials": { "lc_steel_chain": "qt_steel_chain" }
-  },
-  {
-    "id": "xl_qt_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "qt_chainmail_feet",
-    "name": { "str": "pair of tempered steel chainmail chausses", "str_pl": "pairs of tempered steel chainmail chausses" },
-    "proportional": { "weight": 2, "volume": 2 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "xs_qt_chainmail_feet",
-    "type": "ARMOR",
-    "copy-from": "qt_chainmail_feet",
-    "name": { "str": "pair of tempered steel chainmail chausses", "str_pl": "pairs of tempered steel chainmail chausses" },
->>>>>>> Move XL-XS to JSON tags
+    "name": { "str": "pair of platemail_sollerets", "str_pl": "pairs of platemail_sollerets" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
@@ -2483,108 +2374,6 @@
     "warmth": 5,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "SKINTIGHT" ],
-<<<<<<< HEAD
     "armor": [ { "encumbrance": 2, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]
-=======
-    "armor": [ { "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]
-  },
-  {
-    "id": "lc_sabaton",
-    "type": "ARMOR",
-    "name": { "str": "mild steel sabaton" },
-    "description": "A flexible set of jointed lames that can be worn over footwear for additional protection, traditionally worn by mounted knights.",
-    "weight": "750 g",
-    "volume": "750 ml",
-    "price": "400 USD",
-    "price_postapoc": "30 USD",
-    "to_hit": -2,
-    "symbol": "[",
-    "looks_like": "boots_steel",
-    "material": [ "lc_steel" ],
-    "color": "light_gray",
-    "warmth": 0,
-    "sided": true,
-    "environmental_protection": 1,
-    "flags": [ "STURDY", "OUTER" ],
-    "armor": [
-      {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.25 } ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
-        "coverage": 100,
-        "encumbrance": 10,
-        "layers": [ "OUTER" ]
-      }
-    ],
-    "melee_damage": { "bash": 7 }
-  },
-  {
-    "id": "xl_lc_sabaton",
-    "type": "ARMOR",
-    "copy-from": "lc_sabaton",
-    "name": { "str": "mild steel sabaton" },
-    "proportional": { "weight": 1.25, "volume": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "mc_sabaton",
-    "type": "ARMOR",
-    "copy-from": "lc_sabaton",
-    "name": { "str": "medium steel sabaton" },
-    "replace_materials": { "lc_steel": "mc_steel" }
-  },
-  {
-    "id": "xl_mc_sabaton",
-    "type": "ARMOR",
-    "copy-from": "mc_sabaton",
-    "name": { "str": "medium steel sabaton" },
-    "proportional": { "weight": 1.25, "volume": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "hc_sabaton",
-    "type": "ARMOR",
-    "copy-from": "lc_sabaton",
-    "name": { "str": "high steel sabaton" },
-    "replace_materials": { "lc_steel": "hc_steel" }
-  },
-  {
-    "id": "xl_hc_sabaton",
-    "type": "ARMOR",
-    "copy-from": "hc_sabaton",
-    "name": { "str": "high steel sabaton" },
-    "proportional": { "weight": 1.25, "volume": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "ch_sabaton",
-    "type": "ARMOR",
-    "copy-from": "lc_sabaton",
-    "name": { "str": "hardened steel sabaton" },
-    "replace_materials": { "lc_steel": "ch_steel" }
-  },
-  {
-    "id": "xl_ch_sabaton",
-    "type": "ARMOR",
-    "copy-from": "ch_sabaton",
-    "name": { "str": "hardened steel sabaton" },
-    "proportional": { "weight": 1.25, "volume": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
-  },
-  {
-    "id": "qt_sabaton",
-    "type": "ARMOR",
-    "copy-from": "lc_sabaton",
-    "name": { "str": "tempered steel sabaton" },
-    "replace_materials": { "lc_steel": "qt_steel" }
-  },
-  {
-    "id": "xl_qt_sabaton",
-    "type": "ARMOR",
-    "copy-from": "qt_sabaton",
-    "name": { "str": "tempered steel sabaton" },
-    "proportional": { "weight": 1.25, "volume": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
->>>>>>> Move XL-XS to JSON tags
   }
 ]

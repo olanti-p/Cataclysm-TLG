@@ -206,7 +206,7 @@
     "id": "wetsuit_booties_thick",
     "type": "ARMOR",
     "copy-from": "wetsuit_booties",
-    "name": { "str": "pair of thick diving boots", "str_pl": "pairs of thick diving boots" },
+    "name": { "str": "pair of diving boots", "str_pl": "pairs of diving boots" },
     "description": "A pair of 5 mm thick neoprene diving boots with thick soles.",
     "//": "These will have an ablative armor slot for fins, as diving boots are designed to be worn with those.",
     "weight": "160 g",

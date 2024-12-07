@@ -221,6 +221,7 @@
     "id": "armor_faux_farmor_xs",
     "type": "ARMOR",
     "copy-from": "armor_faux_farmor",
+    "looks_like": "armor_farmor",
     "name": { "str": "faux fur body armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]

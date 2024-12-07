@@ -490,7 +490,7 @@
     "to_hit": 1,
     "material": [ "faux_fur" ],
     "symbol": "[",
-    "looks_like": "gloves_fur",
+    "looks_like": "fire_gauntlets",
     "color": "brown",
     "warmth": 55,
     "material_thickness": 3,
@@ -508,6 +508,7 @@
     "id": "xs_gloves_faux_fur",
     "type": "ARMOR",
     "copy-from": "gloves_faux_fur",
+    "looks_like": "gloves_fur",
     "name": { "str": "pair of faux fur gloves", "str_pl": "pairs of faux fur gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }

@@ -266,8 +266,7 @@
         "coverage": 60,
         "encumbrance": 2
       }
-    ],
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
+    ]
   },
   {
     "id": "chainmail_chausses_xs",
