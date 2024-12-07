@@ -273,15 +273,9 @@ activity_handlers::do_turn_functions = {
     { ACT_ATM, atm_do_turn },
     { ACT_FISH, fish_do_turn },
     { ACT_REPAIR_ITEM, repair_item_do_turn },
-    { ACT_BLEED, butcher_do_turn },
-    { ACT_BUTCHER, butcher_do_turn },
-    { ACT_BUTCHER_FULL, butcher_do_turn },
     { ACT_TRAVELLING, travel_do_turn },
-    { ACT_FIELD_DRESS, butcher_do_turn },
-    { ACT_SKIN, butcher_do_turn },
-    { ACT_QUARTER, butcher_do_turn },
+    // DISMEMBER is disabled until we tie it to a proficiency where the character knows how to stop a zombie reviving with less work.
     // { ACT_DISMEMBER, butcher_do_turn },
-    { ACT_DISSECT, butcher_do_turn },
     { ACT_TIDY_UP, tidy_up_do_turn },
     { ACT_TIDY_UP, tidy_up_do_turn },
     { ACT_JACKHAMMER, jackhammer_do_turn },
@@ -3041,10 +3035,10 @@ void activity_handlers::repair_item_do_turn( player_activity *act, Character *yo
     }
 }
 
-void activity_handlers::butcher_do_turn( player_activity * /*act*/, Character *you )
-{
-    you->burn_energy_arms( -20 );
-}
+// void activity_handlers::dismember_do_turn( player_activity * /*act*/, Character *you )
+// {
+//     you->burn_energy_arms( -20 );
+// }
 
 void activity_handlers::wait_finish( player_activity *act, Character *you )
 {
