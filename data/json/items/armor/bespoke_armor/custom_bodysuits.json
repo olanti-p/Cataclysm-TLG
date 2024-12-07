@@ -273,18 +273,18 @@
   {
     "id": "lsurvivor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL light survivor suit" },
+    "name": { "str": "light survivor suit" },
     "copy-from": "lsurvivor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "lsurvivor_suit_xs",
     "type": "ARMOR",
-    "name": { "str": "XS light survivor suit" },
+    "name": { "str": "light survivor suit" },
     "copy-from": "lsurvivor_suit",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "survivor_suit",
@@ -423,18 +423,18 @@
   {
     "id": "survivor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL survivor suit" },
+    "name": { "str": "survivor suit" },
     "copy-from": "survivor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "survivor_suit_xs",
     "type": "ARMOR",
-    "name": { "str": "XS survivor suit" },
+    "name": { "str": "survivor suit" },
     "copy-from": "survivor_suit",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "fsurvivor_suit",
@@ -540,17 +540,17 @@
   {
     "id": "fsurvivor_suit_xs",
     "type": "ARMOR",
-    "name": { "str": "XS survivor firesuit" },
+    "name": { "str": "survivor firesuit" },
     "copy-from": "fsurvivor_suit",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "fsurvivor_suit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL survivor firesuit" },
+    "name": { "str": "survivor firesuit" },
     "copy-from": "fsurvivor_suit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   }
 ]

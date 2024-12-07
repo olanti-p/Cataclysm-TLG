@@ -125,18 +125,18 @@
     "id": "xl_legguard_chitin",
     "copy-from": "legguard_chitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XL chitin leg guards", "str_pl": "pairs of XL chitin leg guards" },
+    "name": { "str": "pair of chitin leg guards", "str_pl": "pairs of chitin leg guards" },
     "material": [ "chitin" ],
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_legguard_chitin",
     "type": "ARMOR",
     "copy-from": "legguard_chitin",
-    "name": { "str": "pair of XS chitin leg guards", "str_pl": "pairs of XS chitin leg guards" },
+    "name": { "str": "pair of chitin leg guards", "str_pl": "pairs of chitin leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "legguard_acidchitin",
@@ -152,19 +152,19 @@
     "id": "xl_legguard_acidchitin",
     "copy-from": "legguard_acidchitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XL biosilicified chitin leg guards", "str_pl": "pairs of XL biosilicified chitin guards" },
+    "name": { "str": "pair of biosilicified chitin leg guards", "str_pl": "pairs of biosilicified chitin leg guards" },
     "material": [ "acidchitin" ],
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_legguard_acidchitin",
     "copy-from": "legguard_acidchitin",
     "type": "ARMOR",
-    "name": { "str": "pair of XS biosilicified chitin leg guards", "str_pl": "pairs of XS biosilicified chitin guards" },
+    "name": { "str": "pair of biosilicified chitin leg guards", "str_pl": "pairs of biosilicified chitin leg guards" },
     "material": [ "acidchitin" ],
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "bunker_pants",
@@ -272,9 +272,9 @@
     "id": "chainmail_chausses_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_chausses",
-    "name": { "str": "XS chainmail chausses", "str_pl": "pairs of XS chainmail chausses" },
+    "name": { "str": "chainmail chausses", "str_pl": "pairs of chainmail chausses" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_chausses_xl",
@@ -344,7 +344,7 @@
     "id": "chainmail_skirt_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_skirt",
-    "name": { "str": "XS chainmail skirt" },
+    "name": { "str": "chainmail skirt" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -352,7 +352,7 @@
       "target": "chainmail_skirt_loose_xs",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_skirt_xl",
@@ -399,7 +399,7 @@
     "id": "chainmail_skirt_loose_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_skirt_xs",
-    "name": { "str": "XS chainmail skirt (loose)" },
+    "name": { "str": "chainmail skirt (loose)" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -413,7 +413,7 @@
     "id": "chainmail_skirt_loose_xl",
     "type": "ARMOR",
     "copy-from": "chainmail_skirt_xl",
-    "name": { "str": "XL chainmail skirt (loose)" },
+    "name": { "str": "chainmail skirt (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -570,17 +570,17 @@
     "id": "bronze_greaves_xl",
     "type": "ARMOR",
     "copy-from": "bronze_greaves",
-    "name": { "str": "pair of XL bronze greaves", "str_pl": "pairs of XL bronze greaves" },
+    "name": { "str": "pair of bronze greaves", "str_pl": "pairs of bronze greaves" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "bronze_greaves_xs",
     "type": "ARMOR",
     "copy-from": "bronze_greaves",
-    "name": { "str": "pair of XS bronze greaves", "str_pl": "pairs of XS bronze greaves" },
+    "name": { "str": "pair of bronze greaves", "str_pl": "pairs of bronze greaves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "legguard_hard",
@@ -676,7 +676,7 @@
       "target": "tire_tasset_loose_xs",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "tire_tasset_xl",
@@ -712,7 +712,7 @@
     "id": "tire_tasset_loose_xs",
     "type": "ARMOR",
     "copy-from": "tire_tasset_loose",
-    "name": { "str": "XS tire tasset (loose)" },
+    "name": { "str": "tire tasset (loose)" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -720,13 +720,13 @@
       "target": "tire_tasset_xs",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "tire_tasset_loose_xl",
     "type": "ARMOR",
     "copy-from": "tire_tasset_loose",
-    "name": { "str": "XL tire tasset (loose)" },
+    "name": { "str": "tire tasset (loose)" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
       "type": "transform",
@@ -884,17 +884,17 @@
     "id": "platemail_leg_guards_xl",
     "type": "ARMOR",
     "copy-from": "platemail_leg_guards",
-    "name": { "str": "pair of XL plate leg guards", "str_pl": "pairs of XL plate leg guards" },
+    "name": { "str": "pair of plate leg guards", "str_pl": "pairs of plate leg guards" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "platemail_leg_guards_xs",
     "type": "ARMOR",
     "copy-from": "platemail_leg_guards",
-    "name": { "str": "pair of XS plate leg guards", "str_pl": "pairs of XS plate leg guards" },
+    "name": { "str": "pair of plate leg guards", "str_pl": "pairs of plate leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "paper_greaves",
@@ -954,17 +954,17 @@
     "id": "tire_greaves_xl",
     "type": "ARMOR",
     "copy-from": "tire_greaves",
-    "name": { "str": "pair of XL tire leg guards", "str_pl": "pairs of XL tire leg guards" },
+    "name": { "str": "pair of tire leg guards", "str_pl": "pairs of tire leg guards" },
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "tire_greaves_xs",
     "type": "ARMOR",
     "copy-from": "tire_greaves",
-    "name": { "str": "pair of XS tire leg guards", "str_pl": "pairs of XS tire leg guards" },
+    "name": { "str": "pair of tire leg guards", "str_pl": "pairs of tire leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "motorbike_pants",
@@ -1231,17 +1231,17 @@
   {
     "id": "leather_leg_guards_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL leather leg guards", "str_pl": "pairs of XL leather leg guards" },
+    "name": { "str": "pair of leather leg guards", "str_pl": "pairs of leather leg guards" },
     "copy-from": "leather_leg_guards",
     "proportional": { "weight": 1.25, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_leg_guards_xs",
     "type": "ARMOR",
     "copy-from": "leather_leg_guards",
-    "name": { "str": "pair of XS leather leg guards", "str_pl": "pairs of XS leather leg guards" },
+    "name": { "str": "pair of leather leg guards", "str_pl": "pairs of leather leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   }
 ]

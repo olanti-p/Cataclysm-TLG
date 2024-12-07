@@ -457,18 +457,18 @@
   {
     "id": "jumpsuit_xl",
     "type": "ARMOR",
-    "name": { "str": "XL jumpsuit" },
+    "name": { "str": "jumpsuit" },
     "copy-from": "jumpsuit",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "jumpsuit_xs",
     "type": "ARMOR",
-    "name": { "str": "XS jumpsuit" },
+    "name": { "str": "jumpsuit" },
     "copy-from": "jumpsuit",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "jumpsuit_skeleton",

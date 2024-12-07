@@ -404,10 +404,10 @@
   {
     "id": "longcoat_fur_xl",
     "type": "ARMOR",
-    "name": { "str": "XL fur longcoat" },
+    "name": { "str": "fur longcoat" },
     "copy-from": "longcoat_fur",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "longcoat_fur_xs",
@@ -415,23 +415,23 @@
     "copy-from": "longcoat_fur",
     "name": { "str": "XS fur longcoat" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "longcoat_xl",
     "type": "ARMOR",
-    "name": { "str": "XL longcoat" },
+    "name": { "str": "longcoat" },
     "copy-from": "longcoat",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "longcoat_xs",
     "type": "ARMOR",
     "copy-from": "longcoat",
-    "name": { "str": "XS longcoat" },
+    "name": { "str": "longcoat" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "longcoat_faux_fur",
@@ -447,18 +447,18 @@
   {
     "id": "longcoat_faux_fur_xl",
     "type": "ARMOR",
-    "name": { "str": "XL faux fur longcoat" },
+    "name": { "str": "faux fur longcoat" },
     "copy-from": "longcoat_faux_fur",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "longcoat_faux_fur_xs",
     "type": "ARMOR",
     "copy-from": "longcoat_faux_fur",
-    "name": { "str": "XS faux fur longcoat" },
+    "name": { "str": "faux fur longcoat" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "longcoat_leather",
@@ -537,18 +537,18 @@
   {
     "id": "longcoat_leather_xl",
     "type": "ARMOR",
-    "name": { "str": "XL leather longcoat" },
+    "name": { "str": "leather longcoat" },
     "copy-from": "longcoat_leather",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "longcoat_leather_xs",
     "type": "ARMOR",
     "copy-from": "longcoat_leather",
-    "name": { "str": "XS leather longcoat" },
+    "name": { "str": "leather longcoat" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "greatcoat",

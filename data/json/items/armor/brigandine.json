@@ -33,17 +33,17 @@
     "id": "brigandine_vest_xl",
     "type": "ARMOR",
     "copy-from": "brigandine_vest",
-    "name": { "str": "XL brigandine vest" },
+    "name": { "str": "brigandine vest" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "brigandine_vest_xs",
     "type": "ARMOR",
     "copy-from": "brigandine_vest",
-    "name": { "str": "XS brigandine vest" },
+    "name": { "str": "brigandine vest" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "brigandine_arm_guards",
@@ -83,17 +83,17 @@
     "id": "brigandine_arm_guards_xl",
     "type": "ARMOR",
     "copy-from": "brigandine_arm_guards",
-    "name": { "str": "XL pair of splint arm guards", "str_pl": "XL pairs of splint arm guards" },
+    "name": { "str": "pair of splint arm guards", "str_pl": "pairs of splint arm guards" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "brigandine_arm_guards_xs",
     "type": "ARMOR",
     "copy-from": "brigandine_arm_guards",
-    "name": { "str": "XS pair of splint arm guards", "str_pl": "XS pairs of splint arm guards" },
+    "name": { "str": "pair of splint arm guards", "str_pl": "pairs of splint arm guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "brigandine_leg_guards",
@@ -132,17 +132,17 @@
     "id": "brigandine_leg_guards_xl",
     "type": "ARMOR",
     "copy-from": "brigandine_leg_guards",
-    "name": { "str": "XL pair of splint leg guards", "str_pl": "XL pairs of splint leg guards" },
+    "name": { "str": "pair of splint leg guards", "str_pl": "pairs of splint leg guards" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "brigandine_leg_guards_xs",
     "type": "ARMOR",
     "copy-from": "brigandine_leg_guards",
-    "name": { "str": "XS pair of splint leg guards", "str_pl": "XS pairs of splint leg guards" },
+    "name": { "str": "pair of splint leg guards", "str_pl": "pairs of splint leg guards" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "brigandine_gloves",
@@ -187,16 +187,16 @@
     "id": "brigandine_gloves_xl",
     "type": "ARMOR",
     "copy-from": "brigandine_gloves",
-    "name": { "str": "XL pair of brigandine gloves", "str_pl": "XL pairs of brigandine gloves" },
+    "name": { "str": "pair of brigandine gloves", "str_pl": "pairs of brigandine gloves" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "brigandine_gloves_xs",
     "type": "ARMOR",
     "copy-from": "brigandine_gloves",
-    "name": { "str": "XS pair of brigandine gloves", "str_pl": "XS pairs of brigandine gloves" },
+    "name": { "str": "pair of brigandine gloves", "str_pl": "pairs of brigandine gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   }
 ]

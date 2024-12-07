@@ -38,18 +38,18 @@
   {
     "id": "paper_breastplate_xl",
     "type": "ARMOR",
-    "name": { "str": "XL crude paper breastplate", "str_pl": "XL crude paper breastplate" },
+    "name": { "str": "crude paper breastplate", "str_pl": "crude paper breastplate" },
     "copy-from": "paper_breastplate",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "paper_breastplate_xs",
     "type": "ARMOR",
     "copy-from": "paper_breastplate",
-    "name": { "str": "XS crude paper breastplate", "str_pl": "XS crude paper breastplate" },
+    "name": { "str": "crude paper breastplate", "str_pl": "crude paper breastplate" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "bronze_cuirass",
@@ -76,18 +76,18 @@
   {
     "id": "bronze_cuirass_xl",
     "type": "ARMOR",
-    "name": { "str": "XL bronze cuirass", "str_pl": "XL bronze cuirasses" },
+    "name": { "str": "bronze cuirass", "str_pl": "bronze cuirasses" },
     "copy-from": "bronze_cuirass",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "bronze_cuirass_xs",
     "type": "ARMOR",
-    "name": { "str": "XS bronze cuirass", "str_pl": "XS bronze cuirasses" },
+    "name": { "str": "bronze cuirass", "str_pl": "bronze cuirasses" },
     "copy-from": "bronze_cuirass",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "carpet_cuirass",
@@ -172,19 +172,18 @@
   {
     "id": "xl_armor_lorica",
     "type": "ARMOR",
-    "name": { "str_sp": "XL lorica segmentata" },
+    "name": { "str_sp": "lorica segmentata" },
     "copy-from": "armor_lorica",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "flags": [ "VARSIZE", "STURDY", "OVERSIZE", "OUTER" ]
+    "flags": [ "VARSIZE", "STURDY", "OVERSIZE", "PREFIX_XL", "OUTER" ]
   },
   {
     "id": "xs_armor_lorica",
     "type": "ARMOR",
     "copy-from": "armor_lorica",
-    "looks_like": "armor_lorica",
-    "name": { "str_sp": "XS lorica segmentata" },
+    "name": { "str_sp": "lorica segmentata" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "tireplate",
@@ -374,19 +373,19 @@
   {
     "id": "tire_cuirass_xl",
     "type": "ARMOR",
-    "name": { "str": "XL tire cuirass", "str_pl": "XL tire cuirasses" },
+    "name": { "str": "tire cuirass", "str_pl": "tire cuirasses" },
     "copy-from": "tire_cuirass",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "flags": [ "OVERSIZE", "OUTER", "NONCONDUCTIVE" ]
+    "flags": [ "OVERSIZE", "OUTER", "NONCONDUCTIVE", "PREFIX_XL" ]
   },
   {
     "id": "tire_cuirass_xs",
     "type": "ARMOR",
     "copy-from": "tire_cuirass",
     "looks_like": "tire_cuirass",
-    "name": { "str": "XS tire cuirass", "str_pl": "XS tire cuirasses" },
+    "name": { "str": "tire cuirass", "str_pl": "XS tire cuirasses" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "fencing_jacket",
@@ -869,18 +868,18 @@
   {
     "id": "leather_cuirass_xl",
     "type": "ARMOR",
-    "name": { "str": "XL leather cuirass", "str_pl": "XL leather cuirasses" },
+    "name": { "str": "leather cuirass", "str_pl": "leather cuirasses" },
     "copy-from": "leather_cuirass",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "leather_cuirass_xs",
     "type": "ARMOR",
     "copy-from": "leather_cuirass",
-    "name": { "str": "XS leather cuirass", "str_pl": "XS leather cuirasses" },
+    "name": { "str": "leather cuirass", "str_pl": "leather cuirasses" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "mirror_armor",
@@ -915,20 +914,20 @@
   {
     "id": "mirror_armor_xl",
     "type": "ARMOR",
-    "name": { "str": "XL mirror armor", "str_pl": "sets of XL mirror armor" },
+    "name": { "str": "mirror armor", "str_pl": "sets of mirror armor" },
     "copy-from": "mirror_armor",
     "looks_like": "mirror_armor",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "mirror_armor_xs",
     "type": "ARMOR",
     "copy-from": "mirror_armor",
     "looks_like": "mirror_armor",
-    "name": { "str": "XS mirror armor", "str_pl": "sets of XS mirror armor" },
+    "name": { "str": "mirror armor", "str_pl": "sets of mirror armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_vest",
@@ -974,7 +973,7 @@
   {
     "id": "chainmail_vest_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail vest" },
+    "name": { "str": "chainmail vest" },
     "copy-from": "chainmail_vest",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
@@ -983,13 +982,13 @@
       "target": "chainmail_vest_loose_xl",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_vest_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_vest",
-    "name": { "str": "XS chainmail vest" },
+    "name": { "str": "chainmail vest" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -997,7 +996,7 @@
       "target": "chainmail_vest_loose_xl",
       "menu_text": "Loosen"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_vest_loose",
@@ -1016,7 +1015,7 @@
   {
     "id": "chainmail_vest_loose_xl",
     "type": "ARMOR",
-    "name": { "str": "XL chainmail vest (loose)" },
+    "name": { "str": "chainmail vest (loose)" },
     "copy-from": "chainmail_vest_loose",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "use_action": {
@@ -1025,13 +1024,13 @@
       "target": "chainmail_vest_xl",
       "menu_text": "Tighten"
     },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "chainmail_vest_loose_xs",
     "type": "ARMOR",
     "copy-from": "chainmail_vest_loose",
-    "name": { "str": "XS chainmail vest (loose)" },
+    "name": { "str": "chainmail vest (loose)" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "use_action": {
       "type": "transform",
@@ -1039,7 +1038,7 @@
       "target": "chainmail_vest_xs",
       "menu_text": "Tighten"
     },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "chainmail_junk_vest",

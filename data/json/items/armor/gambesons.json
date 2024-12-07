@@ -50,19 +50,19 @@
   {
     "id": "xl_gambeson",
     "type": "ARMOR",
-    "name": { "str": "XL gambeson" },
+    "name": { "str": "gambeson" },
     "copy-from": "gambeson",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gambeson_xs",
     "type": "ARMOR",
     "copy-from": "gambeson",
     "looks_like": "gambeson",
-    "name": { "str": "XS gambeson" },
+    "name": { "str": "gambeson" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gambeson_vest",
@@ -105,24 +105,24 @@
   {
     "id": "xl_gambeson_vest",
     "type": "ARMOR",
-    "name": { "str": "XL gambeson vest" },
+    "name": { "str": "gambeson vest" },
     "copy-from": "gambeson_vest",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gambeson_vest_xs",
     "type": "ARMOR",
-    "copy-from": "gambeson_vest",
     "looks_like": "gambeson",
-    "name": { "str": "XS gambeson vest" },
+    "copy-from": "gambeson_vest",
+    "name": { "str": "gambeson vest" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gambeson_pants",
     "type": "ARMOR",
-    "name": { "str_sp": "padded arming pants" },
+    "name": { "str": "padded arming pants" },
     "description": "Thick pants made of quilted fabric, meant to be worn alongside a gambeson under or without armor.",
     "weight": "2736 g",
     "volume": "1750 ml",
@@ -150,18 +150,18 @@
   {
     "id": "xl_gambeson_pants",
     "type": "ARMOR",
-    "name": { "str": "XL arming pants", "str_pl": "pairs of XL arming pants" },
+    "name": { "str": "arming pants", "str_pl": "pairs of padded arming pants" },
     "copy-from": "gambeson_pants",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gambeson_pants_xs",
     "type": "ARMOR",
-    "name": { "str": "XL arming pants", "str_pl": "pairs of XL arming pants" },
+    "name": { "str": "arming pants", "str_pl": "pairs of padded arming pants" },
     "copy-from": "gambeson_pants",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gambeson_hood",
@@ -198,19 +198,19 @@
     "id": "xl_gambeson_hood",
     "//": "surface area of XL body assumed to be 50% greater and materials used are also 50% greater.",
     "type": "ARMOR",
-    "name": { "str": "XL padded coif" },
+    "name": { "str": "padded coif" },
     "copy-from": "gambeson_hood",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_gambeson_hood",
-    "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
+    "//": "surface area of XS body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
-    "name": { "str": "XS padded coif" },
+    "name": { "str": "padded coif" },
     "copy-from": "gambeson_hood",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "aketon_wool",
@@ -260,19 +260,19 @@
     "id": "xl_aketon_wool",
     "//": "surface area of XL body assumed to be 50% greater and materials used are also 50% greater.",
     "type": "ARMOR",
-    "name": { "str": "XL wool aketon" },
+    "name": { "str": "wool aketon" },
     "copy-from": "aketon_wool",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_aketon_wool",
-    "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
+    "//": "surface area of XS body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
-    "name": { "str": "XS wool aketon" },
+    "name": { "str": "wool aketon" },
     "copy-from": "aketon_wool",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "aketon_wool_vest",
@@ -310,19 +310,19 @@
     "id": "xl_aketon_wool_vest",
     "//": "surface area of XL body assumed to be 50% greater and materials used are also 50% greater.",
     "type": "ARMOR",
-    "name": { "str": "XL wool aketon vest" },
+    "name": { "str": "wool aketon vest" },
     "copy-from": "aketon_wool_vest",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_aketon_wool_vest",
-    "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
+    "//": "surface area of XS body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
-    "name": { "str": "XS wool aketon vest" },
+    "name": { "str": "wool aketon vest" },
     "copy-from": "aketon_wool_vest",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "aketon_pants_wool",
@@ -359,19 +359,19 @@
     "id": "xl_aketon_pants_wool",
     "//": "surface area of XL body assumed to be 50% greater and materials used are also 50% greater.",
     "type": "ARMOR",
-    "name": { "str": "XL wool arming pants", "str_pl": "pairs of XL wool arming pants" },
+    "name": { "str": "wool arming pants", "str_pl": "pairs of wool arming pants" },
     "copy-from": "aketon_pants_wool",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_aketon_pants_wool",
-    "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
+    "//": "surface area of XS body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
-    "name": { "str": "XS wool arming pants", "str_pl": "pairs of XS wool arming pants" },
+    "name": { "str": "wool arming pants", "str_pl": "pairs of wool arming pants" },
     "copy-from": "aketon_pants_wool",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "aketon_hood_wool",
@@ -410,19 +410,19 @@
     "id": "xl_aketon_hood_wool",
     "//": "surface area of XL body assumed to be 50% greater and materials used are also 50% greater.",
     "type": "ARMOR",
-    "name": { "str": "XL wool coif" },
+    "name": { "str": "wool coif" },
     "copy-from": "aketon_hood_wool",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_aketon_hood_wool",
-    "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
+    "//": "surface area of XS body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
-    "name": { "str": "XS wool coif" },
+    "name": { "str": "wool coif" },
     "copy-from": "aketon_hood_wool",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "aketon_gloves_wool",
@@ -460,18 +460,18 @@
     "id": "xl_aketon_gloves_wool",
     "//": "surface area of XL body assumed to be 50% greater and materials used are also 50% greater.",
     "type": "ARMOR",
-    "name": { "str": "XL wool arming gloves", "str_pl": "pairs of XL wool arming gloves" },
+    "name": { "str": "wool arming gloves", "str_pl": "pairs of wool arming gloves" },
     "copy-from": "aketon_gloves_wool",
     "proportional": { "weight": 1.5, "volume": 1.5, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "xs_aketon_gloves_wool",
-    "//": "surface area of XL body assumed to be 75% size and materials used are also 75% as much.",
+    "//": "surface area of XS body assumed to be 75% size and materials used are also 75% as much.",
     "type": "ARMOR",
-    "name": { "str": "XS wool arming gloves", "str_pl": "pairs of XS wool arming gloves" },
+    "name": { "str": "wool arming gloves", "str_pl": "pairs of wool arming gloves" },
     "copy-from": "aketon_gloves_wool",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   }
 ]

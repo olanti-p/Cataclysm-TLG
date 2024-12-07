@@ -55,18 +55,18 @@
   {
     "id": "gloves_survivor_fingerless_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL fingerless survivor gloves", "str_pl": "pairs of XL fingerless survivor gloves" },
+    "name": { "str": "pair of fingerless survivor gloves", "str_pl": "pairs of fingerless survivor gloves" },
     "copy-from": "gloves_survivor_fingerless",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gloves_survivor_fingerless_xs",
     "type": "ARMOR",
     "copy-from": "gloves_survivor_fingerless",
-    "name": { "str": "pair of XS fingerless survivor gloves", "str_pl": "pairs of XS fingerless survivor gloves" },
+    "name": { "str": "pair of fingerless survivor gloves", "str_pl": "pairs of fingerless survivor gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_survivor",
@@ -103,17 +103,17 @@
     "id": "gloves_survivor_xl",
     "type": "ARMOR",
     "copy-from": "gloves_survivor",
-    "name": { "str": "pair of XL survivor gloves", "str_pl": "pairs of XL survivor gloves" },
+    "name": { "str": "pair of survivor gloves", "str_pl": "pairs of survivor gloves" },
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gloves_survivor_xs",
     "type": "ARMOR",
     "copy-from": "gloves_survivor",
-    "name": { "str": "pair of XS survivor gloves", "str_pl": "pairs of XS survivor gloves" },
+    "name": { "str": "pair of survivor gloves", "str_pl": "pairs of survivor gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_wsurvivor",
@@ -151,18 +151,18 @@
   {
     "id": "gloves_wsurvivor_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL winter survivor gloves", "str_pl": "pairs of XL winter survivor gloves" },
+    "name": { "str": "pair of winter survivor gloves", "str_pl": "pairs of winter survivor gloves" },
     "copy-from": "gloves_wsurvivor",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gloves_wsurvivor_xs",
     "type": "ARMOR",
     "copy-from": "gloves_wsurvivor",
-    "name": { "str": "pair of XS winter survivor gloves", "str_pl": "pairs of XS winter survivor gloves" },
+    "name": { "str": "pair of winter survivor gloves", "str_pl": "pairs of winter survivor gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_wsurvivor_nofur",
@@ -199,10 +199,10 @@
   {
     "id": "gloves_wsurvivor_nofur_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL faux fur winter survivor gloves", "str_pl": "pairs of XL faux fur winter survivor gloves" },
+    "name": { "str": "pair of faux fur winter survivor gloves", "str_pl": "pairs of faux fur winter survivor gloves" },
     "copy-from": "gloves_wsurvivor_nofur",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gloves_wsurvivor_nofur_xs",
@@ -210,7 +210,7 @@
     "copy-from": "gloves_wsurvivor_nofur",
     "name": { "str": "pair of XS faux fur winter survivor gloves", "str_pl": "pairs of XS faux fur winter survivor gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "gloves_fsurvivor",
@@ -246,10 +246,10 @@
   {
     "id": "gloves_fsurvivor_xl",
     "type": "ARMOR",
-    "name": { "str": "pair of XL survivor fire gloves", "str_pl": "pairs of XL survivor fire gloves" },
+    "name": { "str": "pair of survivor fire gloves", "str_pl": "pairs of survivor fire gloves" },
     "copy-from": "gloves_fsurvivor",
     "proportional": { "weight": 1.5, "volume": 1.5 },
-    "extend": { "flags": [ "OVERSIZE" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "gloves_fsurvivor_xs",
@@ -257,6 +257,6 @@
     "copy-from": "gloves_fsurvivor",
     "name": { "str": "pair of XS survivor fire gloves", "str_pl": "pairs of XS survivor fire gloves" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   }
 ]
