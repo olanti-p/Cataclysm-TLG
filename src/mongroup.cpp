@@ -119,7 +119,7 @@ const MonsterGroup &MonsterGroupManager::GetUpgradedMonsterGroup( const mongroup
         const time_duration replace_time = groupptr->monster_group_time *
                                            get_option<float>( "MONSTER_UPGRADE_FACTOR" );
         while( groupptr->replace_monster_group &&
-               calendar::turn - time_point( calendar::start_of_cataclysm ) > replace_time ) {
+               calendar::turn - time_point( calendar::fall_of_civilization ) > replace_time ) {
             groupptr = &groupptr->new_monster_group.obj();
         }
     }
@@ -137,10 +137,10 @@ static bool is_spawn_valid(
     }
 
     //Insure that the time is not before the spawn first appears or after it stops appearing
-    if( calendar::turn < calendar::start_of_cataclysm + entry.starts ) {
+    if( calendar::turn < calendar::fall_of_civilization + entry.starts ) {
         return false;
     }
-    if( !entry.lasts_forever() && calendar::turn >= calendar::start_of_cataclysm + entry.ends ) {
+    if( !entry.lasts_forever() && calendar::turn >= calendar::fall_of_civilization + entry.ends ) {
         return false;
     }
 
