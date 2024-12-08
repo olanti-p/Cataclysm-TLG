@@ -41,7 +41,11 @@ _check_required_component "jq"
 ORG=CleverRaven
 REPO=Cataclysm-DDA
 
-API_RESPONSE=$(curl -Ls -H "Accept: application/json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/$ORG/$REPO/pulls/$PULLREQUEST_ID")
+if [ -z "$GITHUB_TOKEN" ]; then
+  API_RESPONSE=$(curl -Ls -H "Accept: application/json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/$ORG/$REPO/pulls/$PULLREQUEST_ID")
+else
+  API_RESPONSE=$(curl -Ls -H "Accept: application/json" -H "X-GitHub-Api-Version: 2022-11-28" -H "Authorization: Bearer $GITHUB_TOKEN" "https://api.github.com/repos/$ORG/$REPO/pulls/$PULLREQUEST_ID")
+fi
 
 HTTP_STATUS=$(echo "$API_RESPONSE" | jq -r ".status")
 
