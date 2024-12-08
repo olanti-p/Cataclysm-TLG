@@ -20,12 +20,12 @@ static void bar()
     // work around encoding error in llvm's lit by using escape sequence for unicode ellipses
     foo( "\u2026" );
     foo( "Blah." );
-    foo( "Dark days ahead;" );
+    foo( "The Last Generation;" );
     foo( "What?!?" );
     foo( "Yes\u2026" );
     foo( "\"It'll work.\"" );
     foo( "C.R.I.T." );
-    foo( "C. D. D. A." );
+    foo( "C. T. L. G." );
     foo( "Periods (.) should be followed by double spaces." );
     foo( "foo::bar" );
     // frequently used in the code for concatenation

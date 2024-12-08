@@ -14,7 +14,7 @@
     "type": "MONSTER",
     "name": { "str": "spore cloud" },
     "upgrades": false,
-    "special_attacks": [ [ "DISAPPEAR", 10 ] ],
+    "special_attacks": [ [ "DISAPPEAR", 5 ] ],
     "delete": { "special_attacks": [ "PLANT" ] }
   }
 ]

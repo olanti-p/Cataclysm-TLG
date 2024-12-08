@@ -223,7 +223,7 @@ void memorial_logger::write_text_memorial( std::ostream &file,
                                    pronoun, locdesc );
 
     //Header
-    file << string_format( _( "Cataclysm - Dark Days Ahead version %s memorial file" ),
+    file << string_format( _( "Cataclysm - The Last Generation version %s memorial file" ),
                            getVersionString() ) << eol;
     file << eol;
     file << string_format( _( "In memory of: %s" ), u.get_name() ) << eol;
@@ -487,8 +487,8 @@ void memorial_logger::notify( const cata::event &e )
             break;
         }
         case event_type::awakes_dark_wyrms: {
-            add( pgettext( "memorial_male", "Awoke a group of dark wyrms!" ),
-                 pgettext( "memorial_female", "Awoke a group of dark wyrms!" ) );
+            add( pgettext( "memorial_male", "Awoke a group of giant cave worms!" ),
+                 pgettext( "memorial_female", "Awoke a group of giant cave worms!" ) );
             break;
         }
         case event_type::becomes_wanted: {

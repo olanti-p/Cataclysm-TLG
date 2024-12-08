@@ -4,8 +4,8 @@
     "id": "MA",
     "name": "Massachusetts",
     "authors": [ "ZhilkinSerg" ],
-    "maintainers": [ "ZhilkinSerg" ],
-    "description": "Cataclysm in one state.",
+    "maintainers": [ "Worm Girl" ],
+    "description": "NOTE: This mod is incomplete and is likely to be buggy!  Changes the world map to an approximation of the state of Massachusetts.",
     "category": "total_conversion",
     "dependencies": [ "tlg" ]
   }

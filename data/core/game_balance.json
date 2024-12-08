@@ -88,7 +88,7 @@
     "name": "NO_NPC_FOOD",
     "info": "Disables tracking food, thirst and ( partially ) fatigue for NPCs.  If true, NPCs won't need to eat or drink and will only get tired enough to sleep, not to get penalties.",
     "stype": "bool",
-    "value": false
+    "value": true
   },
   {
     "type": "EXTERNAL_OPTION",
@@ -221,7 +221,7 @@
     "name": "INT_BASED_LEARNING_BASE_VALUE",
     "info": "The amount of INT which is used as base point for focus adjustments",
     "stype": "int",
-    "value": 8
+    "value": 10
   },
   {
     "type": "EXTERNAL_OPTION",

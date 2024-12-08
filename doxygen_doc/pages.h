@@ -1,6 +1,6 @@
 /** \page map_management Map Management
  *
- * Cataclysm DDA uses a shifting coordinate system. This means that when the player moves to a new
+ * Cataclysm TLG uses a shifting coordinate system. This means that when the player moves to a new
  * submap, the (0, 0) coordinate moves from one submap to another, and the coordinates of all entities
  * on the map are shifted to accommodate this.
  *

@@ -4,8 +4,8 @@
     "id": "Tamable_Wildlife",
     "name": "Tamable Wildlife",
     "authors": [ "Termineitor244" ],
-    "maintainers": [ "Termineitor244" ],
-    "description": "Makes a lot of docile, but generally untamable wildlife, tamable.",
+    "maintainers": [ "Worm Girl" ],
+    "description": "Makes a lot of non-hostile wildlife tameable.",
     "category": "rebalance",
     "dependencies": [ "tlg" ]
   }

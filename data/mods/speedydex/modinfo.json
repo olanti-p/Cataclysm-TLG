@@ -4,7 +4,7 @@
     "id": "speedydex",
     "name": "SpeedyDex",
     "authors": [ "KorGgenT" ],
-    "maintainers": [ "KorGgenT" ],
+    "maintainers": [ "Worm Girl" ],
     "description": "Higher dex increases your speed.",
     "category": "rebalance",
     "dependencies": [ "tlg" ]

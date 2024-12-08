@@ -545,7 +545,7 @@ void realDebugmsg( const char *filename, const char *line, const char *funcname,
         if( excess_repetition ) {
             // prepend excessive error repetition to original text then prompt
             std::string rep_err =
-                "Excessive error repetition detected.  Please file a bug report at https://github.com/CleverRaven/Cataclysm-DDA/issues\n            "
+                "Excessive error repetition detected.  Please file a bug report at https://github.com/Cataclysm-tlg/Cataclysm-tlg/issues\n            "
                 + text;
             buffered_prompts().push_back( {filename, line, funcname, rep_err, true } );
         }
@@ -557,7 +557,7 @@ void realDebugmsg( const char *filename, const char *line, const char *funcname,
     if( excess_repetition ) {
         // prepend excessive error repetition to original text then prompt
         std::string rep_err =
-            "Excessive error repetition detected.  Please file a bug report at https://github.com/CleverRaven/Cataclysm-DDA/issues\n            "
+            "Excessive error repetition detected.  Please file a bug report at https://github.com/Cataclysm-tlg/Cataclysm-tlg/issues\n            "
             + text;
         debug_error_prompt( filename, line, funcname, rep_err.c_str(), true );
         // Do not count this prompt when considering repetition folding
@@ -706,7 +706,7 @@ void DebugFile::init( DebugOutput output_mode, const std::string &filename )
                        fs::u8path( filename ), std::ios::out | std::ios::app );
             *file << "\n\n-----------------------------------------\n";
             *file << get_time() << " : Starting log.";
-            DebugLog( D_INFO, D_MAIN ) << "Cataclysm DDA version " << getVersionString();
+            DebugLog( D_INFO, D_MAIN ) << "Cataclysm TLG version " << getVersionString();
             if( rename_failed ) {
                 DebugLog( D_ERROR, DC_ALL ) << "Moving the previous log file to "
                                             << oldfile << " failed.\n"
@@ -1859,7 +1859,7 @@ std::string game_info::mods_loaded()
     mod_names.reserve( mod_ids.size() );
     std::transform( mod_ids.begin(), mod_ids.end(),
     std::back_inserter( mod_names ), []( const mod_id & mod ) -> std::string {
-        // e.g. "Dark Days Ahead [dda]".
+        // e.g. "The Last Generation [tlg]".
         return string_format( "%s [%s]", mod->name(), mod->ident.str() );
     } );
 
