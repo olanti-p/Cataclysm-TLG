@@ -3165,6 +3165,7 @@
     "dmg_adj": [ "ripped", "torn", "shredded", "tattered" ],
     "bash_dmg_verb": "ripped",
     "cut_dmg_verb": "cut",
+    "acid_dmg_verb": "singed",
     "burn_data": [
       { "fuel": 0.6, "smoke": 1, "burn": 0.02 },
       { "fuel": 1, "smoke": 1, "burn": 0.04 },
