@@ -101,7 +101,7 @@ The above will build a debug-enabled curses version for the architecture you are
 You should probably always build with `RELEASE=1` unless you experience segfaults and are willing to provide stack traces.
 
 **Note on PREFIX**:
-PREFIX specifies a directory which will be the prefix for binaries, resources, and documentation files. Compiling with PREFIX means cataclysm will read files from PREFIX directory. This can be overridden with `--datadir` (e.g. if you used `PREFIX=DIR` in earlier build, then specify `--datadir DIR/share/cataclysm-dda`).
+PREFIX specifies a directory which will be the prefix for binaries, resources, and documentation files. Compiling with PREFIX means cataclysm will read files from PREFIX directory. This can be overridden with `--datadir` (e.g. if you used `PREFIX=DIR` in earlier build, then specify `--datadir DIR/share/cataclysm-tlg`).
 
 ## Compiling localization files
 
@@ -119,7 +119,7 @@ You can get the language ID from the filenames of `*.po` in `lang/po` directory.
 
 Instructions for compiling on a Debian-based system. The package names here are valid for Ubuntu 12.10 and may or may not work on your system.
 
-The building instructions below always assume you are running them from the Cataclysm:DDA source directory.
+The building instructions below always assume you are running them from the Cataclysm:TLG source directory.
 
 # Gentoo
 If you want sound and graphics, make sure to emerge with the following:
@@ -215,7 +215,7 @@ Installation
 sudo apt install astyle autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libgdk-pixbuf2.0-dev libtool libltdl-dev libssl-dev libxml-parser-perl lzip make mingw-w64 openssl p7zip-full patch perl pkg-config python3 ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386 libtool-bin
 mkdir -p ~/src/libbacktrace
 cd ~/src
-git clone https://github.com/CleverRaven/Cataclysm-DDA.git 
+git clone https://github.com/Cataclysm-TLG/Cataclysm-TLG.git 
 git clone https://github.com/mxe/mxe.git
 cd mxe
 make -j$((`nproc`+0)) MXE_TARGETS='x86_64-w64-mingw32.static i686-w64-mingw32.static' MXE_PLUGIN_DIRS=plugins/gcc11 sdl2 sdl2_ttf sdl2_image sdl2_mixer gettext
@@ -228,7 +228,7 @@ tar -xzf libbacktrace-i686-w64-mingw32.tar.gz --exclude=LICENSE -C ~/src/mxe/usr
 
 Building all these packages from MXE might take a while, even on a fast computer. Be patient; the `-j` flag will take advantage of all your processor cores. If you are not planning on building for both 32-bit and 64-bit, you might want to adjust your MXE_TARGETS.  Additionally if not building for a particular target you can skip the curl and tar commands for the targets NOT being built.
 
-An additional note: With C:DDA switching to gcc 11.2 with MXE (MingW), if you've previously built MXE you'll need to "make clean" and rebuild it to get gcc11.
+An additional note: With C:TLG switching to gcc 11.2 with MXE (MingW), if you've previously built MXE you'll need to "make clean" and rebuild it to get gcc11.
 
 Edit your `~/.profile` as follows:
 
@@ -241,7 +241,7 @@ This is to ensure that the variables for the `make` command will not get reset a
 
 ### Building (SDL)
 
-    cd ~/src/Cataclysm-DDA
+    cd ~/src/Cataclysm-TLG
 
 Run one of the following commands based on your targeted environment:
 
@@ -401,7 +401,7 @@ To build a signed release APK (ie. one that can be installed on a device), [buil
 
 ### Additional notes
 
-The app stores data files on the device in `/sdcard/Android/data/com.cleverraven/cataclysmdda/files`. The data is backwards compatible with the desktop version.
+The app stores data files on the device in `/sdcard/Android/data/com.cataclysm-tlg/cataclysmtlg/files`. The data is backwards compatible with the desktop version.
 
 # Mac OS X
 
@@ -417,7 +417,7 @@ For a stable tiles build:
 
     brew install cataclysm
 
-For an experimental tiles build built from the current HEAD of [master](https://github.com/CleverRaven/Cataclysm-DDA/tree/master/):
+For an experimental tiles build built from the current HEAD of [master](https://github.com/Cataclysm-TLG/Cataclysm-TLG/tree/master/):
 
     brew install cataclysm --HEAD
 
@@ -531,7 +531,7 @@ The Cataclysm source is compiled using `make`.
 * `RELEASE=1` build an optimized release version; omit for debug build.
 * `CLANG=1` build with [Clang](http://clang.llvm.org/), the compiler that's included with the latest Command Line Tools for Xcode; omit to build using gcc/g++. This is enabled by default.
 * `MACPORTS=1` build against dependencies installed via Macports, currently only `gettext` and `ncurses`.
-* `USE_HOME_DIR=1` places user files (config, saves, graveyard, etc) in the user's home directory. For curses builds, this is `/Users/<user>/.cataclysm-dda`, for OSX builds it is `/Users/<user>/Library/Application Support/Cataclysm`.
+* `USE_HOME_DIR=1` places user files (config, saves, graveyard, etc) in the user's home directory. For curses builds, this is `/Users/<user>/.cataclysm-tlg`, for OSX builds it is `/Users/<user>/Library/Application Support/Cataclysm`.
 * `DEBUG_SYMBOLS=1` retains debug symbols when building an optimized release binary, making it easy for developers to spot the crash site.
 
 In addition to the options above, there is an `app` make target which will package the tiles build into `Cataclysm.app`, a complete tiles build in a Mac application that can run without Terminal.
@@ -622,7 +622,7 @@ Clang by default uses MSVC on Windows, but also supports the MinGW64 library. Si
 
 # BSDs
 
-There are reports of CDDA building fine on recent OpenBSD and FreeBSD machines (with appropriately recent compilers), and there is some work being done on making the [`Makefile`](../../Makefile) "just work", however we're far from that and BSDs support is mostly based on user contributions. Your mileage may vary. So far essentially all testing has been on amd64, but there is no (known) reason that other architectures shouldn't work, in principle.
+There are reports of CTLG building fine on recent OpenBSD and FreeBSD machines (with appropriately recent compilers), and there is some work being done on making the [`Makefile`](../../Makefile) "just work", however we're far from that and BSDs support is mostly based on user contributions. Your mileage may vary. So far essentially all testing has been on amd64, but there is no (known) reason that other architectures shouldn't work, in principle.
 
 ### Building on FreeBSD/amd64 13.0 with the system compiler
 

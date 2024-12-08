@@ -4,7 +4,7 @@
     "id": "innawood",
     "name": "Innawood",
     "authors": [ "Lightwave" ],
-    "maintainers": [ "Lightwave" ],
+    "maintainers": [ "Worm Girl" ],
     "description": "An untouched land that mankind has yet to reach.  Disables most traces of civilization for that 'innawood' experience.",
     "category": "total_conversion",
     "dependencies": [ "tlg" ],

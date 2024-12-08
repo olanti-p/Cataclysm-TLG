@@ -3,7 +3,7 @@
 
 **WARNING**: CMake build is **NOT** officially supported and should be used for *dev purposes ONLY*.
 
-For the official way to build CataclysmDDA, see:
+For the official way to build CataclysmTLG, see:
   * [COMPILING.md](COMPILING.md)
 
 # Contents
@@ -66,7 +66,7 @@ Run the command
 # 4 Install
 
 ## Visual Studio
-From the main menu, select _Build -> Install CataclysmDDA_
+From the main menu, select _Build -> Install CataclysmTLG_
 
 ## Terminal
 Run the command

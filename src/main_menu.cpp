@@ -419,7 +419,7 @@ void main_menu::init_windows()
 void main_menu::init_strings()
 {
     // ASCII Art
-    mmenu_title = load_file( PATH_INFO::title( current_holiday ), _( "Cataclysm: Dark Days Ahead" ) );
+    mmenu_title = load_file( PATH_INFO::title( current_holiday ), _( "Cataclysm: The Last Generation" ) );
     // MOTD
     auto motd = load_file( PATH_INFO::motd(), _( "No message today." ) );
 
@@ -472,7 +472,7 @@ void main_menu::init_strings()
     }
     vNewGameHints.clear();
     vNewGameHints.emplace_back(
-        _( "Allows you to fully customize points pool, scenario, and character's profession, stats, traits, skills and other parameters." ) );
+        _( "Create your own character using point buy or freeform settings." ) );
     vNewGameHints.emplace_back( _( "Select from one of previously created character templates." ) );
     vNewGameHints.emplace_back(
         _( "Creates random character, but lets you preview the generated character and the scenario and change character and/or scenario if needed." ) );

@@ -3,7 +3,7 @@
 
 **WARNING**: CMake build is **NOT** official and should be used for *dev purposes ONLY*.
 
-For the official way to build CataclysmDDA, see:
+For the official way to build CataclysmTLG, see:
   * [COMPILING.md](COMPILING.md)
 
 
@@ -17,12 +17,12 @@ For the official way to build CataclysmDDA, see:
    * MinGW,MSYS,MSYS2
 1. Build Options
    * CMake-specific options
-   * CataclysmDDA-specific options
+   * CataclysmTLG-specific options
 
 
 # Prerequisites
 
-You'll need to have these libraries and their development headers installed in order to build CataclysmDDA:
+You'll need to have these libraries and their development headers installed in order to build CataclysmTLG:
 
 * General
   * `cmake`                     >= 3.20.0
@@ -62,7 +62,7 @@ You'll need to have these libraries and their development headers installed in o
 
 # Build Environment
 
-You can obtain the source code tarball for the latest version from [Github](https://github.com/CleverRaven/Cataclysm-DDA).
+You can obtain the source code tarball for the latest version from [Github](https://github.com/Cataclysm-TLG/Cataclysm-TLG).
 
 
 ## UNIX Environment
@@ -81,11 +81,11 @@ Please refer to `COMPILING-MSYS.md`
 
 CMake has separate configuration and build steps. Configuration is done using CMake itself, and the actual build is done using either `make` (for Makefiles generator) or the build-system-agnostic `cmake --build . `.
 
-There are two ways to build CataclysmDDA with CMake: inside the source tree or outside of it. Out-of-source builds have the advantage that you can have multiple builds with different options from one source directory.
+There are two ways to build CataclysmTLG with CMake: inside the source tree or outside of it. Out-of-source builds have the advantage that you can have multiple builds with different options from one source directory.
 
 **WARNING**: Inside the source tree build is **NOT** supported.
 
-To build CataclysmDDA out of source:
+To build CataclysmTLG out of source:
 
 ```
 $ mkdir build && cd build
@@ -95,7 +95,7 @@ $ make
 
 The above example creates a build directory inside the source directory, but that's not required - you can just as easily create it in a completely different location.
 
-To install CataclysmDDA after building (as root using su or sudo if necessary):
+To install CataclysmTLG after building (as root using su or sudo if necessary):
 
 ```
 # make install
@@ -163,7 +163,7 @@ Open the Windows command line (or powershell) and set the environment variables 
 ### Make a build directory and run CMake's configuration step
 
 ```
-> cd <path to cdda sources>
+> cd <path to ctlg sources>
 > mkdir build
 > cd build
 > cmake .. -DTILES=ON -DLOCALIZE=OFF -DBACKTRACE=OFF -DSOUND=ON
@@ -177,7 +177,7 @@ Open the Windows command line (or powershell) and set the environment variables 
 
 The `-j 2` flag controls build parallelism - you can omit it if you wish. The `/p:Configuration=Release` flag is passed directly to MSBuild and controls optimizations. If you omit it, the `Debug` configuration would be built instead. For powershell you'll need to have an extra ` -- ` after the first one.
 
-The resulting files will be put into a `Release` directory inside your source Cataclysm-DDA folder. To make them run you'd need to first move them to the source Cataclysm-DDA directory itself (so that the binary has access to the game data), and second put the required `.dll`s into the same folder - you can find those inside the directories for dev libraries under `lib/x86/` or `lib/x64/` (you likely need the `x86` ones even if you're on 64-bit machine).
+The resulting files will be put into a `Release` directory inside your source Cataclysm-TLG folder. To make them run you'd need to first move them to the source Cataclysm-TLG directory itself (so that the binary has access to the game data), and second put the required `.dll`s into the same folder - you can find those inside the directories for dev libraries under `lib/x86/` or `lib/x64/` (you likely need the `x86` ones even if you're on 64-bit machine).
 
 The copying of dlls is a one-time task, but you'd need to move the binary out of `Release/` each time it's built. To automate it a bit, you can configure cmake and set the desired binary's destination directory with `-DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=`  option (and similar for `CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG`).
 
@@ -207,7 +207,7 @@ $ cmake -DOPTION_NAME1=option_value1 [-DOPTION_NAME2=option_value2 [...]]
   Installation prefix for binaries, resources, and documentation files.
 
 
-## CataclysmDDA-specific options
+## CataclysmTLG-specific options
 
  * `CURSES=<boolean>`: Build curses version.
  * `TILES=<boolean>`: Build graphical tileset version.
@@ -227,7 +227,7 @@ $ cmake -DOPTION_NAME1=option_value1 [-DOPTION_NAME2=option_value2 [...]]
  * `DYNAMIC_LINKING=<boolean>`: Use dynamic linking. Or use static to remove MinGW dependency instead.
  * `GIT_BINARY=<str>` Override the default Git binary name or path.
 
-   So a CMake command for building Cataclysm-DDA in release mode with tiles and sound support will look as follows, provided it is run in the build directory located in the project.
+   So a CMake command for building Cataclysm-TLG in release mode with tiles and sound support will look as follows, provided it is run in the build directory located in the project.
 
    ```
    cmake ../ -DCMAKE_BUILD_TYPE=Release -DTILES=ON -DSOUND=ON

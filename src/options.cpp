@@ -2386,7 +2386,7 @@ void options_manager::add_options_graphics()
 
         add( "TILES", page_id, to_translation( "Choose tileset" ),
              to_translation( "Choose the tileset you want to use." ),
-             build_tilesets_list(), "MxShockXotto+", COPT_CURSES_HIDE
+             build_tilesets_list(), "MshockXottoplus", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         add( "USE_DISTANT_TILES", page_id, to_translation( "Use separate tileset for far" ),
@@ -2396,7 +2396,7 @@ void options_manager::add_options_graphics()
 
         add( "DISTANT_TILES", page_id, to_translation( "Choose distant tileset" ),
              to_translation( "Choose the tileset you want to use for far zoom." ),
-             build_tilesets_list(), "MxShockXotto+", COPT_CURSES_HIDE
+             build_tilesets_list(), "MshockXottoplus", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         add( "SWAP_ZOOM", page_id, to_translation( "Zoom Threshold" ),

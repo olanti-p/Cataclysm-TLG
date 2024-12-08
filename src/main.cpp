@@ -241,7 +241,7 @@ void printVersionMessage()
     const bool hasSound = false;
 #endif
 
-    printf( "Cataclysm Dark Days Ahead: %s\n\n"
+    printf( "Cataclysm: The Last Generation: %s\n\n"
             "%ctiles, %csound\n\n"
             "data dir: %s\nuser dir: %s\n",
             getVersionString(),

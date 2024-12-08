@@ -4,7 +4,7 @@
     "id": "standard_combat_test",
     "name": "Standard combat test suite",
     "authors": [ "Venera3" ],
-    "maintainers": [ "Venera3" ],
+    "maintainers": [ "Worm Girl" ],
     "description": "A set of standard character loadouts to facilitate objective monster testing.  Disables all but the test scenarios.",
     "category": "misc",
     "dependencies": [ "tlg" ]
