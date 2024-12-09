@@ -385,7 +385,7 @@
     "using": [ [ "tailoring_leather", 1 ] ]
   },
   {
-    "result": "leather_vambraces_xs",
+    "result": "leather_vambraces_xl",
     "type": "recipe",
     "copy-from": "leather_vambraces",
     "time": "180 m",

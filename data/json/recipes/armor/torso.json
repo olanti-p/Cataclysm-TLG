@@ -2127,7 +2127,7 @@
     "using": [ [ "tailoring_faux_fur_patchwork", 8 ], [ "fastener_large", 1 ] ]
   },
   {
-    "result": "coat_fur_xl",
+    "result": "coat_faux_fur_xl",
     "type": "recipe",
     "copy-from": "coat_faux_fur",
     "time": "9 h 30 m",
