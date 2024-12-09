@@ -3764,40 +3764,6 @@ int Character::smash_ability() const
     return ret;
 }
 
-void Character::do_skill_rust()
-{
-    for( std::pair<const skill_id, SkillLevel> &pair : *_skills ) {
-        const Skill &aSkill = *pair.first;
-        SkillLevel &skill_level_obj = pair.second;
-
-        if( aSkill.is_combat_skill() &&
-            ( ( has_flag( json_flag_PRED2 ) && calendar::once_every( 8_hours ) ) ||
-              ( has_flag( json_flag_PRED3 ) && calendar::once_every( 4_hours ) ) ||
-              ( has_flag( json_flag_PRED4 ) && calendar::once_every( 3_hours ) ) ) ) {
-            // Their brain is optimized to remember this
-            if( one_in( 13 ) ) {
-                // They've already passed the roll to avoid rust at
-                // this point, but print a message about it now and
-                // then.
-                //
-                // 13 combat skills.
-                // This means PRED2/PRED3/PRED4 think of hunting on
-                // average every 8/4/3 hours, enough for immersion
-                // without becoming an annoyance.
-                //
-                add_msg_if_player( _( "Your heart races as you recall your most recent hunt." ) );
-                mod_stim( 1 );
-            }
-            continue;
-        }
-
-        const int rust_resist = enchantment_cache->modify_value( enchant_vals::mod::SKILL_RUST_RESIST, 0 );
-        if( skill_level_obj.rust( rust_resist, mutation_value( "skill_rust_multiplier" ) ) ) {
-            mod_power_level( -bio_memory->power_trigger );
-        }
-    }
-}
-
 int Character::focus_equilibrium_fatigue_cap( int equilibrium ) const
 {
     if( get_fatigue() >= fatigue_levels::MASSIVE_FATIGUE && equilibrium > 20 ) {
@@ -6477,7 +6443,6 @@ mutation_value_map = {
     { "overmap_sight", calc_mutation_value_additive<&mutation_branch::overmap_sight> },
     { "overmap_multiplier", calc_mutation_value_multiplicative<&mutation_branch::overmap_multiplier> },
     { "reading_speed_multiplier", calc_mutation_value_multiplicative<&mutation_branch::reading_speed_multiplier> },
-    { "skill_rust_multiplier", calc_mutation_value_multiplicative<&mutation_branch::skill_rust_multiplier> },
     { "crafting_speed_multiplier", calc_mutation_value_multiplicative<&mutation_branch::crafting_speed_multiplier> },
     { "obtain_cost_multiplier", calc_mutation_value_multiplicative<&mutation_branch::obtain_cost_multiplier> },
     { "stomach_size_multiplier", calc_mutation_value_multiplicative<&mutation_branch::stomach_size_multiplier> },

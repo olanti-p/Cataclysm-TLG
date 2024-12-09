@@ -1218,14 +1218,7 @@
     "trigger_cost": "25 J",
     "time": "1 s",
     "enchantments": [
-      {
-        "condition": "ACTIVE",
-        "values": [
-          { "value": "READING_EXP", "add": 2 },
-          { "value": "SKILL_RUST_RESIST", "add": 20 },
-          { "value": "LEARNING_FOCUS", "add": 10 }
-        ]
-      }
+      { "condition": "ACTIVE", "values": [ { "value": "READING_EXP", "add": 2 }, { "value": "LEARNING_FOCUS", "add": 10 } ] }
     ]
   },
   {

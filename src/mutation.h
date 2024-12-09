@@ -294,9 +294,6 @@ struct mutation_branch {
         // Multiplier for reading speed, defaulting to 1.
         std::optional<float> reading_speed_multiplier = std::nullopt;
 
-        // Multiplier for skill rust delay, defaulting to 1.
-        std::optional<float> skill_rust_multiplier = std::nullopt;
-
         // Multiplier for consume time, defaulting to 1.
         std::optional<float> consume_time_modifier = std::nullopt;
 
