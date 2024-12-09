@@ -525,9 +525,9 @@ CXXFLAGS += $(WARNINGS) $(DEBUG) $(DEBUGSYMS) $(PROFILE) $(OTHERS)
 TOOL_CXXFLAGS = -DCATA_IN_TOOL
 
 BINDIST_EXTRAS += README.md data doc LICENSE.txt LICENSE-OFL-Terminus-Font.txt VERSION.txt $(JSON_FORMATTER_BIN)
-BINDIST    = $(BUILD_PREFIX)cataclysmdda-$(VERSION).tar.gz
-W32BINDIST = $(BUILD_PREFIX)cataclysmdda-$(VERSION).zip
-BINDIST_CMD    = tar --transform=s@^$(BINDIST_DIR)@cataclysmdda-$(VERSION)@ -czvf $(BINDIST) $(BINDIST_DIR)
+BINDIST    = $(BUILD_PREFIX)cataclysmtlg-$(VERSION).tar.gz
+W32BINDIST = $(BUILD_PREFIX)cataclysmtlg-$(VERSION).zip
+BINDIST_CMD    = tar --transform=s@^$(BINDIST_DIR)@cataclysmtlg-$(VERSION)@ -czvf $(BINDIST) $(BINDIST_DIR)
 W32BINDIST_CMD = cd $(BINDIST_DIR) && zip -r ../$(W32BINDIST) * && cd $(BUILD_DIR)
 
 
@@ -606,7 +606,7 @@ ifeq ($(NATIVE), osx)
   endif
   TARGETSYSTEM=LINUX
   ifneq ($(OS), Linux)
-    BINDIST_CMD = tar -s"@^$(BINDIST_DIR)@cataclysmdda-$(VERSION)@" -czvf $(BINDIST) $(BINDIST_DIR)
+    BINDIST_CMD = tar -s"@^$(BINDIST_DIR)@cataclysmtlg-$(VERSION)@" -czvf $(BINDIST) $(BINDIST_DIR)
   endif
 endif
 
@@ -1122,7 +1122,7 @@ clean: clean-tests clean-object_creator clean-pch clean-lang
 	rm -rf *$(TARGET_NAME) *$(TILES_TARGET_NAME)
 	rm -rf *$(TILES_TARGET_NAME).exe *$(TARGET_NAME).exe *$(TARGET_NAME).a
 	rm -rf *obj *objwin
-	rm -rf *$(BINDIST_DIR) *cataclysmdda-*.tar.gz *cataclysmdda-*.zip
+	rm -rf *$(BINDIST_DIR) *cataclysmtlg-*.tar.gz *cataclysmtlg-*.zip
 	rm -f $(SRC_DIR)/version.h $(SRC_DIR)/prefix.h
 	rm -f $(CHKJSON_BIN)
 	rm -f $(TEST_MO)
@@ -1139,7 +1139,7 @@ distclean:
 bindist: $(BINDIST)
 
 ifeq ($(TARGETSYSTEM), LINUX)
-DATA_PREFIX=$(DESTDIR)$(PREFIX)/share/cataclysm-dda/
+DATA_PREFIX=$(DESTDIR)$(PREFIX)/share/cataclysm-tlg/
 BIN_PREFIX=$(DESTDIR)$(PREFIX)/bin
 LOCALE_DIR=$(DESTDIR)$(PREFIX)/share/locale
 SHARE_DIR=$(DESTDIR)$(PREFIX)/share
@@ -1159,7 +1159,7 @@ install: version $(TARGET)
 	cp -R --no-preserve=ownership data/help $(DATA_PREFIX)
 ifeq ($(TILES), 1)
 	cp -R --no-preserve=ownership gfx $(DATA_PREFIX)
-	install -Dm755 -t $(SHARE_DIR)/applications/ data/xdg/org.cataclysmdda.CataclysmDDA.desktop
+	install -Dm644 -t $(SHARE_DIR)/applications/ data/xdg/org.cataclysmdda.CataclysmDDA.desktop
 	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/org.cataclysmdda.CataclysmDDA.appdata.xml
 	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/org.cataclysmdda.CataclysmDDA.svg
 endif
@@ -1174,7 +1174,7 @@ endif
 endif
 
 ifeq ($(TARGETSYSTEM), CYGWIN)
-DATA_PREFIX=$(DESTDIR)$(PREFIX)/share/cataclysm-dda/
+DATA_PREFIX=$(DESTDIR)$(PREFIX)/share/cataclysm-tlg/
 BIN_PREFIX=$(DESTDIR)$(PREFIX)/bin
 LOCALE_DIR=$(DESTDIR)$(PREFIX)/share/locale
 SHARE_DIR=$(DESTDIR)$(PREFIX)/share
@@ -1288,12 +1288,12 @@ ifdef OSXCROSS
 	cp build-data/osx/DS_Store Cataclysm/.DS_Store
 	cp build-data/osx/dmgback.png Cataclysm/.background.png
 	ln -s /Applications Cataclysm/Applications
-	genisoimage -quiet -D -V "Cataclysm DDA" -no-pad -r -apple -o Cataclysm-uncompressed.dmg Cataclysm/
+	genisoimage -quiet -D -V "Cataclysm TLG" -no-pad -r -apple -o Cataclysm-uncompressed.dmg Cataclysm/
 	dmg dmg Cataclysm-uncompressed.dmg Cataclysm.dmg
 	rm Cataclysm-uncompressed.dmg
 else
 	plutil -convert binary1 Cataclysm.app/Contents/Info.plist
-	dmgbuild -s build-data/osx/dmgsettings.py "Cataclysm DDA" Cataclysm.dmg
+	dmgbuild -s build-data/osx/dmgsettings.py "Cataclysm TLG" Cataclysm.dmg
 endif
 
 endif  # ifeq ($(NATIVE), osx)
