@@ -536,29 +536,6 @@
     ]
   },
   {
-    "result": "boots_survivor_xl",
-    "type": "recipe",
-    "copy-from": "boots_survivor",
-    "difficulty": 7,
-    "skills_required": [ "fabrication", 5 ],
-    "time": "45 h",
-    "using": [ [ "tailoring_kevlar_fabric", 27 ], [ "fastener_small", 10 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_leatherworking_basic" },
-      { "proficiency": "prof_leatherworking" },
-      { "proficiency": "prof_cobbling" },
-      { "proficiency": "prof_closures" },
-      { "proficiency": "prof_closures_waterproofing" },
-      { "proficiency": "prof_polymerworking" }
-    ],
-    "components": [
-      [ [ "filament_durable", 100, "LIST" ] ],
-      [ [ "thread_kevlar", 18 ] ],
-      [ [ "sheet_metal_small", 4 ] ],
-      [ [ "xl_boots", 1 ] ]
-    ]
-  },
-  {
     "result": "clogs",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",

@@ -149,15 +149,6 @@
     "components": [ [ [ "sheet_lycra_patchwork", 6 ] ] ]
   },
   {
-    "result": "coat_faux_fur",
-    "type": "uncraft",
-    "activity_level": "LIGHT_EXERCISE",
-    "skill_used": "tailor",
-    "difficulty": 1,
-    "time": "20 m",
-    "components": [ [ [ "sheet_faux_fur_patchwork", 10 ] ], [ [ "zipper_long_plastic", 1 ] ] ]
-  },
-  {
     "result": "sleeveless_longcoat_faux_fur",
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
@@ -165,6 +156,24 @@
     "difficulty": 1,
     "time": "20 m",
     "components": [ [ [ "sheet_faux_fur_patchwork", 6 ] ], [ [ "zipper_long_plastic", 1 ] ] ]
+  },
+  {
+    "result": "sleeveless_longcoat_faux_fur_xs",
+    "type": "uncraft",
+    "activity_level": "LIGHT_EXERCISE",
+    "skill_used": "tailor",
+    "difficulty": 1,
+    "time": "20 m",
+    "components": [ [ [ "sheet_faux_fur_patchwork", 3 ] ], [ [ "zipper_long_plastic", 1 ] ] ]
+  },
+  {
+    "result": "sleeveless_longcoat_faux_fur_xl",
+    "type": "uncraft",
+    "activity_level": "LIGHT_EXERCISE",
+    "skill_used": "tailor",
+    "difficulty": 1,
+    "time": "20 m",
+    "components": [ [ [ "sheet_faux_fur_patchwork", 8 ] ], [ [ "zipper_long_plastic", 1 ] ] ]
   },
   {
     "result": "under_armor",
