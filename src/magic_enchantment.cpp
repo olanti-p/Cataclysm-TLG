@@ -98,7 +98,6 @@ namespace io
             case enchant_vals::mod::MOD_HEALTH: return "MOD_HEALTH";
             case enchant_vals::mod::MOD_HEALTH_CAP: return "MOD_HEALTH_CAP";
             case enchant_vals::mod::READING_EXP: return "READING_EXP";
-            case enchant_vals::mod::SKILL_RUST_RESIST: return "SKILL_RUST_RESIST";
             case enchant_vals::mod::OVERMAP_SIGHT: return "OVERMAP_SIGHT";
             case enchant_vals::mod::READING_SPEED_MULTIPLIER: return "READING_SPEED_MULTIPLIER";
             case enchant_vals::mod::KCAL: return "KCAL";

@@ -75,7 +75,6 @@ enum class mod : int {
     MOD_HEALTH,
     MOD_HEALTH_CAP,
     READING_EXP,
-    SKILL_RUST_RESIST,
     READING_SPEED_MULTIPLIER,
     OVERMAP_SIGHT,
     KCAL,

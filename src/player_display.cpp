@@ -914,7 +914,7 @@ static void draw_skills_info( const catacurses::window &w_info, const Character 
         }
         float learning_bonus = 100.0f * std::max( ( 1.0f + you.get_int() / 40.0f ) - 0.1f *
                                level.exercise() / level.knowledgeExperience(), 1.0f );
-        if( level.isRusty() ) {
+        if( level.knowledgeLevel() > level.level() ) {
             info_text = string_format( _( "%s\n\nPractical level: %d (%d%%) " ), info_text,
                                        level.level(), level.exercise() );
             if( level.knowledgeLevel() > level.level() ) {
