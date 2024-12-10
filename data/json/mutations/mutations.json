@@ -6150,7 +6150,7 @@
     "type": "mutation",
     "id": "SMALL_NATURAL",
     "flags": [ "SMALL" ],
-    "name": { "str": "Small" },
+    "name": { "str": "Little" },
     "points": 0,
     "visibility": 4,
     "mixed_effect": true,
@@ -6162,7 +6162,7 @@
     "enchantments": [
       {
         "values": [
-          { "value": "MAX_HP", "multiply": -0.05 },
+          { "value": "MAX_HP", "multiply": -0.15 },
           { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
           { "value": "CARRY_WEIGHT", "multiply": -0.2 }
         ]
@@ -6173,7 +6173,7 @@
     "type": "mutation",
     "id": "SMALL",
     "flags": [ "SMALL" ],
-    "name": { "str": "Little" },
+    "name": { "str": "Small" },
     "points": 0,
     "visibility": 5,
     "mixed_effect": true,
@@ -6185,7 +6185,7 @@
       {
         "values": [
           { "value": "BONUS_DODGE", "add": 1 },
-          { "value": "MAX_HP", "multiply": -0.05 },
+          { "value": "MAX_HP", "multiply": -0.15 },
           { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.6 },
           { "value": "CARRY_WEIGHT", "multiply": -0.2 }
         ]
