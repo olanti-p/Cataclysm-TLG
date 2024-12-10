@@ -1002,7 +1002,7 @@
     "category": [ "MOUSE", "LUPINE" ],
     "starting_trait": true,
     "active": true,
-    "enchantments": [ { "values": [ { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": 1 } ] } ]
+    "enchantments": [ { "values": [ { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": 0.1 } ] } ]
   },
   {
     "type": "mutation",
@@ -6163,7 +6163,7 @@
       {
         "values": [
           { "value": "MAX_HP", "multiply": -0.15 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.25 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
           { "value": "CARRY_WEIGHT", "multiply": -0.25 }
         ]
       }
@@ -6187,7 +6187,7 @@
         "values": [
           { "value": "BONUS_DODGE", "add": 1 },
           { "value": "MAX_HP", "multiply": -0.15 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.2 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
           { "value": "CARRY_WEIGHT", "multiply": -0.25 }
         ]
       }
@@ -6211,7 +6211,7 @@
         "values": [
           { "value": "BONUS_DODGE", "add": 2 },
           { "value": "MAX_HP", "multiply": -0.3 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.75 },
           { "value": "CARRY_WEIGHT", "multiply": -0.5 }
         ]
       }
@@ -6225,7 +6225,7 @@
     "name": { "str": "Unassuming" },
     "points": 3,
     "mixed_effect": true,
-    "description": "You've mastered your tiny form!  Item encumbrance and carry weight penalties are reduced, and you've learned to use your increased nimbleness to offset your reduced capacity to absorb damage.",
+    "description": "You're still tiny, but your anatomy has adjusted to make more efficient use of your size.  You feel a little tougher, and you can eat and carry more than before.",
     "types": [ "SIZE" ],
     "prereqs": [ "SMALL2" ],
     "purifiable": false,
@@ -6237,7 +6237,7 @@
         "values": [
           { "value": "BONUS_DODGE", "add": 2 },
           { "value": "MAX_HP", "multiply": -0.25 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.7 },
           { "value": "CARRY_WEIGHT", "multiply": -0.3 }
         ]
       }
