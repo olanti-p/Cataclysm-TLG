@@ -6150,7 +6150,7 @@
     "type": "mutation",
     "id": "SMALL_NATURAL",
     "flags": [ "SMALL" ],
-    "name": { "str": "Small" },
+    "name": { "str": "Little" },
     "points": 0,
     "visibility": 4,
     "mixed_effect": true,
@@ -6162,9 +6162,9 @@
     "enchantments": [
       {
         "values": [
-          { "value": "MAX_HP", "multiply": -0.05 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
-          { "value": "CARRY_WEIGHT", "multiply": -0.2 }
+          { "value": "MAX_HP", "multiply": -0.15 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.25 },
+          { "value": "CARRY_WEIGHT", "multiply": -0.25 }
         ]
       }
     ]
@@ -6173,7 +6173,7 @@
     "type": "mutation",
     "id": "SMALL",
     "flags": [ "SMALL" ],
-    "name": { "str": "Little" },
+    "name": { "str": "Small" },
     "points": 0,
     "visibility": 5,
     "mixed_effect": true,
@@ -6181,13 +6181,14 @@
     "types": [ "SIZE" ],
     "changes_to": [ "SMALL2" ],
     "category": [ "MOUSE", "RABBIT" ],
+    "//": "Small is slightly less punishing than Little by design, as it's a mutation and not a starting trait.",
     "enchantments": [
       {
         "values": [
           { "value": "BONUS_DODGE", "add": 1 },
-          { "value": "MAX_HP", "multiply": -0.05 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.6 },
-          { "value": "CARRY_WEIGHT", "multiply": -0.2 }
+          { "value": "MAX_HP", "multiply": -0.15 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.2 },
+          { "value": "CARRY_WEIGHT", "multiply": -0.25 }
         ]
       }
     ]
