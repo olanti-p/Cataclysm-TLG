@@ -2794,7 +2794,7 @@
     "types": [ "SKIN" ],
     "prereqs": [ "LIGHTFUR" ],
     "leads_to": [ "LYNX_FUR" ],
-    "category": [ "BEAST", "FELINE", "MOUSE" ],
+    "category": [ "BEAST", "FELINE" ],
     "integrated_armor": [ "integrated_feline_fur" ]
   },
   {
@@ -6181,7 +6181,6 @@
     "types": [ "SIZE" ],
     "changes_to": [ "SMALL2" ],
     "category": [ "MOUSE", "RABBIT" ],
-    "//": "Small is slightly less punishing than Little by design, as it's a mutation and not a starting trait.",
     "enchantments": [
       {
         "values": [
