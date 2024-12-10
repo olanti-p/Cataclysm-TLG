@@ -6163,8 +6163,8 @@
       {
         "values": [
           { "value": "MAX_HP", "multiply": -0.15 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
-          { "value": "CARRY_WEIGHT", "multiply": -0.2 }
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.25 },
+          { "value": "CARRY_WEIGHT", "multiply": -0.25 }
         ]
       }
     ]
@@ -6181,13 +6181,14 @@
     "types": [ "SIZE" ],
     "changes_to": [ "SMALL2" ],
     "category": [ "MOUSE", "RABBIT" ],
+    "//": "Small is slightly less punishing than Little by design, as it's a mutation and not a starting trait.",
     "enchantments": [
       {
         "values": [
           { "value": "BONUS_DODGE", "add": 1 },
           { "value": "MAX_HP", "multiply": -0.15 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.6 },
-          { "value": "CARRY_WEIGHT", "multiply": -0.2 }
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.2 },
+          { "value": "CARRY_WEIGHT", "multiply": -0.25 }
         ]
       }
     ]
