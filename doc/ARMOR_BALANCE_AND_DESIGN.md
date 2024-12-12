@@ -38,30 +38,49 @@ Environmental attacks are those from non-physical sources that are neither liqui
 ### Warmth
 Is a particularly arcane system helping to insulate the character keeping them warm. The more warm your armor the more you'll sweat and the hotter you'll be.
 
-### Encumbrance
-Encumbrance applies to limbs and gives a number of effects based on the limb. Hands effect manipulation, torso effects chance to hit. It's an overall measure of how heavy and hard to move in an armor is.
+### Material Thickness
+Material thickness is how most protection values are automatically derived. This number is measured in millimeters and should roughly reflect the average real-world thickness of such an item, assuming it is dry and gently pressed flat against the body. This is especially important for materials like fur or wool which can have nap or hairs that could artificially inflate its thickness - most of that animal hair is just empty air if it's standing up, and empty air does not protect against attacks!
 
-Armor can conflict with other armor, this is to simulate things being uncomfortable or awkwardly pressing against each other. If this happens, the encumbrance of each piece of armor other than the most encumbering is added to your character. If any piece has an encumbrance less than 2 their penalty is 2.
+Example thickness values for typical items:
+* Live human skin: 0.5mm to 4mm. Skin is typically 1.5mm thick across the palms and soles, getting up to 4mm across the back and shoulders. It is thinnest on the eyelids and other obviously sensitive areas. This thickness includes the dermis and epidermis but not the hypodermis (fascia, subcutaneous fat, etc). While skin does protect the human body, human skin is not treated by the game as integrated armor - all characters and monsters are assumed to have at least a human skin level of natural protection. It is listed here only as an example.
+* Tanned human leather: 0.5 to 2mm. Human skin does not make particularly good leather. Historically it has mostly been used for scientific purposes or for macabre decoration (ie bookbinding).
+* Live cow skin, including fur: 1-10mm. Thickest across the back and shoulders, thinnest along the belly. The fur contributes about 1mm
+* Cow leather: 0.5 to 4mm, another 1mm if the fur is still on.
+* Moose or bear leather: 4 to 6mm. The thickest natural hide available in the region. It would have another 1.5mm with the fur.
+* Feathers: 1 to 2mm, assuming we mean a coat of feathers as a bird would have, without the underlying skin. In reality the thickness would seem much higher due to the loosely stacking structure of feathers, but most of this is air. In terms of solid matter, 1-2mm is appropriate. Large birds such as ostriches tend to have skin that is about 0.5 to 4mm thick.
+* Scales: Not counting the underlying skin, scales add between 1mm and 7mm of thickness, depending on the body part and type of scales.
+* Epicuticle, phelloderm, etc.: 0.5 to 4mm. New tissue material largely replaces the dermis and epidermis, and in these cases its thickness should be distributed the same way.
+* Small animal skin, no fur: 0.5 to 2mm. This includes rabbits, squirrels, and chickens.
+* Small animal leather, no fur: 0.5 to 1mm. This includes rabbits, squirrels, and chickens.
+* T-shirt, panties, boxers, etc: 0.1 to 0.2mm.
+* Padded bra: 2mm. Note that most bras aren't padded.
+* Denim: 0.7mm to 1.2mm. Typical jeans would be on the lower end, with things like 18oz jeans or jackets on the upper end. Skinny jeans are made of a denim-lycra blend and are much thinner.
+* Leather (fashion): 1mm for items like the leather jacket or leather pants.
+* Leather (work/road gear): 1.5mm for protective items like the motorcycle jacket to 3mm for high quality work boots.
+* Leather (actual armor): 4mm for super heavy items like a leather cuirass. This is pushing the limits of what is wearable. Places that don't need to be flexible like the forearms, can go a bit higher.
+* Chitin, giant arthropod: 2-5mm for typical stuff, up to 15mm for very giant monsters. 2-5mm is not actually all that much thicker than the shell of a good-sized lobster or crab IRL. This is partly because of the square-cube law. As an animal becomes larger, it becomes dramatically heavier. Structures like endoskeletons are consequentially under much more stress, and their thickness would have trouble scaling up without massively adding to this weight and immobilizing the creature. Our biggest bugs have pseudo-endoskeletons, but 15mm would still be the absolute limit even for something bigger than a cow.
+* Fur, as in a fur coat: 2-3mm.
+* Vinyl raincoat: Up to 0.5mm.
+* Windbreaker: 0.2mm.
+* Pantyhose: 0.01mm.
+* Leggings: 0.1mm. Leggings in this game refer to the stretchy "pants" that can be worn for exercise or fashion, usually by women.
+* Work coveralls: 0.6mm. These are durable nylon workwear.
 
-For example if you were wearing 2 tank tops, at 1 encumbrance each your total torso encumbrance would be 1 + 1 + 2 = 4,  1 for each tank top and 2 for the conflict (since it will be at minimum 2).
+## Armor-specific values
+"Armor" in this case can refer to any worn item, including accessories, gadgets, and clothing.
 
-## What is necessary
-This is a basic overview of things armors basically **need** to have to work as expected, or at all.  Sometimes an advanced feature will circumvent or overwrite the things provided here.
-
-All armors need:
-* Everything a normal item does. I'm not explaining this
 * ```"material"``` array: a list of the materials that make up the item in general.
 * ```"armor"``` array: this will be described in depth later in **advanced armor definitions**.
 * ```"warmth"``` value, usually between 0 - 50 based on how hot the item is to wear.
 * ```"material_thickness"``` this is measured in mm, this is **the most important value to get right when designing armor**
 
-here is an example armor to look at:
+A simple example:
 ```json
 {
   "id": "dress_shirt",
   "type": "ARMOR",
   "name": { "str": "dress shirt" },
-  "description": "A white button-down shirt with long sleeves.  Looks professional!",
+  "description": "A button-down shirt with long sleeves.",
   "weight": "250 g",
   "volume": "750 ml",
   "price": 1500,
@@ -256,7 +275,7 @@ This is a trick you can do to shorten the amount of work you need. Once you have
 ```
 
 #### Further Reading
-The robofac greaves, mantles, skirts and vambraces use this.
+The robofac greaves, mantles, skirts and vambraces used to use this.
 
 ### Repairs
 #### Explanation
@@ -276,6 +295,7 @@ The leather belt repairs like a leather patch because steel is more difficult to
 It is possible to be more verbose and specific with materials and armor. To do this you can specify an array of materials for each advanced armor definition array. Each material needs at least an id and thickness (in mm) however you can also optionally specify a covered_by_mat which is how much of the armor is covered by the material. that way for example if an armor was steel but had leather straps that only covered 5% of the armor you could represent the straps as well. **At least 1 material on any armor should have 100 proportional coverage**.
 
 #### Example
+Note that the item in this example is an example of "stacked" armor which should occupy more than one layer, such as NORMAL+OUTER.
 ```json
 "armor": [
   {
@@ -290,9 +310,6 @@ It is possible to be more verbose and specific with materials and armor. To do t
   }
 ]
 ```
-
-#### Further Reading
-The Plate armor uses this.
 
 ### Melee, Ranged and Vitals Coverage
 #### Explanation
@@ -455,7 +472,7 @@ Transforming items can also specify a custom destruction message with ```"damage
 ```
 
 #### Further Reading
-The MIGO ablative plates use this to slag off and grow back. As well as all other old school ceramic plates. Easily searchable in the code with "non_functional".
+The mi-go ablative plates use this to slag off and grow back. As well as all other old school ceramic plates. Easily searchable in the code with "non_functional".
 
 ### Actions and Transforms
 #### Explanation
@@ -658,7 +675,7 @@ When you want to add a new item to Cataclysm there are a few things you should p
 ### Balance/Considerations
 
 #### The Golden Rule Of Balance
-The core ideal when making any item but especially armor is that **weight, thickness and materials should be correct** if the item is real it should be exactly as it is in real life, if it is created for cataclysm it should be similar to other true to life armors. It does not matter if you think that your pet project leather armor *should* be better, if a leather jacket is 1.2mm thick and that gives it 4.4 bash protection and you think that is too low **you can not just make it thicker**. Armor should be based off real life thickness values. If after making something true to life it isn't behaving true to life then a discussion about how to solve it can be had. A new material might need to be defined (we have 3 types of Kevlar and 3-4 types of plastic) or perhaps your assumptions / materials are wrong. Any solution however should come with proper research since it will have long reaching effects. The reasoning for this golden rule is it consolidates balancing at the material level making it much easier to research and get info and leads to less favoritism and outliers.
+The core ideal when making any item but especially armor is that **weight, thickness and materials should be correct** if the item is real it should be exactly as it is in real life, if it is created for Cataclysm it should be similar to other true to life armors. It does not matter if you think that your pet project leather armor *should* be better, if a leather jacket is 1.2mm thick and that gives it 4.4 bash protection and you think that is too low, **you can not just make it thicker**. Armor should be based off real life thickness values. If after making something true to life it isn't behaving true to life then a discussion about how to solve it can be had. Materials might need adjusting or a new material might need to be defined (we have 3 types of Kevlar and 3-4 types of plastic) or perhaps your assumptions / materials are wrong. Any solution however should come with proper research since it will have long reaching effects. The reasoning for this golden rule is it consolidates balancing at the material level making it much easier to research and get info and leads to less favoritism and outliers.
 
 #### The Golden Rule Of Design
 Make things as simple as they possibly can be. When a player inspects a t-shirt they shouldn't have to inspect 35 lines of armor data that could be summarized as "basically no protection, keeps you kinda warm". Advanced and dedicated armor can be *very* complicated but try to keep clothing as complex as they need to be to be simulated correctly.
@@ -667,47 +684,73 @@ Make things as simple as they possibly can be. When a player inspects a t-shirt 
 With the above mentioned you should be able to intuit/research sensible materials, thicknesses, flags, and weight.  Your core variables that are more discretionary are warmth, encumbrance, layer and coverage.
 
 #### Layer
-Layer should be based on real world intuit however thickness also matters. The loose rule, erring on the side of generosity is (at least for arms, legs and torso)
-* skintight 1mm or less
-* normal 2mm or less
-* outer no restrictions (within reason obviously)
+Layers are an easy way for things to get weird, as there aren't many of them and you often see things like t-shirts and bras competing for the same slot, when realistically people wear both all the time. This is fine to a degree - competing layers aren't the end of the world when it only amounts to 2 extra encumbrance.
+* Integrated: This is for "items" which are a part of the character's body. It is generally used for mutations, but is sometimes appropriate for bionics. Integrated items should also occupy other layers in cases where they are bulky enough to prevent other items from being worn, such as a gastropod's shell or a bionic arm-blade.
+* Skintight: Usually 1mm or less. These items are intended to be worn under or instead of other clothing, and are probably always soft. You should reasonably be able to wear a ballcap, jeans, gloves, shoes, or a hoodie over most of them.
+* Normal: Usually 2mm or less. These items include non-t-shirts, hoodies, most pants, ballcaps, and beanies. You should reasonably be able to wear an unpadded helmet or a coat over most of them. Glasses should fit here.
+* Outer: Includes cuirasses, helmets, jackets, and coats. Shoes should occupy both the outer and normal layers. Goggles should occupy the outer layer if there's room to wear glasses under them, or both the normal and outer layer if there isn't.
+* Strapped: Includes most bags but also includes things like cloaks and hoods, as well as certain armor pieces that can be draped or tied on over an outfit, such as tassets and aventails.
+
+#### Multi-layer items
+If an item is hard outerwear (such as a helmet) that includes padding, it should probably have both the NORMAL and OUTER flags, as this padding would conflict with items worn beneath it, such as a ballcap. Similarly, if an item is just multiple layered items stacked together into a single piece, such as faraday plate mail, it should not sit on a single layer. Some items include bits that should have individual layer data, such as motorcycle pants, which should have a BELTED and RIGID_LAYER_ONLY flag on their knees due to their integrated kneepads.
 
 #### Warmth
 Warmth should be based on materials, look at armors similar to what you are making and go from there. Also it is worth considering how much of the body is covered.
 
 #### Coverage
-Coverage has a big rule on the core team of **No hard, powerful armors with 100% coverage**. This can be subverted slightly by using covered_by_mat to make it so the armors best protection doesn't cover 100% of the body but limbs need to bend so no part of the body can really have 100% coverage with a hard high protection material. Further any armor that **does** have 100% coverage with great protection from hard materials should either be super sci-fi, or made to order. Super covering protective plate mail was made tailored to a persons body in a way mass manufacture gear isn't.
+Coverage should basically never be 100% across the entire body unless the armor is actually fully enclosed, such as a phase immersion suit. Coverage should only be 100% on any body part in cases where it fully encloses that body part and, without openings or gaps, continues on to cover part or all of the next body part. An example of this would be a boiler suit offering 100% coverage to the lower torso and upper legs. Anywhere there is an opening, even if it does not hang loosely, a glob of acid could slip past or a mace could strike a point which is does not present adequate resistance to stop it. This includes sleeve openings, pant cuffs, jacket collars, the area beneath the rim of a helmet, etc. This means than on all such body parts, coverage should never be higher than 98%.
 
-Something a lot of people don't consider is that an armor with 95% coverage is **4 times better** than an armor with 80% coverage when it comes to protecting against attacks.
+Coverage NEVER includes items which are not part of the item itself. Yes you should probably be wearing a gambeson under your cuirass, but the gambeson handles its own coverage, the imagined presence of one has no bearing on what a metal breastplate by itself can cover. Similarly, arguments about how plate mail was actually impervious to 100% of attacks and you could only defeat someone by inserting a specially made needle through a 1mm eye hole or something are not going to be entertained - people would not have brought spears and swords into battle if they weren't at least somewhat effective, and coverage is a fairly abstract device in order to help us simulate both the effectiveness of armor and the sometimes-effectiveness of weapons.
 
-When balancing coverage try to describe what you would see. Doing multiple armor entries per sub-limb can help with this. "well this covers all the elbows and forearms and has some plastic covering 75% of that". Then give it 100% coverage on the elbow and lower arm sub-limbs with covered by mat plastic at 75. Then the game is smart enough to figure out how much of the overall arm that all is.
+Some loose guidelines:
+Lower Arm 98%: The cuff of a long sleeve has a button or strap to secure it tightly to the wrist specifically to protect it in this way.
+Upper Torso 95%: The long-sleeved shirt has a high collar which can be buttoned up.
+Lower Leg 90%: The pants have fairly wide cuffs.
+Lower Arm 65%: The archer's vambrace does not extend fully to the elbow.
+Head 50% (crown 100%, forehead 100%, ears 50%): The advanced combat helmet is designed to protect the most important parts of a soldier's head without getting in the way, but wasn't intended for melee combat.
+Below 50%: This item is worse than a coin toss, and probably won't seriously be considered as a primary source of protection by anyone but the most desperate players. This is fine if we're just representing something like an eyepatch that isn't really supposed to be armor, but for actual purpose-built armor pieces, anything this low is not going to make an attractive option unless it has something else going for it, like for example it's worn on the strapped layer and doesn't interfere with the character's other gear.
 
+Doing coverage by subparts is the preferable model for going forward, but existing items that don't have subpart data set up can just average their coverage across subparts (adjusting for their relative size!) and make that the encumbrance for the whole body part.
+
+Coverage is just a d100 roll. A piece of armor with 95% coverage is **4 times better** than an armor with 80% coverage when it comes to protecting against attacks. Because each layer is rolled independently, the chances of an individual attack getting past all of a well-equipped character's layers of defense wind up being quite low, which is fine because late-game attacks do a lot of damage and players in melee combat are probably getting hit very frequently.
 
 #### Encumbrance
-This can be very subjective. The main things to keep in mind are.
-1. if something is VARSIZE it's values in game will be halved, balance for that.
-2. the further from your core, the torso, weight is the more encumbering it should be.
-3. the more coverage something has the more encumbering it should be.
-4. joints should be penalized more heavily than other locations.
-5. the heavier something is the more encumbering it should be.
-6. the more uncomfortable and poorly designed something is the more encumbering it should be.
+Encumbrance applies to body parts and affects the limb scores attached to that body part in mostly logical ways. Foot encumbrance reduces footing and move speed, hand encumbrance reduces manipulation, eye encumbrance reduces sight, and so on. Encumbrance is not simply a tradeoff for armor stats, it is meant to represent items which are bulky, unbalanced, uncomfortable, or which get in the way of movement or sensation, and purpose-built items tend to do a lot to try to offset these factors. A good example here is that a solid pair of steel toed treated leather boots should be well below the encumbrance of a simple pair of sandals - the expectation is that the boots would provide better traction, while the sandals would be more likely to trip you up, despite being much lighter and offering practically no protection. A pair of sneakers of course would be less than either.
 
-So you will find lots of
-* negligible encumbrance (< 2) clothing with almost no protection and 90% to 100% coverage
-* low encumbrance (< 5) clothing made of soft materials with just okay protection and 90% to 100% coverage
-* low - medium (< 10) encumbrance modern armor with good protection and low 80% coverage
-* high (> 15) encumbrance traditional armor with good protection and high 95%+ coverage
+Armor can conflict with other armor, this is to simulate things being uncomfortable or awkwardly pressing against each other. If this happens, the encumbrance of each piece of armor other than the most encumbering is added to your character. If any piece has an encumbrance less than 2 their penalty is 2. For example if you were wearing 2 tank tops, at 1 encumbrance each your total torso encumbrance would be 1 + 1 + 2 = 4,  1 for each tank top and 2 for the conflict (since it will be at minimum 2).
 
-Aside from super sci-fi outliers everything should realistically fall into those categories.
+Encumbrance is always going to be a rough estimate. Some people can't stand wearing corsets and feel like they're dying, others wear them every day without issue. The best we can do is try to ballpark it using the following guidelines. When setting values, try to consider what a reasonable full outfit which might incorporate this item would look like (such as plate mail, chain mail, a gambeson, and some underwear), and ensure that said outfit sits within the expected overall encumbrance values below.
 
-When doing encumbrance per volume you should use volume_encumber_modifier. Some good modifiers to use are:
+Overall encumbrance values for an entire outfit (per body part):
+* 0-9: Like wearing nothing at all.
+* 10-14: Minor but totally acceptable hindrance.
+* 15-19: Typical for everyday wear, especially when outdoors.
+* 20-24: The outfit is fairly bulky or restrictive.
+* 25-30: Starting to become intolerable, equivalent to wearing a gas mask.
+* 31-35: The upper bounds of tolerability in combat. About where you'd expect a three layer suit of armor (IE plate+chain+gambeson) to land.
+* 36-40: The point at which encumbrance values start to make combat unviable. Full fur outfit and an overloaded pack.
+* 41+: The body part is restricted to a debilitating degree. No one would wear this much stuff if they didn't have to.
+* 51+: Wearing way too much, or wearing items which make normal life impossible. Mittens, a space suit, stiletto heeled boots that don't fit, etc.
+
+Example encumbrance values for individual items, assuming they fit and their pockets are empty unless otherwise mentioned:
+* 0: Only those items which are actually completely inconsequential. Badge, bra, boxers, earring, body paint.
+* 1-3: Items which are basically inconsequential. Socks, t-shirt, long-sleeved shirt, watch, fanny pack (empty), kerchief.
+* 4-6: Lightweight clothing. Glove liners, fingerless gloves, bandana, cargo pants/shorts (empty), sweater, ski jacket, ballcap, jeans, leather jacket/longcoat/pants/shorts, sneakers, bandana, glasses.
+* 7-13: Midweight clothing or light to medium armor. Survivor suits (all), down jacket, fur coat, boots, leather riding jacket, armored leather jacket, chainmail, plate cuirass, concealable ballistic vest, leather gauntlets, army helmet, survivor suit, leather corset (loose), dust mask, wetsuit.
+* 14-20: Heavy or restrictive gear. Turnout coat, heavy plate carrier (with inserts), tire armor, leather corset, rubber boots, hazmat suits, tanker helm, sharksuit, filter mask.
+* 21-26: Stuff that sucks to wear but doesn't make activity impossible on its own. Gas mask, goggles, motorcycle helmet, tire armor, a very full backpack.
+* 27-33: Multi-layered gear or pieces that severely restrict movement. Faraday armor, stripper heels, clown shoes, bite suit.
+* 34-40: You had better have a damn good reason for wearing this. Phase immersion suit (both on and off), entry suit, mascot suit, mittens, swim fins on dry land, snow goggles (traditional).
+* 50+: Normal function is impossible in these items. Welding goggles/mask, sleeping bag, body bag, straitjacket, handcuffs.
+
+When doing encumbrance per volume, you should use volume_encumber_modifier. Some good modifiers to use are:
 * .4+ poorly designed/improvised storage
 * .4 stuff not well fixed to you and hanging like rifles on slings
 * .3 reasonable value for armor and strapped pouches designed for combat, but accessible.
 * .2 very well affixed pouches (should have a higher base encumbrance on the item to compensate)
 * 0 all ablative pockets (their encumbrance is added from their armor directly)
 
-also keep in mind that, for example, if something covers the legs and the torso you can split that ".3" over the legs and torso so the torso becomes ".15" and the legs are each ".1". This probably should never be perfect unless it is an excellently designed storage system.
+Keep in mind that, for example, if something covers the legs and the torso you can split that ".3" over the legs and torso so the torso becomes ".15" and the legs are each ".1". This probably should never be perfect unless it is an excellently designed storage system.
 
 Also the above values assume things being focused around the torso, shoulders, hips and thighs for the same reason mentioned above the further out from your center something is the worse it should be.
 
