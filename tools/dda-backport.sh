@@ -23,7 +23,11 @@ set -- "${POSITIONAL[@]}"
 if [ -n "$1" ]; then
   PULLREQUEST_ID="$1"
 else
-  echo "$0 [--raw-apply] <Pull Request ID>"
+  echo "Usage: $0 [--raw-apply] <Pull Request ID>"
+  echo "Backport patches to Cataclysm: TLG by specifying a pull request ID."
+  echo "See <https://github.com/Cataclysm-TLG/Cataclysm-TLG/blob/master/doc/BACKPORTING.md> for more usage hints."
+  echo
+  echo " --raw-apply: Skips creating a branch and some other checks, enabling the application of multiple patches to a single branch."
   exit 1
 fi
 
