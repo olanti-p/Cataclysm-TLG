@@ -359,19 +359,19 @@
     "id": "leggings",
     "type": "ARMOR",
     "name": { "str": "leggings", "str_pl": "pairs of leggings" },
-    "description": "Skin-tight nylon leggings, sometimes used when exercising, that keep your legs nice and warm.",
+    "description": "Stretchy legwear made of skin-tight spandex, sometimes used when exercising.  Some say they're pants, some say they're not.",
     "weight": "155 g",
     "volume": "500 ml",
     "price": 1000,
     "price_postapoc": 50,
     "material": [ "lycra" ],
     "symbol": "[",
-    "looks_like": "leg_warmers",
+    "looks_like": "pants_leather",
     "color": "dark_gray",
     "warmth": 20,
-    "material_thickness": 0.1,
+    "material_thickness": 0.2,
     "flags": [ "VARSIZE", "SKINTIGHT", "WATER_FRIENDLY" ],
-    "armor": [ { "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
+    "armor": [ { "coverage": 98, "covers": [ "leg_l", "leg_r" ] } ]
   },
   {
     "id": "loincloth",
@@ -700,7 +700,6 @@
     ],
     "warmth": 80,
     "material_thickness": 1,
-    "valid_mods": [ "steel_padded" ],
     "environmental_protection": 3,
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [ { "encumbrance": [ 16, 20 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
@@ -746,7 +745,6 @@
     ],
     "warmth": 25,
     "material_thickness": 0.75,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE" ],
     "armor": [ { "encumbrance": [ 15, 17 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
@@ -1257,7 +1255,6 @@
     ],
     "warmth": 50,
     "material_thickness": 0.5,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "POCKETS", "WATERPROOF" ],
     "armor": [ { "encumbrance": [ 11, 22 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
