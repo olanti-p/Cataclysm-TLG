@@ -27,7 +27,6 @@
     ],
     "warmth": 20,
     "material_thickness": 6,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "STURDY", "OUTER" ],
     "melee_damage": { "bash": 2 }
   },
@@ -146,7 +145,6 @@
     ],
     "warmth": 45,
     "material_thickness": 4,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER" ],
     "melee_damage": { "bash": 2 }
   },
@@ -254,7 +252,6 @@
     ],
     "warmth": 25,
     "material_thickness": 4,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "STURDY", "OUTER" ],
     "melee_damage": { "bash": 2 }
   },
@@ -384,71 +381,78 @@
     "warmth": 20,
     "longest_side": "60 cm",
     "material_thickness": 2,
-    "flags": [ "OUTER", "NORMAL", "STURDY", "GROUNDING", "ONLY_ONE", "BLOCK_WHILE_WORN" ],
+    "flags": [ "STURDY", "GROUNDING", "ONLY_ONE", "BLOCK_WHILE_WORN" ],
     "armor": [
       {
         "material": [
           { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "head" ],
         "coverage": 100,
         "encumbrance": 18,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
-        "material": [ { "type": "plastic", "covered_by_mat": 100, "thickness": 2 } ],
-        "covers": [ "eyes", "mouth" ],
-        "coverage": 95,
-        "encumbrance": 12,
-        "rigid_layer_only": true
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "eyes" ],
+        "coverage": 100,
+        "encumbrance": 10,
+        "layers": [ "BELTED" ]
+      },
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "mouth" ],
+        "coverage": 100,
+        "encumbrance": 5,
+        "layers": [ "BELTED" ]
       },
       {
         "material": [
           { "type": "lc_steel", "covered_by_mat": 97, "thickness": 1.3 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": 26
+        "encumbrance": 26,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
           { "type": "lc_steel", "covered_by_mat": 70, "thickness": 1.3 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 2 }
         ],
         "encumbrance": 7,
         "coverage": 100,
         "covers": [ "hand_l", "hand_r" ],
-        "specifically_covers": [ "hand_back_l", "hand_back_r", "hand_wrist_l", "hand_wrist_r" ]
-      },
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 1.3 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
-        ],
-        "encumbrance": 7,
-        "coverage": 100,
-        "covers": [ "hand_l", "hand_r" ],
-        "specifically_covers": [ "hand_palm_l", "hand_palm_r" ]
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
           { "type": "lc_steel", "covered_by_mat": 85, "thickness": 1.3 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "arm_l", "arm_r" ],
-        "coverage": 95,
-        "encumbrance": 20
+        "coverage": 100,
+        "encumbrance": 20,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
           { "type": "lc_steel", "covered_by_mat": 85, "thickness": 1.3 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 100,
-        "encumbrance": 20
+        "encumbrance": 20,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
@@ -468,13 +472,15 @@
         ],
         "coverage": 100,
         "encumbrance": 26,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 6 } ],
-        "coverage": 100
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
       }
     ],
     "melee_damage": { "bash": 8 }
@@ -483,7 +489,7 @@
     "id": "platemail_suit_faraday_xl",
     "type": "ARMOR",
     "name": { "str": "XL Faraday platemail" },
-    "copy-from": "platemail_suit",
+    "copy-from": "platemail_suit_faraday",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
   },
@@ -491,7 +497,7 @@
     "id": "platemail_suit_faraday_xs",
     "type": "ARMOR",
     "name": { "str": "XS Faraday platemail" },
-    "copy-from": "platemail_suit",
+    "copy-from": "platemail_suit_faraday",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE" ] }
   },
@@ -1022,71 +1028,90 @@
       {
         "material": [
           { "type": "lc_steel_chain", "covered_by_mat": 95, "thickness": 1.2 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 2 }
         ],
         "covers": [ "hand_l", "hand_r" ],
         "coverage": 100,
         "encumbrance": 35,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "lc_steel_chain", "covered_by_mat": 97, "thickness": 1.2 },
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "head" ],
         "coverage": 100,
         "encumbrance": 6,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
-        "material": [ { "type": "plastic", "covered_by_mat": 100, "thickness": 2 } ],
-        "covers": [ "eyes", "mouth" ],
-        "coverage": 95,
-        "encumbrance": 12,
-        "rigid_layer_only": true
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "eyes" ],
+        "coverage": 100,
+        "encumbrance": 10,
+        "layers": [ "BELTED" ]
+      },
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "mouth" ],
+        "coverage": 100,
+        "encumbrance": 5,
+        "layers": [ "BELTED" ]
       },
       {
         "material": [
           { "type": "lc_steel_chain", "covered_by_mat": 95, "thickness": 1.2 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 100,
         "encumbrance": 11,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
           { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 100,
         "encumbrance": 11,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 }
+          { "type": "lc_steel_chain", "covered_by_mat": 95, "thickness": 1.2 },
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "arm_r", "arm_l" ],
-        "coverage": 95,
+        "coverage": 100,
         "encumbrance": 22,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
           { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 100,
         "encumbrance": 28,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
@@ -1097,23 +1122,26 @@
         "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
         "coverage": 100,
         "encumbrance": 6,
-        "rigid_layer_only": true
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
         "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 3 } ],
         "encumbrance": 28,
-        "coverage": 100
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 6 } ],
-        "coverage": 100
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
       }
     ],
-    "flags": [ "GROUNDING", "OUTER" ]
+    "flags": [ "GROUNDING" ]
   },
   {
     "id": "chainmail_suit_faraday_xl",
@@ -1136,7 +1164,7 @@
     "repairs_like": "bunker_coat",
     "type": "ARMOR",
     "name": { "str": "cleansuit" },
-    "description": "A simple hazardous materials handling suit, complete with bulky gloves and overboots.  Though not designed to stand up to combat, it should protect from chemicals, radiation, and other environmental hazards.",
+    "description": "A hooded boiler suit, complete with bulky gloves and boots, that covers everything but the face in impermeable rubber fabric.  Though not designed to stand up to combat, it should protect from chemicals, radiation, and other environmental hazards.  A tag advises the user to wear an activated gas mask while working in these conditions.",
     "weight": "2100 g",
     "volume": "2500 ml",
     "price": 7700,
@@ -1145,16 +1173,76 @@
     "symbol": "[",
     "looks_like": "jumpsuit",
     "color": "white",
-    "warmth": 10,
+    "warmth": 15,
     "longest_side": "12 cm",
     "material_thickness": 1,
     "environmental_protection": 10,
-    "flags": [ "VARSIZE", "WATERPROOF", "HOOD", "RAINPROOF", "RAD_RESIST", "OUTER" ],
+    "flags": [ "VARSIZE", "WATERPROOF", "RAD_RESIST" ],
     "armor": [
       {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 2 } ],
+        "covers": [ "hand_l", "hand_r" ],
+        "coverage": 100,
+        "encumbrance": 25,
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 } ],
+        "covers": [ "head" ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ],
+        "coverage": 100,
+        "encumbrance": 0
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 } ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 } ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
+        "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 3 } ],
         "encumbrance": 25,
         "coverage": 100,
-        "covers": [ "leg_l", "leg_r", "foot_l", "foot_r", "head", "torso", "arm_l", "arm_r" ]
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 6 } ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1162,7 +1250,7 @@
     "id": "entry_suit",
     "type": "ARMOR",
     "name": { "str": "entry suit" },
-    "description": "A flame-resistant whole-body garment worn by firefighters as protection against extreme heat.  It requires a separate gas mask for full protection against smoke.",
+    "description": "An aluminized whole-body garment worn by firefighters and foundry workers as protection against flames.",
     "weight": "2900 g",
     "volume": "6 L",
     "price": 240500,
@@ -1173,14 +1261,121 @@
     "color": "light_gray",
     "warmth": 30,
     "longest_side": "30 cm",
-    "material_thickness": 5,
     "environmental_protection": 20,
-    "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "GAS_PROOF", "STURDY", "OUTER" ],
+    "//": "This should require a separate SCBA system for breathing smoke/900 degree air, but currently doesn't because of how enviro is coded.",
+    "//1": "todo: Duplicate how gasmasks work but make them run on air tanks. Make that a requirement for breathing in hot air.",
+    "flags": [ "VARSIZE", "WATERPROOF", "GAS_PROOF", "STURDY", "OUTER", "SUN_GLASSES" ],
+    "qualities": [ [ "GLARE", 1 ] ],
     "armor": [
       {
-        "encumbrance": 50,
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "hand_l", "hand_r" ],
         "coverage": 100,
-        "covers": [ "head", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+        "encumbrance": 35,
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "head" ],
+        "coverage": 100,
+        "encumbrance": 25,
+        "layers": [ "OUTER", "NORMAL", "BELTED" ]
+      },
+      {
+        "material": [
+          { "type": "aluminum", "covered_by_mat": 10, "thickness": 2 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 4 }
+        ],
+        "covers": [ "eyes" ],
+        "coverage": 100,
+        "encumbrance": 55,
+        "layers": [ "BELTED" ]
+      },
+      {
+        "material": [
+          { "type": "aluminum", "covered_by_mat": 10, "thickness": 2 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 4 }
+        ],
+        "covers": [ "mouth" ],
+        "coverage": 100,
+        "encumbrance": 5,
+        "layers": [ "BELTED" ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
+        "coverage": 100,
+        "encumbrance": 35,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 100,
+        "encumbrance": 35,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 35,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "fiberglass", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "carbonfiber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "coverage": 100,
+        "encumbrance": 35,
+        "layers": [ "OUTER", "NORMAL", "BELTED" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1218,8 +1413,7 @@
     "color": "light_gray",
     "warmth": 50,
     "material_thickness": 4,
-    "valid_mods": [ "steel_padded" ],
-    "flags": [ "VARSIZE", "STURDY", "NONCONDUCTIVE" ],
+    "flags": [ "VARSIZE", "STURDY", "NONCONDUCTIVE", "NORMAL", "OUTER" ],
     "armor": [
       {
         "material": [
@@ -1264,11 +1458,11 @@
   },
   {
     "id": "hazmat_suit",
-    "//": "Should be substantially more difficult to repair than ordinary plastic - ch_steel is difficulty 7",
+    "//": "Should be substantially more difficult to repair than ordinary rubber - ch_steel is difficulty 7",
     "repairs_like": "ch_steel_lump",
     "type": "ARMOR",
     "name": { "str": "hazmat suit" },
-    "description": "An impermeable whole-body garment worn as protection against hazardous materials.  Restrictive and fragile, wearing it will provide complete protection against ambient radiation.  It requires a separate gas mask for full protection.",
+    "description": "An impermeable full-body garment with a clear plastic face shield, rubber gloves, and boots, looking like a soft, puffy space suit.  It looks fragile, but a tag on the interior explains that it will provide excellent protection from radiation, pathogens, chemicals, toxins, and even electrical discharge, so long as it's in good condition.",
     "weight": "5000 g",
     "volume": "17 L",
     "price": 117500,
@@ -1279,13 +1473,97 @@
     "color": "yellow",
     "warmth": 40,
     "material_thickness": 2.5,
+    "//1": "TODO: Suits like this require negative pressure and air tanks to work. See also the entry suit.",
+    "//2": "Mask includes vinyl to keep it from being uncomfortable. Todo: make PADDED work per BP.",
     "environmental_protection": 20,
-    "flags": [ "VARSIZE", "RAINPROOF", "GAS_PROOF", "GROUNDING", "RAD_PROOF", "OUTER" ],
+    "flags": [ "VARSIZE", "RAINPROOF", "GAS_PROOF", "GROUNDING", "RAD_PROOF" ],
     "armor": [
       {
-        "encumbrance": 37,
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 } ],
+        "covers": [ "hand_l", "hand_r" ],
         "coverage": 100,
-        "covers": [ "head", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+        "encumbrance": 25,
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "covers": [ "head" ],
+        "coverage": 100,
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "eyes" ],
+        "coverage": 100,
+        "encumbrance": 10,
+        "layers": [ "BELTED" ]
+      },
+      {
+        "material": [
+          { "type": "plastic", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "vinyl", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "mouth" ],
+        "coverage": 100,
+        "encumbrance": 5,
+        "layers": [ "BELTED" ]
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ],
+        "coverage": 100,
+        "encumbrance": 0
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 } ],
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [ { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 } ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
+        "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 3 } ],
+        "encumbrance": 25,
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [ { "type": "rubber", "covered_by_mat": 100, "thickness": 6 } ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1330,64 +1608,119 @@
     "id": "robofac_enviro_suit",
     "type": "ARMOR",
     "name": { "str": "conductive NBC suit" },
-    "description": "A glossy boiler suit complete with rubber gloves and steel-toed boots, this getup is the sort of thing you might see in a documentary about Chernobyl.  It lacks any branding, but a label on the inside explains that the suit is flame-resistant, chemical resistant, and when paired with a gas mask, could provide protection from biological agents and radioactive particles.  A bold warning mentions that suit only protects from electric shock while the wearer is grounded.",
+    "description": "A glossy boiler suit complete with rubber gloves and steel-toed boots, this getup is the sort of thing you might see in a documentary about Chernobyl.  It lacks any branding, but a label on the inside explains that the suit is flame-resistant, chemical resistant, and when paired with a gas mask, could provide protection from biological agents and radioactive particles.  A bold warning mentions that suit only protects from electric shock while the wearer is grounded and the suit is worn properly.",
     "weight": "4000 g",
     "volume": "14 L",
     "price": 117500,
     "price_postapoc": 2000,
     "material": [ "soft_rubber", "nomex", "rubber" ],
     "symbol": "[",
-    "looks_like": "hazmat_suit",
+    "looks_like": "cleansuit",
     "color": "brown",
     "armor": [
       {
         "material": [
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.4 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
         ],
         "covers": [ "hand_l", "hand_r" ],
         "coverage": 100,
-        "encumbrance": 16
+        "encumbrance": 25,
+        "rigid_layer_only": true,
+        "layers": [ "OUTER", "NORMAL" ]
       },
       {
         "material": [
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 3 }
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
         ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_ankle_l", "foot_heel_l", "foot_ankle_r", "foot_heel_r", "foot_arch_r", "foot_arch_l" ],
+        "covers": [ "head" ],
         "coverage": 100,
         "encumbrance": 20
       },
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1, "//": "Steel toes" },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 3 }
-        ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_toes_l", "foot_toes_r" ],
-        "coverage": 100,
-        "encumbrance": 0
-      },
-      {
-        "material": [
-          { "type": "rubber", "covered_by_mat": 100, "thickness": 6 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 2 }
-        ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_sole_l", "foot_sole_r" ],
-        "coverage": 100,
-        "encumbrance": 0
-      },
-      {
-        "material": [
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.2 },
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
         ],
-        "covers": [ "head", "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
         "coverage": 100,
-        "encumbrance": [ 7, 9 ]
+        "encumbrance": 35
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ],
+        "coverage": 100,
+        "encumbrance": 0
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "covers": [ "arm_r", "arm_l" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 35
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "encumbrance": 25,
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_toes_r", "foot_toes_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "lc_steel", "covered_by_mat": 80, "thickness": 1.0 }
+        ],
+        "encumbrance": 25,
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 6 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -1408,55 +1741,70 @@
     "id": "robofac_enviro_suit_casual",
     "type": "ARMOR",
     "name": { "str": "conductive NBC suit (unzipped)", "str_pl": "conductive NBC suit (unzipped)" },
-    "description": "A glossy boiler suit complete with rubber gloves and steel-toed boots, this getup is the sort of thing you might see in a documentary about Chernobyl.  It lacks any branding, but a label on the inside explains that the suit is flame-resistant, chemical resistant, and when paired with a gas mask, could provide protection from biological agents and radioactive particles.  A bold warning mentions that suit only protects from electric shock while the wearer is grounded.",
+    "description": "A glossy boiler suit complete with rubber gloves and steel-toed boots, this getup is the sort of thing you might see in a documentary about Chernobyl.  It lacks any branding, but a label on the inside explains that the suit is flame-resistant, chemical resistant, and when paired with a gas mask, could provide protection from biological agents and radioactive particles.  A bold warning mentions that suit only protects from electric shock while the wearer is grounded and the suit is worn properly.",
     "weight": "4000 g",
     "volume": "14 L",
     "price": 117500,
     "price_postapoc": 2000,
     "material": [ "soft_rubber", "nomex", "rubber" ],
     "symbol": "[",
-    "looks_like": "hazmat_suit",
+    "looks_like": "cargo_pants",
     "color": "brown",
     "armor": [
       {
         "material": [
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 3 }
-        ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_ankle_l", "foot_heel_l", "foot_ankle_r", "foot_heel_r", "foot_arch_r", "foot_arch_l" ],
-        "coverage": 100,
-        "encumbrance": 20
-      },
-      {
-        "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1, "//": "Steel toes" },
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 1 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 3 }
-        ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_toes_l", "foot_toes_r" ],
-        "coverage": 100,
-        "encumbrance": 0
-      },
-      {
-        "material": [
-          { "type": "rubber", "covered_by_mat": 100, "thickness": 6 },
-          { "type": "nomex", "covered_by_mat": 100, "thickness": 2 }
-        ],
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [ "foot_sole_l", "foot_sole_r" ],
-        "coverage": 100,
-        "encumbrance": 0
-      },
-      {
-        "material": [
-          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.2 },
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
         ],
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 100,
-        "encumbrance": [ 7, 9 ]
+        "encumbrance": 35
+      },
+      {
+        "material": [
+          { "type": "soft_rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "encumbrance": 25,
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_toes_r", "foot_toes_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "lc_steel", "covered_by_mat": 80, "thickness": 1.0 }
+        ],
+        "encumbrance": 25,
+        "coverage": 100,
+        "layers": [ "OUTER", "NORMAL" ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 6 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 0.5 }
+        ],
+        "coverage": 100,
+        "encumbrance": 0,
+        "layers": [ "OUTER", "NORMAL" ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -1660,7 +2008,6 @@
     ],
     "warmth": 25,
     "material_thickness": 4.3,
-    "valid_mods": [ "steel_padded" ],
     "environmental_protection": 3,
     "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "OUTER", "POCKETS", "STURDY", "BLOCK_WHILE_WORN" ],
     "melee_damage": { "bash": 2 }
