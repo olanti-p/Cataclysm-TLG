@@ -1,12 +1,9 @@
 #### Summary
 Category "Brief description"
 
-
 #### Purpose of change
 
-
 #### Describe the solution
-
 
 #### Describe alternatives you've considered
 
