@@ -3798,7 +3798,7 @@ void item::armor_protection_info( std::vector<iteminfo> &info, const iteminfo_qu
                     layering += _( " <stat>Outer</stat>." );
                     break;
                 case layer_level::BELTED:
-                    layering += _( " <stat>Strapped</stat>." );
+                    layering += _( " <stat>Overtop</stat>." );
                     break;
                 case layer_level::AURA:
                     layering += _( " <stat>Outer aura</stat>." );

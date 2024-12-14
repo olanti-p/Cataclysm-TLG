@@ -145,7 +145,7 @@
     ],
     "warmth": 45,
     "material_thickness": 4,
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "POCKETS", "RAINPROOF", "STURDY", "OUTER" ],
     "melee_damage": { "bash": 2 }
   },
   {
@@ -163,7 +163,7 @@
     "looks_like": "armor_farmor",
     "name": { "str": "fur body armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
+    "flags": [ "VARSIZE", "POCKETS", "RAINPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "armor_faux_farmor",
@@ -204,7 +204,7 @@
     ],
     "warmth": 40,
     "material_thickness": 4,
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "POCKETS", "RAINPROOF", "STURDY", "OUTER" ],
     "melee_damage": { "bash": 2 }
   },
   {
@@ -222,7 +222,7 @@
     "looks_like": "armor_farmor",
     "name": { "str": "faux fur body armor" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
+    "flags": [ "VARSIZE", "POCKETS", "RAINPROOF", "STURDY", "OUTER", "UNDERSIZE", "PREFIX_XS" ]
   },
   {
     "id": "leather_armor_suit",
@@ -471,9 +471,9 @@
           "foot_arch_l"
         ],
         "coverage": 100,
-        "encumbrance": 26,
+        "encumbrance": 17,
         "rigid_layer_only": true,
-        "layers": [ "OUTER", "NORMAL" ]
+        "layers": [ "OUTER", "NORMAL", "BELTED" ]
       },
       {
         "covers": [ "foot_l", "foot_r" ],
@@ -507,8 +507,8 @@
     "category": "armor",
     "name": { "str": "suit of plated leather armor", "str_pl": "suits of plated leather armor" },
     "description": "Thick leather body armor reinforced by the addition of sheet metal plates.",
-    "weight": "6280 g",
-    "volume": "9 L",
+    "weight": "9500 g",
+    "volume": "11 L",
     "price": 110000,
     "price_postapoc": 3000,
     "to_hit": -5,
@@ -589,8 +589,8 @@
     "category": "armor",
     "name": { "str": "riot armor suit" },
     "description": "A full suit of black plastic body armor plates used by riot police.  Cleverly placed velcro straps secure each piece, resulting in slightly less encumbrance then its constituent parts.  Molle webbing is attached to the torso and the word POLICE is emblazoned across the front.",
-    "weight": "3 kg",
-    "volume": "12500 ml",
+    "weight": "5 kg",
+    "volume": "15000 ml",
     "price": 60000,
     "price_postapoc": 4000,
     "to_hit": -3,
@@ -605,7 +605,7 @@
     "armor": [
       {
         "encumbrance": 14,
-        "coverage": 75,
+        "coverage": 85,
         "covers": [ "torso" ],
         "volume_encumber_modifier": 0.3,
         "material": [
@@ -660,8 +660,8 @@
     "category": "armor",
     "name": { "str": "ō-yoroi" },
     "description": "An ornamental suit of Japanese samurai armor.",
-    "weight": "9220 g",
-    "volume": "11500 ml",
+    "weight": "20000 g",
+    "volume": "17000 ml",
     "price": 90000,
     "price_postapoc": 8000,
     "material": [ "iron", "leather" ],
@@ -737,7 +737,7 @@
     "name": { "str": "chainmail hauberk" },
     "description": "A knee-length long-sleeved tunic made of interlocking steel rings.  It can be adjusted to be worn as outerwear.",
     "weight": "11227 g",
-    "volume": "3300 ml",
+    "volume": "12000 ml",
     "longest_side": "16 cm",
     "price": 35988,
     "price_postapoc": 3000,
@@ -914,7 +914,6 @@
     "color": "light_red",
     "warmth": 15,
     "flags": [ "STURDY" ],
-    "//": "Suits have better coverage than separates because the parts are all attached to each other, leaving fewer gaps.",
     "armor": [
       {
         "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
@@ -981,7 +980,8 @@
       {
         "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
+        "//": "Combining the skirt and chausses here still leaves us with a few small gaps.",
+        "coverage": 98,
         "encumbrance": 9,
         "rigid_layer_only": true
       },
@@ -1121,9 +1121,9 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
         "coverage": 100,
-        "encumbrance": 6,
+        "encumbrance": 4,
         "rigid_layer_only": true,
-        "layers": [ "OUTER", "NORMAL" ]
+        "layers": [ "OUTER", "NORMAL", "BELTED" ]
       },
       {
         "covers": [ "foot_l", "foot_r" ],
@@ -1261,7 +1261,7 @@
     "color": "light_gray",
     "warmth": 30,
     "longest_side": "30 cm",
-    "environmental_protection": 20,
+    "environmental_protection": 7,
     "//": "This should require a separate SCBA system for breathing smoke/900 degree air, but currently doesn't because of how enviro is coded.",
     "//1": "todo: Duplicate how gasmasks work but make them run on air tanks. Make that a requirement for breathing in hot air.",
     "flags": [ "VARSIZE", "WATERPROOF", "GAS_PROOF", "STURDY", "OUTER", "SUN_GLASSES" ],
@@ -1968,7 +1968,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "torso" ],
-        "coverage": 100,
+        "coverage": 98,
         "encumbrance": [ 25, 25 ]
       },
       {
@@ -1977,7 +1977,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "arm_l", "arm_r" ],
-        "coverage": 100,
+        "coverage": 98,
         "encumbrance": [ 25, 25 ]
       },
       {
@@ -1986,7 +1986,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "leg_l", "leg_r" ],
-        "coverage": 100,
+        "coverage": 98,
         "encumbrance": [ 25, 25 ]
       }
     ],
@@ -2009,7 +2009,7 @@
     "warmth": 25,
     "material_thickness": 4.3,
     "environmental_protection": 3,
-    "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "OUTER", "POCKETS", "STURDY", "BLOCK_WHILE_WORN" ],
+    "flags": [ "VARSIZE", "RAINPROOF", "OUTER", "POCKETS", "STURDY", "BLOCK_WHILE_WORN" ],
     "melee_damage": { "bash": 2 }
   },
   {
