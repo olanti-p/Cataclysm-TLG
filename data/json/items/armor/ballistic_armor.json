@@ -146,7 +146,7 @@
     "color": "light_green",
     "environmental_protection": 2,
     "material_thickness": 15,
-    "flags": [ "STURDY", "OUTER", "RAINPROOF", "ONLY_ONE" ],
+    "flags": [ "STURDY", "OUTER", "NORMAL", "RAINPROOF", "ONLY_ONE" ],
     "use_action": [ { "type": "attach_molle", "size": 15 }, { "type": "detach_molle" } ],
     "pocket_data": [
       {
@@ -190,7 +190,7 @@
     "color": "light_gray",
     "environmental_protection": 2,
     "material_thickness": 7,
-    "flags": [ "STURDY", "OUTER", "RAINPROOF", "ONLY_ONE" ],
+    "flags": [ "STURDY", "OUTER", "RAINPROOF", "ONLY_ONE", "NORMAL", "OUTER" ],
     "use_action": [ { "type": "attach_molle", "size": 15 }, { "type": "detach_molle" } ],
     "pocket_data": [
       {
@@ -227,7 +227,7 @@
         ],
         "coverage": 100,
         "covers": [ "torso", "arm_l", "arm_r" ],
-        "encumbrance": [ 31, 55 ]
+        "encumbrance": [ 15, 27 ]
       }
     ]
   },

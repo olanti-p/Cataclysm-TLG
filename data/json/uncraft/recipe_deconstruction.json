@@ -6184,16 +6184,6 @@
     "flags": [ "BLIND_HARD" ]
   },
   {
-    "result": "gloves_denim",
-    "type": "uncraft",
-    "activity_level": "NO_EXERCISE",
-    "skill_used": "tailor",
-    "time": "30 s",
-    "qualities": [ { "id": "CUT", "level": 2 } ],
-    "components": [ [ [ "denim_patch", 6 ] ] ],
-    "flags": [ "BLIND_HARD" ]
-  },
-  {
     "result": "backpack_denim",
     "type": "uncraft",
     "activity_level": "NO_EXERCISE",

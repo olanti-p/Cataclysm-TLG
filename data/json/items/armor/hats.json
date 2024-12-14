@@ -91,7 +91,7 @@
     "color": "dark_gray",
     "warmth": 10,
     "material_thickness": 0.3,
-    "flags": [ "VARSIZE", "WATERPROOF" ],
+    "flags": [ "VARSIZE" ],
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
@@ -439,7 +439,7 @@
     "material_thickness": 4,
     "environmental_protection": 1,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "WATERPROOF", "PADDED" ],
+    "flags": [ "RAINPROOF", "PADDED" ],
     "armor": [
       {
         "encumbrance_modifiers": [ "NONE" ],
@@ -533,7 +533,7 @@
     "material_thickness": 4,
     "techniques": [ "WBLOCK_1" ],
     "environmental_protection": 1,
-    "flags": [ "WATERPROOF", "PADDED", "SUN_GLASSES" ],
+    "flags": [ "RAINPROOF", "PADDED", "SUN_GLASSES" ],
     "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 80, "cover_vitals": 90, "covers": [ "head" ] } ],
     "pocket_data": [
       {
@@ -957,25 +957,26 @@
     "id": "tricorne",
     "type": "ARMOR",
     "name": { "str": "tricorne" },
-    "description": "A classic design, the \"tricorne\", or three-cornered hat, simply pins a large and floppy brim out of the way, though this example adds well-embroidered designs and is oiled against water.  Whether you're the \"guvnah\" of a settlement, or the captain of a post-apocalyptic crew, this is the hat for you.",
+    "description": "A design that goes back to the founding of the thirteen colonies, this is a wide-brimmed oiled leather hat pinned up on three sides to make a distinctive three-pointed design.",
     "weight": "490 g",
     "volume": "2 L",
     "price": 2500,
     "price_postapoc": 750,
-    "material": [ "leather" ],
+    "material": [ "leather_treated" ],
     "symbol": "[",
     "looks_like": "bowhat",
     "color": "brown",
     "warmth": 7,
     "material_thickness": 0.6,
     "environmental_protection": 1,
-    "flags": [ "VARSIZE", "WATERPROOF", "WATER_FRIENDLY", "SUN_GLASSES" ],
+    "flags": [ "VARSIZE", "RAINPROOF", "WATER_FRIENDLY", "SUN_GLASSES" ],
     "armor": [
+      { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "covers": [ "head" ], "specifically_covers": [ "head_crown" ] },
       {
         "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 100,
+        "coverage": 80,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_forehead" ]
       }
     ]
   },
@@ -983,7 +984,7 @@
     "id": "turban",
     "type": "ARMOR",
     "name": { "str": "turban" },
-    "description": "Cloth wound around the head, worn by people of many cultures worldwide.  Some historical examples could be huge and ostentatious, but this one is a very simple design.",
+    "description": "Cloth wound around the head, worn by people of many cultures worldwide.",
     "weight": "105 g",
     "volume": "250 ml",
     "price": 85,
