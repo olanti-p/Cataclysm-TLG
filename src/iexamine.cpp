@@ -2308,7 +2308,7 @@ static bool query_pick( Character &who, const tripoint &target )
     const harvest_id harvest = here.get_harvest( target );
     if( harvest.is_null() || harvest->empty() ) {
         who.add_msg_if_player( m_info,
-                               _( "Nothing can be harvested from this plant in current season." ) );
+                               _( "There's nothing usable to harvest right now." ) );
         iexamine::none( who, target );
         return false;
     }
