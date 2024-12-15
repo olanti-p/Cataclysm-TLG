@@ -73,7 +73,7 @@
     "id": "mon_feral_sapien_spear",
     "type": "MONSTER",
     "name": { "str": "cunning feral" },
-    "description": "This feral human's eyes look more focused, and its movements steadier, than others of their kind.  They're carrying a crude spear, and have assembled some basic armor from scavenged clothing and bits of riot armor, though you can see several gaps.  Despite these signs of greater intelligence, this creature is still only a few steps away from being a zombie themself.",
+    "description": "This feral human's eyes look more focused, and their movements steadier than others of their kind.  They're carrying a crude spear, and have assembled some basic armor from scavenged clothing and bits of riot armor, though you can see several gaps.  Despite these signs of greater intelligence, this creature is still only a few steps away from being a zombie themself.",
     "copy-from": "mon_feral_human_pipe",
     "dodge": 3,
     "special_attacks": [ [ "PARROT_AT_DANGER", 0 ], { "id": "feral_weapon_spear_knife" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
@@ -360,7 +360,7 @@
         "condition": { "and": [ { "not": { "u_has_effect": "maimed_arm" } }, { "not": { "u_has_effect": "disarmed" } } ] },
         "require_targeting_player": false,
         "ranges": [ [ 2, 7, "DEFAULT" ] ],
-        "description": "The feral human shoots its crossbow!"
+        "description": "The feral human shoots their crossbow!"
       },
       { "id": "feral_weapon_crossbow_melee" },
       [ "BROWSE", 100 ],
@@ -553,17 +553,6 @@
     "extend": { "flags": [ "CLIMBS" ] }
   },
   {
-    "id": "mon_feral_swimmer_kickboard",
-    "type": "MONSTER",
-    "name": { "str": "feral swimmer" },
-    "description": "Clad in swimwear and with a stick in hand, this once normal person is now a bloodthirsty maniac.",
-    "copy-from": "mon_feral_human_pipe",
-    "color": "light_blue",
-    "special_attacks": [ { "id": "feral_weapon_stick" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
-    "death_drops": "feral_swimmer_death_drops_kickboard",
-    "zombify_into": "mon_zombie_swimmer_base"
-  },
-  {
     "id": "mon_feral_sailor_wrench",
     "type": "MONSTER",
     "name": { "str": "feral crewman", "str_pl": "feral crewmen" },
@@ -581,7 +570,7 @@
     "id": "mon_feral_sailor_axe",
     "type": "MONSTER",
     "copy-from": "mon_feral_sailor_wrench",
-    "description": "Spattered from head to toe in large swaths of dried viscera, the deep blue of this person's tattered naval uniform has been stained the color of rust.  Having seemingly had enough presence of mind to consider arming itself, this former crewman carries a crash axe in its shaking hands.  The veins on the back of their neck are visibly bulging, their eyes bloodshot, and a mass of crisscrossing blackened veins stand out against the pale skin of their face as they regard the area around them for perceived threats.",
+    "description": "Spattered from head to toe in large swaths of dried viscera, the deep blue of this person's tattered naval uniform has been stained the color of rust.  Having seemingly had enough presence of mind to consider arming themself, this former crewman carries a crash axe in their shaking hands.  The veins on the back of their neck are visibly bulging, their eyes bloodshot, and a mass of crisscrossing blackened veins stand out against the pale skin of their face as they regard the area around them for perceived threats.",
     "special_attacks": [ { "id": "feral_weapon_crash_axe" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
     "death_drops": "mon_feral_sailor_axe_death_drops"
   },

@@ -549,15 +549,7 @@
       { "monster": "mon_zombie_dog", "weight": 10 },
       { "monster": "mon_dog_zombie_rot", "weight": 5, "cost_multiplier": 4 },
       { "monster": "mon_zombie_static", "weight": 5, "cost_multiplier": 5 },
-      { "monster": "mon_zombie_runner", "weight": 10, "cost_multiplier": 5, "pack_size": [ 1, 2 ] },
-      { "monster": "mon_feral_maid_broom", "weight": 10 },
-      { "monster": "mon_feral_maid_candlestick", "weight": 10 },
-      { "monster": "mon_feral_maid_knife", "weight": 10 },
-      { "monster": "mon_feral_fancy_rapier", "weight": 5, "cost_multiplier": 5 },
-      { "monster": "mon_feral_fancy_rapier_fake", "weight": 10 },
-      { "monster": "mon_feral_fancy_crossbow", "weight": 5, "cost_multiplier": 5 },
-      { "monster": "mon_feral_armored_mace", "weight": 1, "cost_multiplier": 10 },
-      { "monster": "mon_feral_armored_battleaxe", "weight": 1, "cost_multiplier": 10 }
+      { "monster": "mon_zombie_runner", "weight": 10, "cost_multiplier": 5, "pack_size": [ 1, 2 ] }
     ]
   },
   {
@@ -581,12 +573,6 @@
     "monsters": [
       { "monster": "mon_zombie_child", "weight": 350 },
       { "monster": "mon_zombie", "weight": 20, "cost_multiplier": 2 },
-      { "monster": "mon_feral_maid_broom", "weight": 20 },
-      { "monster": "mon_feral_maid_candlestick", "weight": 20 },
-      { "monster": "mon_feral_maid_knife", "weight": 20 },
-      { "monster": "mon_feral_fancy_rapier", "weight": 140, "cost_multiplier": 5 },
-      { "monster": "mon_feral_fancy_rapier_fake", "weight": 120, "cost_multiplier": 3 },
-      { "monster": "mon_feral_fancy_crossbow", "weight": 100, "cost_multiplier": 5 },
       { "monster": "mon_dog_big_trained", "weight": 80, "cost_multiplier": 2 },
       { "monster": "mon_dog_trained", "weight": 80, "cost_multiplier": 2 },
       { "monster": "mon_dog_big", "weight": 80, "cost_multiplier": 2 },
@@ -599,10 +585,7 @@
     "monsters": [
       { "monster": "mon_zombie_resort_dancer", "weight": 650, "cost_multiplier": 0 },
       { "monster": "mon_feral_maid_candlestick", "weight": 100 },
-      { "monster": "mon_feral_maid_broom", "weight": 85 },
-      { "monster": "mon_feral_fancy_rapier", "weight": 10, "cost_multiplier": 2 },
-      { "monster": "mon_feral_fancy_rapier_fake", "weight": 20, "cost_multiplier": 2 },
-      { "monster": "mon_feral_fancy_crossbow", "weight": 5, "cost_multiplier": 3 }
+      { "monster": "mon_feral_maid_broom", "weight": 85 }
     ]
   },
   {
@@ -620,21 +603,9 @@
     "monsters": [
       { "monster": "mon_zombie_swimmer_base", "weight": 850 },
       { "monster": "mon_zombie_swimmer_base", "weight": 250, "cost_multiplier": 10, "pack_size": [ 2, 3 ] },
-      {
-        "monster": "mon_feral_swimmer_kickboard",
-        "weight": 10,
-        "ends": "165 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      },
       { "monster": "mon_zombie_child", "weight": 250 },
       { "monster": "mon_zombie", "weight": 100 },
-      { "monster": "mon_zombie_tough", "weight": 100 },
-      { "monster": "mon_feral_maid_broom", "weight": 10 },
-      { "monster": "mon_feral_maid_candlestick", "weight": 10 },
-      { "monster": "mon_feral_maid_knife", "weight": 10 },
-      { "monster": "mon_feral_fancy_rapier", "weight": 5, "cost_multiplier": 5 },
-      { "monster": "mon_feral_fancy_rapier_fake", "weight": 10 },
-      { "monster": "mon_feral_fancy_crossbow", "weight": 5, "cost_multiplier": 5 }
+      { "monster": "mon_zombie_tough", "weight": 100 }
     ]
   },
   {
@@ -731,7 +702,6 @@
         "ends": "165 days",
         "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
       },
-      { "monster": "mon_feral_swimmer_kickboard", "weight": 20, "cost_multiplier": 0 },
       { "monster": "mon_zombie_resort_dancer", "weight": 150, "cost_multiplier": 0 }
     ]
   },
@@ -806,12 +776,6 @@
       { "monster": "mon_zombie_swimmer", "weight": 100, "cost_multiplier": 2, "starts": "5 days" },
       { "monster": "mon_zombie_swimmer_base", "weight": 815 },
       { "monster": "mon_zombie_swimmer_base", "weight": 50, "cost_multiplier": 10, "pack_size": [ 3, 8 ] },
-      {
-        "monster": "mon_feral_swimmer_kickboard",
-        "weight": 10,
-        "ends": "165 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      },
       { "monster": "mon_zombie_child", "weight": 35 }
     ]
   },
@@ -873,14 +837,7 @@
     "type": "monstergroup",
     "monsters": [
       { "monster": "mon_zombie_swimmer_base", "weight": 950, "cost_multiplier": 2 },
-      { "monster": "mon_zombie_swimmer_base", "weight": 50, "cost_multiplier": 10, "pack_size": [ 3, 8 ] },
-      {
-        "monster": "mon_feral_swimmer_kickboard",
-        "weight": 5,
-        "cost_multiplier": 2,
-        "ends": "165 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      }
+      { "monster": "mon_zombie_swimmer_base", "weight": 50, "cost_multiplier": 10, "pack_size": [ 3, 8 ] }
     ]
   },
   {
@@ -891,14 +848,7 @@
       { "group": "GROUP_CIVILIANS_STANDARD", "weight": 20, "cost_multiplier": 0 },
       { "monster": "mon_zombie_swimmer_base", "weight": 100, "cost_multiplier": 2 },
       { "monster": "mon_zombie_swimmer_base", "weight": 50, "cost_multiplier": 10, "pack_size": [ 3, 8 ] },
-      { "monster": "mon_zombie", "weight": 50, "cost_multiplier": 3 },
-      {
-        "monster": "mon_feral_swimmer_kickboard",
-        "weight": 10,
-        "cost_multiplier": 2,
-        "ends": "165 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      }
+      { "monster": "mon_zombie", "weight": 50, "cost_multiplier": 3 }
     ]
   },
   {
@@ -909,21 +859,6 @@
       { "group": "GROUP_CIVILIANS_STANDARD", "weight": 100, "cost_multiplier": 0 },
       { "monster": "mon_zombie_swimmer_base", "weight": 500, "cost_multiplier": 2 },
       { "monster": "mon_zombie_swimmer_base", "weight": 50, "cost_multiplier": 10, "pack_size": [ 3, 8 ] },
-      {
-        "monster": "mon_feral_swimmer_kickboard",
-        "weight": 15,
-        "cost_multiplier": 2,
-        "ends": "165 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      },
-      {
-        "monster": "mon_feral_swimmer_kickboard",
-        "weight": 10,
-        "cost_multiplier": 4,
-        "pack_size": [ 3, 5 ],
-        "ends": "165 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      },
       { "monster": "mon_zombie", "weight": 5, "cost_multiplier": 3 },
       { "monster": "mon_zombie", "weight": 1, "cost_multiplier": 10, "pack_size": [ 2, 5 ] },
       { "monster": "mon_zombie_child", "weight": 15 },
