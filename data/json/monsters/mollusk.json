@@ -311,7 +311,7 @@
     "fear_triggers": [ "FIRE" ],
     "dissect": "dissect_gastropod_sample_huge",
     "regenerates": 25,
-    "regeneration_modifiers": [ [ "onfire", -20 ], [ "corroding", -5 ] ],
+    "regeneration_modifiers": [ [ "onfire", -15 ], [ "corroding", -5 ] ],
     "flags": [
       "NOHEAD",
       "SEES",
