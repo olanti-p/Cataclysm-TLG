@@ -318,7 +318,7 @@
   {
     "id": "ACT_FORAGE",
     "type": "activity_type",
-    "activity_level": "LIGHT_EXERCISE",
+    "activity_level": "MODERATE_EXERCISE",
     "verb": "foraging",
     "based_on": "speed"
   },

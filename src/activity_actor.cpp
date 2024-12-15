@@ -4208,10 +4208,11 @@ void harvest_activity_actor::start( player_activity &act, Character &who )
         act.set_to_null();
         return;
     }
-
-    const time_duration forage_time = rng( 5_seconds, 15_seconds );
-    add_msg_debug( debugmode::DF_ACT_HARVEST, "harvest time: %s", to_string_writable( forage_time ) );
-    act.moves_total = to_moves<int>( forage_time );
+    ///\EFFECT_SURVIVAL speeds up foraging
+    int forage_time = 3000000 / ( 2 * who.get_skill_level( skill_survival ) + 5 );
+    ///\EFFECT_PER randomly speeds up foraging
+    forage_time /= rng( std::max( 4, who.per_cur ), 4 + who.per_cur * 2 );
+    act.moves_total = forage_time;
     act.moves_left = act.moves_total;
 }
 
@@ -4230,17 +4231,21 @@ void harvest_activity_actor::finish( player_activity &act, Character &who )
     const float survival_skill = who.get_skill_level( skill_survival );
     bool got_anything = false;
     for( const harvest_entry &entry : here.get_harvest( target ).obj() ) {
+        int forage_roll = rng( 0, 49 );
         const float min_num = entry.scale_num.first * survival_skill + entry.base_num.first;
         const float max_num = entry.scale_num.second * survival_skill + entry.base_num.second;
         const int roll = std::min<int>( entry.max, std::round( rng_float( min_num, max_num ) ) );
-        got_anything = roll > 0;
-        for( int i = 0; i < roll; i++ ) {
-            iexamine_helper::handle_harvest( who, entry.drop, false );
+        got_anything = ( std::min( ( survival_skill * 3 + ( who.per_cur / 2 ) ), 42.0f ) > forage_roll ) &&
+                       ( roll > 0 );
+        if( got_anything ) {
+            for( int i = 0; i < roll; i++ ) {
+                iexamine_helper::handle_harvest( who, entry.drop, false );
+            }
         }
     }
 
     if( !got_anything ) {
-        who.add_msg_if_player( m_bad, _( "You couldn't harvest anything." ) );
+        who.add_msg_if_player( m_bad, _( "You couldn't find anything usable." ) );
     }
 
     if( exam_furn ) {
@@ -6628,7 +6633,6 @@ void forage_activity_actor::finish( player_activity &act, Character &who )
         act.set_to_null();
         return;
     }
-
     const int veggy_chance = rng( 1, 100 );
     bool found_something = false;
 
@@ -6662,9 +6666,12 @@ void forage_activity_actor::finish( player_activity &act, Character &who )
     // Survival gives a bigger boost, and Perception is leveled a bit.
     // Both survival and perception affect time to forage
 
-    ///\EFFECT_PER slightly increases forage success chance
+    ///\EFFECT_PER slightly increases forage success chance got_anything = ( std::max( survival_skill * 2 + survival_skill * ( ( per_cur - 10 ) / 10.0 ), 19 ) > forage_roll )
     ///\EFFECT_SURVIVAL increases forage success chance
-    if( veggy_chance < round( who.get_skill_level( skill_survival ) * 3 + who.per_cur - 2 ) ) {
+    // The survival+per check here is unlikely to ever get anywhere near 84, but we may as well keep parity with act_harvest's fail chance.
+    // per_cur is not divided by 2 here because foraging underbrush is more about searching for hidden things.
+    if( veggy_chance < ( std::min( ( who.get_skill_level( skill_survival ) * 3 + who.per_cur ),
+                                   84.0f ) ) ) {
         const std::vector<item *> dropped =
             here.put_items_from_loc( group_id, who.pos(), calendar::turn );
         // map::put_items_from_loc can create multiple items and merge them into one stack.
@@ -6704,7 +6711,7 @@ void forage_activity_actor::finish( player_activity &act, Character &who )
     }
 
     if( !found_something ) {
-        add_msg( _( "You didn't find anything." ) );
+        add_msg( _( "You didn't find anything worthwhile." ) );
     }
 
     iexamine::practice_survival_while_foraging( who );
