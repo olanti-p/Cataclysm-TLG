@@ -203,6 +203,7 @@ static const proficiency_id proficiency_prof_traps( "prof_traps" );
 static const proficiency_id proficiency_prof_trapsetting( "prof_trapsetting" );
 
 static const quality_id qual_ANESTHESIA( "ANESTHESIA" );
+static const quality_id qual_AXE( "AXE" );
 static const quality_id qual_DIG( "DIG" );
 static const quality_id qual_DRILL( "DRILL" );
 static const quality_id qual_GRASS_CUT( "GRASS_CUT" );
@@ -4169,11 +4170,14 @@ void iexamine::shrub_wildveggies( Character &you, const tripoint &examp )
         return;
     }
 
-    add_msg( _( "You forage through the %s." ), here.tername( examp ) );
     ///\EFFECT_SURVIVAL speeds up foraging
-    int move_cost = 100000 / ( 2 * you.get_skill_level( skill_survival ) + 5 );
+    int move_cost = 3000000 / ( 2 * you.get_skill_level( skill_survival ) + 5 );
     ///\EFFECT_PER randomly speeds up foraging
     move_cost /= rng( std::max( 4, you.per_cur ), 4 + you.per_cur * 2 );
+    if( you.has_quality( qual_GRASS_CUT ) || you.has_quality( qual_AXE ) ) {
+        add_msg( _( "You quickly hack through the dense undergrowth." ) );
+        move_cost *= 0.9;
+    }
     you.assign_activity( forage_activity_actor( move_cost ) );
     you.activity.placement = here.getglobal( examp );
     you.activity.auto_resume = true;
