@@ -284,7 +284,7 @@
     "id": "mon_sludge_crawler",
     "type": "MONSTER",
     "name": { "str": "sludge crawler" },
-    "description": "A sluglike creature the size of a refrigerator.  Its black body glistens as it oozes its way along the ground.  Eyestalks occasionally push their way out of the sticky mass and look around.",
+    "description": "A sluglike creature the size of a refrigerator.  Its black body glistens as it oozes its way along the ground.  Eyestalks occasionally push their way out of the tar-like mass and look around.",
     "default_faction": "mutant",
     "bodytype": "snake",
     "species": [ "MUTANT" ],
