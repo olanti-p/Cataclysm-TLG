@@ -793,7 +793,7 @@
     "name": { "str": "Fast Reader" },
     "points": 1,
     "description": "You're a quick reader, and can get through books a lot faster than most.",
-    "reading_speed_multiplier": 0.8,
+    "enchantments": [ { "values": [ { "value": "READING_SPEED_MULTIPLIER", "multiply": -0.2 } ] } ],
     "starting_trait": true,
     "valid": false,
     "cancels": [ "ILLITERATE", "SLOWREADER" ]
@@ -932,7 +932,7 @@
     "id": "TABLEMANNERS",
     "name": { "str": "Rigid Table Manners" },
     "points": -1,
-    "consume_time_modifier": 1.5,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": 0.5 } ] } ],
     "description": "You've been taught proper table manners from your early childhood on; now, you can't even think about eating without being seated at a table and taking your time.  Eating without a table and chair frustrates you, but eating like a civilized person gives you a bigger morale bonus.",
     "starting_trait": true,
     "valid": false
@@ -944,7 +944,7 @@
     "points": 1,
     "description": "You are less likely to throw up from food poisoning, alcohol, etc.  If you throw up despite this, you won't suffer any residual nausea.",
     "starting_trait": true,
-    "vomit_multiplier": 0.5,
+    "enchantments": [ { "values": [ { "value": "VOMIT_MUL", "multiply": -0.5 } ] } ],
     "types": [ "CONSTITUTION" ],
     "//": "nope.  This does NOT lead to EATPOISON.  Stomach problems are part of the GI upgrades."
   },
@@ -955,7 +955,7 @@
     "points": 1,
     "description": "You have gained the ability to invert your stomach outside your body to quickly eliminate toxins, and are more likely to throw up from food poisoning, alcohol, etc.  If you throw up because of this, you won't suffer any residual nausea.",
     "starting_trait": false,
-    "vomit_multiplier": 1.5,
+    "enchantments": [ { "values": [ { "value": "VOMIT_MUL", "multiply": 0.5 } ] } ],
     "//": "Create an effect on condition that reduces nausea quickly whenever it occurs by one intensity per vomit?",
     "types": [ "CONSTITUTION" ],
     "category": [ "BATRACHIAN" ],
@@ -997,12 +997,15 @@
     "id": "GOURMAND",
     "name": { "str": "Gourmand" },
     "points": 2,
-    "consume_time_modifier": 0.75,
     "description": "You eat faster, and can eat and drink more, than anyone else!  You also enjoy food more; delicious food is better for your morale, and you don't mind unsavory meals as much.  Activate to skip prompt for overeating.",
     "category": [ "MOUSE", "LUPINE" ],
     "starting_trait": true,
     "active": true,
-    "enchantments": [ { "values": [ { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": 0.1 } ] } ]
+    "enchantments": [
+      {
+        "values": [ { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": 0.1 }, { "value": "CONSUME_TIME_MOD", "multiply": -0.25 } ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -1101,7 +1104,7 @@
     "types": [ "SLEEP" ],
     "starting_trait": true,
     "category": [ "ALPHA", "ELFA", "PLANT", "BATRACHIAN" ],
-    "fatigue_modifier": -0.15
+    "enchantments": [ { "values": [ { "value": "FATIGUE", "multiply": -0.15 } ] } ]
   },
   {
     "type": "mutation",
@@ -1142,7 +1145,7 @@
     "starting_trait": true,
     "cancels": [ "CLUMSY" ],
     "category": [ "BIRD", "ELFA", "FELINE", "CHIROPTERAN" ],
-    "noise_modifier": 0.6
+    "enchantments": [ { "values": [ { "value": "FOOTSTEP_NOISE", "multiply": -0.6 } ] } ]
   },
   {
     "type": "mutation",
@@ -1163,22 +1166,7 @@
     "description": "You're an excellent navigator and your ability to recognize distant landmarks is unmatched.  Your sight radius on the overmap extends beyond the normal range.",
     "category": [ "BIRD", "MOUSE", "CEPHALOPOD" ],
     "cancels": [ "UNOBSERVANT" ],
-    "overmap_sight": 5,
-    "triggers": [ [ { "condition": { "not": "is_day" }, "msg_on": { "text": "", "rating": "good" } } ] ],
-    "transform": { "target": "EAGLEEYED_NIGHT", "msg_transform": "", "active": false, "moves": 0 }
-  },
-  {
-    "type": "mutation",
-    "id": "EAGLEEYED_NIGHT",
-    "//": "Indistinguishable to player, version without overmap_sight so it doesn't work at night.",
-    "name": { "str": "Scout" },
-    "points": 1,
-    "description": "You're an excellent navigator and your ability to recognize distant landmarks is unmatched.  Your sight radius on the overmap extends beyond the normal range.",
-    "category": [ "BIRD", "MOUSE", "CEPHALOPOD" ],
-    "cancels": [ "UNOBSERVANT" ],
-    "valid": false,
-    "triggers": [ [ { "condition": "is_day", "msg_on": { "text": "", "rating": "good" } } ] ],
-    "transform": { "target": "EAGLEEYED", "msg_transform": "", "active": false, "moves": 0 }
+    "enchantments": [ { "condition": "is_day", "values": [ { "value": "OVERMAP_SIGHT", "add": 5 } ] } ]
   },
   {
     "type": "mutation",
@@ -1189,7 +1177,7 @@
     "valid": false,
     "starting_trait": true,
     "cancels": [ "EAGLEEYED" ],
-    "overmap_sight": -10
+    "enchantments": [ { "values": [ { "value": "OVERMAP_SIGHT", "add": -10 } ] } ]
   },
   {
     "type": "mutation",
@@ -1471,8 +1459,7 @@
     "starting_trait": true,
     "types": [ "SLEEP" ],
     "category": [ "BEAST", "CHIMERA", "MOUSE", "RABBIT", "FELINE", "RAT" ],
-    "fatigue_modifier": 0.333,
-    "fatigue_regen_modifier": 0.333
+    "enchantments": [ { "values": [ { "value": "FATIGUE_REGEN", "multiply": 0.333 }, { "value": "FATIGUE", "multiply": 0.333 } ] } ]
   },
   {
     "type": "mutation",
@@ -1779,7 +1766,7 @@
     "name": { "str": "Slow Reader" },
     "points": -1,
     "description": "You're a slow reader, and it takes you longer to get through books than most.",
-    "reading_speed_multiplier": 1.3,
+    "enchantments": [ { "values": [ { "value": "READING_SPEED_MULTIPLIER", "multiply": 0.3 } ] } ],
     "starting_trait": true,
     "valid": false,
     "cancels": [ "FASTREADER", "ILLITERATE" ]
@@ -1811,7 +1798,7 @@
     "starting_trait": true,
     "category": [ "CRUSTACEAN" ],
     "cancels": [ "LIGHTSTEP" ],
-    "noise_modifier": 1.7
+    "enchantments": [ { "values": [ { "value": "FOOTSTEP_NOISE", "multiply": 0.7 } ] } ]
   },
   {
     "type": "mutation",
@@ -1877,7 +1864,7 @@
     "points": -1,
     "description": "You are more likely to throw up from food poisoning, alcohol, etc.",
     "starting_trait": true,
-    "vomit_multiplier": 2,
+    "enchantments": [ { "values": [ { "value": "VOMIT_MUL", "multiply": 1 } ] } ],
     "types": [ "CONSTITUTION" ],
     "changes_to": [ "NAUSEA" ],
     "category": [
@@ -2361,7 +2348,7 @@
     "changes_to": [ "WAKEFUL3" ],
     "threshreq": [ "THRESH_ALPHA", "THRESH_ELFA", "THRESH_BATRACHIAN" ],
     "category": [ "ALPHA", "ELFA", "BATRACHIAN" ],
-    "fatigue_modifier": -0.25
+    "enchantments": [ { "values": [ { "value": "FATIGUE", "multiply": -0.25 } ] } ]
   },
   {
     "type": "mutation",
@@ -2374,8 +2361,7 @@
     "prereqs": [ "WAKEFUL2" ],
     "threshreq": [ "THRESH_ELFA" ],
     "category": [ "ELFA" ],
-    "fatigue_modifier": -0.5,
-    "fatigue_regen_modifier": 0.5
+    "enchantments": [ { "values": [ { "value": "FATIGUE_REGEN", "multiply": 0.5 }, { "value": "FATIGUE", "multiply": -0.5 } ] } ]
   },
   {
     "type": "mutation",
@@ -3477,7 +3463,7 @@
     "threshreq": [ "THRESH_PLANT", "THRESH_ELFA" ],
     "category": [ "PLANT", "ELFA" ],
     "changes_to": [ "ROSEBUDS" ],
-    "scent_mask": -200,
+    "enchantments": [ { "values": [ { "value": "SCENT_MASK", "add": -200 } ] } ],
     "social_modifiers": { "lie": 10 },
     "prevented_by": [
       "FLOWERS_WINTER",
@@ -5345,7 +5331,7 @@
     "points": 1,
     "visibility": 8,
     "ugliness": 5,
-    "consume_time_modifier": 0.5,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": -0.5 } ] } ],
     "description": "A set of tentacles surrounds your mouth.  They allow you to eat twice as fast.  Slightly decreases wet penalties.",
     "types": [ "MUZZLE" ],
     "prereqs": [ "MOUTH_FLAPS" ],
@@ -5360,7 +5346,7 @@
     "visibility": 8,
     "ugliness": 6,
     "butchering_quality": 4,
-    "consume_time_modifier": 0.5,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": -0.5 } ] } ],
     "mixed_effect": true,
     "description": "A set of insect-like mandibles have grown around your mouth.  They allow you to eat faster and provide a slicing unarmed attack.  Slightly reduces wet effects.",
     "types": [ "TEETH", "MUZZLE" ],
@@ -5384,7 +5370,7 @@
     "prereqs": [ "MANDIBLES" ],
     "prereqs2": [ "POISONOUS", "POISONOUS2" ],
     "category": [ "SPIDER" ],
-    "consume_time_modifier": 2.0,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": 1 } ] } ],
     "wet_protection": [ { "part": "mouth", "ignored": 1 } ],
     "integrated_armor": [ "integrated_fangs_spider" ]
   },
@@ -5402,7 +5388,7 @@
     "visibility": 8,
     "ugliness": 9,
     "restricts_gear": [ "leg_l", "leg_r", "foot_l", "foot_r", "leg_stub_r", "leg_stub_l" ],
-    "noise_modifier": 0.9,
+    "enchantments": [ { "values": [ { "value": "FOOTSTEP_NOISE", "multiply": -0.1 } ] } ],
     "destroys_gear": true,
     "flags": [ "TOUGH_FEET" ]
   },
@@ -5422,9 +5408,12 @@
     "visibility": 8,
     "ugliness": 9,
     "encumbrance_always": [ [ "leg_l", 10 ], [ "leg_r", 10 ], [ "foot_l", 10 ], [ "foot_r", 10 ] ],
-    "enchantments": [ { "values": [ { "value": "MOVECOST_FLATGROUND_MOD", "multiply": 0.25 } ] } ],
+    "enchantments": [
+      {
+        "values": [ { "value": "MOVECOST_FLATGROUND_MOD", "multiply": 0.25 }, { "value": "FOOTSTEP_NOISE", "multiply": -0.75 } ]
+      }
+    ],
     "restricts_gear": [ "leg_l", "leg_r", "foot_l", "foot_r", "leg_stub_r", "leg_stub_l" ],
-    "noise_modifier": 0.25,
     "destroys_gear": true
   },
   {
@@ -5735,12 +5724,12 @@
         "values": [
           { "value": "MAX_HP", "add": -6 },
           { "value": "STRENGTH", "add": 4 },
+          { "value": "FATIGUE", "multiply": 0.15 },
           { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": 1 },
           { "value": "CARRY_WEIGHT", "multiply": 0.1 }
         ]
       }
     ],
-    "fatigue_modifier": 0.15,
     "restricts_gear": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r", "hand_l", "hand_r", "head", "foot_l", "foot_r" ],
     "destroys_gear": true
   },
@@ -6210,12 +6199,12 @@
         "values": [
           { "value": "BONUS_DODGE", "add": 2 },
           { "value": "MAX_HP", "multiply": -0.3 },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.75 },
-          { "value": "CARRY_WEIGHT", "multiply": -0.5 }
+          { "value": "FOOTSTEP_NOISE", "multiply": -1 },
+          { "value": "CARRY_WEIGHT", "multiply": -0.5 },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.75 }
         ]
       }
-    ],
-    "noise_modifier": 0.0
+    ]
   },
   {
     "type": "mutation",
@@ -6236,12 +6225,12 @@
         "values": [
           { "value": "BONUS_DODGE", "add": 2 },
           { "value": "MAX_HP", "multiply": -0.25 },
+          { "value": "FOOTSTEP_NOISE", "multiply": -1 },
           { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.7 },
           { "value": "CARRY_WEIGHT", "multiply": -0.3 }
         ]
       }
-    ],
-    "noise_modifier": 0.0
+    ]
   },
   {
     "type": "mutation",
@@ -6721,7 +6710,7 @@
     "types": [ "MUZZLE" ],
     "category": [ "BATRACHIAN" ],
     "wet_protection": [ { "part": "mouth", "good": 6 } ],
-    "consume_time_modifier": 0.25,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": -0.75 } ] } ],
     "integrated_armor": [ "integrated_wide_mouth" ]
   },
   {
@@ -6789,7 +6778,7 @@
     "points": -2,
     "description": "You feel nauseated almost constantly, and are more liable to throw up from food poisoning, alcohol, etc.  You can, if desired, think yourself into vomiting, too.",
     "//": "Nauseous means 'to induce nausea.'",
-    "vomit_multiplier": 3,
+    "enchantments": [ { "values": [ { "value": "VOMIT_MUL", "multiply": 2 } ] } ],
     "types": [ "CONSTITUTION" ],
     "prereqs": [ "WEAKSTOMACH" ],
     "changes_to": [ "VOMITOUS" ],
@@ -6814,7 +6803,7 @@
     "name": { "str": "Vomitous" },
     "points": -3,
     "description": "You have a major digestive disorder.  Though it causes you to vomit frequently, you have found that you can trigger your vomit reflex on demand, too.",
-    "vomit_multiplier": 3,
+    "enchantments": [ { "values": [ { "value": "VOMIT_MUL", "multiply": 2 } ] } ],
     "types": [ "CONSTITUTION" ],
     "prereqs": [ "NAUSEA" ],
     "changes_to": [ "EATPOISON" ],
@@ -6842,8 +6831,7 @@
     "types": [ "METABOLISM" ],
     "changes_to": [ "PERSISTENCE_HUNTER2" ],
     "category": [ "LUPINE" ],
-    "fatigue_modifier": -0.1,
-    "stamina_regen_modifier": 0.1
+    "enchantments": [ { "values": [ { "value": "STAMINA_REGEN_MOD", "add": 0.1 }, { "value": "FATIGUE", "multiply": -0.1 } ] } ]
   },
   {
     "type": "mutation",
@@ -6855,8 +6843,7 @@
     "prereqs": [ "PERSISTENCE_HUNTER" ],
     "threshreq": [ "THRESH_LUPINE" ],
     "category": [ "LUPINE" ],
-    "fatigue_modifier": -0.2,
-    "stamina_regen_modifier": 0.2
+    "enchantments": [ { "values": [ { "value": "STAMINA_REGEN_MOD", "add": 0.2 }, { "value": "FATIGUE", "multiply": -0.2 } ] } ]
   },
   {
     "type": "mutation",
@@ -6868,8 +6855,7 @@
     "types": [ "METABOLISM" ],
     "changes_to": [ "HUNGER2", "MET_RAT" ],
     "category": [ "RAT", "ALPHA", "MEDICAL", "ELFA", "BEAST", "SLIME", "RAPTOR", "CHIMERA", "MOUSE", "RABBIT" ],
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": 0.5 } ] } ],
-    "stamina_regen_modifier": 0.1
+    "enchantments": [ { "values": [ { "value": "STAMINA_REGEN_MOD", "add": 0.1 }, { "value": "METABOLISM", "multiply": 0.5 } ] } ]
   },
   {
     "type": "mutation",
@@ -6883,9 +6869,15 @@
     "category": [ "RAT", "MOUSE", "RABBIT" ],
     "healing_awake": 0.133,
     "healing_multiplier": 1.5,
-    "fatigue_modifier": 0.5,
-    "fatigue_regen_modifier": 0.333,
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": 0.333 } ] } ]
+    "enchantments": [
+      {
+        "values": [
+          { "value": "FATIGUE_REGEN", "multiply": 0.333 },
+          { "value": "FATIGUE", "multiply": 0.5 },
+          { "value": "METABOLISM", "multiply": 0.333 }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -6897,8 +6889,7 @@
     "changes_to": [ "HUNGER3" ],
     "types": [ "METABOLISM" ],
     "category": [ "BEAST", "SLIME", "RAPTOR", "CHIMERA" ],
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": 1 } ] } ],
-    "stamina_regen_modifier": 0.3
+    "enchantments": [ { "values": [ { "value": "STAMINA_REGEN_MOD", "add": 0.3 }, { "value": "METABOLISM", "multiply": 1 } ] } ]
   },
   {
     "type": "mutation",
@@ -6910,8 +6901,7 @@
     "leads_to": [ "EATHEALTH" ],
     "types": [ "METABOLISM" ],
     "category": [ "CHIMERA" ],
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": 2 } ] } ],
-    "stamina_regen_modifier": 0.5
+    "enchantments": [ { "values": [ { "value": "STAMINA_REGEN_MOD", "add": 0.5 }, { "value": "METABOLISM", "multiply": 2 } ] } ]
   },
   {
     "type": "mutation",
@@ -6979,7 +6969,7 @@
     "prereqs": [ "SLEEPY" ],
     "types": [ "SLEEP" ],
     "category": [ "FELINE" ],
-    "fatigue_modifier": 1.0
+    "enchantments": [ { "values": [ { "value": "FATIGUE", "multiply": 1 } ] } ]
   },
   {
     "type": "mutation",
@@ -7229,7 +7219,7 @@
     "points": 0,
     "visibility": 10,
     "ugliness": 5,
-    "consume_time_modifier": 1.8,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": 0.8 } ] } ],
     "description": "Though your beak's not suitable for pecking, those flowers out there are a good source of energy.  Examine them to feed.",
     "purifiable": false,
     "types": [ "TEETH" ],
@@ -7347,7 +7337,6 @@
     "points": -2,
     "visibility": 10,
     "ugliness": 10,
-    "consume_time_modifier": 1.1,
     "description": "Your flesh is a pleasing gel-like consistency.  Your bodily functions seem to be moving around, and your leg-equivalents flow comfortably - if a little slower than your old meat-legs.",
     "purifiable": false,
     "leads_to": [ "INT_SLIME", "PER_SLIME" ],
@@ -7361,7 +7350,7 @@
         "bash": 4
       }
     ],
-    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": 0.25 } ] } ]
+    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": 0.25 }, { "value": "CONSUME_TIME_MOD", "multiply": 0.1 } ] } ]
   },
   {
     "type": "mutation",
@@ -8072,8 +8061,15 @@
       { "part": "foot_r", "neutral": 6 }
     ],
     "restricts_gear": [ "foot_l", "foot_r", "leg_stub_r", "leg_stub_l" ],
-    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": 0.2 }, { "value": "MOVECOST_SWIM_MOD", "multiply": -0.15 } ] } ],
-    "noise_modifier": 0.0,
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MOVE_COST", "multiply": 0.2 },
+          { "value": "MOVECOST_SWIM_MOD", "multiply": -0.15 },
+          { "value": "FOOTSTEP_NOISE", "multiply": -1 }
+        ]
+      }
+    ],
     "flags": [ "TOUGH_FEET" ]
   },
   {
@@ -8490,7 +8486,7 @@
     "points": 3,
     "visibility": 10,
     "ugliness": 8,
-    "consume_time_modifier": 0.3,
+    "enchantments": [ { "values": [ { "value": "CONSUME_TIME_MOD", "multiply": -0.7 } ] } ],
     "description": "Your teeth have grown incredibly sharp, and have calcified even further.  In addition to letting you eat much faster, you can use them as a lethal natural weapon, especially in deep water.",
     "prereqs": [ "FANGS" ],
     "types": [ "TEETH" ],
@@ -8687,7 +8683,7 @@
     "name": { "str": "Dungeon Master" },
     "points": 0,
     "description": "Weeks spent picking through manuals and researching topics you aren't versed in has taught you to find what you need to know more quickly.  You read slightly faster, and suffer no reading time penalty for books too complex for you to easily understand.",
-    "reading_speed_multiplier": 0.9,
+    "enchantments": [ { "values": [ { "value": "READING_SPEED_MULTIPLIER", "multiply": -0.1 } ] } ],
     "valid": false,
     "purifiable": false,
     "profession": true,
@@ -8968,12 +8964,15 @@
     "points": 99,
     "valid": false,
     "description": "To cast bug killing spells.  Also increase the cast speed of spells.",
-    "casting_time_multiplier": 0.01,
     "debug": true,
     "enchantments": [
       {
         "condition": "ALWAYS",
-        "values": [ { "value": "MAX_MANA", "add": 500000 }, { "value": "REGEN_MANA", "multiply": 1000 } ]
+        "values": [
+          { "value": "MAX_MANA", "add": 500000 },
+          { "value": "REGEN_MANA", "multiply": 1000 },
+          { "value": "CASTING_TIME_MULTIPLIER", "multiply": -0.99 }
+        ]
       }
     ]
   },
@@ -9030,7 +9029,7 @@
     "points": 99,
     "valid": false,
     "description": "Craft the bug out 50 times faster.",
-    "crafting_speed_multiplier": 50,
+    "enchantments": [ { "values": [ { "value": "CRAFTING_SPEED_MULTIPLIER", "multiply": 50 } ] } ],
     "debug": true
   },
   {
