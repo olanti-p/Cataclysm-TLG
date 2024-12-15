@@ -3,7 +3,7 @@
     "id": "mon_alpha_razorclaw",
     "type": "MONSTER",
     "name": { "str": "alpha razorclaw" },
-    "description": "A blood-red, gigantic razorclaw.  With its sword-like pincers, it serves as a protector of the nest.",
+    "description": "A mutated crustacean the size of a horse.  With its bulky body and sword-like pincers, it serves as a protector of the nest.",
     "default_faction": "razorclaw",
     "bodytype": "crab",
     "species": [ "MUTANT" ],
@@ -36,7 +36,6 @@
     "special_attacks": [ { "id": "grab", "cooldown": 5 }, [ "SHRIEK_ALERT", 6 ], [ "SHRIEK_STUN", 1 ], [ "EAT_CARRION", 120 ] ],
     "anger_triggers": [ "PLAYER_CLOSE", "HURT" ],
     "fear_triggers": [ "FIRE" ],
-    "zombify_into": "mon_meat_cocoon_med",
     "flags": [ "SMELLS", "HEARS", "SEES", "SWIMS", "GRABS", "ARTHROPOD_BLOOD", "QUEEN", "PATH_AVOID_DANGER_1", "EATS" ],
     "armor": { "bash": 20, "cut": 30, "bullet": 24 }
   },
@@ -1020,23 +1019,24 @@
       "baby_flags": [ "AUTUMN" ]
     },
     "dissect": "dissect_crustacean_small",
-    "upgrades": { "half_life": 28, "into": "mon_giant_crayfish" }
+    "upgrades": { "half_life": 28, "into": "mon_giant_crayfish" },
+    "extend": { "flags": [ "SMALL_HIDER", "WATER_CAMOUFLAGE" ] }
   },
   {
     "id": "mon_giant_crayfish",
     "type": "MONSTER",
     "name": { "str_sp": "giant crayfish" },
-    "description": "A mutant, terrestrial variety of crayfish, this massive crustacean resembles a humongous lobster.",
+    "description": "This crustacean, larger than a man, resembles a mud-colored lobster.",
     "default_faction": "crayfish",
     "bodytype": "crab",
     "species": [ "MUTANT" ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 50,
-    "speed": 130,
+    "speed": 90,
     "material": [ "flesh" ],
     "symbol": "y",
-    "color": "red",
+    "color": "brown",
     "morale": 100,
     "melee_skill": 5,
     "melee_dice": 1,
@@ -1055,7 +1055,6 @@
     "anger_triggers": [ "PLAYER_CLOSE", "HURT" ],
     "fear_triggers": [ "FIRE" ],
     "upgrades": { "half_life": 42, "into": "mon_crayfish_mega" },
-    "zombify_into": "mon_meat_cocoon_small",
     "flags": [ "SMELLS", "HEARS", "SEES", "SWIMS", "GRABS", "ARTHROPOD_BLOOD" ],
     "armor": { "cut": 8, "bullet": 6 }
   },
@@ -1077,7 +1076,6 @@
     ],
     "vision_day": 84,
     "dissect": "dissect_crustacean_large",
-    "zombify_into": "mon_meat_cocoon_large",
     "extend": { "flags": [ "DESTROYS", "PUSH_MON", "PUSH_VEH" ] }
   },
   {
@@ -1134,7 +1132,6 @@
     "special_attacks": [ { "id": "grab", "cooldown": 5 }, [ "SHRIEK_ALERT", 6 ], [ "SHRIEK_STUN", 1 ], [ "EAT_CARRION", 120 ] ],
     "anger_triggers": [ "PLAYER_CLOSE", "FRIEND_DIED", "FRIEND_ATTACKED", "HURT" ],
     "fear_triggers": [ "FIRE" ],
-    "zombify_into": "mon_meat_cocoon_small",
     "flags": [ "SMELLS", "HEARS", "SEES", "SWIMS", "GRABS", "ARTHROPOD_BLOOD", "PATH_AVOID_DANGER_1", "EATS" ],
     "armor": { "bash": 10, "cut": 18, "bullet": 14 }
   },
