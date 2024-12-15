@@ -250,9 +250,6 @@ struct mutation_branch {
         // As above but for thirst.
         std::optional<float> thirst_modifier = std::nullopt;
 
-        // Multiplier for consume time, defaulting to 1.
-        // Multiplier for skill rust delay, defaulting to 1.
-
         // Bonus or penalty to social checks (additive).  50 adds 50% to success, -25 subtracts 25%
         social_modifiers social_mods;
 
