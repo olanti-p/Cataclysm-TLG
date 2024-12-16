@@ -180,6 +180,8 @@ static const json_character_flag json_flag_PAIN_IMMUNE( "PAIN_IMMUNE" );
 static const json_character_flag json_flag_SAFECRACK_NO_TOOL( "SAFECRACK_NO_TOOL" );
 static const json_character_flag json_flag_WING_GLIDE( "WING_GLIDE" );
 
+static const limb_score_id limb_score_manip( "manip" );
+
 static const material_id material_bone( "bone" );
 static const material_id material_cac2powder( "cac2powder" );
 static const material_id material_ch_steel( "ch_steel" );
@@ -233,6 +235,7 @@ static const trait_id trait_BADKNEES( "BADKNEES" );
 static const trait_id trait_BEAK_HUM( "BEAK_HUM" );
 static const trait_id trait_BURROW( "BURROW" );
 static const trait_id trait_BURROWLARGE( "BURROWLARGE" );
+static const trait_id trait_CLUMSY( "CLUMSY" );
 static const trait_id trait_DEBUG_HS( "DEBUG_HS" );
 static const trait_id trait_ILLITERATE( "ILLITERATE" );
 static const trait_id trait_INSECT_ARMS_OK( "INSECT_ARMS_OK" );
@@ -480,13 +483,18 @@ void iexamine::gaspump( Character &you, const tripoint &examp )
 
     map_stack items = here.i_at( examp );
     for( auto item_it = items.begin(); item_it != items.end(); ++item_it ) {
+        if( items.empty() ) {
+            add_msg( m_info, _( "There is no fuel ready to be dispensed." ) );
+            return;
+        }
         if( item_it->made_of( phase_id::LIQUID ) ) {
-            /// @note \EFFECT_DEX decreases chance of spilling gas from a pump
-            if( one_in( 10 + you.get_dex() ) ) {
+            // Low manip/clumsy people can spill gas. Dex lowers the chances of this.
+            if( ( you.has_trait( trait_CLUMSY ) || you.get_limb_score( limb_score_manip ) <= 0.66f ) &&
+                one_in( ( you.get_limb_score( limb_score_manip ) * 10.0f ) + you.get_dex() ) ) {
                 add_msg( m_bad, _( "You accidentally spill the %s." ), item_it->type_name() );
                 static const auto max_spill_volume = units::from_liter( 1 );
                 const int max_spill_charges = std::max( 1, item_it->charges_per_volume( max_spill_volume ) );
-                /// @note \EFFECT_DEX decreases amount of gas spilled, if gas is spilled from pump
+                // Dex decreases amount of gas spilled, if gas is spilled from pump.
                 const int qty = rng( 1, max_spill_charges * 8.0 / std::max( 1, you.get_dex() ) );
 
                 item spill = item_it->split( qty );
@@ -503,7 +511,7 @@ void iexamine::gaspump( Character &you, const tripoint &examp )
             return;
         }
     }
-    add_msg( m_info, _( "Out of order." ) );
+    add_msg( m_info, _( "There is no fuel ready to be dispensed." ) );
 }
 
 static bool has_attunement_spell_prereqs( Character &you, const trait_id &attunement )

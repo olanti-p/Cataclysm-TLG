@@ -2079,9 +2079,6 @@ class jmapgen_gaspump : public jmapgen_piece
             const point r( x.get(), y.get() );
             int charges = amount.get();
             dat.m.furn_set( r, f_null );
-            if( charges == 0 ) {
-                charges = rng( 10000, 50000 );
-            }
             itype_id chosen_fuel = fuel.get( dat );
             if( chosen_fuel.is_null() ) {
                 dat.m.place_gas_pump( r, charges );
@@ -6365,7 +6362,9 @@ void map::place_gas_pump( const point &p, int charges, const itype_id &fuel_type
 {
     item fuel( fuel_type, calendar::start_of_cataclysm );
     fuel.charges = charges;
-    add_item( p, fuel );
+    if( fuel.charges > 0 ) {
+        add_item( p, fuel );
+    }
     ter_set( p, ter_id( fuel.fuel_pump_terrain() ) );
 }
 
