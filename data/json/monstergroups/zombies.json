@@ -169,15 +169,19 @@
       { "group": "GROUP_FERAL", "weight": 13 },
       { "monster": "mon_feral_soldier", "weight": 1, "cost_multiplier": 5 },
       { "monster": "mon_zombie_runner", "weight": 20, "cost_multiplier": 5, "pack_size": [ 1, 4 ] },
-      { "monster": "mon_zombie_brainless", "weight": 65 },
-      { "monster": "mon_gas_zombie", "weight": 1, "cost_multiplier": 2, "starts": "7 days" }
+      { "monster": "mon_zombie_brainless", "weight": 65 }
     ]
   },
   {
     "type": "monstergroup",
     "default": "mon_null",
     "name": "GROUP_ZOMBIE_GAS",
-    "monsters": [ { "monster": "mon_gas_zombie", "weight": 250, "cost_multiplier": 2, "starts": "7 days" } ]
+    "monsters": [
+      { "monster": "mon_zombie", "weight": 472, "cost_multiplier": 0 },
+      { "monster": "mon_zombie_technician", "weight": 1, "cost_multiplier": 12 },
+      { "group": "GROUP_FERAL", "weight": 13 },
+      { "monster": "mon_zombie_fireman", "weight": 10, "cost_multiplier": 2 }
+    ]
   },
   {
     "type": "monstergroup",
