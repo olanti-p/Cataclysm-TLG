@@ -9524,7 +9524,7 @@
     "cancels": [ "TRUTHTELLER", "LIAR", "SLOWLEARNER", "FASTLEARNER" ],
     "purifiable": false,
     "types": [ "HUMAN_EMPATHY" ],
-    "enchantments": [ { "value": "LEARNING_FOCUS", "add": 17 } ],
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "LEARNING_FOCUS", "add": 17 } ] } ],
     "category": [ "CEPHALOPOD" ],
     "prereqs": [ "INT_UP_4" ],
     "threshreq": [ "THRESH_CEPHALOPOD" ]
