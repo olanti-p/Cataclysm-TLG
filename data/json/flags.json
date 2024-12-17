@@ -1141,7 +1141,7 @@
   {
     "id": "CANNIBALISM",
     "type": "json_flag",
-    "craft_inherit": true
+    "//": "Obsoleted!"
   },
   {
     "id": "STRICT_HUMANITARIANISM",
