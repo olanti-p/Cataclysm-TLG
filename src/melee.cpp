@@ -2078,7 +2078,8 @@ bool Character::block_hit( Creature *source, bodypart_id &bp_hit, damage_instanc
     // Skill of 10 and no relevant encumbrance almost guarantees a block attempt regardless of stamina.
     // The + 0.01 is a safety margin to prevent floating point precision errors in x_in_y.
     float melee_skill = has_active_bionic( bio_cqb ) ? 5 : get_skill_level( skill_melee );
-    if( !x_in_y( melee_skill * 40.0 * get_limb_score( limb_score_reaction ) - 100 * get_stamina_dodge_modifier(), 200 ) ) {
+    if( !x_in_y( melee_skill * 40.0 * get_limb_score( limb_score_reaction ) - 100 *
+                 get_stamina_dodge_modifier(), 200 ) ) {
         add_msg_debug( debugmode::DF_MELEE, "Block roll failed" );
         return false;
     }
