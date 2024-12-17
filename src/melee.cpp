@@ -2073,10 +2073,12 @@ bool Character::block_hit( Creature *source, bodypart_id &bp_hit, damage_instanc
         return false;
     }
 
-    // Melee skill and reaction score governs if you can react in time
-    // Skill of 5 without relevant encumbrance guarantees a block attempt
+    // Melee skill and reaction score governs if you can react in time.
+    // Skill of 5 with full stamina and no relevant encumbrance guarantees a block attempt.
+    // Skill of 10 and no relevant encumbrance almost guarantees a block attempt regardless of stamina.
+    // The + 0.01 is a safety margin to prevent floating point precision errors in x_in_y.
     float melee_skill = has_active_bionic( bio_cqb ) ? 5 : get_skill_level( skill_melee );
-    if( !x_in_y( melee_skill * 20.0 * get_limb_score( limb_score_reaction ), 100 ) ) {
+    if( !x_in_y( melee_skill * 40.0 * get_limb_score( limb_score_reaction ) - 100 * get_stamina_dodge_modifier(), 200 ) ) {
         add_msg_debug( debugmode::DF_MELEE, "Block roll failed" );
         return false;
     }
@@ -2116,7 +2118,6 @@ bool Character::block_hit( Creature *source, bodypart_id &bp_hit, damage_instanc
         block_bonus = melee::blocking_ability( *shield );
         conductive_shield = shield->conductive();
     }
-
     /** @ARM_STR increases attack blocking effectiveness with a limb or worn/wielded item */
     /** @EFFECT_UNARMED increases attack blocking effectiveness with a limb or worn item */
     if( unarmed || force_unarmed || worn_shield || armed_body_block || ( has_shield &&
@@ -2125,37 +2126,36 @@ bool Character::block_hit( Creature *source, bodypart_id &bp_hit, damage_instanc
         leg_block = martial_arts_data->can_leg_block( *this );
         nonstandard_block = martial_arts_data->can_nonstandard_block( *this );
         if( arm_block || leg_block || nonstandard_block ) {
-            // block_bonus for limb blocks will be added when the limb is decided
+            // block_bonus for limb blocks will be added when the limb is decided.
             block_score = get_arm_str() + unarmed_skill;
         } else {
             // We don't have a shield or a technique. How are we blocking?
             return false;
         }
-        // Do we block with a weapon? Worn shields are already filtered out
-        // And weapon blocks are preferred by best_shield
+        // Do we block with a weapon? Worn shields are already filtered out.
+        // And weapon blocks are preferred by best_shield.
     } else if( has_shield ) {
         block_score = get_arm_str() + block_bonus + melee_skill;
     } else {
-        // Can't block with limbs or items (do not block)
+        // Can't block with limbs or items (do not block).
         return false;
     }
 
     // add martial arts block effectiveness bonus
     block_score += mabuff_block_effectiveness_bonus();
 
-    // weapon blocks are preferred to limb blocks
+    // Weapon blocks are preferred to limb blocks.
     std::string thing_blocked_with;
-    // Do we block with a weapon? Handle melee wear but leave bp the same
+    // Do we block with a weapon? Handle melee wear but leave bp the same.
     if( !( unarmed || force_unarmed || worn_shield || armed_body_block ) && allow_weapon_blocking ) {
         thing_blocked_with = shield->tname();
-        // TODO: Change this depending on damage blocked
+        // TODO: Change this depending on damage blocked.
         float wear_modifier = 1.0f;
         if( source != nullptr && source->is_hallucination() ) {
             wear_modifier = 0.0f;
         }
-
         handle_melee_wear( shield, wear_modifier );
-    }  else {
+    } else {
         // Select part to block with, preferring worn blocking armor if applicable
         bp_hit = select_blocking_part( arm_block, leg_block, nonstandard_block );
         block_score *= get_part( bp_hit )->get_limb_score( limb_score_block );

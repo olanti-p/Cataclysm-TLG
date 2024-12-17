@@ -1223,6 +1223,7 @@ ret_val<void> Character::can_try_doge( bool ignore_dodges_left ) const
     return ret_val<void>::make_success();
 }
 
+// Returns between ~0 (max stamina) and ~1 (0 stamina).
 float Character::get_stamina_dodge_modifier() const
 {
     const double stamina = get_stamina();
@@ -1964,7 +1965,7 @@ void Character::on_try_dodge()
 
     const int base_burn_rate = get_option<int>( STATIC( "PLAYER_BASE_STAMINA_BURN_RATE" ) );
     const float dodge_skill_modifier = ( 20.0f - get_skill_level( skill_dodge ) ) / 20.0f;
-    burn_energy_legs( std::floor( static_cast<float>( base_burn_rate ) * 6.0f *
+    burn_energy_legs( - std::floor( static_cast<float>( base_burn_rate ) * 6.0f *
                                   dodge_skill_modifier ) );
     set_activity_level( EXPLOSIVE_EXERCISE );
 }
@@ -7105,6 +7106,7 @@ void Character::update_stamina( int turns )
     const float base_multiplier = mod_regen + ( has_effect( effect_winded ) ? 0.1f : 1.0f );
     // Ensure multiplier is at least 0.1
     const float stamina_multiplier = std::max<float>( 0.1f, base_multiplier );
+
 
     // Recover some stamina every turn. Start with zero, then increase recovery factor based on
     // mutations, stimulants, and bionics before rolling random recovery based on this factor.
