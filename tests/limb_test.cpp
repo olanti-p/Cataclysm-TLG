@@ -159,7 +159,9 @@ TEST_CASE( "drying_rate", "[character][limb]" )
         dude.update_body_wetness( *weather.weather_precise );
         base_dry++;
     }
+
     REQUIRE( base_dry == Approx( 450 ).margin( 125 ) );
+
 
     // Birdify, clear water
     clear_character( dude, true );
