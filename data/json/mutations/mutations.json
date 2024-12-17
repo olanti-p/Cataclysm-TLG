@@ -664,9 +664,15 @@
     "types": [ "HEALING" ],
     "changes_to": [ "FASTHEALER2", "REGEN_LIZ" ],
     "category": [ "MEDICAL", "PLANT", "BATRACHIAN", "LIZARD", "SLIME", "TROGLOBITE", "CRUSTACEAN" ],
-    "healing_awake": 0.133,
-    "healing_multiplier": 1.5,
-    "mending_modifier": 2.0
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MENDING_MODIFIER", "multiply": 1 },
+          { "value": "REGEN_HP", "multiply": 0.5 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.133 }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -1388,8 +1394,7 @@
     "description": "Your wounds heal a little slower than most.  Your HP whilst asleep, as well as your broken limbs, heal at 75% of the regular rate.",
     "starting_trait": true,
     "types": [ "HEALING" ],
-    "healing_multiplier": 0.75,
-    "mending_modifier": 0.75
+    "enchantments": [ { "values": [ { "value": "MENDING_MODIFIER", "multiply": -0.25 }, { "value": "REGEN_HP", "multiply": -0.25 } ] } ]
   },
   {
     "type": "mutation",
@@ -1401,8 +1406,7 @@
     "valid": false,
     "purifiable": false,
     "types": [ "HEALING" ],
-    "healing_multiplier": 0.33,
-    "mending_modifier": 0.33
+    "enchantments": [ { "values": [ { "value": "MENDING_MODIFIER", "multiply": -0.67 }, { "value": "REGEN_HP", "multiply": -0.67 } ] } ]
   },
   {
     "type": "mutation",
@@ -1414,8 +1418,7 @@
     "valid": false,
     "purifiable": false,
     "types": [ "HEALING" ],
-    "healing_multiplier": 0.1,
-    "mending_modifier": 0.1
+    "enchantments": [ { "values": [ { "value": "MENDING_MODIFIER", "multiply": -0.9 }, { "value": "REGEN_HP", "multiply": -0.9 } ] } ]
   },
   {
     "type": "mutation",
@@ -1427,8 +1430,7 @@
     "valid": false,
     "purifiable": false,
     "types": [ "HEALING" ],
-    "healing_multiplier": 0,
-    "mending_modifier": 0
+    "enchantments": [ { "values": [ { "value": "MENDING_MODIFIER", "multiply": -1 }, { "value": "REGEN_HP", "multiply": -1 } ] } ]
   },
   {
     "type": "mutation",
@@ -2303,9 +2305,15 @@
     "prereqs": [ "FASTHEALER" ],
     "changes_to": [ "REGEN" ],
     "category": [ "PLANT", "BATRACHIAN", "SLIME", "TROGLOBITE" ],
-    "healing_awake": 0.44,
-    "healing_multiplier": 1.5,
-    "mending_modifier": 4.0
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MENDING_MODIFIER", "multiply": 3 },
+          { "value": "REGEN_HP", "multiply": 0.5 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.44 }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -2317,9 +2325,15 @@
     "prereqs": [ "FASTHEALER2" ],
     "threshreq": [ "THRESH_SLIME", "THRESH_TROGLOBITE" ],
     "category": [ "SLIME", "TROGLOBITE" ],
-    "healing_awake": 0.8,
-    "healing_multiplier": 2.5,
-    "mending_modifier": 16.0
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MENDING_MODIFIER", "multiply": 15 },
+          { "value": "REGEN_HP", "multiply": 1.5 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.8 }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -2332,9 +2346,15 @@
     "prereqs": [ "FASTHEALER" ],
     "threshreq": [ "THRESH_LIZARD" ],
     "category": [ "LIZARD" ],
-    "healing_awake": 0.2,
-    "healing_multiplier": 1.5,
-    "mending_modifier": 20.0,
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MENDING_MODIFIER", "multiply": 19 },
+          { "value": "REGEN_HP", "multiply": 0.5 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.2 }
+        ]
+      }
+    ],
     "flags": [ "MEND_ALL" ]
   },
   {
@@ -2675,7 +2695,7 @@
     "visibility": 4,
     "ugliness": 1,
     "bodytemp_modifiers": [ 300, 800 ],
-    "bodytemp_sleep": 250,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.5 } ] } ],
     "description": "You shan't need to migrate south with your layer of down.  It's even better with no apes around to kill you for it!",
     "types": [ "SKIN" ],
     "prereqs": [ "FEATHERS" ],
@@ -2689,7 +2709,7 @@
     "points": 1,
     "visibility": 6,
     "ugliness": 2,
-    "bodytemp_sleep": 75,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.15 } ] } ],
     "description": "Light fur has grown to cover your entire body, providing marginal protection against attacks and slight protection from cold.",
     "category": [ "MOUSE", "BEAST", "RAT", "LUPINE", "URSINE", "FELINE", "RABBIT", "CATTLE", "CHIROPTERAN" ],
     "types": [ "SKIN" ],
@@ -2704,7 +2724,7 @@
     "points": 2,
     "visibility": 10,
     "ugliness": 3,
-    "bodytemp_sleep": 200,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.4 } ] } ],
     "description": "Thick black fur has grown to cover your entire body, providing minor protection against attacks, and considerable protection from cold.",
     "types": [ "SKIN" ],
     "changes_to": [ "URSINE_FUR", "URSINE_FUR_SUMMER" ],
@@ -2719,7 +2739,7 @@
     "points": 4,
     "visibility": 10,
     "ugliness": 3,
-    "bodytemp_sleep": 250,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.5 } ] } ],
     "description": "Your fur has grown out and thickened, providing great protection from attacks as well as considerable insulation.",
     "types": [ "SKIN" ],
     "prereqs": [ "FUR" ],
@@ -2734,7 +2754,7 @@
     "points": 4,
     "visibility": 10,
     "ugliness": 4,
-    "bodytemp_sleep": 225,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.45 } ] } ],
     "description": "You've lost your fluffy undercoat for the summer.  This feels a lot better in the heat, but it's less protective and looks a little bedraggled.",
     "types": [ "SKIN" ],
     "prereqs": [ "FUR" ],
@@ -2747,7 +2767,7 @@
     "points": 2,
     "visibility": 10,
     "ugliness": 3,
-    "bodytemp_sleep": 200,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.4 } ] } ],
     "description": "Dense gray fur has grown to cover your entire body, providing noticeable protection against attacks, and considerable protection from cold.",
     "types": [ "SKIN" ],
     "prereqs": [ "LIGHTFUR" ],
@@ -2762,7 +2782,7 @@
     "points": 2,
     "visibility": 10,
     "ugliness": 3,
-    "bodytemp_sleep": 175,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.35 } ] } ],
     "description": "Your entire body is covered in dense fur, but it's thinned out a bit for the summer, which may provide some relief from the heat at the cost of physical protection.",
     "types": [ "SKIN" ],
     "prereqs": [ "LIGHTFUR" ],
@@ -2775,7 +2795,7 @@
     "points": 2,
     "visibility": 10,
     "ugliness": 3,
-    "bodytemp_sleep": 150,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.3 } ] } ],
     "description": "You've grown sleek fur, providing minor protection against attacks, and some protection from cold.",
     "types": [ "SKIN" ],
     "prereqs": [ "LIGHTFUR" ],
@@ -2803,9 +2823,8 @@
     "points": 2,
     "visibility": 10,
     "ugliness": 6,
-    "bodytemp_sleep": 50,
     "description": "Your skin has mutated into an amalgamation of fur and scales.",
-    "enchantments": [ { "values": [ { "value": "MOVECOST_SWIM_MOD", "multiply": -0.05 } ] } ],
+    "enchantments": [ { "values": [ { "value": "MOVECOST_SWIM_MOD", "multiply": -0.05 }, { "value": "BODYTEMP_SLEEP", "add": 0.1 } ] } ],
     "wet_protection": [
       { "part": "head", "ignored": 2 },
       { "part": "leg_l", "ignored": 5 },
@@ -2831,9 +2850,8 @@
     "points": 4,
     "visibility": 10,
     "ugliness": 8,
-    "bodytemp_sleep": 100,
     "description": "Your skin has mutated into an amalgamation of thickened fur, scales, and more.",
-    "enchantments": [ { "values": [ { "value": "MOVECOST_SWIM_MOD", "multiply": -0.1 } ] } ],
+    "enchantments": [ { "values": [ { "value": "MOVECOST_SWIM_MOD", "multiply": -0.1 }, { "value": "BODYTEMP_SLEEP", "add": 0.2 } ] } ],
     "wet_protection": [
       { "part": "head", "ignored": 3 },
       { "part": "leg_l", "ignored": 8 },
@@ -2859,9 +2877,8 @@
     "points": 6,
     "visibility": 10,
     "ugliness": 12,
-    "bodytemp_sleep": 125,
     "description": "Your skin has warped into a highly protective but inconsistent medley of chitin, scales, fur, bone, and even something close to Kevlar.",
-    "enchantments": [ { "values": [ { "value": "MOVECOST_SWIM_MOD", "multiply": -0.15 } ] } ],
+    "enchantments": [ { "values": [ { "value": "MOVECOST_SWIM_MOD", "multiply": -0.15 }, { "value": "BODYTEMP_SLEEP", "add": 0.25 } ] } ],
     "wet_protection": [
       { "part": "head", "ignored": 3 },
       { "part": "leg_l", "ignored": 10 },
@@ -3108,7 +3125,7 @@
     "visibility": 10,
     "ugliness": 4,
     "bodytemp_modifiers": [ 100, 150 ],
-    "bodytemp_sleep": 50,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.1 } ] } ],
     "description": "You've developed some sort of hair growing out of your chitin.  It's a bit warmer than not having hair.",
     "types": [ "BODY_ARMOR_MOD" ],
     "prereqs": [ "CHITIN", "CHITIN_MOLTED", "CHITIN2", "CHITIN2_MOLTED", "CHITIN3", "CHITIN3_MOLTED" ],
@@ -3123,7 +3140,7 @@
     "visibility": 10,
     "ugliness": 4,
     "bodytemp_modifiers": [ 150, 250 ],
-    "bodytemp_sleep": 75,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.15 } ] } ],
     "description": "Your chitin hair has thickened and spread across your body.  It provides minor warmth and helps you sense nearby vibrations.",
     "types": [ "BODY_ARMOR_MOD" ],
     "prereqs": [ "CHITIN2", "CHITIN3", "CHITIN2_MOLTED", "CHITIN3_MOLTED" ],
@@ -3141,7 +3158,7 @@
     "visibility": 10,
     "ugliness": 4,
     "bodytemp_modifiers": [ 150, 250 ],
-    "bodytemp_sleep": 75,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.15 } ] } ],
     "description": "Your thick exoskeleton boasts a fine coat of hairs that put feline whiskers to shame.",
     "types": [ "BODY_ARMOR_MOD" ],
     "prereqs": [ "CHITIN3", "CHITIN3_MOLTED" ],
@@ -4647,8 +4664,7 @@
     "cost": 9,
     "time": "1 s",
     "kcal": true,
-    "healing_awake": 0.85,
-    "healing_multiplier": 350.0,
+    "enchantments": [ { "values": [ { "value": "REGEN_HP", "multiply": 349 }, { "value": "REGEN_HP_AWAKE", "multiply": 0.85 } ] } ],
     "transform": { "target": "EATHEALTH", "msg_transform": "Your hyper-metabolism slows down.", "active": false, "moves": 0 }
   },
   {
@@ -6867,14 +6883,14 @@
     "prereqs": [ "HUNGER" ],
     "prereqs2": [ "SLEEPY" ],
     "category": [ "RAT", "MOUSE", "RABBIT" ],
-    "healing_awake": 0.133,
-    "healing_multiplier": 1.5,
     "enchantments": [
       {
         "values": [
           { "value": "FATIGUE_REGEN", "multiply": 0.333 },
           { "value": "FATIGUE", "multiply": 0.5 },
-          { "value": "METABOLISM", "multiply": 0.333 }
+          { "value": "METABOLISM", "multiply": 0.333 },
+          { "value": "REGEN_HP", "multiply": 0.5 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.133 }
         ]
       }
     ]
@@ -6981,8 +6997,7 @@
     "types": [ "HEALING" ],
     "changes_to": [ "ROT2" ],
     "category": [ "ELFA", "CHIMERA", "ALPHA" ],
-    "healing_awake": -0.166,
-    "healing_multiplier": 0.75
+    "enchantments": [ { "values": [ { "value": "REGEN_HP", "multiply": -0.25 }, { "value": "REGEN_HP_AWAKE", "multiply": -0.166 } ] } ]
   },
   {
     "type": "mutation",
@@ -6995,8 +7010,7 @@
     "prereqs": [ "ROT1" ],
     "changes_to": [ "ROT3" ],
     "category": [ "CHIMERA", "ALPHA" ],
-    "healing_awake": -0.266,
-    "healing_multiplier": 0.75
+    "enchantments": [ { "values": [ { "value": "REGEN_HP", "multiply": -0.25 }, { "value": "REGEN_HP_AWAKE", "multiply": -0.266 } ] } ]
   },
   {
     "type": "mutation",
@@ -7010,8 +7024,7 @@
     "prereqs2": [ "STR_ALPHA", "DEX_ALPHA", "PER_ALPHA", "INT_ALPHA" ],
     "category": [ "ALPHA" ],
     "threshreq": [ "THRESH_ALPHA" ],
-    "healing_awake": -1.0,
-    "healing_multiplier": 0.75
+    "enchantments": [ { "values": [ { "value": "REGEN_HP", "multiply": -0.25 }, { "value": "REGEN_HP_AWAKE", "multiply": -1 } ] } ]
   },
   {
     "type": "mutation",
@@ -7647,8 +7660,14 @@
     "types": [ "ECTOTHERMIC" ],
     "changes_to": [ "COLDBLOOD2" ],
     "category": [ "FISH", "CEPHALOPOD", "SPIDER", "GASTROPOD", "INSECT", "LIZARD", "BATRACHIAN", "PLANT", "CRUSTACEAN" ],
-    "temperature_speed_modifier": 0.2,
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": -0.333 } ] } ]
+    "enchantments": [
+      {
+        "values": [
+          { "value": "METABOLISM", "multiply": -0.333 },
+          { "value": "SPEED", "add": { "math": [ "temperature_speed_mod(65, 0.2)" ] } }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -7662,8 +7681,14 @@
     "prereqs": [ "COLDBLOOD" ],
     "changes_to": [ "COLDBLOOD3" ],
     "category": [ "INSECT", "LIZARD", "BATRACHIAN", "PLANT", "CRUSTACEAN" ],
-    "temperature_speed_modifier": 0.333,
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": -0.5 } ] } ]
+    "enchantments": [
+      {
+        "values": [
+          { "value": "METABOLISM", "multiply": -0.5 },
+          { "value": "SPEED", "add": { "math": [ "temperature_speed_mod(65, 0.333)" ] } }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -7677,8 +7702,14 @@
     "prereqs": [ "COLDBLOOD2" ],
     "changes_to": [ "COLDBLOOD4" ],
     "category": [ "INSECT", "LIZARD", "BATRACHIAN", "PLANT" ],
-    "temperature_speed_modifier": 0.5,
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": -0.5 } ] } ]
+    "enchantments": [
+      {
+        "values": [
+          { "value": "METABOLISM", "multiply": -0.5 },
+          { "value": "SPEED", "add": { "math": [ "temperature_speed_mod(65, 0.5)" ] } }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -7693,8 +7724,14 @@
     "threshreq": [ "THRESH_LIZARD", "THRESH_PLANT", "THRESH_BATRACHIAN" ],
     "purifiable": false,
     "category": [ "LIZARD", "PLANT", "BATRACHIAN" ],
-    "temperature_speed_modifier": 0.5,
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": -0.5 } ] } ]
+    "enchantments": [
+      {
+        "values": [
+          { "value": "METABOLISM", "multiply": -0.5 },
+          { "value": "SPEED", "add": { "math": [ "temperature_speed_mod(65, 0.5)" ] } }
+        ]
+      }
+    ]
   },
   {
     "type": "mutation",
@@ -7759,7 +7796,7 @@
     "name": { "str": "Shouter" },
     "points": -2,
     "description": "You occasionally shout uncontrollably.",
-    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE_BASE", "add": 2 } ] } ],
+    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE", "add": 2 } ] } ],
     "changes_to": [ "SHOUT2" ],
     "category": [ "RAPTOR", "BEAST", "CHIMERA", "LUPINE" ]
   },
@@ -7769,7 +7806,7 @@
     "name": { "str": "Screamer" },
     "points": -3,
     "description": "You sometimes scream uncontrollably.",
-    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE_BASE", "add": 5 }, { "value": "SHOUT_NOISE_STR_MULT", "add": 1 } ] } ],
+    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE", "add": 5 }, { "value": "SHOUT_NOISE_STR_MULT", "add": 1 } ] } ],
     "prereqs": [ "SHOUT1" ],
     "changes_to": [ "SHOUT3" ],
     "category": [ "BEAST", "CHIMERA", "LUPINE" ]
@@ -7780,7 +7817,7 @@
     "name": { "str": "Howler" },
     "points": -4,
     "description": "You frequently let out a piercing howl.",
-    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE_BASE", "add": 10 }, { "value": "SHOUT_NOISE_STR_MULT", "add": 2 } ] } ],
+    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE", "add": 10 }, { "value": "SHOUT_NOISE_STR_MULT", "add": 2 } ] } ],
     "prereqs": [ "SHOUT2" ],
     "category": [ "CHIMERA", "LUPINE" ]
   },
@@ -8013,7 +8050,7 @@
     "visibility": 10,
     "ugliness": 3,
     "bodytemp_modifiers": [ 500, 750 ],
-    "bodytemp_sleep": 200,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 0.4 } ] } ],
     "mixed_effect": true,
     "description": "Your protective shell has grown large enough to accommodate--if need be--your whole body.  Activate to pull your head and limbs into your shell, trading mobility and vision for warmth and shelter.",
     "types": [ "TORSO_ARMOR" ],
@@ -9207,7 +9244,7 @@
     "visibility": 10,
     "ugliness": 3,
     "bodytemp_modifiers": [ 750, 1500 ],
-    "bodytemp_sleep": 500,
+    "enchantments": [ { "values": [ { "value": "BODYTEMP_SLEEP", "add": 1 } ] } ],
     "description": "Your fur keeps you covered in winter, maintaining heat and allowing you to better tolerate cold temperatures.",
     "types": [ "SKIN" ],
     "prereqs": [ "LIGHTFUR" ],
@@ -9310,7 +9347,7 @@
     "name": { "str": "Booming Voice" },
     "points": 1,
     "description": "You know how to project your voice.  You are able to shout much louder than the average person.",
-    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE_BASE", "add": 10 }, { "value": "SHOUT_NOISE_STR_MULT", "add": 1 } ] } ],
+    "enchantments": [ { "values": [ { "value": "SHOUT_NOISE", "add": 10 }, { "value": "SHOUT_NOISE_STR_MULT", "add": 1 } ] } ],
     "category": [ "BEAST" ]
   },
   {
