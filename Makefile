@@ -146,9 +146,9 @@ export CCACHE_COMMENTS=1
 # Explicitly let 'char' to be 'signed char' to fix #18776
 OTHERS += -fsigned-char
 
-VERSION = 0.I
+VERSION = 1.0-beta
 
-TARGET_NAME = cataclysm
+TARGET_NAME = ctlg
 TILES_TARGET_NAME = $(TARGET_NAME)-tiles
 ifeq ($(NATIVE), emscripten)
   TILES_TARGET_NAME = $(TARGET_NAME)-tiles.js
