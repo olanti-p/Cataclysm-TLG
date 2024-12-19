@@ -72,6 +72,7 @@ static const efftype_id effect_teleglow( "teleglow" );
 
 static const flag_id json_flag_FIT( "FIT" );
 
+static const json_character_flag json_flag_ETHEREAL( "ETHEREAL" );
 static const json_character_flag json_flag_PRED1( "PRED1" );
 static const json_character_flag json_flag_PRED2( "PRED2" );
 static const json_character_flag json_flag_PRED3( "PRED3" );
@@ -524,6 +525,11 @@ static void add_effect_to_target( const tripoint &target, const spell &sp, Creat
                 if( sp.has_flag( spell_flag::LIQUID ) ) {
                     splash_target( target, sp, caster );
                     bodypart_effected = true;
+                } else if( sp.has_flag( spell_flag::TOUCH ) && !guy->has_flag( json_flag_ETHEREAL ) ) {
+                    float hit_chance = guy->worn.coverage_with_flags_exclude( bp, { flag_AURA, flag_SEMITANGIBLE, flag_PERSONAL } );
+                    if( hit_chance < rng( 1, 100 ) ) {
+                        guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
+                    }
                 } else {
                     guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
                     bodypart_effected = true;
