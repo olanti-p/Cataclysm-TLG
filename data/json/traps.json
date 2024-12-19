@@ -736,11 +736,13 @@
     "name": "poison ivy",
     "color": "green",
     "symbol": "^",
-    "visibility": 13,
+    "visibility": 12,
     "avoidance": 8,
     "difficulty": 4,
     "action": "spell",
-    "spell_data": { "id": "sp_poison_ivy" }
+    "spell_data": { "id": "sp_poison_ivy" },
+    "trigger_message_u": "You stepped in poison ivy!",
+    "trigger_message_npc": "<npcname> stepped in poison ivy!"
   },
   {
     "type": "SPELL",
