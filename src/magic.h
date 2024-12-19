@@ -498,7 +498,7 @@ class spell
         int min_leveled_duration( const Creature &caster ) const;
         int min_leveled_accuracy( const Creature &caster ) const;
         int min_leveled_effect_intensity( const Creature &caster ) const;
-        int min_leveled_dodge_training( const Creature &caster ) const;
+        double min_leveled_dodge_training( const Creature &caster ) const;
         int min_leveled_liquid_volume( const Creature &caster ) const;
 
     public:

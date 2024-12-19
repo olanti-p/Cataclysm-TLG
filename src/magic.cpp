@@ -868,7 +868,7 @@ int spell::liquid_volume( Creature &caster ) const
     }
 }
 
-int spell::min_leveled_dot( const Creature &caster ) const
+double spell::min_leveled_dot( const Creature &caster ) const
 {
     dialogue d( get_talker_for( caster ), nullptr );
     return type->min_dot.evaluate( d ) + std::round( get_effective_level() *
