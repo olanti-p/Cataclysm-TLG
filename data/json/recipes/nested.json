@@ -76,18 +76,6 @@
     "difficulty": 1
   },
   {
-    "id": "nested_graded_steel_maces",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "graded steel maces",
-    "description": "Recipes related to constructing different qualities of steel maces.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_mace", "mc_mace", "hc_mace", "ch_mace", "qt_mace" ],
-    "difficulty": 1
-  },
-  {
     "id": "nested_maces",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
@@ -104,8 +92,7 @@
       "mace_pipe",
       "mace_pipe_large",
       "mace_simple",
-      "morningstar",
-      "nested_graded_steel_maces"
+      "morningstar"
     ],
     "difficulty": 1
   },
