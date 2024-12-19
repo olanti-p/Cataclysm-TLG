@@ -37,6 +37,7 @@
     "price": 1,
     "price_postapoc": 1,
     "material": [ "wood" ],
+    "flags": [ "TRADER_AVOID", "TINDER" ],
     "volume": "250 ml"
   },
   {
