@@ -2361,18 +2361,6 @@
     "difficulty": 5
   },
   {
-    "id": "nested_wakizashi",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "name": "wakizashis",
-    "description": "Recipes for making wakizashis.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_wakizashi", "mc_wakizashi", "hc_wakizashi", "ch_wakizashi", "qt_wakizashi" ],
-    "difficulty": 7
-  },
-  {
     "id": "nested_aztec_sword",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
