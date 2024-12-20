@@ -2349,18 +2349,6 @@
     "difficulty": 7
   },
   {
-    "id": "nested_cutlass",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "name": "cutlasses",
-    "description": "Recipes for making cutlasses.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_cutlass", "mc_cutlass", "hc_cutlass", "ch_cutlass", "qt_cutlass" ],
-    "difficulty": 7
-  },
-  {
     "id": "nested_estoc",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",

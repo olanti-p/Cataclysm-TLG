@@ -296,11 +296,6 @@
         [ "qt_wakizashi", -1 ],
         [ "sword_cane", -1 ],
         [ "cutlass", -1 ],
-        [ "lc_cutlass", -1 ],
-        [ "mc_cutlass", -1 ],
-        [ "hc_cutlass", -1 ],
-        [ "ch_cutlass", -1 ],
-        [ "qt_cutlass", -1 ],
         [ "falx", -1 ],
         [ "talwar", -1 ],
         [ "kilij", -1 ]
