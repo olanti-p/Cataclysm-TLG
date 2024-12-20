@@ -2325,18 +2325,6 @@
     "difficulty": 7
   },
   {
-    "id": "nested_broadsword",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "name": "broadswords",
-    "description": "Recipes for making broadswords.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_broadsword", "mc_broadsword", "hc_broadsword", "ch_broadsword", "qt_broadsword" ],
-    "difficulty": 7
-  },
-  {
     "id": "nested_cavalry_sabre",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",

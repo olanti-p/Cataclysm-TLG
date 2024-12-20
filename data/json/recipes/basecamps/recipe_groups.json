@@ -598,7 +598,7 @@
       { "id": "platemail_aventail", "description": " Craft: Armor, Plate Aventail" },
       { "id": "platemail_visored_helm", "description": " Craft: Helm, Visored Plate" },
       { "id": "platemail_gauntlets", "description": " Craft: Armor, Plate Gauntlets" },
-      { "id": "mc_broadsword", "description": " Craft: Sword, Medium Steel Broadsword" },
+      { "id": "broadsword", "description": " Craft: Sword, Broadsword" },
       { "id": "scimitar", "description": " Craft: Sword, Shamshir" },
       { "id": "fire_ax", "description": " Craft: Axe, Fire" },
       { "id": "hacksaw", "description": " Craft: Hacksaw" },

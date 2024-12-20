@@ -172,12 +172,7 @@
         [ "rapier", -1 ],
         [ "talwar", -1 ],
         [ "jian", -1 ],
-        [ "broadsword", -1 ],
-        [ "lc_broadsword", -1 ],
-        [ "mc_broadsword", -1 ],
-        [ "ch_broadsword", -1 ],
-        [ "hc_broadsword", -1 ],
-        [ "qt_broadsword", -1 ]
+        [ "broadsword", -1 ]
       ]
     ]
   },
@@ -238,11 +233,6 @@
     "tools": [
       [
         [ "broadsword", -1 ],
-        [ "lc_broadsword", -1 ],
-        [ "mc_broadsword", -1 ],
-        [ "ch_broadsword", -1 ],
-        [ "hc_broadsword", -1 ],
-        [ "qt_broadsword", -1 ],
         [ "cavalry_sabre", -1 ],
         [ "lc_cavalry_sabre", -1 ],
         [ "mc_cavalry_sabre", -1 ],
