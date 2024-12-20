@@ -416,10 +416,17 @@
     "proficiencies": [
       { "proficiency": "prof_metalworking" },
       { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_bladesmith" }
+      { "proficiency": "prof_bladesmith" },
+      {
+        "proficiency": "prof_plasticworking",
+        "time_multiplier": 1.1,
+        "learning_time_multiplier": 0.1,
+        "skill_penalty": 0
+      }
     ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "GRIND", "level": 2 } ],
+    "components": [ [ [ "plastic_chunk", 1 ] ] ],
     "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ]
   },
   {
