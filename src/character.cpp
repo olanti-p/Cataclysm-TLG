@@ -6308,6 +6308,7 @@ std::string Character::extended_description() const
         nc_color name_color = state_col;
         std::pair<std::string, nc_color> hp_bar = get_hp_bar( get_part_hp_cur( bp ), get_part_hp_max( bp ),
                 false );
+
         ss += colorize( left_justify( bp_heading, longest ), name_color );
         ss += colorize( hp_bar.first, hp_bar.second );
         // Trailing bars. UGLY!

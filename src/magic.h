@@ -47,52 +47,51 @@ class event;
 template <typename E> struct enum_traits;
 
 enum class spell_flag : int {
-    CONCENTRATE, // Focus affects spell fail %.
-    DODGEABLE, // The target can dodge this attack completely if they succeed on a dodge roll against its spell level. Implies NO_DODGE_MITIGATION.
-    EXTRA_EFFECTS_FIRST, // The extra effects are cast before the main spell.
-    FRIENDLY_POLY, // Polymorph spell makes the monster friendly.
-    HOSTILE_SUMMON, // Summon spell always spawns a hostile monster.
-    HOSTILE_50, // Summoned monster spawns friendly 50% of the time.
-    IGNITE_FLAMMABLE, // If spell effect area has any thing flammable, a fire will be produced. LIQUID spells can ignite target characters' equipment.
-    IGNORE_WALLS, // Spell's aoe goes through walls.
-    LIQUID, // This spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor.
-    LIQUID_DAMAGE_ARMOR, // Requires LIQUID. The liquid splashed by this spell can damage items worn by characters according to its liquid_volume amount, damage amount, and type.
-    LIQUID_DAMAGE_TARGET, // Requires LIQUID. Will damage target characters according to the liquid_volume amount that isn't blocked by their armor. Monsters are damaged normally.
-    LOUD, // Spell makes extra noise at target.
-    MAKE_FILTHY, // Requires LIQUID. The liquid splashed by this spell can add the FILTHY flag to items worn by characters, according to its liquid_volume.
-    MUST_HAVE_CLASS_TO_LEARN, // You can't learn the spell unless you already have the class.
-    MUTATE_TRAIT, // Overrides the mutate spell_effect to use a specific trait_id instead of a category.
-    NO_BLOCK_MITIGATION, // This attack does not allow for the usual 1/3 damage mitigation via a block roll.
-    NO_CORPSE_QUIET, // Allow summoned monsters to vanish/leave without leaving a corpse.
-    NO_DODGE_MITIGATION, // This attack does not allow for the usual 1/3 damage mitigation via a dodge roll.
-    NO_EXPLOSION_SFX, // Spell has no visual explosion.
-    NO_FAIL, // This spell cannot fail when you cast it.
-    NO_HANDS, // Hands do not affect spell energy cost.
-    NO_LEGS, // Legs do not affect casting time.
-    NO_PROJECTILE, // Spell's original targeting area can be targeted through walls.
-    NON_MAGICAL, // Ignores spell resistance, which disallows the usual 1/3 damage mitigation available there.
-    PAIN_NORESIST, // Pain altering spells can't be resisted (like with the deadened trait).
     PERMANENT, // Items or creatures spawned with this spell do not disappear and die as normal.
     PERMANENT_ALL_LEVELS, // Items spawned with this spell do not disappear even if the spell is not max level.
     PERCENTAGE_DAMAGE, // The spell deals damage based on the target's current HP.
+    IGNORE_WALLS, // Spell's aoe goes through walls.
+    NO_PROJECTILE, // Spell's original targeting area can be targeted through walls.
+    SWAP_POS, // A projectile spell swaps the positions of the caster and target.
+    HOSTILE_SUMMON, // Summon spell always spawns a hostile monster.
+    HOSTILE_50, // Summoned monster spawns friendly 50% of the time.
     POLYMORPH_GROUP, // Polymorph spell chooses a monster from a group.
-    PSIONIC, // Psychic powers instead of traditional magic.
+    FRIENDLY_POLY, // Polymorph spell makes the monster friendly.
+    SILENT, // Spell makes no noise at target.
+    NO_EXPLOSION_SFX, // Spell has no visual explosion.
+    LIQUID, // This spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor.
+    LIQUID_DAMAGE_ARMOR, // Requires LIQUID. The liquid splashed by this spell can damage items worn by characters according to its liquid_volume amount, damage amount, and type.
+    LIQUID_DAMAGE_TARGET, // Requires LIQUID. Will damage target characters according to the liquid_volume amount that isn't blocked by their armor. Monsters are damaged normally.
+    MAKE_FILTHY, // Requires LIQUID. The liquid splashed by this spell can add the FILTHY flag to items worn by characters, according to its liquid_volume.
+    LOUD, // Spell makes extra noise at target.
+    VERBAL, // Spell makes noise at caster location, mouth encumbrance affects fail %.
+    SOMATIC, // Arm encumbrance affects fail % and casting time (slightly).
+    NO_HANDS, // Hands do not affect spell energy cost.
+    UNSAFE_TELEPORT, // Teleport spell risks killing the caster or others.
+    TARGET_TELEPORT, // Aoe is teleport variance from target.
+    NO_LEGS, // Legs do not affect casting time.
+    CONCENTRATE, // Focus affects spell fail %.
     RANDOM_AOE, // Picks random number between min+increment*level and max instead of normal behavior.
     RANDOM_DAMAGE, // Picks random number between min+increment*level and max instead of normal behavior.
     RANDOM_DURATION, // Picks random number between min+increment*level and max instead of normal behavior.
     RANDOM_TARGET, // Picks a random valid target within your range instead of normal behavior.
     RANDOM_CRITTER, // Same as RANDOM_TARGET but ignores ground.
-    RECHARM, // Charm_monster spell adds to duration of existing charm_monster effect.
-    SILENT, // Spell makes no noise at target.
-    SOMATIC, // Arm encumbrance affects fail % and casting time (slightly).
-    SPAWN_GROUP, // Spawn or summon from an item or monster group, instead of individual item/monster ID.
-    SPAWN_WITH_DEATH_DROPS, // Allow summoned monsters to drop their usual death drops.
-    SPLIT_DAMAGE, // spell apply damage across all limbs. Works only with characters, for monsters do not have limbs
-    SWAP_POS, // A projectile spell swaps the positions of the caster and target.
-    TARGET_TELEPORT, // Aoe is teleport variance from target.
-    UNSAFE_TELEPORT, // Teleport spell risks killing the caster or others.
-    VERBAL, // Spell makes noise at caster location, mouth encumbrance affects fail %.
+    MUTATE_TRAIT, // Overrides the mutate spell_effect to use a specific trait_id instead of a category.
     WONDER, // instead of casting each of the extra_spells, it picks N of them and casts them (where N is std::min( damage(), number_of_spells )).
+    EXTRA_EFFECTS_FIRST, // The extra effects are cast before the main spell.
+    PAIN_NORESIST, // Pain altering spells can't be resisted (like with the deadened trait).
+    NO_FAIL, // This spell cannot fail when you cast it.
+    SPAWN_GROUP, // Spawn or summon from an item or monster group, instead of individual item/monster ID.
+    IGNITE_FLAMMABLE, // If spell effect area has any thing flammable, a fire will be produced. LIQUID spells can ignite target characters' equipment.
+    MUST_HAVE_CLASS_TO_LEARN, // You can't learn the spell unless you already have the class.
+    SPAWN_WITH_DEATH_DROPS, // Allow summoned monsters to drop their usual death drops.
+    NO_CORPSE_QUIET, // Allow summoned monsters to vanish/leave without leaving a corpse.
+    NON_MAGICAL, // Ignores spell resistance, which disallows the usual 1/3 damage mitigation available there.
+    PSIONIC, // Psychic powers instead of traditional magic.
+    RECHARM, // Charm_monster spell adds to duration of existing charm_monster effect.
+    DODGEABLE, // The target can dodge this attack completely if they succeed on a dodge roll against its spell level. Implies NO_DODGE_MITIGATION.
+    NO_DODGE_MITIGATION, // This attack does not allow for the usual 1/3 damage mitigation via a dodge roll.
+    NO_BLOCK_MITIGATION, // This attack does not allow for the usual 1/3 damage mitigation via a block roll.
     LAST
 };
 
@@ -352,9 +351,6 @@ class spell_type
         // the difficulty of casting a spell
         dbl_or_var difficulty;
 
-        // if projectile should shot more than one projectile
-        dbl_or_var multiple_projectiles;
-
         // max level this spell can achieve
         dbl_or_var max_level;
 
@@ -455,7 +451,6 @@ class spell_type
         static const magic_energy_type energy_source_default;
         static const damage_type_id dmg_type_default;
         static const int difficulty_default;
-        static const int multiple_projectiles_default;
         static const int max_level_default;
         static const int base_casting_time_default;
         static const float casting_time_increment_default;
@@ -491,14 +486,14 @@ class spell
 
         // minimum damage including levels
         int min_leveled_damage( const Creature &caster ) const;
-        double min_leveled_dot( const Creature &caster ) const;
+        int min_leveled_dot( const Creature &caster ) const;
         // minimum aoe including levels
         int min_leveled_aoe( const Creature &caster ) const;
         // minimum duration including levels (moves)
         int min_leveled_duration( const Creature &caster ) const;
         int min_leveled_accuracy( const Creature &caster ) const;
         int min_leveled_effect_intensity( const Creature &caster ) const;
-        double min_leveled_dodge_training( const Creature &caster ) const;
+        int min_leveled_dodge_training( const Creature &caster ) const;
         int min_leveled_liquid_volume( const Creature &caster ) const;
 
     public:
@@ -545,8 +540,8 @@ class spell
         int effect_intensity( Creature &caster ) const;
         float dodge_training( Creature &caster ) const;
         int liquid_volume( Creature &caster ) const;
-        double damage_dot( const Creature &caster ) const;
-        damage_over_time_data damage_over_time( const std::vector<bodypart_id> &bps,
+        int damage_dot( const Creature &caster ) const;
+        damage_over_time_data damage_over_time( const std::vector<bodypart_str_id> &bps,
                                                 const Creature &caster ) const;
         dealt_damage_instance get_dealt_damage_instance( Creature &caster ) const;
         dealt_projectile_attack get_projectile_attack( const tripoint &target,
@@ -588,12 +583,10 @@ class spell
         bool can_cast( const Character &guy ) const;
         // can the Character learn this spell?
         bool can_learn( const Character &guy ) const;
-        int get_amount_of_projectiles( const Character &guy ) const;
         // is this spell valid
         bool is_valid() const;
-        int bps_affected() const;
         // is the bodypart affected by the effect
-        bool bp_is_affected( const bodypart_id &bp ) const;
+        bool bp_is_affected( const bodypart_str_id &bp ) const;
         // check if the spell has a particular flag
         bool has_flag( const spell_flag &flag ) const;
         bool has_flag( const std::string &flag ) const;
