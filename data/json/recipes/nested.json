@@ -64,18 +64,6 @@
     "difficulty": 1
   },
   {
-    "id": "nested_steelshod",
-    "type": "nested_category",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "name": "steelshod quarterstaves",
-    "description": "Recipes related to constructing different qualities of steelshod quarterstaves.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_steel_staff", "mc_steel_staff", "hc_steel_staff", "ch_steel_staff", "qt_steel_staff" ],
-    "difficulty": 1
-  },
-  {
     "id": "nested_maces",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",

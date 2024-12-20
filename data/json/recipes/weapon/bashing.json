@@ -1038,9 +1038,9 @@
   {
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
-    "result": "lc_steel_staff",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
+    "result": "steel_staff",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_BASHING",
     "skill_used": "fabrication",
     "difficulty": 2,
     "time": "20 m",
@@ -1052,85 +1052,7 @@
       { "proficiency": "prof_blacksmithing" },
       { "proficiency": "prof_toolsmithing" }
     ],
-    "components": [ [ [ "bo", 1 ] ], [ [ "lc_steel_chunk", 3 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "mc_steel_staff",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "24 m",
-    "autolearn": true,
-    "book_learn": [ [ "textbook_weapwest", 2 ], [ "recipe_melee", 3 ] ],
-    "using": [ [ "blacksmithing_standard", 3 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_toolsmithing" }
-    ],
-    "components": [ [ [ "bo", 1 ] ], [ [ "mc_steel_chunk", 3 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "hc_steel_staff",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "24 m",
-    "autolearn": true,
-    "book_learn": [ [ "textbook_weapwest", 2 ], [ "recipe_melee", 3 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ], [ "hc_steel_standard", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_toolsmithing" }
-    ],
-    "components": [ [ [ "bo", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "ch_steel_staff",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "time": "744m",
-    "autolearn": true,
-    "book_learn": [ [ "textbook_weapwest", 3 ], [ "recipe_melee", 4 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ], [ "mc_steel_standard", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_toolsmithing" },
-      { "proficiency": "prof_case_hardening", "skill_penalty": 0 }
-    ],
-    "components": [ [ [ "bo", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "qt_steel_staff",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 5,
-    "time": "1104m",
-    "autolearn": true,
-    "book_learn": [ [ "textbook_weapwest", 4 ], [ "recipe_melee", 5 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ], [ "mc_steel_standard", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_toolsmithing" },
-      { "proficiency": "prof_quenching", "skill_penalty": 0 }
-    ],
-    "components": [ [ [ "bo", 1 ] ] ]
+    "components": [ [ [ "bo", 1 ] ], [ [ "steel_chunk", 3 ] ] ]
   },
   {
     "type": "recipe",
