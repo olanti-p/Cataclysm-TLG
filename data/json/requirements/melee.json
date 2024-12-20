@@ -321,11 +321,7 @@
         [ "hc_talwar", -1 ],
         [ "ch_talwar", -1 ],
         [ "qt_talwar", -1 ],
-        [ "lc_kilij", -1 ],
-        [ "mc_kilij", -1 ],
-        [ "hc_kilij", -1 ],
-        [ "ch_kilij", -1 ],
-        [ "qt_kilij", -1 ]
+        [ "kilij", -1 ]
       ]
     ]
   },

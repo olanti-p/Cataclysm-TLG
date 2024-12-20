@@ -3258,68 +3258,26 @@
     "relative": { "melee_damage": { "cut": 4 }, "qualities": [ [ "BUTCHER", 3 ] ] }
   },
   {
-    "id": "lc_kilij",
-    "copy-from": "mc_kilij",
-    "type": "TOOL",
-    "name": { "str": "mild steel kilij", "str_pl": "mild steel kilijes" },
-    "description": "A Turkish sabre, the kilij is quite a bit heavier than most Middle Eastern sabres and has a distinctive wide tip called a yelman, which gives it vicious cutting power but means it requires a special scabbard.\n\nThis one has been made of mild steel, and doesn't even have a proper grip or truly sharp edge.",
-    "to_hit": { "grip": "solid", "length": "short", "surface": "line", "balance": "neutral" },
-    "replace_materials": { "mc_steel": "lc_steel", "leather": "lc_steel" },
-    "proportional": { "price_postapoc": 0.75, "price": 0.75 },
-    "delete": { "flags": [ "DURABLE_MELEE" ] },
-    "relative": { "melee_damage": { "cut": -5 }, "qualities": [ [ "BUTCHER", -1 ] ] }
-  },
-  {
-    "id": "mc_kilij",
+    "id": "kilij",
     "type": "TOOL",
     "category": "weapons",
-    "name": { "str": "medium steel kilij", "str_pl": "medium steel kilijes" },
-    "description": "A Turkish sabre, the kilij is quite a bit heavier than most Middle Eastern sabres and has a distinctive wide tip called a yelman, which gives it vicious cutting power but means it requires a special scabbard.\n\nThis one has a proper grip and is made of medium steel.",
+    "name": { "str": "kilij", "str_pl": "kilijes" },
+    "description": "A Turkish sabre, the kilij is quite a bit heavier than most Middle Eastern sabres and has a distinctive wide tip called a yelman, which gives it vicious cutting power but means it requires a special scabbard.",
     "weight": "2200 g",
     "volume": "1250 ml",
     "longest_side": "90 cm",
     "symbol": "/",
     "color": "dark_gray",
     "looks_like": "scimitar",
-    "price": 97000,
-    "price_postapoc": 4000,
-    "to_hit": { "grip": "weapon", "length": "short", "surface": "line", "balance": "neutral" },
-    "material": [ { "type": "leather", "portion": 1.1 }, { "type": "mc_steel", "portion": 144 } ],
-    "repairs_with": [ "mc_steel" ],
+    "price": 72750,
+    "price_postapoc": 3000,
+    "to_hit": { "grip": "solid", "length": "short", "surface": "line", "balance": "neutral" },
+    "material": [ { "type": "leather", "portion": 1.1 }, { "type": "steel", "portion": 144 } ],
+    "repairs_with": [ "steel" ],
     "techniques": [ "WBLOCK_2", "RAPID" ],
-    "qualities": [ [ "CUT", 2 ], [ "BUTCHER", 7 ] ],
+    "qualities": [ [ "CUT", 2 ], [ "BUTCHER", 6 ] ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
     "weapon_category": [ "MEDIUM_SWORDS" ],
-    "melee_damage": { "bash": 5, "cut": 41 }
-  },
-  {
-    "id": "hc_kilij",
-    "copy-from": "mc_kilij",
-    "type": "TOOL",
-    "name": { "str": "high steel kilij", "str_pl": "high steel kilijes" },
-    "description": "A Turkish sabre, the kilij is quite a bit heavier than most Middle Eastern sabres and has a distinctive wide tip called a yelman, which gives it vicious cutting power but means it requires a special scabbard.\n\nThis one has a proper grip and is made of high steel.",
-    "replace_materials": { "mc_steel": "hc_steel" },
-    "proportional": { "price_postapoc": 1.05, "price": 1.05 },
-    "relative": { "melee_damage": { "cut": 2 }, "qualities": [ [ "BUTCHER", 1 ] ] }
-  },
-  {
-    "id": "ch_kilij",
-    "copy-from": "mc_kilij",
-    "type": "TOOL",
-    "name": { "str": "hardened steel kilij", "str_pl": "hardened steel kilijes" },
-    "description": "A Turkish sabre, the kilij is quite a bit heavier than most Middle Eastern sabres and has a distinctive wide tip called a yelman, which gives it vicious cutting power but means it requires a special scabbard.\n\nThis one has a proper grip and is made of hardened steel.",
-    "replace_materials": { "mc_steel": "ch_steel", "leather": "kevlar" },
-    "proportional": { "price_postapoc": 1.1, "price": 1.1 },
-    "relative": { "melee_damage": { "cut": 3 }, "qualities": [ [ "BUTCHER", 2 ] ] }
-  },
-  {
-    "id": "qt_kilij",
-    "copy-from": "mc_kilij",
-    "type": "TOOL",
-    "name": { "str": "tempered steel kilij", "str_pl": "tempered steel kilijes" },
-    "description": "A Turkish sabre, the kilij is quite a bit heavier than most Middle Eastern sabres and has a distinctive wide tip called a yelman, which gives it vicious cutting power but means it requires a special scabbard.\n\nThis one is made of tempered steel, and has a razor's edge and is impeccably balanced.",
-    "replace_materials": { "mc_steel": "qt_steel", "leather": "kevlar" },
-    "proportional": { "price_postapoc": 1.15, "price": 1.15 },
-    "relative": { "melee_damage": { "cut": 4 }, "qualities": [ [ "BUTCHER", 3 ] ] }
+    "melee_damage": { "bash": 5, "cut": 46 }
   }
 ]
