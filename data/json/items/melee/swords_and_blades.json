@@ -2472,30 +2472,10 @@
   },
   {
     "id": "katana",
-    "copy-from": "mc_katana",
-    "type": "TOOL",
-    "name": { "str_sp": "katana" },
-    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.",
-    "replace_materials": { "mc_steel": "steel" }
-  },
-  {
-    "id": "lc_katana",
-    "copy-from": "mc_katana",
-    "type": "TOOL",
-    "name": { "str_sp": "mild steel katana" },
-    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.\n\nMade with mild steel and lacking a proper grip, this is better than the sticks you swung around as a kid, but you know you can do better.",
-    "to_hit": { "grip": "solid", "length": "long", "surface": "line", "balance": "good" },
-    "replace_materials": { "mc_steel": "lc_steel", "leather": "lc_steel" },
-    "proportional": { "price_postapoc": 0.75, "price": 0.75 },
-    "delete": { "flags": [ "DURABLE_MELEE" ] },
-    "relative": { "melee_damage": { "cut": -5 }, "qualities": [ [ "BUTCHER", -1 ] ] }
-  },
-  {
-    "id": "mc_katana",
     "type": "TOOL",
     "category": "weapons",
-    "name": { "str_sp": "medium steel katana" },
-    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.\n\nMade with medium steel and with a grip made of leather wrapped in steel wire, this weapon is comfortable in your hand, though the balance isn't perfect and the edge could be sharper.",
+    "name": { "str_sp": "katana" },
+    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.",
     "weight": "1313 g",
     "volume": "2 L",
     "longest_side": "90 cm",
@@ -2505,48 +2485,18 @@
     "looks_like": "katana",
     "price": 98000,
     "price_postapoc": 4500,
-    "material": [ { "type": "leather", "portion": 1.1 }, { "type": "mc_steel", "portion": 96 } ],
-    "repairs_with": [ "mc_steel" ],
+    "material": [ { "type": "leather", "portion": 1.1 }, { "type": "steel", "portion": 96 } ],
+    "repairs_with": [ "steel" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
     "techniques": [ "RAPID", "WBLOCK_2" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 9 ] ],
+    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 8 ] ],
     "weapon_category": [ "LONG_SWORDS" ],
-    "melee_damage": { "bash": 5, "cut": 33 }
-  },
-  {
-    "id": "hc_katana",
-    "copy-from": "mc_katana",
-    "type": "TOOL",
-    "name": { "str_sp": "high steel katana" },
-    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.\n\nMade with high steel and featuring a sturdy grip, this feels like a proper weapon.  The balance feels right and the blade is quite sharp.",
-    "replace_materials": { "mc_steel": "hc_steel" },
-    "proportional": { "price_postapoc": 1.05, "price": 1.05 },
-    "relative": { "melee_damage": { "cut": 2 }, "qualities": [ [ "BUTCHER", 1 ] ] }
-  },
-  {
-    "id": "ch_katana",
-    "copy-from": "mc_katana",
-    "type": "TOOL",
-    "name": { "str_sp": "hardened steel katana" },
-    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.\n\nMade of hardened steel and with a molded grip that fits your hand perfectly, this weapon looks as good as any you might find in a museum.  The balance is perfect and the edge is as sharp as a razor.",
-    "replace_materials": { "mc_steel": "ch_steel", "leather": "kevlar" },
-    "proportional": { "price_postapoc": 1.1, "price": 1.1 },
-    "relative": { "melee_damage": { "cut": 3 }, "qualities": [ [ "BUTCHER", 2 ] ] }
-  },
-  {
-    "id": "qt_katana",
-    "copy-from": "mc_katana",
-    "type": "TOOL",
-    "name": { "str_sp": "tempered steel katana" },
-    "description": "A rare sword from Japan.  Deadly against unarmored targets, and still very effective against armor.\n\nMade of tempered steel, this is a masterpiece.  The grip, the balance, the blade, all perfect.  This is the peak of the swordsmith's craft.",
-    "replace_materials": { "mc_steel": "qt_steel", "leather": "kevlar" },
-    "proportional": { "price_postapoc": 1.15, "price": 1.15 },
-    "relative": { "melee_damage": { "cut": 4 }, "qualities": [ [ "BUTCHER", 3 ] ] }
+    "melee_damage": { "bash": 5, "cut": 28 }
   },
   {
     "id": "katana_inferior",
-    "copy-from": "mc_katana",
+    "copy-from": "katana",
     "type": "TOOL",
     "name": { "str_sp": "katana" },
     "description": "A rare sword from Japan.  While it's got the right edge and weight, the pommel feels like it'll just snap off, and the blade seems pretty worn.",
@@ -2556,7 +2506,7 @@
   },
   {
     "id": "katana_fake",
-    "copy-from": "mc_katana",
+    "copy-from": "katana",
     "type": "TOOL",
     "name": { "str_sp": "katana" },
     "description": "A dull, cheaply-made replica of a rare sword from Japan.",
@@ -2564,22 +2514,6 @@
     "proportional": { "melee_damage": { "bash": 1.8, "cut": 0.064 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
-  },
-  {
-    "id": "jade_nagamaki",
-    "type": "TOOL",
-    "copy-from": "qt_katana",
-    "name": { "str_sp": "jade nagamaki" },
-    "description": "A master smith painstaikingly flaked its flowing blade from meteoric sea-green stone.  The hilt's cordage is speckled by gold flakes from the tummultous waters where the blade was whet, and the chosen tsuba depicts an all-devouring snake.",
-    "weight": "3258 g",
-    "volume": "3250 ml",
-    "longest_side": "140 cm",
-    "material": [ "monolith" ],
-    "//": "The stone blade isnt fully solid, and the idea is it gets AOE techniques and reach attacks from that (besides actually being quite long), should normally be inferior DPS wise vs a katana or nodachi.",
-    "flags": [ "SPEAR", "REACH_ATTACK", "UNBREAKABLE_MELEE", "SHEATH_SWORD", "NONCONDUCTIVE" ],
-    "techniques": [ "WBLOCK_1", "WIDE", "SPIN" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "uneven" },
-    "melee_damage": { "bash": 10, "cut": 32 }
   },
   {
     "id": "butterfly_swords",
