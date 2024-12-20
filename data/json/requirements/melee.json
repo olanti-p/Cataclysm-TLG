@@ -318,11 +318,6 @@
     "tools": [
       [
         [ "zweihander", -1 ],
-        [ "lc_zweihander", -1 ],
-        [ "mc_zweihander", -1 ],
-        [ "hc_zweihander", -1 ],
-        [ "ch_zweihander", -1 ],
-        [ "qt_zweihander", -1 ],
         [ "nodachi", -1 ],
         [ "kriegsmesser", -1 ]
       ]

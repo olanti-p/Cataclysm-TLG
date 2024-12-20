@@ -135,7 +135,7 @@
       { "id": "pike", "description": " Craft: Spear, Awl Pike" },
       { "id": "rapier", "description": " Craft: Sword, Rapier" },
       { "id": "halligan", "description": " Craft: Halligan Bar" },
-      { "id": "mc_zweihander", "description": " Craft: Sword, Medium Steel Zweihander" },
+      { "id": "zweihander", "description": " Craft: Sword, Zweihander" },
       { "id": "pickaxe", "description": " Craft: Pickaxe" },
       { "id": "hc_steel_lump", "description": " Craft: High Steel, Lump" },
       { "id": "hc_wire", "description": " Craft: High Steel, Wire" },
