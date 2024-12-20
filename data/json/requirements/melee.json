@@ -76,12 +76,7 @@
         [ "glaive", -1 ],
         [ "battleaxe", -1 ],
         [ "lucern_hammer", -1 ],
-        [ "warhammer", -1 ],
-        [ "lc_battleaxe", -1 ],
-        [ "mc_battleaxe", -1 ],
-        [ "hc_battleaxe", -1 ],
-        [ "ch_battleaxe", -1 ],
-        [ "qt_battleaxe", -1 ]
+        [ "warhammer", -1 ]
       ]
     ]
   },
@@ -118,27 +113,12 @@
         [ "knife_combat", -1 ],
         [ "knife_KABAR", -1 ],
         [ "knife_rambo", -1 ],
-        [ "lc_knife_rambo", -1 ],
-        [ "mc_knife_rambo", -1 ],
-        [ "hc_knife_rambo", -1 ],
-        [ "ch_knife_rambo", -1 ],
-        [ "qt_knife_rambo", -1 ],
         [ "knife_rm42", -1 ],
         [ "knife_folding", -1 ],
         [ "knife_trench", -1 ],
-        [ "lc_knife_trench", -1 ],
-        [ "mc_knife_trench", -1 ],
-        [ "hc_knife_trench", -1 ],
-        [ "ch_knife_trench", -1 ],
-        [ "qt_knife_trench", -1 ],
         [ "knife_baselard", -1 ],
         [ "kris", -1 ],
         [ "kukri", -1 ],
-        [ "lc_kukri", -1 ],
-        [ "mc_kukri", -1 ],
-        [ "ch_kukri", -1 ],
-        [ "hc_kukri", -1 ],
-        [ "qt_kukri", -1 ],
         [ "tanto", -1 ],
         [ "karambit", -1 ],
         [ "kirpan", -1 ],
@@ -178,35 +158,11 @@
     "tools": [
       [
         [ "estoc", -1 ],
-        [ "lc_estoc", -1 ],
-        [ "mc_estoc", -1 ],
-        [ "ch_estoc", -1 ],
-        [ "hc_estoc", -1 ],
-        [ "qt_estoc", -1 ],
         [ "sword_cane", -1 ],
         [ "rapier", -1 ],
-        [ "lc_rapier", -1 ],
-        [ "hc_rapier", -1 ],
-        [ "ch_rapier", -1 ],
-        [ "mc_rapier", -1 ],
-        [ "qt_rapier", -1 ],
-        [ "lc_talwar", -1 ],
-        [ "mc_talwar", -1 ],
-        [ "hc_talwar", -1 ],
-        [ "ch_talwar", -1 ],
-        [ "qt_talwar", -1 ],
+        [ "talwar", -1 ],
         [ "jian", -1 ],
-        [ "lc_jian", -1 ],
-        [ "mc_jian", -1 ],
-        [ "hc_jian", -1 ],
-        [ "ch_jian", -1 ],
-        [ "qt_jian", -1 ],
-        [ "broadsword", -1 ],
-        [ "lc_broadsword", -1 ],
-        [ "mc_broadsword", -1 ],
-        [ "ch_broadsword", -1 ],
-        [ "hc_broadsword", -1 ],
-        [ "qt_broadsword", -1 ]
+        [ "broadsword", -1 ]
       ]
     ]
   },
@@ -228,8 +184,7 @@
         [ "sword_bayonet", -1 ],
         [ "butterfly_swords", -1 ],
         [ "arisaka_bayonet", -1 ],
-        [ "survivor_machete", -1 ],
-        [ "survivor_machete_qt", -1 ]
+        [ "survivor_machete", -1 ]
       ]
     ]
   },
@@ -267,65 +222,17 @@
     "tools": [
       [
         [ "broadsword", -1 ],
-        [ "lc_broadsword", -1 ],
-        [ "mc_broadsword", -1 ],
-        [ "ch_broadsword", -1 ],
-        [ "hc_broadsword", -1 ],
-        [ "qt_broadsword", -1 ],
         [ "cavalry_sabre", -1 ],
-        [ "lc_cavalry_sabre", -1 ],
-        [ "mc_cavalry_sabre", -1 ],
-        [ "hc_cavalry_sabre", -1 ],
-        [ "ch_cavalry_sabre", -1 ],
-        [ "qt_cavalry_sabre", -1 ],
         [ "jian", -1 ],
-        [ "lc_jian", -1 ],
-        [ "mc_jian", -1 ],
-        [ "hc_jian", -1 ],
-        [ "ch_jian", -1 ],
-        [ "qt_jian", -1 ],
         [ "scimitar", -1 ],
-        [ "lc_scimitar", -1 ],
-        [ "mc_scimitar", -1 ],
-        [ "hc_scimitar", -1 ],
-        [ "ch_scimitar", -1 ],
-        [ "qt_scimitar", -1 ],
         [ "arming_sword", -1 ],
-        [ "lc_arming_sword", -1 ],
-        [ "mc_arming_sword", -1 ],
-        [ "hc_arming_sword", -1 ],
-        [ "ch_arming_sword", -1 ],
-        [ "qt_arming_sword", -1 ],
         [ "dao", -1 ],
         [ "wakizashi", -1 ],
-        [ "lc_wakizashi", -1 ],
-        [ "mc_wakizashi", -1 ],
-        [ "hc_wakizashi", -1 ],
-        [ "ch_wakizashi", -1 ],
-        [ "qt_wakizashi", -1 ],
         [ "sword_cane", -1 ],
         [ "cutlass", -1 ],
-        [ "lc_cutlass", -1 ],
-        [ "mc_cutlass", -1 ],
-        [ "hc_cutlass", -1 ],
-        [ "ch_cutlass", -1 ],
-        [ "qt_cutlass", -1 ],
         [ "falx", -1 ],
-        [ "lc_falx", -1 ],
-        [ "mc_falx", -1 ],
-        [ "hc_falx", -1 ],
-        [ "ch_falx", -1 ],
-        [ "qt_falx", -1 ],
-        [ "lc_talwar", -1 ],
-        [ "mc_talwar", -1 ],
-        [ "hc_talwar", -1 ],
-        [ "ch_talwar", -1 ],
-        [ "qt_talwar", -1 ],
-        [ "lc_kilij", -1 ],
-        [ "mc_kilij", -1 ],
-        [ "hc_kilij", -1 ],
-        [ "ch_kilij", -1 ],
-        [ "qt_kilij", -1 ]
+        [ "talwar", -1 ],
+        [ "kilij", -1 ]
       ]
     ]
   },
@@ -357,19 +264,7 @@
     "tools": [
       [
         [ "katana", -1 ],
-        [ "lc_katana", -1 ],
-        [ "mc_katana", -1 ],
-        [ "hc_katana", -1 ],
-        [ "ch_katana", -1 ],
-        [ "qt_katana", -1 ],
-        [ "longsword", -1 ],
-        [ "lc_longsword", -1 ],
-        [ "mc_longsword", -1 ],
-        [ "hc_longsword", -1 ],
-        [ "ch_longsword", -1 ],
-        [ "qt_longsword", -1 ],
-        [ "nodachi", -1 ],
-        [ "jade_nagamaki", -1 ]
+        [ "longsword", -1 ]
       ]
     ]
   },
@@ -397,23 +292,8 @@
     "tools": [
       [
         [ "zweihander", -1 ],
-        [ "lc_zweihander", -1 ],
-        [ "mc_zweihander", -1 ],
-        [ "hc_zweihander", -1 ],
-        [ "ch_zweihander", -1 ],
-        [ "qt_zweihander", -1 ],
         [ "nodachi", -1 ],
-        [ "lc_nodachi", -1 ],
-        [ "mc_nodachi", -1 ],
-        [ "hc_nodachi", -1 ],
-        [ "ch_nodachi", -1 ],
-        [ "qt_nodachi", -1 ],
-        [ "kriegsmesser", -1 ],
-        [ "lc_kriegsmesser", -1 ],
-        [ "mc_kriegsmesser", -1 ],
-        [ "hc_kriegsmesser", -1 ],
-        [ "ch_kriegsmesser", -1 ],
-        [ "qt_kriegsmesser", -1 ]
+        [ "kriegsmesser", -1 ]
       ]
     ]
   },
@@ -444,16 +324,7 @@
     "id": "real_great_axes",
     "type": "requirement",
     "//": "Any real, cutting weapons that can be used like an axe; large, heavy head with two sharp sides on a pole.",
-    "tools": [
-      [
-        [ "battleaxe", -1 ],
-        [ "lc_battleaxe", -1 ],
-        [ "mc_battleaxe", -1 ],
-        [ "hc_battleaxe", -1 ],
-        [ "ch_battleaxe", -1 ],
-        [ "qt_battleaxe", -1 ]
-      ]
-    ]
+    "tools": [ [ [ "battleaxe", -1 ] ] ]
   },
   {
     "id": "basic_batons",
@@ -540,11 +411,7 @@
         [ "lucern_hammer", -1 ],
         [ "2h_club_kanabo_studded", -1 ],
         [ "2h_club_kanabo_spiked", -1 ],
-        [ "lc_aztec_sword", -1 ],
-        [ "mc_aztec_sword", -1 ],
-        [ "hc_aztec_sword", -1 ],
-        [ "ch_aztec_sword", -1 ],
-        [ "qt_aztec_sword", -1 ]
+        [ "aztec_sword", -1 ]
       ]
     ]
   },
@@ -578,11 +445,6 @@
     "tools": [
       [
         [ "mace", -1 ],
-        [ "lc_mace", -1 ],
-        [ "mc_mace", -1 ],
-        [ "hc_mace", -1 ],
-        [ "ch_mace", -1 ],
-        [ "qt_mace", -1 ],
         [ "mace_bronze", -1 ],
         [ "morningstar", -1 ]
       ]
@@ -601,11 +463,7 @@
     "tools": [
       [
         [ "i_staff", -1 ],
-        [ "lc_steel_staff", -1 ],
-        [ "mc_steel_staff", -1 ],
-        [ "hc_steel_staff", -1 ],
-        [ "ch_steel_staff", -1 ],
-        [ "qt_steel_staff", -1 ],
+        [ "steel_staff", -1 ],
         [ "q_staff", -1 ],
         [ "bo", -1 ],
         [ "shock_staff", -1 ]
@@ -640,11 +498,7 @@
     "//": "Any real, top-heavy cutting weapons with a long pole and a blade on the end, designed to swing side-to-side.  Think like a sword with a really long handle.",
     "tools": [
       [
-        [ "lc_aztec_spear", -1 ],
-        [ "mc_aztec_spear", -1 ],
-        [ "hc_aztec_spear", -1 ],
-        [ "ch_aztec_spear", -1 ],
-        [ "qt_aztec_spear", -1 ],
+        [ "aztec_spear", -1 ],
         [ "glaive", -1 ],
         [ "halberd", -1 ],
         [ "lajatang", -1 ],
