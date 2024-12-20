@@ -412,11 +412,7 @@
         [ "lucern_hammer", -1 ],
         [ "2h_club_kanabo_studded", -1 ],
         [ "2h_club_kanabo_spiked", -1 ],
-        [ "lc_aztec_sword", -1 ],
-        [ "mc_aztec_sword", -1 ],
-        [ "hc_aztec_sword", -1 ],
-        [ "ch_aztec_sword", -1 ],
-        [ "qt_aztec_sword", -1 ]
+        [ "aztec_sword", -1 ]
       ]
     ]
   },
