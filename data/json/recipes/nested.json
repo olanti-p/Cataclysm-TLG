@@ -2349,18 +2349,6 @@
     "difficulty": 7
   },
   {
-    "id": "nested_longsword",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "name": "longswords",
-    "description": "Recipes for making longswords.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_longsword", "mc_longsword", "hc_longsword", "ch_longsword", "qt_longsword" ],
-    "difficulty": 7
-  },
-  {
     "id": "nested_nodachi",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",

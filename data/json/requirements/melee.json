@@ -301,11 +301,6 @@
       [
         [ "katana", -1 ],
         [ "longsword", -1 ],
-        [ "lc_longsword", -1 ],
-        [ "mc_longsword", -1 ],
-        [ "hc_longsword", -1 ],
-        [ "ch_longsword", -1 ],
-        [ "qt_longsword", -1 ],
         [ "nodachi", -1 ]
       ]
     ]
