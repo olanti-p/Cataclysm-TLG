@@ -386,12 +386,7 @@
         [ "hc_nodachi", -1 ],
         [ "ch_nodachi", -1 ],
         [ "qt_nodachi", -1 ],
-        [ "kriegsmesser", -1 ],
-        [ "lc_kriegsmesser", -1 ],
-        [ "mc_kriegsmesser", -1 ],
-        [ "hc_kriegsmesser", -1 ],
-        [ "ch_kriegsmesser", -1 ],
-        [ "qt_kriegsmesser", -1 ]
+        [ "kriegsmesser", -1 ]
       ]
     ]
   },
