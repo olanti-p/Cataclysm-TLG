@@ -76,12 +76,7 @@
         [ "glaive", -1 ],
         [ "battleaxe", -1 ],
         [ "lucern_hammer", -1 ],
-        [ "warhammer", -1 ],
-        [ "lc_battleaxe", -1 ],
-        [ "mc_battleaxe", -1 ],
-        [ "hc_battleaxe", -1 ],
-        [ "ch_battleaxe", -1 ],
-        [ "qt_battleaxe", -1 ]
+        [ "warhammer", -1 ]
       ]
     ]
   },
@@ -440,16 +435,7 @@
     "id": "real_great_axes",
     "type": "requirement",
     "//": "Any real, cutting weapons that can be used like an axe; large, heavy head with two sharp sides on a pole.",
-    "tools": [
-      [
-        [ "battleaxe", -1 ],
-        [ "lc_battleaxe", -1 ],
-        [ "mc_battleaxe", -1 ],
-        [ "hc_battleaxe", -1 ],
-        [ "ch_battleaxe", -1 ],
-        [ "qt_battleaxe", -1 ]
-      ]
-    ]
+    "tools": [ [ [ "battleaxe", -1 ] ] ]
   },
   {
     "id": "basic_batons",
@@ -574,11 +560,6 @@
     "tools": [
       [
         [ "mace", -1 ],
-        [ "lc_mace", -1 ],
-        [ "mc_mace", -1 ],
-        [ "hc_mace", -1 ],
-        [ "ch_mace", -1 ],
-        [ "qt_mace", -1 ],
         [ "mace_bronze", -1 ],
         [ "morningstar", -1 ]
       ]
