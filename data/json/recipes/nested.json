@@ -2349,17 +2349,6 @@
     "difficulty": 7
   },
   {
-    "id": "nested_estoc",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_PIERCING",
-    "name": "estocs",
-    "description": "Recipes for making estocs.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_estoc", "mc_estoc", "hc_estoc", "ch_estoc", "qt_estoc" ]
-  },
-  {
     "id": "nested_longsword",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",

@@ -168,11 +168,6 @@
     "tools": [
       [
         [ "estoc", -1 ],
-        [ "lc_estoc", -1 ],
-        [ "mc_estoc", -1 ],
-        [ "ch_estoc", -1 ],
-        [ "hc_estoc", -1 ],
-        [ "qt_estoc", -1 ],
         [ "sword_cane", -1 ],
         [ "rapier", -1 ],
         [ "talwar", -1 ],
