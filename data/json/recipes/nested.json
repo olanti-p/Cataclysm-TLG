@@ -2313,18 +2313,6 @@
     "difficulty": 1
   },
   {
-    "id": "nested_arming_sword",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "name": "arming swords",
-    "description": "Recipes for making arming swords.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_arming_sword", "mc_arming_sword", "hc_arming_sword", "ch_arming_sword", "qt_arming_sword" ],
-    "difficulty": 7
-  },
-  {
     "id": "nested_rambo",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
