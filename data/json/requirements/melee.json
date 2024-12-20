@@ -302,11 +302,6 @@
         [ "ch_cutlass", -1 ],
         [ "qt_cutlass", -1 ],
         [ "falx", -1 ],
-        [ "lc_falx", -1 ],
-        [ "mc_falx", -1 ],
-        [ "hc_falx", -1 ],
-        [ "ch_falx", -1 ],
-        [ "qt_falx", -1 ],
         [ "talwar", -1 ],
         [ "kilij", -1 ]
       ]
