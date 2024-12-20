@@ -503,11 +503,7 @@
     "//": "Any real, top-heavy cutting weapons with a long pole and a blade on the end, designed to swing side-to-side.  Think like a sword with a really long handle.",
     "tools": [
       [
-        [ "lc_aztec_spear", -1 ],
-        [ "mc_aztec_spear", -1 ],
-        [ "hc_aztec_spear", -1 ],
-        [ "ch_aztec_spear", -1 ],
-        [ "qt_aztec_spear", -1 ],
+        [ "aztec_spear", -1 ],
         [ "glaive", -1 ],
         [ "halberd", -1 ],
         [ "lajatang", -1 ],
