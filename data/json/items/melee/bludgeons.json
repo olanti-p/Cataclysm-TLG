@@ -185,7 +185,7 @@
     "flags": [ "DURABLE_MELEE", "NONCONDUCTIVE", "SHEATH_AXE" ],
     "weapon_category": [ "HOOKING_WEAPONRY", "GREAT_AXES" ],
     "category": "weapons",
-    "melee_damage": { "bash": 19, "cut": 38 }
+    "melee_damage": { "bash": 19, "cut": 34 }
   },
   {
     "id": "battleaxe_fake",
@@ -1080,7 +1080,7 @@
     "price_postapoc": 6000,
     "qualities": [ [ "HAMMER", 1 ] ],
     "category": "weapons",
-    "melee_damage": { "bash": 40 }
+    "melee_damage": { "bash": 38 }
   },
   {
     "id": "mace_fake",
