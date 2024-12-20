@@ -533,41 +533,19 @@
   },
   {
     "id": "knife_rambo",
-    "copy-from": "mc_knife_rambo",
-    "type": "GENERIC",
-    "name": { "str": "survival knife", "str_pl": "survival knives" },
-    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.",
-    "replace_materials": { "mc_steel": "steel" }
-  },
-  {
-    "id": "lc_knife_rambo",
-    "copy-from": "mc_knife_rambo",
-    "looks_like": "knife_rambo",
-    "type": "GENERIC",
-    "name": { "str": "mild steel survival knife", "str_pl": "mild steel survival knives" },
-    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.  It's custom-made of mild steel, you could probably find better in a hunting store.",
-    "to_hit": { "grip": "solid", "length": "hand", "surface": "point", "balance": "good" },
-    "proportional": { "price_postapoc": 0.75, "price": 0.75 },
-    "delete": { "flags": [ "DURABLE_MELEE" ] },
-    "replace_materials": { "mc_steel": "lc_steel" },
-    "relative": { "melee_damage": { "stab": -1 } }
-  },
-  {
-    "id": "mc_knife_rambo",
-    "looks_like": "knife_rambo",
     "type": "GENERIC",
     "category": "weapons",
-    "name": { "str": "medium steel survival knife", "str_pl": "medium steel survival knives" },
+    "name": { "str": "survival knife", "str_pl": "survival knives" },
     "//": "This isn't really supposed to be a very good knife, or a very good saw.  It's more for looking scary.",
-    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.  Made of medium steel, this is about as good as store bought.",
+    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.",
     "weight": "422 g",
     "volume": "344 ml",
     "longest_side": "36 cm",
-    "price": 2000,
-    "price_postapoc": 500,
+    "price": 1500,
+    "price_postapoc": 375,
     "to_hit": { "grip": "weapon", "length": "hand", "surface": "point", "balance": "good" },
-    "material": [ { "type": "plastic", "portion": 1 }, { "type": "mc_steel", "portion": 48 } ],
-    "repairs_with": [ "mc_steel" ],
+    "material": [ { "type": "plastic", "portion": 1 }, { "type": "steel", "portion": 48 } ],
+    "repairs_with": [ "steel" ],
     "symbol": ";",
     "color": "dark_gray",
     "techniques": [ "WBLOCK_1" ],
@@ -585,40 +563,7 @@
         "description": "A hidden handle compartment.  Unscrew the compass to access."
       }
     ],
-    "melee_damage": { "stab": 14 }
-  },
-  {
-    "id": "hc_knife_rambo",
-    "copy-from": "mc_knife_rambo",
-    "looks_like": "knife_rambo",
-    "type": "GENERIC",
-    "name": { "str": "high steel survival knife", "str_pl": "high steel survival knives" },
-    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.  A competent weapon and tool, if not the best at any of them.",
-    "replace_materials": { "mc_steel": "hc_steel" },
-    "proportional": { "price_postapoc": 1.05, "price": 1.05 },
-    "relative": { "melee_damage": { "stab": 1 } }
-  },
-  {
-    "id": "ch_knife_rambo",
-    "copy-from": "mc_knife_rambo",
-    "looks_like": "knife_rambo",
-    "type": "GENERIC",
-    "name": { "str": "hardened steel survival knife", "str_pl": "hardened steel survival knives" },
-    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.  Now this, this is a knife.",
-    "replace_materials": { "mc_steel": "ch_steel" },
-    "proportional": { "price_postapoc": 1.1, "price": 1.1 },
-    "relative": { "melee_damage": { "stab": 2 } }
-  },
-  {
-    "id": "qt_knife_rambo",
-    "copy-from": "mc_knife_rambo",
-    "looks_like": "knife_rambo",
-    "type": "GENERIC",
-    "name": { "str": "tempered steel survival knife", "str_pl": "tempered steel survival knives" },
-    "description": "This massive knife features a hollow handle with a compass built into the pommel and a row of fearsome-looking saw teeth along the back of its blade.  Time to go Rambo on this apocalypse.",
-    "replace_materials": { "mc_steel": "qt_steel" },
-    "proportional": { "price_postapoc": 1.15, "price": 1.15 },
-    "relative": { "melee_damage": { "stab": 3 } }
+    "melee_damage": { "stab": 13 }
   },
   {
     "id": "knife_rm42",
