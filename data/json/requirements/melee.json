@@ -185,11 +185,7 @@
         [ "ch_rapier", -1 ],
         [ "mc_rapier", -1 ],
         [ "qt_rapier", -1 ],
-        [ "lc_talwar", -1 ],
-        [ "mc_talwar", -1 ],
-        [ "hc_talwar", -1 ],
-        [ "ch_talwar", -1 ],
-        [ "qt_talwar", -1 ],
+        [ "talwar", -1 ],
         [ "jian", -1 ],
         [ "lc_jian", -1 ],
         [ "mc_jian", -1 ],
@@ -311,11 +307,7 @@
         [ "hc_falx", -1 ],
         [ "ch_falx", -1 ],
         [ "qt_falx", -1 ],
-        [ "lc_talwar", -1 ],
-        [ "mc_talwar", -1 ],
-        [ "hc_talwar", -1 ],
-        [ "ch_talwar", -1 ],
-        [ "qt_talwar", -1 ],
+        [ "talwar", -1 ],
         [ "kilij", -1 ]
       ]
     ]
