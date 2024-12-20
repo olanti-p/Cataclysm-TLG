@@ -290,8 +290,7 @@
     "tools": [
       [
         [ "katana", -1 ],
-        [ "longsword", -1 ],
-        [ "nodachi", -1 ]
+        [ "longsword", -1 ]
       ]
     ]
   },
@@ -325,11 +324,6 @@
         [ "ch_zweihander", -1 ],
         [ "qt_zweihander", -1 ],
         [ "nodachi", -1 ],
-        [ "lc_nodachi", -1 ],
-        [ "mc_nodachi", -1 ],
-        [ "hc_nodachi", -1 ],
-        [ "ch_nodachi", -1 ],
-        [ "qt_nodachi", -1 ],
         [ "kriegsmesser", -1 ]
       ]
     ]
