@@ -2396,17 +2396,6 @@
     "difficulty": 7
   },
   {
-    "id": "nested_rapier",
-    "type": "nested_category",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_PIERCING",
-    "name": "rapiers",
-    "description": "Recipes for making rapiers.",
-    "skill_used": "fabrication",
-    "nested_category_data": [ "lc_rapier", "mc_rapier", "hc_rapier", "ch_rapier", "qt_rapier" ]
-  },
-  {
     "id": "nested_scimitar",
     "type": "nested_category",
     "activity_level": "MODERATE_EXERCISE",
