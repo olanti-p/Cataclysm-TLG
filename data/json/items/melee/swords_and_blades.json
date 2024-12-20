@@ -746,35 +746,6 @@
     }
   },
   {
-    "id": "survivor_machete_qt",
-    "copy-from": "survivor_machete",
-    "type": "TOOL",
-    "name": { "str": "tempered steel combat machete" },
-    "description": "This common gardening tool has been customized, rebalanced and tempered to dramatically improve its performance as a weapon.",
-    "variants": [
-      {
-        "id": "survivor_machete_qt_standard",
-        "name": { "str": "tempered steel combat machete" },
-        "description": "This common gardening tool has been customized, rebalanced and tempered to dramatically improve its performance as a weapon.",
-        "color": "dark_gray",
-        "weight": 1,
-        "append": false
-      },
-      {
-        "id": "xedra_machete",
-        "name": { "str": "hazardous environment blade" },
-        "description": "This black tempered steel bushcraft machete has been reinforced for use in exotic environments.  \"HE Blade\" is engraved in the steel.",
-        "color": "dark_gray",
-        "weight": 0,
-        "append": false
-      }
-    ],
-    "looks_like": "survivor_machete",
-    "replace_materials": { "steel": "qt_steel", "wood": "kevlar" },
-    "proportional": { "price_postapoc": 1.15, "price": 1.15 },
-    "relative": { "melee_damage": { "cut": 5 }, "qualities": [ [ "BUTCHER", 4 ] ], "price_postapoc": 2000 }
-  },
-  {
     "id": "machete_gimmick",
     "name": { "str": "machete multitool" },
     "type": "TOOL",
