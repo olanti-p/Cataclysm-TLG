@@ -1,10 +1,10 @@
 [
   {
-    "result": "lc_cavalry_sabre",
+    "result": "cavalry_sabre",
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 7,
     "time": "360 m",
@@ -14,91 +14,10 @@
       { "proficiency": "prof_blacksmithing" },
       { "proficiency": "prof_bladesmith" }
     ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "lc_steel_standard", 2 ] ],
+    "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "GRIND", "level": 2 } ],
+    "components": [ [ [ "leather", 1 ], [ "wire", 2 ] ] ],
     "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ]
-  },
-  {
-    "result": "mc_cavalry_sabre",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 8,
-    "time": "420 m",
-    "book_learn": [ [ "textbook_weapwest", 7 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_bladesmith" }
-    ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "mc_steel_standard", 2 ] ],
-    "qualities": [ { "id": "GRIND", "level": 2 } ],
-    "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "components": [ [ [ "leather", 1 ], [ "mc_wire", 2 ] ] ]
-  },
-  {
-    "result": "hc_cavalry_sabre",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 8,
-    "time": "420 m",
-    "book_learn": [ [ "textbook_weapwest", 7 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_bladesmith" }
-    ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "hc_steel_standard", 2 ] ],
-    "qualities": [ { "id": "GRIND", "level": 2 } ],
-    "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "components": [ [ [ "leather", 1 ], [ "hc_wire", 2 ] ] ]
-  },
-  {
-    "result": "ch_cavalry_sabre",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 9,
-    "time": "19 h",
-    "book_learn": [ [ "textbook_weapwest", 8 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_bladesmith" },
-      { "proficiency": "prof_case_hardening" }
-    ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "lc_steel_standard", 2 ], [ "carbon", 1 ] ],
-    "qualities": [ { "id": "GRIND", "level": 2 } ],
-    "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "components": [ [ [ "scrap_kevlar", 2 ], [ "plastic_chunk", 1 ] ] ]
-  },
-  {
-    "result": "qt_cavalry_sabre",
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 10,
-    "time": "1 d 1 h",
-    "book_learn": [ [ "textbook_weapwest", 9 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_bladesmith" },
-      { "proficiency": "prof_quenching" }
-    ],
-    "using": [ [ "blacksmithing_standard", 8 ], [ "mc_steel_standard", 2 ] ],
-    "qualities": [ { "id": "GRIND", "level": 2 } ],
-    "tools": [ [ [ "hotcut_any", 1, "LIST" ] ], [ [ "metal_tank", -1 ] ], [ [ "water", -120 ], [ "water_clean", -120 ] ] ],
-    "components": [ [ [ "scrap_kevlar", 2 ], [ "plastic_chunk", 1 ] ] ]
   },
   {
     "result": "dao",

@@ -234,11 +234,6 @@
       [
         [ "broadsword", -1 ],
         [ "cavalry_sabre", -1 ],
-        [ "lc_cavalry_sabre", -1 ],
-        [ "mc_cavalry_sabre", -1 ],
-        [ "hc_cavalry_sabre", -1 ],
-        [ "ch_cavalry_sabre", -1 ],
-        [ "qt_cavalry_sabre", -1 ],
         [ "jian", -1 ],
         [ "scimitar", -1 ],
         [ "arming_sword", -1 ],
