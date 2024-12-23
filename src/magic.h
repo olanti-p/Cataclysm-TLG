@@ -55,7 +55,7 @@ enum class spell_flag : int {
     HOSTILE_50, // Summoned monster spawns friendly 50% of the time.
     IGNITE_FLAMMABLE, // If spell effect area has any thing flammable, a fire will be produced. LIQUID spells can ignite target characters' equipment.
     IGNORE_WALLS, // Spell's aoe goes through walls.
-    LIQUID, // This spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor.
+    LIQUID, // This spell is a splash of liquid, the amount proportional to its damage. Characters can block the effects with clothing and armor. Overrides TOUCH.
     LIQUID_DAMAGE_ARMOR, // Requires LIQUID. The liquid splashed by this spell can damage items worn by characters according to its liquid_volume amount, damage amount, and type.
     LIQUID_DAMAGE_TARGET, // Requires LIQUID. Will damage target characters according to the liquid_volume amount that isn't blocked by their armor. Monsters are damaged normally.
     LOUD, // Spell makes extra noise at target.
@@ -78,11 +78,11 @@ enum class spell_flag : int {
     POLYMORPH_GROUP, // Polymorph spell chooses a monster from a group.
     PSIONIC, // Psychic powers instead of traditional magic.
     RANDOM_AOE, // Picks random number between min+increment*level and max instead of normal behavior.
+    RANDOM_CRITTER, // Same as RANDOM_TARGET but ignores ground.
     RANDOM_DAMAGE, // Picks random number between min+increment*level and max instead of normal behavior.
     RANDOM_DURATION, // Picks random number between min+increment*level and max instead of normal behavior.
+    RANDOM_EFFECT_PART, // If no BPs are defined by the spell and effect_str contains an effect, it will try to apply it to one random main body part (no subparts).
     RANDOM_TARGET, // Picks a random valid target within your range instead of normal behavior.
-    TOUCH, // This spell needs to touch bare skin to add an effect.
-    RANDOM_CRITTER, // Same as RANDOM_TARGET but ignores ground.
     RECHARM, // Charm_monster spell adds to duration of existing charm_monster effect.
     SILENT, // Spell makes no noise at target.
     SOMATIC, // Arm encumbrance affects fail % and casting time (slightly).
@@ -91,6 +91,7 @@ enum class spell_flag : int {
     SPLIT_DAMAGE, // spell apply damage across all limbs. Works only with characters, for monsters do not have limbs
     SWAP_POS, // A projectile spell swaps the positions of the caster and target.
     TARGET_TELEPORT, // Aoe is teleport variance from target.
+    TOUCH, // This spell needs to touch bare skin to add an effect, and can be blocked by clothing based on coverage alone.
     UNSAFE_TELEPORT, // Teleport spell risks killing the caster or others.
     VERBAL, // Spell makes noise at caster location, mouth encumbrance affects fail %.
     WONDER, // instead of casting each of the extra_spells, it picks N of them and casts them (where N is std::min( damage(), number_of_spells )).
