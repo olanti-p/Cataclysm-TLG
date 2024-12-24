@@ -223,6 +223,14 @@ static const species_id species_LEECH_PLANT( "LEECH_PLANT" );
 static const species_id species_SLIME( "SLIME" );
 static const species_id species_ZOMBIE( "ZOMBIE" );
 
+static const ter_str_id ter_t_dirt( "t_dirt" );
+static const ter_str_id ter_t_dirtmound( "t_dirtmound" );
+static const ter_str_id ter_t_marloss( "t_marloss" );
+static const ter_str_id ter_t_root_wall( "t_root_wall" );
+static const ter_str_id ter_t_tree( "t_tree" );
+static const ter_str_id ter_t_tree_young( "t_tree_young" );
+static const ter_str_id ter_t_underbrush( "t_underbrush" );
+
 static const trait_id trait_ACIDBLOOD( "ACIDBLOOD" );
 static const trait_id trait_MARLOSS( "MARLOSS" );
 static const trait_id trait_MARLOSS_BLUE( "MARLOSS_BLUE" );
@@ -557,7 +565,7 @@ bool mattack::graze( monster *z )
             !here.has_flag( ter_furn_flag::TFLAG_GRAZER_INEDIBLE, p ) &&
             ( z->amount_eaten <= z->stomach_size ) ) {
             add_msg_if_player_sees( *z, _( "The %1s eats the %2s." ), z->name(), here.tername( p ) );
-            here.ter_set( p, t_dirt );
+            here.ter_set( p, ter_t_dirt );
             z->amount_eaten += 174;
             //Calorie amount is based on the "underbrush" dummy item, as with the grazer mutation.
             return true;
@@ -1602,7 +1610,7 @@ bool mattack::growplants( monster *z )
         // Only affect natural, dirtlike terrain or trees.
         if( !( here.has_flag_ter( ter_furn_flag::TFLAG_DIGGABLE, p ) ||
                here.has_flag_ter( ter_furn_flag::TFLAG_TREE, p ) ||
-               here.ter( p ) == t_tree_young ) ) {
+               here.ter( p ) == ter_t_tree_young ) ) {
             continue;
         }
 
@@ -1610,7 +1618,7 @@ bool mattack::growplants( monster *z )
             // Destroy everything
             here.destroy( p );
             // And then make the ground fertile
-            here.ter_set( p, t_dirtmound );
+            here.ter_set( p, ter_t_dirtmound );
             continue;
         }
 
@@ -1618,7 +1626,7 @@ bool mattack::growplants( monster *z )
         if( !one_in( 4 ) ) {
             if( one_in( 3 ) ) {
                 // If no tree, perhaps underbrush
-                here.ter_set( p, t_underbrush );
+                here.ter_set( p, ter_t_underbrush );
             }
 
             continue;
@@ -1632,7 +1640,7 @@ bool mattack::growplants( monster *z )
             continue;
         }
 
-        here.ter_set( p, t_tree_young );
+        here.ter_set( p, ter_t_tree_young );
         if( critter == nullptr || critter->uncanny_dodge() ) {
             continue;
         }
@@ -1653,7 +1661,7 @@ bool mattack::growplants( monster *z )
     }
     for( const tripoint &p : here.points_in_radius( z->pos(), 5 ) ) {
         const ter_id ter = here.ter( p );
-        if( ter != t_tree_young && ter != t_underbrush ) {
+        if( ter != ter_t_tree_young && ter != ter_t_underbrush ) {
             // Skip as soon as possible to avoid all the checks
             continue;
         }
@@ -1664,13 +1672,13 @@ bool mattack::growplants( monster *z )
             continue;
         }
 
-        if( ter == t_tree_young ) {
+        if( ter == ter_t_tree_young ) {
             // Young tree => tree
             // TODO: Make this deal damage too - young tree can be walked on, tree can't
-            here.ter_set( p, t_tree );
-        } else if( ter == t_underbrush ) {
+            here.ter_set( p, ter_t_tree );
+        } else if( ter == ter_t_underbrush ) {
             // Underbrush => young tree
-            here.ter_set( p, t_tree_young );
+            here.ter_set( p, ter_t_tree_young );
             if( critter != nullptr && !critter->uncanny_dodge() ) {
                 const bodypart_id &hit = body_part_hit_by_plant();
                 critter->add_msg_player_or_npc( m_bad,
@@ -1823,9 +1831,9 @@ bool mattack::triffid_heartbeat( monster *z )
         add_msg( m_warning, _( "The root walls creak around you." ) );
         for( const tripoint &dest : here.points_in_radius( z->pos(), 3 ) ) {
             if( g->is_empty( dest ) && one_in( 4 ) ) {
-                here.ter_set( dest, t_root_wall );
-            } else if( here.ter( dest ) == t_root_wall && one_in( 10 ) ) {
-                here.ter_set( dest, t_dirt );
+                here.ter_set( dest, ter_t_root_wall );
+            } else if( here.ter( dest ) == ter_t_root_wall && one_in( 10 ) ) {
+                here.ter_set( dest, ter_t_dirt );
             }
         }
         // Open blank tiles as long as there's no possible route
@@ -1836,7 +1844,7 @@ bool mattack::triffid_heartbeat( monster *z )
                      rng( player_character.posy(), z->posy() - 3 ) );
             tripoint dest( p, z->posz() );
             tries++;
-            here.ter_set( dest, t_dirt );
+            here.ter_set( dest, ter_t_dirt );
             if( rl_dist( dest, player_character.pos() ) > 3 && g->num_creatures() < 30 &&
                 !creatures.creature_at( dest ) && one_in( 20 ) ) { // Spawn an extra monster
                 mtype_id montype = mon_triffid;
@@ -2177,7 +2185,7 @@ bool mattack::fungus_fortify( monster *z )
                 player_character.unset_mutation( trait_MARLOSS_BLUE );
                 player_character.set_mutation( trait_THRESH_MARLOSS );
                 here.ter_set( player_character.pos(),
-                              t_marloss ); // We only show you the door.  You walk through it on your own.
+                              ter_t_marloss ); // We only show you the door.  You walk through it on your own.
                 get_memorial().add(
                     pgettext( "memorial_male", "Was shown to the Marloss Gateway." ),
                     pgettext( "memorial_female", "Was shown to the Marloss Gateway." ) );
