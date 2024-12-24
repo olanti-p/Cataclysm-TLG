@@ -62,11 +62,6 @@
         "topic": "BEM_CHATTING_VETERANS_TELL_STORY_IMPRESSIVE"
       },
       {
-        "text": "Tell about your slaying of an insectile horror after getting trapped within its lair.",
-        "condition": { "u_has_var": "killed_a_void_spider", "type": "general", "context": "talk", "value": "yes" },
-        "topic": "BEM_CHATTING_VETERANS_TELL_STORY_IMPRESSIVE"
-      },
-      {
         "text": "Recall the long story of how you agreed to help the remnants of the Federal Government.",
         "condition": { "u_has_trait": "PROF_FED" },
         "topic": "BEM_CHATTING_VETERANS_TELL_STORY_BAD"
