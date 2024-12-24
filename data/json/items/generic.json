@@ -950,20 +950,6 @@
   },
   {
     "type": "GENERIC",
-    "id": "egg_void_spider",
-    "name": { "str": "luminescent bead" },
-    "weight": "55 g",
-    "color": "white",
-    "symbol": "o",
-    "description": "Strange lights perpetually glimmer within the sharpened internals of this glass globule.",
-    "price": 44,
-    "price_postapoc": 50,
-    "material": [ "glass" ],
-    "flags": [ "LIGHT_8" ],
-    "volume": "50 ml"
-  },
-  {
-    "type": "GENERIC",
     "id": "tattered_garment",
     "name": { "str_sp": "tattered garments" },
     "category": "other",
