@@ -196,33 +196,6 @@
     "armor": { "cut": 15, "stab": 30, "acid": 3, "bullet": 12, "electric": 3 }
   },
   {
-    "id": "mon_zougar_hunter",
-    "type": "MONSTER",
-    "name": { "str": "spearcat hunter" },
-    "copy-from": "mon_zougar",
-    "description": "This undead cougar's eyes ooze with dark, oily fluid, and its fur is torn, revealing deep, festering wounds.  Its claws and teeth are unnaturally long, and sharpened into dangerous looking spikes",
-    "hp": 200,
-    "speed": 190,
-    "attack_cost": 190,
-    "color": "brown",
-    "melee_dice": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 8 } ],
-    "dodge": 5,
-    "bleed_rate": 50,
-    "vision_night": 12,
-    "special_attacks": [
-      { "id": "scratch", "move_cost": 190, "damage_max_instance": [ { "damage_type": "cut", "amount": 12 } ] },
-      { "type": "leap", "cooldown": 5, "max_range": 5 },
-      {
-        "type": "bite",
-        "cooldown": 10,
-        "move_cost": 190,
-        "damage_max_instance": [ { "damage_type": "stab", "amount": 12, "armor_multiplier": 0.7 } ]
-      }
-    ],
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "BASHES", "POISON", "NO_BREATHE", "REVIVES", "CLIMBS", "PUSH_MON", "FILTHY" ]
-  },
-  {
     "id": "mon_zombear_skeleton",
     "type": "MONSTER",
     "name": { "str": "skeletal zombear" },
@@ -248,33 +221,6 @@
     ],
     "flags": [ "SEES", "HEARS", "GRABS", "REVIVES", "NO_BREATHE", "POISON", "FILTHY" ],
     "armor": { "bash": 2, "cut": 17, "stab": 30, "acid": 3, "bullet": 32, "electric": 3 }
-  },
-  {
-    "id": "mon_zougar_shady",
-    "type": "MONSTER",
-    "name": { "str": "shadowcat" },
-    "copy-from": "mon_zougar",
-    "description": "An uncanny shadow envelops this creature, as if light itself were too repulsed to touch it.  All you can make out is the outline of a large, shambling cat.",
-    "color": "light_gray",
-    "vision_day": 3,
-    "bleed_rate": 50,
-    "vision_night": 45,
-    "harvest": "zombie_fur_shadow",
-    "flags": [
-      "SEES",
-      "HEARS",
-      "SMELLS",
-      "STUMBLES",
-      "WARM",
-      "KEENNOSE",
-      "GOODHEARING",
-      "BASHES",
-      "POISON",
-      "NO_BREATHE",
-      "REVIVES",
-      "FILTHY",
-      "NIGHT_INVISIBILITY"
-    ]
   },
   {
     "id": "mon_zombear_acidic",

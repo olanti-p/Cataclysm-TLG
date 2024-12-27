@@ -129,7 +129,7 @@
       "item": { "I": [ { "item": "jack_small", "chance": 100 }, { "item": "lug_wrench", "chance": 100 } ] },
       "items": { "I": [ { "item": "wheel_spare", "chance": 100 }, { "item": "wheel_busted", "chance": 100 } ] },
       "fields": { "~": { "field": "fd_blood", "intensity": [ 1, 3 ] } },
-      "place_nested": [ { "chunks": [ "24x24_mayhem_tire_change_robbed", "24x24_mayhem_tire_change_wolves" ], "x": 0, "y": 0 } ],
+      "place_nested": [ { "chunks": [ "24x24_mayhem_tire_change_robbed", "24x24_mayhem_tire_change_coyotes" ], "x": 0, "y": 0 } ],
       "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ]
     }
   },
@@ -185,7 +185,7 @@
   {
     "type": "mapgen",
     "method": "json",
-    "nested_mapgen_id": "24x24_mayhem_tire_change_wolves",
+    "nested_mapgen_id": "24x24_mayhem_tire_change_coyotes",
     "object": {
       "mapgensize": [ 24, 24 ],
       "rows": [
@@ -217,20 +217,20 @@
       "items": { "C": [ { "item": "corpses", "chance": 100 }, { "item": "guns_shotgun_common_display", "chance": 80 } ] },
       "place_item": [ { "item": "9mm_casing", "x": [ 15, 17 ], "y": [ 14, 16 ], "repeat": 9, "chance": 50 } ],
       "fields": { "~": { "field": "fd_gibs_flesh", "intensity": [ 1, 3 ] }, "C": { "field": "fd_gibs_flesh", "intensity": [ 1, 3 ] } },
-      "place_nested": [ { "chunks": [ "24x24_mayhem_tire_change_wolves_north", "24x24_mayhem_tire_change_wolves_south" ], "x": 0, "y": 0 } ],
+      "place_nested": [ { "chunks": [ "24x24_mayhem_tire_change_coyotes_north", "24x24_mayhem_tire_change_coyotes_south" ], "x": 0, "y": 0 } ],
       "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "nested_mapgen_id": "24x24_mayhem_tire_change_wolves_north",
+    "nested_mapgen_id": "24x24_mayhem_tire_change_coyotes_north",
     "object": {
       "mapgensize": [ 24, 24 ],
       "place_nested": [
-        { "chunks": [ "1x1_dead_wolf" ], "x": [ 10, 14 ], "y": [ 10, 14 ] },
-        { "chunks": [ "1x1_dead_wolf", "null" ], "x": [ 10, 14 ], "y": [ 10, 14 ] },
-        { "chunks": [ "1x1_dead_wolf", "null" ], "x": [ 10, 14 ], "y": [ 10, 14 ] }
+        { "chunks": [ "1x1_dead_coyote" ], "x": [ 10, 14 ], "y": [ 10, 14 ] },
+        { "chunks": [ "1x1_dead_coyote", "null" ], "x": [ 10, 14 ], "y": [ 10, 14 ] },
+        { "chunks": [ "1x1_dead_coyote", "null" ], "x": [ 10, 14 ], "y": [ 10, 14 ] }
       ],
       "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ]
     }
@@ -238,13 +238,13 @@
   {
     "type": "mapgen",
     "method": "json",
-    "nested_mapgen_id": "24x24_mayhem_tire_change_wolves_south",
+    "nested_mapgen_id": "24x24_mayhem_tire_change_coyotes_south",
     "object": {
       "mapgensize": [ 24, 24 ],
       "place_nested": [
-        { "chunks": [ "1x1_dead_wolf" ], "x": [ 10, 14 ], "y": [ 16, 20 ] },
-        { "chunks": [ "1x1_dead_wolf", "null" ], "x": [ 10, 14 ], "y": [ 16, 20 ] },
-        { "chunks": [ "1x1_dead_wolf", "null" ], "x": [ 10, 14 ], "y": [ 16, 20 ] }
+        { "chunks": [ "1x1_dead_coyote" ], "x": [ 10, 14 ], "y": [ 16, 20 ] },
+        { "chunks": [ "1x1_dead_coyote", "null" ], "x": [ 10, 14 ], "y": [ 16, 20 ] },
+        { "chunks": [ "1x1_dead_coyote", "null" ], "x": [ 10, 14 ], "y": [ 16, 20 ] }
       ],
       "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ]
     }
@@ -252,10 +252,10 @@
   {
     "type": "mapgen",
     "method": "json",
-    "nested_mapgen_id": "1x1_dead_wolf",
+    "nested_mapgen_id": "1x1_dead_coyote",
     "object": {
       "mapgensize": [ 1, 1 ],
-      "place_corpses": [ { "group": "GROUP_WOLFS", "age": 3, "x": 0, "y": 0 } ],
+      "place_corpses": [ { "group": "GROUP_COYOTES", "age": 3, "x": 0, "y": 0 } ],
       "place_fields": [ { "field": "fd_blood", "x": 0, "y": 0, "intensity": [ 1, 3 ] } ],
       "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ]
     }
