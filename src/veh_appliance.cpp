@@ -463,17 +463,9 @@ void veh_app_interact::rename()
 
 void veh_app_interact::remove()
 {
-    map &here = get_map();
-    const tripoint a_point_bub( veh->mount_to_tripoint( a_point ) );
-
-    vehicle_part *vp;
-    if( auto sel_part = here.veh_at( a_point_bub ).part_with_feature( VPFLAG_APPLIANCE, false ) ) {
-        vp = &sel_part->part();
-    } else {
-        int const part = veh->part_at( veh->coord_translate( a_point ) );
-        vp = &veh->part( part >= 0 ? part : 0 );
-    }
-    const vpart_info &vpinfo = vp->info();
+    int const part = veh->part_at( a_point );
+    vehicle_part &vp = veh->part( part >= 0 ? part : 0 );
+    const vpart_info &vpinfo = vp.info();
     const requirement_data reqs = vpinfo.removal_requirements();
     Character &you = get_player_character();
     const inventory &inv = you.crafting_inventory();
@@ -513,7 +505,7 @@ void veh_app_interact::remove()
 
 void veh_app_interact::plug()
 {
-    const int part = veh->part_at( veh->coord_translate( a_point ) );
+    const int part = veh->part_at( a_point );
     const tripoint pos = veh->global_part_pos3( part );
     item cord( "power_cord" );
     cord.link_to( *veh, a_point, link_state::automatic );
@@ -559,15 +551,9 @@ void veh_app_interact::merge()
 
 void veh_app_interact::populate_app_actions()
 {
-    map &here = get_map();
-    vehicle_part *vp;
-    const tripoint a_point_bub( veh->mount_to_tripoint( a_point ) );
-    if( auto sel_part = here.veh_at( a_point_bub ).part_with_feature( VPFLAG_APPLIANCE, false ) ) {
-        vp = &sel_part->part();
-    } else {
-        const int part = veh->part_at( veh->coord_translate( a_point ) );
-        vp = &veh->part( part >= 0 ? part : 0 );
-    }
+
+    int const part = veh->part_at( a_point );
+    const vehicle_part &vp = veh->part( part >= 0 ? part : 0 );
 
     const std::string ctxt_letters = ctxt.get_available_single_char_hotkeys();
     imenu.entries.clear();
