@@ -496,18 +496,17 @@ void veh_app_interact::remove()
     } else if( query_yn( _( "Are you sure you want to take down the %s?" ), veh->name ) ) {
         act = player_activity( ACT_VEHICLE, to_moves<int>( time ), static_cast<int>( 'O' ) );
         act.str_values.push_back( vpinfo.id.str() );
-        const point q = veh->coord_translate( vp.mount );
-        map &here = get_map();
         for( const tripoint &p : veh->get_points( true ) ) {
             act.coord_set.insert( here.getabs( p ) );
         }
-        act.values.push_back( here.getabs( veh->global_pos3() ).x + q.x );
-        act.values.push_back( here.getabs( veh->global_pos3() ).y + q.y );
+        const tripoint a_point_abs( here.getabs( a_point_bub ) );
+        act.values.push_back( a_point_abs.x );
+        act.values.push_back( a_point_abs.y );
         act.values.push_back( a_point.x );
         act.values.push_back( a_point.y );
         act.values.push_back( -a_point.x );
         act.values.push_back( -a_point.y );
-        act.values.push_back( veh->index_of_part( &vp ) );
+        act.values.push_back( veh->index_of_part( vp ) );
     }
 }
 
@@ -596,7 +595,7 @@ void veh_app_interact::populate_app_actions()
     app_actions.emplace_back( [this]() {
         remove();
     } );
-    imenu.addentry( -1, veh->can_unmount( vp ).success(), ctxt.keys_bound_to( "REMOVE" ).front(),
+    imenu.addentry( -1, veh->can_unmount( *vp, true ).success(), ctxt.keys_bound_to( "REMOVE" ).front(),
                     ctxt.get_action_name( "REMOVE" ) );
     // Plug
     app_actions.emplace_back( [this]() {
