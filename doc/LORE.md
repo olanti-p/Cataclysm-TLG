@@ -1,196 +1,40 @@
-# Faction Lore
+# Lore of Cataclysm: The Last Generation
 
-## The Blob
+The world did not end overnight.
 
-### Lore owner: ?
+## Timeline
 
-| Faction synopis | Last Updated |
-| --- | --- |
-| Placeholder text, maybe one or two paragraphs | 06/15/2023 |
-| Faction Goals | 06/15/2023 |
-| Development Goals | 06/15/2023 |
-
-### The Blob Questions
-
-| Question | Answer | Last Update |
-| --- | --- | --- |
-| Can the player defeat the Blob? | No. The Blob has already won. It can't be killed, repelled, or otherwise negated. The Yrax have been working on this problem for millenia and will continue working on it for a much longer period of time. The Exodii don't have the idle time to think about winning, it takes all their energy just to keep gathering enough supplies and recruits to survive between jumps. | 06/15/2023 |
-| Can the Blob infection be cured? | No. The infection is effectively everywhere on Earth, in every drop of water, in every living organism. | 06/15/2023 |
-
-## Exodii
-
-### Lore owner: @I-am_erk
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs | 06/15/2023 |
-| Faction Goals | 06/15/2023 |
-| Development Goals | 06/15/2023 |
-
-### Exodii Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-| Can I join the Exodii? | Not at this time, though they will continue to provide quests as the player's relationship with them improves. | 06/15/2023 |
-| Why does Rubik talk like that? Why can't I talk to the quads? | Exodii are not a homogenous group with a single spoken language. Rubik happens to speak as close to modern English as any Exodii, though there are some phrases that don't translate well. | 06/15/2023 |
-| What do the Exodii eat? | I_am_erk is working on an Exodii NPC who manages their gardens. They're interested in any seeds and samples that can be obtained, presumably cultivating robust crops. For obvious reasons, they likely ignore local game. | 07/19/2022 |
-
-## Hell's Raiders
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### Hell's Raiders Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## Hub-01
-
-### Lore owner: @Candlebury
-
-| Faction synopis | Last Updated |
-| --- | --- |
-| Placeholder text, maybe one or two paragraphs | 06/15/2023 |
-| Faction Goals | 06/15/2023 |
-| Development Goals | 06/15/2023 |
-
-### Hub-01 Questions
-
-| Question | Answer | Last Update |
-| --- | --- | --- |
-| Why are they showing as hostile? I didn't do anything to them! | This is a design issue, the faction should not accept outsiders in their base, and setting them to hostile allows them to shoot on sight while the Intercom can interact with the survivor normally. | 06/15/2023 |
-
-## Isherwoods
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### Isherwoods Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## Mycus
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### Mycus Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## Nether
-
-### Lore owner: @Maleclypse
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | Tears in reality to have environmental seepage that matches whatever monsters are around the portal.  JSONified tears in reality.  Portals that take the player into pocket dimensions with alternative environments and physics.|
-
-### Nether Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## Refugee Center
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### Refugee Center Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## Triffids
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### Triffids Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## The Old Guard
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### The Old Guard Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## Yrax
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### Yrax Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
-
-## XEDRA
-
-### Lore owner:
-
-| Faction synopis | Last Updated |
-| --- | ---|
-| Placeholder text, maybe one or two paragraphs |  |
-| Faction Goals |  |
-| Development Goals | |
-
-### XEDRA Questions
-
-| Question | Answer | Last Update |
-| --- | ---| --- |
-|  |  |  |
+- 20 years in the past: Scientists manage to access another dimension, the Nether.
+  They bring back a sample.
+  Unbeknownst to them, a grave threat slithers with that into this world: The blob.
+  As soon as it gains access to the world, it begins infecting it.
+- 15 years ago: Some animals display strange mutations, plants are dying. Crops are failing.
+  The situation is apparent now, but the cold war keeps on smoldering.
+  A seed of paranoia has been planted when the cold war originally began and the blob influence
+  is making it sprout, resulting in the three superpowers accusing each other of causing the
+  effects of the blob.
+- 3 years ago: The blob-caused ecological problems worsen and it has become known that these
+  are happening on a worldwide scale.
+  Winter came and went, but a lot of the trees stayed bare.
+  There were crop failures; Some sort of pesticide had ruined the soil, they said.
+  It sure didn't help with the invasive locusts. The weather got worse, the bugs got bigger, and things got weirder.
+- 2 years ago: Supplies begin to dwindle.
+  People are posting online about missing family members, cryptids and lights in the sky.
+  They say a whole town disappeared out west.
+  Some guys in unmarked vans cordoned it off. It was in the news one day, and the next it wasn't.
+  Tensions between the 3 superpowers are heightened.
+- 1 year ago: The headlines flew by so fast that society just got numb to the fact that the whole world was slowly losing its mind.
+- 6 months ago: Fueled by blob psychosis and egregious goods shortages, riots start happening.
+- 3 months ago: The riots worsen as food and other goods are already very scarce.
+  People rise up and fight against the police, leading to riot control as well as police bots being deployed everywhere.
+- 1 month ago: Insurgencies happen and militias are formed, which continue clashing with police forces.
+  Rhode island declares secession. Independent rebel groups pop up, their militias claiming land and warring against each other,
+  competing for precious supplies and committing atrocities.
+- 3 weeks ago: Blob saturation reaches a critical level, leading to humans and big enough other animals reanimating.
+- 2 weeks ago: The tensions and wars escalate. Atomic bombs are being used.
+  As the skies are seared by atomic fire, and the atmosphere is dense with psychic echoes screaming in terror, reality is torn apart.
+  Gateways to the Nether appear, some straight up swallowing nukes that are still on route.
+  Untold horrors emerge, from giant, eldritch kaijus to barely visible, lurking nightmares.
+  The vast majority of people have no to very little memories of this event,
+  their brains being rended by the supernatural and unable to comprehend the shattered reality.
+- Today: Start of game. Due to atomic weapons being used and other weather anomalies, winters are harsher.
