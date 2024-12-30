@@ -684,7 +684,7 @@
   {
     "id": "mon_zeer",
     "type": "MONSTER",
-    "name": { "str": "zombie deer" },
+    "name": { "str_sp": "zombie deer" },
     "looks_like": "mon_deer",
     "description": "The ragged remains of this woodland ungulate stagger madly about in search of anything that breathes.",
     "default_faction": "zombie",
@@ -715,7 +715,7 @@
   {
     "id": "mon_zeindeer",
     "type": "MONSTER",
-    "name": { "str": "zeindeer" },
+    "name": { "str_sp": "zeindeer" },
     "looks_like": "mon_zeer",
     "description": "Once a majestic caribou, this undead creature barely resembles Santa's helpful reindeer and seems to only be interested in human flesh.",
     "default_faction": "zombie",
