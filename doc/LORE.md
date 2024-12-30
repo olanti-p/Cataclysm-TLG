@@ -1,5 +1,8 @@
 # Lore of Cataclysm: The Last Generation
 
+> [!CAUTION]
+> Massive story spoilers ahead. Turn back now unless you are here on purpose.
+
 The world did not end overnight.
 
 ## Timeline
