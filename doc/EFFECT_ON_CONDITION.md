@@ -1031,6 +1031,37 @@ Check the north terrain or furniture has `TRANSPARENT` flag.
 },
 ```
 
+### `map_terrain_id`, `map_furniture_id`
+- type: string or [variable object](##variable-object)
+- return true if the terrain or furniture has specific id
+- `loc` will specify location of terrain or furniture (**mandatory**)
+
+#### Valid talkers:
+
+No talker is needed.
+
+#### Examples
+Runs a query, allowing you to pick specific tile around. When picked, stores coordinates of this tile in `check_terrain` variable, and then check is it a `t_grass`. If yes, `effect` is run, otherwise `false_effect` is run
+```json
+{
+  "type": "effect_on_condition",
+  "id": "EOC_TEST_QUERY",
+  "condition": {
+    "and": [
+      {
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "check_terrain" },
+        "message": "Check what terrain it is",
+        "range": 10
+      },
+      { "map_terrain_id": "t_grass", "loc": { "context_val": "check_terrain" } }
+    ]
+  },
+  "effect": [ { "u_message": "it is a grass" } ],
+  "false_effect": [ { "u_message": "it is NOT a grass" } ]
+}
+```
+
 ### `map_in_city`
 - type: location string or [variable object](##variable-object)
 - return true if the location is in a city
@@ -1966,7 +1997,7 @@ Run EOCs on items in your or NPC's inventory
 | Syntax | Optionality | Value  | Info |
 | --- | --- | --- | --- | 
 | "u_run_inv_eocs" / "npc_run_inv_eocs" | **mandatory** | string or [variable object](#variable-object) | way the item would be picked; <br/>values can be:<br/>`all` - all items that match the conditions are picked;<br/> `random` - from all items that match the conditions, one picked;<br/>`manual` - menu is open with all items that can be picked, and you can choose one;<br/>`manual_mult` - same as `manual`, but multiple items can be picked |
-| "search_data" | optional | `search_data` | sets the condition for the target item; lack of search_data means any item can be picked; conditions can be:<br/>`id` - id of a specific item;<br/>`category` - category of an item (case sensitive, should always be in lower case);<br/>`flags`- flag or flags the item has<br/>`excluded_flags`- flag or flags the item doesn't have<br/>`material` - material of an item;<br/>`worn_only` - if true, return only items, that are worn;<br/>`wielded_only` - if true, return only wielded items | 
+| "search_data" | optional | `search_data` | sets the condition for the target item; lack of search_data means any item can be picked; conditions can be:<br/>`id` - id of a specific item;<br/>`category` - category of an item (case sensitive, should always be in lower case);<br/>`flags`- flag or flags the item has<br/>`excluded_flags`- flag or flags the item doesn't have<br/>`material` - material of an item;<br/>`worn_only` - if true, return only items, that are worn;<br/>`wielded_only` - if true, return only wielded items;<br/>`calories` - minimum amount of kcal of an item | 
 | "title" | optional | string or [variable object](#variable-object) | name of the menu, that would be shown, if `manual` or `manual_mult` is used | 
 | "true_eocs" / "false_eocs" | optional | string, [variable object](##variable-object), inline EoC, or range of all of them | if item was picked successfully, all EoCs from `true_eocs` are run, otherwise all EoCs from `false_eocs` are run; picked item is returned as npc; for example, `n_hp()` return hp of an item | 
 
