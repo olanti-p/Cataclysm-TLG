@@ -1707,7 +1707,6 @@
     "components": [
       [
         [ "glass_shard", 3 ],
-        [ "bottle_glass", 1 ],
         [ "flask_glass", 3 ],
         [ "test_tube", 6 ],
         [ "marble", 9 ],
