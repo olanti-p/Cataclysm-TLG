@@ -71,8 +71,14 @@ fi
 
 URL=https://patch-diff.githubusercontent.com/$ORG/$REPO/commit/$COMMIT.patch
 
-if ! PATCH_BODY=$(curl -Lfs "$URL"); then
-  # curl already has descriptive errors
+PATCH_BODY=$(curl -Lfs "$URL")
+CURL_EXIT=$?
+
+if [ "$CURL_EXIT" != "0" ]; then
+  # curl already has mostly descriptive errors, except on 404 it appears
+  if [ "$CURL_EXIT" = "22" ]; then
+    echo "Server indicates URL <$URL> is unavailable. Maybe a force push on the targeted repo has happened?"
+  fi
   exit 1
 fi
 
@@ -134,6 +140,11 @@ else
     echo "Creating new branch backport-$PULLREQUEST_ID"
     git checkout -b backport-"$PULLREQUEST_ID"
   fi
+fi
+
+if [ -n "$RAW_APPLY" ] && [ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
+  echo "You are trying to raw apply a patch to master! Backports should never be applied to master."
+  _ask_if_continue
 fi
 
 if [ "$PATCH_STATUS" = "UNCLEAN" ]; then
