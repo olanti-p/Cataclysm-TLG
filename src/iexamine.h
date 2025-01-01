@@ -89,7 +89,6 @@ void locked_object( Character &you, const tripoint &examp );
 void locked_object_pickable( Character &you, const tripoint &examp );
 void bulletin_board( Character &you, const tripoint &examp );
 void pedestal_wyrm( Character &you, const tripoint &examp );
-void pedestal_temple( Character &you, const tripoint &examp );
 void door_peephole( Character &you, const tripoint &examp );
 void fswitch( Character &you, const tripoint &examp );
 void flower_tulip( Character &you, const tripoint &examp );

@@ -109,7 +109,6 @@ enum class event_type : int {
     npc_becomes_hostile,
     opens_portal,
     opens_spellbook,
-    opens_temple,
     player_fails_conduct,
     player_gets_achievement,
     player_levels_spell,
@@ -187,7 +186,7 @@ struct event_spec_character_item {
     };
 };
 
-static_assert( static_cast<int>( event_type::num_event_types ) == 101,
+static_assert( static_cast<int>( event_type::num_event_types ) == 100,
                "This static_assert is to remind you to add a specialization for your new "
                "event_type below" );
 
@@ -775,9 +774,6 @@ struct event_spec<event_type::opens_spellbook> {
 
 template<>
 struct event_spec<event_type::opens_portal> : event_spec_empty {};
-
-template<>
-struct event_spec<event_type::opens_temple> : event_spec_empty {};
 
 template<>
 struct event_spec<event_type::releases_subspace_specimens> : event_spec_empty {};

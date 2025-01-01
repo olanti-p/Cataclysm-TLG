@@ -49,18 +49,6 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "temple_stairs",
-    "copy-from": "temple_stairs",
-    "sym": "\u00FE"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "temple_finale",
-    "copy-from": "temple_stairs",
-    "sym": "\u00FE"
-  },
-  {
-    "type": "overmap_terrain",
     "id": "mine_entrance",
     "copy-from": "mine_entrance",
     "sym": "\u00D3"

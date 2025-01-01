@@ -1836,22 +1836,6 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "temple_stairs",
-    "copy-from": "temple_stairs",
-    "name": "strange temple",
-    "sym": "s",
-    "color": "pink"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "temple_finale",
-    "copy-from": "temple_finale",
-    "name": "strange temple",
-    "sym": "s",
-    "color": "pink"
-  },
-  {
-    "type": "overmap_terrain",
     "id": "sewage_treatment_0_0_0",
     "copy-from": "sewage_treatment_0_0_0",
     "name": "sewage treatment plant",
