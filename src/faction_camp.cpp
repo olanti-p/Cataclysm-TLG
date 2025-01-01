@@ -171,6 +171,7 @@ static const ter_str_id ter_t_grass_tall( "t_grass_tall" );
 static const ter_str_id ter_t_improvised_shelter( "t_improvised_shelter" );
 static const ter_str_id ter_t_moss( "t_moss" );
 static const ter_str_id ter_t_sand( "t_sand" );
+static const ter_str_id ter_t_stump( "t_stump" );
 static const ter_str_id ter_t_tree_young( "t_tree_young" );
 static const ter_str_id ter_t_trunk( "t_trunk" );
 
@@ -4822,7 +4823,7 @@ int om_cutdown_trees_trunks( const tripoint_abs_omt &omt_tgt, int chance )
 int om_cutdown_trees( const tripoint_abs_omt &omt_tgt, int chance, bool estimate,
                       bool force_cut_trunk )
 {
-    tinymap target_bay;
+    smallmap target_bay;
     target_bay.load( omt_tgt, false );
     int harvested = 0;
     int total = 0;
@@ -4836,13 +4837,9 @@ int om_cutdown_trees( const tripoint_abs_omt &omt_tgt, int chance, bool estimate
             }
             // get a random number that is either 1 or -1
             point dir( 3 * ( 2 * rng( 0, 1 ) - 1 ) + rng( -1, 1 ), 3 * rng( -1, 1 ) + rng( -1, 1 ) );
-            tripoint to = p + tripoint( dir, omt_tgt.z() );
-            std::vector<tripoint> tree = line_to( p, to, rng( 1, 8 ) );
-            for( tripoint &elem : tree ) {
-                target_bay.destroy( elem );
-                target_bay.ter_set( elem, ter_t_trunk );
-            }
-            target_bay.ter_set( p, ter_t_dirt );
+
+            target_bay.cut_down_tree( tripoint_omt_ms( p ), dir );
+            target_bay.collapse_at( p, true, true, false );
             harvested++;
         }
     }
@@ -4855,7 +4852,7 @@ int om_cutdown_trees( const tripoint_abs_omt &omt_tgt, int chance, bool estimate
     }
     // having cut down the trees, cut the trunks into logs
     for( const tripoint &p : target_bay.points_in_rectangle( mapmin, mapmax ) ) {
-        if( target_bay.ter( p ) == ter_t_trunk ) {
+        if( target_bay.ter( p ) == ter_t_trunk || target_bay.ter( p ) == ter_t_stump ) {
             target_bay.ter_set( p, ter_t_dirt );
             target_bay.spawn_item( p, itype_log, rng( 2, 3 ), 0, calendar::turn );
             harvested++;
