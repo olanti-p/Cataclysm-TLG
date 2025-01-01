@@ -267,10 +267,6 @@ static const ter_str_id ter_t_rock_floor( "t_rock_floor" );
 static const ter_str_id ter_t_rock_green( "t_rock_green" );
 static const ter_str_id ter_t_rock_red( "t_rock_red" );
 static const ter_str_id ter_t_shrub_fungal( "t_shrub_fungal" );
-static const ter_str_id ter_t_switch_even( "t_switch_even" );
-static const ter_str_id ter_t_switch_gb( "t_switch_gb" );
-static const ter_str_id ter_t_switch_rb( "t_switch_rb" );
-static const ter_str_id ter_t_switch_rg( "t_switch_rg" );
 static const ter_str_id ter_t_tree_fungal( "t_tree_fungal" );
 static const ter_str_id ter_t_tree_hickory_dead( "t_tree_hickory_dead" );
 static const ter_str_id ter_t_tree_maple( "t_tree_maple" );
@@ -2038,30 +2034,6 @@ void iexamine::pedestal_wyrm( Character &you, const tripoint &examp )
 }
 
 /**
- * Put petrified eye on pedestal causing it to sink into ground and open temple.
- */
-void iexamine::pedestal_temple( Character &you, const tripoint &examp )
-{
-    map &here = get_map();
-    map_stack items = here.i_at( examp );
-    if( !items.empty() && items.only_item().typeId() == itype_petrified_eye ) {
-        add_msg( _( "The pedestal sinks into the ground…" ) );
-        here.ter_set( examp, ter_t_dirt );
-        here.i_clear( examp );
-        get_timed_events().add( timed_event_type::TEMPLE_OPEN, calendar::turn + 10_seconds );
-    } else if( you.has_amount( itype_petrified_eye, 1 ) &&
-               query_yn( _( "Place your petrified eye on the pedestal?" ) ) ) {
-        you.use_amount( itype_petrified_eye, 1 );
-        add_msg( _( "The pedestal sinks into the ground…" ) );
-        here.ter_set( examp, ter_t_dirt );
-        get_timed_events().add( timed_event_type::TEMPLE_OPEN, calendar::turn + 10_seconds );
-    } else {
-        add_msg( _( "This pedestal is engraved in eye-shaped diagrams, and has a "
-                    "large semi-spherical indentation at the top." ) );
-    }
-}
-
-/**
  * Unlock/open door or attempt to peek through peephole.
  */
 void iexamine::door_peephole( Character &you, const tripoint &examp )
@@ -2093,73 +2065,6 @@ void iexamine::door_peephole( Character &you, const tripoint &examp )
     } else {
         you.add_msg_if_player( _( "Never mind." ) );
     }
-}
-
-void iexamine::fswitch( Character &you, const tripoint &examp )
-{
-    map &here = get_map();
-    if( !query_yn( _( "Flip the %s?" ), here.tername( examp ) ) ) {
-        none( you, examp );
-        return;
-    }
-    ter_id terid = here.ter( examp );
-    you.mod_moves( -to_moves<int>( 1_seconds ) );
-    tripoint tmp;
-    tmp.z = examp.z;
-    for( tmp.y = examp.y; tmp.y <= examp.y + 5; tmp.y++ ) {
-        for( tmp.x = 0; tmp.x < MAPSIZE_X; tmp.x++ ) {
-            const ter_id &nearby_ter = here.ter( tmp );
-            if( terid == ter_t_switch_rg ) {
-                if( nearby_ter == ter_t_rock_red ) {
-                    here.ter_set( tmp, ter_t_floor_red );
-                } else if( nearby_ter == ter_t_floor_red ) {
-                    here.ter_set( tmp, ter_t_rock_red );
-                } else if( nearby_ter == ter_t_rock_green ) {
-                    here.ter_set( tmp, ter_t_floor_green );
-                } else if( nearby_ter == ter_t_floor_green ) {
-                    here.ter_set( tmp, ter_t_rock_green );
-                }
-            } else if( terid == ter_t_switch_gb ) {
-                if( nearby_ter == ter_t_rock_blue ) {
-                    here.ter_set( tmp, ter_t_floor_blue );
-                } else if( nearby_ter == ter_t_floor_blue ) {
-                    here.ter_set( tmp, ter_t_rock_blue );
-                } else if( nearby_ter == ter_t_rock_green ) {
-                    here.ter_set( tmp, ter_t_floor_green );
-                } else if( nearby_ter == ter_t_floor_green ) {
-                    here.ter_set( tmp, ter_t_rock_green );
-                }
-            } else if( terid == ter_t_switch_rb ) {
-                if( nearby_ter == ter_t_rock_blue ) {
-                    here.ter_set( tmp, ter_t_floor_blue );
-                } else if( nearby_ter == ter_t_floor_blue ) {
-                    here.ter_set( tmp, ter_t_rock_blue );
-                } else if( nearby_ter == ter_t_rock_red ) {
-                    here.ter_set( tmp, ter_t_floor_red );
-                } else if( nearby_ter == ter_t_floor_red ) {
-                    here.ter_set( tmp, ter_t_rock_red );
-                }
-            } else if( terid == ter_t_switch_even ) {
-                if( ( tmp.y - examp.y ) % 2 == 1 ) {
-                    if( nearby_ter == ter_t_rock_red ) {
-                        here.ter_set( tmp, ter_t_floor_red );
-                    } else if( nearby_ter == ter_t_floor_red ) {
-                        here.ter_set( tmp, ter_t_rock_red );
-                    } else if( nearby_ter == ter_t_rock_green ) {
-                        here.ter_set( tmp, ter_t_floor_green );
-                    } else if( nearby_ter == ter_t_floor_green ) {
-                        here.ter_set( tmp, ter_t_rock_green );
-                    } else if( nearby_ter == ter_t_rock_blue ) {
-                        here.ter_set( tmp, ter_t_floor_blue );
-                    } else if( nearby_ter == ter_t_floor_blue ) {
-                        here.ter_set( tmp, ter_t_rock_blue );
-                    }
-                }
-            }
-        }
-    }
-    add_msg( m_warning, _( "You hear the rumble of rock shifting." ) );
-    get_timed_events().add( timed_event_type::TEMPLE_SPAWN, calendar::turn + 3_turns );
 }
 
 /**
@@ -7050,9 +6955,7 @@ iexamine_functions iexamine_functions_from_string( const std::string &function_n
             { "safe", &iexamine::safe },
             { "bulletin_board", &iexamine::bulletin_board },
             { "pedestal_wyrm", &iexamine::pedestal_wyrm },
-            { "pedestal_temple", &iexamine::pedestal_temple },
             { "door_peephole", &iexamine::door_peephole },
-            { "fswitch", &iexamine::fswitch },
             { "flower_poppy", &iexamine::flower_poppy },
             { "flower_cactus", &iexamine::flower_cactus },
             { "fungus", &iexamine::fungus },

@@ -640,32 +640,6 @@
   },
   {
     "type": "trap",
-    "id": "tr_temple_flood",
-    "name": "ledge",
-    "color": "light_gray",
-    "memorial_male": { "ctxt": "memorial_male", "str": "Triggered a flood trap." },
-    "memorial_female": { "ctxt": "memorial_female", "str": "Triggered a flood trap." },
-    "flags": [ "ECHOLOCATION_DETECTABLE" ],
-    "symbol": "^",
-    "visibility": 9,
-    "avoidance": 20,
-    "difficulty": 99,
-    "action": "temple_flood"
-  },
-  {
-    "type": "trap",
-    "id": "tr_temple_toggle",
-    "name": "",
-    "color": "white",
-    "symbol": "^",
-    "visibility": 99,
-    "avoidance": 99,
-    "difficulty": 99,
-    "action": "temple_toggle",
-    "always_invisible": true
-  },
-  {
-    "type": "trap",
     "id": "tr_glow",
     "name": "",
     "color": "white",

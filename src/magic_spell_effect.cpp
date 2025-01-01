@@ -1305,9 +1305,6 @@ void spell_effect::timed_event( const spell &sp, Creature &caster, const tripoin
         { "spawn_wyrms", timed_event_type::SPAWN_WYRMS },
         { "amigara", timed_event_type::AMIGARA },
         { "roots_die", timed_event_type::ROOTS_DIE },
-        { "temple_open", timed_event_type::TEMPLE_OPEN },
-        { "temple_flood", timed_event_type::TEMPLE_FLOOD },
-        { "temple_spawn", timed_event_type::TEMPLE_SPAWN },
         { "dim", timed_event_type::DIM },
         { "artifact_light", timed_event_type::ARTIFACT_LIGHT }
     };

@@ -49,8 +49,6 @@ const trap_str_id tr_shotgun_2( "tr_shotgun_2" );
 const trap_str_id tr_sinkhole( "tr_sinkhole" );
 const trap_str_id tr_snake( "tr_snake" );
 const trap_str_id tr_telepad( "tr_telepad" );
-const trap_str_id tr_temple_flood( "tr_temple_flood" );
-const trap_str_id tr_temple_toggle( "tr_temple_toggle" );
 
 static const update_mapgen_id update_mapgen_none( "none" );
 

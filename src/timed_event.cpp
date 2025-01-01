@@ -186,97 +186,6 @@ void timed_event::actualize()
             }
             break;
 
-        case timed_event_type::TEMPLE_OPEN: {
-            get_event_bus().send<event_type::opens_temple>();
-            bool saw_grate = false;
-            for( const tripoint &p : here.points_on_zlevel() ) {
-                if( here.ter( p ) == ter_t_grate ) {
-                    here.ter_set( p, ter_t_stairs_down );
-                    if( !saw_grate && player_character.sees( p ) ) {
-                        saw_grate = true;
-                    }
-                }
-            }
-            if( saw_grate ) {
-                add_msg( _( "The nearby grates open to reveal a staircase!" ) );
-            }
-        }
-        break;
-
-        case timed_event_type::TEMPLE_FLOOD: {
-            bool flooded = false;
-
-            cata::mdarray<ter_id, point_bub_ms> flood_buf;
-            for( const tripoint &p : here.points_on_zlevel() ) {
-                flood_buf[p.x][p.y] = here.ter( p );
-            }
-            for( const tripoint &p : here.points_on_zlevel() ) {
-                if( here.ter( p ) == ter_t_water_sh ) {
-                    bool deepen = false;
-                    for( const tripoint &w : points_in_radius( p, 1 ) ) {
-                        if( here.ter( w ) == ter_t_water_dp ) {
-                            deepen = true;
-                            break;
-                        }
-                    }
-                    if( deepen ) {
-                        flood_buf[p.x][p.y] = ter_t_water_dp;
-                        flooded = true;
-                    }
-                } else if( here.ter( p ) == ter_t_rock_floor ) {
-                    bool flood = false;
-                    for( const tripoint &w : points_in_radius( p, 1 ) ) {
-                        if( here.ter( w ) == ter_t_water_dp || here.ter( w ) == ter_t_water_sh ) {
-                            flood = true;
-                            break;
-                        }
-                    }
-                    if( flood ) {
-                        flood_buf[p.x][p.y] = ter_t_water_sh;
-                        flooded = true;
-                    }
-                }
-            }
-            if( !flooded ) {
-                // We finished flooding the entire chamber!
-                return;
-            }
-            // Check if we should print a message
-            if( flood_buf[player_character.posx()][player_character.posy()] != here.ter(
-                    player_character.pos() ) ) {
-                if( flood_buf[player_character.posx()][player_character.posy()] == ter_t_water_sh ) {
-                    add_msg( m_warning, _( "Water quickly floods up to your knees." ) );
-                    get_memorial().add(
-                        pgettext( "memorial_male", "Water level reached knees." ),
-                        pgettext( "memorial_female", "Water level reached knees." ) );
-                } else {
-                    // Must be deep water!
-                    add_msg( m_warning, _( "Water fills nearly to the ceiling!" ) );
-                    get_memorial().add(
-                        pgettext( "memorial_male", "Water level reached the ceiling." ),
-                        pgettext( "memorial_female", "Water level reached the ceiling." ) );
-                    avatar_action::swim( here, player_character, player_character.pos() );
-                }
-            }
-            // flood_buf is filled with correct tiles; now copy them back to here
-            for( const tripoint &p : here.points_on_zlevel() ) {
-                here.ter_set( p, flood_buf[p.x][p.y] );
-            }
-            get_timed_events().add( timed_event_type::TEMPLE_FLOOD,
-                                    calendar::turn + rng( 2_turns, 3_turns ) );
-        }
-        break;
-
-        case timed_event_type::TEMPLE_SPAWN: {
-            static const std::array<mtype_id, 4> temple_monsters = { {
-                    mon_sewer_snake, mon_dermatik, mon_spider_widow_giant, mon_spider_cellar_giant
-                }
-            };
-            const mtype_id &montype = random_entry( temple_monsters );
-            g->place_critter_around( montype, player_character.pos(), 2 );
-        }
-        break;
-
         case timed_event_type::DSA_ALRP_SUMMON: {
             const tripoint_abs_sm u_pos = player_character.global_sm_location();
             if( rl_dist( u_pos, map_point ) <= 4 ) {
@@ -359,12 +268,6 @@ void timed_event::per_turn()
             }
         }
         break;
-
-        case timed_event_type::TEMPLE_OPEN:
-            if( calendar::once_every( time_duration::from_seconds( rng( 2, 3 ) ) ) ) {
-                add_msg( m_warning, _( "The earth rumbles." ) );
-            }
-            break;
 
         default:
             // Nothing happens for other events
