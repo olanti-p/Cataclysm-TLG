@@ -202,7 +202,7 @@
   },
   {
     "type": "AMMO",
-    "id": "flamable_arrow",
+    "id": "arrow_flammable",
     "name": { "str": "flammable arrow" },
     "description": "This arrow has a rag soaked in a flammable liquid wrapped around the shaft near the head.  You need to light it before shooting.",
     "weight": "75 g",
@@ -222,7 +222,7 @@
     "critical_multiplier": 10,
     "effects": [ "RECOVER_35" ],
     "use_action": {
-      "target": "arrow_flamming",
+      "target": "arrow_flaming",
       "target_timer": "20 seconds",
       "msg": "You light the arrow.",
       "active": true,
@@ -234,8 +234,8 @@
   },
   {
     "type": "AMMO",
-    "id": "arrow_flamming",
-    "copy-from": "flamable_arrow",
+    "id": "arrow_flaming",
+    "copy-from": "arrow_flammable",
     "name": { "str": "flaming arrow" },
     "description": "This arrow has a flaming rag wrapped around the shaft near the head.  You should shoot it soon before it burns through the rag and fuel.",
     "symbol": "=",
