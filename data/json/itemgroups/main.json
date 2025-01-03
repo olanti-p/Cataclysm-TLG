@@ -173,7 +173,7 @@
     "//": "archery ammo, that can be crafted, and can be find in random survivor camps",
     "subtype": "distribution",
     "entries": [
-      { "item": "arrow_fire_hardened_fletched", "prob": 100, "count": [ 10, 30 ] },
+      { "item": "arrow_wood_crude", "prob": 100, "count": [ 10, 30 ] },
       { "item": "arrow_heavy_fire_hardened_fletched", "prob": 50, "count": [ 10, 30 ] },
       { "item": "arrow_wood_heavy", "prob": 100, "count": [ 10, 30 ] },
       { "item": "arrow_metal_sharpened_fletched", "prob": 100, "count": [ 10, 30 ] },

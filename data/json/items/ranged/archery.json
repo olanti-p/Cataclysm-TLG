@@ -1,7 +1,7 @@
 [
   {
     "type": "AMMO",
-    "id": "arrow_fire_hardened_fletched",
+    "id": "arrow_wood_crude",
     "copy-from": "arrow_field_point_fletched",
     "relative": { "dispersion": 100 },
     "price": 0,
@@ -20,7 +20,7 @@
     "name": { "str": "wooden bodkin arrow" },
     "symbol": "=",
     "color": "green",
-    "looks_like": "arrow_fire_hardened_fletched",
+    "looks_like": "arrow_wood_crude",
     "description": "A fletched wooden arrow shaft with a pointed tip.",
     "material": [ { "type": "wood", "portion": 81 }, { "type": "steel", "portion": 19 } ],
     "volume": "90 ml",
@@ -174,7 +174,7 @@
     "name": { "str": "aluminum small game arrow" },
     "symbol": "=",
     "color": "green",
-    "looks_like": "arrow_fire_hardened_fletched",
+    "looks_like": "arrow_wood_crude",
     "description": "A fletched aluminum arrow shaft with a blunt tip.  Useful for hunting small woodland creatures without splattering them all over the ground.",
     "material": [ { "type": "aluminum", "portion": 81 }, { "type": "steel", "portion": 19 } ],
     "copy-from": "arrow_field_point_fletched",
