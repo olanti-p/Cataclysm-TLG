@@ -37,7 +37,7 @@
     "melee_damage": { "bash": 3 }
   },
   {
-    "id": "arrow_plastic",
+    "id": "arrow_wood_rubber",
     "type": "AMMO",
     "symbol": "=",
     "color": "green",
