@@ -1458,8 +1458,8 @@
   },
   {
     "id": "hazmat_suit",
-    "//": "Should be substantially more difficult to repair than ordinary rubber - ch_steel is difficulty 7",
-    "repairs_like": "ch_steel_lump",
+    "//": "Should be substantially more difficult to repair than ordinary rubber - glass is difficulty 7",
+    "repairs_like": "glass",
     "type": "ARMOR",
     "name": { "str": "hazmat suit" },
     "description": "An impermeable full-body garment with a clear plastic face shield, rubber gloves, and boots, looking like a soft, puffy space suit.  It looks fragile, but a tag on the interior explains that it will provide excellent protection from radiation, pathogens, chemicals, toxins, and even electrical discharge, so long as it's in good condition.",
