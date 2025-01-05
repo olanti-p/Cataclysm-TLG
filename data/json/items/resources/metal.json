@@ -1032,60 +1032,6 @@
     "material": [ "budget_steel" ]
   },
   {
-    "id": "5l_lc_steel",
-    "type": "AMMO",
-    "copy-from": "5l_steel",
-    "name": { "str": "5 L mild steel ingot" },
-    "price": 22000,
-    "price_postapoc": 220,
-    "material": [ "lc_steel" ]
-  },
-  {
-    "id": "10l_lc_steel",
-    "type": "AMMO",
-    "copy-from": "10l_steel",
-    "name": { "str": "10 L mild steel ingot" },
-    "price": 44000,
-    "price_postapoc": 440,
-    "material": [ "lc_steel" ]
-  },
-  {
-    "id": "5l_mc_steel",
-    "type": "AMMO",
-    "copy-from": "5l_steel",
-    "name": { "str": "5 L medium steel ingot" },
-    "price": 24000,
-    "price_postapoc": 240,
-    "material": [ "mc_steel" ]
-  },
-  {
-    "id": "10l_mc_steel",
-    "type": "AMMO",
-    "copy-from": "10l_steel",
-    "name": { "str": "10 L medium steel ingot" },
-    "price": 48000,
-    "price_postapoc": 480,
-    "material": [ "mc_steel" ]
-  },
-  {
-    "id": "5l_hc_steel",
-    "type": "AMMO",
-    "copy-from": "5l_steel",
-    "name": { "str": "5 L high steel ingot" },
-    "price": 26000,
-    "price_postapoc": 260,
-    "material": [ "hc_steel" ]
-  },
-  {
-    "id": "10l_hc_steel",
-    "type": "AMMO",
-    "copy-from": "10l_steel",
-    "name": { "str": "10 L high steel ingot" },
-    "price": 52000,
-    "price_postapoc": 520,
-    "material": [ "hc_steel" ]
-  },
-  {
     "id": "budget_steel_chunk",
     "type": "AMMO",
     "copy-from": "steel_chunk",
