@@ -3473,7 +3473,7 @@
     "description": "An armor plate made of very thick steel, specifically engineered for use in a bullet-resistant vest.",
     "price": 10000,
     "price_postapoc": 100,
-    "material": [ "qt_steel" ],
+    "material": [ "steel" ],
     "weight": "1500 g",
     "volume": "500 ml",
     "melee_damage": { "bash": 6 }

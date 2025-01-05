@@ -114,7 +114,7 @@
       }
     ],
     "looks_like": "machete",
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "volume": "2 L",
     "weight": "1300 g",
     "longest_side": "100 cm",
@@ -147,7 +147,7 @@
       }
     ],
     "looks_like": "nodachi",
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "volume": "3250 ml",
     "weight": "2800 g",
     "longest_side": "150 cm",
@@ -309,7 +309,7 @@
     "price": 10000,
     "price_postapoc": 1250,
     "to_hit": { "grip": "weapon", "length": "hand", "surface": "point", "balance": "good" },
-    "material": [ "hc_steel", "plastic" ],
+    "material": [ "steel", "plastic" ],
     "symbol": ";",
     "color": "dark_gray",
     "gunmod_data": {
@@ -441,7 +441,7 @@
     "price": 10000,
     "price_postapoc": 1250,
     "to_hit": { "grip": "weapon", "length": "hand", "surface": "point", "balance": "good" },
-    "material": [ "hc_steel", "plastic" ],
+    "material": [ "steel", "plastic" ],
     "symbol": ";",
     "color": "dark_gray",
     "gunmod_data": {
@@ -521,7 +521,7 @@
     "price": 7000,
     "price_postapoc": 1400,
     "to_hit": { "grip": "weapon", "length": "hand", "surface": "point", "balance": "good" },
-    "material": [ "hc_steel", "leather" ],
+    "material": [ "steel", "leather" ],
     "repairs_with": [ "steel" ],
     "symbol": "/",
     "color": "dark_gray",
@@ -576,7 +576,7 @@
     "price": 720000,
     "price_postapoc": 5000,
     "to_hit": { "grip": "weapon", "length": "short", "surface": "point", "balance": "good" },
-    "material": [ "qt_steel" ],
+    "material": [ "steel" ],
     "symbol": "/",
     "color": "dark_gray",
     "min_skills": [ [ "weapon", 2 ], [ "melee", 1 ] ],
@@ -792,7 +792,7 @@
     "type": "TOOL",
     "name": { "str": "cavalry saber" },
     "description": "A dull, cheaply-made replica of a curved sword associated with cavalry from the Early Modern period onwards.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 1.8, "cut": 0.077 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -929,7 +929,7 @@
     "description": "A curved sword associated with various Middle Eastern and Central Asian countries.  This one seems oddly dull and worn.",
     "proportional": { "melee_damage": { "bash": 3.9, "cut": 0.25 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
-    "replace_materials": { "mc_steel": "budget_steel" }
+    "replace_materials": { "steel": "budget_steel" }
   },
   {
     "id": "scimitar_fake",
@@ -940,7 +940,7 @@
     "proportional": { "melee_damage": { "bash": 1.9, "cut": 0.07 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] },
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" }
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" }
   },
   {
     "id": "estoc",
@@ -974,7 +974,7 @@
     "to_hit": { "grip": "solid", "length": "long", "surface": "point", "balance": "good" },
     "proportional": { "melee_damage": { "bash": 2.6, "stab": 0.25 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
-    "replace_materials": { "mc_steel": "budget_steel" }
+    "replace_materials": { "steel": "budget_steel" }
   },
   {
     "id": "estoc_fake",
@@ -986,7 +986,7 @@
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "neutral" },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] },
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" }
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" }
   },
   {
     "id": "longsword",
@@ -1016,7 +1016,7 @@
     "type": "TOOL",
     "name": { "str": "longsword" },
     "description": "A classic medieval sword, in between the lighter arming sword and later two-handed swords in size.  You feel like the pommel could just snap off if you used it.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 2.4, "cut": 0.25 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1026,7 +1026,7 @@
     "type": "TOOL",
     "name": { "str": "longsword" },
     "description": "A dull, cheaply-made replica of the classic medieval longsword.  It requires a larger baldric or scabbard compared to smaller swords.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 1.2, "cut": 0.08 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1060,7 +1060,7 @@
     "type": "TOOL",
     "name": { "str": "arming sword" },
     "description": "A classic medieval sword, just the right size to use one-handed.  This one doesn't seem to have been made right.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 2, "cut": 0.86 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1070,7 +1070,7 @@
     "type": "GENERIC",
     "name": { "str": "arming sword" },
     "description": "A dull, cheaply-made replica of a classic medieval sword, just the right size to use one-handed.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 2.3, "cut": 0.07 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1283,7 +1283,7 @@
     "type": "TOOL",
     "name": { "str_sp": "wakizashi" },
     "description": "A comparatively common Japanese short sword.  There's something not quite right about this one.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 8.5, "cut": 0.23 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1293,7 +1293,7 @@
     "type": "TOOL",
     "name": { "str_sp": "wakizashi" },
     "description": "A dull, cheap replica of the more common wakizashi.  Smaller and lighter than a katana, but still effective in combat.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 4, "cut": 0.066 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1327,7 +1327,7 @@
     "type": "TOOL",
     "name": { "str": "zweihänder" },
     "description": "A huge two-handed sword from Germany.  You're not quite sure it's supposed to be this bendy.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 2.35, "cut": 0.26 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1337,7 +1337,7 @@
     "type": "GENERIC",
     "name": { "str": "zweihänder" },
     "description": "A dull, cheaply-made replica of a huge two-handed sword from Germany.  Even blunted, it still packs a wallop.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 1.3, "cut": 0.169 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1425,7 +1425,7 @@
     "type": "GENERIC",
     "name": { "str_sp": "nodachi" },
     "description": "A huge, curved, two-handed sword from Japan.  It is surprisingly light for its size, but also much bendier than a sword should be.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 4.6, "cut": 0.25 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1435,7 +1435,7 @@
     "type": "GENERIC",
     "name": { "str_sp": "nodachi" },
     "description": "A dull, cheaply-made replica of a huge, curved, two-handed sword from Japan.  It is surprisingly light for its size.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 2.3, "cut": 0.068 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1672,7 +1672,7 @@
     "type": "TOOL",
     "name": { "str": "broadsword" },
     "description": "An Early Modern sword that saw use in the 16th, 17th, and 18th centuries.  This sword appears to be made very poorly, but it should still stand up to a few swings.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 3.3, "cut": 0.3 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1682,7 +1682,7 @@
     "type": "TOOL",
     "name": { "str": "broadsword" },
     "description": "A dull, cheaply-made replica of an Early Modern sword that saw use in the 16th, 17th, and 18th centuries.  Called 'broad' to contrast with the slimmer rapiers.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 1.66, "cut": 0.11 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1716,7 +1716,7 @@
     "type": "TOOL",
     "name": { "str": "rapier" },
     "description": "A blunted, cheap replica of a thin sword with an ornate handguard.  It looks like the preferred weapon of gentlemen and swashbucklers.  Light and quick, it makes any battle a stylish battle.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 3, "stab": 0.071 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1751,7 +1751,7 @@
     "type": "TOOL",
     "name": { "str_sp": "katana" },
     "description": "A rare sword from Japan.  While it's got the right edge and weight, the pommel feels like it'll just snap off, and the blade seems pretty worn.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 3.4, "cut": 0.25 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1761,7 +1761,7 @@
     "type": "TOOL",
     "name": { "str_sp": "katana" },
     "description": "A dull, cheaply-made replica of a rare sword from Japan.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 1.8, "cut": 0.064 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1817,7 +1817,7 @@
     "type": "TOOL",
     "name": { "str": "cutlass", "str_pl": "cutlasses" },
     "description": "A broad saber known for its use by sailors and pirates.  This sword appears to be made very poorly, but it should still stand up to a few swings.",
-    "replace_materials": { "mc_steel": "budget_steel" },
+    "replace_materials": { "steel": "budget_steel" },
     "proportional": { "melee_damage": { "bash": 3.6, "cut": 0.27 }, "price": 0.1, "price_postapoc": 0.1 },
     "delete": { "flags": [ "DURABLE_MELEE" ] }
   },
@@ -1827,7 +1827,7 @@
     "type": "TOOL",
     "name": { "str": "cutlass", "str_pl": "cutlasses" },
     "description": "A dull, cheaply-made replica of a broad saber known for its use by sailors and pirates.",
-    "replace_materials": { "mc_steel": "aluminum", "leather": "nylon" },
+    "replace_materials": { "steel": "aluminum", "leather": "nylon" },
     "proportional": { "melee_damage": { "bash": 1.8, "cut": 0.076 }, "price": 0.05, "price_postapoc": 0.05 },
     "delete": { "flags": [ "DURABLE_MELEE" ] },
     "extend": { "flags": [ "FRAGILE_MELEE" ] }
@@ -1870,7 +1870,7 @@
     "price": 100000,
     "price_postapoc": 4500,
     "material": [ { "type": "leather", "portion": 1.1 }, { "type": "steel", "portion": 80 } ],
-    "repairs_with": [ "mc_steel" ],
+    "repairs_with": [ "steel" ],
     "flags": [ "DURABLE_MELEE", "NONCONDUCTIVE", "SHEATH_SWORD" ],
     "techniques": [ "WBLOCK_1", "SWEEP" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "neutral" },

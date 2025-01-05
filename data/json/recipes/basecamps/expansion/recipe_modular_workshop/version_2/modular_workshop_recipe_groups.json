@@ -44,8 +44,7 @@
       { "id": "caltrops_glass", "description": " Craft: Glass Caltrops" },
       { "id": "steel_chunk", "description": " Craft: Steel, Chunk" },
       { "id": "anvil", "description": " Craft: Anvil" },
-      { "id": "steel_lump", "description": " Craft: Steel, Lump" },
-      { "id": "lc_steel_lump", "description": " Craft: Mild Steel, Lump" }
+      { "id": "steel_lump", "description": " Craft: Steel, Lump" }
     ]
   },
   {
@@ -69,8 +68,7 @@
       { "id": "nail", "description": " Craft: Nail" },
       { "id": "wire", "description": " Craft: Wire" },
       { "id": "swage", "description": " Craft: Swage and Die Set" },
-      { "id": "link_sheet", "description": " Craft: Link Sheet" },
-      { "id": "mc_steel_lump", "description": " Craft: Medium Steel, Lump" }
+      { "id": "link_sheet", "description": " Craft: Link Sheet" }
     ]
   },
   {
@@ -132,8 +130,7 @@
       { "id": "rapier", "description": " Craft: Sword, Rapier" },
       { "id": "halligan", "description": " Craft: Halligan Bar" },
       { "id": "zweihander", "description": " Craft: Sword, Zweihander" },
-      { "id": "pickaxe", "description": " Craft: Pickaxe" },
-      { "id": "hc_steel_lump", "description": " Craft: High Steel, Lump" }
+      { "id": "pickaxe", "description": " Craft: Pickaxe" }
     ]
   },
   {

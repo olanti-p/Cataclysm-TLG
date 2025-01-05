@@ -243,14 +243,14 @@
     "//": "Based on the plate from the MED-ENG EOD 9N.  People don't seem willing to buy the EOD 10 to shoot at and MED-ENG ain't telling us how not-bullet proof the suit is.",
     "price": 361300,
     "price_postapoc": 2000,
-    "material": [ "kevlar", "plastic_pad", "thermo_resin", "qt_steel" ],
+    "material": [ "kevlar", "plastic_pad", "thermo_resin", "steel" ],
     "symbol": ",",
     "color": "dark_gray",
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
     "armor": [
       {
         "material": [
-          { "type": "qt_steel", "covered_by_mat": 100, "thickness": 0.3 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 0.3 },
           { "type": "kevlar", "covered_by_mat": 100, "thickness": 3.6 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 3.0 },
           { "type": "thermo_resin", "covered_by_mat": 100, "thickness": 2.4 }
@@ -325,8 +325,8 @@
     "price": "600 USD",
     "longest_side": "30 cm",
     "price_postapoc": "1 USD",
-    "material": [ "qt_steel", "nylon" ],
-    "repairs_with": [ "qt_steel" ],
+    "material": [ "steel", "nylon" ],
+    "repairs_with": [ "steel" ],
     "symbol": ",",
     "color": "dark_gray",
     "material_thickness": 3,
@@ -335,7 +335,7 @@
       {
         "material": [
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
-          { "type": "qt_steel", "covered_by_mat": 100, "thickness": 2.5 }
+          { "type": "steel", "covered_by_mat": 100, "thickness": 2.5 }
         ],
         "encumbrance": 1,
         "coverage": 45,
@@ -365,7 +365,7 @@
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR", "STURDY" ],
     "armor": [
       {
-        "material": [ { "type": "qt_steel", "covered_by_mat": 100, "thickness": 6.35 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 6.35 } ],
         "encumbrance": 3,
         "coverage": 45,
         "covers": [ "torso" ],
@@ -420,7 +420,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 2.3 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 2.3 },
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 }
         ],
         "encumbrance": 1,
@@ -519,7 +519,7 @@
     "weight": "1300 g",
     "volume": "262 ml",
     "longest_side": "20 cm",
-    "material": [ { "type": "lc_steel", "portion": 4 }, { "type": "nylon" } ],
+    "material": [ { "type": "steel", "portion": 4 }, { "type": "nylon" } ],
     "repairs_with": [ "steel" ],
     "flags": [ "ABLATIVE_MEDIUM", "CANT_WEAR", "STURDY" ],
     "armor": [

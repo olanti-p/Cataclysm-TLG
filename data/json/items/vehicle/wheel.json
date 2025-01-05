@@ -424,7 +424,7 @@
     "price": 34000,
     "price_postapoc": 750,
     "to_hit": -1,
-    "material": [ "qt_steel", "ceramic" ],
+    "material": [ "steel", "ceramic" ],
     "symbol": "]",
     "color": "green",
     "diameter": 32,

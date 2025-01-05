@@ -415,8 +415,7 @@
       { "id": "caltrops_glass", "description": " Craft: Glass Caltrops" },
       { "id": "steel_chunk", "description": " Craft: Steel, Chunk" },
       { "id": "anvil", "description": " Craft: Anvil" },
-      { "id": "steel_lump", "description": " Craft: Steel, Lump" },
-      { "id": "lc_steel_lump", "description": " Craft: Mild Steel, Lump" }
+      { "id": "steel_lump", "description": " Craft: Steel, Lump" }
     ]
   },
   {
@@ -430,8 +429,7 @@
       { "id": "bolt_metal", "description": " Craft: Crossbow Bolt, Steel" },
       { "id": "copper_ax", "description": " Craft: Axe, Copper" },
       { "id": "spear_copper", "description": " Craft: Spear, Copper" },
-      { "id": "link_sheet", "description": " Craft: Link Sheet" },
-      { "id": "mc_steel_lump", "description": " Craft: Medium Steel, Lump" }
+      { "id": "link_sheet", "description": " Craft: Link Sheet" }
     ]
   },
   {
@@ -481,8 +479,7 @@
       { "id": "throwing_knife", "description": " Craft: Knife, Throwing" },
       { "id": "crowbar", "description": " Craft: Crowbar" },
       { "id": "pot", "description": " Craft: Pot" },
-      { "id": "hoe", "description": " Craft: Hoe" },
-      { "id": "hc_steel_lump", "description": " Craft: High Steel, Lump" }
+      { "id": "hoe", "description": " Craft: Hoe" }
     ]
   },
   {

@@ -308,7 +308,7 @@
     "price": 20000,
     "price_postapoc": 4000,
     "to_hit": -1,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "looks_like": "chestguard_hard",
     "color": "light_gray",
@@ -318,14 +318,14 @@
     "flags": [ "OUTER", "STURDY" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
         "encumbrance": 10
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 100,
@@ -416,7 +416,7 @@
     "price": 17900,
     "price_postapoc": 2500,
     "to_hit": -3,
-    "material": [ "lc_steel", "leather" ],
+    "material": [ "steel", "leather" ],
     "symbol": "[",
     "looks_like": "jacket_leather",
     "color": "dark_gray",
@@ -426,7 +426,7 @@
         "coverage": 100,
         "encumbrance": [ 20, 21 ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 },
+          { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
         ]
       },
@@ -435,7 +435,7 @@
         "coverage": 100,
         "encumbrance": [ 20, 20 ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 },
+          { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
         ]
       }
@@ -469,7 +469,7 @@
     "volume": "5750 ml",
     "price": 15000,
     "price_postapoc": 2000,
-    "material": [ "lc_steel", "denim" ],
+    "material": [ "steel", "denim" ],
     "symbol": "[",
     "looks_like": "jacket_jean",
     "color": "light_blue",
@@ -479,7 +479,7 @@
         "coverage": 100,
         "encumbrance": [ 15, 16 ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 },
+          { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
         ]
       },
@@ -488,7 +488,7 @@
         "coverage": 100,
         "encumbrance": [ 15, 15 ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 },
+          { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
         ]
       }
@@ -522,7 +522,7 @@
     "volume": "4100 ml",
     "price": 13000,
     "price_postapoc": 1800,
-    "material": [ "lc_steel", "denim" ],
+    "material": [ "steel", "denim" ],
     "symbol": "[",
     "looks_like": "jacket_jean",
     "color": "light_blue",
@@ -532,7 +532,7 @@
         "coverage": 100,
         "encumbrance": [ 15, 16 ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 80, "thickness": 0.9 },
+          { "type": "steel", "covered_by_mat": 80, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
         ]
       }
@@ -750,7 +750,7 @@
     "price": 17900,
     "price_postapoc": 1200,
     "to_hit": -3,
-    "material": [ "lc_steel", "leather" ],
+    "material": [ "steel", "leather" ],
     "symbol": "[",
     "looks_like": "vest_leather",
     "color": "dark_gray",
@@ -779,7 +779,7 @@
         "coverage": 90,
         "covers": [ "torso" ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 90, "thickness": 1.5 },
+          { "type": "steel", "covered_by_mat": 90, "thickness": 1.5 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
         ]
       }
@@ -892,7 +892,7 @@
     "price": 20000,
     "price_postapoc": 4000,
     "to_hit": -1,
-    "material": [ "lc_steel", "leather" ],
+    "material": [ "steel", "leather" ],
     "symbol": "[",
     "looks_like": "chestguard_hard",
     "color": "light_gray",
@@ -905,7 +905,7 @@
         "coverage": 60,
         "covers": [ "torso" ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.5 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.5 },
           { "type": "leather", "covered_by_mat": 10, "thickness": 0.5 }
         ]
       }
@@ -941,7 +941,7 @@
     "price": 10000,
     "price_postapoc": 2000,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "looks_like": "vest_leather",
     "color": "light_red",
@@ -955,14 +955,14 @@
     },
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
         "encumbrance": 4
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 100,
@@ -1043,7 +1043,7 @@
   {
     "id": "chainmail_junk_vest",
     "copy-from": "chainmail_vest",
-    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "replace_materials": { "steel_chain": "budget_steel_chain" },
     "type": "ARMOR",
     "name": { "str": "chainmail vest" },
     "description": "A vest made of countless links of low-quality steel chain.  It's lightweight enough to fit under outerwear, and can be adjusted for a closer fit.",

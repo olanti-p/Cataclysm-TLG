@@ -389,7 +389,7 @@
     "price": 20000,
     "price_postapoc": 500,
     "to_hit": 1,
-    "material": [ "lc_steel", "leather" ],
+    "material": [ "steel", "leather" ],
     "symbol": "[",
     "looks_like": "leather_vambraces",
     "color": "light_gray",
@@ -398,7 +398,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 0.9 },
+          { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
@@ -563,7 +563,7 @@
     "price": 10000,
     "price_postapoc": 2000,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "looks_like": "armguard_metal",
     "color": "light_red",
@@ -577,28 +577,28 @@
     },
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
         "coverage": 70,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_upper_l", "arm_upper_r" ],
         "coverage": 100,
         "encumbrance": 1
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_elbow_l", "arm_elbow_r" ],
         "coverage": 100,
         "encumbrance": 4
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_lower_l", "arm_lower_r" ],
         "coverage": 95,
@@ -638,7 +638,7 @@
     "id": "chainmail_junk_sleeves",
     "type": "ARMOR",
     "copy-from": "chainmail_sleeves",
-    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "replace_materials": { "steel_chain": "budget_steel_chain" },
     "description": "Protective sleeves made of interlocking links of low-quality steel wire.  The fit can be adjusted to allow them to serve as outerwear.",
     "name": { "str": "pair of chainmail sleeves", "str_pl": "pairs of chainmail sleeves" },
     "use_action": {
@@ -844,7 +844,7 @@
     "to_hit": -5,
     "symbol": "[",
     "looks_like": "leather_arm_guards",
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "color": "light_gray",
     "warmth": 10,
     "longest_side": "60 cm",
@@ -853,7 +853,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 },
           { "type": "leather", "covered_by_mat": 2, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
@@ -893,7 +893,7 @@
     "to_hit": -5,
     "symbol": "[",
     "looks_like": "leather_arm_guards",
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "color": "light_gray",
     "warmth": 10,
     "longest_side": "60 cm",
@@ -902,7 +902,7 @@
     "flags": [ "OUTER", "STURDY", "CONDUCTIVE" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
         "coverage": 100,

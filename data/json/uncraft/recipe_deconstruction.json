@@ -3307,30 +3307,6 @@
     "components": [ [ [ "scrap", 12 ] ] ]
   },
   {
-    "result": "hc_steel_lump",
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "time": "10 m",
-    "qualities": [ { "id": "SAW_M", "level": 2 } ],
-    "components": [ [ [ "hc_steel_chunk", 4 ] ] ]
-  },
-  {
-    "result": "mc_steel_lump",
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "time": "10 m",
-    "qualities": [ { "id": "SAW_M", "level": 2 } ],
-    "components": [ [ [ "mc_steel_chunk", 4 ] ] ]
-  },
-  {
-    "result": "lc_steel_lump",
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "time": "10 m",
-    "qualities": [ { "id": "SAW_M", "level": 2 } ],
-    "components": [ [ [ "lc_steel_chunk", 4 ] ] ]
-  },
-  {
     "result": "pocketwatch",
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
