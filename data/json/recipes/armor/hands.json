@@ -822,21 +822,21 @@
     "time": "2 h",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" } ],
-    "using": [ [ "armor_lc_chainmail_assembling", 1 ], [ "strap_small", 2 ] ]
+    "using": [ [ "armor_chainmail_assembling", 1 ], [ "strap_small", 2 ] ]
   },
   {
     "result": "chainmail_gloves_xs",
     "type": "recipe",
     "copy-from": "chainmail_gloves",
     "time": "2 h",
-    "using": [ [ "armor_lc_chainmail_assembling", 1 ], [ "strap_small", 1 ] ]
+    "using": [ [ "armor_chainmail_assembling", 1 ], [ "strap_small", 1 ] ]
   },
   {
     "result": "chainmail_gloves_xl",
     "type": "recipe",
     "copy-from": "chainmail_gloves",
     "time": "2 h 15 m",
-    "using": [ [ "armor_lc_chainmail_assembling", 2 ], [ "strap_small", 2 ] ]
+    "using": [ [ "armor_chainmail_assembling", 2 ], [ "strap_small", 2 ] ]
   },
   {
     "result": "gloves_studded",

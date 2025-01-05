@@ -430,9 +430,7 @@
       { "id": "bolt_metal", "description": " Craft: Crossbow Bolt, Steel" },
       { "id": "copper_ax", "description": " Craft: Axe, Copper" },
       { "id": "spear_copper", "description": " Craft: Spear, Copper" },
-      { "id": "lc_wire", "description": " Craft: Mild Steel, Wire" },
-      { "id": "lc_chain_link_fabrication", "description": " Craft: Mild Steel, Link" },
-      { "id": "lc_link_sheet", "description": " Craft: Mild Steel, Link Sheet" },
+      { "id": "link_sheet", "description": " Craft: Link Sheet" },
       { "id": "mc_steel_lump", "description": " Craft: Medium Steel, Lump" }
     ]
   },
@@ -446,8 +444,7 @@
       { "id": "tongs", "description": " Craft: Pair of Kitchen Tongs" },
       { "id": "nail", "description": " Craft: Nail" },
       { "id": "wire", "description": " Craft: Wire" },
-      { "id": "swage", "description": " Craft: Swage and Die Set" },
-      { "id": "mc_wire", "description": " Craft: Medium Steel, Wire" }
+      { "id": "swage", "description": " Craft: Swage and Die Set" }
     ]
   },
   {
@@ -465,8 +462,7 @@
       { "id": "welding_rod_steel", "description": " Craft: Steel Welding Rod" },
       { "id": "rebar", "description": " Craft: Rebar" },
       { "id": "gold_ring", "description": " Craft: Gold Ring" },
-      { "id": "hammer_sledge_from_scratch", "description": " Craft: Hammer, Sledge" },
-      { "id": "ch_wire", "description": " Craft: Hardened Steel, Wire" }
+      { "id": "hammer_sledge_from_scratch", "description": " Craft: Hammer, Sledge" }
     ]
   },
   {
@@ -486,8 +482,7 @@
       { "id": "crowbar", "description": " Craft: Crowbar" },
       { "id": "pot", "description": " Craft: Pot" },
       { "id": "hoe", "description": " Craft: Hoe" },
-      { "id": "hc_steel_lump", "description": " Craft: High Steel, Lump" },
-      { "id": "hc_wire", "description": " Craft: High Steel, Wire" }
+      { "id": "hc_steel_lump", "description": " Craft: High Steel, Lump" }
     ]
   },
   {

@@ -922,7 +922,7 @@
     "difficulty": 7,
     "time": "5 h",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 6 ], [ "strap_small", 6 ], [ "clasps", 6 ] ],
+    "using": [ [ "armor_chainmail_assembling", 6 ], [ "strap_small", 6 ], [ "clasps", 6 ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_closures" } ]
   },
   {
@@ -930,14 +930,14 @@
     "type": "recipe",
     "copy-from": "chainmail_chausses",
     "time": "4 h",
-    "using": [ [ "armor_lc_chainmail_assembling", 4 ], [ "strap_small", 4 ], [ "clasps", 4 ] ]
+    "using": [ [ "armor_chainmail_assembling", 4 ], [ "strap_small", 4 ], [ "clasps", 4 ] ]
   },
   {
     "result": "chainmail_chausses_xl",
     "type": "recipe",
     "copy-from": "chainmail_chausses",
     "time": "3 h 23 m",
-    "using": [ [ "armor_lc_chainmail_assembling", 8 ], [ "strap_small", 8 ], [ "clasps", 6 ] ]
+    "using": [ [ "armor_chainmail_assembling", 8 ], [ "strap_small", 8 ], [ "clasps", 6 ] ]
   },
   {
     "result": "chainmail_skirt",
@@ -949,7 +949,7 @@
     "difficulty": 7,
     "time": "3 h",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 3 ], [ "strap_small", 2 ], [ "clasps", 2 ] ],
+    "using": [ [ "armor_chainmail_assembling", 3 ], [ "strap_small", 2 ], [ "clasps", 2 ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_closures" } ]
   },
   {
@@ -957,14 +957,14 @@
     "type": "recipe",
     "copy-from": "chainmail_skirt",
     "time": "3 h",
-    "using": [ [ "armor_lc_chainmail_assembling", 3 ], [ "strap_small", 1 ], [ "clasps", 2 ] ]
+    "using": [ [ "armor_chainmail_assembling", 3 ], [ "strap_small", 1 ], [ "clasps", 2 ] ]
   },
   {
     "result": "chainmail_skirt_xl",
     "type": "recipe",
     "copy-from": "chainmail_skirt",
     "time": "3 h 23 m",
-    "using": [ [ "armor_lc_chainmail_assembling", 5 ], [ "strap_small", 4 ], [ "clasps", 2 ] ]
+    "using": [ [ "armor_chainmail_assembling", 5 ], [ "strap_small", 4 ], [ "clasps", 2 ] ]
   },
   {
     "result": "bronze_greaves",
