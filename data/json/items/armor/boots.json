@@ -2101,7 +2101,7 @@
     "price": 5012,
     "price_postapoc": 2000,
     "to_hit": -1,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "color": "light_red",
     "flags": [ "STURDY", "BELTED" ],
@@ -2119,7 +2119,7 @@
           "foot_arch_l"
         ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.2 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.2 },
           { "type": "leather", "covered_by_mat": 1, "thickness": 2.0 }
         ],
         "encumbrance": 10,

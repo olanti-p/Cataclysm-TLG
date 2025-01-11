@@ -10,7 +10,7 @@
     "price": 60000,
     "price_postapoc": 12000,
     "to_hit": -5,
-    "material": [ "canvas", "lc_steel" ],
+    "material": [ "canvas", "steel" ],
     "melee_damage": { "bash": 6 },
     "symbol": "[",
     "looks_like": "armor_larmor",
@@ -21,7 +21,7 @@
       {
         "material": [
           { "type": "canvas", "covered_by_mat": 100, "thickness": 2.0 },
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 1.0 }
+          { "type": "steel", "covered_by_mat": 95, "thickness": 1.0 }
         ],
         "covers": [ "torso" ],
         "coverage": 95,
@@ -57,7 +57,7 @@
     "price": 30000,
     "price_postapoc": 1000,
     "to_hit": 1,
-    "material": [ "lc_steel", "canvas" ],
+    "material": [ "steel", "canvas" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "light_gray",
@@ -66,7 +66,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 90, "thickness": 0.8 },
+          { "type": "steel", "covered_by_mat": 90, "thickness": 0.8 },
           { "type": "canvas", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "arm_l", "arm_r" ],
@@ -106,7 +106,7 @@
     "price": 40000,
     "price_postapoc": 1000,
     "to_hit": 1,
-    "material": [ "lc_steel", "canvas" ],
+    "material": [ "steel", "canvas" ],
     "symbol": "[",
     "looks_like": "platemail_leg_guards",
     "color": "light_gray",
@@ -115,7 +115,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 90, "thickness": 0.8 },
+          { "type": "steel", "covered_by_mat": 90, "thickness": 0.8 },
           { "type": "canvas", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "leg_l", "leg_r" ],
@@ -156,14 +156,14 @@
     "price_postapoc": 2500,
     "to_hit": -1,
     "melee_damage": { "bash": 6 },
-    "material": [ "lc_steel", "canvas" ],
+    "material": [ "steel", "canvas" ],
     "symbol": "[",
     "color": "light_gray",
     "flags": [ "STURDY", "OUTER", "VARSIZE" ],
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 95, "thickness": 1.0 },
+          { "type": "steel", "covered_by_mat": 95, "thickness": 1.0 },
           { "type": "canvas", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "hand_l", "hand_r" ],
@@ -173,7 +173,7 @@
       },
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 75, "thickness": 1.0 },
+          { "type": "steel", "covered_by_mat": 75, "thickness": 1.0 },
           { "type": "canvas", "covered_by_mat": 100, "thickness": 1.5 }
         ],
         "covers": [ "hand_l", "hand_r" ],

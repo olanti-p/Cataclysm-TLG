@@ -173,7 +173,7 @@
       { "proficiency": "prof_carving", "time_multiplier": 1.5, "skill_penalty": 0.15 }
     ],
     "tools": [ [ [ "swage", -1 ] ] ],
-    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 1 ] ], [ [ "hc_steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
+    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 1 ] ], [ [ "steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
   },
   {
     "type": "recipe",
@@ -196,7 +196,7 @@
       { "proficiency": "prof_carving", "time_multiplier": 1.5, "skill_penalty": 0.15 }
     ],
     "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 1 ] ], [ [ "hc_steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
+    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 1 ] ], [ [ "steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
   },
   {
     "type": "recipe",
@@ -219,7 +219,7 @@
       { "proficiency": "prof_carving", "time_multiplier": 1.5, "skill_penalty": 0.15 }
     ],
     "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 1 ] ], [ [ "hc_steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
+    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 1 ] ], [ [ "steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
   },
   {
     "type": "recipe",
@@ -242,7 +242,7 @@
       { "proficiency": "prof_carving", "time_multiplier": 1.5, "skill_penalty": 0.15 }
     ],
     "tools": [ [ [ "hotcut_any", 1, "LIST" ] ] ],
-    "components": [ [ [ "2x4", 1 ] ], [ [ "pipe", 1 ] ], [ [ "hc_steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
+    "components": [ [ [ "2x4", 1 ] ], [ [ "pipe", 1 ] ], [ [ "steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
   },
   {
     "result": "carbine_flintlock_double",
@@ -264,7 +264,7 @@
       { "proficiency": "prof_gunsmithing_antique" },
       { "proficiency": "prof_carving", "time_multiplier": 1.5, "skill_penalty": 0.15 }
     ],
-    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 2 ] ], [ [ "hc_steel_chunk", 2 ] ], [ [ "flint", 2 ] ] ]
+    "components": [ [ [ "2x4", 2 ] ], [ [ "pipe", 2 ] ], [ [ "steel_chunk", 2 ] ], [ [ "flint", 2 ] ] ]
   },
   {
     "result": "carbine_flintlock_double",

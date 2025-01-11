@@ -1303,22 +1303,6 @@
   },
   {
     "type": "AMMO",
-    "id": "lc_chain_link",
-    "category": "spare_parts",
-    "price": 150,
-    "price_postapoc": 50,
-    "name": { "str": "chain link" },
-    "symbol": "=",
-    "color": "light_gray",
-    "description": "A set of small metal rings, suitable for constructing chainmail.",
-    "material": [ "lc_steel" ],
-    "volume": "250 ml",
-    "weight": "320 mg",
-    "ammo_type": "components",
-    "count": 425
-  },
-  {
-    "type": "AMMO",
     "id": "nitrox",
     "category": "chems",
     "price": 500,

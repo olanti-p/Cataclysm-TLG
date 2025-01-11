@@ -40,7 +40,7 @@
     "volume": "13 L",
     "price": 4500,
     "price_postapoc": 50,
-    "material": [ "lc_steel", "aluminum" ],
+    "material": [ "steel", "aluminum" ],
     "symbol": "[",
     "looks_like": "helmet_plate",
     "color": "light_gray",
@@ -51,7 +51,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 0.95 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 },
           { "type": "cotton", "covered_by_mat": 98, "thickness": 2.5 },
           { "type": "aluminum", "covered_by_mat": 40, "thickness": 2.0 }
         ],
@@ -63,7 +63,7 @@
       },
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 0.95 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 },
           { "type": "cotton", "covered_by_mat": 98, "thickness": 2.5 }
         ],
         "covers": [ "head" ],
@@ -72,14 +72,14 @@
         "layers": [ "NORMAL", "OUTER" ]
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 0.95 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
         "covers": [ "head" ],
         "coverage": 80,
         "specifically_covers": [ "head_throat", "head_nape" ],
         "layers": [ "OUTER" ]
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 0.95 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
         "covers": [ "eyes" ],
         "coverage": 90,
         "encumbrance": 25,
@@ -87,14 +87,14 @@
         "rigid_layer_only": true
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 0.95 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
         "coverage": 95,
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_cheeks" ],
         "layers": [ "OUTER" ]
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 0.95 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
         "covers": [ "mouth" ],
         "coverage": 40,
         "specifically_covers": [ "mouth_lips", "mouth_nose", "mouth_chin" ],
@@ -269,8 +269,8 @@
     "//": "assuming this is an antique and not a cheap replica",
     "price_postapoc": 1200,
     "to_hit": -1,
-    "material": [ "lc_steel", "plastic", "leather" ],
-    "repairs_with": [ "hc_steel" ],
+    "material": [ "steel", "plastic", "leather" ],
+    "repairs_with": [ "steel" ],
     "symbol": "[",
     "looks_like": "helmet_army",
     "color": "dark_gray",
@@ -279,7 +279,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.12 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.12 },
           { "type": "plastic", "covered_by_mat": 100, "thickness": 3 },
           { "type": "leather", "covered_by_mat": 10, "thickness": 1.0 }
         ],
@@ -1429,8 +1429,8 @@
     "volume": "2 L",
     "price": 4500,
     "price_postapoc": 50,
-    "material": [ "lc_steel", "cotton" ],
-    "repairs_with": [ "lc_steel" ],
+    "material": [ "steel", "cotton" ],
+    "repairs_with": [ "steel" ],
     "symbol": "[",
     "looks_like": "helmet_barbute",
     "color": "light_gray",
@@ -1441,7 +1441,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.5 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.5 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 5 }
         ],
         "covers": [ "head" ],
@@ -1462,7 +1462,7 @@
     "volume": "1250 ml",
     "price": 4500,
     "price_postapoc": 750,
-    "material": [ "plastic", "lc_steel" ],
+    "material": [ "plastic", "steel" ],
     "symbol": "[",
     "looks_like": "helmet_bike",
     "color": "dark_gray",
@@ -1491,7 +1491,7 @@
     "price": 24000,
     "price_postapoc": 3500,
     "to_hit": -3,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "looks_like": "helmet_plate",
     "color": "dark_gray",
@@ -1683,13 +1683,13 @@
       "target": "platemail_visored_helm_raised",
       "menu_text": "Raise"
     },
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "o",
     "color": "light_gray",
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 2 },
           { "type": "leather", "covered_by_mat": 1, "thickness": 1.0 }
         ],
         "covers": [ "head" ],
@@ -1698,7 +1698,7 @@
       },
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 },
           { "type": "leather", "covered_by_mat": 1, "thickness": 1.0 }
         ],
         "covers": [ "mouth" ],
@@ -1708,7 +1708,7 @@
         "rigid_layer_only": true
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "eyes" ],
         "coverage": 95,
         "encumbrance": 10,
@@ -1733,7 +1733,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 2 },
           { "type": "leather", "covered_by_mat": 1, "thickness": 1.0 }
         ],
         "covers": [ "head" ],
@@ -1885,7 +1885,7 @@
     "volume": "1500 ml",
     "price": 26000,
     "price_postapoc": 2500,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "looks_like": "helmet_barbute",
     "color": "light_gray",

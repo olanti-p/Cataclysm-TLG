@@ -108,28 +108,28 @@
     "price": 5012,
     "price_postapoc": 1300,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "color": "light_red",
     "warmth": 3,
     "flags": [ "STURDY", "BELTED" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_neck" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat" ],
         "coverage": 95,
         "encumbrance": 1
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_nape" ],
         "coverage": 95,
@@ -165,28 +165,28 @@
     "price": 5012,
     "price_postapoc": 1300,
     "to_hit": -1,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "color": "light_red",
     "warmth": 5,
     "flags": [ "STURDY", "BELTED" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_neck" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_nape" ],
         "coverage": 95,
@@ -213,7 +213,7 @@
   {
     "id": "chainmail_junk_aventail",
     "copy-from": "chainmail_aventail",
-    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "replace_materials": { "steel_chain": "budget_steel_chain" },
     "type": "ARMOR",
     "name": { "str": "chainmail aventail" },
     "description": "Poor-quality armor made from a sheet of interlocking steel rings which secures around the neck."
@@ -230,35 +230,35 @@
     "price": 5012,
     "price_postapoc": 1300,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "color": "light_red",
     "warmth": 0,
     "flags": [ "STURDY" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_nape" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_ear_r", "head_ear_l" ],
         "coverage": 100,
         "encumbrance": 3
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_forehead" ],
         "coverage": 95,
@@ -286,7 +286,7 @@
     "id": "chainmail_junk_coif",
     "type": "ARMOR",
     "copy-from": "chainmail_coif",
-    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "replace_materials": { "steel_chain": "budget_steel_chain" },
     "name": { "str": "chainmail coif" },
     "description": "A protective hood made of interlocking steel rings that drape down to cover the neck.  It is of poor quality."
   }

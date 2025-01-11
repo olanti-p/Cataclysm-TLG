@@ -436,7 +436,7 @@
       "sound_fail": "kerchang.",
       "items": [
         { "item": "2x4", "count": [ 4, 8 ] },
-        { "item": "qt_wire", "count": [ 0, 5 ] },
+        { "item": "piano_wire", "count": [ 0, 5 ] },
         { "item": "nail", "charges": [ 6, 12 ] },
         { "item": "splinter", "count": 1 },
         { "item": "plastic_chunk", "count": [ 1, 5 ] }

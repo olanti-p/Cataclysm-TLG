@@ -444,7 +444,7 @@
     "difficulty": 7,
     "time": "190 m",
     "book_learn": [ [ "textbook_armwest", 6 ] ],
-    "using": [ [ "blacksmithing_standard", 28 ], [ "lc_steel_standard", 7 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 28 ], [ "steel_standard", 7 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
     "proficiencies": [
       { "proficiency": "prof_metalworking" },
       { "proficiency": "prof_blacksmithing" },
@@ -459,7 +459,7 @@
     "type": "recipe",
     "copy-from": "platemail_leg_guards",
     "time": "190 m",
-    "using": [ [ "blacksmithing_standard", 20 ], [ "lc_steel_standard", 5 ], [ "strap_small", 3 ], [ "clasps", 3 ] ],
+    "using": [ [ "blacksmithing_standard", 20 ], [ "steel_standard", 5 ], [ "strap_small", 3 ], [ "clasps", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
@@ -468,7 +468,7 @@
     "type": "recipe",
     "copy-from": "platemail_leg_guards",
     "time": "3 h 30 m",
-    "using": [ [ "blacksmithing_standard", 36 ], [ "lc_steel_standard", 9 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 36 ], [ "steel_standard", 9 ], [ "strap_small", 4 ], [ "clasps", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
@@ -482,7 +482,7 @@
     "difficulty": 6,
     "time": "160 m",
     "book_learn": [ [ "textbook_armwest", 5 ] ],
-    "using": [ [ "blacksmithing_standard", 24 ], [ "lc_steel_standard", 4 ], [ "strap_small", 8 ], [ "clasps", 2 ] ],
+    "using": [ [ "blacksmithing_standard", 24 ], [ "steel_standard", 4 ], [ "strap_small", 8 ], [ "clasps", 2 ] ],
     "proficiencies": [
       { "proficiency": "prof_metalworking" },
       { "proficiency": "prof_blacksmithing" },
@@ -922,7 +922,7 @@
     "difficulty": 7,
     "time": "5 h",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 6 ], [ "strap_small", 6 ], [ "clasps", 6 ] ],
+    "using": [ [ "armor_chainmail_assembling", 6 ], [ "strap_small", 6 ], [ "clasps", 6 ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_closures" } ]
   },
   {
@@ -930,14 +930,14 @@
     "type": "recipe",
     "copy-from": "chainmail_chausses",
     "time": "4 h",
-    "using": [ [ "armor_lc_chainmail_assembling", 4 ], [ "strap_small", 4 ], [ "clasps", 4 ] ]
+    "using": [ [ "armor_chainmail_assembling", 4 ], [ "strap_small", 4 ], [ "clasps", 4 ] ]
   },
   {
     "result": "chainmail_chausses_xl",
     "type": "recipe",
     "copy-from": "chainmail_chausses",
     "time": "3 h 23 m",
-    "using": [ [ "armor_lc_chainmail_assembling", 8 ], [ "strap_small", 8 ], [ "clasps", 6 ] ]
+    "using": [ [ "armor_chainmail_assembling", 8 ], [ "strap_small", 8 ], [ "clasps", 6 ] ]
   },
   {
     "result": "chainmail_skirt",
@@ -949,7 +949,7 @@
     "difficulty": 7,
     "time": "3 h",
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
-    "using": [ [ "armor_lc_chainmail_assembling", 3 ], [ "strap_small", 2 ], [ "clasps", 2 ] ],
+    "using": [ [ "armor_chainmail_assembling", 3 ], [ "strap_small", 2 ], [ "clasps", 2 ] ],
     "proficiencies": [ { "proficiency": "prof_chain_armour" }, { "proficiency": "prof_closures" } ]
   },
   {
@@ -957,14 +957,14 @@
     "type": "recipe",
     "copy-from": "chainmail_skirt",
     "time": "3 h",
-    "using": [ [ "armor_lc_chainmail_assembling", 3 ], [ "strap_small", 1 ], [ "clasps", 2 ] ]
+    "using": [ [ "armor_chainmail_assembling", 3 ], [ "strap_small", 1 ], [ "clasps", 2 ] ]
   },
   {
     "result": "chainmail_skirt_xl",
     "type": "recipe",
     "copy-from": "chainmail_skirt",
     "time": "3 h 23 m",
-    "using": [ [ "armor_lc_chainmail_assembling", 5 ], [ "strap_small", 4 ], [ "clasps", 2 ] ]
+    "using": [ [ "armor_chainmail_assembling", 5 ], [ "strap_small", 4 ], [ "clasps", 2 ] ]
   },
   {
     "result": "bronze_greaves",
@@ -1045,7 +1045,7 @@
     "using": [
       [ "tailoring_canvas_patchwork", 4 ],
       [ "blacksmithing_standard", 12 ],
-      [ "lc_steel_standard", 3 ],
+      [ "steel_standard", 3 ],
       [ "fastener_small", 2 ],
       [ "strap_small", 2 ]
     ],
@@ -1068,7 +1068,7 @@
     "using": [
       [ "tailoring_canvas_patchwork", 5 ],
       [ "blacksmithing_standard", 16 ],
-      [ "lc_steel_standard", 4 ],
+      [ "steel_standard", 4 ],
       [ "fastener_small", 2 ],
       [ "strap_small", 2 ]
     ],
@@ -1085,7 +1085,7 @@
     "using": [
       [ "tailoring_canvas_patchwork", 3 ],
       [ "blacksmithing_standard", 8 ],
-      [ "lc_steel_standard", 2 ],
+      [ "steel_standard", 2 ],
       [ "fastener_small", 2 ],
       [ "strap_small", 2 ]
     ],

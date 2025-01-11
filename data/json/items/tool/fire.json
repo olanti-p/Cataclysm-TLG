@@ -72,7 +72,7 @@
     "price": 300,
     "price_postapoc": 250,
     "to_hit": -1,
-    "material": [ "stone", "hc_steel" ],
+    "material": [ "stone", "steel" ],
     "symbol": ",",
     "color": "dark_gray",
     "initial_charges": 2000,

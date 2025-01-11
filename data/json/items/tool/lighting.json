@@ -290,7 +290,7 @@
     "name": { "str": "high-power mini diving flashlight (off)", "str_pl": "high-power mini diving flashlights (off)" },
     "description": "A small waterproof high-power flashlight with an aluminum handle, powered by batteries.  Can be attached to some diving masks and hoods.",
     "//": "Based on this: https://www.amazon.com/RAYVENGE-Headlamp-Underwater-Flashlight-Stainless/dp/B0BD6GVJH2",
-    "material": [ "plastic", "aluminum", "lc_steel" ],
+    "material": [ "plastic", "aluminum", "steel" ],
     "looks_like": "flashlight",
     "symbol": ";",
     "color": "blue",

@@ -88,7 +88,7 @@
     "price": 5500000,
     "price_postapoc": 10000,
     "to_hit": -4,
-    "material": [ "qt_steel" ],
+    "material": [ "steel" ],
     "symbol": "(",
     "color": "dark_gray",
     "ammo": [ "308" ],

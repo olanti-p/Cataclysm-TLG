@@ -1134,7 +1134,7 @@
     "price": 35000,
     "price_postapoc": 6000,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "looks_like": "chainmail_hauberk",
     "color": "light_red",
@@ -1146,13 +1146,13 @@
         "encumbrance": 30,
         "coverage": 100,
         "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r" ],
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
       },
       {
         "coverage": 100,
         "covers": [ "foot_l", "foot_r", "head" ],
         "encumbrance": 25,
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
       }
     ]
   },
@@ -1183,7 +1183,7 @@
     "price": 35000,
     "price_postapoc": 5000,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "looks_like": "chainmail_suit",
     "color": "light_red",
@@ -1195,13 +1195,13 @@
         "encumbrance": 30,
         "coverage": 100,
         "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r" ],
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
       },
       {
         "coverage": 100,
         "covers": [ "foot_l", "foot_r", "head" ],
         "encumbrance": 25,
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ]
       }
     ]
   },
