@@ -489,7 +489,7 @@ static int info_uilist( bool display_all_entries = true )
             { uilist_entry( debug_menu_index::WRITE_GLOBAL_EOCS, true, 'C', _( "Write global effect_on_condition(s) to eocs.output" ) ) },
             { uilist_entry( debug_menu_index::WRITE_GLOBAL_VARS, true, 'G', _( "Write global var(s) to var_list.output" ) ) },
             { uilist_entry( debug_menu_index::WRITE_TIMED_EVENTS, true, 'E', _( "Write Timed (E)vents to timed_event_list.output" ) ) },
-            { uilist_entry( debug_menu_index::EDIT_GLOBAL_VARS, true, 's', _( "Edit global var(s)" ) ) },
+            { uilist_entry( debug_menu_index::EDIT_GLOBAL_VARS, true, 'a', _( "Edit global v(a)rs" ) ) },
             { uilist_entry( debug_menu_index::TEST_MAP_EXTRA_DISTRIBUTION, true, 'e', _( "Test map extra list" ) ) },
             { uilist_entry( debug_menu_index::GENERATE_EFFECT_LIST, true, 'L', _( "Generate effect list" ) ) },
             { uilist_entry( debug_menu_index::WRITE_CITY_LIST, true, 'C', _( "Write city list to cities.output" ) ) },
@@ -2877,16 +2877,9 @@ void debug()
     get_event_bus().send<event_type::uses_debug_menu>( *action );
 
     // Used for quick setup, constructed outside the switches to reduce duplicate code
-    std::vector<trait_id> setup_traits;
-    setup_traits.emplace_back( trait_DEBUG_BIONICS );
-    setup_traits.emplace_back( trait_DEBUG_CLAIRVOYANCE );
-    setup_traits.emplace_back( trait_DEBUG_CLOAK );
-    setup_traits.emplace_back( trait_DEBUG_HS );
-    setup_traits.emplace_back( trait_DEBUG_LS );
-    setup_traits.emplace_back( trait_DEBUG_MANA );
-    setup_traits.emplace_back( trait_DEBUG_NODMG );
-    setup_traits.emplace_back( trait_DEBUG_NOTEMP );
-    setup_traits.emplace_back( trait_DEBUG_SPEED );
+    std::vector<trait_id> setup_traits{trait_DEBUG_BIONICS, trait_DEBUG_CLAIRVOYANCE, trait_DEBUG_CLOAK,
+                                       trait_DEBUG_HS, trait_DEBUG_LS, trait_DEBUG_MANA, trait_DEBUG_NODMG,
+                                       trait_DEBUG_NOTEMP, trait_DEBUG_SPEED};
 
     avatar &player_character = get_avatar();
     map &here = get_map();
