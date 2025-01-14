@@ -666,8 +666,7 @@
           "mx_portal": 10,
           "mx_portal_in": 10,
           "mx_science": 10,
-          "mx_military": 4,
-          "mx_golden_monoliths": 1
+          "mx_military": 4
         }
       },
       "road": {

@@ -19,7 +19,6 @@
     "min_max_zlevel": [ -1, 0 ],
     "sym": "c",
     "color": "light_red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -31,7 +30,6 @@
     "min_max_zlevel": [ -2, 0 ],
     "sym": "d",
     "color": "light_red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -43,7 +41,6 @@
     "min_max_zlevel": [ 0, 0 ],
     "sym": "X",
     "color": "yellow",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -67,7 +64,6 @@
     "min_max_zlevel": [ 0, 0 ],
     "sym": "X",
     "color": "blue",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -79,7 +75,6 @@
     "min_max_zlevel": [ 0, 0 ],
     "sym": "X",
     "color": "red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -92,7 +87,6 @@
     "sym": "X",
     "color": "red",
     "//": "Can't be true because it doesn't always place anything",
-    "autonote": false,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -104,7 +98,6 @@
     "min_max_zlevel": [ 0, 0 ],
     "sym": "M",
     "color": "red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -116,7 +109,6 @@
     "min_max_zlevel": [ -4, 5 ],
     "sym": "m",
     "color": "light_red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -140,7 +132,6 @@
     "min_max_zlevel": [ -5, 0 ],
     "sym": "s",
     "color": "light_red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -166,18 +157,6 @@
     "autonote": true
   },
   {
-    "id": "mx_golden_monoliths",
-    "type": "map_extra",
-    "name": { "str": "Golden monoliths" },
-    "description": "There are some strange metal formations here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_golden_monoliths_map" },
-    "min_max_zlevel": [ 0, 0 ],
-    "sym": "x",
-    "color": "yellow",
-    "autonote": true,
-    "flags": [ "YRAX" ]
-  },
-  {
     "id": "mx_lab_concourse_area",
     "type": "map_extra",
     "name": { "str": "Start location concourse area" },
@@ -186,7 +165,6 @@
     "min_max_zlevel": [ 0, 0 ],
     "sym": "F",
     "color": "light_gray",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -197,8 +175,7 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_basement_spider" },
     "min_max_zlevel": [ -1, -1 ],
     "sym": "S",
-    "color": "yellow",
-    "autonote": true
+    "color": "yellow"
   },
   {
     "id": "mx_house_wasp",
@@ -208,8 +185,7 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_house_wasp" },
     "min_max_zlevel": [ 0, 10 ],
     "sym": "W",
-    "color": "yellow",
-    "autonote": true
+    "color": "yellow"
   },
   {
     "id": "mx_bugout",
@@ -220,7 +196,6 @@
     "min_max_zlevel": [ -1, 1 ],
     "sym": "c",
     "color": "light_red",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -250,8 +225,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_jabberwock" },
     "min_max_zlevel": [ -2, 5 ],
     "sym": "J",
-    "color": "red",
-    "autonote": true
+    "color": "red"
   },
   {
     "id": "mx_grove",
@@ -261,8 +235,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_grove" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": "F",
-    "color": "light_green",
-    "autonote": true
+    "color": "light_green"
   },
   {
     "id": "mx_shrubbery",
@@ -272,8 +245,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_shrubbery" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": "s",
-    "color": "light_green",
-    "autonote": true
+    "color": "light_green"
   },
   {
     "id": "mx_clearcut",
@@ -283,8 +255,7 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_clearcut" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": ".",
-    "color": "brown",
-    "autonote": true
+    "color": "brown"
   },
   {
     "id": "mx_pond",
@@ -294,8 +265,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_pond" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": "p",
-    "color": "blue",
-    "autonote": true
+    "color": "blue"
   },
   {
     "id": "mx_pond_forest",
@@ -413,8 +383,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_dead_vegetation" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": ".",
-    "color": "brown",
-    "autonote": true
+    "color": "brown"
   },
   {
     "id": "mx_point_dead_vegetation",
@@ -424,8 +393,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_point_dead_vegetation" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": ".",
-    "color": "brown",
-    "autonote": true
+    "color": "brown"
   },
   {
     "id": "mx_burned_ground",
@@ -435,8 +403,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_burned_ground" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": ".",
-    "color": "light_gray",
-    "autonote": true
+    "color": "light_gray"
   },
   {
     "id": "mx_point_burned_ground",
@@ -446,8 +413,7 @@
     "generator": { "generator_method": "map_extra_function", "generator_id": "mx_point_burned_ground" },
     "min_max_zlevel": [ 0, 5 ],
     "sym": ".",
-    "color": "light_gray",
-    "autonote": true
+    "color": "light_gray"
   },
   {
     "id": "mx_marloss_pilgrimage",
@@ -469,7 +435,6 @@
     "min_max_zlevel": [ -5, 5 ],
     "sym": "c",
     "color": "dark_gray",
-    "autonote": true,
     "flags": [ "MAN_MADE" ]
   },
   {
@@ -627,7 +592,6 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_worm_sign" },
     "min_max_zlevel": [ 0, 0 ],
     "sym": "o",
-    "color": "red",
-    "autonote": true
+    "color": "red"
   }
 ]
