@@ -46,7 +46,7 @@
     ]
   },
   {
-    "name": "GROUP_SHEEPS",
+    "name": "GROUP_SHEEP",
     "type": "monstergroup",
     "monsters": [
       { "monster": "mon_sheep", "weight": 150, "cost_multiplier": 2 },
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "name": "GROUP_DEERS",
+    "name": "GROUP_DEER",
     "type": "monstergroup",
     "monsters": [
       { "monster": "mon_deer", "weight": 150, "cost_multiplier": 2 },
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "name": "GROUP_REINDEERS",
+    "name": "GROUP_REINDEER",
     "type": "monstergroup",
     "monsters": [
       { "monster": "mon_reindeer", "weight": 150, "cost_multiplier": 2 },
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "name": "GROUP_WOLFS",
+    "name": "GROUP_WOLVES",
     "type": "monstergroup",
     "monsters": [
       { "monster": "mon_wolf", "weight": 150, "cost_multiplier": 2 },
@@ -126,33 +126,20 @@
     ]
   },
   {
-    "name": "GROUP_COUGARS",
-    "type": "monstergroup",
-    "monsters": [
-      { "monster": "mon_cougar", "weight": 150, "cost_multiplier": 2 },
-      {
-        "monster": "mon_cougar_kitten",
-        "weight": 25,
-        "pack_size": [ 1, 2 ],
-        "ends": "31 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      },
-      {
-        "monster": "mon_cougar_kitten",
-        "weight": 12,
-        "pack_size": [ 1, 2 ],
-        "starts": "31 days",
-        "conditions": [ "SPRING", "SUMMER", "AUTUMN" ]
-      }
-    ]
-  },
-  {
     "name": "GROUP_HORSES",
     "type": "monstergroup",
     "monsters": [
       { "monster": "mon_horse", "weight": 150, "cost_multiplier": 2 },
       { "monster": "mon_horse_foal", "weight": 50, "ends": "31 days" },
       { "monster": "mon_horse_foal", "weight": 25, "starts": "31 days" }
+    ]
+  },
+  {
+    "name": "GROUP_COYOTES",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_coyote", "weight": 1, "cost_multiplier": 2, "pack_size": [ 1, 6 ] },
+      { "monster": "mon_coyote_wolf", "weight": 1, "cost_multiplier": 2, "pack_size": [ 1, 8 ] }
     ]
   },
   {

@@ -1331,9 +1331,6 @@ void spell_effect::timed_event( const spell &sp, Creature &caster, const tripoin
         { "spawn_wyrms", timed_event_type::SPAWN_WYRMS },
         { "amigara", timed_event_type::AMIGARA },
         { "roots_die", timed_event_type::ROOTS_DIE },
-        { "temple_open", timed_event_type::TEMPLE_OPEN },
-        { "temple_flood", timed_event_type::TEMPLE_FLOOD },
-        { "temple_spawn", timed_event_type::TEMPLE_SPAWN },
         { "dim", timed_event_type::DIM },
         { "artifact_light", timed_event_type::ARTIFACT_LIGHT }
     };
@@ -1906,7 +1903,7 @@ void spell_effect::banishment( const spell &sp, Creature &caster, const tripoint
             int caster_total_hp = 0;
             int unbroken_parts = 0;
             for( const bodypart_id &part : caster.get_all_body_parts( get_body_part_flags::only_main ) ) {
-                const int cur_part_hp = caster.as_character()->get_part_hp_cur( part );
+                const int cur_part_hp = caster.get_part_hp_cur( part );
                 if( cur_part_hp != 0 ) {
                     caster_total_hp += cur_part_hp;
                     unbroken_parts++;
@@ -1923,14 +1920,13 @@ void spell_effect::banishment( const spell &sp, Creature &caster, const tripoint
                 int parts_checked = 0;
 
                 for( const bodypart_id &part : caster.get_all_body_parts( get_body_part_flags::only_main ) ) {
-                    Character &char_caster = *caster.as_character();
-                    const int cur_part_hp = char_caster.get_part_hp_cur( part );
+                    const int cur_part_hp = caster.get_part_hp_cur( part );
                     if( cur_part_hp > std::ceil( damage_per_part ) ) {
                         const int rolled_dam = roll_remainder( damage_per_part );
-                        char_caster.mod_part_hp_cur( part, -rolled_dam );
+                        caster.mod_part_hp_cur( part, -rolled_dam );
                         overflow -= rolled_dam;
                     } else {
-                        char_caster.mod_part_hp_cur( part, -( cur_part_hp - 1 ) );
+                        caster.mod_part_hp_cur( part, -( cur_part_hp - 1 ) );
                         overflow -= cur_part_hp - 1;
                         damage_per_part = static_cast<float>( overflow ) /
                                           static_cast<float>( unbroken_parts - parts_checked );

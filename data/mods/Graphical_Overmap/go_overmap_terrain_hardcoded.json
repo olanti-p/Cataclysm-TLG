@@ -49,18 +49,6 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "temple_stairs",
-    "copy-from": "temple_stairs",
-    "sym": "\u00FE"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "temple_finale",
-    "copy-from": "temple_stairs",
-    "sym": "\u00FE"
-  },
-  {
-    "type": "overmap_terrain",
     "id": "mine_entrance",
     "copy-from": "mine_entrance",
     "sym": "\u00D3"
@@ -165,18 +153,6 @@
     "id": "empty_rock",
     "copy-from": "empty_rock",
     "sym": "\u00AE"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "rift",
-    "copy-from": "rift",
-    "sym": "\u00A1"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "hellmouth",
-    "copy-from": "hellmouth",
-    "sym": "\u00A1"
   },
   {
     "type": "overmap_terrain",

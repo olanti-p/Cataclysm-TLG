@@ -64,7 +64,7 @@
     "activity_level": "MODERATE_EXERCISE",
     "time": "50 m",
     "tools": [ [ [ "angle_grinder", 45 ] ] ],
-    "components": [ [ [ "mc_steel_lump", 30 ] ] ]
+    "components": [ [ [ "steel_lump", 30 ] ] ]
   },
   {
     "result": "10l_tin",
@@ -338,54 +338,6 @@
     "time": "1 h",
     "tools": [ [ [ "reciprocating_saw", 50 ], [ "circsaw_off", 50 ] ] ],
     "components": [ [ [ "plastic_chunk", 100 ] ] ]
-  },
-  {
-    "result": "10l_lc_steel",
-    "type": "uncraft",
-    "activity_level": "MODERATE_EXERCISE",
-    "time": "10 m",
-    "tools": [ [ [ "angle_grinder", 10 ] ] ],
-    "components": [ [ [ "5l_lc_steel", 2 ] ] ]
-  },
-  {
-    "result": "5l_lc_steel",
-    "type": "uncraft",
-    "activity_level": "MODERATE_EXERCISE",
-    "time": "1 h",
-    "tools": [ [ [ "angle_grinder", 50 ] ] ],
-    "components": [ [ [ "lc_steel_lump", 39 ] ] ]
-  },
-  {
-    "result": "10l_mc_steel",
-    "type": "uncraft",
-    "activity_level": "MODERATE_EXERCISE",
-    "time": "10 m",
-    "tools": [ [ [ "angle_grinder", 10 ] ] ],
-    "components": [ [ [ "5l_mc_steel", 2 ] ] ]
-  },
-  {
-    "result": "5l_mc_steel",
-    "type": "uncraft",
-    "activity_level": "MODERATE_EXERCISE",
-    "time": "1 h",
-    "tools": [ [ [ "angle_grinder", 50 ] ] ],
-    "components": [ [ [ "mc_steel_lump", 39 ] ] ]
-  },
-  {
-    "result": "10l_hc_steel",
-    "type": "uncraft",
-    "activity_level": "MODERATE_EXERCISE",
-    "time": "10 m",
-    "tools": [ [ [ "angle_grinder", 10 ] ] ],
-    "components": [ [ [ "5l_hc_steel", 2 ] ] ]
-  },
-  {
-    "result": "5l_hc_steel",
-    "type": "uncraft",
-    "activity_level": "MODERATE_EXERCISE",
-    "time": "1 h",
-    "tools": [ [ [ "angle_grinder", 50 ] ] ],
-    "components": [ [ [ "hc_steel_lump", 39 ] ] ]
   },
   {
     "result": "atgm_spent",

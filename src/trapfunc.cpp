@@ -88,6 +88,14 @@ static const skill_id skill_throw( "throw" );
 
 static const species_id species_ROBOT( "ROBOT" );
 
+static const ter_str_id ter_t_floor_blue( "t_floor_blue" );
+static const ter_str_id ter_t_floor_green( "t_floor_green" );
+static const ter_str_id ter_t_floor_red( "t_floor_red" );
+static const ter_str_id ter_t_pit( "t_pit" );
+static const ter_str_id ter_t_rock_blue( "t_rock_blue" );
+static const ter_str_id ter_t_rock_green( "t_rock_green" );
+static const ter_str_id ter_t_rock_red( "t_rock_red" );
+
 static const trait_id trait_INFRESIST( "INFRESIST" );
 
 // A pit becomes less effective as it fills with corpses.
@@ -945,7 +953,7 @@ bool trapfunc::pit_spikes( const tripoint &p, Creature *c, item * )
     if( one_in( 4 ) ) {
         add_msg_if_player_sees( p, _( "The spears break!" ) );
         map &here = get_map();
-        here.ter_set( p, t_pit );
+        here.ter_set( p, ter_t_pit );
         // 4 spears to a pit
         for( int i = 0; i < 4; i++ ) {
             if( one_in( 3 ) ) {
@@ -1035,7 +1043,7 @@ bool trapfunc::pit_glass( const tripoint &p, Creature *c, item * )
     if( one_in( 5 ) ) {
         add_msg_if_player_sees( p, _( "The shards shatter!" ) );
         map &here = get_map();
-        here.ter_set( p, t_pit );
+        here.ter_set( p, ter_t_pit );
         // 20 shards in a pit.
         for( int i = 0; i < 20; i++ ) {
             if( one_in( 3 ) ) {
@@ -1178,7 +1186,7 @@ bool trapfunc::sinkhole( const tripoint &p, Creature *c, item *i )
                                     _( "A sinkhole under <npcname> collapses!" ) );
         if( success ) {
             here.remove_trap( p );
-            here.ter_set( p, t_pit );
+            here.ter_set( p, ter_t_pit );
             return true;
         }
         you->add_msg_player_or_npc( m_bad, _( "You fall into the sinkhole!" ),
@@ -1187,7 +1195,7 @@ bool trapfunc::sinkhole( const tripoint &p, Creature *c, item *i )
         return false;
     }
     here.remove_trap( p );
-    here.ter_set( p, t_pit );
+    here.ter_set( p, ter_t_pit );
     c->mod_moves( -c->get_speed() );
     pit( p, c, i );
     return true;
@@ -1322,99 +1330,6 @@ bool trapfunc::ledge( const tripoint &p, Creature *c, item * )
     }
 
     return true;
-}
-
-bool trapfunc::temple_flood( const tripoint &p, Creature *c, item * )
-{
-    if( c == nullptr ) {
-        return false;
-    }
-    // Monsters and npcs are completely ignored here, should they?
-    if( c->is_avatar() ) {
-        add_msg( m_warning, _( "You step on a loose tile, and water starts to flood the room!" ) );
-        tripoint tmp = p;
-        int &i = tmp.x;
-        int &j = tmp.y;
-        map &here = get_map();
-        for( i = 0; i < MAPSIZE_X; i++ ) {
-            for( j = 0; j < MAPSIZE_Y; j++ ) {
-                if( here.tr_at( tmp ) == tr_temple_flood ) {
-                    here.remove_trap( tmp );
-                }
-            }
-        }
-        get_timed_events().add( timed_event_type::TEMPLE_FLOOD, calendar::turn + 3_turns );
-        return true;
-    }
-    return false;
-}
-
-bool trapfunc::temple_toggle( const tripoint &p, Creature *c, item * )
-{
-    if( c == nullptr ) {
-        return false;
-    }
-    // Monsters and npcs are completely ignored here, should they?
-    if( c->is_avatar() ) {
-        add_msg( _( "You hear the grinding of shifting rock." ) );
-        map &here = get_map();
-        const ter_id type = here.ter( p );
-        tripoint tmp = p;
-        int &i = tmp.x;
-        int &j = tmp.y;
-        for( i = 0; i < MAPSIZE_X; i++ ) {
-            for( j = 0; j < MAPSIZE_Y; j++ ) {
-                if( type == t_floor_red ) {
-                    if( here.ter( tmp ) == t_rock_green ) {
-                        here.ter_set( tmp, t_floor_green );
-                    } else if( here.ter( tmp ) == t_floor_green ) {
-                        here.ter_set( tmp, t_rock_green );
-                    }
-                } else if( type == t_floor_green ) {
-                    if( here.ter( tmp ) == t_rock_blue ) {
-                        here.ter_set( tmp, t_floor_blue );
-                    } else if( here.ter( tmp ) == t_floor_blue ) {
-                        here.ter_set( tmp, t_rock_blue );
-                    }
-                } else if( type == t_floor_blue ) {
-                    if( here.ter( tmp ) == t_rock_red ) {
-                        here.ter_set( tmp, t_floor_red );
-                    } else if( here.ter( tmp ) == t_floor_red ) {
-                        here.ter_set( tmp, t_rock_red );
-                    }
-                }
-            }
-        }
-
-        // In case we're completely encircled by walls, replace random wall around the player with floor tile
-        std::vector<tripoint> blocked_tiles;
-        for( const tripoint &pnt : here.points_in_radius( p, 1 ) ) {
-            if( here.impassable( pnt ) ) {
-                blocked_tiles.push_back( pnt );
-            }
-        }
-
-        if( blocked_tiles.size() == 8 ) {
-            for( int i = 7; i >= 0 ; --i ) {
-                if( here.ter( blocked_tiles.at( i ) ) != t_rock_red &&
-                    here.ter( blocked_tiles.at( i ) ) != t_rock_green &&
-                    here.ter( blocked_tiles.at( i ) ) != t_rock_blue ) {
-                    blocked_tiles.erase( blocked_tiles.begin() + i );
-                }
-            }
-            const tripoint &pnt = random_entry( blocked_tiles );
-            if( here.ter( pnt ) == t_rock_red ) {
-                here.ter_set( pnt, t_floor_red );
-            } else if( here.ter( pnt ) == t_rock_green ) {
-                here.ter_set( pnt, t_floor_green );
-            } else if( here.ter( pnt ) == t_rock_blue ) {
-                here.ter_set( pnt, t_floor_blue );
-            }
-        }
-
-        return true;
-    }
-    return false;
 }
 
 bool trapfunc::glow( const tripoint &p, Creature *c, item * )
@@ -1675,8 +1590,6 @@ const trap_function &trap_function_from_string( const std::string &function_name
             { "portal", trapfunc::portal },
             { "ledge", trapfunc::ledge },
             { "boobytrap", trapfunc::boobytrap },
-            { "temple_flood", trapfunc::temple_flood },
-            { "temple_toggle", trapfunc::temple_toggle },
             { "glow", trapfunc::glow },
             { "hum", trapfunc::hum },
             { "shadow", trapfunc::shadow },

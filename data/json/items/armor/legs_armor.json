@@ -231,7 +231,7 @@
     "price": 10000,
     "price_postapoc": 2000,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "looks_like": "legguard_hard",
     "color": "light_red",
@@ -239,28 +239,28 @@
     "flags": [ "STURDY" ],
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
         "coverage": 40,
         "encumbrance": 1
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
         "coverage": 90,
         "encumbrance": 4
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
         "coverage": 100,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ],
         "coverage": 60,
@@ -290,7 +290,7 @@
     "copy-from": "chainmail_chausses",
     "name": { "str": "chainmail chausses", "str_pl": "pairs of chainmail chausses" },
     "description": "Protective leggings made of interlocking links of low-quality steel wire, covering from the thighs to the tops of the feet.",
-    "replace_materials": { "lc_steel_chain": "budget_steel_chain" }
+    "replace_materials": { "steel_chain": "budget_steel_chain" }
   },
   {
     "id": "chainmail_skirt",
@@ -304,7 +304,7 @@
     "price": 4000,
     "price_postapoc": 800,
     "to_hit": -1,
-    "material": [ "lc_steel_chain" ],
+    "material": [ "steel_chain" ],
     "symbol": "[",
     "looks_like": "skirt_leather",
     "color": "light_red",
@@ -318,21 +318,21 @@
     },
     "armor": [
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
         "coverage": 98,
         "encumbrance": 1
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
         "coverage": 95,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
+        "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_knee_l", "leg_knee_r" ],
         "coverage": 40,
@@ -372,7 +372,7 @@
     "id": "chainmail_skirt_budget",
     "type": "ARMOR",
     "copy-from": "chainmail_skirt",
-    "replace_materials": { "lc_steel_chain": "budget_steel_chain" },
+    "replace_materials": { "steel_chain": "budget_steel_chain" },
     "name": { "str": "chainmail skirt" },
     "use_action": {
       "type": "transform",
@@ -748,7 +748,7 @@
     "price": 4000,
     "price_postapoc": 800,
     "to_hit": -1,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "looks_like": "skirt_leather",
     "color": "light_red",
@@ -762,14 +762,14 @@
     },
     "armor": [
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
         "coverage": 90,
         "encumbrance": 2
       },
       {
-        "material": [ { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 } ],
+        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
         "coverage": 70,
@@ -860,7 +860,7 @@
     "price": 20000,
     "price_postapoc": 4000,
     "to_hit": -1,
-    "material": [ "lc_steel" ],
+    "material": [ "steel" ],
     "symbol": "[",
     "looks_like": "legguard_hard",
     "color": "light_gray",
@@ -870,7 +870,7 @@
     "armor": [
       {
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 100, "thickness": 1.3 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 },
           { "type": "leather", "covered_by_mat": 2, "thickness": 1.0 }
         ],
         "covers": [ "leg_l", "leg_r" ],
@@ -1049,7 +1049,7 @@
     "volume": "3500 ml",
     "price": 10000,
     "price_postapoc": 1000,
-    "material": [ "lc_steel", "denim" ],
+    "material": [ "steel", "denim" ],
     "symbol": "[",
     "looks_like": "motorbike_pants",
     "color": "light_blue",
@@ -1063,7 +1063,7 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_upper_l", "leg_lower_l", "leg_hip_r", "leg_upper_r", "leg_lower_r" ],
         "material": [
-          { "type": "lc_steel", "covered_by_mat": 70, "thickness": 1.5 },
+          { "type": "steel", "covered_by_mat": 70, "thickness": 1.5 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.65 }
         ],
         "rigid_layer_only": true,

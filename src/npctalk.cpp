@@ -173,6 +173,7 @@ struct item_search_data {
     itype_id id;
     item_category_id category;
     material_id material;
+    int calories = 0;
     std::vector<flag_id> flags;
     std::vector<flag_id> excluded_flags;
     bool worn_only;
@@ -182,6 +183,9 @@ struct item_search_data {
         id = itype_id( jo.get_string( "id", "" ) );
         category = item_category_id( jo.get_string( "category", "" ) );
         material = material_id( jo.get_string( "material", "" ) );
+        if( jo.has_int( "calories" ) ) {
+            calories = jo.get_int( "calories" );
+        }
         for( std::string flag : jo.get_string_array( "flags" ) ) {
             flags.emplace_back( flag );
         }
@@ -201,6 +205,13 @@ struct item_search_data {
         }
         if( !material.is_empty() && loc->made_of( material ) == 0 ) {
             return false;
+        }
+        if( calories > 0 ) {
+            // This is very stupid but we need a dummy to calculate nutrients
+            npc dummy;
+            if( dummy.compute_effective_nutrients( *loc.get_item() ).kcal() < calories ) {
+                return false;
+            }
         }
         for( flag_id flag : flags ) {
             if( !loc->has_flag( flag ) ) {
@@ -5730,6 +5741,7 @@ talk_effect_fun_t::func f_spawn_monster( const JsonObject &jo, std::string_view 
         jo.throw_error( "Cannot be outdoor_only and indoor_only at the same time." );
     }
     const bool open_air_allowed = jo.get_bool( "open_air_allowed", false );
+    const bool temporary_drop_items = jo.get_bool( "temporary_drop_items", false );
     const bool friendly = jo.get_bool( "friendly", false );
 
     duration_or_var dov_lifespan = get_duration_or_var( jo, "lifespan", false, 0_seconds );
@@ -5745,7 +5757,7 @@ talk_effect_fun_t::func f_spawn_monster( const JsonObject &jo, std::string_view 
     std::vector<effect_on_condition_id> false_eocs = load_eoc_vector( jo, "false_eocs" );
     return [monster_id, dov_target_range, dov_hallucination_count, dov_real_count, dov_min_radius,
                         dov_max_radius, outdoor_only, indoor_only, group, single_target, dov_lifespan, target_var,
-                        spawn_message, spawn_message_plural, true_eocs, false_eocs, open_air_allowed,
+                        spawn_message, spawn_message_plural, true_eocs, false_eocs, open_air_allowed, temporary_drop_items,
                 friendly, is_npc]( dialogue & d ) {
         monster target_monster;
         std::vector<Creature *> target_monsters;
@@ -5871,6 +5883,9 @@ talk_effect_fun_t::func f_spawn_monster( const JsonObject &jo, std::string_view 
                     lifespan = dov_lifespan.evaluate( d );
                     if( lifespan.value() > 0_seconds ) {
                         spawned->set_summon_time( lifespan.value() );
+                        // Temporary monsters shouldn't drop items unless told to
+                        spawned->no_extra_death_drops = !temporary_drop_items;
+                        spawned->no_corpse_quiet = !temporary_drop_items;
                     }
                 }
             }
@@ -6790,7 +6805,7 @@ dynamic_line_t::dynamic_line_t( const JsonObject &jo )
         };
     } else if( jo.get_bool( "list_faction_camp_sites", false ) ) {
         function = [&]( const dialogue & ) {
-            const auto &sites = recipe_group::get_recipes_by_id( "all_faction_base_types", "ANY" );
+            const auto &sites = recipe_group::get_recipes_by_id( "all_faction_base_types" );
             if( sites.empty() ) {
                 return std::string( _( "I can't think of a single place I can build a camp." ) );
             }

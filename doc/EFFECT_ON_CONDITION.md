@@ -82,9 +82,10 @@ For example, `{ "npc_has_effect": "Shadow_Reveal" }`, used by shadow lieutenant,
 | mutation: "deactivated_eocs"                     | character (Character)       | NONE                        |
 | mutation: "processed_eocs"                       | character (Character)       | NONE                        |
 | recipe: "result_eocs"                            | crafter (Character)         | NONE                        |
+| monster death: "death_function"                  | killed monster (monster)    | you (avatar)                |
 
-Note, that using `use_action: "type": "effect_on_conditions"` automatically passes the context variable `id`, that stores the id of an item that was activated
-
+Using `use_action: "type": "effect_on_conditions"` automatically passes the context variable `id`, that stores the id of an item that was activated
+Using `bionics: "activated_eocs"` automatically passes the context variable `act_cost` that stores the value of `act_cost` field
 ## Value types
 
 Effect on Condition uses a huge variety of different values for effects or for conditions to check against, so to standardize it, most of them are explained here
@@ -1031,6 +1032,37 @@ Check the north terrain or furniture has `TRANSPARENT` flag.
 },
 ```
 
+### `map_terrain_id`, `map_furniture_id`
+- type: string or [variable object](##variable-object)
+- return true if the terrain or furniture has specific id
+- `loc` will specify location of terrain or furniture (**mandatory**)
+
+#### Valid talkers:
+
+No talker is needed.
+
+#### Examples
+Runs a query, allowing you to pick specific tile around. When picked, stores coordinates of this tile in `check_terrain` variable, and then check is it a `t_grass`. If yes, `effect` is run, otherwise `false_effect` is run
+```json
+{
+  "type": "effect_on_condition",
+  "id": "EOC_TEST_QUERY",
+  "condition": {
+    "and": [
+      {
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "check_terrain" },
+        "message": "Check what terrain it is",
+        "range": 10
+      },
+      { "map_terrain_id": "t_grass", "loc": { "context_val": "check_terrain" } }
+    ]
+  },
+  "effect": [ { "u_message": "it is a grass" } ],
+  "false_effect": [ { "u_message": "it is NOT a grass" } ]
+}
+```
+
 ### `map_in_city`
 - type: location string or [variable object](##variable-object)
 - return true if the location is in a city
@@ -1966,7 +1998,7 @@ Run EOCs on items in your or NPC's inventory
 | Syntax | Optionality | Value  | Info |
 | --- | --- | --- | --- | 
 | "u_run_inv_eocs" / "npc_run_inv_eocs" | **mandatory** | string or [variable object](#variable-object) | way the item would be picked; <br/>values can be:<br/>`all` - all items that match the conditions are picked;<br/> `random` - from all items that match the conditions, one picked;<br/>`manual` - menu is open with all items that can be picked, and you can choose one;<br/>`manual_mult` - same as `manual`, but multiple items can be picked |
-| "search_data" | optional | `search_data` | sets the condition for the target item; lack of search_data means any item can be picked; conditions can be:<br/>`id` - id of a specific item;<br/>`category` - category of an item (case sensitive, should always be in lower case);<br/>`flags`- flag or flags the item has<br/>`excluded_flags`- flag or flags the item doesn't have<br/>`material` - material of an item;<br/>`worn_only` - if true, return only items, that are worn;<br/>`wielded_only` - if true, return only wielded items | 
+| "search_data" | optional | `search_data` | sets the condition for the target item; lack of search_data means any item can be picked; conditions can be:<br/>`id` - id of a specific item;<br/>`category` - category of an item (case sensitive, should always be in lower case);<br/>`flags`- flag or flags the item has<br/>`excluded_flags`- flag or flags the item doesn't have<br/>`material` - material of an item;<br/>`worn_only` - if true, return only items, that are worn;<br/>`wielded_only` - if true, return only wielded items;<br/>`calories` - minimum amount of kcal of an item | 
 | "title" | optional | string or [variable object](#variable-object) | name of the menu, that would be shown, if `manual` or `manual_mult` is used | 
 | "true_eocs" / "false_eocs" | optional | string, [variable object](##variable-object), inline EoC, or range of all of them | if item was picked successfully, all EoCs from `true_eocs` are run, otherwise all EoCs from `false_eocs` are run; picked item is returned as npc; for example, `n_hp()` return hp of an item | 
 
@@ -3729,6 +3761,7 @@ Spawn some monsters around you, NPC or `target_var`
 | "target_range" | optional | int, [variable object](##variable-object) or value between two | if `_spawn_monster` is empty, pick a random hostile critter from this amount of tiles from target | 
 | "lifespan" | optional | int, duration, [variable object](##variable-object) or value between two | if used, critters would live that amount of time, and disappear in the end | 
 | "target_var" | optional | [variable object](##variable-object) | if used, the monster would spawn from this location instead of you or NPC | 
+| "temporary_drop_items" | optional | boolean | default false; if true, monsters summoned with a lifespan will still drop items and leave a corpse.
 | "spawn_message", "spawn_message_plural" | optional | string or [variable object](##variable-object) | if you see monster or monsters that was spawned, related message would be printed | 
 | "true_eocs", "false_eocs" | optional | string, [variable object](##variable-object), inline EoC, or range of all of them | if at least 1 monster was spawned, all EoCs from `true_eocs` are run, otherwise all EoCs from `false_eocs` are run | 
 

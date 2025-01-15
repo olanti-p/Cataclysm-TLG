@@ -566,7 +566,7 @@
     "difficulty": 4,
     "time": "1 d 12 h",
     "book_learn": [ [ "textbook_armwest", 7 ] ],
-    "using": [ [ "strap_small", 2 ], [ "blacksmithing_standard", 4 ], [ "lc_steel_standard", 1 ] ],
+    "using": [ [ "strap_small", 2 ], [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
     "proficiencies": [
@@ -581,14 +581,14 @@
     "type": "recipe",
     "copy-from": "platemail_sollerets",
     "time": "1 d 12 h",
-    "using": [ [ "strap_small", 1 ], [ "blacksmithing_standard", 3 ], [ "lc_steel_standard", 1 ] ]
+    "using": [ [ "strap_small", 1 ], [ "blacksmithing_standard", 3 ], [ "steel_standard", 1 ] ]
   },
   {
     "result": "platemail_sollerets_xl",
     "type": "recipe",
     "copy-from": "platemail_sollerets",
     "time": "2 d",
-    "using": [ [ "strap_small", 4 ], [ "blacksmithing_standard", 6 ], [ "lc_steel_standard", 1 ] ]
+    "using": [ [ "strap_small", 4 ], [ "blacksmithing_standard", 6 ], [ "steel_standard", 1 ] ]
   },
   {
     "result": "tabi_dress",

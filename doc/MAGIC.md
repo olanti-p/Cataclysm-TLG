@@ -809,7 +809,7 @@ Character status value  | Description
 `BLEED_STOP_BONUS`      | Affects the `bleed` level when applying medicine.
 `BODYTEMP_SLEEP`        | Amount of warmth (in celcius) added to you when you sleep. Default is 0, so better to use `add`
 `BONUS_BLOCK`           | Affects the number of blocks you can perform.
-`BONUS_DODGE`           | Affects the number of dodges you can perform.
+`BONUS_DODGE`           | Affects the number of dodges you can perform. Do not confuse with `DODGE_CHANCE`
 `CARDIO_MULTIPLIER`     | Affects total cardio fitness by this amount.  Since it's a percent, using `multiply` is recommended.
 `CARRY_WEIGHT`          | Affect the summary weight player can carry. `"add": 1000` adds 1 kg of weight to carry.
 `CASTING_TIME_MULTIPLIER`   | Same as mutation `casting_time_multiplier` field, changes your casting speed. Since it's a percent, using `multiply` is recommended. `"multiply": 2"` triples the casting speed 
@@ -820,6 +820,7 @@ Character status value  | Description
 `CRAFTING_SPEED_MULTIPLIER` | Changes your crafting speed. Since it's a percent, using `multiply` is recommended.  Positive values decrease crafting time, negative values increase it.
 `DEXTERITY`             | Affects the dexterity stat.
 `DISINFECTANT_BONUS`    | Affects the `disinfectant_power` you have when applying medicine.
+`DODGE_CHANCE`          | Modifies the probability to dodge an attack. Default is 0, so better to use `add`
 `EFFECTIVE_HEALTH_MOD`  | If this is anything other than zero (which it defaults to) you will use it instead of your actual health mod.
 `EXTRA_ACID`            | EXTRA_TYPE increases received damage of the selected type.
 `EXTRA_BASH`            | 
@@ -861,11 +862,17 @@ Character status value  | Description
 `MOVECOST_FLATGROUND_MOD`| How many moves you spend to move 1 tile on flat ground; shown in UI
 `MOVECOST_OBSTACLE_MOD` | How many moves you spend to move 1 tile, if this tile has a movecost more than 105 moves; not shown in UI
 `MOVECOST_SWIM_MOD`     | How many moves you spend to move 1 tile in water; not shown in UI
+`MOVEMENT_EXERTION_MODIFIER` | Affects how much physical exertion (activity_level) is required for the player to move a single tile. The value this affects is technically a float, so addition and multiplication operations can be performed on it, but player-facing effects only happen at specific whole-integer breakpoints. This can most easily be seen in `\data\json\ui\activity.json`.
 `NIGHT_VIS`             | How well you can see in darkness.  `ADD` adds tiles, so `"ADD": 3` increases night vision distance by 3 tiles.
 `OBTAIN_COST_MULTIPLIER`| Modifier for pulling an item from a container, as a handling penalty or bonus. `"add": 100` add 100 additional moves to item wield (1 second)
 `OVERKILL_DAMAGE`       | multiplies or contributes to the damage to an enemy corpse after death. The lower the number, the more damage caused.
 `OVERMAP_SIGHT`         | Increases the amount of overmap tiles you can see around.
 `PAIN`                  | When gaining pain the amount gained will be modified by this much.  You will still always gain at least 1 pain.
+`PAIN_PENALTY_MOD_STR`  | Amount of this stat you lose from pain. Default value is `(pain^0.8)/10`. Can't be lower than 0
+`PAIN_PENALTY_MOD_DEX`  | Amount of this stat you lose from pain. Default value is `(pain^0.8)/10`. Can't be lower than 0
+`PAIN_PENALTY_MOD_INT`  | Amount of this stat you lose from pain. Default value is `(pain^0.8)/10`. Can't be lower than 0
+`PAIN_PENALTY_MOD_PER`  | Amount of this stat you lose from pain. Default value is `((pain^0.8)/10)*0.66`. Can't be lower than 0
+`PAIN_PENALTY_MOD_SPEED`| Amount of speed you lose from pain. Default value is `pain^0.7`. Can't be bigger than 50 speed.
 `PAIN_REMOVE`           | When pain naturally decreases every five minutes the chance of pain removal will be modified by this much.  You will still always have at least a chance to reduce pain.
 `PERCEPTION`            | Affects the perception stat.
 `POWER_TRICKLE`         | Generates this amount of joules each second. Default value is zero, so better to use `add`
@@ -894,7 +901,7 @@ Character status value  | Description
 `STAMINA_REGEN_MOD`     | Modifier to how fast you regen your stamina. It is a percent with default value of 0, so `multiply` is useful only in combination with `add`. `add: 0.1` makes regen 10% bigger, `add: 1` doubles it
 `STEALTH_MODIFIER`      | Amount to be subtracted from player's visibility range, capped to 60.  Negative values work, but are not very effective due to the way vision ranges are capped.
 `STOMACH_SIZE_MULTIPLIER`   | Changes how much food you can consume at once. `"add": 1000` adds 1 L to stomach size
-`STRENGTH`              | Affects the strength stat.
+`STRENGTH`              | Affects the strength stat. Formula for all stat affecting enchantments are `(base_stat + enchantment_addition) * (enchantment_multiplier + 1)`. Str 8 with enchantment `add 2, multiply 1` result in `(8+2) * (1+1) = 10 * 2 =` 20 str
 `SWEAT_MULTIPLIER`      | Affects how much your body can sweat. Affects all bodyparts at once. Since it's a percent, using `multiply` is recommended.
 `THIRST`                | 
 `UGLINESS`              | Affects your `ugliness` stat, which affects NPCs' initial opinion of you.

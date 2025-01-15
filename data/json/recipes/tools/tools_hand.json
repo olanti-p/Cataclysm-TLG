@@ -87,7 +87,7 @@
       { "proficiency": "prof_blacksmithing" },
       { "proficiency": "prof_toolsmithing" }
     ],
-    "components": [ [ [ "hc_steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
+    "components": [ [ [ "steel_chunk", 1 ] ], [ [ "flint", 1 ] ] ]
   },
   {
     "type": "recipe",

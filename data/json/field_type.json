@@ -183,42 +183,6 @@
     "display_field": true
   },
   {
-    "id": "fd_void_web",
-    "type": "field_type",
-    "substance_name": "starlit web",
-    "looks_like": "fd_web",
-    "intensity_levels": [
-      {
-        "name": "starlit webs",
-        "transparent": false,
-        "effects": [
-          { "effect_id": "webbed", "intensity": 1, "min_duration": "1 m", "immune_in_vehicle": true, "is_environmental": false }
-        ]
-      },
-      {
-        "name": "starlit webs",
-        "transparent": false,
-        "effects": [
-          { "effect_id": "webbed", "intensity": 2, "min_duration": "1 m", "immune_in_vehicle": true, "is_environmental": false }
-        ]
-      },
-      {
-        "name": "starlit webs",
-        "transparent": false,
-        "effects": [
-          { "effect_id": "webbed", "intensity": 3, "min_duration": "1 m", "immune_in_vehicle": true, "is_environmental": false }
-        ]
-      }
-    ],
-    "description_affix": "covered_in",
-    "immune_mtypes": [ "mon_void_spider", "mon_void_spider_spiderling" ],
-    "decrease_intensity_on_contact": true,
-    "priority": 2,
-    "phase": "solid",
-    "display_items": false,
-    "display_field": true
-  },
-  {
     "id": "fd_slime",
     "substance_name": "slime",
     "type": "field_type",

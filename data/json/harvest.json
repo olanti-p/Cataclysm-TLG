@@ -1571,6 +1571,22 @@
     ]
   },
   {
+    "id": "zombie_rust",
+    "type": "harvest",
+    "entries": [
+      { "drop": "skull_human_tainted", "type": "bone", "scale_num": [ 1, 1 ], "max": 1 },
+      { "drop": "meat_tainted", "type": "flesh", "mass_ratio": 0.175 },
+      { "drop": "steel_chunk", "type": "flesh", "mass_ratio": 0.075 },
+      { "drop": "scrap", "type": "flesh", "mass_ratio": 0.025 },
+      { "drop": "blood_tainted", "type": "blood", "mass_ratio": 0.1 },
+      { "drop": "fat_tainted", "type": "flesh", "mass_ratio": 0.08 },
+      { "drop": "tainted_innards", "type": "offal", "mass_ratio": 0.15 },
+      { "drop": "tainted_marrow", "type": "bone", "mass_ratio": 0.005 },
+      { "drop": "bone_tainted", "type": "bone", "mass_ratio": 0.075 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.00035 }
+    ]
+  },
+  {
     "id": "zombie_humanoid_headless",
     "//": "humanoid zombies without a skull",
     "type": "harvest",
@@ -2612,10 +2628,10 @@
     ]
   },
   {
-    "id": "cougar_with_skull",
+    "id": "tiger_with_skull",
     "type": "harvest",
     "entries": [
-      { "drop": "skull_cougar", "type": "bone", "scale_num": [ 1, 1 ], "max": 1 },
+      { "drop": "skull_tiger", "type": "bone", "scale_num": [ 1, 1 ], "max": 1 },
       { "drop": "meat", "type": "flesh", "mass_ratio": 0.3 },
       { "drop": "meat_scrap", "type": "flesh", "mass_ratio": 0.03 },
       { "drop": "lung", "type": "flesh", "mass_ratio": 0.0035 },

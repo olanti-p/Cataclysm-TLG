@@ -365,8 +365,7 @@
         "<": "t_slope_down"
       },
       "furniture": {  },
-      "fields": { "W": { "field": "fd_web", "intensity": 1, "age": 10 } },
-      "monster": { "B": { "monster": "mon_cougar" } }
+      "fields": { "W": { "field": "fd_web", "intensity": 1, "age": 10 } }
     }
   },
   {

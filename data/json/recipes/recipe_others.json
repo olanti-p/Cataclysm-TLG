@@ -714,221 +714,6 @@
   },
   {
     "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "lc_wire",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "3 h",
-    "result_mult": 6,
-    "autolearn": true,
-    "using": [ [ "blacksmithing_standard", 4 ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_blacksmithing" } ],
-    "components": [ [ [ "lc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "result": "lc_wire",
-    "id_suffix": "wire_draw_machine",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "1 h 30 m",
-    "result_mult": 6,
-    "autolearn": true,
-    "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 3 } ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_wiremaking" }
-    ],
-    "tools": [
-      [ [ "metalworking_tongs_any", 1, "LIST" ] ],
-      [ [ "hotcut_any", 1, "LIST" ] ],
-      [ [ "forge", 40 ], [ "oxy_torch", 40 ] ],
-      [ [ "wire_draw_machine", 100 ] ]
-    ],
-    "components": [ [ [ "lc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "mc_wire",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "3 h",
-    "result_mult": 6,
-    "autolearn": true,
-    "using": [ [ "blacksmithing_standard", 4 ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_blacksmithing" } ],
-    "components": [ [ [ "mc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "result": "mc_wire",
-    "id_suffix": "wire_draw_machine",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "1 h 30 m",
-    "result_mult": 6,
-    "autolearn": true,
-    "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 3 } ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_wiremaking" }
-    ],
-    "tools": [
-      [ [ "metalworking_tongs_any", 1, "LIST" ] ],
-      [ [ "hotcut_any", 1, "LIST" ] ],
-      [ [ "forge", 40 ], [ "oxy_torch", 40 ] ],
-      [ [ "wire_draw_machine", 100 ] ]
-    ],
-    "components": [ [ [ "mc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "hc_wire",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "3 h",
-    "result_mult": 6,
-    "autolearn": true,
-    "using": [ [ "blacksmithing_standard", 4 ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_blacksmithing" } ],
-    "components": [ [ [ "hc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "result": "hc_wire",
-    "id_suffix": "wire_draw_machine",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "1 h 30 m",
-    "result_mult": 6,
-    "autolearn": true,
-    "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 3 } ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_wiremaking" }
-    ],
-    "tools": [
-      [ [ "metalworking_tongs_any", 1, "LIST" ] ],
-      [ [ "hotcut_any", 1, "LIST" ] ],
-      [ [ "forge", 40 ], [ "oxy_torch", 40 ] ],
-      [ [ "wire_draw_machine", 100 ] ]
-    ],
-    "components": [ [ [ "hc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "ch_wire",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "2 h",
-    "result_mult": 6,
-    "autolearn": true,
-    "using": [ [ "blacksmithing_standard", 4 ], [ "carbon", 1 ] ],
-    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_blacksmithing" } ],
-    "components": [ [ [ "lc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "result": "ch_wire",
-    "id_suffix": "wire_draw_machine",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "1 h 30 m",
-    "result_mult": 6,
-    "autolearn": true,
-    "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 3 } ],
-    "using": [ [ "carbon", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_wiremaking" }
-    ],
-    "tools": [
-      [ [ "metalworking_tongs_any", 1, "LIST" ] ],
-      [ [ "hotcut_any", 1, "LIST" ] ],
-      [ [ "forge", 40 ], [ "oxy_torch", 40 ] ],
-      [ [ "wire_draw_machine", 100 ] ]
-    ],
-    "components": [ [ [ "lc_steel_lump", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "MODERATE_EXERCISE",
-    "result": "qt_wire",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "3 h",
-    "result_mult": 6,
-    "autolearn": true,
-    "using": [ [ "blacksmithing_standard", 4 ], [ "carbon", 1 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_quenching", "skill_penalty": 1 }
-    ],
-    "tools": [ [ [ "swage", -1 ] ], [ [ "metal_tank", -1 ] ], [ [ "water", -120 ], [ "water_clean", -120 ] ] ],
-    "components": [ [ [ "steel_lump", 1 ], [ "steel_chunk", 4 ], [ "scrap", 20 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "result": "qt_wire",
-    "id_suffix": "wire_draw_machine",
-    "category": "CC_*",
-    "subcategory": "CSC_*_NESTED",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "1 h 30 m",
-    "result_mult": 6,
-    "autolearn": true,
-    "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 3 } ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_blacksmithing" },
-      { "proficiency": "prof_quenching", "skill_penalty": 1 },
-      { "proficiency": "prof_wiremaking" }
-    ],
-    "tools": [
-      [ [ "metalworking_tongs_any", 1, "LIST" ] ],
-      [ [ "hotcut_any", 1, "LIST" ] ],
-      [ [ "forge", 40 ], [ "oxy_torch", 40 ] ],
-      [ [ "wire_draw_machine", 100 ] ],
-      [ [ "swage", -1 ] ],
-      [ [ "metal_tank", -1 ] ],
-      [ [ "water", -120 ], [ "water_clean", -120 ] ]
-    ],
-    "components": [ [ [ "steel_lump", 1 ], [ "steel_chunk", 4 ], [ "scrap", 20 ] ], [ [ "coal_lump", 22 ], [ "charcoal", 19 ] ] ]
-  },
-  {
-    "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "result": "wire_barbed",
     "category": "CC_OTHER",
@@ -1536,7 +1321,7 @@
   {
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "result": "con_mix",
+    "result": "con_mix_foldable",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
@@ -1545,28 +1330,27 @@
     "time": "4 h 30 m",
     "reversible": true,
     "autolearn": true,
-    "//": "80 cm weld",
+    "//1": "338cm weld. 108cm from pipes making the base and handles, 20cm from welding four sheets for the blades on the inside of the drum, 200cm from welding six sheets around the motor.",
     "book_learn": [ [ "textbook_fabrication", 7 ], [ "manual_fabrication", 7 ] ],
-    "using": [ [ "soldering_standard", 25 ], [ "welding_standard", 80 ] ],
-    "proficiencies": [
-      { "proficiency": "prof_metalworking" },
-      { "proficiency": "prof_welding_basic", "skill_penalty": 0.5 },
-      { "proficiency": "prof_welding" }
-    ],
+    "using": [ [ "soldering_standard", 25 ], [ "welding_standard", 338 ] ],
+    "proficiencies": [ { "proficiency": "prof_welding_basic", "skill_penalty": 0.5 }, { "proficiency": "prof_welding" } ],
     "qualities": [
       { "id": "HAMMER", "level": 3 },
-      { "id": "SAW_M", "level": 1 },
+      { "id": "SAW_M", "level": 2 },
       { "id": "SCREW", "level": 1 },
       { "id": "WRENCH", "level": 1 }
     ],
     "components": [
-      [ [ "steel_lump", 3 ], [ "steel_chunk", 9 ], [ "scrap", 36 ] ],
-      [ [ "metal_tank_little", 1 ] ],
-      [ [ "pipe", 4 ] ],
-      [ [ "motor_tiny", 1 ] ],
-      [ [ "element", 3 ], [ "crude_heating_element", 4 ] ],
-      [ [ "cable", 16 ] ]
-    ]
+      [ [ "pipe", 12 ] ],
+      [ [ "sheet_metal_small", 10 ] ],
+      [ [ "motor_small", 1 ] ],
+      [ [ "small_storage_battery", 1 ] ],
+      [ [ "wheel_small", 2 ] ],
+      [ [ "wheel_mount_light", 2 ] ],
+      [ [ "nuts_bolts", 8 ] ],
+      [ [ "30gal_barrel", 1 ] ]
+    ],
+    "//2": "The component list is by no means perfect - this craft still generates ~7.2kg of mass. I can't, however, improve it without adding nonexistant components to the recipe, so I think this is an acceptable state of things."
   },
   {
     "type": "recipe",
@@ -1707,7 +1491,6 @@
     "components": [
       [
         [ "glass_shard", 3 ],
-        [ "bottle_glass", 1 ],
         [ "flask_glass", 3 ],
         [ "test_tube", 6 ],
         [ "marble", 9 ],
@@ -2445,24 +2228,8 @@
   {
     "type": "recipe",
     "activity_level": "BRISK_EXERCISE",
-    "result": "lc_chain_link",
-    "id_suffix": "fabrication",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "fabrication",
-    "difficulty": 2,
-    "time": "5 m",
-    "book_learn": [ [ "textbook_armwest", 1 ], [ "textbook_fabrication", 1 ], [ "recipe_melee", 1 ] ],
-    "qualities": [ { "id": "WRENCH", "level": 1 } ],
-    "tools": [ [ [ "boltcutters", -1 ], [ "toolset", -1 ] ], [ [ "cu_pipe", -1 ] ] ],
-    "components": [ [ [ "lc_wire", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
     "//": "1kg per sheet, wire is 0.15kg, links need to cover 850g = 2550 links",
     "result": "link_sheet",
-    "id_suffix": "fabrication",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",
@@ -2471,20 +2238,6 @@
     "book_learn": [ [ "textbook_armwest", 2 ], [ "textbook_fabrication", 2 ], [ "recipe_melee", 2 ] ],
     "using": [ [ "chainmail_standard", 1 ] ],
     "components": [ [ [ "chain_link", 2550 ] ], [ [ "wire", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "activity_level": "BRISK_EXERCISE",
-    "//": "1kg per sheet, wire is 0.15kg, links need to cover 850g = 2550 links",
-    "result": "lc_link_sheet",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "10 h",
-    "book_learn": [ [ "textbook_armwest", 2 ], [ "textbook_fabrication", 2 ], [ "recipe_melee", 2 ] ],
-    "using": [ [ "chainmail_standard", 1 ] ],
-    "components": [ [ [ "lc_chain_link", 2550 ] ], [ [ "lc_wire", 1 ] ] ]
   },
   {
     "result": "bundle_rag",

@@ -204,7 +204,6 @@ static const quality_id qual_LIFT( "LIFT" );
 static const skill_id skill_cooking( "cooking" );
 static const skill_id skill_melee( "melee" );
 static const skill_id skill_survival( "survival" );
-static const skill_id skill_throw( "throw" );
 static const skill_id skill_weapon( "weapon" );
 
 static const species_id species_ROBOT( "ROBOT" );
@@ -5695,14 +5694,14 @@ void item::properties_info( std::vector<iteminfo> &info, const iteminfo_query *p
             } );
             if( any_encumb_increase ) {
                 info.emplace_back( "BASE",
-                                   _( "* This items pockets are <info>not rigid</info>.  Its"
+                                   _( "* This item's pockets are <info>not rigid</info>.  Its"
                                       " volume and encumbrance increase with contents." ) );
                 not_rigid = true;
             }
         }
         if( !not_rigid && !all_pockets_rigid() && !is_corpse() ) {
             info.emplace_back( "BASE",
-                               _( "* This items pockets are <info>not rigid</info>.  Its"
+                               _( "* This item's pockets are <info>not rigid</info>.  Its"
                                   " volume increases with contents." ) );
         }
     }
@@ -10105,22 +10104,24 @@ ret_val<void> item::is_compatible( const item &it ) const
 
 ret_val<void> item::can_contain_directly( const item &it ) const
 {
-    return can_contain( it, false, false, true, item_location(), 10000000_ml, false );
+    return can_contain( it, false, false, true, false, item_location(), 10000000_ml, false );
 }
 
 ret_val<void> item::can_contain( const item &it, const bool nested, const bool ignore_rigidity,
-                                 const bool ignore_pkt_settings, const item_location &parent_it,
+                                 const bool ignore_pkt_settings, const bool is_pick_up_inv,
+                                 const item_location &parent_it,
                                  units::volume remaining_parent_volume, const bool allow_nested ) const
 {
     int copies = 1;
     return can_contain( it, copies, nested, ignore_rigidity,
-                        ignore_pkt_settings, parent_it,
+                        ignore_pkt_settings, is_pick_up_inv, parent_it,
                         remaining_parent_volume, allow_nested );
 }
 
 ret_val<void> item::can_contain( const item &it, int &copies_remaining, const bool nested,
                                  const bool ignore_rigidity, const bool ignore_pkt_settings,
-                                 const item_location &parent_it, units::volume remaining_parent_volume,
+                                 const bool is_pick_up_inv, const item_location &parent_it,
+                                 units::volume remaining_parent_volume,
                                  const bool allow_nested ) const
 {
     if( copies_remaining <= 0 ) {
@@ -10165,7 +10166,8 @@ ret_val<void> item::can_contain( const item &it, int &copies_remaining, const bo
                     continue;
                 }
                 auto ret = internal_it->can_contain( it, copies_remaining, true, ignore_nested_rigidity,
-                                                     ignore_pkt_settings, parent_it, pkt->remaining_volume() );
+                                                     ignore_pkt_settings, is_pick_up_inv, parent_it,
+                                                     pkt->remaining_volume() );
                 if( copies_remaining <= 0 ) {
                     return ret;
                 }
@@ -10174,8 +10176,9 @@ ret_val<void> item::can_contain( const item &it, int &copies_remaining, const bo
     }
 
     return nested && !ignore_rigidity ?
-           contents.can_contain_rigid( it, copies_remaining, ignore_pkt_settings ) :
-           contents.can_contain( it, copies_remaining, ignore_pkt_settings, remaining_parent_volume );
+           contents.can_contain_rigid( it, copies_remaining, ignore_pkt_settings, is_pick_up_inv ) :
+           contents.can_contain( it, copies_remaining, ignore_pkt_settings, is_pick_up_inv,
+                                 remaining_parent_volume );
 }
 
 ret_val<void> item::can_contain( const itype &tp ) const
@@ -10198,7 +10201,7 @@ ret_val<void> item::can_contain_partial_directly( const item &it ) const
     if( i_copy.count_by_charges() ) {
         i_copy.charges = 1;
     }
-    return can_contain( i_copy, false, false, true, item_location(), 10000000_ml, false );
+    return can_contain( i_copy, false, false, true, false, item_location(), 10000000_ml, false );
 }
 
 std::pair<item_location, item_pocket *> item::best_pocket( const item &it, item_location &this_loc,
@@ -13406,7 +13409,7 @@ ret_val<void> item::link_to( vehicle &veh, const point &mount, link_state link_t
         } else if( !veh.is_external_part( veh.mount_to_tripoint( mount ) ) ) {
             return ret_val<void>::make_failure( _( "You can't attach a tow-line to an internal part." ) );
         } else {
-            const int part_at = veh.part_at( mount );
+            const int part_at = veh.part_at( veh.coord_translate( mount ) );
             if( part_at != -1 && !veh.part( part_at ).carried_stack.empty() ) {
                 return ret_val<void>::make_failure( _( "You can't attach a tow-line to a racked part." ) );
             }
@@ -14720,9 +14723,6 @@ bool item::on_drop( const tripoint &pos, map &m )
     }
 
     avatar &player_character = get_avatar();
-
-    // set variable storing information of character dropping item
-    dropped_char_stats.throwing = player_character.get_skill_level( skill_throw );
 
     return type->drop_action && type->drop_action.call( &player_character, *this, pos );
 }

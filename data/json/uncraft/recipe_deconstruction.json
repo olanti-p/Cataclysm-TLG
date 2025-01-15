@@ -2532,7 +2532,7 @@
     "type": "uncraft",
     "activity_level": "LIGHT_EXERCISE",
     "time": "1 s",
-    "components": [ [ [ "glass_shard", 3 ] ] ]
+    "components": [ [ [ "glass_shard", 6 ] ] ]
   },
   {
     "result": "flask_glass",
@@ -2916,11 +2916,9 @@
     "result": "kettle",
     "type": "uncraft",
     "activity_level": "MODERATE_EXERCISE",
-    "skill_used": "fabrication",
-    "difficulty": 1,
     "time": "2 m",
-    "qualities": [ { "id": "SAW_M", "level": 1 } ],
-    "components": [ [ [ "sheet_metal_small", 3 ] ] ]
+    "qualities": [ { "id": "SAW_M", "level": 2 } ],
+    "components": [ [ [ "sheet_metal_small", 2 ] ] ]
   },
   {
     "result": "kiln_done",
@@ -3307,30 +3305,6 @@
     "time": "5 m",
     "qualities": [ { "id": "SAW_M", "level": 2 } ],
     "components": [ [ [ "scrap", 12 ] ] ]
-  },
-  {
-    "result": "hc_steel_lump",
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "time": "10 m",
-    "qualities": [ { "id": "SAW_M", "level": 2 } ],
-    "components": [ [ [ "hc_steel_chunk", 4 ] ] ]
-  },
-  {
-    "result": "mc_steel_lump",
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "time": "10 m",
-    "qualities": [ { "id": "SAW_M", "level": 2 } ],
-    "components": [ [ [ "mc_steel_chunk", 4 ] ] ]
-  },
-  {
-    "result": "lc_steel_lump",
-    "type": "uncraft",
-    "activity_level": "BRISK_EXERCISE",
-    "time": "10 m",
-    "qualities": [ { "id": "SAW_M", "level": 2 } ],
-    "components": [ [ [ "lc_steel_chunk", 4 ] ] ]
   },
   {
     "result": "pocketwatch",
@@ -7069,7 +7043,7 @@
     "flags": [ "BLIND_EASY" ]
   },
   {
-    "result": "skull_cougar",
+    "result": "skull_tiger",
     "type": "uncraft",
     "activity_level": "MODERATE_EXERCISE",
     "time": "10 s",
@@ -7618,7 +7592,7 @@
     "components": [
       [ [ "2x4", 12 ] ],
       [ [ "nail", 12 ] ],
-      [ [ "qt_wire", 26 ] ],
+      [ [ "piano_wire", 26 ] ],
       [ [ "wheel_caster", 1 ] ],
       [ [ "steel_chunk", 3 ] ],
       [ [ "plastic_chunk", 10 ] ]

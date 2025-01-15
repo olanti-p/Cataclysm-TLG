@@ -79,7 +79,7 @@ class submap
             if( is_uniform() ) {
                 m = std::make_unique<maptile_soa>();
                 std::uninitialized_fill_n( &m->ter[0][0], elements, uniform_ter );
-                std::uninitialized_fill_n( &m->frn[0][0], elements, f_null );
+                std::uninitialized_fill_n( &m->frn[0][0], elements, furn_str_id::NULL_ID() );
                 std::uninitialized_fill_n( &m->lum[0][0], elements, 0 );
                 std::uninitialized_fill_n( &m->trp[0][0], elements, tr_null );
                 std::uninitialized_fill_n( &m->rad[0][0], elements, 0 );
@@ -109,7 +109,7 @@ class submap
 
         furn_id get_furn( const point &p ) const {
             if( is_uniform() ) {
-                return f_null;
+                return furn_str_id::NULL_ID();
             }
             return m->frn[p.x][p.y];
         }
@@ -207,8 +207,6 @@ class submap
             }
             return m->itm[p.x][p.y];
         }
-
-        // TODO: Replace this as it essentially makes fld public
         field &get_field( const point &p ) {
             if( is_uniform() ) {
                 field static nofield;
@@ -225,12 +223,18 @@ class submap
             return m->fld[p.x][p.y];
         }
 
+        // TODO: Replace this as it essentially makes fld public
+
         void clear_fields( const point &p );
 
         struct cosmetic_t {
             point pos;
             std::string type;
             std::string str;
+        };
+
+        struct tile_data {
+            int damage;
         };
 
         void insert_cosmetic( const point &p, const std::string &type, const std::string &str ) {
@@ -305,10 +309,6 @@ class submap
         std::vector<std::unique_ptr<vehicle>> vehicles;
         std::map<tripoint_sm_ms, partial_con> partial_constructions;
         std::unique_ptr<basecamp> camp;  // only allowing one basecamp per submap
-
-        struct tile_data {
-            int damage;
-        };
 
     private:
         std::map<point_sm_ms, tile_data> ephemeral_data;

@@ -1836,22 +1836,6 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "temple_stairs",
-    "copy-from": "temple_stairs",
-    "name": "strange temple",
-    "sym": "s",
-    "color": "pink"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "temple_finale",
-    "copy-from": "temple_finale",
-    "name": "strange temple",
-    "sym": "s",
-    "color": "pink"
-  },
-  {
-    "type": "overmap_terrain",
     "id": "sewage_treatment_0_0_0",
     "copy-from": "sewage_treatment_0_0_0",
     "name": "sewage treatment plant",
@@ -2112,22 +2096,6 @@
     "name": "solid rock",
     "sym": "%",
     "color": "dark_gray"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "rift",
-    "copy-from": "rift",
-    "name": "rift",
-    "sym": "^",
-    "color": "red"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": "hellmouth",
-    "copy-from": "hellmouth",
-    "name": "hellmouth",
-    "sym": "^",
-    "color": "light_red"
   },
   {
     "type": "overmap_terrain",

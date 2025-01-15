@@ -44,8 +44,7 @@
       { "id": "caltrops_glass", "description": " Craft: Glass Caltrops" },
       { "id": "steel_chunk", "description": " Craft: Steel, Chunk" },
       { "id": "anvil", "description": " Craft: Anvil" },
-      { "id": "steel_lump", "description": " Craft: Steel, Lump" },
-      { "id": "lc_steel_lump", "description": " Craft: Mild Steel, Lump" }
+      { "id": "steel_lump", "description": " Craft: Steel, Lump" }
     ]
   },
   {
@@ -69,10 +68,7 @@
       { "id": "nail", "description": " Craft: Nail" },
       { "id": "wire", "description": " Craft: Wire" },
       { "id": "swage", "description": " Craft: Swage and Die Set" },
-      { "id": "lc_wire", "description": " Craft: Mild Steel, Wire" },
-      { "id": "lc_chain_link_fabrication", "description": " Craft: Mild Steel, Link" },
-      { "id": "lc_link_sheet", "description": " Craft: Mild Steel, Link Sheet" },
-      { "id": "mc_steel_lump", "description": " Craft: Medium Steel, Lump" }
+      { "id": "link_sheet", "description": " Craft: Link Sheet" }
     ]
   },
   {
@@ -90,9 +86,7 @@
       { "id": "rebar", "description": " Craft: Rebar" },
       { "id": "gold_ring", "description": " Craft: Gold Ring" },
       { "id": "hammer_sledge_from_scratch", "description": " Craft: Hammer, Sledge" },
-      { "id": "ch_wire", "description": " Craft: Hardened Steel, Wire" },
-      { "id": "welding_rod_steel", "description": " Craft: Steel Welding Rod" },
-      { "id": "mc_wire", "description": " Craft: Medium Steel, Wire" }
+      { "id": "welding_rod_steel", "description": " Craft: Steel Welding Rod" }
     ]
   },
   {
@@ -127,19 +121,16 @@
       { "id": "platemail_aventail", "description": " Craft: Armor, Plate Aventail" },
       { "id": "platemail_visored_helm", "description": " Craft: Helmet, Visored Plate" },
       { "id": "platemail_gauntlets", "description": " Craft: Armor, Plate Gauntlets" },
-      { "id": "mc_broadsword", "description": " Craft: Sword, Medium Steel Broadsword" },
-      { "id": "mc_scimitar", "description": " Craft: Sword, Medium Steel Shamshir" },
+      { "id": "broadsword", "description": " Craft: Sword, Broadsword" },
+      { "id": "scimitar", "description": " Craft: Sword, Shamshir" },
       { "id": "fire_ax", "description": " Craft: Axe, Fire" },
       { "id": "hacksaw", "description": " Craft: Hacksaw" },
       { "id": "saw", "description": " Craft: Woodsaw" },
       { "id": "pike", "description": " Craft: Spear, Awl Pike" },
-      { "id": "mc_rapier", "description": " Craft: Sword, Medium Steel Rapier" },
+      { "id": "rapier", "description": " Craft: Sword, Rapier" },
       { "id": "halligan", "description": " Craft: Halligan Bar" },
-      { "id": "mc_zweihander", "description": " Craft: Sword, Medium Steel Zweihander" },
-      { "id": "pickaxe", "description": " Craft: Pickaxe" },
-      { "id": "hc_steel_lump", "description": " Craft: High Steel, Lump" },
-      { "id": "hc_wire", "description": " Craft: High Steel, Wire" },
-      { "id": "qt_wire", "description": " Craft: Tempered Steel, Wire" }
+      { "id": "zweihander", "description": " Craft: Sword, Zweihander" },
+      { "id": "pickaxe", "description": " Craft: Pickaxe" }
     ]
   },
   {

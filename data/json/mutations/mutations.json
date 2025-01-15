@@ -1098,7 +1098,7 @@
     "fatigue": true,
     "kcal": true,
     "thirst": true,
-    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": -0.1 }, { "value": "BONUS_DODGE", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": -0.1 }, { "value": "DODGE_CHANCE", "add": 2 } ] } ]
   },
   {
     "type": "mutation",
@@ -4819,7 +4819,7 @@
     "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
     "allowed_items": [ "ALLOWS_TAIL" ],
     "allow_soft_gear": true,
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 2 } ] } ]
   },
   {
     "type": "mutation",
@@ -4835,7 +4835,7 @@
     "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
     "allowed_items": [ "ALLOWS_TAIL" ],
     "allow_soft_gear": true,
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 1 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 1 } ] } ]
   },
   {
     "type": "mutation",
@@ -4851,7 +4851,7 @@
     "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
     "allowed_items": [ "ALLOWS_TAIL" ],
     "allow_soft_gear": true,
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 2 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 2 } ] } ]
   },
   {
     "type": "mutation",
@@ -4874,7 +4874,7 @@
       "chance": 20,
       "base_damage": { "damage_type": "bash", "amount": 8 }
     },
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 1 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 1 } ] } ]
   },
   {
     "type": "mutation",
@@ -4905,7 +4905,7 @@
     "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
     "allowed_items": [ "ALLOWS_TAIL" ],
     "allow_soft_gear": true,
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 3 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 3 } ] } ]
   },
   {
     "type": "mutation",
@@ -4921,7 +4921,7 @@
     "allowed_items": [ "ALLOWS_TAIL" ],
     "allow_soft_gear": true,
     "social_modifiers": { "lie": -20, "persuade": 10 },
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 4 } ] } ]
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 4 } ] } ]
   },
   {
     "type": "mutation",
@@ -5106,6 +5106,15 @@
     "prereqs": [ "MASOCHIST_MED" ],
     "prereqs2": [ "PAINREC3", "ADDICTIVE" ],
     "threshreq": [ "THRESH_MEDICAL" ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -10 },
+          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -10 },
+          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.5 }
+        ]
+      }
+    ],
     "//": "CENOBITE and NOPAIN also don't cancel each other.  By design.  Poor painless cenobites...",
     "category": [ "MEDICAL" ]
   },
@@ -6028,6 +6037,11 @@
     "prereqs2": [ "AMORPHOUS" ],
     "threshreq": [ "THRESH_SLIME" ],
     "category": [ "SLIME" ],
+    "enchantments": [
+      {
+        "values": [ { "value": "INTELLIGENCE", "multiply": 1 }, { "value": "PAIN_PENALTY_MOD_INT", "add": { "math": [ "u_pain()/6" ] } } ]
+      }
+    ],
     "armor": [
       {
         "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ],
@@ -6189,7 +6203,7 @@
     "enchantments": [
       {
         "values": [
-          { "value": "BONUS_DODGE", "add": 1 },
+          { "value": "DODGE_CHANCE", "add": 1 },
           { "value": "MAX_HP", "multiply": -0.15 },
           { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.5 },
           { "value": "CARRY_WEIGHT", "multiply": -0.25 }
@@ -6213,7 +6227,7 @@
     "enchantments": [
       {
         "values": [
-          { "value": "BONUS_DODGE", "add": 2 },
+          { "value": "DODGE_CHANCE", "add": 2 },
           { "value": "MAX_HP", "multiply": -0.3 },
           { "value": "FOOTSTEP_NOISE", "multiply": -1 },
           { "value": "CARRY_WEIGHT", "multiply": -0.5 },
@@ -6239,7 +6253,7 @@
     "enchantments": [
       {
         "values": [
-          { "value": "BONUS_DODGE", "add": 2 },
+          { "value": "DODGE_CHANCE", "add": 2 },
           { "value": "MAX_HP", "multiply": -0.25 },
           { "value": "FOOTSTEP_NOISE", "multiply": -1 },
           { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.7 },
@@ -6464,7 +6478,7 @@
     "category": [ "INSECT" ],
     "restricts_gear": [ "torso" ],
     "social_modifiers": { "lie": 15, "persuade": 5, "intimidate": -20 },
-    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": -0.1 }, { "value": "BONUS_DODGE", "add": -4 } ] } ],
+    "enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": -0.1 }, { "value": "DODGE_CHANCE", "add": -4 } ] } ],
     "flags": [ "WINGS_1" ]
   },
   {
@@ -6780,7 +6794,7 @@
           { "value": "ATTACK_SPEED", "multiply": 0.05 },
           { "value": "MAX_HP", "add": 4 },
           { "value": "MOVECOST_SWIM_MOD", "multiply": 0.2 },
-          { "value": "BONUS_DODGE", "add": -1 },
+          { "value": "DODGE_CHANCE", "add": -1 },
           { "value": "CARRY_WEIGHT", "multiply": 0.15 }
         ]
       }
@@ -9199,7 +9213,7 @@
     "points": 2,
     "description": "You have fast reflexes, allowing you to dodge attacks more easily.",
     "starting_trait": true,
-    "enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": 3 } ] } ],
+    "enchantments": [ { "values": [ { "value": "DODGE_CHANCE", "add": 3 } ] } ],
     "category": [ "FELINE" ]
   },
   {

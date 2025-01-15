@@ -57,6 +57,12 @@ enum class mod : int {
     FATIGUE_REGEN,
     PAIN,
     PAIN_REMOVE,
+    PAIN_PENALTY_MOD_STR,
+    PAIN_PENALTY_MOD_DEX,
+    PAIN_PENALTY_MOD_INT,
+    PAIN_PENALTY_MOD_PER,
+    PAIN_PENALTY_MOD_SPEED,
+    DODGE_CHANCE,
     BONUS_DODGE,
     BONUS_BLOCK,
     MELEE_DAMAGE,
@@ -163,6 +169,7 @@ enum class mod : int {
     CONSUME_TIME_MOD,
     SWEAT_MULTIPLIER,
     STAMINA_REGEN_MOD,
+    MOVEMENT_EXERTION_MODIFIER,
     NUM_MOD
 };
 } // namespace enchant_vals

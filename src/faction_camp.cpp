@@ -84,6 +84,9 @@ class character_id;
 
 static const activity_id ACT_MOVE_LOOT( "ACT_MOVE_LOOT" );
 
+static const furn_str_id furn_f_plant_harvest( "f_plant_harvest" );
+static const furn_str_id furn_f_plant_seed( "f_plant_seed" );
+
 static const item_group_id
 Item_spawn_data_foraging_faction_camp_autumn( "foraging_faction_camp_autumn" );
 static const item_group_id
@@ -156,6 +159,21 @@ static const skill_id skill_survival( "survival" );
 static const skill_id skill_swimming( "swimming" );
 static const skill_id skill_traps( "traps" );
 static const skill_id skill_unarmed( "unarmed" );
+
+static const ter_str_id ter_t_clay( "t_clay" );
+static const ter_str_id ter_t_dirt( "t_dirt" );
+static const ter_str_id ter_t_dirtmound( "t_dirtmound" );
+static const ter_str_id ter_t_grass( "t_grass" );
+static const ter_str_id ter_t_grass_dead( "t_grass_dead" );
+static const ter_str_id ter_t_grass_golf( "t_grass_golf" );
+static const ter_str_id ter_t_grass_long( "t_grass_long" );
+static const ter_str_id ter_t_grass_tall( "t_grass_tall" );
+static const ter_str_id ter_t_improvised_shelter( "t_improvised_shelter" );
+static const ter_str_id ter_t_moss( "t_moss" );
+static const ter_str_id ter_t_sand( "t_sand" );
+static const ter_str_id ter_t_stump( "t_stump" );
+static const ter_str_id ter_t_tree_young( "t_tree_young" );
+static const ter_str_id ter_t_trunk( "t_trunk" );
 
 static const trait_id trait_DEBUG_HS( "DEBUG_HS" );
 
@@ -684,9 +702,9 @@ void talk_function::start_camp( npc &p )
 {
     const tripoint_abs_omt omt_pos = p.global_omt_location();
     const oter_id &omt_ref = overmap_buffer.ter( omt_pos );
-
-    const auto &pos_camps = recipe_group::get_recipes_by_id( "all_faction_base_types",
-                            omt_ref.id().c_str() );
+    const std::optional<mapgen_arguments> *maybe_args = overmap_buffer.mapgen_args( omt_pos );
+    const auto &pos_camps = recipe_group::get_recipes_by_id( "all_faction_base_types", omt_ref,
+                            maybe_args );
     if( pos_camps.empty() ) {
         popup( _( "You cannot build a camp here." ) );
         return;
@@ -1430,8 +1448,10 @@ void basecamp::get_available_missions( mission_data &mission_key, map &here )
             for( const auto &dir : base_camps::all_directions ) {
                 if( dir.first != base_camps::base_dir && expansions.find( dir.first ) == expansions.end() ) {
                     const oter_id &omt_ref = overmap_buffer.ter( omt_pos + dir.first );
+                    const std::optional<mapgen_arguments> *maybe_args = overmap_buffer.mapgen_args(
+                                omt_pos + dir.first );
                     const auto &pos_expansions = recipe_group::get_recipes_by_id( "all_faction_base_expansions",
-                                                 omt_ref.id().c_str() );
+                                                 omt_ref, maybe_args );
                     if( !pos_expansions.empty() ) {
                         possible_expansion_found = true;
                         break;
@@ -2174,7 +2194,7 @@ void basecamp::scan_pseudo_items()
         tripoint mapmin = tripoint( 0, 0, omt_pos.z() );
         tripoint mapmax = tripoint( 2 * SEEX - 1, 2 * SEEY - 1, omt_pos.z() );
         for( const tripoint &pos : expansion_map.points_in_rectangle( mapmin, mapmax ) ) {
-            if( expansion_map.furn( pos ) != f_null &&
+            if( expansion_map.furn( pos ) != furn_str_id::NULL_ID() &&
                 expansion_map.furn( pos ).obj().crafting_pseudo_item.is_valid() &&
                 expansion_map.furn( pos ).obj().crafting_pseudo_item.obj().has_flag( flag_ALLOWS_REMOTE_USE ) ) {
                 bool found = false;
@@ -2555,7 +2575,7 @@ void basecamp::start_cut_logs( const mission_id &miss_id, float exertion_level )
         sample_npc.set_fake( true );
         int tree_est = om_cutdown_trees_est( forest, 50 );
         int tree_young_est = om_harvest_ter_est( sample_npc, forest,
-                             ter_id( "t_tree_young" ), 50 );
+                             ter_t_tree_young, 50 );
         int dist = rl_dist( forest.xy(), omt_pos.xy() );
         //Very roughly what the player does + 6 hours for prep, clean up, breaks
         time_duration chop_time = 6_hours + 1_hours * tree_est + 7_minutes * tree_young_est;
@@ -2574,7 +2594,7 @@ void basecamp::start_cut_logs( const mission_id &miss_id, float exertion_level )
                                       skill_fabrication, 2, exertion_level );
         if( comp != nullptr ) {
             om_cutdown_trees_logs( forest, 50 );
-            om_harvest_ter( *comp, forest, ter_id( "t_tree_young" ), 50 );
+            om_harvest_ter( *comp, forest, ter_t_tree_young, 50 );
             om_harvest_itm( comp, forest, 95 );
             comp->companion_mission_time_ret = calendar::turn + work_time;
             change_cleared_terrain( forest );
@@ -2594,7 +2614,7 @@ void basecamp::start_clearcut( const mission_id &miss_id, float exertion_level )
         sample_npc.set_fake( true );
         int tree_est = om_cutdown_trees_est( forest, 95 );
         int tree_young_est = om_harvest_ter_est( sample_npc, forest,
-                             ter_id( "t_tree_young" ), 95 );
+                             ter_t_tree_young, 95 );
         int dist = rl_dist( forest.xy(), omt_pos.xy() );
         //Very roughly what the player does + 6 hours for prep, clean up, breaks
         time_duration chop_time = 6_hours + 1_hours * tree_est + 7_minutes * tree_young_est;
@@ -2611,7 +2631,7 @@ void basecamp::start_clearcut( const mission_id &miss_id, float exertion_level )
                                       skill_fabrication, 1, exertion_level );
         if( comp != nullptr ) {
             om_cutdown_trees_trunks( forest, 95 );
-            om_harvest_ter_break( *comp, forest, ter_id( "t_tree_young" ), 95 );
+            om_harvest_ter_break( *comp, forest, ter_t_tree_young, 95 );
             change_cleared_terrain( forest );
         }
     }
@@ -3534,7 +3554,7 @@ static std::pair<size_t, std::string> farm_action( const tripoint_abs_omt &omt_t
     std::string crops;
 
     const auto is_dirtmound = []( const tripoint & pos, tinymap & bay1, tinymap & bay2 ) {
-        return ( bay1.ter( pos ) == t_dirtmound ) && ( !bay2.has_furn( pos ) );
+        return ( bay1.ter( pos ) == ter_t_dirtmound ) && ( !bay2.has_furn( pos ) );
     };
     const auto is_unplowed = []( const tripoint & pos, tinymap & farm_map ) {
         const ter_id &farm_ter = farm_map.ter( pos );
@@ -3575,7 +3595,7 @@ static std::pair<size_t, std::string> farm_action( const tripoint_abs_omt &omt_t
                 if( is_dirtmound( pos, *farm_json, farm_map ) && is_unplowed( pos, farm_map ) ) {
                     plots_cnt += 1;
                     if( comp ) {
-                        farm_map.ter_set( pos, t_dirtmound );
+                        farm_map.ter_set( pos, ter_t_dirtmound );
                     }
                 }
                 break;
@@ -3600,7 +3620,7 @@ static std::pair<size_t, std::string> farm_action( const tripoint_abs_omt &omt_t
                         }
                         used_seed.front().set_age( 0_turns );
                         farm_map.add_item_or_charges( pos, used_seed.front() );
-                        farm_map.set( pos, t_dirt, f_plant_seed );
+                        farm_map.set( pos, ter_t_dirt, furn_f_plant_seed );
                         if( !tmp_seed->count_by_charges() ) {
                             comp->companion_mission_inv.remove_item( tmp_seed );
                         }
@@ -3608,7 +3628,7 @@ static std::pair<size_t, std::string> farm_action( const tripoint_abs_omt &omt_t
                 }
                 break;
             case farm_ops::harvest:
-                if( farm_map.furn( pos ) == f_plant_harvest ) {
+                if( farm_map.furn( pos ) == furn_f_plant_harvest ) {
                     // Can't use item_stack::only_item() since there might be fertilizer
                     map_stack items = farm_map.i_at( pos );
                     const map_stack::iterator seed = std::find_if( items.begin(), items.end(), []( const item & it ) {
@@ -3628,8 +3648,8 @@ static std::pair<size_t, std::string> farm_action( const tripoint_abs_omt &omt_t
                                 here.add_item_or_charges( player_character.pos(), i );
                             }
                             farm_map.i_clear( pos );
-                            farm_map.furn_set( pos, f_null );
-                            farm_map.ter_set( pos, t_dirt );
+                            farm_map.furn_set( pos, furn_str_id::NULL_ID() );
+                            farm_map.ter_set( pos, ter_t_dirt );
                         } else {
                             plant_names.insert( item::nname( itype_id( seed->type->seed->fruit_id ) ) );
                         }
@@ -4454,11 +4474,9 @@ bool basecamp::survey_field_return( const mission_id &miss_id )
     int mismatch_tiles = 0;
     tripoint mapmin = tripoint( 0, 0, where.z() );
     tripoint mapmax = tripoint( 2 * SEEX - 1, 2 * SEEY - 1, where.z() );
+    const std::unordered_set<ter_str_id> match_terrains = { ter_t_clay, ter_t_dirt, ter_t_dirtmound, ter_t_grass, ter_t_grass_dead, ter_t_grass_golf, ter_t_grass_long, ter_t_grass_tall, ter_t_moss, ter_t_sand };
     for( const tripoint &p : target.points_in_rectangle( mapmin, mapmax ) ) {
-        if( target.ter( p ) != t_dirt && target.ter( p ) != t_sand && target.ter( p ) != t_clay &&
-            target.ter( p ) != t_dirtmound && target.ter( p ) != t_grass && target.ter( p ) != t_grass_dead &&
-            target.ter( p ) != t_grass_golf && target.ter( p ) != t_grass_long &&
-            target.ter( p ) != t_grass_tall && target.ter( p ) != t_moss ) {
+        if( match_terrains.find( target.ter( p ).id() ) == match_terrains.end() ) {
             mismatch_tiles++;
         }
     }
@@ -4519,8 +4537,9 @@ bool basecamp::survey_return( const mission_id &miss_id )
     }
 
     const oter_id &omt_ref = overmap_buffer.ter( where );
+    const std::optional<mapgen_arguments> *maybe_args = overmap_buffer.mapgen_args( where );
     const auto &pos_expansions = recipe_group::get_recipes_by_id( "all_faction_base_expansions",
-                                 omt_ref.id().c_str() );
+                                 omt_ref, maybe_args );
     if( pos_expansions.empty() ) {
         popup( _( "You can't build any expansions in a %s." ), omt_ref.id().c_str() );
         if( query_yn(
@@ -4804,7 +4823,7 @@ int om_cutdown_trees_trunks( const tripoint_abs_omt &omt_tgt, int chance )
 int om_cutdown_trees( const tripoint_abs_omt &omt_tgt, int chance, bool estimate,
                       bool force_cut_trunk )
 {
-    tinymap target_bay;
+    smallmap target_bay;
     target_bay.load( omt_tgt, false );
     int harvested = 0;
     int total = 0;
@@ -4818,13 +4837,9 @@ int om_cutdown_trees( const tripoint_abs_omt &omt_tgt, int chance, bool estimate
             }
             // get a random number that is either 1 or -1
             point dir( 3 * ( 2 * rng( 0, 1 ) - 1 ) + rng( -1, 1 ), 3 * rng( -1, 1 ) + rng( -1, 1 ) );
-            tripoint to = p + tripoint( dir, omt_tgt.z() );
-            std::vector<tripoint> tree = line_to( p, to, rng( 1, 8 ) );
-            for( tripoint &elem : tree ) {
-                target_bay.destroy( elem );
-                target_bay.ter_set( elem, t_trunk );
-            }
-            target_bay.ter_set( p, t_dirt );
+
+            target_bay.cut_down_tree( tripoint_omt_ms( p ), dir );
+            target_bay.collapse_at( p, true, true, false );
             harvested++;
         }
     }
@@ -4837,8 +4852,8 @@ int om_cutdown_trees( const tripoint_abs_omt &omt_tgt, int chance, bool estimate
     }
     // having cut down the trees, cut the trunks into logs
     for( const tripoint &p : target_bay.points_in_rectangle( mapmin, mapmax ) ) {
-        if( target_bay.ter( p ) == ter_id( "t_trunk" ) ) {
-            target_bay.ter_set( p, t_dirt );
+        if( target_bay.ter( p ) == ter_t_trunk || target_bay.ter( p ) == ter_t_stump ) {
+            target_bay.ter_set( p, ter_t_dirt );
             target_bay.spawn_item( p, itype_log, rng( 2, 3 ), 0, calendar::turn );
             harvested++;
         }
@@ -5027,9 +5042,8 @@ bool om_set_hide_site( npc &comp, const tripoint_abs_omt &omt_tgt,
                        const drop_locations &itms_rem )
 {
     tinymap target_bay;
-
     target_bay.load( omt_tgt, false );
-    target_bay.ter_set( relay_site_stash, t_improvised_shelter );
+    target_bay.ter_set( relay_site_stash, ter_t_improvised_shelter );
     for( drop_location it : itms_rem ) {
         item *i = it.first.get_item();
         item split_item;

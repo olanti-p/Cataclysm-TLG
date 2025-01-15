@@ -172,8 +172,11 @@ static const efftype_id effect_worked_on( "worked_on" );
 static const faction_id faction_your_followers( "your_followers" );
 
 static const flag_id json_flag_ALWAYS_AIMED( "ALWAYS_AIMED" );
+static const flag_id json_flag_NO_RELOAD( "NO_RELOAD" );
 
 static const furn_str_id furn_f_gunsafe_mj( "f_gunsafe_mj" );
+static const furn_str_id furn_f_gunsafe_ml( "f_gunsafe_ml" );
+static const furn_str_id furn_f_safe_c( "f_safe_c" );
 static const furn_str_id furn_f_safe_o( "f_safe_o" );
 
 static const gun_mode_id gun_mode_DEFAULT( "DEFAULT" );
@@ -224,6 +227,15 @@ static const skill_id skill_traps( "traps" );
 
 static const species_id species_ZOMBIE( "ZOMBIE" );
 
+static const ter_str_id ter_t_card_reader_broken( "t_card_reader_broken" );
+static const ter_str_id ter_t_dirt( "t_dirt" );
+static const ter_str_id ter_t_dirtmound( "t_dirtmound" );
+static const ter_str_id ter_t_door_c( "t_door_c" );
+static const ter_str_id ter_t_door_locked_alarm( "t_door_locked_alarm" );
+static const ter_str_id ter_t_door_metal_c( "t_door_metal_c" );
+static const ter_str_id ter_t_door_metal_locked( "t_door_metal_locked" );
+static const ter_str_id ter_t_stump( "t_stump" );
+static const ter_str_id ter_t_trunk( "t_trunk" );
 static const ter_str_id ter_t_underbrush_harvested_autumn( "t_underbrush_harvested_autumn" );
 static const ter_str_id ter_t_underbrush_harvested_spring( "t_underbrush_harvested_spring" );
 static const ter_str_id ter_t_underbrush_harvested_summer( "t_underbrush_harvested_summer" );
@@ -399,6 +411,7 @@ void aim_activity_actor::serialize( JsonOut &jsout ) const
     jsout.member( "aif_duration", aif_duration );
     jsout.member( "aiming_at_critter", aiming_at_critter );
     jsout.member( "snap_to_target", snap_to_target );
+    jsout.member( "loaded_RAS_weapon", loaded_RAS_weapon );
     jsout.member( "shifting_view", shifting_view );
     jsout.member( "initial_view_offset", initial_view_offset );
     jsout.member( "aborted", aborted );
@@ -421,6 +434,7 @@ std::unique_ptr<activity_actor> aim_activity_actor::deserialize( JsonValue &jsin
     data.read( "aif_duration", actor.aif_duration );
     data.read( "aiming_at_critter", actor.aiming_at_critter );
     data.read( "snap_to_target", actor.snap_to_target );
+    data.read( "loaded_RAS_weapon", actor.loaded_RAS_weapon );
     data.read( "shifting_view", actor.shifting_view );
     data.read( "initial_view_offset", actor.initial_view_offset );
     data.read( "aborted", actor.aborted );
@@ -498,6 +512,7 @@ bool aim_activity_actor::load_RAS_weapon()
     reload_time += ( sta_percent < 25 ) ? ( ( 25 - sta_percent ) * 2 ) : 0;
 
     you.mod_moves( -reload_time );
+    loaded_RAS_weapon = true;
     return true;
 }
 
@@ -506,7 +521,7 @@ void aim_activity_actor::unload_RAS_weapon()
     // Unload reload-and-shoot weapons to avoid leaving bows pre-loaded with arrows
     avatar &you = get_avatar();
     item_location weapon = get_weapon();
-    if( !weapon ) {
+    if( !weapon || !loaded_RAS_weapon ) {
         return;
     }
 
@@ -523,6 +538,7 @@ void aim_activity_actor::unload_RAS_weapon()
             you.set_moves( moves_before_unload );
         }
     }
+    loaded_RAS_weapon = false;
 }
 
 void autodrive_activity_actor::update_player_vehicle( Character &who )
@@ -813,10 +829,10 @@ void hacking_activity_actor::finish( player_activity &act, Character &who )
             } else if( type == hack_type::DOOR ) {
                 who.add_msg_if_player( _( "You activate the panel!" ) );
                 who.add_msg_if_player( m_good, _( "The nearby doors unlock." ) );
-                here.ter_set( examp, t_card_reader_broken );
+                here.ter_set( examp, ter_t_card_reader_broken );
                 for( const tripoint &tmp : here.points_in_radius( examp, 3 ) ) {
-                    if( here.ter( tmp ) == t_door_metal_locked ) {
-                        here.ter_set( tmp, t_door_metal_c );
+                    if( here.ter( tmp ) == ter_t_door_metal_locked ) {
+                        here.ter_set( tmp, ter_t_door_metal_c );
                     }
                 }
             }
@@ -2782,7 +2798,7 @@ void lockpick_activity_actor::finish( player_activity &act, Character &who )
             here.ter_set( target, new_ter_type );
         }
         who.add_msg_if_player( m_good, open_message );
-    } else if( furn_type == f_gunsafe_ml && lock_roll > ( 3 * pick_roll ) ) {
+    } else if( furn_type == furn_f_gunsafe_ml && lock_roll > ( 3 * pick_roll ) ) {
         who.add_msg_if_player( m_bad, _( "Your clumsy attempt jams the lock!" ) );
         here.furn_set( target, furn_f_gunsafe_mj );
     } else if( lock_roll > ( 1.5 * pick_roll ) ) {
@@ -2810,7 +2826,7 @@ void lockpick_activity_actor::finish( player_activity &act, Character &who )
         you->practice( skill_traps, xp_gain );
     }
 
-    if( !perfect && ter_type == t_door_locked_alarm && ( lock_roll + dice( 1, 30 ) ) > pick_roll ) {
+    if( !perfect && ter_type == ter_t_door_locked_alarm && ( lock_roll + dice( 1, 30 ) ) > pick_roll ) {
         sounds::sound( who.pos(), 40, sounds::sound_t::alarm, _( "an alarm sound!" ), true, "environment",
                        "alarm" );
     }
@@ -2857,7 +2873,7 @@ std::optional<tripoint> lockpick_activity_actor::select_location( avatar &you )
     } else if( get_creature_tracker().creature_at<npc>( *target ) ) {
         you.add_msg_if_player( m_info,
                                _( "You can pick your friends, and you can\npick your nose, but you can't pick\nyour friend's nose." ) );
-    } else if( terr_type == t_door_c ) {
+    } else if( terr_type == ter_t_door_c ) {
         you.add_msg_if_player( m_info, _( "That door isn't locked." ) );
     } else {
         you.add_msg_if_player( m_info, _( "That cannot be picked." ) );
@@ -3405,7 +3421,7 @@ void safecracking_activity_actor::do_turn( player_activity &act, Character &who 
 void safecracking_activity_actor::finish( player_activity &act, Character &who )
 {
     who.add_msg_if_player( m_good, _( "With a satisfying click, the lock on the safe opens!" ) );
-    get_map().furn_set( safe, f_safe_c );
+    get_map().furn_set( safe, furn_f_safe_c );
     act.set_to_null();
 }
 
@@ -4249,7 +4265,7 @@ void harvest_activity_actor::finish( player_activity &act, Character &who )
     }
 
     if( exam_furn ) {
-        here.furn_set( target, f_null );
+        here.furn_set( target, furn_str_id::NULL_ID() );
     } else {
         here.ter_set( target, here.get_ter_transforms_into( target ) );
     }
@@ -4546,6 +4562,10 @@ static ret_val<void> try_insert( item_location &holster, drop_location &holstere
 {
     item &it = *holstered_item.first;
     ret_val<void> ret = ret_val<void>::make_failure( _( "item can't be stored there" ) );
+
+    if( holster.get_item()->has_flag( json_flag_NO_RELOAD ) ) {
+        return ret_val<void>::make_failure( _( "destination can't be reloaded" ) );
+    }
 
     if( charges_added == nullptr ) {
         if( it.is_bucket_nonempty() ) {
@@ -5467,7 +5487,7 @@ void tent_deconstruct_activity_actor::finish( player_activity &act, Character & 
 {
     map &here = get_map();
     for( const tripoint &pt : here.points_in_radius( target, radius ) ) {
-        here.furn_set( pt, f_null );
+        here.furn_set( pt, furn_str_id::NULL_ID() );
     }
     here.add_item_or_charges( target, item( tent, calendar::turn ) );
     act.set_to_null();
@@ -6213,11 +6233,11 @@ void chop_logs_activity_actor::finish( player_activity &act, Character &who )
     int log_quan;
     int stick_quan;
     int splint_quan;
-    if( here.ter( pos ) == t_trunk ) {
+    if( here.ter( pos ) == ter_t_trunk ) {
         log_quan = rng( 2, 3 );
         stick_quan = rng( 0, 3 );
         splint_quan = 0;
-    } else if( here.ter( pos ) == t_stump ) {
+    } else if( here.ter( pos ) == ter_t_stump ) {
         log_quan = rng( 0, 2 );
         stick_quan = 0;
         splint_quan = rng( 5, 15 );
@@ -6241,7 +6261,7 @@ void chop_logs_activity_actor::finish( player_activity &act, Character &who )
         obj.set_var( "activity_var", who.name );
         here.add_item_or_charges( pos, obj );
     }
-    here.ter_set( pos, t_dirt );
+    here.ter_set( pos, ter_t_dirt );
     who.add_msg_if_player( m_good, _( "You finish chopping wood." ) );
 
     act.set_to_null();
@@ -6395,14 +6415,9 @@ void chop_tree_activity_actor::finish( player_activity &act, Character &who )
             }
         }
     }
-    const tripoint to = pos + 3 * direction.xy() + point( rng( -1, 1 ), rng( -1, 1 ) );
-    std::vector<tripoint> tree = line_to( pos, to, rng( 1, 8 ) );
-    for( const tripoint &elem : tree ) {
-        here.batter( elem, 300, 5 );
-        here.ter_set( elem, t_trunk );
-    }
 
-    here.ter_set( pos, t_stump );
+    here.cut_down_tree( tripoint_bub_ms( pos ), direction.xy() );
+
     who.add_msg_if_player( m_good, _( "You finish chopping down a tree." ) );
     // sound of falling tree
     here.collapse_at( pos, false, true, false );
@@ -6445,7 +6460,7 @@ void churn_activity_actor::finish( player_activity &act, Character &who )
 {
     map &here = get_map();
     who.add_msg_if_player( _( "You finish churning up the earth here." ) );
-    here.ter_set( here.getlocal( act.placement ), t_dirtmound );
+    here.ter_set( here.getlocal( act.placement ), ter_t_dirtmound );
     // Go back to what we were doing before
     // could be player zone activity, or could be NPC multi-farming
     act.set_to_null();
@@ -6485,7 +6500,7 @@ void clear_rubble_activity_actor::finish( player_activity &act, Character &who )
     map &here = get_map();
     const tripoint_bub_ms &pos = here.bub_from_abs( act.placement );
     who.add_msg_if_player( m_info, _( "You clear up the %s." ), here.furnname( pos ) );
-    here.furn_set( pos, f_null );
+    here.furn_set( pos, furn_str_id::NULL_ID() );
 
     act.set_to_null();
 

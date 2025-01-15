@@ -91,9 +91,9 @@
   },
   {
     "type": "GENERIC",
-    "id": "skull_cougar",
-    "name": { "str": "cougar skull" },
-    "description": "The skull of a cougar.",
+    "id": "skull_tiger",
+    "name": { "str": "tiger skull" },
+    "description": "The skull of a tiger.",
     "copy-from": "skull_abstract",
     "weight": "450 g",
     "volume": "3 L",
