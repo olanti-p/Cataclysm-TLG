@@ -5,7 +5,8 @@
     "id": [
       "TALK_ROBOFAC_INTERCOM_CONTRACTS",
       "MISSION_ROBOFAC_INTERCOM_2_ACCEPTED",
-      "MISSION_ROBOFAC_INTERCOM_ROBOT_SM_1_ACCEPTED"
+      "MISSION_ROBOFAC_INTERCOM_ROBOT_SM_1_ACCEPTED",
+      "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_ACCEPTED"
     ],
     "type": "talk_topic",
     "dynamic_line": "What would you like to discuss?",
@@ -19,6 +20,16 @@
           { "finish_mission": "MISSION_ROBOFAC_INTERCOM_2", "success": true }
         ],
         "topic": "MISSION_ROBOFAC_INTERCOM_2_COMPLETE"
+      },
+      {
+        "text": "I'm back from LIXA.  [Hand over the data.]",
+        "condition": { "and": [ { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1" }, { "u_has_item": "lixa_data" } ] },
+        "effect": [
+          { "u_consume_item": "lixa_data", "count": 1, "popup": true },
+          { "u_spawn_item": "RobofacCoin", "count": 5 },
+          { "finish_mission": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1", "success": true }
+        ],
+        "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_COMPLETE"
       },
       {
         "text": "I found it.  I found your template.  [Hand over the silicon photonics template.]",
@@ -88,7 +99,49 @@
         },
         "topic": "MISSION_ROBOFAC_INTERCOM_ROBOT_SM_1_OFFER"
       },
-      { "text": "Nevermind.", "topic": "TALK_DONE" }
+      {
+        "text": "[Contract: Data Retrieval]",
+        "condition": {
+          "and": [
+            { "not": { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1" } },
+            {
+              "not": { "u_has_var": "completed_robofac_intercom_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" }
+            },
+            {
+              "not": { "u_has_var": "completed_robofac_intercom_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "no" }
+            }
+          ]
+        },
+        "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER"
+      },
+      {
+        "text": "Do you have any more work for me right now?",
+        "condition": {
+          "and": [
+            { "u_has_var": "completed_robofac_intercom_2", "type": "dialogue", "context": "intercom", "value": "yes" },
+            { "u_has_var": "completed_robofac_intercom_3", "type": "dialogue", "context": "intercom", "value": "yes" },
+            {
+              "u_has_var": "completed_robofac_intercom_portal_sm_1",
+              "type": "dialogue",
+              "context": "intercom",
+              "value": "yes"
+            },
+            {
+              "or": [
+                { "u_has_var": "completed_robofac_intercom_robot_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" },
+                {
+                  "u_has_var": "completed_robofac_intercom_robot_sm_1",
+                  "type": "dialogue",
+                  "context": "intercom",
+                  "value": "no"
+                }
+              ]
+            }
+          ]
+        },
+        "topic": "TALK_ROBOFAC_INTERCOM_CONTRACTS_NoneAvailable"
+      },
+      { "text": "Let's talk about something else.", "topic": "TALK_ROBOFAC_INTERCOM_SERVICES" }
     ]
   },
   {
@@ -703,5 +756,121 @@
     "type": "talk_topic",
     "dynamic_line": "&The intercom tray quickly slides shut.  After a pause, the voice on the other end sighs.\n\n\"…we requested that the subject remain intact.  This outcome is… unfortunate.  We will process the specimen, but it is unlikely that it will yield usable information as to its purpose.\"\n\n\"You may keep the prototype.  You are dismissed.\"",
     "responses": [ { "text": "I'm sorry.", "topic": "TALK_DONE" }, { "text": "Alright, alright.", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1",
+    "type": "mission_definition",
+    "name": { "str": "Data Retrieval" },
+    "description": "Reach the LIXA facility, and search the area for anything of interest.  The intercom warned you about a number of undead aboveground, and the high probability of more underground.",
+    "goal": "MGOAL_NULL",
+    "difficulty": 5,
+    "value": 0,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "LIXA_road_guard",
+        "om_special": "physics_lab_LIXA",
+        "reveal_radius": 1,
+        "random": true,
+        "search_range": 180,
+        "z": 0
+      }
+    },
+    "end": {
+      "effect": [
+        { "u_spawn_item": "RobofacCoin", "count": 5 },
+        { "u_add_var": "completed_robofac_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" },
+        { "math": [ "u_hub01_completed_missions", "++" ] }
+      ]
+    },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "has_generic_rewards": false,
+    "dialogue": {
+      "describe": "…",
+      "offer": "…",
+      "accepted": "…",
+      "rejected": "…",
+      "advice": "…",
+      "inquire": "…",
+      "success": "…",
+      "success_lie": "…",
+      "failure": "…"
+    }
+  },
+  {
+    "id": [
+      "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER",
+      "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_WHAT_ELSE",
+      "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER_ADVICE",
+      "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_LIXA_ACRONYM",
+      "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER_ADVICE_Replacement"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "During the Cataclysm, we lost contact with one of our sister sites, LIXA.  Aerial surveillance indicates that the facility's inhabitants are deceased, and beyond the now-zombified security detail, the site should be sparsely populated.  We want you to enter the facility and make a copy of what they were researching on the provided thumb drive.  Additionally, we will be providing you with a keycard that should at the very least get you in the front door.\"\n\n\"We're offering a standard 5 HGC for successful retrieval of the data.  If that isn't enough of an incentive, we do have a manifest from before we lost contact with the facility showing a handful of specialized powered suits in inventory.  You are free to take any that are left.",
+    "responses": [
+      {
+        "text": "Alright, I'll see if I can't get that data for you.",
+        "effect": [
+          { "assign_mission": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1" },
+          { "u_spawn_item": "id_LIXA", "count": 1 },
+          { "u_spawn_item": "usb_drive_nano", "count": 1 }
+        ],
+        "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_ACCEPTED"
+      },
+      {
+        "text": "What can you tell me about what they were doing there?",
+        "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_WHAT_ELSE"
+      },
+      { "text": "What does LIXA even mean?", "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_LIXA_ACRONYM" },
+      {
+        "text": "If I lose the ID card or the memory stick, what should I do?",
+        "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER_ADVICE_Replacement"
+      },
+      { "text": "What else do you have available?", "topic": "TALK_ROBOFAC_INTERCOM_CONTRACTS" }
+    ]
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_WHAT_ELSE",
+    "type": "talk_topic",
+    "dynamic_line": "All I can tell you is that they were conducting cutting-edge research related to-\" The intercom abruptly cuts off for several seconds before coming back on, the voice sounding apologetic, \"Sorry, but as it turns out I'm not at liberty to divulge that information."
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_LIXA_ACRONYM",
+    "type": "talk_topic",
+    "dynamic_line": "It's an acronym that stands for Laser Interferometer eXodimensional resonance Assay."
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER_ADVICE_Replacement",
+    "type": "talk_topic",
+    "//": "I feel like this could be phrased better.",
+    "dynamic_line": "Well, the ID card wouldn't strictly speaking be necessary if you were to find some way of breaching the facility's security doors.\" The voice pauses for a moment, \"Buuut that said we only have the one ID card, so unless you're confident you can get in without it, please don't lose it.  As for the memory stick I would highly recommend you not lose that as portable drives with the required hardware security modules to interface with secure terminals are in short supply these days.  However there may very well be some on-site for you to scavenge if you're lucky."
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_ACCEPTED",
+    "type": "talk_topic",
+    "//": "Is it a semi-colon or colon that goes here? Man, idk.",
+    "dynamic_line": "Transferring the items now.\"  The intercom tray slides open, revealing an ID card for the facility and what looks like a USB thumb drive.  \"Again: please take care not to lose either of these since we can't exactly make more of them."
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_COMPLETE",
+    "type": "talk_topic",
+    "dynamic_line": "As we discussed during acceptance of the contract, we were aware of hazardous ground conditions, but we were unable to deduce further information other than what was available through long-range sensing.  If you would like to provide a description of the hazards present, we are willing to document them.",
+    "responses": [
+      {
+        "text": "[Detail the conditions at the collapsed tower and its basement.  This will advance time by ten minutes.]",
+        "effect": { "u_assign_activity": "ACT_GENERIC_EOC", "duration": "10 minutes" },
+        "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_COMPLETE_Explainer"
+      },
+      { "text": "…Just forget it.  Let's never speak of this again.", "topic": "TALK_ROBOFAC_INTERCOM_SERVICES" }
+    ]
+  },
+  {
+    "id": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_COMPLETE_Explainer",
+    "type": "talk_topic",
+    "dynamic_line": "&Over the course of several minutes, you calmly detail the events at the facility: the unexpected zombie presence underground, the anomalous nature of the experiment floor, and the encounter with the warped and hostile research staff trapped in the corridor.  Throughout, the voice interjects with questions, the sounds of typing filling the pauses.\n\n\"We appreciate your thorough report,\" the voice finally responds.  \"Your handling of the circumstances was commendable considering the anomalous and unpredictable nature of the facility.  If you seek further contract work, rest assured, we'll take into account the potential for anomalous circumstances in future assignments and relay them accordingly.\"",
+    "responses": [
+      { "text": "It's fine.  At least now we know for the future.", "topic": "TALK_DONE" },
+      { "text": "Yeah, yeah.  You're welcome.", "topic": "TALK_DONE" },
+      { "text": "Let's never do that again.", "topic": "TALK_DONE" }
+    ]
   }
 ]
