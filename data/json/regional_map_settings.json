@@ -549,6 +549,7 @@
           "mx_blackberry_patch": 500,
           "mx_point_dead_vegetation": 1000,
           "mx_point_burned_ground": 500,
+          "mx_poison_ivy_patch": 2000,
           "mx_grove": 500,
           "mx_shrubbery": 500,
           "mx_spider": 200,
@@ -580,10 +581,11 @@
       "forest_thick": {
         "chance": 30,
         "extras": {
-          "mx_blackberry_patch": 1100,
+          "mx_blackberry_patch": 800,
           "mx_grove": 500,
           "mx_shrubbery": 500,
           "mx_point_dead_vegetation": 800,
+          "mx_poison_ivy_patch": 2000,
           "mx_point_burned_ground": 500,
           "mx_spider": 200,
           "mx_clearcut": 125,
@@ -647,6 +649,7 @@
           "mx_trees2": 800,
           "mx_point_burned_ground": 500,
           "mx_point_dead_vegetation": 1000,
+          "mx_poison_ivy_patch": 400,
           "mx_trees": 500,
           "mx_knotweed_patch": 250,
           "mx_fallen_shed": 200,

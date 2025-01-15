@@ -752,10 +752,10 @@ void suffer::in_sunlight( Character &you, outfit &worn )
         const bodypart_id head( "head" );
         // TODO: Limbify vines and give them some way to be covered. For now they will use the average of your arm coverage.
         // We'll assume they poke out of your sleeves to do their thing.
-        float head_leaf_surface = 100 - worn.coverage_with_flags_exclude( head, { flag_INTEGRATED, flag_TRANSPARENT } );
-        float rarm_leaf_surface = .5 - ( worn.coverage_with_flags_exclude( right_arm, { flag_INTEGRATED, flag_TRANSPARENT } )
+        float head_leaf_surface = 100 - worn.coverage_with_flags_exclude( head, { flag_INTEGRATED, flag_TRANSPARENT, flag_AURA, flag_PERSONAL } );
+        float rarm_leaf_surface = .5 - ( worn.coverage_with_flags_exclude( right_arm, { flag_INTEGRATED, flag_TRANSPARENT, flag_AURA, flag_PERSONAL } )
                                          * .005 );
-        float larm_leaf_surface = .5 - ( worn.coverage_with_flags_exclude( left_arm, { flag_INTEGRATED, flag_TRANSPARENT } )
+        float larm_leaf_surface = .5 - ( worn.coverage_with_flags_exclude( left_arm, { flag_INTEGRATED, flag_TRANSPARENT, flag_AURA, flag_PERSONAL} )
                                          * .005 );
         float vine_leaf_surface = rarm_leaf_surface + larm_leaf_surface;
         if( you.has_trait( trait_NO_LEFT_ARM ) ) {

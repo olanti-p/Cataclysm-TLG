@@ -72,6 +72,7 @@ static const efftype_id effect_teleglow( "teleglow" );
 
 static const flag_id json_flag_FIT( "FIT" );
 
+static const json_character_flag json_flag_ETHEREAL( "ETHEREAL" );
 static const json_character_flag json_flag_PRED1( "PRED1" );
 static const json_character_flag json_flag_PRED2( "PRED2" );
 static const json_character_flag json_flag_PRED3( "PRED3" );
@@ -512,25 +513,50 @@ static void add_effect_to_target( const tripoint &target, const spell &sp, Creat
     const int dur_moves = sp.duration( caster );
     const int effect_intensity = sp.effect_intensity( caster );
     const time_duration dur_td = time_duration::from_moves( dur_moves );
-
     creature_tracker &creatures = get_creature_tracker();
     Creature *const critter = creatures.creature_at<Creature>( target );
     Character *const guy = creatures.creature_at<Character>( target );
     efftype_id spell_effect( sp.effect_data() );
     bool bodypart_effected = false;
     if( guy ) {
-        for( const bodypart_id &bp : guy->get_all_body_parts() ) {
-            if( sp.bp_is_affected( bp.id() ) ) {
+        // If random_effect_part, grab a random part and affect it.
+        if( sp.has_flag( spell_flag::RANDOM_EFFECT_PART ) && sp.bps_affected() == 0 ) {
+            const bodypart_id bp = static_cast<const bodypart_id>( guy->get_random_body_part( true ) );
                 if( sp.has_flag( spell_flag::LIQUID ) ) {
                     splash_target( target, sp, caster );
+                    bodypart_effected = true;
+                } else if( sp.has_flag( spell_flag::TOUCH ) && !guy->has_flag( json_flag_ETHEREAL ) ) {
+                    float hit_chance = guy->worn.coverage_with_flags_exclude( bp, { flag_AURA, flag_SEMITANGIBLE, flag_PERSONAL } );
+                    if( hit_chance < rng( 1, 100 ) ) {
+                        guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
+                    }
                     bodypart_effected = true;
                 } else {
                     guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
                     bodypart_effected = true;
                 }
+        // Part isn't random, so hit all listed parts, if any are listed.
+        } else {
+            for( const bodypart_id &bp : guy->get_all_body_parts() ) {
+                if( sp.bp_is_affected( bp.id() ) ) {
+                    if( sp.has_flag( spell_flag::LIQUID ) ) {
+                       splash_target( target, sp, caster );
+                       bodypart_effected = true;
+                    } else if( sp.has_flag( spell_flag::TOUCH ) && !guy->has_flag( json_flag_ETHEREAL ) ) {
+                        float hit_chance = guy->worn.coverage_with_flags_exclude( bp, { flag_AURA, flag_SEMITANGIBLE, flag_PERSONAL } );
+                        if( hit_chance < rng( 1, 100 ) ) {
+                            guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
+                        }
+                        bodypart_effected = true;
+                    } else {
+                        guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
+                        bodypart_effected = true;
+                    }
+                }
             }
         }
     }
+    // Either no parts were listed or this was a monster. Either way, just apply the effect to them generally.
     if( !bodypart_effected ) {
         critter->add_effect( spell_effect, dur_td );
     }

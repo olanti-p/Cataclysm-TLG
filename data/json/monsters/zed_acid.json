@@ -34,7 +34,8 @@
         "cooldown": 10,
         "condition": {
           "and": [
-            { "u_has_flag": "grab_filter" },
+            { "u_has_flag": "GRAB_FILTER" },
+            { "npc_has_flag": "GRAB" },
             { "not": { "u_is_underwater": "true" } },
             { "not": { "npc_is_underwater": "true" } }
           ]
@@ -229,7 +230,8 @@
         "cooldown": 10,
         "condition": {
           "and": [
-            { "u_has_flag": "grab_filter" },
+            { "u_has_flag": "GRAB_FILTER" },
+            { "npc_has_flag": "GRAB" },
             { "not": { "u_is_underwater": "true" } },
             { "not": { "npc_is_underwater": "true" } }
           ]
@@ -295,7 +297,8 @@
         "cooldown": 10,
         "condition": {
           "and": [
-            { "u_has_flag": "grab_filter" },
+            { "u_has_flag": "GRAB_FILTER" },
+            { "npc_has_flag": "GRAB" },
             { "not": { "u_is_underwater": "true" } },
             { "not": { "npc_is_underwater": "true" } }
           ]
@@ -350,7 +353,8 @@
         "cooldown": 10,
         "condition": {
           "and": [
-            { "u_has_flag": "grab_filter" },
+            { "u_has_flag": "GRAB_FILTER" },
+            { "npc_has_flag": "GRAB" },
             { "not": { "u_is_underwater": "true" } },
             { "not": { "npc_is_underwater": "true" } }
           ]
