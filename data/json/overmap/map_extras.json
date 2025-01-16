@@ -557,6 +557,15 @@
     "flags": [ "MAN_MADE" ]
   },
   {
+    "id": "mx_rock_formation",
+    "type": "map_extra",
+    "name": { "str": "Rock formation" },
+    "description": "Rocky ground and some boulders.",
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_rock_formation" },
+    "sym": ".",
+    "color": "light_gray"
+  },
+  {
     "id": "mx_toxic_waste",
     "type": "map_extra",
     "name": { "str": "Toxic waste" },

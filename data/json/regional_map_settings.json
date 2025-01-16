@@ -29,13 +29,13 @@
     "//": "Weights are set high in order to allow mods to add rare terrains.",
     "region_terrain_and_furniture": {
       "terrain": {
-        "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 4000, "t_grass_long": 200, "t_dirt": 2000 },
-        "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 6, "t_grass_long": 3, "t_dirt": 1 },
-        "t_region_groundcover_forest": { "t_forestfloor": 20, "t_grass": 1, "t_grass_long": 1, "t_moss": 1, "t_grass_dead": 4 },
-        "t_region_groundcover_swamp": { "t_grass_long": 300, "t_moss": 200, "t_dirt": 200, "t_grass_dead": 110 },
-        "t_region_groundcover_barren": { "t_dirt": 30, "t_grass_dead": 2, "t_railroad_rubble": 1 },
+        "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 4000, "t_grass_long": 200, "t_dirt": 2000, "t_dirt_rocky": 150 },
+        "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 6, "t_grass_long": 3, "t_dirt": 1, "t_dirt_rocky": 5 },
+        "t_region_groundcover_forest": { "t_forestfloor": 20, "t_grass": 1, "t_grass_long": 1, "t_moss": 1, "t_grass_dead": 4, "t_dirt_rocky": 1 },
+        "t_region_groundcover_swamp": { "t_grass_long": 300, "t_moss": 200, "t_dirt": 200, "t_grass_dead": 110, "t_dirt_rocky": 5 },
+        "t_region_groundcover_barren": { "t_dirt": 30, "t_grass_dead": 2, "t_railroad_rubble": 1, "t_dirt_rocky": 20 },
         "t_region_grass": { "t_grass": 18, "t_grass_dead": 10, "t_grass_long": 3, "t_dirt": 2 },
-        "t_region_soil": { "t_dirt": 1 },
+        "t_region_soil": { "t_dirt": 7, "t_dirt_rocky": 3 },
         "t_region_shrub_forest_dense": {
           "t_underbrush": 30,
           "t_shrub": 30,
@@ -551,6 +551,7 @@
           "mx_point_burned_ground": 500,
           "mx_poison_ivy_patch": 2000,
           "mx_grove": 500,
+          "mx_rock_formation": 500,
           "mx_shrubbery": 500,
           "mx_spider": 200,
           "mx_clearcut": 125,
@@ -579,11 +580,12 @@
         }
       },
       "forest_thick": {
-        "chance": 30,
+        "chance": 40,
         "extras": {
           "mx_blackberry_patch": 800,
           "mx_grove": 500,
           "mx_shrubbery": 500,
+          "mx_rock_formation": 500,
           "mx_point_dead_vegetation": 800,
           "mx_poison_ivy_patch": 2000,
           "mx_point_burned_ground": 500,
@@ -625,6 +627,7 @@
           "mx_knotweed_patch": 140,
           "mx_nest_dermatik": 75,
           "mx_point_dead_vegetation": 60,
+          "mx_rock_formation": 50,
           "mx_science": 15,
           "mx_military": 25,
           "mx_crater": 20,
@@ -647,6 +650,7 @@
           "mx_grass": 3500,
           "mx_grass2": 3500,
           "mx_trees2": 800,
+          "mx_rock_formation": 500,
           "mx_point_burned_ground": 500,
           "mx_point_dead_vegetation": 1000,
           "mx_poison_ivy_patch": 100,
