@@ -1753,7 +1753,7 @@
       [ [ "backpack_hiking", 2 ] ],
       [ [ "pants_hiking", 1 ] ],
       [ [ "rehydration_drink", 5 ] ],
-      [ [ "protein_powder", 10 ], [ "protein_smoothie", 4 ], [ "protein_drink", 4 ] ]
+      [ [ "protein_bar", 10 ], [ "protein_smoothie", 4 ], [ "protein_drink", 4 ] ]
     ]
   },
   {
