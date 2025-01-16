@@ -1444,5 +1444,86 @@
       { "u_add_effect": "tindrift", "duration": "1 s" },
       { "u_message": "Your sight darkens as the visions overtake you!", "type": "bad" }
     ]
+  },
+  {
+    "type": "SPELL",
+    "id": "veiled_butterfly_irradiate",
+    "name": { "str": "Irradiate Player" },
+    "description": "Adds minor radiation to player.",
+    "flags": [ "NO_PROJECTILE", "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_veiled_butterfly_irradiate",
+    "valid_targets": [ "hostile" ],
+    "base_casting_time": 200,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 1,
+    "max_range": 5,
+    "shape": "blast"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_veiled_butterfly_irradiate",
+    "condition": "u_is_character",
+    "effect": [ { "math": [ "u_val('rad')", "+=", "20" ] } ]
+  },
+  {
+    "type": "SPELL",
+    "id": "glowstalk_blind",
+    "name": { "str": "Blind player while grabbed" },
+    "description": "Blind while grabbed.",
+    "flags": [ "NO_PROJECTILE", "SILENT", "NO_EXPLOSION_SFX", "NON_MAGICAL" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_glowstalk_blind",
+    "valid_targets": [ "hostile" ],
+    "base_casting_time": 100,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 1,
+    "max_range": 5,
+    "shape": "blast"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_glowstalk_blind",
+    "condition": "u_is_character",
+    "effect": [
+      {
+        "if": { "u_has_effect": "blind" },
+        "then": [ { "u_message": "You feel something coil around you, but it releases you after a moment." } ],
+        "else": [
+          {
+            "if": { "u_has_worn_with_flag": "FLASH_PROTECTION" },
+            "then": [
+              {
+                "u_message": "The glowstalk coils around you, trying to blind you, but your vision is protected from its brilliant flashing."
+              }
+            ],
+            "else": [
+              {
+                "if": { "math": [ "rand(20) > u_val('dexterity')" ] },
+                "then": [ { "u_message": "The glowstalk tries to blind you with a brilliant flash, but you look away just in time." } ],
+                "else": [
+                  {
+                    "if": { "u_has_worn_with_flag": "SUN_GLASSES" },
+                    "then": [
+                      {
+                        "u_message": "The glowstalk coils around you, emitting a blinding flash from its pustules.  Your eyes are shaded, but not entirely protected.",
+                        "type": "bad"
+                      },
+                      { "u_add_effect": "blind", "duration": [ 7, 14 ] }
+                    ],
+                    "else": [
+                      { "u_message": "The glowstalk coils around you, forcing you to look at its blindingly bright pustules!", "type": "bad" },
+                      { "u_add_effect": "blind", "duration": [ 15, 30 ] }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
