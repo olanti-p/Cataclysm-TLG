@@ -649,7 +649,7 @@
           "mx_trees2": 800,
           "mx_point_burned_ground": 500,
           "mx_point_dead_vegetation": 1000,
-          "mx_poison_ivy_patch": 400,
+          "mx_poison_ivy_patch": 100,
           "mx_trees": 500,
           "mx_knotweed_patch": 250,
           "mx_fallen_shed": 200,
