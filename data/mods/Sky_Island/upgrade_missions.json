@@ -655,7 +655,7 @@
     "reversible": false,
     "tools": [ [ [ "fakeitem_statue", -1 ] ] ],
     "components": [
-      [ [ "chainmail_suit_faraday", 1 ], [ "sharksuit", 1 ], [ "armor_samurai", 1 ], [ "armor_junk_plate", 1 ] ],
+      [ [ "chainmail_suit_faraday", 1 ], [ "sharksuit", 1 ], [ "armor_samurai", 1 ], [ "junk_platemail_suit", 1 ] ],
       [ [ "warptoken", 12 ] ],
       [ [ "book_fict_soft_ya_myeyes", 1 ] ],
       [ [ "fur", 40 ] ],
@@ -1059,7 +1059,6 @@
       [ [ "crowbar", 1 ], [ "heavy_crowbar", 1 ] ],
       [
         [ "speedo", 1 ],
-        [ "bikini_bottom_short", 1 ],
         [ "bikini_bottom", 1 ],
         [ "loincloth", 1 ],
         [ "loincloth_fur", 1 ]
@@ -1754,7 +1753,7 @@
       [ [ "backpack_hiking", 2 ] ],
       [ [ "pants_hiking", 1 ] ],
       [ [ "rehydration_drink", 5 ] ],
-      [ [ "protein_bar_evac", 10 ], [ "protein_smoothie", 4 ] ]
+      [ [ "protein_powder", 10 ], [ "protein_smoothie", 4 ], [ "protein_drink", 4 ] ]
     ]
   },
   {
