@@ -469,12 +469,6 @@
   },
   {
     "type": "start_location",
-    "id": "sloc_restaraunt_foodplace_break_room",
-    "name": "Foodplace Break Room",
-    "terrain": [ "s_restaurant_foodplace_roof" ]
-  },
-  {
-    "type": "start_location",
     "id": "sloc_school",
     "name": "School",
     "terrain": [

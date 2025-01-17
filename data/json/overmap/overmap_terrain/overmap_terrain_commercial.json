@@ -463,8 +463,6 @@
   {
     "type": "overmap_terrain",
     "id": [
-      "s_restaurant_foodplace_roof",
-      "s_restaurant_foodplace_upper_roof",
       "s_restaurant_roof",
       "s_restaurant_roof_1",
       "s_restaurant_roof_2",
