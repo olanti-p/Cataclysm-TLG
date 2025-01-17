@@ -2234,7 +2234,6 @@
   },
   {
     "id": "nested_SPAS_12",
-    "id": "nested_slp",
     "type": "item_group",
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
     "subtype": "collection",
