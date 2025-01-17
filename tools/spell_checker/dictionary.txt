@@ -2046,10 +2046,6 @@ Foodios
 Foodkid
 FoodLair
 foodless
-Foodpeople
-Foodperson
-Foodpersons
-Foodplace
 foon
 foons
 forcefield

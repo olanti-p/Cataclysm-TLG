@@ -111,8 +111,6 @@ std::optional<int> fish_trap( Character *, item *, const tripoint & );
 std::optional<int> fish_trap_tick( Character *, item *, const tripoint & );
 std::optional<int> fishing_rod( Character *, item *, const tripoint & );
 std::optional<int> fitness_check( Character *p, item *it, const tripoint & );
-std::optional<int> foodperson( Character *, item *, const tripoint & );
-std::optional<int> foodperson_voice( Character *, item *, const tripoint & );
 std::optional<int> gasmask( Character *, item *, const tripoint & );
 std::optional<int> gasmask_activate( Character *, item *, const tripoint & );
 std::optional<int> geiger( Character *, item *, const tripoint & );

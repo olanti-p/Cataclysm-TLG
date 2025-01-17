@@ -68,18 +68,6 @@
   },
   {
     "type": "npc",
-    "id": "true_foodperson",
-    "//": "Foodperson mascot, except if you ask them Foodperson is a real hero and it's them!",
-    "name_unique": "Foodperson",
-    "class": "NC_TRUE_FOODPERSON",
-    "attitude": 0,
-    "mission": 7,
-    "chat": "TALK_TRUE_FOODPERSON",
-    "mission_offered": "MISSION_PROVE_YOUR_WORTH",
-    "faction": "no_faction"
-  },
-  {
-    "type": "npc",
     "id": "cyborg_rescued",
     "//": "A prototype cyborg you saved.",
     "name_suffix": "Cyborg",

@@ -104,8 +104,6 @@ static const efftype_id effect_sleep( "sleep" );
 static const efftype_id effect_under_operation( "under_operation" );
 
 static const itype_id fuel_type_animal( "animal" );
-static const itype_id itype_foodperson_mask( "foodperson_mask" );
-static const itype_id itype_foodperson_mask_on( "foodperson_mask_on" );
 
 static const skill_id skill_firstaid( "firstaid" );
 
@@ -114,7 +112,6 @@ static const skill_id skill_speech( "speech" );
 static const trait_id trait_DEBUG_MIND_CONTROL( "DEBUG_MIND_CONTROL" );
 static const trait_id trait_HALLUCINATION( "HALLUCINATION" );
 static const trait_id trait_PROF_CHURL( "PROF_CHURL" );
-static const trait_id trait_PROF_FOODP( "PROF_FOODP" );
 
 static const zone_type_id zone_type_NPC_INVESTIGATE_ONLY( "NPC_INVESTIGATE_ONLY" );
 static const zone_type_id zone_type_NPC_NO_INVESTIGATE( "NPC_NO_INVESTIGATE" );
@@ -824,12 +821,6 @@ void game::chat()
     } );
     const int available_for_activities_count = available_for_activities.size();
 
-    if( player_character.has_trait( trait_PROF_FOODP ) &&
-        !( player_character.is_wearing( itype_foodperson_mask ) ||
-           player_character.is_wearing( itype_foodperson_mask_on ) ) ) {
-        add_msg( m_warning, _( "You can't speak without your face!" ) );
-        return;
-    }
     std::vector<vehicle *> animal_vehicles;
     std::vector<vehicle *> following_vehicles;
     std::vector<vehicle *> magic_vehicles;
