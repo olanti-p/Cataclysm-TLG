@@ -1081,9 +1081,6 @@
       "plant_name": "mutant",
       "fruit": "null",
       "grow": "90 days",
-      "seedling_form": "f_mutant_tree_sprout",
-      "mature_form": "f_mutant_tree_sapling",
-      "harvestable_form": "f_mutant_tree_adult",
       "required_terrain_flag": "TREE_PLANTABLE"
     }
   }
