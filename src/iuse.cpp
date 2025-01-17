@@ -6942,31 +6942,6 @@ std::optional<int> iuse::afs_translocator( Character *p, item *it, const tripoin
     }
 }
 
-std::optional<int> iuse::foodperson_voice( Character *, item *, const tripoint &pos )
-{
-    if( calendar::once_every( 1_minutes ) ) {
-        const SpeechBubble &speech = get_speech( "foodperson_mask" );
-        sounds::sound( pos, speech.volume, sounds::sound_t::alarm, speech.text.translated(), true, "speech",
-                       "foodperson_mask" );
-    }
-    return 0;
-}
-
-std::optional<int> iuse::foodperson( Character *p, item *it, const tripoint & )
-{
-    // Prevent crash if battery was somehow removed.
-    if( !it->magazine_current() ) {
-        return std::nullopt;
-    }
-
-    time_duration shift = time_duration::from_turns( it->magazine_current()->ammo_remaining() *
-                          it->type->tool->turns_per_charge );
-
-    p->add_msg_if_player( m_info, _( "Your HUD lights-up: \"Your shift ends in %s\"." ),
-                          to_string( shift ) );
-    return 0;
-}
-
 std::optional<int> iuse::radiocar( Character *p, item *it, const tripoint & )
 {
     int choice = -1;
@@ -6975,7 +6950,7 @@ std::optional<int> iuse::radiocar( Character *p, item *it, const tripoint & )
     } );
     if( bomb_it == nullptr ) {
         choice = uilist( _( "Using RC car:" ), {
-            _( "Turn on" ), _( "Put a bomb to car" )
+            _( "Turn on" ), _( "Attach a bomb to the car" )
         } );
     } else {
         choice = uilist( _( "Using RC car:" ), {
@@ -6995,7 +6970,7 @@ std::optional<int> iuse::radiocar( Character *p, item *it, const tripoint & )
         it->convert( itype_radio_car_on, p ).active = true;
 
         p->add_msg_if_player(
-            _( "You turned on your RC car; now place it on the ground, and use your radio control to play." ) );
+            _( "You turned on the RC car.  To drive it, place it on the ground and use the RC control." ) );
 
         return 0;
     }

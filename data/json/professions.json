@@ -668,7 +668,6 @@
     "type": "profession",
     "id": "sheltered_survivor",
     "name": "Sheltered Survivor",
-    "requirement": "achievement_survive_28_days",
     "description": "At the start of the Cataclysm, you hunkered down in a bomb shelter.  You've spent the past months eating canned food, reading books, and tinkering.  Now it is winter - time to face the world above.",
     "points": 4,
     "proficiencies": [ "prof_fibers", "prof_knitting", "prof_carving" ],
@@ -708,7 +707,6 @@
     "type": "profession",
     "id": "sheltered_militia",
     "name": "Sheltered Militia",
-    "requirement": "achievement_survive_28_days",
     "description": "At the start of the Cataclysm, you hunkered down in a bomb shelter with your collection of guns.  You've spent the past months eating canned food and practicing your aim.  Now it is winter - time to face the world above.",
     "points": 4,
     "proficiencies": [ "prof_gunsmithing_basic", "prof_gunsmithing_improv", "prof_gun_cleaning" ],
@@ -818,7 +816,7 @@
     "name": "Butcher",
     "description": "You spent most of your adult life in a butcher shop.  Your trusty knife has seen many different creatures and you know how to butcher them.",
     "points": 2,
-    "skills": [ { "name": "cutting", "level": 2 }, { "name": "cooking", "level": 2 }, { "name": "survival", "level": 2 } ],
+    "skills": [ { "name": "cutting", "level": 2 }, { "name": "stabbing", "level": 1 }, { "name": "cooking", "level": 2 }, { "name": "survival", "level": 2 } ],
     "proficiencies": [ "prof_food_prep", "prof_knife_skills", "prof_intro_biology", "prof_wp_basic_bird", "prof_knives_familiar" ],
     "items": {
       "both": {
@@ -1035,7 +1033,7 @@
     "id": "basketball_player",
     "name": "Basketball Player",
     "description": "Your first major game was abruptly cancelled when zombies stormed the court.  Quick feet and good reflexes meant you were among the lucky few to escape the stadium alive.",
-    "points": 2,
+    "points": 3,
     "skills": [ { "level": 5, "name": "dodge" }, { "level": 5, "name": "throw" }, { "level": 4, "name": "swimming" } ],
     "proficiencies": [ "prof_athlete_basic" ],
     "items": {
@@ -1062,11 +1060,11 @@
     "id": "football_player",
     "name": "Football Player",
     "description": "Your epic touchdown was ruined when your coach's guts were torn out by undead fans.  Now you're first pick in the apocalypse draft.",
-    "points": 3,
+    "points": 4,
     "skills": [
       { "level": 5, "name": "throw" },
       { "level": 4, "name": "melee" },
-      { "level": 4, "name": "unarmed" },
+      { "level": 3, "name": "unarmed" },
       { "level": 4, "name": "dodge" },
       { "level": 4, "name": "swimming" }
     ],
@@ -1094,48 +1092,12 @@
   },
   {
     "type": "profession",
-    "id": "true_foodperson",
-    "name": "True Foodperson",
-    "description": "You are the true Foodperson.  Some might think Foodperson is just a mascot, but you know better.  The mask has become your face, you are real, and the only thing standing between this world and oblivion is you.",
-    "points": 0,
-    "traits": [ "PROF_FOODP" ],
-    "skills": [ { "level": 2, "name": "speech" } ],
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "pants_cargo" },
-          { "item": "cape_fp" },
-          { "item": "dress_shirt" },
-          { "item": "armguard_hard" },
-          { "item": "legguard_hard" },
-          { "item": "gloves_rubber" },
-          { "item": "socks" },
-          { "item": "chestguard_hard" },
-          { "item": "boots_rubber" },
-          {
-            "item": "medium_disposable_cell",
-            "ammo-item": "battery",
-            "charges": 1200,
-            "container-item": "foodperson_mask"
-          },
-          { "item": "foodplace_snack_bar", "container-item": "fanny" },
-          { "item": "foodplace_snack_bar" },
-          { "item": "foodplace_zero_drink" },
-          { "item": "bat", "custom-flags": [ "auto_wield" ] }
-        ]
-      },
-      "male": { "entries": [ { "item": "briefs" } ] },
-      "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
-    }
-  },
-  {
-    "type": "profession",
     "id": "cyclist",
     "name": "Professional Cyclist",
     "description": "You were a promising cyclist with a bright career in front of you before this all happened.  Perhaps you'll never get to participate in the grand tours now, but as the saying goes, life is like riding a bicycle: you've got to keep moving.",
     "points": 4,
     "proficiencies": [ "prof_athlete_basic", "prof_athlete_expert", "prof_driver" ],
-    "skills": [ { "level": 5, "name": "driving" }, { "level": 4, "name": "dodge" } ],
+    "skills": [ { "level": 5, "name": "driving" }, { "level": 3, "name": "dodge" } ],
     "items": {
       "both": {
         "entries": [
@@ -1160,7 +1122,6 @@
     "type": "profession",
     "id": "major-general",
     "name": "Major General",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You worked your way up through the ranks from a no-name private to a big shot Major General, respected and decorated.  On the downside, years of desk duty have left your shooting skills rusty, and all the medals in the world won't protect you now.",
     "points": 4,
     "proficiencies": [ "prof_gunsmithing_basic", "prof_gun_cleaning" ],
@@ -1205,7 +1166,6 @@
     "type": "profession",
     "id": "marine",
     "name": { "male": "Marine Infantryman", "female": "Marine Infantrywoman" },
-    "requirement": "achievement_reach_military_bunker",
     "description": "You are one of the few and the proud: a member of the US Marine Corps.  Now that military command has collapsed in on itself as far as you can tell, you suppose that it falls to you to carry the memory of the Corps forward into the future.  Semper fi.",
     "points": 6,
     "proficiencies": [
@@ -1220,10 +1180,10 @@
       { "level": 5, "name": "rifle" },
       { "level": 4, "name": "pistol" },
       { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
-      { "level": 3, "name": "throw" },
+      { "level": 2, "name": "stabbing" },
+      { "level": 2, "name": "dodge" },
+      { "level": 2, "name": "firstaid" },
+      { "level": 2, "name": "throw" },
       { "level": 3, "name": "swimming" },
       { "level": 2, "name": "survival" }
     ],
@@ -1266,7 +1226,6 @@
     "type": "profession",
     "id": "sailor",
     "name": "Navy Sailor",
-    "requirement": "achievement_reach_aircraft_carrier",
     "description": "You're a sailor of the US Navy, and spent the last few years working shipside aboard an aircraft carrier.  Though you're trained in combat, maintenance of the vessel has been your primary duty.  After some event beyond your understanding, the carrier has become a floating graveyard in the middle of nowhere.  This is going to take more than a cup of coffee and a monkey wrench to fix.",
     "points": 4,
     "proficiencies": [
@@ -1280,15 +1239,15 @@
     "skills": [
       { "level": 5, "name": "mechanics" },
       { "level": 5, "name": "driving" },
-      { "level": 4, "name": "gun" },
-      { "level": 4, "name": "rifle" },
-      { "level": 4, "name": "swimming" },
-      { "level": 3, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "firstaid" },
-      { "level": 3, "name": "survival" },
-      { "level": 3, "name": "throw" }
+      { "level": 3, "name": "gun" },
+      { "level": 3, "name": "rifle" },
+      { "level": 3, "name": "swimming" },
+      { "level": 2, "name": "pistol" },
+      { "level": 2, "name": "melee" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "firstaid" },
+      { "level": 1, "name": "survival" },
+      { "level": 2, "name": "throw" }
     ],
     "items": {
       "both": {
@@ -1319,7 +1278,6 @@
     "type": "profession",
     "id": "diver_navy",
     "name": "Navy Diver",
-    "requirement": "achievement_reach_aircraft_carrier",
     "description": "You were a member of a Naval Special Warfare diving group, a skilled soldier adept at underwater infiltration and marine combat.  You were suiting up for a practice dive when the aircraft carrier you were stationed on was somehow flung from the Yellow Sea to who knows where.  You seem to be the only one who survived with your sanity intact, but it's not safe to stay here.  At least you're already dressed to abandon ship.",
     "points": 5,
     "proficiencies": [
@@ -1331,14 +1289,14 @@
       "prof_auto_pistols_familiar"
     ],
     "skills": [
-      { "level": 7, "name": "swimming" },
-      { "level": 5, "name": "gun" },
-      { "level": 5, "name": "rifle" },
-      { "level": 4, "name": "pistol" },
-      { "level": 4, "name": "melee" },
-      { "level": 4, "name": "stabbing" },
-      { "level": 4, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
+      { "level": 6, "name": "swimming" },
+      { "level": 4, "name": "gun" },
+      { "level": 3, "name": "rifle" },
+      { "level": 3, "name": "pistol" },
+      { "level": 3, "name": "melee" },
+      { "level": 3, "name": "stabbing" },
+      { "level": 3, "name": "dodge" },
+      { "level": 2, "name": "firstaid" },
       { "level": 3, "name": "survival" },
       { "level": 3, "name": "throw" }
     ],
@@ -1368,13 +1326,12 @@
     "type": "profession",
     "id": "veteran",
     "name": "Military Veteran",
-    "requirement": "achievement_reach_military_bunker",
     "description": "After being discharged from the armed forces, you were sent to a veterans' hospital for treatment.  Just when you thought you'd overcome your traumas and readjusted to civilian life, the world has come to an end and your worst nightmare has become a reality: life in an endless battlefield.",
     "points": 3,
     "proficiencies": [ "prof_gunsmithing_basic", "prof_gun_cleaning" ],
     "skills": [
-      { "level": 4, "name": "gun" },
-      { "level": 4, "name": "rifle" },
+      { "level": 5, "name": "gun" },
+      { "level": 5, "name": "rifle" },
       { "level": 3, "name": "pistol" },
       { "level": 3, "name": "throw" },
       { "level": 2, "name": "melee" },
@@ -1403,7 +1360,6 @@
     "type": "profession",
     "id": "recruit",
     "name": "Military Recruit",
-    "requirement": "achievement_reach_military_bunker",
     "description": "Joining the military has been your dream for years.  You finally got in, just in time for your training to get interrupted by some sort of national emergency.  As far as you can tell, military command abandoned you in this hellhole when you missed the emergency evac.",
     "points": 3,
     "proficiencies": [
@@ -1414,12 +1370,12 @@
       "prof_auto_pistols_familiar"
     ],
     "skills": [
-      { "level": 3, "name": "gun" },
-      { "level": 3, "name": "rifle" },
-      { "level": 3, "name": "throw" },
-      { "level": 2, "name": "pistol" },
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "rifle" },
+      { "level": 2, "name": "throw" },
+      { "level": 1, "name": "pistol" },
       { "level": 2, "name": "melee" },
-      { "level": 2, "name": "stabbing" },
+      { "level": 1, "name": "stabbing" },
       { "level": 2, "name": "dodge" },
       { "level": 1, "name": "firstaid" },
       { "level": 1, "name": "survival" },
@@ -1462,16 +1418,15 @@
     "type": "profession",
     "id": "combat-mechanic",
     "name": "Combat Mechanic",
-    "requirement": "achievement_reach_military_bunker",
     "description": "Early in your military career, you were hand-picked for extra training in the mechanic's trade, keeping the armor running.  It's been years since you last touched a rifle, and the dead men are marching again…",
     "points": 5,
     "proficiencies": [ "prof_gunsmithing_basic", "prof_metalworking", "prof_welding_basic", "prof_welding", "prof_gun_cleaning" ],
     "skills": [
       { "level": 7, "name": "mechanics" },
-      { "level": 3, "name": "gun" },
+      { "level": 2, "name": "gun" },
       { "level": 3, "name": "rifle" },
       { "level": 3, "name": "throw" },
-      { "level": 2, "name": "pistol" },
+      { "level": 3, "name": "pistol" },
       { "level": 2, "name": "melee" },
       { "level": 2, "name": "stabbing" },
       { "level": 2, "name": "dodge" },
@@ -1512,7 +1467,6 @@
     "type": "profession",
     "id": "combat-engineer",
     "name": "Combat Engineer",
-    "requirement": "achievement_reach_military_bunker",
     "description": "Your job was simple: Keep the army moving.  You built bridges, you built roads, you destroyed fortifications, and you cleared mines.  It has been years since you last handled a rifle in basic training; now might be the time to dust off those skills.",
     "points": 7,
     "proficiencies": [ "prof_gunsmithing_basic", "prof_traps", "prof_trapsetting", "prof_disarming", "prof_spotting", "prof_gun_cleaning" ],
@@ -1520,15 +1474,15 @@
       { "level": 7, "name": "traps" },
       { "level": 6, "name": "fabrication" },
       { "level": 6, "name": "mechanics" },
-      { "level": 3, "name": "gun" },
-      { "level": 3, "name": "rifle" },
-      { "level": 3, "name": "throw" },
-      { "level": 3, "name": "swimming" },
-      { "level": 3, "name": "firstaid" },
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "rifle" },
+      { "level": 2, "name": "throw" },
+      { "level": 2, "name": "swimming" },
+      { "level": 1, "name": "firstaid" },
       { "level": 2, "name": "pistol" },
-      { "level": 2, "name": "melee" },
-      { "level": 2, "name": "stabbing" },
-      { "level": 2, "name": "dodge" },
+      { "level": 1, "name": "melee" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
       { "level": 2, "name": "survival" }
     ],
     "items": {
@@ -1559,7 +1513,6 @@
     "type": "profession",
     "id": "nco",
     "name": "Non-Commissioned Officer",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You're a veteran of several peacekeeping missions.  You led your squad as a sort of parental figure, and they relied on you to give orders and keep them alive.  You failed them.  And now you're alone.",
     "points": 7,
     "proficiencies": [
@@ -1620,7 +1573,6 @@
     "type": "profession",
     "id": "rifleman",
     "name": "Rifleman",
-    "requirement": "achievement_reach_military_bunker",
     "description": "When you were young, you dreamed of being a soldier.  War is hell and hell is war, but you never thought it would be this bad.",
     "points": 5,
     "proficiencies": [
@@ -1636,9 +1588,9 @@
       { "level": 4, "name": "rifle" },
       { "level": 3, "name": "pistol" },
       { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
+      { "level": 2, "name": "stabbing" },
+      { "level": 2, "name": "dodge" },
+      { "level": 2, "name": "firstaid" },
       { "level": 3, "name": "throw" },
       { "level": 2, "name": "survival" },
       { "level": 2, "name": "swimming" }
@@ -1692,16 +1644,16 @@
       "prof_auto_pistols_familiar"
     ],
     "skills": [
-      { "level": 8, "name": "gun" },
-      { "level": 8, "name": "rifle" },
-      { "level": 6, "name": "pistol" },
-      { "level": 4, "name": "melee" },
-      { "level": 4, "name": "stabbing" },
-      { "level": 4, "name": "dodge" },
-      { "level": 4, "name": "firstaid" },
+      { "level": 7, "name": "gun" },
+      { "level": 7, "name": "rifle" },
+      { "level": 5, "name": "pistol" },
+      { "level": 2, "name": "melee" },
+      { "level": 2, "name": "stabbing" },
+      { "level": 2, "name": "dodge" },
+      { "level": 2, "name": "firstaid" },
       { "level": 4, "name": "survival" },
-      { "level": 4, "name": "throw" },
-      { "level": 4, "name": "swimming" }
+      { "level": 2, "name": "throw" },
+      { "level": 3, "name": "swimming" }
     ],
     "items": {
       "both": {
@@ -1737,7 +1689,6 @@
     "type": "profession",
     "id": "seal",
     "name": "Navy SEAL",
-    "requirement": "achievement_reach_aircraft_carrier",
     "description": "You were a member of the SEALs; a key component of the US Navy's special forces and a proficient combatant in both maritime and ground operations.  'The only easy day was yesterday', and with the chain of command in ruins, you may fulfill your final mission in any way you see fit.",
     "points": 8,
     "proficiencies": [
@@ -1753,10 +1704,10 @@
       { "level": 7, "name": "gun" },
       { "level": 7, "name": "rifle" },
       { "level": 6, "name": "pistol" },
-      { "level": 5, "name": "melee" },
-      { "level": 5, "name": "stabbing" },
-      { "level": 5, "name": "dodge" },
-      { "level": 4, "name": "firstaid" },
+      { "level": 4, "name": "melee" },
+      { "level": 4, "name": "stabbing" },
+      { "level": 3, "name": "dodge" },
+      { "level": 3, "name": "firstaid" },
       { "level": 4, "name": "survival" },
       { "level": 4, "name": "throw" },
       { "level": 4, "name": "swimming" }
@@ -1802,7 +1753,6 @@
     "type": "profession",
     "id": "specops",
     "name": "Special Operator",
-    "requirement": "achievement_reach_military_base",
     "description": "You were the best of the best, the military's finest.  That's why you're still alive, even after all your comrades fell to the undead.  As far as you can tell, military command abandoned you in this hellhole when you missed the emergency evac.",
     "points": 8,
     "proficiencies": [
@@ -1818,14 +1768,14 @@
       { "level": 7, "name": "gun" },
       { "level": 7, "name": "smg" },
       { "level": 7, "name": "rifle" },
-      { "level": 5, "name": "melee" },
-      { "level": 5, "name": "stabbing" },
-      { "level": 5, "name": "dodge" },
+      { "level": 4, "name": "melee" },
+      { "level": 4, "name": "stabbing" },
+      { "level": 3, "name": "dodge" },
       { "level": 4, "name": "traps" },
-      { "level": 4, "name": "firstaid" },
-      { "level": 4, "name": "throw" },
+      { "level": 2, "name": "firstaid" },
+      { "level": 3, "name": "throw" },
       { "level": 4, "name": "swimming" },
-      { "level": 4, "name": "survival" }
+      { "level": 3, "name": "survival" }
     ],
     "items": {
       "both": {
@@ -1901,19 +1851,18 @@
     "type": "profession",
     "id": "rescuer",
     "name": { "male": "Rescuer", "female": "Rescuer" },
-    "requirement": "achievement_reach_mi-Go_encampment",
     "description": "You were ready.  You went in determined to find and rescue your friends.  Now the atmosphere in these twisting corridors grows heavy, and you don't feel quite so confident anymore.  You might be the one in need of a rescue soon.",
     "points": 3,
     "proficiencies": [ "prof_auto_rifles_familiar", "prof_knives_familiar", "prof_auto_pistols_familiar" ],
     "skills": [
       { "level": 4, "name": "gun" },
-      { "level": 4, "name": "rifle" },
-      { "level": 4, "name": "pistol" },
+      { "level": 3, "name": "rifle" },
+      { "level": 3, "name": "pistol" },
       { "level": 4, "name": "melee" },
-      { "level": 4, "name": "stabbing" },
-      { "level": 4, "name": "dodge" },
-      { "level": 4, "name": "fabrication" },
-      { "level": 4, "name": "tailor" },
+      { "level": 3, "name": "stabbing" },
+      { "level": 3, "name": "dodge" },
+      { "level": 3, "name": "fabrication" },
+      { "level": 2, "name": "tailor" },
       { "level": 3, "name": "throw" },
       { "level": 3, "name": "swimming" }
     ],
@@ -1992,15 +1941,14 @@
     "type": "profession",
     "id": "gangster",
     "name": "Gangster",
-    "requirement": "achievement_kill_100_monsters",
     "description": "The boss always said he could rely on you to pull through on the tough jobs.  Shame he got himself smoked.  No problem; the world's always got a place for someone with your kind of talents.",
     "points": 4,
     "proficiencies": [ "prof_knives_familiar", "prof_unarmed_familiar", "prof_shivs_familiar" ],
     "skills": [
-      { "level": 3, "name": "gun" },
-      { "level": 3, "name": "pistol" },
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "pistol" },
       { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
+      { "level": 2, "name": "stabbing" },
       { "level": 3, "name": "unarmed" },
       { "level": 3, "name": "dodge" },
       { "level": 3, "name": "driving" }
@@ -2035,7 +1983,6 @@
     "type": "profession",
     "id": "security",
     "name": "Security Guard",
-    "requirement": "achievement_reach_megastore",
     "description": "You had a boring, underpaid job watching cameras and patrolling hallways, but things have suddenly gotten a lot more dangerous.  You have some useful equipment, but you've never had any call to use it until now.",
     "points": 2,
     "skills": [
@@ -2105,7 +2052,6 @@
     "type": "profession",
     "id": "homemaker",
     "name": "Nursing Assistant",
-    "//": "They don't have the doctor's passive bonus to surgery.  Nursing assistants aren't required to hold a doctorate.",
     "description": "You went on providing in-home care for the elderly even as the whole world fell apart around you.  You can only pray that you don't see your former clients among the walking dead…",
     "points": 1,
     "skills": [ { "level": 3, "name": "firstaid" }, { "level": 3, "name": "cooking" }, { "level": 3, "name": "speech" } ],
@@ -2137,7 +2083,6 @@
     "type": "profession",
     "id": "survivalist",
     "name": "Survivalist",
-    "requirement": "achievement_survive_28_days",
     "description": "Living off the land, far from civilization, is nothing new to you.  The only difference is all the monsters that suddenly want you dead.  Your equipment is basic, but versatile… except that your canteen's run out!",
     "points": 5,
     "proficiencies": [
@@ -2193,8 +2138,11 @@
     "type": "profession",
     "id": "homeless",
     "name": "Hobo",
-    "description": "Society drove you to the fringes and left you with no home, no family, no friends.  But for all the crap thrown your way, you're still breathing.  For now.",
-    "points": 0,
+    "description": "At some point in your life, you slipped through the cracks and became homeless.  You don't have much to your name, but you've learned a thing or two about what it takes to survive.",
+    "points": 1,
+    "skills": [
+      { "level": 2, "name": "survival" }
+    ],
     "items": {
       "both": {
         "entries": [
@@ -2203,6 +2151,7 @@
           { "item": "bindle" },
           { "item": "can_beans" },
           { "item": "pockknife" },
+          { "item": "survivormap" },
           { "group": "charged_matches" },
           { "item": "pants" }
         ]
@@ -2241,7 +2190,6 @@
     "type": "profession",
     "id": "k9_cop",
     "name": "K9 Officer",
-    "requirement": "achievement_reach_police_station",
     "description": "You spent your career busting drug smugglers with your faithful canine companion.  Now the world has ended, and none of that matters anymore.  Your loyal dog is still at your side, though, ready to face the Cataclysm with you.",
     "points": 5,
     "skills": [
@@ -2285,7 +2233,6 @@
     "type": "profession",
     "id": "horse_cop",
     "name": "Mounted Police Officer",
-    "requirement": "achievement_reach_police_station",
     "description": "You have spent many long years forging a bond with your equine companion, from running down common thugs, to entertaining kids when you ride on by.  The cataclysm is upon you, but at least you have eachother.",
     "points": 5,
     "skills": [
@@ -2359,7 +2306,7 @@
     "name": { "male": "Crazy Cat Dude", "female": "Crazy Cat Lady" },
     "description": "Everyone is dead?  Oh well, it doesn't matter; it's not like you got along with people much anyway.  Your beloved cats are all the friends you need!",
     "points": 2,
-    "skills": [ { "level": 3, "name": "tailor" }, { "level": 3, "name": "survival" }, { "level": 3, "name": "cooking" } ],
+    "skills": [ { "level": 3, "name": "tailor" }, { "level": 2, "name": "survival" }, { "level": 3, "name": "cooking" } ],
     "proficiencies": [ "prof_knitting", "prof_knitting_speed" ],
     "pets": [ { "name": "mon_cat", "amount": 18 }, { "name": "mon_cat_kitten", "amount": 10 } ],
     "items": {
@@ -2387,14 +2334,13 @@
     "type": "profession",
     "id": "cop",
     "name": "Police Officer",
-    "requirement": "achievement_reach_police_station",
     "description": "Just a small-town deputy, you got the call and were ready to come to the rescue.  Soon it was you who needed rescuing, and you were lucky to escape with your life.  Who's going to respect your authority when the government this badge represents might not even exist anymore?",
     "points": 4,
     "skills": [
       { "level": 4, "name": "gun" },
       { "level": 4, "name": "pistol" },
       { "level": 3, "name": "melee" },
-      { "level": 3, "name": "bashing" },
+      { "level": 2, "name": "bashing" },
       { "level": 2, "name": "dodge" },
       { "level": 2, "name": "swimming" }
     ],
@@ -2427,9 +2373,8 @@
     "type": "profession",
     "id": "detective",
     "name": "Police Detective",
-    "requirement": "achievement_reach_police_station",
     "description": "You were on the brink of a major breakthrough in your latest homicide case when the Cataclysm struck.  Now your prime suspect is dead.  Everyone's dead.  You could really use a smoke.",
-    "points": 4,
+    "points": 3,
     "traits": [ "PROF_PD_DET" ],
     "proficiencies": [ "prof_spotting", "prof_gun_cleaning" ],
     "items": {
@@ -2462,6 +2407,7 @@
     "skills": [
       { "level": 4, "name": "gun" },
       { "level": 4, "name": "pistol" },
+      { "level": 1, "name": "traps" },
       { "level": 1, "name": "melee" },
       { "level": 1, "name": "bashing" },
       { "level": 1, "name": "dodge" },
@@ -2473,21 +2419,21 @@
     "type": "profession",
     "id": "swat",
     "name": "SWAT Officer",
-    "requirement": "achievement_reach_police_station",
     "description": "As a member of the police force's most elite division, you are more than adequately trained and equipped to survive the brutal onslaught of the apocalypse.  Unfortunately, the chain of command has broken down; your only mission now is to stay alive.",
     "points": 6,
     "proficiencies": [ "prof_gunsmithing_basic", "prof_spotting", "prof_gun_cleaning", "prof_auto_pistols_familiar", "prof_batons_familiar" ],
     "skills": [
       { "level": 5, "name": "gun" },
-      { "level": 5, "name": "smg" },
-      { "level": 5, "name": "pistol" },
-      { "level": 4, "name": "shotgun" },
+      { "level": 3, "name": "smg" },
+      { "level": 4, "name": "pistol" },
+      { "level": 3, "name": "shotgun" },
       { "level": 4, "name": "melee" },
-      { "level": 4, "name": "stabbing" },
+      { "level": 1, "name": "stabbing" },
       { "level": 4, "name": "bashing" },
-      { "level": 3, "name": "dodge" },
+      { "level": 2, "name": "dodge" },
       { "level": 3, "name": "throw" },
-      { "level": 3, "name": "swimming" }
+      { "level": 1, "name": "traps" },
+      { "level": 2, "name": "swimming" }
     ],
     "traits": [ "PROF_SWAT" ],
     "items": {
@@ -2523,16 +2469,15 @@
     "type": "profession",
     "id": "swat_heavy",
     "name": "SWAT CQC Specialist",
-    "requirement": "achievement_reach_police_station",
     "description": "As a member of the police force's most elite division, you were given special training and became an expert in close-quarters combat.  Unfortunately, the chain of command has broken down; your only mission now is to stay alive.",
     "points": 6,
     "skills": [
-      { "level": 5, "name": "gun" },
+      { "level": 4, "name": "gun" },
       { "level": 5, "name": "shotgun" },
-      { "level": 5, "name": "pistol" },
+      { "level": 4, "name": "pistol" },
       { "level": 4, "name": "melee" },
-      { "level": 4, "name": "bashing" },
-      { "level": 4, "name": "stabbing" },
+      { "level": 3, "name": "bashing" },
+      { "level": 1, "name": "stabbing" },
       { "level": 4, "name": "unarmed" },
       { "level": 4, "name": "dodge" },
       { "level": 3, "name": "throw" },
@@ -2580,7 +2525,6 @@
     "type": "profession",
     "id": "sniper_police",
     "name": "Police Sniper",
-    "requirement": "achievement_reach_police_station",
     "description": "Your skill as a sharpshooter served you well in the line of duty, protecting the innocent with a single, well-placed bullet.  Now your own life is on the line, and you can't afford to miss if you don't want to end up as something's dinner.",
     "points": 6,
     "proficiencies": [
@@ -2593,11 +2537,10 @@
     "skills": [
       { "level": 7, "name": "gun" },
       { "level": 7, "name": "rifle" },
-      { "level": 5, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "bashing" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 2, "name": "dodge" },
+      { "level": 3, "name": "pistol" },
+      { "level": 2, "name": "melee" },
+      { "level": 2, "name": "bashing" },
+      { "level": 1, "name": "dodge" },
       { "level": 2, "name": "swimming" }
     ],
     "traits": [ "PROF_POLICE" ],
@@ -2632,7 +2575,6 @@
     "type": "profession",
     "id": "riot_police",
     "name": "Riot Control Officer",
-    "requirement": "achievement_reach_police_station",
     "description": "The riots were brutal, even before the dead rose and started to devour the living.  The line you were holding broke.  It was only through a bit of luck and a lot of head-bashing that you got away in one piece, and the worst is yet to come.",
     "points": 5,
     "skills": [
@@ -2640,9 +2582,10 @@
       { "level": 4, "name": "bashing" },
       { "level": 3, "name": "unarmed" },
       { "level": 3, "name": "gun" },
-      { "level": 3, "name": "pistol" },
+      { "level": 2, "name": "pistol" },
       { "level": 3, "name": "launcher" },
       { "level": 3, "name": "throw" },
+      { "level": 1, "name": "dodge" },
       { "level": 3, "name": "swimming" }
     ],
     "traits": [ "PROF_POLICE" ],
@@ -2676,15 +2619,15 @@
     "type": "profession",
     "id": "cop_motor",
     "name": "Motorized Police Officer",
-    "requirement": "achievement_reach_police_station",
     "description": "Just a small-town deputy, you got the call and were ready to ride to the rescue.  Soon it was you who needed rescuing, and you had to abandon your motorcycle to escape.  Who's going to respect your authority when the government this badge represents doesn't exist anymore?",
     "points": 4,
     "skills": [
-      { "level": 4, "name": "gun" },
+      { "level": 3, "name": "gun" },
       { "level": 4, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "bashing" },
-      { "level": 2, "name": "dodge" },
+      { "level": 2, "name": "melee" },
+      { "level": 2, "name": "bashing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 3, "name": "driving" },
       { "level": 2, "name": "swimming" }
     ],
     "traits": [ "PROF_POLICE" ],
@@ -3198,7 +3141,6 @@
     "id": "cop_car",
     "type": "profession",
     "name": "Police Interceptor",
-    "requirement": "achievement_reach_police_station",
     "description": "An on-duty officer, you received the call and were ready to respond to the robbery.  It all went to shit, your backup got eaten, and you were lucky to escape with your life and patrol car.",
     "points": 5,
     "skills": [
@@ -3241,7 +3183,6 @@
     "type": "profession",
     "id": "militia_car",
     "name": "Militia",
-    "requirement": "achievement_survive_28_days",
     "description": "You and a group of like-minded individuals built a hideout in the woods from which to launch looting raids in a jury-rigged pickup.  The last run went bad, and now all your comrades are dead.  Every breath you take now is an act of rebellion against the cruelty of this doomed world.  Do not let that flame of hope perish inside you.",
     "points": 4,
     "proficiencies": [ "prof_driver", "prof_auto_rifles_familiar", "prof_auto_pistols_familiar" ],
@@ -4662,7 +4603,6 @@
     "type": "profession",
     "id": "national_guard",
     "name": "National Guardsman",
-    "requirement": "achievement_reach_military_bunker",
     "description": "The government activated your National Guard unit to deal with the growing epidemics.  Despite your best efforts, you were unable to form up before all communications ceased and you found yourself alone amongst the dead.",
     "points": 4,
     "skills": [
@@ -4695,7 +4635,6 @@
     "type": "profession",
     "id": "winter_scavenger",
     "name": "Hardened Scavenger",
-    "requirement": "achievement_survive_91_days",
     "description": "One of the lucky few who escaped the Cataclysm, you made a life for yourself amidst the ruins of civilization.  Whether through force, guile, or luck, you've obtained the best gear you could find.",
     "points": 8,
     "proficiencies": [
@@ -4748,7 +4687,6 @@
     "type": "profession",
     "id": "winter_army",
     "name": "Military Holdout",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You must have paid attention to your survival training in boot camp; otherwise, you would never have lived long enough to outlast the chain of command and find yourself in this predicament.  The only mission now is to survive.",
     "points": 6,
     "proficiencies": [
@@ -4836,7 +4774,6 @@
     "type": "profession",
     "id": "naturalist",
     "name": "Naturalist",
-    "requirement": "achievement_survive_91_days",
     "description": "Over long years of self-imposed exile in the wilderness, you have come to an understanding with Mother Nature.  The world as they knew it might have ended for your forsaken species, but you can hardly tell the difference.",
     "points": 6,
     "skills": [
@@ -5128,7 +5065,6 @@
     "type": "profession",
     "id": "jr_survivalist",
     "name": "Survivalist Jr.",
-    "requirement": "achievement_survive_7_days",
     "description": "Your parents were crazy preppers who thought some \"Cataclysm\" was coming, and insisted on preparing you for it.  Turns out they were right.  You didn't get a chance to thank them.  The only thing you can do for them now is what they always hoped you would do in the dark days ahead: survive.",
     "points": 2,
     "skills": [
@@ -5789,7 +5725,6 @@
     "type": "profession",
     "id": "mil_marksman",
     "name": "Military Marksman",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You like to think of yourself as a sniper, but really you're just infantry with a bigger gun.  That said, a big gun is a definite advantage now.",
     "points": 5,
     "proficiencies": [
@@ -5844,7 +5779,6 @@
     "type": "profession",
     "id": "mil_auto_rifleman",
     "name": "Military Automatic Rifleman",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You were trusted with a big-ass, belt-fed machine gun and plenty of ammo to lay down suppressing fire for your team.  Now that it's going to be much harder to resupply, you should probably be more selective with the ol' spray-and-pray.",
     "points": 5,
     "proficiencies": [
@@ -5857,13 +5791,13 @@
     "skills": [
       { "level": 4, "name": "gun" },
       { "level": 4, "name": "rifle" },
-      { "level": 3, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
-      { "level": 3, "name": "throw" },
-      { "level": 2, "name": "survival" },
+      { "level": 1, "name": "pistol" },
+      { "level": 2, "name": "melee" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 1, "name": "firstaid" },
+      { "level": 2, "name": "throw" },
+      { "level": 1, "name": "survival" },
       { "level": 2, "name": "swimming" }
     ],
     "items": {
@@ -5902,7 +5836,6 @@
     "type": "profession",
     "id": "mil_grenadier",
     "name": "Military Grenadier",
-    "requirement": "achievement_reach_military_bunker",
     "description": "There's no kill like overkill, and not many people in this world can boast that they have a grenade launcher and know how to use it.  Just try not to blow yourself up, that would be really embarrassing.",
     "points": 4,
     "proficiencies": [
@@ -5916,11 +5849,11 @@
       { "level": 4, "name": "gun" },
       { "level": 4, "name": "launcher" },
       { "level": 3, "name": "rifle" },
-      { "level": 3, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
+      { "level": 1, "name": "pistol" },
+      { "level": 1, "name": "melee" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 1, "name": "firstaid" },
       { "level": 3, "name": "throw" },
       { "level": 2, "name": "survival" },
       { "level": 2, "name": "swimming" }
@@ -5962,7 +5895,6 @@
     "type": "profession",
     "id": "mil_breacher",
     "name": "Military Breacher",
-    "requirement": "achievement_reach_military_bunker",
     "description": "Doors and windows everywhere dare not speak your name.  You're going to be breaking into buildings for supplies rather than combat operations now, but the principle is about the same.",
     "points": 5,
     "proficiencies": [
@@ -5975,14 +5907,14 @@
     "skills": [
       { "level": 4, "name": "gun" },
       { "level": 4, "name": "shotgun" },
-      { "level": 4, "name": "melee" },
+      { "level": 3, "name": "melee" },
       { "level": 4, "name": "bashing" },
-      { "level": 3, "name": "rifle" },
-      { "level": 3, "name": "pistol" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
-      { "level": 3, "name": "throw" },
+      { "level": 2, "name": "rifle" },
+      { "level": 1, "name": "pistol" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 1, "name": "firstaid" },
+      { "level": 2, "name": "throw" },
       { "level": 2, "name": "survival" },
       { "level": 2, "name": "swimming" }
     ],
@@ -6022,7 +5954,6 @@
     "type": "profession",
     "id": "mil_sniper",
     "name": "Military Sniper",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You're a crack shot with a rifle, and the farther you can stay away from zombies, the better.  The only thing stopping you is limited ammo, so you should try to find a place to restock sooner or later.",
     "points": 5,
     "proficiencies": [
@@ -6083,7 +6014,6 @@
     "type": "profession",
     "id": "mil_hacker",
     "name": "Military Hacker",
-    "requirement": "achievement_reach_military_bunker",
     "description": "'Hacker' is a silly pop-culture name, popularized by Hollywood and people with little to no knowledge of what your job entails.  You prefer 'Electronic Warfare Specialist,' though nobody's really left to make the distinction.",
     "points": 7,
     "proficiencies": [
@@ -6098,17 +6028,17 @@
     "skills": [
       { "level": 7, "name": "computer" },
       { "level": 6, "name": "electronics" },
-      { "level": 4, "name": "gun" },
-      { "level": 4, "name": "smg" },
-      { "level": 4, "name": "pistol" },
-      { "level": 3, "name": "rifle" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "firstaid" },
-      { "level": 3, "name": "throw" },
-      { "level": 2, "name": "survival" },
-      { "level": 2, "name": "swimming" }
+      { "level": 3, "name": "gun" },
+      { "level": 3, "name": "smg" },
+      { "level": 2, "name": "pistol" },
+      { "level": 2, "name": "rifle" },
+      { "level": 1, "name": "melee" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 1, "name": "firstaid" },
+      { "level": 2, "name": "throw" },
+      { "level": 1, "name": "survival" },
+      { "level": 1, "name": "swimming" }
     ],
     "items": {
       "both": {
@@ -6189,7 +6119,6 @@
     "type": "profession",
     "id": "mili_pilot",
     "name": "Military Pilot",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You got to see things fall apart from the sky, transporting soldiers and survivors from one holdout to the next.  You knew it was only a matter of time before the horrors patrolling the skies shot you down.",
     "points": 5,
     "skills": [
@@ -6308,18 +6237,17 @@
     "type": "profession",
     "id": "mili_medic",
     "name": "Combat Medic",
-    "requirement": "achievement_reach_military_bunker",
     "description": "You were on the front lines when everything happened, patching up the wounded and providing support.  But they wouldn't stop coming.  Now you're on your own.",
     "points": 5,
     "skills": [
       { "level": 6, "name": "firstaid" },
       { "level": 4, "name": "gun" },
-      { "level": 4, "name": "rifle" },
+      { "level": 3, "name": "rifle" },
       { "level": 3, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 3, "name": "dodge" },
-      { "level": 3, "name": "throw" },
+      { "level": 2, "name": "melee" },
+      { "level": 2, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 2, "name": "throw" },
       { "level": 2, "name": "survival" },
       { "level": 2, "name": "swimming" }
     ],
@@ -6915,7 +6843,6 @@
     "type": "profession",
     "id": "hitman",
     "name": { "male": "Hitman", "female": "Hitwoman" },
-    "requirement": "achievement_kill_100_monsters",
     "description": "You were the best undercover agent they had, with a mission so vital that you had to take it even with the riots going on.  Your target seems to have turned feral as well as your contact, you are all alone now.",
     "points": 6,
     "skills": [
@@ -6987,7 +6914,6 @@
     "type": "profession",
     "id": "assassin",
     "name": "Assassin",
-    "requirement": "achievement_kill_100_monsters",
     "description": "You were the best undercover agent they had, with a mission so vital that you had to take it even with the riots going on.  Your target seems to have turned feral as well as your contact, you are all alone now.",
     "points": 6,
     "skills": [

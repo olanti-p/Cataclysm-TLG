@@ -460,7 +460,6 @@
       { "item": "zeroorange", "prob": 35 },
       { "item": "zerotropical", "prob": 35 },
       { "item": "zeromdew", "prob": 35 },
-      { "item": "foodplace_zero_drink", "prob": 10 },
       { "item": "choc_drink", "prob": 25 },
       { "item": "sparkling", "prob": 20 },
       { "item": "sparkling_peach", "prob": 20 },
@@ -484,7 +483,6 @@
       { "item": "zeroorange", "prob": 35, "container-item": "bottle_plastic" },
       { "item": "zerotropical", "prob": 35, "container-item": "bottle_plastic" },
       { "item": "zeromdew", "prob": 35, "container-item": "bottle_plastic" },
-      { "item": "foodplace_zero_drink", "prob": 10, "container-item": "bottle_plastic" },
       { "item": "choc_drink", "prob": 25, "container-item": "bottle_plastic" },
       { "item": "sparkling", "prob": 20, "container-item": "bottle_plastic" },
       { "item": "sparkling_peach", "prob": 20, "container-item": "bottle_plastic" },
@@ -545,9 +543,6 @@
     "entries": [
       { "group": "candy_chocolate", "prob": 620 },
       { "group": "salty_snacks", "prob": 595 },
-      { "item": "foodplace_snack_bar", "prob": 5 },
-      { "item": "foodplace_zero_drink", "prob": 5, "container-item": "bottle_plastic" },
-      { "item": "foodplace_zero_drink", "prob": 5 },
       { "item": "pemmican", "prob": 5 },
       { "prob": 10, "group": "granola_bag_plastic_4" },
       { "prob": 80, "group": "cookies_box_snack_4" },
@@ -630,7 +625,6 @@
       { "item": "yoghurt", "prob": 40 },
       { "item": "pudding", "prob": 50 },
       { "item": "V8", "prob": 15 },
-      { "prob": 8, "group": "foodplace_food_box_small_4" },
       { "prob": 30, "group": "sandwich_t_wrapper_2" },
       { "item": "sandwich_pb", "prob": 30 },
       { "item": "sandwich_pbj", "prob": 30 },
@@ -939,7 +933,6 @@
       { "item": "deluxe_cheeseburger", "prob": 60 },
       { "prob": 12, "group": "hotdogs_frozen_bag_plastic_10" },
       { "item": "hotdogs_cooked", "prob": 35 },
-      { "prob": 8, "group": "foodplace_food_box_small_4" },
       { "prob": 20, "group": "chili_can_medium_2" },
       { "prob": 20, "group": "chilidogs_wrapper_2" },
       { "item": "hotdogs_newyork", "prob": 15 },
@@ -1374,14 +1367,6 @@
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
     "entries": [ { "item": "sandwich_reuben", "container-item": "null", "count": 2 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "foodplace_food_box_small_4",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "box_small",
-    "entries": [ { "item": "foodplace_food", "container-item": "null", "count": 4 } ]
   },
   {
     "type": "item_group",

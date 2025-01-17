@@ -220,10 +220,6 @@
         "text": "\"Joe's Diner; 1/2 pound of meat, 3 toppings, 'your choice', all with a side of freedom fries and a BIG Gulp size pop.\""
       },
       {
-        "id": "flier_56",
-        "text": "This is an advertisement for the popular fast food chain, Foodplace.  On an unadorned blue-and-magenta background it shows clear, unmistakable depictions of their products and plainly stated prices.  The foodburger looks particularly nice."
-      },
-      {
         "id": "flier_57",
         "text": "This is a public alert from the Center of Disease Control.  Its message, repeated in several languages reads: \"ADVISORY.  Do not attempt to bring infected loved ones or friends to any hospitals, they are being currently overwhelmed due to the volume of incoming patients.  Restrain those believed to be infected, and wait for further information at www.cdc.gov.\""
       },
@@ -314,10 +310,6 @@
         }
       },
       {
-        "id": "flier_79",
-        "text": "JOIN THE CONCERNED CONSUMERS OF FOODPEOPLE!  Join the fight to⋯\n - Stop the neutralization of cultural icons.\n - Endow Foodperson with vitals befitting heroics superb.\n - Protect RU-238 and other FRUIT flavors from the threat of prohibition.\n - Inspire future consumers of the superhero genre."
-      },
-      {
         "id": "flier_80",
         "text": "This promotional palm card is emblazoned \"DigiMart has E-Ink\" in a garish neon purple typeface.  \"E-Ink Tablets come packed with octo-core cpu, veripixel lenses camera, neoTouch screen, DRM locket, InnerVision ready near field, a free datavault storage plan, wi-fi, and more!\""
       },
@@ -327,10 +319,6 @@
           "str": "What you've got here is an old coupon insert for Marigold Market:\n\n - BOGO!  Cascade Cola six-packs!\n - ATOMIC POWER THIRST!  Now with 20% more FRUIT RU-238!\n - $2 MEAT! Aunt Janice's Pickled Meat now just $2.49!\n - 75% OFF! DaiZoom bars by SoyPelusa.",
           "//NOLINT(cata-text-style)": "intentional format"
         }
-      },
-      {
-        "id": "flier_82",
-        "text": "Foodplace is advertising the \"Big Deal™\" on this flyer.  Plainly worded sentences on the distinct blue-and-magenta colored background try to convince the reader to buy their \"Delicious Food™\" in bulk to save money.  There is a picture showing a sample order at the bottom."
       },
       {
         "id": "flier_83",

@@ -237,7 +237,6 @@
       [ "straw_doll", 1 ],
       [ "striped_shirt", 1 ],
       [ "striped_pants", 1 ],
-      { "item": "foodperson_mask", "prob": 1, "charges": [ 0, 10 ] },
       [ "razor_blade", 10 ],
       [ "survnote", 5 ],
       [ "eclipse_glasses", 1 ],

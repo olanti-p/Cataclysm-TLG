@@ -462,11 +462,6 @@
   },
   {
     "type": "item_action",
-    "id": "FOODPERSON",
-    "name": { "str": "Activate" }
-  },
-  {
-    "type": "item_action",
     "id": "FUNGICIDE",
     "name": { "str": "Take" }
   },
