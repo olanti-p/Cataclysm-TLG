@@ -2627,7 +2627,7 @@
       { "level": 2, "name": "melee" },
       { "level": 2, "name": "bashing" },
       { "level": 1, "name": "dodge" },
-      { "level": 3, "name": "driving" }
+      { "level": 3, "name": "driving" },
       { "level": 2, "name": "swimming" }
     ],
     "traits": [ "PROF_POLICE" ],

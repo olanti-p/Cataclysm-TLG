@@ -326,8 +326,7 @@
               { "item": "cigar", "prob": 20 },
               { "item": "hat_ball", "prob": 20 },
               { "group": "jewelry_accessories", "prob": 50 },
-              { "group": "clothing_glasses", "prob": 50 },
-              { "item": "foodperson_mask", "prob": 1, "charges": [ 0, 500 ] }
+              { "group": "clothing_glasses", "prob": 50 }
             ],
             "prob": 70
           },
@@ -412,8 +411,7 @@
               { "item": "cigar", "prob": 20 },
               { "item": "hat_ball", "prob": 20 },
               { "group": "jewelry_accessories", "prob": 50 },
-              { "group": "clothing_glasses", "prob": 50 },
-              { "item": "foodperson_mask", "prob": 1, "charges": [ 0, 500 ] }
+              { "group": "clothing_glasses", "prob": 50 }
             ],
             "prob": 70
           },

@@ -307,7 +307,6 @@
       { "item": "can_sealer", "prob": 5 },
       [ "knuckle_brass", 10 ],
       [ "knuckle_steel_forged", 5 ],
-      { "item": "foodperson_mask", "prob": 1, "charges": [ 0, 500 ] },
       [ "cane", 10 ],
       [ "suit", 60 ],
       [ "waistcoat", 30 ],
