@@ -931,6 +931,7 @@
       { "group": "nested_ksg-25", "prob": 8 },
       { "group": "nested_tavor_12", "prob": 5 },
       { "group": "nested_m1014", "prob": 10 },
+      { "group": "nested_SPAS_12", "prob": 2 },
       { "group": "nested_slp", "prob": 10 }
     ]
   },
@@ -944,6 +945,7 @@
       { "item": "ksg", "prob": 50, "charges-min": 0, "charges-max": 7 },
       { "item": "ksg-25", "prob": 8, "charges-min": 0, "charges-max": 12 },
       { "item": "tavor_12", "prob": 5, "charges-min": 0, "charges-max": 5 },
+      { "group": "nested_SPAS_12", "prob": 2 },
       { "item": "mossberg_930", "variant": "m1014", "prob": 10, "charges-min": 0, "charges-max": 8 },
       {
         "item": "mossberg_590",
@@ -963,6 +965,7 @@
     "entries": [
       { "item": "ksg", "prob": 25 },
       { "item": "tavor_12", "prob": 5 },
+      { "group": "nested_SPAS_12", "prob": 2 },
       { "item": "mossberg_930", "variant": "m1014", "prob": 10 },
       { "item": "mossberg_590", "variant": "slp", "contents-item": [ "rail_mount" ], "prob": 10 }
     ]
@@ -1020,6 +1023,7 @@
       { "item": "streetsweeper", "prob": 4 },
       { "item": "winchester_1887", "prob": 10 },
       { "item": "winchester_1897", "prob": 20 },
+      { "group": "nested_SPAS_12", "prob": 2 },
       { "item": "saiga_410", "prob": 10 }
     ]
   },
