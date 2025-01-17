@@ -2233,6 +2233,15 @@
     "entries": [ { "item": "mossberg_930", "variant": "m1014", "charges-min": 0, "charges-max": 8 }, { "group": "on_hand_shot" } ]
   },
   {
+    "id": "nested_SPAS_12",
+    "id": "nested_slp",
+    "type": "item_group",
+    "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [ { "item": "mossberg_590", "variant": "SPAS_12", "charges-min": 0, "charges-max": 9 }, { "group": "on_hand_shot" } ]
+  },
+  {
     "id": "nested_slp",
     "type": "item_group",
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
