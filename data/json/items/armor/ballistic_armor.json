@@ -15,7 +15,7 @@
     "looks_like": "vest_leather",
     "color": "light_gray",
     "warmth": 15,
-    "flags": [ "STURDY", "SKINTIGHT" ],
+    "flags": [ "STURDY", "SKINTIGHT", "WATER_FRIENDLY" ],
     "armor": [
       {
         "material": [
@@ -243,7 +243,7 @@
     "//": "Based on the plate from the MED-ENG EOD 9N.  People don't seem willing to buy the EOD 10 to shoot at and MED-ENG ain't telling us how not-bullet proof the suit is.",
     "price": 361300,
     "price_postapoc": 2000,
-    "material": [ "kevlar", "plastic_pad", "thermo_resin", "steel" ],
+    "material": [  "steel", "kevlar", "plastic_pad", "thermo_resin" ],
     "symbol": ",",
     "color": "dark_gray",
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
@@ -258,7 +258,8 @@
         "encumbrance": 0,
         "coverage": 45,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper", "torso_lower" ]
+        "specifically_covers": [ "torso_upper", "torso_lower" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -281,7 +282,7 @@
     "non_functional": "destroyed_large_ceramic_plate",
     "damage_verb": "makes a crunch, something has shifted",
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
-    "armor": [ { "encumbrance": 2, "coverage": 45, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ] } ]
+    "armor": [ { "encumbrance": 2, "coverage": 45, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "rigid_layer_only": true } ]
   },
   {
     "id": "stab_plate",
@@ -308,7 +309,8 @@
         "encumbrance": 0,
         "coverage": 45,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ]
+        "specifically_covers": [ "torso_upper" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -340,7 +342,8 @@
         "encumbrance": 1,
         "coverage": 45,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ]
+        "specifically_covers": [ "torso_upper" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -369,7 +372,8 @@
         "encumbrance": 3,
         "coverage": 45,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ]
+        "specifically_covers": [ "torso_upper" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -399,7 +403,8 @@
         "encumbrance": 3,
         "coverage": 45,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ]
+        "specifically_covers": [ "torso_upper" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -426,7 +431,8 @@
         "encumbrance": 1,
         "coverage": 45,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ]
+        "specifically_covers": [ "torso_upper" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -453,7 +459,8 @@
         "encumbrance": 8,
         "coverage": 35,
         "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -476,7 +483,7 @@
     "non_functional": "destroyed_medium_ceramic_plate",
     "damage_verb": "makes a crunch, something has shifted",
     "flags": [ "ABLATIVE_MEDIUM", "CANT_WEAR" ],
-    "armor": [ { "encumbrance": 1, "coverage": 35, "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ] } ]
+    "armor": [ { "encumbrance": 1, "coverage": 35, "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "rigid_layer_only": true } ]
   },
   {
     "id": "scrap_esbi_plate",
@@ -504,7 +511,8 @@
         "encumbrance": 1,
         "coverage": 35,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_lower" ]
+        "specifically_covers": [ "torso_lower" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -531,7 +539,8 @@
         "encumbrance": 1,
         "coverage": 35,
         "covers": [ "torso" ],
-        "specifically_covers": [ "torso_lower" ]
+        "specifically_covers": [ "torso_lower" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -913,7 +922,7 @@
     "looks_like": "kevlar",
     "color": "yellow",
     "warmth": 12,
-    "flags": [ "STURDY", "OUTER", "NO_REPAIR" ],
+    "flags": [ "STURDY", "OUTER", "NO_REPAIR", "WATER_FRIENDLY" ],
     "use_action": [ { "type": "attach_molle", "size": 10 }, { "type": "detach_molle" } ],
     "//2": "Ceramic disks in real-life dragon skin are 6.4mm thick; the actual fabric itself wasn't intended to provide high-grade protection, and so it's quite thin here.",
     "//3": "The double instance of ceramic here represents possible hits on parts where the disks themselves are overlapping, providing enhanced protection.",
@@ -926,7 +935,8 @@
         ],
         "encumbrance": 8,
         "coverage": 98,
-        "covers": [ "torso" ]
+        "covers": [ "torso" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -985,7 +995,8 @@
         "encumbrance": 14,
         "coverage": 98,
         "covers": [ "torso" ],
-        "volume_encumber_modifier": 0.25
+        "volume_encumber_modifier": 0.25,
+        "rigid_layer_only": true
       }
     ],
     "looks_like": "ballistic_vest_esapi"
@@ -995,7 +1006,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "pair of ballistic shoulder protectors", "str_pl": "pairs of ballistic shoulder protectors" },
-    "description": "Nylon armor with soft armor inserts protecting the deltoid and upper arm.  Specifically designed to be attached to a heavy plate carrier.",
+    "description": "Nylon pads with bulky armor inserts protecting the deltoid and upper arm.  Specifically designed to be attached to a heavy plate carrier.",
     "weight": "1034 g",
     "volume": "812 ml",
     "//": "Density test expects 1.275, so volume derived from this",
@@ -1017,7 +1028,8 @@
         "cover_vitals": 100,
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_l", "arm_upper_r" ],
-        "volume_encumber_modifier": 0
+        "volume_encumber_modifier": 0,
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1046,7 +1058,8 @@
         "coverage": 75,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "volume_encumber_modifier": 0
+        "volume_encumber_modifier": 0,
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1074,7 +1087,8 @@
         "coverage": 30,
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat", "head_nape" ],
-        "volume_encumber_modifier": 0
+        "volume_encumber_modifier": 0,
+        "rigid_layer_only": true
       }
     ]
   }
