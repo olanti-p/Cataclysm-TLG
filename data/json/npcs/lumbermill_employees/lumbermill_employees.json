@@ -97,7 +97,7 @@
     "id": "NC_LUMBERJACK_worn",
     "subtype": "collection",
     "entries": [
-      { "distribution": [ { "group": "clothing_work_boots" }, { "item": "boots_combat" }, { "item": "boots_denim" } ] },
+      { "distribution": [ { "group": "clothing_work_boots" }, { "item": "boots_combat" }, { "item": "boots_steel" } ] },
       {
         "distribution": [
           { "item": "hat_hard" },
@@ -135,8 +135,7 @@
             ],
             "prob": 80
           },
-          { "item": "technician_coveralls", "prob": 15 },
-          { "item": "technician_coveralls_h", "prob": 5 }
+          { "item": "technician_coveralls", "prob": 15 }
         ]
       }
     ]
