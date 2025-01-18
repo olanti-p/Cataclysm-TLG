@@ -14,19 +14,21 @@
     "looks_like": "helmet_plate",
     "color": "light_gray",
     "warmth": 5,
-    "flags": [ "OUTER" ],
+    "flags": [ "OUTER", "NORMAL", "PADDED" ],
     "material_thickness": 2,
-    "qualities": [ [ "COOK", 3 ], [ "BOIL", 2 ], [ "CONTAIN", 1 ], [ "CHEM", 1 ] ],
     "techniques": [ "WBLOCK_1" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "IMBALANCED" ],
+        "encumbrance": 34,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown" ]
+        "specifically_covers": [ "head_crown" ],
+        "rigid_layer_only": true
       },
-      { "coverage": 80, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ] },
-      { "coverage": 20, "covers": [ "head" ], "specifically_covers": [ "head_ear_l", "head_ear_r" ] }
+      { "encumbrance": 0, "coverage": 80, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ],
+      "rigid_layer_only": true },
+      { "encumbrance": 0, "coverage": 20, "covers": [ "head" ], "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+      "rigid_layer_only": true }
     ],
     "melee_damage": { "bash": 2 }
   },
@@ -46,7 +48,6 @@
     "color": "light_gray",
     "warmth": 70,
     "material_thickness": 1,
-    "qualities": [ [ "COOK", 2 ], [ "BOIL", 1 ] ],
     "techniques": [ "WBLOCK_1" ],
     "armor": [
       {
@@ -56,10 +57,11 @@
           { "type": "aluminum", "covered_by_mat": 40, "thickness": 2.0 }
         ],
         "covers": [ "head" ],
-        "coverage": 100,
+        "coverage": 60,
         "specifically_covers": [ "head_ear_l", "head_ear_r" ],
         "layers": [ "NORMAL", "OUTER" ],
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "IMBALANCED" ]
+        "encumbrance": 40,
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -69,38 +71,25 @@
         "covers": [ "head" ],
         "coverage": 100,
         "specifically_covers": [ "head_crown", "head_forehead" ],
-        "layers": [ "NORMAL", "OUTER" ]
+        "layers": [ "NORMAL", "OUTER" ],
+        "encumbrance": 0,
+        "rigid_layer_only": true
       },
       {
         "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
         "covers": [ "head" ],
         "coverage": 80,
         "specifically_covers": [ "head_throat", "head_nape" ],
-        "layers": [ "OUTER" ]
+        "layers": [ "OUTER" ],
+        "encumbrance": 0,
+        "rigid_layer_only": true
       },
       {
         "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
         "covers": [ "eyes" ],
-        "coverage": 90,
-        "encumbrance": 25,
-        "layers": [ "OUTER" ],
-        "rigid_layer_only": true
-      },
-      {
-        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
-        "coverage": 95,
-        "covers": [ "mouth" ],
-        "specifically_covers": [ "mouth_cheeks" ],
+        "coverage": 10,
+        "encumbrance": 10,
         "layers": [ "OUTER" ]
-      },
-      {
-        "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 0.95 } ],
-        "covers": [ "mouth" ],
-        "coverage": 40,
-        "specifically_covers": [ "mouth_lips", "mouth_nose", "mouth_chin" ],
-        "encumbrance": 30,
-        "layers": [ "OUTER" ],
-        "rigid_layer_only": true
       }
     ],
     "flags": [ "RAINPROOF", "PADDED", "OUTER", "NORMAL" ],
@@ -123,36 +112,40 @@
     "warmth": 10,
     "material_thickness": 3,
     "environmental_protection": 1,
-    "flags": [ "VARSIZE", "OVERSIZE", "STURDY", "NORMAL", "OUTER" ],
+    "flags": [ "VARSIZE", "OVERSIZE", "STURDY", "OUTER" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 36,
         "coverage": 40,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown" ],
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "coverage": 95,
+        "encumbrance": 0,
         "covers": [ "head" ],
         "specifically_covers": [ "head_forehead", "head_ear_l", "head_ear_r" ],
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 0,
         "coverage": 95,
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_cheeks", "mouth_chin" ],
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -178,16 +171,18 @@
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "PADDED", "OUTER", "NORMAL" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 26,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       },
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 0,
         "coverage": 50,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_ear_l", "head_ear_r" ]
+        "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -283,10 +278,11 @@
           { "type": "plastic", "covered_by_mat": 100, "thickness": 3 },
           { "type": "leather", "covered_by_mat": 10, "thickness": 1.0 }
         ],
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 25,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       }
     ],
     "melee_damage": { "bash": 2 }
@@ -309,7 +305,7 @@
     "armor": [
       {
         "layers": [ "NORMAL" ],
-        "encumbrance": 10,
+        "encumbrance": 65,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead", "head_ear_l", "head_ear_r" ],
         "coverage": 100,
@@ -317,7 +313,8 @@
           { "type": "canvas", "thickness": 1 },
           { "type": "canvas", "covered_by_mat": 40, "thickness": 1 },
           { "type": "plastic_pad", "covered_by_mat": 40, "thickness": 15 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -337,9 +334,10 @@
     "looks_like": "helmet_motor",
     "color": "dark_gray",
     "armor": [
-      { "covers": [ "head" ], "coverage": 100, "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ] },
-      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 100, "encumbrance": 20 },
-      { "covers": [ "mouth" ], "rigid_layer_only": true, "coverage": 100, "encumbrance": 15 }
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 28,
+      "rigid_layer_only": true },
+      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 100, "encumbrance": 12 },
+      { "covers": [ "mouth" ], "rigid_layer_only": true, "coverage": 100, "encumbrance": 6 }
     ],
     "warmth": 25,
     "material_thickness": 8,
@@ -369,16 +367,18 @@
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "PADDED", "OUTER", "NORMAL" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 36,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       },
       {
-        "encumbrance_modifiers": [ "NONE" ],
-        "coverage": 10,
+        "encumbrance": 0,
+        "coverage": 20,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_ear_l", "head_ear_r" ]
+        "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -471,17 +471,19 @@
           { "type": "plastic", "covered_by_mat": 100, "thickness": 5.0 },
           { "type": "plastic_pad", "covered_by_mat": 60, "thickness": 12 }
         ],
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 19,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       },
       {
         "material": [ { "type": "nomex", "covered_by_mat": 100, "thickness": 1.0 } ],
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 19,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_ear_l", "head_ear_r", "head_nape" ]
+        "specifically_covers": [ "head_ear_l", "head_ear_r", "head_nape" ],
+        "rigid_layer_only": true
       }
     ],
     "melee_damage": { "bash": 2 }
@@ -505,27 +507,29 @@
     "material_thickness": 3,
     "environmental_protection": 1,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "PADDED", "SUN_GLASSES", "OUTER", "NORMAL" ],
+    "flags": [ "PADDED", "SUN_GLASSES", "OUTER", "NORMAL", "PADDED" ],
     "armor": [
       {
         "material": [
           { "type": "plastic", "covered_by_mat": 100, "thickness": 3 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 12 }
         ],
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 12,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
           { "type": "plastic", "covered_by_mat": 100, "thickness": 3 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 12 }
         ],
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 12,
         "coverage": 95,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_ear_l", "head_ear_r" ]
+        "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+        "rigid_layer_only": true
       }
     ],
     "melee_damage": { "bash": 2 }
@@ -549,27 +553,28 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_forehead", "head_crown", "head_ear_l", "head_ear_r" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance": 24,
+        "rigid_layer_only": true
       },
       {
         "covers": [ "head" ],
         "specifically_covers": [ "head_nape" ],
-        "coverage": 20,
-        "encumbrance_modifiers": [ "NONE" ]
+        "coverage": 40,
+        "encumbrance": 0
       },
-      { "covers": [ "eyes" ], "coverage": 65, "encumbrance": 0 },
+      { "covers": [ "eyes" ], "coverage": 65, "encumbrance": 15 },
       {
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_cheeks" ],
         "coverage": 100,
-        "encumbrance": 0,
+        "encumbrance": 2,
         "rigid_layer_only": true
       },
       {
         "covers": [ "mouth", "head" ],
         "specifically_covers": [ "mouth_lips", "mouth_nose", "mouth_chin" ],
         "coverage": 50,
-        "encumbrance": 0,
+        "encumbrance": 2,
         "rigid_layer_only": true
       }
     ],
@@ -593,7 +598,7 @@
     "copy-from": "helmet_barbute",
     "name": { "str": "barbute helm" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "helmet_bike",
@@ -615,14 +620,15 @@
     "flags": [ "PADDED", "OUTER", "NORMAL" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 21,
         "coverage": 100,
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown" ],
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "plastic", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "coverage": 80,
@@ -631,7 +637,8 @@
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "plastic", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -678,23 +685,26 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead", "head_ear_l", "head_ear_r" ],
         "coverage": 95,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance": 24,
+        "rigid_layer_only": true
       },
       {
         "covers": [ "mouth" ],
         "rigid_layer_only": true,
         "coverage": 70,
         "specifically_covers": [ "mouth_lips", "mouth_nose" ],
-        "encumbrance": 5
+        "encumbrance": 3
       },
       {
         "covers": [ "mouth" ],
         "rigid_layer_only": true,
         "specifically_covers": [ "mouth_cheeks", "mouth_chin" ],
-        "coverage": 95
+        "coverage": 95,
+        "encumbrance": 3
       },
-      { "covers": [ "head" ], "specifically_covers": [ "head_nape", "head_throat" ], "coverage": 60 },
-      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 60, "encumbrance": 5 }
+      { "covers": [ "head" ], "specifically_covers": [ "head_nape", "head_throat" ], "coverage": 60,
+      "rigid_layer_only": true },
+      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 60, "encumbrance": 8 }
     ],
     "warmth": 5,
     "material_thickness": 4,
@@ -717,7 +727,7 @@
     "looks_like": "helmet_chitin",
     "name": { "str": "chitinous helmet" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "WATERPROOF", "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "flags": [ "WATERPROOF", "STURDY", "UNDERSIZE", "PREFIX_XS", "OUTER", "NORMAL" ]
   },
   {
     "id": "helmet_conical",
@@ -736,15 +746,17 @@
     "warmth": 35,
     "material_thickness": 3,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "NORMAL", "PADDED" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
+        "encumbrance": 52,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_forehead", "head_crown", "head_ear_l", "head_ear_r" ]
+        "specifically_covers": [ "head_forehead", "head_crown", "head_ear_l", "head_ear_r" ],
+        "rigid_layer_only": true
       },
-      { "coverage": 90, "covers": [ "head" ], "specifically_covers": [ "head_nape" ] }
+      { "coverage": 90, "covers": [ "head" ], "specifically_covers": [ "head_nape" ],
+      "rigid_layer_only": true, "encumbrance": 0 }
     ],
     "melee_damage": { "bash": 3 }
   },
@@ -763,7 +775,7 @@
     "looks_like": "helmet_conical",
     "name": { "str": "conical helm" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "helmet_acidchitin",
@@ -812,26 +824,29 @@
         "covers": [ "head" ],
         "coverage": 100,
         "specifically_covers": [ "head_crown", "head_forehead" ],
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 28,
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "thermo_resin", "covered_by_mat": 100, "thickness": 3 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "head" ],
         "coverage": 95,
+        "encumbrance": 8,
         "specifically_covers": [ "head_ear_l", "head_ear_r" ],
         "material": [
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 14 },
           { "type": "thermo_resin", "covered_by_mat": 100, "thickness": 3 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "eyes" ],
         "rigid_layer_only": true,
         "coverage": 70,
-        "encumbrance": 5,
+        "encumbrance": 15,
         "breathability": "POOR",
         "material": [ { "type": "thermo_resin", "covered_by_mat": 100, "thickness": 4 } ]
       },
@@ -866,10 +881,13 @@
         "covers": [ "head" ],
         "coverage": 100,
         "specifically_covers": [ "head_crown", "head_forehead" ],
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance": 32,
+        "rigid_layer_only": true
       },
-      { "covers": [ "head" ], "coverage": 20, "specifically_covers": [ "head_ear_l", "head_ear_r" ] },
-      { "covers": [ "head" ], "coverage": 80, "specifically_covers": [ "head_nape" ] },
+      { "covers": [ "head" ], "coverage": 20, "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+      "rigid_layer_only": true,        "encumbrance": 10 },
+      { "covers": [ "head" ], "coverage": 80, "specifically_covers": [ "head_nape" ],
+      "rigid_layer_only": true },
       {
         "covers": [ "mouth" ],
         "coverage": 40,
@@ -881,7 +899,7 @@
     "warmth": 10,
     "material_thickness": 3,
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "NORMAL" ],
     "melee_damage": { "bash": 3 }
   },
   {
@@ -898,7 +916,7 @@
     "copy-from": "helmet_galea",
     "name": { "str": "galea", "str_pl": "galeae" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "helmet_kabuto",
@@ -920,15 +938,17 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r", "head_forehead", "head_nape" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+        "encumbrance": 26,
+        "rigid_layer_only": true
       },
       {
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat" ],
         "coverage": 95,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+        "encumbrance": 0,
+        "rigid_layer_only": true
       },
-      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 35, "encumbrance": 0 },
+      { "covers": [ "eyes" ], "coverage": 35, "encumbrance": 6 },
       {
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_lips" ],
@@ -940,7 +960,8 @@
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_cheeks", "mouth_chin", "mouth_nose" ],
         "rigid_layer_only": true,
-        "coverage": 100
+        "coverage": 100,
+        "encumbrance": 0
       }
     ],
     "warmth": 25,
@@ -965,7 +986,7 @@
     "looks_like": "helmet_kabuto",
     "name": { "str": "kabuto" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "leather_helmet",
@@ -987,12 +1008,14 @@
     "flags": [ "VARSIZE", "WATER_FRIENDLY", "STURDY", "OUTER" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "NONE" ],
+        "encumbrance": 44,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r" ]
+        "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r" ],
+        "rigid_layer_only": true
       },
-      { "coverage": 90, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ] }
+      { "coverage": 90, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ],
+      "rigid_layer_only": true }
     ]
   },
   {
@@ -1009,7 +1032,7 @@
     "copy-from": "leather_helmet",
     "name": { "str": "leather helmet" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
   {
     "id": "helmet_skull",
@@ -1027,16 +1050,18 @@
     "flags": [ "WATER_FRIENDLY", "OUTER", "BELTED" ],
     "armor": [
       {
-        "encumbrance_modifiers": [ "IMBALANCED" ],
+        "encumbrance": 18,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown" ]
+        "specifically_covers": [ "head_crown" ],
+        "rigid_layer_only": true
       },
       {
-        "encumbrance_modifiers": [ "IMBALANCED" ],
+        "encumbrance": 0,
         "coverage": 60,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_forehead" ]
+        "specifically_covers": [ "head_forehead" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1085,7 +1110,8 @@
         "covers": [ "head" ],
         "coverage": 100,
         "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r", "head_forehead" ],
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+        "encumbrance": 28,
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1095,7 +1121,9 @@
         ],
         "covers": [ "head" ],
         "coverage": 40,
-        "specifically_covers": [ "head_nape", "head_throat" ]
+        "encumbrance": 0,
+        "specifically_covers": [ "head_nape", "head_throat" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1104,7 +1132,7 @@
         ],
         "covers": [ "eyes" ],
         "coverage": 100,
-        "encumbrance": 5,
+        "encumbrance": 18,
         "rigid_layer_only": true
       },
       {
@@ -1115,7 +1143,7 @@
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_nose" ],
         "coverage": 100,
-        "encumbrance": 5,
+        "encumbrance": 2,
         "rigid_layer_only": true
       },
       {
@@ -1127,7 +1155,8 @@
         "covers": [ "mouth" ],
         "coverage": 100,
         "specifically_covers": [ "mouth_chin" ],
-        "encumbrance": 5
+        "encumbrance": 2,
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1138,7 +1167,8 @@
         "covers": [ "mouth" ],
         "coverage": 100,
         "specifically_covers": [ "mouth_cheeks", "mouth_lips" ],
-        "encumbrance": 5
+        "encumbrance": 2,
+        "rigid_layer_only": true
       }
     ],
     "use_action": { "type": "transform", "menu_text": "Raise visor", "target": "helmet_motor_raised", "msg": "You raise your visor." },
@@ -1150,7 +1180,6 @@
   },
   {
     "id": "helmet_motor_raised",
-    "//": "Can't use copy-from and armor_portion_data at the same time, clear up this item once #43144 will be merged",
     "looks_like": "helmet_motor",
     "type": "TOOL_ARMOR",
     "category": "armor",
@@ -1173,10 +1202,11 @@
           { "type": "epoxy", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 16 }
         ],
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
+        "encumbrance": 14,
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r", "head_forehead" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1185,8 +1215,10 @@
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 16 }
         ],
         "covers": [ "head" ],
+        "encumbrance": 0,
         "coverage": 40,
-        "specifically_covers": [ "head_nape", "head_throat" ]
+        "specifically_covers": [ "head_nape", "head_throat" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1197,7 +1229,8 @@
         "covers": [ "mouth" ],
         "coverage": 100,
         "specifically_covers": [ "mouth_chin" ],
-        "encumbrance": 3
+        "encumbrance": 3,
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1208,7 +1241,8 @@
         "covers": [ "mouth" ],
         "coverage": 50,
         "specifically_covers": [ "mouth_cheeks", "mouth_lips" ],
-        "encumbrance": 2
+        "encumbrance": 2,
+        "rigid_layer_only": true
       }
     ],
     "use_action": { "type": "transform", "menu_text": "Lower visor", "target": "helmet_motor", "msg": "You put down your visor." },
@@ -1246,7 +1280,8 @@
         "encumbrance_modifiers": [ "NONE" ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown" ],
-        "coverage": 100
+        "coverage": 100,
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1257,7 +1292,8 @@
         "encumbrance_modifiers": [ "NONE" ],
         "covers": [ "head" ],
         "specifically_covers": [ "head_forehead" ],
-        "coverage": 90
+        "coverage": 90,
+        "rigid_layer_only": true
       }
     ],
     "warmth": 20,
@@ -1293,13 +1329,15 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "head" ],
         "specifically_covers": [ "head_ear_l", "head_ear_r" ],
         "coverage": 20,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "mouth" ],
@@ -1329,7 +1367,7 @@
     "copy-from": "helmet_nasal",
     "name": { "str": "nasal helm" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "flags": [ "VARSIZE", "STURDY", "UNDERSIZE", "PREFIX_XS" ]
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "platemail_great_helm",
@@ -1346,9 +1384,10 @@
     "looks_like": "helmet_barbute",
     "color": "light_gray",
     "armor": [
-      { "covers": [ "head" ], "coverage": 100, "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ] },
+      { "covers": [ "head" ], "coverage": 100, "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
+      "rigid_layer_only": true },
       { "covers": [ "mouth" ], "rigid_layer_only": true, "coverage": 100, "encumbrance": 30 },
-      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 95, "encumbrance": 20 }
+      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 95, "encumbrance": 40 }
     ],
     "warmth": 10,
     "material_thickness": 5,
@@ -1392,7 +1431,8 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       }
     ],
     "warmth": 5,
@@ -1447,7 +1487,8 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r", "head_forehead", "head_nape" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
+        "rigid_layer_only": true
       }
     ],
     "melee_damage": { "bash": 3 }
@@ -1475,7 +1516,8 @@
         "encumbrance_modifiers": [ "NONE" ],
         "coverage": 65,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       }
     ],
     "melee_damage": { "bash": 2 }
@@ -1499,8 +1541,10 @@
     "material_thickness": 2.6,
     "flags": [ "PADDED", "OUTER" ],
     "armor": [
-      { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "specifically_covers": [ "head_crown" ], "covers": [ "head" ] },
-      { "coverage": 90, "specifically_covers": [ "head_forehead" ], "covers": [ "head" ] }
+      { "encumbrance_modifiers": [ "NONE" ], "coverage": 100, "specifically_covers": [ "head_crown" ], "covers": [ "head" ],
+      "rigid_layer_only": true },
+      { "coverage": 90, "specifically_covers": [ "head_forehead" ], "covers": [ "head" ],
+      "rigid_layer_only": true }
     ],
     "pocket_data": [
       {
@@ -1545,10 +1589,12 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       },
-      { "covers": [ "head" ], "specifically_covers": [ "head_ear_l", "head_ear_r", "head_nape" ], "coverage": 50 },
-      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 50, "encumbrance": 0 },
+      { "covers": [ "head" ], "specifically_covers": [ "head_ear_l", "head_ear_r", "head_nape" ], "coverage": 50,
+      "rigid_layer_only": true },
+      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 50, "encumbrance": 30 },
       {
         "covers": [ "mouth" ],
         "specifically_covers": [ "mouth_nose", "mouth_cheeks" ],
@@ -1605,9 +1651,10 @@
         "covers": [ "head" ],
         "coverage": 100,
         "specifically_covers": [ "head_crown", "head_ear_l", "head_ear_r", "head_forehead" ],
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       },
-      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 85, "encumbrance": 10 },
+      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 85, "encumbrance": 35 },
       { "covers": [ "mouth" ], "rigid_layer_only": true, "coverage": 85, "encumbrance": 10 }
     ],
     "warmth": 10,
@@ -1652,10 +1699,13 @@
         "encumbrance_modifiers": [ "IMBALANCED" ],
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown" ]
+        "specifically_covers": [ "head_crown" ],
+        "rigid_layer_only": true
       },
-      { "coverage": 80, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ] },
-      { "coverage": 20, "covers": [ "head" ], "specifically_covers": [ "head_ear_l", "head_ear_r" ] }
+      { "coverage": 80, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ],
+      "rigid_layer_only": true },
+      { "coverage": 20, "covers": [ "head" ], "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+      "rigid_layer_only": true }
     ]
   },
   {
@@ -1694,7 +1744,8 @@
         ],
         "covers": [ "head" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1738,7 +1789,8 @@
         ],
         "covers": [ "head" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+        "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -1797,7 +1849,8 @@
         "encumbrance_modifiers": [ "NONE" ],
         "coverage": 100,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_crown", "head_forehead" ]
+        "specifically_covers": [ "head_crown", "head_forehead" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -1807,7 +1860,8 @@
         "encumbrance_modifiers": [ "NONE" ],
         "coverage": 50,
         "covers": [ "head" ],
-        "specifically_covers": [ "head_ear_l", "head_ear_r" ]
+        "specifically_covers": [ "head_ear_l", "head_ear_r" ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -1894,13 +1948,15 @@
         "covers": [ "head" ],
         "specifically_covers": [ "head_crown", "head_forehead" ],
         "coverage": 100,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "head" ],
         "specifically_covers": [ "head_ear_l", "head_ear_r" ],
         "coverage": 90,
-        "encumbrance_modifiers": [ "NONE" ]
+        "encumbrance_modifiers": [ "NONE" ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "mouth" ],

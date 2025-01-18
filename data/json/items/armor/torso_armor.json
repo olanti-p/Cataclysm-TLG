@@ -24,14 +24,16 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 20,
-        "encumbrance": 9
+        "encumbrance": 9,
+        "rigid_layer_only": true
       },
       {
         "material": [ { "type": "paper", "covered_by_mat": 100, "thickness": 12 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 70,
-        "encumbrance": 10
+        "encumbrance": 10,
+        "rigid_layer_only": true
       }
     ]
   },
@@ -115,7 +117,8 @@
         ],
         "encumbrance": 10,
         "coverage": 85,
-        "covers": [ "torso" ]
+        "covers": [ "torso" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -125,7 +128,8 @@
         "encumbrance": 5,
         "coverage": 85,
         "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
+        "rigid_layer_only": true
       },
       {
         "material": [
@@ -135,7 +139,8 @@
         "encumbrance": 5,
         "coverage": 85,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -164,7 +169,8 @@
         "encumbrance": 3,
         "coverage": 90,
         "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ]
+        "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
+        "rigid_layer_only": true
       }
     ],
     "melee_damage": { "bash": 6 }
@@ -204,14 +210,15 @@
     "longest_side": "40 cm",
     "material_thickness": 4,
     "flags": [ "OUTER", "NONCONDUCTIVE" ],
-    "armor": [ { "encumbrance": 20, "coverage": 80, "covers": [ "torso" ] } ]
+    "armor": [ { "encumbrance": 20, "coverage": 80, "covers": [ "torso" ],
+    "rigid_layer_only": true } ]
   },
   {
     "id": "cloth_shirt_padded",
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "padded sweatshirt" },
-    "description": "A thick cotton sweatshirt with extra fabric sewn overtop, providing a modicum of extra protection.",
+    "description": "A thick cotton sweatshirt with fabric sewn overtop, providing a modicum of extra protection.",
     "weight": "1000 g",
     "volume": "3500 ml",
     "price_postapoc": 200,
@@ -228,16 +235,16 @@
         ],
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": 8
+        "encumbrance": 16
       },
       {
         "material": [
-          { "type": "cotton", "covered_by_mat": 90, "thickness": 2.0 },
+          { "type": "cotton", "covered_by_mat": 80, "thickness": 2.0 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
-        "encumbrance": 8
+        "encumbrance": 16
       }
     ],
     "warmth": 35,
@@ -250,7 +257,7 @@
     "type": "ARMOR",
     "category": "armor",
     "name": { "str": "padded vest" },
-    "description": "A sleeveless cotton shirt with extra fabric sewn overtop for extra protection.",
+    "description": "A sleeveless cotton shirt with fabric sewn overtop for extra protection.",
     "weight": "600 g",
     "volume": "2000 ml",
     "price_postapoc": 100,
@@ -267,7 +274,7 @@
         ],
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": 8
+        "encumbrance": 16
       }
     ],
     "warmth": 35,
@@ -295,7 +302,8 @@
     "material_thickness": 4,
     "environmental_protection": 1,
     "flags": [ "WATER_FRIENDLY", "STURDY", "OUTER" ],
-    "armor": [ { "encumbrance": 4, "coverage": 90, "covers": [ "torso" ] } ]
+    "armor": [ { "encumbrance": 4, "coverage": 90, "covers": [ "torso" ],
+    "rigid_layer_only": true } ]
   },
   {
     "id": "platemail_cuirass",
@@ -322,14 +330,16 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
-        "encumbrance": 10
+        "encumbrance": 10,
+        "rigid_layer_only": true
       },
       {
         "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 100,
-        "encumbrance": 10
+        "encumbrance": 10,
+        "rigid_layer_only": true
       }
     ]
   },
@@ -368,7 +378,8 @@
     "warmth": 10,
     "material_thickness": 4,
     "flags": [ "OUTER", "NONCONDUCTIVE" ],
-    "armor": [ { "encumbrance": 18, "coverage": 80, "covers": [ "torso" ] } ]
+    "armor": [ { "encumbrance": 18, "coverage": 80, "covers": [ "torso" ],
+    "rigid_layer_only": true } ]
   },
   {
     "id": "tire_cuirass_xl",
@@ -402,7 +413,6 @@
     "color": "white",
     "warmth": 20,
     "material_thickness": 3,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "STURDY" ],
     "armor": [ { "encumbrance": 5, "coverage": 100, "covers": [ "torso", "arm_l", "arm_r" ] } ]
   },
@@ -428,7 +438,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "arm_l", "arm_r" ],
@@ -437,7 +448,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -481,7 +493,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "arm_l", "arm_r" ],
@@ -490,7 +503,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -534,7 +548,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 80, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ],
     "pocket_data": [
@@ -578,7 +593,8 @@
         "material": [
           { "type": "rubber", "covered_by_mat": 80, "thickness": 3.0 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "arm_l", "arm_r" ],
@@ -587,7 +603,8 @@
         "material": [
           { "type": "rubber", "covered_by_mat": 75, "thickness": 3.0 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ],
     "warmth": 40,
@@ -653,7 +670,8 @@
           { "type": "thermo_resin", "covered_by_mat": 90, "thickness": 1.0 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 8.0 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "encumbrance": 4,
@@ -663,7 +681,8 @@
         "material": [
           { "type": "thermo_resin", "covered_by_mat": 80, "thickness": 2.0 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 8.0 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -721,7 +740,8 @@
     "warmth": 5,
     "material_thickness": 3,
     "flags": [ "SKINTIGHT" ],
-    "armor": [ { "coverage": 65, "covers": [ "torso" ] } ]
+    "armor": [ { "coverage": 65, "covers": [ "torso" ],
+    "rigid_layer_only": true } ]
   },
   {
     "id": "plastron_plastic",
@@ -738,7 +758,8 @@
     "warmth": 5,
     "material_thickness": 3,
     "flags": [ "SKINTIGHT" ],
-    "armor": [ { "encumbrance": 2, "coverage": 60, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ] } ]
+    "armor": [ { "encumbrance": 2, "coverage": 60, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ],
+    "rigid_layer_only": true } ]
   },
   {
     "id": "vest_leather_mod",
@@ -781,7 +802,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 90, "thickness": 1.5 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -813,7 +835,8 @@
         "material": [
           { "type": "thermo_resin", "covered_by_mat": 90, "thickness": 2 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 7 }
-        ]
+        ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "arm_l", "arm_r", "leg_l", "leg_r" ],
@@ -824,14 +847,16 @@
           { "type": "thermo_resin", "covered_by_mat": 90, "thickness": 1.5 },
           { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 6 }
         ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_l", "arm_upper_r", "leg_upper_l", "leg_upper_r" ]
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_l", "arm_upper_r", "leg_upper_l", "leg_upper_r" ],
+        "rigid_layer_only": true
       },
       {
         "covers": [ "leg_l", "leg_r" ],
         "volume_encumber_modifier": 0,
         "coverage": 30,
         "material": [ { "type": "plastic_pad", "covered_by_mat": 100, "thickness": 7 } ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "rigid_layer_only": true
       }
     ]
   },
@@ -856,12 +881,12 @@
         "covers": [ "torso" ],
         "coverage": 95,
         "encumbrance": 17,
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 } ]
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 } ],
+        "rigid_layer_only": true
       }
     ],
     "warmth": 25,
     "material_thickness": 4,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "STURDY", "OUTER" ],
     "melee_damage": { "bash": 2 }
   },
@@ -907,7 +932,8 @@
         "material": [
           { "type": "steel", "covered_by_mat": 100, "thickness": 1.5 },
           { "type": "leather", "covered_by_mat": 10, "thickness": 0.5 }
-        ]
+        ],
+        "rigid_layer_only": true
       }
     ]
   },
