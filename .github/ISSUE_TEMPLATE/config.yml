@@ -1,4 +1,4 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
   - name: Tileset Issues
     url: https://github.com/I-am-Erk/CDDA-Tilesets/issues
