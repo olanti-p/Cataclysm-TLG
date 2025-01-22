@@ -35,7 +35,7 @@
     "color": "light_gray",
     "material_thickness": 1,
     "flags": [ "WATER_FRIENDLY", "SKINTIGHT" ],
-    "armor": [ { "encumbrance": 30, "coverage": 50, "covers": [ "eyes" ], "rigid_layer_only": true } ]
+    "armor": [ { "encumbrance": 30, "coverage": 50, "covers": [ "eyes" ] } ]
   },
   {
     "id": "fancy_sunglasses",
