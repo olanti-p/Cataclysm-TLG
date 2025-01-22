@@ -522,26 +522,26 @@ static void add_effect_to_target( const tripoint &target, const spell &sp, Creat
         // If random_effect_part, grab a random part and affect it.
         if( sp.has_flag( spell_flag::RANDOM_EFFECT_PART ) && sp.bps_affected() == 0 ) {
             const bodypart_id bp = static_cast<const bodypart_id>( guy->get_random_body_part( true ) );
-                if( sp.has_flag( spell_flag::LIQUID ) ) {
-                    splash_target( target, sp, caster );
-                    bodypart_effected = true;
-                } else if( sp.has_flag( spell_flag::TOUCH ) && !guy->has_flag( json_flag_ETHEREAL ) ) {
-                    float hit_chance = guy->worn.coverage_with_flags_exclude( bp, { flag_AURA, flag_SEMITANGIBLE, flag_PERSONAL } );
-                    if( hit_chance < rng( 1, 100 ) ) {
-                        guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
-                    }
-                    bodypart_effected = true;
-                } else {
+            if( sp.has_flag( spell_flag::LIQUID ) ) {
+                splash_target( target, sp, caster );
+                bodypart_effected = true;
+            } else if( sp.has_flag( spell_flag::TOUCH ) && !guy->has_flag( json_flag_ETHEREAL ) ) {
+                float hit_chance = guy->worn.coverage_with_flags_exclude( bp, { flag_AURA, flag_SEMITANGIBLE, flag_PERSONAL } );
+                if( hit_chance < rng( 1, 100 ) ) {
                     guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
-                    bodypart_effected = true;
                 }
-        // Part isn't random, so hit all listed parts, if any are listed.
+                bodypart_effected = true;
+            } else {
+                guy->add_effect( spell_effect, dur_td, bp, sp.has_flag( spell_flag::PERMANENT ), effect_intensity );
+                bodypart_effected = true;
+            }
+            // Part isn't random, so hit all listed parts, if any are listed.
         } else {
             for( const bodypart_id &bp : guy->get_all_body_parts() ) {
                 if( sp.bp_is_affected( bp.id() ) ) {
                     if( sp.has_flag( spell_flag::LIQUID ) ) {
-                       splash_target( target, sp, caster );
-                       bodypart_effected = true;
+                        splash_target( target, sp, caster );
+                        bodypart_effected = true;
                     } else if( sp.has_flag( spell_flag::TOUCH ) && !guy->has_flag( json_flag_ETHEREAL ) ) {
                         float hit_chance = guy->worn.coverage_with_flags_exclude( bp, { flag_AURA, flag_SEMITANGIBLE, flag_PERSONAL } );
                         if( hit_chance < rng( 1, 100 ) ) {

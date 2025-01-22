@@ -462,12 +462,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [
-      "s_restaurant_roof",
-      "s_restaurant_roof_1",
-      "s_restaurant_roof_2",
-      "s_restaurant_roof_3"
-    ],
+    "id": [ "s_restaurant_roof", "s_restaurant_roof_1", "s_restaurant_roof_2", "s_restaurant_roof_3" ],
     "copy-from": "generic_city_building",
     "looks_like": "s_restaurant_roof",
     "name": "restaurant roof",

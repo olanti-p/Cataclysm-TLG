@@ -243,7 +243,7 @@
     "//": "Based on the plate from the MED-ENG EOD 9N.  People don't seem willing to buy the EOD 10 to shoot at and MED-ENG ain't telling us how not-bullet proof the suit is.",
     "price": 361300,
     "price_postapoc": 2000,
-    "material": [  "steel", "kevlar", "plastic_pad", "thermo_resin" ],
+    "material": [ "steel", "kevlar", "plastic_pad", "thermo_resin" ],
     "symbol": ",",
     "color": "dark_gray",
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
@@ -282,7 +282,15 @@
     "non_functional": "destroyed_large_ceramic_plate",
     "damage_verb": "makes a crunch, something has shifted",
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
-    "armor": [ { "encumbrance": 2, "coverage": 45, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "rigid_layer_only": true } ]
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 45,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ],
+        "rigid_layer_only": true
+      }
+    ]
   },
   {
     "id": "stab_plate",
@@ -483,7 +491,15 @@
     "non_functional": "destroyed_medium_ceramic_plate",
     "damage_verb": "makes a crunch, something has shifted",
     "flags": [ "ABLATIVE_MEDIUM", "CANT_WEAR" ],
-    "armor": [ { "encumbrance": 1, "coverage": 35, "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "rigid_layer_only": true } ]
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 35,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ],
+        "rigid_layer_only": true
+      }
+    ]
   },
   {
     "id": "scrap_esbi_plate",

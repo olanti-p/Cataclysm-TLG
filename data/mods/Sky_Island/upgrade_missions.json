@@ -1057,12 +1057,7 @@
       [ [ "roller_blades", 1 ] ],
       [ [ "jacket_windbreaker", 1 ] ],
       [ [ "crowbar", 1 ], [ "heavy_crowbar", 1 ] ],
-      [
-        [ "speedo", 1 ],
-        [ "bikini_bottom", 1 ],
-        [ "loincloth", 1 ],
-        [ "loincloth_fur", 1 ]
-      ]
+      [ [ "speedo", 1 ], [ "bikini_bottom", 1 ], [ "loincloth", 1 ], [ "loincloth_fur", 1 ] ]
     ]
   },
   {
