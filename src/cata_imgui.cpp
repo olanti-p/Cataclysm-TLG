@@ -1,4 +1,3 @@
-#if !defined(__ANDROID__)
 #include "cata_imgui.h"
 
 #include <stack>
@@ -46,9 +45,6 @@ cataimgui::client::client()
     ImTui_ImplText_Init();
 
     ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-
-    ImGui::GetIO().IniFilename = nullptr;
-    ImGui::GetIO().LogFilename = nullptr;
 }
 
 cataimgui::client::~client()
@@ -172,9 +168,6 @@ cataimgui::client::client()
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-    io.IniFilename = nullptr;
-    io.LogFilename = nullptr;
-
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
     ImGui_ImplSDL2_InitForSDLRenderer( sdl_window, sdl_renderer );
@@ -284,18 +277,23 @@ void cataimgui::window::draw_colored_text( std::string const &text, nc_color &co
             ImGui::TextColored( { static_cast<float>( rgbCol.Red / 255. ), static_cast<float>( rgbCol.Green / 255. ),
                                   static_cast<float>( rgbCol.Blue / 255. ), static_cast<float>( 255. ) },
                                 "%s", seg.c_str() );
+            GImGui->LastItemData.ID = itemId;
 #else
             SDL_Color c = curses_color_to_SDL( color );
             ImGui::TextColored( { static_cast<float>( c.r / 255. ), static_cast<float>( c.g / 255. ),
                                   static_cast<float>( c.b / 255. ), static_cast<float>( c.a / 255. ) },
                                 "%s", seg.c_str() );
-#endif
             GImGui->LastItemData.ID = itemId;
+#endif
             if( is_focused && !*is_focused ) {
                 *is_focused = ImGui::IsItemFocused();
             }
             if( is_hovered && !*is_hovered ) {
-                *is_hovered = GImGui->HoveredId == itemId;
+#if defined(TILES) || defined(WIN32)
+                *is_hovered = ImGui::IsItemHovered( ImGuiHoveredFlags_NoNavOverride );
+#else
+                *is_hovered = ImGui::IsItemHovered();
+#endif
             }
 
         }
@@ -476,4 +474,3 @@ cataimgui::bounds cataimgui::window::get_bounds()
 {
     return { -1.f, -1.f, -1.f, -1.f };
 }
-#endif // #if defined(__ANDROID__)
