@@ -224,7 +224,8 @@
     "material_thickness": 2,
     "environmental_protection": 1,
     "flags": [ "WATER_FRIENDLY", "STURDY" ],
-    "armor": [ { "encumbrance": 10, "coverage": 95, "covers": [ "eyes", "mouth" ] } ]
+    "armor": [ { "encumbrance": 10, "coverage": 95, "covers": [ "eyes", "mouth" ],
+    "rigid_layer_only": true } ]
   },
   {
     "id": "mask_rioter",
@@ -385,14 +386,14 @@
       {
         "id": "zombie_mask",
         "name": { "str": "zombie mask" },
-        "description": "A flimsy leather zombie mask.  When zombies were still works of fiction.",
+        "description": "A flimsy rubber zombie mask.  It can't compare to the real thing.",
         "weight": 100
       },
       {
         "id": "chicken_mask",
         "name": { "str": "chicken mask" },
         "color": "light_gray",
-        "description": "A chicken mask that looks like a killer in Miami would wear.",
+        "description": "A rubber chicken mask that looks like a killer in Miami would wear.",
         "weight": 30
       },
       {
@@ -417,14 +418,14 @@
       },
       {
         "id": "scream_mask",
-        "name": { "str": "Scream mask" },
+        "name": { "str": "screaming mask" },
         "color": "dark_gray",
-        "description": "A white mask with a screaming face on it, much like the mask Ghostface wore in Scream, black hood included.",
+        "description": "A black hood with a white facemask molded to look like a screaming phantom.",
         "weight": 41
       },
       {
         "id": "president_mask",
-        "name": { "str": "President mask" },
+        "name": { "str": "president mask" },
         "description": "A full-head mask that looks like one of the former leaders of the USA, back when that was a thing.",
         "weight": 41
       },

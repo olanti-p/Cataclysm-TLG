@@ -881,8 +881,7 @@
         "covers": [ "torso" ],
         "coverage": 95,
         "encumbrance": 17,
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 } ],
-        "rigid_layer_only": true
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 } ]
       }
     ],
     "warmth": 25,
