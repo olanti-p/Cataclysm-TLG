@@ -46,9 +46,6 @@ cataimgui::client::client()
     ImTui_ImplText_Init();
 
     ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-
-    ImGui::GetIO().IniFilename = nullptr;
-    ImGui::GetIO().LogFilename = nullptr;
 }
 
 cataimgui::client::~client()
@@ -171,9 +168,6 @@ cataimgui::client::client()
     ( void )io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
-
-    io.IniFilename = nullptr;
-    io.LogFilename = nullptr;
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
