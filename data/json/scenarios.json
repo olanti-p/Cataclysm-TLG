@@ -380,18 +380,7 @@
       "sloc_bikeshop",
       "sloc_petstore"
     ],
-    "professions": [
-      "svictim",
-      "naked",
-      "unemployed",
-      "homeless",
-      "hitchhiker",
-      "patriot",
-      "clown",
-      "lost_sub",
-      "spouse",
-      "musician"
-    ],
+    "professions": [ "svictim", "naked", "unemployed", "homeless", "hitchhiker", "patriot", "clown", "lost_sub", "spouse", "musician" ],
     "eoc": [ "scenario_infected", "scenario_bad_day" ],
     "requirement": "achievement_survive_28_days",
     "flags": [ "FIRE_START", "CHALLENGE", "CITY_START", "LONE_START" ]

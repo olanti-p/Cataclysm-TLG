@@ -1077,11 +1077,6 @@
     "flags": [ "TRADER_AVOID" ],
     "vitamins": [ [ "human_flesh_vitamin", 10 ] ],
     "color": "brown",
-    "seed_data": {
-      "plant_name": "mutant",
-      "fruit": "null",
-      "grow": "90 days",
-      "required_terrain_flag": "TREE_PLANTABLE"
-    }
+    "seed_data": { "plant_name": "mutant", "fruit": "null", "grow": "90 days", "required_terrain_flag": "TREE_PLANTABLE" }
   }
 ]
