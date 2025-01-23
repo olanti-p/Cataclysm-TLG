@@ -7,7 +7,7 @@ import unicodedata
 
 def gen_dictionary():
     po_path = os.path.join(os.path.dirname(__file__),
-                           "../../lang/po/cataclysm-dda.pot")
+                           "../../lang/po/cataclysm-tlg.pot")
     pofile = polib.pofile(po_path)
     dictionary = set()
     for entry in pofile:

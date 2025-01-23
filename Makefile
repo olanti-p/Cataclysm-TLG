@@ -148,7 +148,7 @@ OTHERS += -fsigned-char
 
 VERSION = 1.0-beta
 
-TARGET_NAME = ctlg
+TARGET_NAME = cataclysm-tlg
 TILES_TARGET_NAME = $(TARGET_NAME)-tiles
 ifeq ($(NATIVE), emscripten)
   TILES_TARGET_NAME = $(TARGET_NAME)-tiles.js
@@ -1140,9 +1140,9 @@ install: version $(TARGET)
 	cp -R --no-preserve=ownership data/help $(DATA_PREFIX)
 ifeq ($(TILES), 1)
 	cp -R --no-preserve=ownership gfx $(DATA_PREFIX)
-	install -Dm644 -t $(SHARE_DIR)/applications/ data/xdg/org.cataclysmdda.CataclysmDDA.desktop
-	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/org.cataclysmdda.CataclysmDDA.appdata.xml
-	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/org.cataclysmdda.CataclysmDDA.svg
+	install -Dm644 -t $(SHARE_DIR)/applications/ data/xdg/com.cataclysmtlg.CataclysmTLG.desktop
+	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/com.cataclysmtlg.CataclysmTLG.appdata.xml
+	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/com.cataclysmtlg.CataclysmTLG.svg
 endif
 ifeq ($(SOUND), 1)
 	cp -R --no-preserve=ownership data/sound $(DATA_PREFIX)

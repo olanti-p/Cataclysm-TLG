@@ -21,7 +21,7 @@ if(NOT ${XGETTEXT_MSGFMT_EXECUTABLE})
     set(XGETTEXT_MSGFMT_EXECUTABLE xgettext)
 endif()
 
-# Generate cataclysm-dda.pot
+# Generate cataclysm-tlg.pot
 add_custom_target(
         translations
         COMMAND ${CMAKE_SOURCE_DIR}/lang/update_pot.sh
@@ -29,7 +29,7 @@ add_custom_target(
 
 foreach (LANG ${LANGUAGES})
     set(_PO ${CMAKE_SOURCE_DIR}/lang/po/${LANG}.po)
-    set(_MO ${CMAKE_SOURCE_DIR}/lang/mo/${LANG}/LC_MESSAGES/cataclysm-dda.mo)
+    set(_MO ${CMAKE_SOURCE_DIR}/lang/mo/${LANG}/LC_MESSAGES/cataclysm-tlg.mo)
     add_custom_command(
             OUTPUT ${_MO}
             COMMAND ${CMAKE_COMMAND} -E

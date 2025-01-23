@@ -24,9 +24,9 @@ function merge_lang
         mv ${f} ${o}
     fi
 
-    # merge lang/po/cataclysm-dda.pot with .po file
+    # merge lang/po/cataclysm-tlg.pot with .po file
     echo "updating $o"
-    msgmerge --sort-by-file --no-fuzzy-matching $o lang/po/cataclysm-dda.pot | msgattrib --sort-by-file --no-obsolete -o $o
+    msgmerge --sort-by-file --no-fuzzy-matching $o lang/po/cataclysm-tlg.pot | msgattrib --sort-by-file --no-obsolete -o $o
 }
 
 # merge incoming translations for each language specified on the commandline

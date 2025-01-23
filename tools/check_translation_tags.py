@@ -13,7 +13,7 @@ pattern = re.compile(r'<[a-z/0-9_]+>')
 
 def init_tags():
     global tags
-    pofile = polib.pofile("./lang/po/cataclysm-dda.pot")
+    pofile = polib.pofile("./lang/po/cataclysm-tlg.pot")
     for entry in pofile:
         for tag in set(pattern.findall(entry.msgid)):
             tags.add(tag)
