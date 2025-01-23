@@ -10,7 +10,6 @@
 #include "translation.h"
 
 class cata_path;
-class keybindings_ui;
 
 // Curses key constants
 constexpr int KEY_ESCAPE     = 27;
@@ -200,7 +199,6 @@ constexpr int JOY_LEFTDOWN  = 256 + 8;
  */
 class input_manager
 {
-        friend class keybindings_ui;
     public:
         // TODO: rewrite this to have several alternative input events for the same action
 
