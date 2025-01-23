@@ -13,7 +13,7 @@ fi
 
 
 echo "> Extracting strings from C++ code"
-xgettext --default-domain="cataclysm-dda" \
+xgettext --default-domain="cataclysm-tlg" \
          --add-comments="~" \
          --sort-by-file \
          --output="lang/po/gui.pot" \
@@ -34,7 +34,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-package="cataclysm-dda"
+package="cataclysm-tlg"
 version=$(grep '^VERSION *= *' Makefile | tr -d [:space:] | cut -f 2 -d '=')
 
 echo "> Extracting strings from JSON"
@@ -53,8 +53,8 @@ then
 fi
 
 echo "> Merging translation templates"
-msgcat -o lang/po/cataclysm-dda.pot --use-first lang/po/json.pot lang/po/gui.pot
-if [ ! -f lang/po/cataclysm-dda.pot ]; then
+msgcat -o lang/po/cataclysm-tlg.pot --use-first lang/po/json.pot lang/po/gui.pot
+if [ ! -f lang/po/cataclysm-tlg.pot ]; then
     echo "Error in merging translation templates. Aborting."
     exit 1
 fi
@@ -64,7 +64,7 @@ os="$(uname -s)"
 if (! [ "${os##CYGWIN*}" ]) || (! [ "${os##MINGW*}" ])
 then
     echo "> Converting line endings to Unix"
-    if ! sed -i -e 's/\r$//' lang/po/cataclysm-dda.pot
+    if ! sed -i -e 's/\r$//' lang/po/cataclysm-tlg.pot
     then
         echo "Line ending conversion failed. Aborting."
         exit 1
@@ -73,7 +73,7 @@ fi
 
 # Final compilation check
 echo "> Testing to compile translation template"
-if ! msgfmt -c -o /dev/null lang/po/cataclysm-dda.pot
+if ! msgfmt -c -o /dev/null lang/po/cataclysm-tlg.pot
 then
     echo "Translation template cannot be compiled. Aborting."
     exit 1
@@ -81,7 +81,7 @@ fi
 
 # Check for broken Unicode symbols
 echo "> Checking for wrong Unicode symbols"
-if ! lang/unicode_check.py lang/po/cataclysm-dda.pot
+if ! lang/unicode_check.py lang/po/cataclysm-tlg.pot
 then
     echo "Updated pot file contain broken Unicode symbols. Aborting."
     exit 1

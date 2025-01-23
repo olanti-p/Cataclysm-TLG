@@ -40,7 +40,7 @@ def format_msg(prefix, text):
     return "{0} {1}".format(prefix, restore_unicode(json.dumps(text)))
 
 
-def write_pot_header(fp, pkg_name="Cataclysm-DDA"):
+def write_pot_header(fp, pkg_name="Cataclysm-TLG"):
     tzinfo = datetime.now(timezone.utc).astimezone().tzinfo
     time = datetime.now(tzinfo).strftime('%Y-%m-%d %H:%M%z')
     print("msgid \"\"", file=fp)
