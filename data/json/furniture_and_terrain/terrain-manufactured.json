@@ -1260,7 +1260,7 @@
     "looks_like": "t_pit",
     "move_cost": 0,
     "flags": [ "TRANSPARENT", "CONTAINER", "PLACE_ITEM", "INDOORS" ],
-    "deconstruct": { "ter_set": "t_pit", "items": [ { "item": "rock", "count": 40 }, { "item": "stick", "count": [ 16, 16 ] } ] },
+    "deconstruct": { "ter_set": "t_pit", "items": [ { "item": "rock", "count": 40 }, { "item": "stick", "count": 16 } ] },
     "bash": {
       "str_min": 18,
       "str_max": 50,
@@ -1445,11 +1445,7 @@
       "ter_set": "t_dirt",
       "sound": "crash!",
       "sound_fail": "whack!",
-      "items": [
-        { "item": "stick", "count": [ 1, 2 ] },
-        { "item": "splinter", "count": [ 1, 4 ] },
-        { "item": "tarp", "count": [ 1, 1 ] }
-      ]
+      "items": [ { "item": "stick", "count": [ 1, 2 ] }, { "item": "splinter", "count": [ 1, 4 ] }, { "item": "tarp", "count": 1 } ]
     },
     "deconstruct": {
       "ter_set": "t_dirt",
@@ -1475,7 +1471,7 @@
       "items": [
         { "item": "stick", "count": [ 1, 2 ] },
         { "item": "splinter", "count": [ 1, 4 ] },
-        { "item": "plastic_sheet", "count": [ 1, 1 ] }
+        { "item": "plastic_sheet", "count": 1 }
       ]
     },
     "deconstruct": {
@@ -1502,7 +1498,7 @@
       "items": [
         { "item": "stick", "count": [ 1, 2 ] },
         { "item": "splinter", "count": [ 1, 4 ] },
-        { "item": "gum_blanket", "count": [ 1, 1 ] }
+        { "item": "gum_blanket", "count": 1 }
       ]
     },
     "deconstruct": {

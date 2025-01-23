@@ -92,12 +92,18 @@
       {
         "item": "dandelionburdock_tea",
         "prob": 20,
-        "charges-max": 2,
+        "charges": [ 0, 2 ],
         "container-item": "bottle_plastic",
         "sealed": false
       },
-      { "item": "dandelion_tea", "prob": 10, "charges-max": 2, "container-item": "bottle_plastic", "sealed": false },
-      { "item": "pine_tea", "prob": 10, "charges-max": 2, "container-item": "bottle_plastic", "sealed": false },
+      {
+        "item": "dandelion_tea",
+        "prob": 10,
+        "charges": [ 0, 2 ],
+        "container-item": "bottle_plastic",
+        "sealed": false
+      },
+      { "item": "pine_tea", "prob": 10, "charges": [ 0, 2 ], "container-item": "bottle_plastic", "sealed": false },
       { "item": "herbal_tea", "prob": 50 },
       { "item": "chamomile_tea", "prob": 40 },
       { "item": "lotus_tea", "prob": 30 },
@@ -362,7 +368,7 @@
       [ "towel", 15 ],
       { "item": "soap", "prob": 15, "charges": [ 1, 10 ] },
       { "item": "detergent", "prob": 15, "charges": [ 1, 20 ] },
-      { "item": "bleach", "prob": 15, "charges-min": 1 },
+      { "item": "bleach", "prob": 15, "charges": [ 1, -1 ] },
       [ "broom", 13 ],
       [ "dinosuit", 7 ],
       [ "hat_ball", 19 ],
@@ -517,7 +523,7 @@
       { "item": "detergent", "prob": 8, "charges": [ 1, 20 ] },
       { "item": "cotton_patchwork", "prob": 15 },
       { "item": "broom", "prob": 8 },
-      { "item": "bleach", "prob": 8, "charges-min": 1 },
+      { "item": "bleach", "prob": 8, "charges": [ 1, -1 ] },
       { "item": "hotplate", "prob": 1 },
       { "item": "vinegar", "prob": 3 }
     ]
@@ -662,7 +668,7 @@
       { "item": "soap", "prob": 30, "charges": [ 1, 10 ] },
       { "item": "detergent", "prob": 30, "charges": [ 1, 20 ] },
       { "item": "cotton_patchwork", "prob": 30 },
-      { "item": "bleach", "prob": 30, "charges-min": 1 },
+      { "item": "bleach", "prob": 30, "charges": [ 1, -1 ] },
       { "item": "vinegar", "prob": 30 },
       { "item": "backpack", "prob": 5 }
     ]
@@ -943,14 +949,7 @@
       [ "water_mineral", 10 ],
       [ "milk", 20 ],
       { "prob": 35, "group": "butter_wrapper_8_64" },
-      {
-        "item": "ghee",
-        "prob": 5,
-        "charges-min": 1,
-        "charges-max": 64,
-        "container-item": "jar_glass_sealed",
-        "sealed": false
-      },
+      { "item": "ghee", "prob": 5, "charges": [ 1, 64 ], "container-item": "jar_glass_sealed", "sealed": false },
       [ "yoghurt", 10 ],
       [ "pudding", 15 ],
       [ "apple", 10 ],
@@ -998,14 +997,7 @@
       [ "milk", 20 ],
       [ "egg_bird_unfert", 20 ],
       { "prob": 35, "group": "butter_wrapper_8_64" },
-      {
-        "item": "ghee",
-        "prob": 5,
-        "charges-min": 1,
-        "charges-max": 64,
-        "container-item": "jar_glass_sealed",
-        "sealed": false
-      },
+      { "item": "ghee", "prob": 5, "charges": [ 1, 64 ], "container-item": "jar_glass_sealed", "sealed": false },
       [ "apple", 10 ],
       [ "fish_sandwich", 15 ],
       [ "lobster_roll", 15 ],
@@ -1451,14 +1443,7 @@
       [ "water_mineral", 10 ],
       [ "milk", 20 ],
       { "prob": 35, "group": "butter_wrapper_8_64" },
-      {
-        "item": "ghee",
-        "prob": 5,
-        "charges-min": 1,
-        "charges-max": 64,
-        "container-item": "jar_glass_sealed",
-        "sealed": false
-      },
+      { "item": "ghee", "prob": 5, "charges": [ 1, 64 ], "container-item": "jar_glass_sealed", "sealed": false },
       [ "cactus_pad", 20 ],
       [ "papaya", 20 ],
       [ "fish_cooked", 20 ],
@@ -1583,7 +1568,7 @@
     "subtype": "collection",
     "//": "100 g of tea",
     "container-item": "bag_plastic",
-    "entries": [ { "item": "tea_raw", "container-item": "null", "count-min": 2, "count-max": 33 } ]
+    "entries": [ { "item": "tea_raw", "container-item": "null", "count": [ 2, 33 ] } ]
   },
   {
     "type": "item_group",
@@ -1591,7 +1576,7 @@
     "subtype": "collection",
     "//": "100 g of tea",
     "container-item": "bag_plastic",
-    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count-min": 2, "count": 33 } ]
+    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count": [ 2, 33 ] } ]
   },
   {
     "type": "item_group",
@@ -1607,7 +1592,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_3l_glass_sealed",
-    "entries": [ { "item": "bee_balm", "count-min": 1, "count-max": 12 } ]
+    "entries": [ { "item": "bee_balm", "count": [ 1, 12 ] } ]
   },
   {
     "type": "item_group",
@@ -1615,7 +1600,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_3l_glass_sealed",
-    "entries": [ { "item": "raw_burdock", "count-min": 1 } ]
+    "entries": [ { "item": "raw_burdock", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1623,7 +1608,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "tea_raw", "container-item": "null", "count-min": 10, "count-max": 40 } ]
+    "entries": [ { "item": "tea_raw", "container-item": "null", "count": [ 10, 40 ] } ]
   },
   {
     "type": "item_group",
@@ -1631,7 +1616,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count-min": 10, "count-max": 40 } ]
+    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count": [ 10, 40 ] } ]
   },
   {
     "type": "item_group",
@@ -1639,7 +1624,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "wild_herbs", "count-min": 20 } ]
+    "entries": [ { "item": "wild_herbs", "count": [ 20, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1647,7 +1632,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "raw_dandelion", "count-min": 1 } ]
+    "entries": [ { "item": "raw_dandelion", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1655,7 +1640,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "milk_powder", "container-item": "null", "count-min": 1, "count-max": 8 } ]
+    "entries": [ { "item": "milk_powder", "container-item": "null", "count": [ 1, 8 ] } ]
   },
   {
     "type": "item_group",
@@ -1663,7 +1648,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "cinnamon", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "cinnamon", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1672,14 +1657,14 @@
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
     "on_overflow": "spill",
-    "entries": [ { "item": "sugar", "container-item": "null", "count-min": 10, "count-max": 140 } ]
+    "entries": [ { "item": "sugar", "container-item": "null", "count": [ 10, 140 ] } ]
   },
   {
     "type": "item_group",
     "id": "sugar_packed",
     "subtype": "collection",
     "container-item": "bag_paper_powder",
-    "entries": [ { "item": "sugar", "count-min": 10, "count-max": 90 } ]
+    "entries": [ { "item": "sugar", "count": [ 10, 90 ] } ]
   },
   {
     "type": "item_group",
@@ -1695,7 +1680,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
-    "entries": [ { "item": "hotdogs_cooked", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "hotdogs_cooked", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1703,7 +1688,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
-    "entries": [ { "item": "hotdogs_newyork", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "hotdogs_newyork", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1711,7 +1696,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "box_small",
-    "entries": [ { "item": "crab_cakes", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "crab_cakes", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1719,7 +1704,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "box_small",
-    "entries": [ { "item": "stuffed_clams", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "stuffed_clams", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1845,7 +1830,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "plastic_bag_vac",
-    "entries": [ { "item": "oyster_crackers", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "oyster_crackers", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1997,7 +1982,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "carton_egg",
-    "entries": [ { "item": "egg_bird_unfert", "count-min": 6, "count-max": 12 } ]
+    "entries": [ { "item": "egg_bird_unfert", "count": [ 6, 12 ] } ]
   },
   {
     "type": "item_group",
@@ -2013,7 +1998,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
-    "entries": [ { "item": "butter", "container-item": "null", "count-min": 8, "count-max": 64 } ]
+    "entries": [ { "item": "butter", "container-item": "null", "count": [ 8, 64 ] } ]
   },
   {
     "type": "item_group",

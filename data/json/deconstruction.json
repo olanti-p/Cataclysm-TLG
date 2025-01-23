@@ -940,7 +940,7 @@
     "required_skills": [ [ "fabrication", 4 ] ],
     "time": "10 m",
     "using": [ [ "wall_floor_glass_removal_standard", 1 ] ],
-    "byproducts": [ { "item": "reinforced_glass_sheet", "count": [ 1, 1 ] } ],
+    "byproducts": [ { "item": "reinforced_glass_sheet", "count": 1 } ],
     "pre_terrain": "t_reinforced_glass",
     "post_terrain": "t_m_frame"
   },
@@ -953,7 +953,7 @@
     "required_skills": [ [ "fabrication", 4 ] ],
     "time": "10 m",
     "using": [ [ "wall_floor_glass_removal_standard", 1 ] ],
-    "byproducts": [ { "item": "glass_sheet", "count": [ 1, 1 ] } ],
+    "byproducts": [ { "item": "glass_sheet", "count": 1 } ],
     "pre_terrain": "t_wall_glass",
     "post_terrain": "t_floor"
   },
