@@ -7,13 +7,6 @@
 #include "cuboid_rectangle.h"
 #include "point.h"
 
-namespace cataimgui
-{
-class client;
-} // namespace cataimgui
-
-extern std::unique_ptr<cataimgui::client> imclient;
-
 namespace catacurses
 {
 class window;
@@ -74,8 +67,6 @@ class window;
 class ui_adaptor
 {
     public:
-        bool is_imgui;
-        bool is_on_top;
         using redraw_callback_t = std::function<void( ui_adaptor & )>;
         using screen_resize_callback_t = std::function<void( ui_adaptor & )>;
 
@@ -221,7 +212,6 @@ class ui_adaptor
 
         /* See the `ui_manager` namespace */
         static void invalidate( const rectangle<point> &rect, bool reenable_uis_below );
-        static bool has_imgui();
         static void redraw();
         static void redraw_invalidated();
         static void screen_resized();
