@@ -3352,17 +3352,6 @@
   },
   {
     "type": "keybinding",
-    "id": "RESET",
-    "category": "HELP_KEYBINDINGS",
-    "name": "Reset keybinding",
-    "bindings": [
-      { "input_method": "keyboard_char", "key": "*" },
-      { "input_method": "keyboard_code", "key": "8", "mod": [ "shift" ] },
-      { "input_method": "keyboard_code", "key": "KEYPAD_MULTIPLY" }
-    ]
-  },
-  {
-    "type": "keybinding",
     "id": "ADD_LOCAL",
     "category": "HELP_KEYBINDINGS",
     "name": "Add local keybinding",
