@@ -136,10 +136,7 @@
     "subtype": "distribution",
     "id": "phones_case",
     "container-item": "waterproof_smart_phone_case",
-    "items": [
-      { "item": "smart_phone", "prob": 17, "charges": [ 0, 15 ] },
-      { "item": "smart_phone", "prob": 1, "charges": 130 }
-    ]
+    "items": [ { "item": "smart_phone", "prob": 17, "charges": [ 0, 15 ] }, { "item": "smart_phone", "prob": 1, "charges": 130 } ]
   },
   {
     "type": "item_group",

@@ -167,11 +167,7 @@
     "looks_like": "crane_small",
     "durability": 200,
     "description": "An extendable metal pylon used to replace a portable jack.  If mounted to a vehicle, it could be used to lift it up.",
-    "breaks_into": [
-      { "item": "pipe", "count": [ 4, 12 ] },
-      { "item": "scrap", "count": [ 8, 24 ] },
-      { "item": "jack", "count": 1 }
-    ],
+    "breaks_into": [ { "item": "pipe", "count": [ 4, 12 ] }, { "item": "scrap", "count": [ 8, 24 ] }, { "item": "jack", "count": 1 } ],
     "qualities": [ [ "SELF_JACK", 17 ] ],
     "//": "30 cm of weld per quadrant of damage and 120 cm weld to install",
     "requirements": {

@@ -1463,13 +1463,7 @@
     "id": "oa_ig_cd_fuel",
     "//": "for cs_car_dealership",
     "items": [
-      {
-        "item": "gasoline",
-        "prob": 20,
-        "charges": [ 450, 2000 ],
-        "container-item": "jug_plastic",
-        "sealed": false
-      },
+      { "item": "gasoline", "prob": 20, "charges": [ 450, 2000 ], "container-item": "jug_plastic", "sealed": false },
       { "item": "gasoline", "prob": 30, "charges": [ 450, 4000 ], "container-item": "jerrycan" },
       { "item": "gasoline", "prob": 10, "charges": [ 2650, 10000 ], "container-item": "jerrycan_big" }
     ]
@@ -2142,10 +2136,7 @@
   {
     "id": "farm_supply_quicklime_and_saltpetre",
     "type": "item_group",
-    "items": [
-      { "group": "quicklime_bag", "prob": 85 },
-      { "item": "chem_saltpetre", "prob": 15, "charges": [ 10, 50 ] }
-    ]
+    "items": [ { "group": "quicklime_bag", "prob": 85 }, { "item": "chem_saltpetre", "prob": 15, "charges": [ 10, 50 ] } ]
   },
   {
     "id": "farm_supply_animal_feed",

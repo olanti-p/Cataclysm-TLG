@@ -1445,11 +1445,7 @@
       "ter_set": "t_dirt",
       "sound": "crash!",
       "sound_fail": "whack!",
-      "items": [
-        { "item": "stick", "count": [ 1, 2 ] },
-        { "item": "splinter", "count": [ 1, 4 ] },
-        { "item": "tarp", "count": 1 }
-      ]
+      "items": [ { "item": "stick", "count": [ 1, 2 ] }, { "item": "splinter", "count": [ 1, 4 ] }, { "item": "tarp", "count": 1 } ]
     },
     "deconstruct": {
       "ter_set": "t_dirt",

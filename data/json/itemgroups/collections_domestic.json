@@ -851,13 +851,7 @@
       { "item": "soy_milk", "prob": 50 },
       { "item": "milk_choc", "prob": 25 },
       { "prob": 45, "group": "butter_wrapper_1_32" },
-      {
-        "item": "ghee",
-        "prob": 5,
-        "charges": [ 1, 32 ],
-        "container-item": "jar_glass_sealed",
-        "sealed": false
-      },
+      { "item": "ghee", "prob": 5, "charges": [ 1, 32 ], "container-item": "jar_glass_sealed", "sealed": false },
       { "prob": 65, "group": "egg_bird_unfert_carton_egg_1_12" },
       { "item": "yoghurt", "prob": 50 },
       { "item": "pudding", "prob": 60 },
@@ -1421,10 +1415,7 @@
       { "item": "candle", "prob": 3, "charges": [ 5, 50 ] },
       {
         "collection": [
-          {
-            "collection": [ { "item": "hammer", "prob": 100 }, { "item": "nail", "prob": 75, "charges": [ 2, 6 ] } ],
-            "prob": 50
-          },
+          { "collection": [ { "item": "hammer", "prob": 100 }, { "item": "nail", "prob": 75, "charges": [ 2, 6 ] } ], "prob": 50 },
           { "item": "pliers", "prob": 33 },
           { "item": "paint_brush", "prob": 33 },
           { "item": "xacto", "prob": 10 },

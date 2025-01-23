@@ -31,12 +31,7 @@
       { "item": "gasoline", "container-item": "55gal_drum", "charges": [ 1, 52 ], "prob": 5 },
       { "item": "bleach", "container-item": "55gal_drum", "charges": [ 1, 52 ], "prob": 10 },
       { "item": "lye", "container-item": "55gal_drum", "charges": [ 1, 52 ], "prob": 10 },
-      {
-        "item": "chem_sulphuric_acid",
-        "container-item": "55gal_drum",
-        "charges": [ 1, 16 ],
-        "prob": 5
-      }
+      { "item": "chem_sulphuric_acid", "container-item": "55gal_drum", "charges": [ 1, 16 ], "prob": 5 }
     ]
   },
   {

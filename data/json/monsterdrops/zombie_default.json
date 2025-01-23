@@ -206,13 +206,7 @@
       },
       {
         "distribution": [
-          {
-            "item": "cig",
-            "prob": 65,
-            "count": [ 0, 20 ],
-            "container-item": "null",
-            "entry-wrapper": "box_cigarette"
-          },
+          { "item": "cig", "prob": 65, "count": [ 0, 20 ], "container-item": "null", "entry-wrapper": "box_cigarette" },
           { "item": "chaw", "prob": 5 },
           { "item": "cigar", "prob": 5 },
           { "group": "pocket_cigar", "prob": 1 },
@@ -277,10 +271,7 @@
             "prob": 1
           },
           {
-            "collection": [
-              { "item": "holster", "damage": [ 0, 2 ] },
-              { "item": "tazer", "damage": [ 0, 2 ], "charges": [ 0, 100 ] }
-            ],
+            "collection": [ { "item": "holster", "damage": [ 0, 2 ] }, { "item": "tazer", "damage": [ 0, 2 ], "charges": [ 0, 100 ] } ],
             "prob": 5
           }
         ],

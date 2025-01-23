@@ -1700,13 +1700,7 @@
     "subtype": "collection",
     "ammo": 100,
     "entries": [
-      {
-        "item": "mosin44",
-        "variant": "mosin44_ebr",
-        "contents-group": "mosin_mods",
-        "prob": 1,
-        "charges": [ 0, 5 ]
-      },
+      { "item": "mosin44", "variant": "mosin44_ebr", "contents-group": "mosin_mods", "prob": 1, "charges": [ 0, 5 ] },
       { "group": "on_hand_762R" }
     ]
   },
@@ -1717,13 +1711,7 @@
     "subtype": "collection",
     "ammo": 100,
     "entries": [
-      {
-        "item": "mosin91_30",
-        "variant": "mosin91_30_ebr",
-        "contents-group": "mosin_mods",
-        "prob": 1,
-        "charges": [ 0, 5 ]
-      },
+      { "item": "mosin91_30", "variant": "mosin91_30_ebr", "contents-group": "mosin_mods", "prob": 1, "charges": [ 0, 5 ] },
       { "group": "on_hand_762R" }
     ]
   },
@@ -2131,10 +2119,7 @@
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
     "subtype": "collection",
     "ammo": 100,
-    "entries": [
-      { "item": "benelli_tsa", "variant": "mossberg_500_security", "charges": [ 0, 6 ] },
-      { "group": "on_hand_shot" }
-    ]
+    "entries": [ { "item": "benelli_tsa", "variant": "mossberg_500_security", "charges": [ 0, 6 ] }, { "group": "on_hand_shot" } ]
   },
   {
     "id": "nested_remington_870_express",
@@ -2150,10 +2135,7 @@
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
     "subtype": "collection",
     "ammo": 100,
-    "entries": [
-      { "item": "remington_870", "variant": "browning_a5", "charges": [ 0, 5 ] },
-      { "group": "on_hand_shot" }
-    ]
+    "entries": [ { "item": "remington_870", "variant": "browning_a5", "charges": [ 0, 5 ] }, { "group": "on_hand_shot" } ]
   },
   {
     "id": "nested_remington_1100",
@@ -2161,10 +2143,7 @@
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
     "subtype": "collection",
     "ammo": 100,
-    "entries": [
-      { "item": "remington_870", "variant": "remington_1100", "charges": [ 0, 5 ] },
-      { "group": "on_hand_shot" }
-    ]
+    "entries": [ { "item": "remington_870", "variant": "remington_1100", "charges": [ 0, 5 ] }, { "group": "on_hand_shot" } ]
   },
   {
     "id": "nested_mossberg_930",
@@ -2595,10 +2574,7 @@
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
     "subtype": "collection",
     "ammo": 100,
-    "entries": [
-      { "item": "savage112", "charges": [ 0, 1 ], "contents-item": [ "rifle_scope" ] },
-      { "group": "on_hand_338lapua" }
-    ]
+    "entries": [ { "item": "savage112", "charges": [ 0, 1 ], "contents-item": [ "rifle_scope" ] }, { "group": "on_hand_338lapua" } ]
   },
   {
     "id": "nested_mrad_smr",
@@ -2681,12 +2657,7 @@
       {
         "distribution": [
           { "item": "smle_mk3", "charges": [ 0, 10 ], "prob": 70 },
-          {
-            "item": "smle_mk3",
-            "charges": [ 0, 10 ],
-            "contents-item": [ "sword_bayonet" ],
-            "prob": 30
-          }
+          { "item": "smle_mk3", "charges": [ 0, 10 ], "contents-item": [ "sword_bayonet" ], "prob": 30 }
         ]
       },
       { "item": "clip303_5rd" },
@@ -2705,12 +2676,7 @@
       {
         "distribution": [
           { "item": "number4_mki", "charges": [ 0, 10 ], "prob": 70 },
-          {
-            "item": "number4_mki",
-            "charges": [ 0, 10 ],
-            "contents-item": [ "enfield_bayonet" ],
-            "prob": 30
-          }
+          { "item": "number4_mki", "charges": [ 0, 10 ], "contents-item": [ "enfield_bayonet" ], "prob": 30 }
         ]
       },
       { "item": "clip303_5rd" },
@@ -2799,12 +2765,7 @@
       {
         "distribution": [
           { "item": "type99_sniper", "charges": [ 0, 5 ], "prob": 70 },
-          {
-            "item": "type99_sniper",
-            "charges": [ 0, 5 ],
-            "contents-item": [ "arisaka_monopod" ],
-            "prob": 30
-          }
+          { "item": "type99_sniper", "charges": [ 0, 5 ], "contents-item": [ "arisaka_monopod" ], "prob": 30 }
         ]
       },
       { "item": "clip_77mm_arisaka" },

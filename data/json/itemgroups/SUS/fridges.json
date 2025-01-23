@@ -68,13 +68,31 @@
             "container-item": "null",
             "entry-wrapper": "box_small"
           },
-          { "item": "onion_rings", "count": [ 1, -1 ], "prob": 5, "container-item": "null", "entry-wrapper": "box_small" },
+          {
+            "item": "onion_rings",
+            "count": [ 1, -1 ],
+            "prob": 5,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
           { "item": "milkshake", "charges": [ 1, -1 ], "prob": 3 },
           { "item": "milkshake_fastfood", "charges": [ 1, -1 ], "prob": 3 },
           { "item": "frozen_lemonade", "charges": [ 1, -1 ], "prob": 5 },
           { "item": "milkshake_deluxe", "charges": [ 1, -1 ], "prob": 5 },
-          { "item": "pizza_meat", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "box_small" },
-          { "item": "pizza_veggy", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "box_small" },
+          {
+            "item": "pizza_meat",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
+          {
+            "item": "pizza_veggy",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
           {
             "item": "pizza_cheese",
             "count": [ 1, -1 ],
@@ -89,13 +107,43 @@
             "container-item": "null",
             "entry-wrapper": "box_small"
           },
-          { "item": "cheeseburger", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
+          {
+            "item": "cheeseburger",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
           { "item": "hamburger", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
-          { "item": "fish_fried", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "box_small" },
-          { "item": "fish_sandwich", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
-          { "item": "lobster_roll", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
+          {
+            "item": "fish_fried",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
+          {
+            "item": "fish_sandwich",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
+          {
+            "item": "lobster_roll",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
           { "item": "sloppyjoe", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
-          { "item": "sandwich_t", "count": [ 1, -1 ], "prob": 8, "container-item": "null", "entry-wrapper": "wrapper" },
+          {
+            "item": "sandwich_t",
+            "count": [ 1, -1 ],
+            "prob": 8,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
           {
             "item": "junk_burrito",
             "count": [ 1, -1 ],
@@ -118,7 +166,13 @@
             "container-item": "null",
             "entry-wrapper": "wrapper"
           },
-          { "item": "crab_cakes", "count": [ 1, -1 ], "prob": 3, "container-item": "null", "entry-wrapper": "box_small" },
+          {
+            "item": "crab_cakes",
+            "count": [ 1, -1 ],
+            "prob": 3,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
           {
             "item": "lobster_cakes",
             "count": [ 1, -1 ],
@@ -380,7 +434,12 @@
               { "item": "zeromdew", "charges": [ 1, -1 ], "prob": 5, "container-item": "bottle_twoliter" },
               { "item": "sparkling", "charges": [ 1, -1 ], "prob": 10, "container-item": "bottle_twoliter" },
               { "item": "sparkling_peach", "charges": [ 1, -1 ], "prob": 10, "container-item": "bottle_twoliter" },
-              { "item": "sparkling_pomegranate", "charges": [ 1, -1 ], "prob": 10, "container-item": "bottle_twoliter" }
+              {
+                "item": "sparkling_pomegranate",
+                "charges": [ 1, -1 ],
+                "prob": 10,
+                "container-item": "bottle_twoliter"
+              }
             ],
             "prob": 10
           }
@@ -687,7 +746,12 @@
               { "item": "zeromdew", "charges": [ 1, -1 ], "prob": 55, "container-item": "bottle_twoliter" },
               { "item": "sparkling", "charges": [ 1, -1 ], "prob": 10, "container-item": "bottle_twoliter" },
               { "item": "sparkling_peach", "charges": [ 1, -1 ], "prob": 10, "container-item": "bottle_twoliter" },
-              { "item": "sparkling_pomegranate", "charges": [ 1, -1 ], "prob": 10, "container-item": "bottle_twoliter" }
+              {
+                "item": "sparkling_pomegranate",
+                "charges": [ 1, -1 ],
+                "prob": 10,
+                "container-item": "bottle_twoliter"
+              }
             ],
             "prob": 15
           }
@@ -907,7 +971,13 @@
           { "item": "milkshake_fastfood", "charges": [ 1, -1 ], "prob": 10 },
           { "item": "frozen_lemonade", "charges": [ 1, -1 ], "prob": 10 },
           { "item": "milkshake_deluxe", "charges": [ 1, -1 ], "prob": 5 },
-          { "item": "pizza_meat", "count": [ 1, -1 ], "prob": 10, "container-item": "null", "entry-wrapper": "box_small" },
+          {
+            "item": "pizza_meat",
+            "count": [ 1, -1 ],
+            "prob": 10,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
           {
             "item": "pizza_veggy",
             "count": [ 1, -1 ],
@@ -929,9 +999,27 @@
             "container-item": "null",
             "entry-wrapper": "box_small"
           },
-          { "item": "cheeseburger", "count": [ 1, -1 ], "prob": 10, "container-item": "null", "entry-wrapper": "wrapper" },
-          { "item": "hamburger", "count": [ 1, -1 ], "prob": 10, "container-item": "null", "entry-wrapper": "wrapper" },
-          { "item": "fish_fried", "count": [ 1, -1 ], "prob": 10, "container-item": "null", "entry-wrapper": "box_small" },
+          {
+            "item": "cheeseburger",
+            "count": [ 1, -1 ],
+            "prob": 10,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
+          {
+            "item": "hamburger",
+            "count": [ 1, -1 ],
+            "prob": 10,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
+          {
+            "item": "fish_fried",
+            "count": [ 1, -1 ],
+            "prob": 10,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
           {
             "item": "fish_sandwich",
             "count": [ 1, -1 ],
@@ -939,8 +1027,20 @@
             "container-item": "null",
             "entry-wrapper": "wrapper"
           },
-          { "item": "sloppyjoe", "count": [ 1, -1 ], "prob": 10, "container-item": "null", "entry-wrapper": "wrapper" },
-          { "item": "sandwich_t", "count": [ 1, -1 ], "prob": 10, "container-item": "null", "entry-wrapper": "wrapper" },
+          {
+            "item": "sloppyjoe",
+            "count": [ 1, -1 ],
+            "prob": 10,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
+          {
+            "item": "sandwich_t",
+            "count": [ 1, -1 ],
+            "prob": 10,
+            "container-item": "null",
+            "entry-wrapper": "wrapper"
+          },
           {
             "item": "junk_burrito",
             "count": [ 1, -1 ],
@@ -963,7 +1063,13 @@
             "container-item": "null",
             "entry-wrapper": "wrapper"
           },
-          { "item": "crab_cakes", "count": [ 1, -1 ], "prob": 5, "container-item": "null", "entry-wrapper": "box_small" },
+          {
+            "item": "crab_cakes",
+            "count": [ 1, -1 ],
+            "prob": 5,
+            "container-item": "null",
+            "entry-wrapper": "box_small"
+          },
           {
             "item": "stuffed_clams",
             "count": [ 1, -1 ],
@@ -1219,7 +1325,12 @@
               { "item": "zeromdew", "charges": [ 1, -1 ], "prob": 5, "container-item": "bottle_twoliter" },
               { "item": "sparkling", "charges": [ 1, -1 ], "prob": 15, "container-item": "bottle_twoliter" },
               { "item": "sparkling_peach", "charges": [ 1, -1 ], "prob": 15, "container-item": "bottle_twoliter" },
-              { "item": "sparkling_pomegranate", "charges": [ 1, -1 ], "prob": 15, "container-item": "bottle_twoliter" }
+              {
+                "item": "sparkling_pomegranate",
+                "charges": [ 1, -1 ],
+                "prob": 15,
+                "container-item": "bottle_twoliter"
+              }
             ],
             "prob": 15
           }
