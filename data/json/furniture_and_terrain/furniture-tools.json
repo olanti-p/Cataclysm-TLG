@@ -377,7 +377,7 @@
     "required_str": -1,
     "examine_action": "kiln_full",
     "flags": [ "NOITEM", "SEALED", "CONTAINER", "FIRE_CONTAINER", "SUPPRESS_SMOKE", "PLACE_ITEM", "EASY_DECONSTRUCT", "MINEABLE" ],
-    "deconstruct": { "items": [ { "item": "rock", "count": [ 30, 30 ] } ] },
+    "deconstruct": { "items": [ { "item": "rock", "count": 30 } ] },
     "bash": {
       "str_min": 25,
       "str_max": 180,
@@ -506,7 +506,7 @@
     "flags": [ "TRANSPARENT", "SEALED", "ALLOW_FIELD_EFFECT", "CONTAINER", "NOITEM", "EASY_DECONSTRUCT", "MINEABLE" ],
     "crafting_pseudo_item": "fake_char_smoker",
     "examine_action": "smoker_options",
-    "deconstruct": { "items": [ { "item": "rock", "count": 8 }, { "item": "stick", "count": [ 16, 16 ] } ] },
+    "deconstruct": { "items": [ { "item": "rock", "count": 8 }, { "item": "stick", "count": 16 } ] },
     "bash": {
       "str_min": 18,
       "str_max": 50,
@@ -1652,7 +1652,7 @@
       "str_max": 40,
       "sound": "smash!",
       "sound_fail": "whump.",
-      "items": [ { "item": "grip_hook", "count": [ 4, 4 ] }, { "item": "rope_30", "count": [ 1, 1 ] } ]
+      "items": [ { "item": "grip_hook", "count": 4 }, { "item": "rope_30", "count": 1 } ]
     }
   },
   {
@@ -1694,7 +1694,7 @@
       "str_max": 10,
       "sound": "rrrrip!",
       "sound_fail": "twang.",
-      "items": [ { "item": "rope_30", "count": [ 1, 1 ] } ]
+      "items": [ { "item": "rope_30", "count": 1 } ]
     }
   },
   {

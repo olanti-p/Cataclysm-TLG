@@ -230,13 +230,13 @@
     "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE" ],
     "deconstruct": {
       "items": [
-        { "item": "foot_crank", "count": [ 1, 1 ] },
+        { "item": "foot_crank", "count": 1 },
         { "item": "plastic_chunk", "count": [ 8, 10 ] },
         { "item": "scrap", "count": [ 2, 4 ] },
         { "item": "chain", "count": 1 },
         { "item": "pipe", "count": [ 4, 5 ] },
-        { "item": "saddle", "count": [ 1, 1 ] },
-        { "item": "wheel_small", "count": [ 1, 1 ] },
+        { "item": "saddle", "count": 1 },
+        { "item": "wheel_small", "count": 1 },
         { "item": "small_lcd_screen", "count": 1 },
         { "item": "processor", "count": 1 },
         { "item": "RAM", "count": 1 },
@@ -277,13 +277,13 @@
     "crafting_pseudo_item": "pseudo_ergometer_mechanical",
     "deconstruct": {
       "items": [
-        { "item": "foot_crank", "count": [ 1, 1 ] },
+        { "item": "foot_crank", "count": 1 },
         { "item": "plastic_chunk", "count": [ 8, 10 ] },
         { "item": "scrap", "count": [ 2, 4 ] },
         { "item": "chain", "count": 1 },
         { "item": "pipe", "count": [ 4, 5 ] },
-        { "item": "saddle", "count": [ 1, 1 ] },
-        { "item": "wheel_small", "count": [ 1, 1 ] },
+        { "item": "saddle", "count": 1 },
+        { "item": "wheel_small", "count": 1 },
         { "item": "nail", "charges": [ 6, 8 ] }
       ]
     },

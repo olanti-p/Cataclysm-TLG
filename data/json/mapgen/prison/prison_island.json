@@ -393,9 +393,9 @@
               { "item": "onion", "prob": 95, "count": [ 10, 20 ] },
               { "item": "cabbage", "prob": 95, "count": [ 10, 20 ] },
               { "item": "corn", "prob": 95, "count": [ 10, 20 ] },
-              { "item": "garlic", "prob": 95, "count": [ 10, 10 ] },
+              { "item": "garlic", "prob": 95, "count": 10 },
               { "item": "apple", "prob": 95, "count": [ 10, 20 ] },
-              { "item": "lemon", "prob": 95, "count": [ 10, 10 ] }
+              { "item": "lemon", "prob": 95, "count": 10 }
             ]
           },
           "chance": 95

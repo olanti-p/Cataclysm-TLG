@@ -1580,7 +1580,7 @@
     "subtype": "collection",
     "//": "100 g of tea",
     "container-item": "bag_plastic",
-    "entries": [ { "item": "tea_raw", "container-item": "null", "count-min": 2, "count-max": 33 } ]
+    "entries": [ { "item": "tea_raw", "container-item": "null", "count": [ 2, 33 ] } ]
   },
   {
     "type": "item_group",
@@ -1588,7 +1588,7 @@
     "subtype": "collection",
     "//": "100 g of tea",
     "container-item": "bag_plastic",
-    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count-min": 2, "count": 33 } ]
+    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count": [ 2, 33 ] } ]
   },
   {
     "type": "item_group",
@@ -1604,7 +1604,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_3l_glass_sealed",
-    "entries": [ { "item": "bee_balm", "count-min": 1, "count-max": 12 } ]
+    "entries": [ { "item": "bee_balm", "count": [ 1, 12 ] } ]
   },
   {
     "type": "item_group",
@@ -1612,7 +1612,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_3l_glass_sealed",
-    "entries": [ { "item": "raw_burdock", "count-min": 1 } ]
+    "entries": [ { "item": "raw_burdock", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1620,7 +1620,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "tea_raw", "container-item": "null", "count-min": 10, "count-max": 40 } ]
+    "entries": [ { "item": "tea_raw", "container-item": "null", "count": [ 10, 40 ] } ]
   },
   {
     "type": "item_group",
@@ -1628,7 +1628,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count-min": 10, "count-max": 40 } ]
+    "entries": [ { "item": "tea_green_raw", "container-item": "null", "count": [ 10, 40 ] } ]
   },
   {
     "type": "item_group",
@@ -1636,7 +1636,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "wild_herbs", "count-min": 20 } ]
+    "entries": [ { "item": "wild_herbs", "count": [ 20, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1644,7 +1644,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "raw_dandelion", "count-min": 1 } ]
+    "entries": [ { "item": "raw_dandelion", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1652,7 +1652,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "milk_powder", "container-item": "null", "count-min": 1, "count-max": 8 } ]
+    "entries": [ { "item": "milk_powder", "container-item": "null", "count": [ 1, 8 ] } ]
   },
   {
     "type": "item_group",
@@ -1660,7 +1660,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
-    "entries": [ { "item": "cinnamon", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "cinnamon", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1669,14 +1669,14 @@
     "//": "This group was created automatically and may contain errors.",
     "container-item": "jar_glass_sealed",
     "on_overflow": "spill",
-    "entries": [ { "item": "sugar", "container-item": "null", "count-min": 10, "count-max": 140 } ]
+    "entries": [ { "item": "sugar", "container-item": "null", "count": [ 10, 140 ] } ]
   },
   {
     "type": "item_group",
     "id": "sugar_packed",
     "subtype": "collection",
     "container-item": "bag_paper_powder",
-    "entries": [ { "item": "sugar", "count-min": 10, "count-max": 90 } ]
+    "entries": [ { "item": "sugar", "count": [ 10, 90 ] } ]
   },
   {
     "type": "item_group",
@@ -1692,7 +1692,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
-    "entries": [ { "item": "hotdogs_cooked", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "hotdogs_cooked", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1700,7 +1700,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
-    "entries": [ { "item": "hotdogs_newyork", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "hotdogs_newyork", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1708,7 +1708,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "box_small",
-    "entries": [ { "item": "crab_cakes", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "crab_cakes", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1716,7 +1716,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "box_small",
-    "entries": [ { "item": "stuffed_clams", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "stuffed_clams", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1842,7 +1842,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "plastic_bag_vac",
-    "entries": [ { "item": "oyster_crackers", "container-item": "null", "count-min": 1 } ]
+    "entries": [ { "item": "oyster_crackers", "container-item": "null", "count": [ 1, -1 ] } ]
   },
   {
     "type": "item_group",
@@ -1994,7 +1994,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "carton_egg",
-    "entries": [ { "item": "egg_bird_unfert", "count-min": 6, "count-max": 12 } ]
+    "entries": [ { "item": "egg_bird_unfert", "count": [ 6, 12 ] } ]
   },
   {
     "type": "item_group",
@@ -2010,7 +2010,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "wrapper",
-    "entries": [ { "item": "butter", "container-item": "null", "count-min": 8, "count-max": 64 } ]
+    "entries": [ { "item": "butter", "container-item": "null", "count": [ 8, 64 ] } ]
   },
   {
     "type": "item_group",

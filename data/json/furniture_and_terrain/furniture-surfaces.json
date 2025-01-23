@@ -183,7 +183,7 @@
       "str_max": 10,
       "sound": "smash!",
       "sound_fail": "whump.",
-      "items": [ { "item": "leather_tarp", "count": [ 1, 1 ] } ]
+      "items": [ { "item": "leather_tarp", "count": 1 } ]
     },
     "examine_action": "workbench",
     "workbench": { "multiplier": 0.85, "mass": 500000, "volume": "500 L" }
@@ -277,7 +277,7 @@
       "str_max": 10,
       "sound": "smash!",
       "sound_fail": "whump.",
-      "items": [ { "item": "fiber_mat", "count": [ 1, 1 ] } ]
+      "items": [ { "item": "fiber_mat", "count": 1 } ]
     },
     "examine_action": "workbench",
     "workbench": { "multiplier": 0.85, "mass": 500000, "volume": "500 L" }

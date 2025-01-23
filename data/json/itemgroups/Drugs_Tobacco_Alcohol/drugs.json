@@ -185,7 +185,7 @@
       { "group": "naproxen_ad_group", "prob": 50 },
       { "group": "codeine_ad_group", "prob": 60 },
       { "group": "tramadol_ad_group", "prob": 60 },
-      { "item": "morphine", "count-min": 1, "count-max": 12, "container-item": "null", "prob": 10 },
+      { "item": "morphine", "count": [ 1, 12 ], "container-item": "null", "prob": 10 },
       { "group": "oxycodone_ad_group", "prob": 200 }
     ]
   },
@@ -255,8 +255,8 @@
     "subtype": "distribution",
     "entries": [
       { "group": "bfipowder_bottle_plastic_5_60", "prob": 100 },
-      { "item": "dayquil", "count-min": 1, "count-max": 30, "container-item": "bottle_plastic", "prob": 50 },
-      { "item": "nyquil", "count-min": 1, "count-max": 30, "container-item": "bottle_plastic", "prob": 50 }
+      { "item": "dayquil", "count": [ 1, 30 ], "container-item": "bottle_plastic", "prob": 50 },
+      { "item": "nyquil", "count": [ 1, 30 ], "container-item": "bottle_plastic", "prob": 50 }
     ]
   },
   {

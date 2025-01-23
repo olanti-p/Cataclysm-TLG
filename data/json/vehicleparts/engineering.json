@@ -170,7 +170,7 @@
     "breaks_into": [
       { "item": "pipe", "count": [ 4, 12 ] },
       { "item": "scrap", "count": [ 8, 24 ] },
-      { "item": "jack", "count": [ 1, 1 ] }
+      { "item": "jack", "count": 1 }
     ],
     "qualities": [ [ "SELF_JACK", 17 ] ],
     "//": "30 cm of weld per quadrant of damage and 120 cm weld to install",

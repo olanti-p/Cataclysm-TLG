@@ -346,7 +346,7 @@
     "categories": [ "movement" ],
     "damage_modifier": 80,
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 2, 2 ] },
+      { "item": "steel_lump", "count": 2 },
       { "item": "steel_chunk", "count": [ 1, 2 ] },
       { "item": "scrap", "count": [ 1, 5 ] }
     ],
