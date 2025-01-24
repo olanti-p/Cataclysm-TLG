@@ -1,36 +1,36 @@
 # Game Balance
 # Stat system scaling:
-Ranges below will be using strength as the example since it's the easiest to itemize, but what the numbers mean is equivalent between all stats.
+0 - Helpless:  Totally incapacitated.  (0 STR or DEX - cannot move. 0 INT or PER - unconscious and cannot wake. Not currently implemented so for now 1 is the minimum.)
+1-2 - Feeble:  Can barely function.  (Should only happen as the result of injury or other effects. Permanent 1-2s would likely require assisted living.)
+3-4 - Disabled:  Severely impaired.  (Lowest chargen stat. Could represent a permanent disability or transitory effects of e.g. extreme pain or drunkenness.)
+5-6 - Weak:  Barely adequate.  (Noticably worse off than most people, the lowest limit of what would be "typical" in the pre-Cataclysm workplace.)
+7-8 - Below Average:  A little worse than most.  (Not noticably worse off. A nominally healthy but inactive adult, or a teen who skips class too often)
+9-10  Average:  Typical for an adult human.  (You are neither good nor bad at this. A person who goes for a run two or three times a month.)
+11-12 Above Average:  A little better than most.  (Good but not especially great, like someone who reads regularly or goes to the gym 1 to 2 times weekly.)
+13-14 Great:  Head and shoulders above the rest.  (Someone who is obviously quite talented. The smartest guy in a small town. A minor league athlete.)
+15-16 World-Class:  Exceptional, with few peers.  (15 = chargen max. Good enough to compete in the major leagues or Olympics.)
+17-18 Peak:  The absolute limit of human potential.  (Would have been one of the best in the world, if not THE best.)
+19-20 Superhuman:  Better than anyone ever was.  (No human ever reached this level before bionics and mutagens.)
+21-22 Freakish:  Beyond what is natural.  (Obviously capable of incredible feats.)
+23-24 Monstrous:  Frightening to behold.  (Capabilities that even the most gullible person could not mistake for human.)
+25-26 Impossible:  Tremendously capable.  (At this point you are flipping over small cars and doing calculus without scratch paper.)
+27-28 Unbelievable:  Out of this world.  (You get the idea.)
+29-30 Transcendant:  Phenomenal.
+31+ Post-human:  Beyond what was.
 
-Minimal stat: 0 (Should only happen due to penalties, instant failure in most scenarios.  Basically actively dying, almost unable to even carry themselves.)
 
-Very low stat: 4 (Lowest in chargen.  Either an average person who's injured or someone who's naturally very dainty and sedentary.)
-
-Moderately low stat: 6 (Below average.  Sedentary job, not very active.)
-
-Nominal stat: 8 ("Average" human.  Mostly sedentary job, somewhat active but not particularly a gym-goer, etc.)
-
-Moderately high stat: 10 (Has a decent bit of strength.  Active job and/or works out consistently.)
-
-Very high stat: 14 (Very strong.  Job is either based around fitness or they're dedicated to building a lot of muscle.  Should require a lot of effort to maintain.)
-
-Maximal human stat: 20 (Extremely strong.  People who spend their whole lives dedicated to being as strong as possible, and with good genetics too.  Olympic powerlifters, record-setting strongmen, etc.)
-
-Superhuman: >20 (Anything beyond this should require bionics or mutations.)
-
-
-# Skill system scaling:
-Minimum skill: 0 (You have no idea where to even start.  Even following clearly written directions is a challenge because you don't know basic terms and procedures.)
-
-Beginning hobbyist level: 1-2 (You've done this enough that you understand how to do basic things, know the tools that are used, and follow the language.)
-
-Proficient hobbyist level: 3-4 (You've used the tools for a while and they don't feel unfamiliar to you.  Given enough directions you can do most things.)
-
-Early professional level: 5-6 (You've been using these tools a while and know not just how to use them, but how to do some impressive stuff, and some of the more efficient shortcuts and common pitfalls.)
-
-Expert professional level: 7-8 (There's not much you don't know about this stuff and you'd be genuinely impressed if someone knew tricks you don't.)
-
-Master level: 9-10 (While there may be very specific tricks you don't know yet, overall you pretty much have no room for major improvement in this skill.  Sure, you'll continue to get better, but only in subtle ways noticeable to you, not anything major.)
+# Skill System Scaling:
+0 - Never Practiced.  (You've never done any cooking that didn't involve a microwave, and even then only rarely.)
+1 - Basic Understanding.  (You drove around the block a few times while your dad reminded you to check your rear view mirror.)
+2 - Elementary Familiarity.  (You spent a year on the swim team back in high school.)
+3 - Employable.  (You can design a website, but you're not writing browser extensions by hand.)
+4 - Skilled.  (You learned how to clean, maintain, and operate a rifle during Army basic training, and have had your share of experience since the world ended.)
+5 - Journeyman.  (You're a journeyman electrician with years of education and experience.)
+6 - Esteemed Professional.  (You were a backup dancer for a famous pop star.)
+7 - Major Talent.  (You represented your country in archery during the last Olympics and placed fourth.)
+8 - Top of the Field.  (Your scientific abilities were so renowned that the government kidnapped you and forced you to work in an underground lab.)
+9 - Phenom.  (If the world hadn't ended, your contributions to the field of medicine could have been considered invaluable for decades to come.)
+10 - Legendary.  (If you are not literaly Miyamoto Musashi, then you are pretty sure you could take him in a duel.)
 
 
 # Monster melee skill scaling:

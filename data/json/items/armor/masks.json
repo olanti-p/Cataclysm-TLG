@@ -224,8 +224,7 @@
     "material_thickness": 2,
     "environmental_protection": 1,
     "flags": [ "WATER_FRIENDLY", "STURDY" ],
-    "armor": [ { "encumbrance": 10, "coverage": 95, "covers": [ "eyes", "mouth" ],
-    "rigid_layer_only": true } ]
+    "armor": [ { "encumbrance": 10, "coverage": 95, "covers": [ "eyes", "mouth" ], "rigid_layer_only": true } ]
   },
   {
     "id": "mask_rioter",

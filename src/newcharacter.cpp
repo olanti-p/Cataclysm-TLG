@@ -1192,7 +1192,9 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
             u.recalc_hp();
             u.set_stored_kcal( u.get_healthy_kcal() );
             description_str =
-                string_format( _( "Base HP: %d" ), u.get_part_hp_max( bodypart_id( "head" ) ) )
+                colorize( string_format( _( "%s\n" ), u.as_character()->get_stat_descriptor( u.get_str() ) ),
+                          c_light_blue )
+                + string_format( _( "\nBase HP: %d" ), u.get_part_hp_max( bodypart_id( "head" ) ) )
                 + string_format( _( "\nCarry weight: %.1f %s" ), convert_weight( u.weight_capacity() ),
                                  weight_units() )
                 + string_format( _( "\nResistance to knock down effect when hit: %.1f" ), u.stability_roll() )
@@ -1210,14 +1212,13 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
                        "\n- Reload speed for weapons using muscle power to reload"
                        "\n- Pull strength of some mutations"
                        "\n- Resistance for being pulled or grabbed by some monsters"
-                       "\n- Speed of corpses pulping"
+                       "\n- Speed and effectiveness of smashing corpses and terrain"
                        "\n- Speed and effectiveness of prying things open, chopping wood, and mining"
                        "\n- Chance of escaping grabs and traps"
                        "\n- Power produced by muscle-powered vehicles"
                        "\n- Most aspects of melee combat"
-                       "\n- Effectiveness of smashing furniture or terrain"
                        "\n- Resistance to many diseases and poisons"
-                       "\n- Ability to drag heavy objects and grants bonus to speed when dragging them"
+                       "\n- Ability to drag heavy objects"
                        "\n- Ability to wield heavy weapons with one hand"
                        "\n- Ability to manage gun recoil"
                        "\n- Duration of action of various drugs and alcohol" ),
@@ -1228,7 +1229,9 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
         case 1: {
             description_str =
                 colorize(
-                    string_format( _( "Melee to-hit bonus: +%.2f" ), u.get_melee_hit_base() )
+                    colorize( string_format( _( "%s\n" ), u.as_character()->get_stat_descriptor( u.get_dex() ) ),
+                              c_light_blue )
+                    + string_format( _( "\nMelee to-hit bonus: +%.2f" ), u.get_melee_hit_base() )
                     + string_format( _( "\nThrowing penalty per target's dodge: +%d" ),
                                      u.throw_dispersion_per_dodge( false ) ),
                     COL_STAT_BONUS );
@@ -1244,8 +1247,7 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
                 + _( "\n\nAffects:" )
                 + colorize(
                     _( "\n- Effectiveness of lockpicking"
-                       "\n- Resistance for being grabbed by some monsters"
-                       "\n- Chance of escaping grabs and traps"
+                       "\n- Chance of avoiding or escaping grabs and traps"
                        "\n- Effectiveness of disarming traps"
                        "\n- Chance of success when manipulating with gun modifications"
                        "\n- Effectiveness of repairing and modifying clothes and armor"
@@ -1254,9 +1256,7 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
                        "\n- Throwing speed"
                        "\n- Aiming speed"
                        "\n- Speed and effectiveness of chopping wood with powered tools"
-                       "\n- Chance to avoid traps"
                        "\n- Chance to get better results when butchering corpses or cutting items"
-                       "\n- Chance of avoiding cuts on sharp terrain"
                        "\n- Chance of losing control of vehicle when driving"
                        "\n- Chance of damaging melee weapon on attack"
                        "\n- Damage from falling" ),
@@ -1267,9 +1267,11 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
         case 2: {
             const int read_spd = u.read_speed();
             description_str =
-                colorize( string_format( _( "Read times: %d%%" ), read_spd ),
-                          ( read_spd == 100 ? COL_STAT_NEUTRAL :
-                            ( read_spd < 100 ? COL_STAT_BONUS : COL_STAT_PENALTY ) ) )
+                colorize( string_format( _( "%s\n" ), u.as_character()->get_stat_descriptor( u.get_int() ) ),
+                          c_light_blue )
+                + colorize( string_format( _( "\nRead times: %d%%" ), read_spd ),
+                            ( read_spd == 100 ? COL_STAT_NEUTRAL :
+                              ( read_spd < 100 ? COL_STAT_BONUS : COL_STAT_PENALTY ) ) )
                 + string_format( _( "\nPersuade/lie skill: %i" ), u.persuade_skill() )
                 + colorize( string_format( _( "\nCrafting bonus: %2d%%" ), u.get_int() ),
                             COL_STAT_BONUS )
@@ -1280,7 +1282,6 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
                        "\n- Chance of success when installing bionics"
                        "\n- Chance of success when manipulating with gun modifications"
                        "\n- Chance to learn a recipe when crafting from a book"
-                       "\n- Chance to learn martial arts techniques when using CQB bionic"
                        "\n- Chance of hacking computers and card readers"
                        "\n- Chance of successful robot reprogramming"
                        "\n- Chance of successful decrypting memory cards"
@@ -1294,22 +1295,23 @@ static std::string assemble_stat_details( avatar &u, const unsigned char sel )
         case 3: {
             if( u.ranged_per_mod() > 0 ) {
                 description_str =
-                    colorize( string_format( _( "Aiming penalty: -%d" ), u.ranged_per_mod() ),
-                              COL_STAT_PENALTY );
+                    colorize( string_format( _( "%s\n" ), u.as_character()->get_stat_descriptor( u.get_per() ) ),
+                              c_light_blue )
+                    + colorize( string_format( _( "\nAiming penalty: -%d" ), u.ranged_per_mod() ),
+                                COL_STAT_PENALTY );
             }
             description_str +=
                 string_format( _( "\nPersuade/lie skill: %i" ), u.persuade_skill() )
                 + _( "\n\nAffects:" )
                 + colorize(
                     _( "\n- Speed of 'catching up' practical experience to theoretical knowledge"
-                       "\n- Time needed for safe cracking"
                        "\n- Sight distance on game map and overmap"
                        "\n- Effectiveness of stealing"
                        "\n- Throwing accuracy"
                        "\n- Chance of losing control of vehicle when driving"
-                       "\n- Chance of spotting camouflaged creatures"
-                       "\n- Effectiveness of lockpicking"
-                       "\n- Effectiveness of foraging"
+                       "\n- Chance of spotting hidden creatures"
+                       "\n- Speed and effectiveness of lockpicking"
+                       "\n- Speed and effectiveness of foraging"
                        "\n- Precision when examining wounds and using first aid skill"
                        "\n- Detection and disarming traps"
                        "\n- Morale bonus when playing a musical instrument"
