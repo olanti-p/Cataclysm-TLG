@@ -299,7 +299,7 @@ void Character::update_body( const time_point &from, const time_point &to )
             }
 
         } else if( rate < 0_turns ) {
-            // mutations can result in vitamins being generated (but never accumulated)
+            // Mutations can result in vitamins being generated (but never accumulated).
             int qty = ticks_between( from, to, -rate );
             if( qty > 0 ) {
                 vitamin_mod( v.first, qty );
@@ -308,14 +308,13 @@ void Character::update_body( const time_point &from, const time_point &to )
         if( calendar::once_every( 24_hours ) && v.first->type() == vitamin_type::VITAMIN ) {
             const int &vit_quantity = get_daily_vitamin( v.first, true );
             const int RDA = vitamin_RDA( v.first, vit_quantity );
-            if( RDA >= 50 ) {
-                mod_daily_health( 1, 200 );
-            }
-            if( RDA >= 90 ) {
+            // With three vitamins tracked, this essentially gives us three chances for a bonus.
+            // We average at about 2.6 points of lifestyle/day max.
+            if( ( RDA > 50 ) && ( rng( 1, 115 ) <= std::min( RDA, 100 ) ) ) {
                 mod_daily_health( 1, 200 );
             }
 
-            // once we've checked daily intake we should reset it
+            // Once we've checked daily intake we should reset it.
             reset_daily_vitamin( v.first );
         }
     }

@@ -668,8 +668,8 @@
       {
         "values": [
           { "value": "MENDING_MODIFIER", "multiply": 1 },
-          { "value": "REGEN_HP", "multiply": 0.5 },
-          { "value": "REGEN_HP_AWAKE", "multiply": 0.133 }
+          { "value": "REGEN_HP", "multiply": 0.45 },
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.12 }
         ]
       }
     ]
@@ -2310,7 +2310,7 @@
         "values": [
           { "value": "MENDING_MODIFIER", "multiply": 3 },
           { "value": "REGEN_HP", "multiply": 0.5 },
-          { "value": "REGEN_HP_AWAKE", "multiply": 0.44 }
+          { "value": "REGEN_HP_AWAKE", "multiply": 0.4 }
         ]
       }
     ]
@@ -2329,7 +2329,7 @@
       {
         "values": [
           { "value": "MENDING_MODIFIER", "multiply": 15 },
-          { "value": "REGEN_HP", "multiply": 1.5 },
+          { "value": "REGEN_HP", "multiply": 1.25 },
           { "value": "REGEN_HP_AWAKE", "multiply": 0.8 }
         ]
       }
