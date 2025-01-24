@@ -3289,6 +3289,7 @@ class Character : public Creature, public visitable
         int get_mutation_visibility_cap( const Character *observed ) const;
         /** Returns an enumeration of visible mutations with colors */
         std::string visible_mutations( int visibility_cap ) const;
+        std::string get_stat_descriptor( int stat_value );
         std::string get_throw_descriptor( int throwforce );
 
         player_activity get_destination_activity() const;

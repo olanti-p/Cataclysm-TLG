@@ -120,7 +120,8 @@ constexpr int MAX_AIM_COST = 10;
 constexpr int MAX_SKILL = 10;
 
 // Maximum (effective) level for a stat.
-constexpr int MAX_STAT = 14;
+// While 18 is the theoretical human maximum, the player is simply not that guy - yet.
+constexpr int MAX_STAT = 15;
 
 // Maximum range at which ranged attacks can be executed.
 constexpr int RANGE_HARD_CAP = 60;

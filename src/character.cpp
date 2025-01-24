@@ -671,6 +671,47 @@ void Character::randomize_height()
     init_height = clamp( x, Character::min_height(), Character::max_height() );
 }
 
+std::string Character::get_stat_descriptor( int stat_value )
+{
+    std::string stat_descriptor;
+    if( stat_value <= 0 ) {
+        stat_descriptor = _( "Helpless" );
+    } else if( stat_value <= 2 ) {
+        stat_descriptor = _( "Feeble" );
+    } else if( stat_value <= 4 ) {
+        stat_descriptor = _( "Disabled" );
+    } else if( stat_value <= 6 ) {
+        stat_descriptor = _( "Weak" );
+    } else if( stat_value <= 8 ) {
+        stat_descriptor = _( "Below Average" );
+    } else if( stat_value <= 10 ) {
+        stat_descriptor = _( "Average" );
+    } else if( stat_value <= 12 ) {
+        stat_descriptor = _( "Above Average" );
+    } else if( stat_value <= 14 ) {
+        stat_descriptor = _( "Great" );
+    } else if( stat_value <= 16 ) {
+        stat_descriptor = _( "World-Class" );
+    } else if( stat_value <= 18 ) {
+        stat_descriptor = _( "Peak" );
+    } else if( stat_value <= 20 ) {
+        stat_descriptor = _( "Superhuman" );
+    } else if( stat_value <= 22 ) {
+        stat_descriptor = _( "Freakish" );
+    } else if( stat_value <= 24 ) {
+        stat_descriptor = _( "Monstrous" );
+    } else if( stat_value <= 26 ) {
+        stat_descriptor = _( "Impossible" );
+    } else if( stat_value <= 28 ) {
+        stat_descriptor = _( "Unbelievable" );
+    } else if( stat_value <= 30 ) {
+        stat_descriptor = _( "Transcendant" );
+    } else {
+        stat_descriptor = _( "Post-Human" );
+    }
+    return stat_descriptor;
+}
+
 item_location Character::get_wielded_item() const
 {
     return const_cast<Character *>( this )->get_wielded_item();
