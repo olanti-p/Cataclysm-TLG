@@ -6468,7 +6468,7 @@ float Character::healing_rate_medicine( float at_rest_quality, const bodypart_id
     }
 
     if( get_lifestyle() > 0.0f ) {
-        rate_medicine *= 1.0f + get_lifestyle() / 200.0f;
+        rate_medicine *= 1.0f + get_lifestyle() / 220.0f;
     } else {
         rate_medicine *= 1.0f + get_lifestyle() / 400.0f;
     }
