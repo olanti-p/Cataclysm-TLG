@@ -309,7 +309,7 @@ void Character::update_body( const time_point &from, const time_point &to )
             const int &vit_quantity = get_daily_vitamin( v.first, true );
             const int RDA = vitamin_RDA( v.first, vit_quantity );
             // With three vitamins tracked, this essentially gives us three chances for a bonus.
-            if( RDA >= 75 && one_in( 3 ) ) {
+            if( RDA >= 90 && one_in( 2 ) ) {
                 mod_daily_health( 1, 200 );
             }
 
