@@ -117,14 +117,15 @@ struct tech_effect_data {
     efftype_id id;
     int duration;
     bool permanent;
+    int intensity;
     bool on_damage;
     int chance;
     std::string message;
     json_character_flag req_flag;
 
-    tech_effect_data( const efftype_id &nid, int dur, bool perm, bool ondmg,
+    tech_effect_data( const efftype_id &nid, int dur, bool perm, int inten, bool ondmg,
                       int nchance, std::string message, json_character_flag req_flag ) :
-        id( nid ), duration( dur ), permanent( perm ), on_damage( ondmg ),
+        id( nid ), duration( dur ), permanent( perm ), intensity( inten ), on_damage( ondmg ),
         chance( nchance ), message( std::move( message ) ), req_flag( req_flag ) {}
 };
 

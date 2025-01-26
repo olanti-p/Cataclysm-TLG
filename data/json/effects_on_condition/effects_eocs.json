@@ -123,5 +123,32 @@
       { "u_lose_effect": "glowing" },
       { "u_message": "The harmful liquid is washed away." }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "asphyxiation_to_hypoxia",
+    "recurrence": [ "1 seconds", "1 seconds" ],
+    "condition": {
+      "and": [
+        { "u_has_effect": "asphyxiation", "intensity": 5 }
+      ]
+    },
+    "effect": [
+      { "u_add_effect": "hypoxia", "duration": "2 seconds", "target_part": "torso" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "lose_asphyxiation",
+    "recurrence": [ "1 seconds", "1 seconds" ],
+    "condition": {
+      "and": [
+        { "u_has_effect": "asphyxiation", "intensity": 5 },
+        { "not": { "u_has_flag": "grab" } }
+      ]
+    },
+    "effect": [
+      { "u_lose_effect": "asphyxiation" }
+    ]
   }
 ]
