@@ -594,11 +594,19 @@
     "min_max_zlevel": [ 0, 0 ]
   },
   {
-    "id": "mx_poison_ivy_patch",
+    "id": "mx_poison_ivy_patch_field",
     "type": "map_extra",
     "name": { "str": "Poison Ivy Patch" },
     "description": "Poison ivy grows here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_poison_ivy_patch" },
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_poison_ivy_patch_field" },
+    "min_max_zlevel": [ 0, 0 ]
+  },
+  {
+    "id": "mx_poison_ivy_patch_forest",
+    "type": "map_extra",
+    "name": { "str": "Poison Ivy Patch" },
+    "description": "Poison ivy grows here.",
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_poison_ivy_patch_forest" },
     "min_max_zlevel": [ 0, 0 ]
   },
   {
