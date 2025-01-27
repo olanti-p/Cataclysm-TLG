@@ -97,7 +97,7 @@
           "and": [
             { "not": { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1" } },
             { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_lixa_sm_1", "value": "yes" } },
-            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_lixa_sm_1", "value": "no" } },
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_lixa_sm_1", "value": "no" } }
           ]
         },
         "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER"

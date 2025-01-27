@@ -790,7 +790,6 @@
       { "item": "vz58_p", "variant": "vz58_v", "prob": 5 },
       { "item": "type99", "variant": "type99", "contents-group": "type99_mods", "prob": 5, "charges": 0 },
       { "item": "type99_sniper", "contents-item": "arisaka_monopod", "prob": 2, "charges": 0 },
-      { "item": "famas", "prob": 5 },
       { "item": "m60_semi", "prob": 5 },
       { "item": "oa93", "prob": 3 },
       { "item": "steyr_aug", "prob": 5 },
