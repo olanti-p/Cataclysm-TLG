@@ -53,13 +53,6 @@
   },
   {
     "type": "technique",
-    "id": "GRAB",
-    "name": "",
-    "//": "not implemented -> empty name",
-    "messages": [ "You grab %s!", "<npcname> grabs %s!" ]
-  },
-  {
-    "type": "technique",
     "id": "SPIN",
     "name": "Spinning Strike",
     "melee_allowed": true,
@@ -126,6 +119,7 @@
             { "not": { "npc_has_species": "KRAKEN" } }
           ]
         },
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
         {
           "or": [
             {
@@ -848,9 +842,10 @@
     "crit_tec": true,
     "knockback_dist": 1,
     "stun_dur": 1,
-    "//condition": "Similar size and no flying or blobs",
+    "//condition": "Similar size and no flying or blobs.",
     "condition": {
       "and": [
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
         { "math": [ "u_val('size')", ">=", "n_val('size')" ] },
         { "not": { "npc_has_effect": "downed" } },
         { "not": { "npc_has_effect": "stunned" } },
@@ -869,6 +864,7 @@
     "unarmed_allowed": true,
     "condition": {
       "and": [
+        { "not": { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] } },
         { "math": [ "u_val('size') + 1", ">=", "n_val('size')" ] },
         { "math": [ "u_val('size') - 1", "<=", "n_val('size')" ] },
         { "or": [ { "npc_bodytype": "angel" }, { "npc_bodytype": "human" } ] },
@@ -1441,6 +1437,8 @@
       "and": [
         { "math": [ "u_val('size')", "<=", "n_val('size')" ] },
         { "math": [ "u_val('size') + 1", ">=", "n_val('size')" ] },
+        { "npc_has_flag": "GRAB" },
+        { "u_has_flag": "GRAB_FILTER" },
         { "not": { "npc_has_effect": "downed" } },
         { "npc_bodytype": "human" },
         { "or": [ { "not": { "npc_has_flag": "FLIES" } }, { "npc_has_flag": "DISABLE_FLIGHT" } ] }
@@ -1474,6 +1472,8 @@
       "and": [
         { "math": [ "u_val('size')", "<=", "n_val('size')" ] },
         { "math": [ "u_val('size') + 1", ">=", "n_val('size')" ] },
+        { "npc_has_flag": "GRAB" },
+        { "u_has_flag": "GRAB_FILTER" },
         { "not": { "npc_has_effect": "downed" } },
         { "npc_bodytype": "human" },
         { "or": [ { "not": { "npc_has_flag": "FLIES" } }, { "npc_has_flag": "DISABLE_FLIGHT" } ] }
@@ -1499,6 +1499,8 @@
       "and": [
         { "math": [ "u_val('size')", "<=", "n_val('size')" ] },
         { "math": [ "u_val('size') + 1", ">=", "n_val('size')" ] },
+        { "npc_has_flag": "GRAB" },
+        { "u_has_flag": "GRAB_FILTER" },
         { "not": { "npc_has_effect": "downed" } },
         { "npc_bodytype": "human" },
         { "or": [ { "not": { "npc_has_flag": "FLIES" } }, { "npc_has_flag": "DISABLE_FLIGHT" } ] }
@@ -2517,10 +2519,10 @@
     "type": "technique",
     "id": "tec_pankration_grabknee",
     "name": "Grab and Knee",
-    "messages": [ "You grab and knee %s", "<npcname> grabs and knees %s!" ],
+    "messages": [ "You knee %s", "<npcname> knees %s!" ],
     "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
     "unarmed_allowed": true,
-    "condition": { "npc_has_effect": "downed" },
+    "condition": { "and": [ { "npc_has_flag": "GRAB" }, { "u_has_flag": "GRAB_FILTER" } ] },
     "condition_desc": "* Only works on a <info>downed</info> target",
     "weighting": 3,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
@@ -2533,7 +2535,7 @@
     "messages": [ "You disarm %s with an arm lock", "<npcname> disarms %s with an arm lock!" ],
     "skill_requirements": [ { "name": "unarmed", "level": 4 } ],
     "unarmed_allowed": true,
-    "condition": { "npc_has_effect": "downed" },
+    "condition": { "and": [ { "npc_has_flag": "GRAB" }, { "u_has_flag": "GRAB_FILTER" } ] },
     "condition_desc": "* Only works on a <info>downed</info> target",
     "crit_ok": true,
     "weighting": 3,
@@ -2547,7 +2549,7 @@
     "type": "technique",
     "id": "tec_pankration_grabthrow",
     "name": "Grab and Throw",
-    "messages": [ "You grab and throw %s", "<npcname> grabs and throws %s!" ],
+    "messages": [ "You throw %s", "<npcname> throws %s!" ],
     "skill_requirements": [ { "name": "unarmed", "level": 5 } ],
     "unarmed_allowed": true,
     "weighting": 3,
@@ -2565,6 +2567,7 @@
         { "or": [ { "not": { "npc_has_flag": "FLIES" } }, { "npc_has_flag": "DISABLE_FLIGHT" } ] },
         {
           "or": [
+            { "and": [ { "npc_has_flag": "GRAB" }, { "u_has_flag": "GRAB_FILTER" } ] },
             {
               "and": [
                 { "npc_has_flag": "GRAB_FILTER" },
@@ -3384,6 +3387,7 @@
     "messages": [ "You lurch, and your wild swing hits %s", "<npcname> lurches, and hits %s!" ],
     "unarmed_allowed": true,
     "crit_ok": true,
+    "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } } ] },
     "mult_bonuses": [
       { "stat": "damage", "type": "bash", "scale": 1.2 },
       { "stat": "damage", "type": "cut", "scale": 1.2 },
@@ -3411,6 +3415,7 @@
     "unarmed_allowed": true,
     "crit_tec": true,
     "aoe": "spin",
+    "condition": { "and": [ { "not": { "u_has_flag": "GRAB_FILTER" } }, { "not": { "u_has_flag": "GRAB" } } ] },
     "mult_bonuses": [
       { "stat": "movecost", "scale": 1.5 },
       { "stat": "damage", "type": "bash", "scale": 1.3 },
@@ -3418,6 +3423,31 @@
       { "stat": "damage", "type": "stab", "scale": 1.3 }
     ],
     "attack_vectors_random": [ "HAND", "FOOT" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_zuiquan_throw",
+    "name": "Drunken Fall",
+    "unarmed_allowed": true,
+    "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+    "//condition": "Humanoids of similar size and no flying, must be grappling",
+    "condition": {
+      "and": [
+        { "math": [ "u_val('size') + 1", ">=", "n_val('size')" ] },
+        { "math": [ "n_val('size')", "!=", "1" ] },
+        { "not": { "npc_has_effect": "downed" } },
+        { "not": { "u_has_effect": "downed" } },
+        { "and": [ { "u_has_flag": "GRAB_FILTER" }, { "npc_has_flag": "GRAB" } ] },
+        { "or": [ { "npc_bodytype": "human" }, { "npc_bodytype": "angel" } ] },
+        { "or": [ { "not": { "npc_has_flag": "FLIES" } }, { "npc_has_flag": "DISABLE_FLIGHT" } ] }
+      ]
+    },
+    "tech_effects": [ { "id": "downed", "chance": 100, "duration": 100, "hit_self": true } ],
+    "condition_desc": "* Only works on a <info>non-downed humanoid</info> target of <info>similar or smaller</info> size incapable of flight",
+    "down_dur": 2,
+    "messages": [ "You throw yourself down, dragging %s with you", "<npcname> falls, dragging %s down as well!" ],
+    "description": "Down 2 turns, min 3 melee",
+    "attack_vectors": [ "GRAPPLE" ]
   },
   {
     "type": "technique",
@@ -5982,5 +6012,50 @@
       { "stat": "movecost", "scaling-stat": "melee", "scale": -1.25 },
       { "stat": "movecost", "scaling-stat": "dex", "scale": -0.5 }
     ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_brawl_strangle",
+    "name": "Strangle",
+    "messages": [ "You strangle %s", "<npcname> strangles %s!" ],
+    "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+    "unarmed_allowed": true,
+    "crit_ok": true,
+    "condition": {
+      "and": [
+        { "math": [ "u_val('size') + 1", ">=", "n_val('size')" ] },
+        { "npc_has_flag": "GRAB" },
+        { "u_has_flag": "GRAB_FILTER" },
+        {
+          "and": [
+            { "not": { "npc_has_species": "ZOMBIE" } },
+            { "not": { "npc_has_species": "NETHER" } },
+            { "not": { "npc_has_species": "NETHER_EMANATION" } },
+            { "not": { "npc_has_species": "LEECH_PLANT" } },
+            { "not": { "npc_has_species": "MIGO" } },
+            { "not": { "npc_has_species": "SLIME" } },
+            { "not": { "npc_has_species": "FUNGUS" } },
+            { "not": { "npc_has_species": "PLANT" } },
+            { "not": { "npc_has_species": "ROBOT" } },
+            { "not": { "npc_has_species": "HALLUCINATION" } },
+            { "not": { "npc_has_species": "HORROR" } },
+            { "not": { "npc_has_species": "ABERRATION" } },
+            { "not": { "npc_has_species": "KRAKEN" } },
+            { "not": { "npc_has_flag": "AQUATIC" } },
+            { "not": { "npc_has_flag": "AMPHIBIOUS" } },
+            { "not": { "npc_has_flag": "NO_BREATHE" } },
+            { "not": { "and": [ { "npc_has_flag": "GILLS" }, "npc_is_underwater" ] } }
+          ]
+        }
+      ]
+    },
+    "condition_desc": "* Only works on a <info>mundane</info> target of <info>similar or smaller</info> size",
+    "tech_effects": [ { "id": "choking", "chance": 100, "duration": 200, "on_damage": false, "message": "%s struggles to breathe!" } ],
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 0.2 },
+      { "stat": "damage", "type": "cut", "scale": 0.2 },
+      { "stat": "damage", "type": "stab", "scale": 0.0 }
+    ],
+    "attack_vectors": [ "HAND" ]
   }
 ]

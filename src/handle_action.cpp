@@ -750,7 +750,7 @@ static void grab()
         int grab_strength = 1 + you.get_arm_str() + you.get_skill_level( skill_unarmed );
         Creature *rawcreature = creatures.creature_at( grabp );
         std::shared_ptr<Creature> victimptr( rawcreature, []( Creature * ) {} );
-        // TODO: Make neutral NPCs tolerant of a small amount of grabbing.
+        // TODO: Make neutral NPCs tolerant of a small amount of grabbing, especially if they're incapacitated.
         if( creatures.creature_at( grabp )->is_npc() &&
             !creatures.creature_at( grabp )->as_npc()->is_player_ally() &&
             !creatures.creature_at( grabp )->as_npc()->is_enemy() ) {
@@ -771,10 +771,10 @@ static void grab()
             int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(),
                             you.as_character()->hit_roll() );
             if( hitspread < 0 ) {
-                add_msg( _( "You reach for %s, but fail to make contact!" ), z->disp_name() );
+                add_msg( m_warning, _( "You reach for %s, but fail to make contact!" ), z->disp_name() );
                 return;
             }
-            add_msg( _( "You grab the %s." ), z->name() );
+            add_msg( m_good, _( "You grab the %s." ), z->name() );
             if( rng( 0, 100 ) <= static_cast<int>( z->type->def_chance ) ) {
                 z->type->sp_defense( *z, you.as_character(), nullptr );
             }
@@ -788,14 +788,14 @@ static void grab()
                 int hitspread = creatures.creature_at( grabp )->deal_melee_attack( you.as_character(),
                                 you.as_character()->hit_roll() );
                 if( hitspread < 0 ) {
-                    add_msg( _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
+                    add_msg( m_warning, _( "You reach for %s, but fail to make contact!" ), guy->disp_name() );
                     return;
                 }
             }
             // Need to target a limb since this is a character and not a monster
             // TODO: Smarter limb targeting. Make sure we can't grab already-grabbed BPs
             const bodypart_id &bp = guy->random_body_part( true );
-            add_msg( _( "You grab %1s by the %2s." ), guy->disp_name(), bp->name );
+            add_msg( m_good, _( "You grab %1s by the %2s." ), guy->disp_name(), bp->name );
             guy->add_effect( effect_grabbed, 1_days, bp, true, grab_strength );
             you.add_effect( effect_grabbing, 1_days, true, 1 );
             you.grab_1.set( victimptr, grab_strength, bp );
