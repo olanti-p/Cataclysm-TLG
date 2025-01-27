@@ -119,13 +119,15 @@ struct tech_effect_data {
     bool permanent;
     int intensity;
     bool on_damage;
+    bool hit_self;
     int chance;
     std::string message;
     json_character_flag req_flag;
 
-    tech_effect_data( const efftype_id &nid, int dur, bool perm, int inten, bool ondmg,
+    tech_effect_data( const efftype_id &nid, int dur, bool perm, int inten, bool ondmg, bool hitself,
                       int nchance, std::string message, json_character_flag req_flag ) :
         id( nid ), duration( dur ), permanent( perm ), intensity( inten ), on_damage( ondmg ),
+        hit_self( hitself ),
         chance( nchance ), message( std::move( message ) ), req_flag( req_flag ) {}
 };
 
@@ -206,7 +208,6 @@ class ma_technique
 
         /** All kinds of bonuses by types to damage, hit etc. */
         bonus_container bonuses;
-
         std::vector<tech_effect_data> tech_effects;
 
         float damage_bonus( const Character &u, const damage_type_id &type ) const;
