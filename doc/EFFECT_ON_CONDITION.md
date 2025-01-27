@@ -476,7 +476,7 @@ alpha talker has bodytype `migo` , and beta has bodytype `human`
 #### Examples
 Checks do alpha talker has `u_met_sadie` variable
 ```json
-{ "u_has_var": "u_met_sadie", "type": "general", "context": "meeting", "value": "yes" }
+{ "u_has_var": "general_meeting_u_met_sadie", "value": "yes" }
 ```
 
 ### `expects_vars`
@@ -1171,6 +1171,7 @@ Every event EOC passes context vars with each of their key value pairs that the 
 | broken_bone_mends | Triggered when `mending` effect is removed by expiry (Character::mend) | { "character", `character_id` },<br/> { "part", `body_part` }, | character / NONE |
 | buries_corpse | Triggers when item with flag CORPSE is located on same tile as construction with post-special `done_grave` is completed | { "character", `character_id` },<br/> { "corpse_type", `mtype_id` },<br/> { "corpse_name", `string` }, | character / NONE |
 | causes_resonance_cascade | Triggers when resonance cascade option is activated via "old lab" finale's computer | NONE | avatar / NONE |
+| character_butchered_corpse | Triggers after succesful butchering action. Possible values of butcher_type are `ACT_BLEED`, `ACT_BUTCHER`, `ACT_BUTCHER_FULL`, `ACT_FIELD_DRESS`, `ACT_SKIN`, `ACT_QUARTER`, `ACT_DISMEMBER`, `ACT_DISSECT` | { "character", `character_id` }, { "monster_id", `mtype_id` }, { "butcher_type", `string` }, | character / NONE |
 | character_casts_spell | Triggers when a character casts spells. When a spell with multiple effects is cast, the number of effects will be triggered | { "character", `character_id` },<br/> { "spell", `spell_id` },<br/> { "school", `trait_id` },<br/> { "difficulty", `int` },<br/> { "cost", `int` },<br/> { "cast_time", `int` },<br/> { "damage", `int` }, | character / NONE |
 | character_consumes_item |  | { "character", `character_id` },<br/> { "itype", `itype_id` }, | character / NONE |
 | character_dies |  | { "character", `character_id` }, | character / NONE |
@@ -1835,14 +1836,14 @@ Set effects to be executed when conditions are met and when conditions are not m
 Displays a different message the first time it is run and the second time onwards
 ```json
 {
-  "if": { "u_has_var": "test", "type": "eoc_sample", "context": "if_else", "value": "yes" },
+  "if": { "u_has_var": "eoc_sample_if_else_test", "value": "yes" },
   "then": { "u_message": "You have variable." },
   "else": [
     { "u_message": "You don't have variable." },
     {
-      "if": { "not": { "u_has_var": "test", "type": "eoc_sample", "context": "if_else", "value": "yes" } },
+      "if": { "not": { "u_has_var": "eoc_sample_if_else_test", "value": "yes" } },
       "then": [
-        { "u_add_var": "test", "type": "eoc_sample", "context": "if_else", "value": "yes" },
+        { "u_add_var": "eoc_sample_if_else_test", "value": "yes" },
         { "u_message": "Vriable added." }
       ]
     }
@@ -2304,7 +2305,7 @@ Mutate towards Tail Stub (removing any incompatibilities) using the category set
 ```json
       {
         "u_mutate_towards": "TAIL_STUB",
-        "category": { "u_val": "mutation_category", "type": "upcoming", "context": "mutation" },
+        "category": { "u_val": "upcoming_mutation_category", },
         "use_vitamins": true
       },
 ```
@@ -2595,8 +2596,8 @@ Save a personal variable, that you can check later using `u_has_var`, `npc_has_v
 | "u_add_var" / "npc_add_var" | **mandatory** | string | name of variable, where the value would be stored |
 | "value" | **mandatory** | string | value, that would be stored in variable; **incompatible with "possible_values" and "time"** | 
 | "possible_values" | **mandatory** | string array | array of values, that could be picked to be stored in variable; **incompatible with "value" and "time"** | 
-| "time" | **mandatory** | boolean | default false; if true, the current time would be saved in variable; **incompatible with "value" and "possible_values"** | 
-| "type", "context" | optional | string | additional text to describe your variable, can be used in `u_lose_var` or in `math` syntax, as `type`\_`context`\_`variable_name` |  
+| "time" | **mandatory** | boolean | **DEPRECATED. use time() math syntax instead**. default false; if true, the current time would be saved in variable; **incompatible with "value" and "possible_values"** | 
+| "type", "context" | optional | string | **DEPRECATED. JUST USE _add_var to give the name of the variable**. additional text to describe your variable, can be used in `u_lose_var` or in `math` syntax, as `type`\_`context`\_`variable_name` |  
 
 ##### Valid talkers:
 
@@ -2609,28 +2610,21 @@ Note: numeric vars can be set (and check) to monsters via `math` functions.  See
 ##### Examples
 Saves personal variable `u_met_godco_jeremiah` with `general` type, `meeting` context, and value `yes
 ```json
-{ "u_add_var": "u_met_godco_jeremiah", "type": "general", "context": "meeting", "value": "yes" }
+{ "u_add_var": "general_meeting_u_met_godco_jeremiah", "value": "yes" }
 ```
 
-Saves personal variable `time_of_last_succession` with value of current time:
-```json
-{ "u_add_var": "time_of_last_succession", "type": "timer", "time": true }
-```
-
-NPC (in this case it's actually item, see Beta Talkers) saves a personal variable `function` with one of four values: `morale`, `focus`, `pain`, or `fatigue` (used in mi-go bio tech to create four different versions of the same item, with different effects, that would be revealed upon activation)
+NPC (in this case it's actually item, see Beta Talkers) saves a personal variable `function` with one of four values: `morale`, `focus`, `pain`, or `sleepiness` (used in mi-go bio tech to create four different versions of the same item, with different effects, that would be revealed upon activation)
 ```json
 {
-  "npc_add_var": "function",
-  "type": "mbt",
-  "context": "f",
-  "possible_values": [ "morale", "focus", "pain", "fatigue" ]
+  "npc_add_var": "mbt_f_function",
+  "possible_values": [ "morale", "focus", "pain", "sleepiness" ]
 }
 ```
 
 Old variables, that was created in this way, could be migrated into `math`, using `u_`/`npc_`+`type`+`_`+`context`+`_`+`var`, for the sake of save compatibility between stable releases
 For example:
 ```json
-{ "u_add_var": "gunsmith_ammo_ammount", "type": "number", "context": "artisans", "value": "800" }
+{ "u_add_var": "number_artisans_gunsmith_ammo_ammount", "value": "800" }
 ```
 could be moved to:
 ```json  
@@ -2703,9 +2697,9 @@ Character remove variable `time_of_last_succession`
 { "u_lose_var": "time_of_last_succession" }
 ```
 
-Character remove variable `on` of type `bio` and context `blade_electric`
+Character remove variable `bio_blade_electric_on`
 ```json
-{ "u_lose_var": "on", "type": "bio", "context": "blade_electric" }
+{ "u_lose_var": "bio_blade_electric_on" }
 ```
 
 #### `set_string_var`

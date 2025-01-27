@@ -64,9 +64,7 @@
         "condition": {
           "and": [
             { "not": { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_2" } },
-            {
-              "not": { "u_has_var": "completed_robofac_intercom_2", "type": "dialogue", "context": "intercom", "value": "yes" }
-            }
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_2", "value": "yes" } }
           ]
         },
         "topic": "MISSION_ROBOFAC_INTERCOM_2_OFFER"
@@ -76,10 +74,8 @@
         "condition": {
           "and": [
             { "not": { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_3" } },
-            {
-              "not": { "u_has_var": "completed_robofac_intercom_3", "type": "dialogue", "context": "intercom", "value": "yes" }
-            },
-            { "u_has_var": "completed_robofac_intercom_2", "type": "dialogue", "context": "intercom", "value": "yes" }
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_3", "value": "yes" } },
+            { "u_has_var": "dialogue_intercom_completed_robofac_intercom_2", "value": "yes" }
           ]
         },
         "topic": "MISSION_ROBOFAC_INTERCOM_3_OFFER"
@@ -89,12 +85,8 @@
         "condition": {
           "and": [
             { "not": { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_ROBOT_SM_1" } },
-            {
-              "not": { "u_has_var": "completed_robofac_intercom_robot_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" }
-            },
-            {
-              "not": { "u_has_var": "completed_robofac_intercom_robot_sm_1", "type": "dialogue", "context": "intercom", "value": "no" }
-            }
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_robot_sm_1", "value": "yes" } },
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_robot_sm_1", "value": "no" } }
           ]
         },
         "topic": "MISSION_ROBOFAC_INTERCOM_ROBOT_SM_1_OFFER"
@@ -104,12 +96,8 @@
         "condition": {
           "and": [
             { "not": { "u_has_mission": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1" } },
-            {
-              "not": { "u_has_var": "completed_robofac_intercom_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" }
-            },
-            {
-              "not": { "u_has_var": "completed_robofac_intercom_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "no" }
-            }
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_lixa_sm_1", "value": "yes" } },
+            { "not": { "u_has_var": "dialogue_intercom_completed_robofac_intercom_lixa_sm_1", "value": "no" } }
           ]
         },
         "topic": "MISSION_ROBOFAC_INTERCOM_LIXA_SM_1_OFFER"
@@ -118,24 +106,15 @@
         "text": "Do you have any more work for me right now?",
         "condition": {
           "and": [
-            { "u_has_var": "completed_robofac_intercom_2", "type": "dialogue", "context": "intercom", "value": "yes" },
-            { "u_has_var": "completed_robofac_intercom_3", "type": "dialogue", "context": "intercom", "value": "yes" },
-            {
-              "u_has_var": "completed_robofac_intercom_portal_sm_1",
-              "type": "dialogue",
-              "context": "intercom",
-              "value": "yes"
-            },
-            { "u_has_var": "completed_robofac_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" },
+            { "u_has_var": "dialogue_intercom_completed_robofac_intercom_2", "value": "yes" },
+            { "u_has_var": "dialogue_intercom_completed_robofac_intercom_2", "value": "yes" },
+            { "u_has_var": "dialogue_intercom_completed_robofac_intercom_3", "value": "yes" },
+            { "u_has_var": "dialogue_intercom_completed_robofac_intercom_portal_sm_1", "value": "yes" },
+            { "u_has_var": "dialogue_intercom_completed_robofac_lixa_sm_1", "value": "yes" },
             {
               "or": [
-                { "u_has_var": "completed_robofac_intercom_robot_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" },
-                {
-                  "u_has_var": "completed_robofac_intercom_robot_sm_1",
-                  "type": "dialogue",
-                  "context": "intercom",
-                  "value": "no"
-                }
+                { "u_has_var": "dialogue_intercom_completed_robofac_intercom_robot_sm_1", "value": "yes" },
+                { "u_has_var": "dialogue_intercom_completed_robofac_intercom_robot_sm_1", "value": "no" }
               ]
             }
           ]
@@ -316,7 +295,7 @@
       ],
       "effect": [
         { "u_spawn_item": "RobofacCoin", "count": 4 },
-        { "u_add_var": "completed_robofac_intercom_2", "type": "dialogue", "context": "intercom", "value": "yes" },
+        { "u_add_var": "dialogue_intercom_completed_robofac_intercom_2", "value": "yes" },
         { "math": [ "u_hub01_completed_missions", "++" ] }
       ]
     },
@@ -413,7 +392,7 @@
     "end": {
       "effect": [
         { "u_spawn_item": "RobofacCoin", "count": 8 },
-        { "u_add_var": "completed_robofac_intercom_3", "type": "dialogue", "context": "intercom", "value": "yes" },
+        { "u_add_var": "dialogue_intercom_completed_robofac_intercom_3", "value": "yes" },
         { "math": [ "u_hub01_completed_missions", "++" ] }
       ]
     },
@@ -657,13 +636,11 @@
     },
     "end": {
       "effect": [
-        { "u_add_var": "completed_robofac_intercom_robot_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" },
+        { "u_add_var": "dialogue_intercom_completed_robofac_intercom_robot_sm_1", "value": "yes" },
         { "math": [ "u_hub01_completed_missions", "++" ] }
       ]
     },
-    "fail": {
-      "effect": [ { "u_add_var": "completed_robofac_intercom_robot_sm_1", "type": "dialogue", "context": "intercom", "value": "no" } ]
-    },
+    "fail": { "effect": [ { "u_add_var": "dialogue_intercom_completed_robofac_intercom_robot_sm_1", "value": "no" } ] },
     "origins": [ "ORIGIN_SECONDARY" ],
     "has_generic_rewards": false,
     "dialogue": {
@@ -779,7 +756,7 @@
     "end": {
       "effect": [
         { "u_spawn_item": "RobofacCoin", "count": 5 },
-        { "u_add_var": "completed_robofac_lixa_sm_1", "type": "dialogue", "context": "intercom", "value": "yes" },
+        { "u_add_var": "dialogue_intercom_completed_robofac_lixa_sm_1", "value": "yes" },
         { "math": [ "u_hub01_completed_missions", "++" ] }
       ]
     },

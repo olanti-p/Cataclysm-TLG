@@ -1302,7 +1302,7 @@
     "name": [ "Elf-A Mutation", "Elf-A Transformation", "Elf-A Metamorphosis" ],
     "desc": [
       "You consumed Elf-A mutagen.",
-      "You must look after this world, if noone else will.",
+      "You must look after this world, if no one else will.",
       "You see stars.  You see so many stars."
     ],
     "max_intensity": 3,
@@ -1652,7 +1652,7 @@
     "desc": [
       "You consumed chiropteran mutagen.",
       "You taste iron, and you want more.",
-      "Every sound is a painful screech in your ears.  It's all too much!."
+      "Every sound is a painful screech in your ears.  It's all too much!"
     ],
     "max_intensity": 3,
     "resist_traits": [ "THRESH_CHIROPTERAN" ],
@@ -1874,7 +1874,7 @@
     ],
     "apply_message": [
       [ "Your eyes are mildly irritated.", "bad" ],
-      [ "Your eyes watering out of smoke.", "bad" ],
+      [ "Your eyes are watering.", "bad" ],
       [ "Your eyes sting badly and tears stream from them continuously.", "bad" ],
       [
         "You can barely see anything due to your massive eye irritation and the flood of tears streaming from them.",

@@ -599,7 +599,10 @@ void monster::try_reproduce()
             if( type->baby_monster ) {
                 here.add_spawn( type->baby_monster, spawn_cnt, pos_bub() );
             } else {
-                here.add_item_or_charges( pos(), item( type->baby_egg, *baby_timer, spawn_cnt ), true );
+                const item egg( type->baby_egg, *baby_timer );
+                for( int i = 0; i < spawn_cnt; i++ ) {
+                    here.add_item_or_charges( pos(), egg, true );
+                }
             }
         }
         *baby_timer += *type->baby_timer;
@@ -1094,7 +1097,7 @@ std::string monster::extended_description() const
         ss += string_format( _( "Friendly: %1$d" ), friendly ) + "\n";
         ss += string_format( _( "Morale: %1$d" ), morale ) + "\n";
         if( aggro_character ) {
-            ss += string_format( _( "<color_red>Agressive towards characters</color>" ) ) + "\n";
+            ss += string_format( _( "<color_red>Aggressive towards characters</color>" ) ) + "\n";
         }
 
         const time_duration current_time = calendar::turn - calendar::turn_zero;
@@ -1342,6 +1345,11 @@ bool monster::has_intelligence() const
 std::vector<material_id> monster::get_absorb_material() const
 {
     return type->absorb_material;
+}
+
+std::vector<material_id> monster::get_no_absorb_material() const
+{
+    return type->no_absorb_material;
 }
 
 void monster::set_patrol_route( const std::vector<point> &patrol_pts_rel_ms )

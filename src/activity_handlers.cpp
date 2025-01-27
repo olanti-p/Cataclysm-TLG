@@ -1185,14 +1185,16 @@ static bool butchery_drops_harvest( item *corpse_item, const mtype &mt, Characte
         const int item_charges = monster_weight_remaining / to_gram( item::find_type(
                                      leftover_id )->weight );
         if( item_charges > 0 ) {
-            item ruined_parts( leftover_id, calendar::turn, item_charges );
+            item ruined_parts( leftover_id, calendar::turn );
             ruined_parts.set_mtype( &mt );
             ruined_parts.set_item_temperature( corpse_item->temperature );
             ruined_parts.set_rot( corpse_item->get_rot() );
             if( !you.backlog.empty() && you.backlog.front().id() == ACT_MULTIPLE_BUTCHER ) {
                 ruined_parts.set_var( "activity_var", you.name );
             }
-            here.add_item_or_charges( you.pos(), ruined_parts );
+            for( int i = 0; i < item_charges; ++i ) {
+                here.add_item_or_charges( you.pos(), ruined_parts );
+            }
         }
     }
 
@@ -1415,6 +1417,9 @@ void activity_handlers::butcher_finish( player_activity *act, Character *you )
     }
 
     you->recoil = MAX_RECOIL;
+
+    get_event_bus().send<event_type::character_butchered_corpse>( you->getID(),
+            corpse_item.get_mtype()->id, act->id().str() );
 
     // Ready to move on to the next item, if there is one (for example if multibutchering)
     act->index = true;

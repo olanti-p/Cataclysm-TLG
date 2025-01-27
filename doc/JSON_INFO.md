@@ -3061,7 +3061,7 @@ See [MUTATIONS.md](MUTATIONS.md)
     "always_invisible": true, // Super well hidden traps the player can never detect
     "funnel_radius": 200, // millimeters. The higher the more rain it will capture.
     "comfort": 0, // Same property affecting furniture and terrain
-    "floor_bedding_warmth": -500, // Same property affecting furniture and terrain
+    "floor_bedding_warmth": -500, // Same property affecting furniture and terrain. Also affects how comfortable a resting place this is(affects healing). Vanilla values should not exceed 1000.
     "spell_data": { "id": "bear_trap" }, // data required for trapfunc::spell()
     "trigger_weight": "200 g", // If an item with this weight or more is thrown onto the trap, it triggers. Defaults to 500 grams.
     "drops": [ "beartrap" ], // ID of item spawned when disassembled
@@ -3290,7 +3290,7 @@ These values apply to crafting tasks performed at the WORKBENCH.
 #### The following optional fields are specific to SEATs.
 ```c++
 "comfort": 3,                 // (Optional, default=0). Sleeping comfort as for terrain/furniture.
-"floor_bedding_warmth": 300,  // (Optional, default=0). Bonus warmth as for terrain/furniture.
+"floor_bedding_warmth": 300,  // (Optional, default=0). Bonus warmth as for terrain/furniture. Also affects how comfortable a resting place this is(affects healing). Vanilla values should not exceed 1000.
 "bonus_fire_warmth_feet": 200,// (Optional, default=0). Bonus fire warmth as for terrain/furniture.
 ```
 
@@ -3964,7 +3964,7 @@ You can list as many conditional names for a given item as you want. Each condit
     - `COMPONENT_ID` Similar to `COMPONENT_ID_SUBSTRING`, but search the exact component match
     - `FLAG` which checks if an item has the specified flag (exact match).
     - `VITAMIN` which checks if an item has the specified vitamin (exact match).
-    - `VAR` which checks if an item has a variable with the given name (exact match) and value = `value`. Variables set with effect_on_conditions will have `npctalk_var_` in front of their name.  So a variable created with: `"npc_add_var": "MORALE", "type": "DISPLAY","context":"NAME", "value": "Felt Great" }` would be named: `npctalk_var_DISPLAY_NAME_MORALE`.
+    - `VAR` which checks if an item has a variable with the given name (exact match) and value = `value`. Variables set with effect_on_conditions will have `npctalk_var_` in front of their name.  So a variable created with: `"npc_add_var": "MORALE", "value": "Felt Great" }` would be named: `npctalk_var_MORALE`.
     - `SNIPPET_ID`which checks if an item has a snippet id variable set by an effect_on_condition with the given name (exact match) and snippets id = `value`.
 2. The condition you want to look for.
 3. The name to use if a match is found. Follows all the rules of a standard `name` field, with valid keys being `str`, `str_pl`, and `ctxt`. You may use %s here, which will be replaced by the name of the item. Conditional names defined prior to this one are taken into account.
@@ -5527,7 +5527,7 @@ How comfortable this terrain/furniture is. Impact ability to fall asleep on it.
 
 #### `floor_bedding_warmth`
 
-Bonus warmth offered by this terrain/furniture when used to sleep.
+Bonus warmth offered by this terrain/furniture when used to sleep. Also affects how comfortable a resting place this is(affects healing). Vanilla values should not exceed 1000.
 
 #### `bonus_fire_warmth_feet`
 
