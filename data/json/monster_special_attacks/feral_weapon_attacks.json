@@ -14,13 +14,7 @@
     "accuracy": 3,
     "//2": "Feral melee skill + weapon's to hit, so 3+0=3",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 6 } ],
-    "condition": {
-      "or": [
-        { "not": { "test_eoc": "is_disarmed" } },
-        { "u_has_flag": "GRAB" },
-        { "u_has_flag": "GRAB_FILTER" }
-      ]
-    },
+    "condition": { "or": [ { "not": { "test_eoc": "is_disarmed" } }, { "u_has_flag": "GRAB" }, { "u_has_flag": "GRAB_FILTER" } ] },
     "hit_dmg_u": "%1$s flails a fist at your %2$s!",
     "hit_dmg_npc": "%1$s flails a fist at <npcname>'s %2$s!",
     "miss_msg_u": "%1$s swings at you, but you dodge!",
@@ -207,12 +201,7 @@
     "//": "Feral melee skill + weapon's to hit, so 3-1=2",
     "//1": "Small weapon, so grappling is allowed.",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 2 }, { "damage_type": "stab", "amount": 14 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a knife!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a knife!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -230,12 +219,7 @@
     "//": "Feral melee skill + weapon's to hit, so 2-1=1",
     "//1": "Small weapon, so grappling is allowed.",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 3 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a candlestick!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a candlestick!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -469,12 +453,7 @@
     "//": "Feral melee skill + weapon's to hit, so 6-1=5",
     "//1": "Small weapon, so grappling is allowed.",
     "damage_max_instance": [ { "damage_type": "stab", "amount": 20 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a knife!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a knife!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -491,12 +470,7 @@
     "accuracy": 2,
     "//": "Feral melee skill + weapon's to hit, so 3-1=2",
     "damage_max_instance": [ { "damage_type": "stab", "amount": 20 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a knife!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a knife!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -539,12 +513,7 @@
     "//": "Feral melee skill + weapon's to hit, so 3-1=2",
     "//1": "Small weapon, so grappling is allowed.",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 8 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a hammer!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a hammer!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -610,12 +579,7 @@
     "//": "Feral melee skill + weapon's to hit, so 4-3=1",
     "//1": "Small weapon, so grappling is allowed.",
     "damage_max_instance": [ { "damage_type": "cut", "amount": 6 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a scalpel!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a scalpel!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -632,12 +596,7 @@
     "accuracy": 4,
     "//": "Feral melee skill + weapon's to hit, so 6-2=4",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 7 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a gun!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a gun!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -654,12 +613,7 @@
     "accuracy": 6,
     "//": "Feral melee skill + weapon's to hit, so 6+0=6",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 7 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a flashlight!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a flashlight!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",
@@ -676,12 +630,7 @@
     "accuracy": 2,
     "//": "Feral melee skill + weapon's to hit, so 4-2=2",
     "damage_max_instance": [ { "damage_type": "bash", "amount": 7 } ],
-    "condition": {
-      "and": [
-        { "test_eoc": "is_disarmed" },
-        { "not": { "u_has_effect": "maimed_arm" } }
-      ]
-    },
+    "condition": { "and": [ { "test_eoc": "is_disarmed" }, { "not": { "u_has_effect": "maimed_arm" } } ] },
     "hit_dmg_u": "%1$s hits your %2$s with a gun!",
     "hit_dmg_npc": "%1$s hits <npcname>'s %2$s with a gun!",
     "miss_msg_u": "%1$s tries to hit you, but you dodge!",

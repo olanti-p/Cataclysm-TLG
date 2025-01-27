@@ -1,5 +1,34 @@
 [
   {
+    "id": "mon_chud",
+    "type": "MONSTER",
+    "name": { "str": "CHUD" },
+    "description": "This was once a person, but they've undergone some hideous transformation.  Their pallid skin is clammy and wet, and their face is dominated by unnaturally large, reflective eyes that no longer hold the spark of intelligence.",
+    "copy-from": "mon_feral_human_pipe",
+    "looks_like": "mon_zombie_runner",
+    "symbol": "@",
+    "color": "white",
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
+    "weakpoint_sets": [ "wps_humanoid_body" ],
+    "families": [ "prof_intro_biology", "prof_physiology" ],
+    "dodge": 4,
+    "vision_night": 15,
+    "special_attacks": [
+      { "id": "scratch", "min_mul": 0.5, "cooldown": 10 },
+      { "type": "bite", "min_mul": 0.7, "cooldown": 15 },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ],
+      [ "EAT_CARRION", 250 ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "dissect": "dissect_troglobite_sample_small",
+    "zombify_into": "mon_zombie_shady",
+    "extend": { "flags": [ "FILTHY" ] }
+  },
+  {
     "id": "mon_mutant_experimental",
     "type": "MONSTER",
     "name": { "str": "experimental mutant" },

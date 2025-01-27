@@ -83,7 +83,13 @@
     "description": "This feral human's eyes look more focused, and their movements steadier than others of their kind.  They're carrying a crude spear, and have assembled some basic armor from scavenged clothing and bits of riot armor, though you can see several gaps.  Despite these signs of greater intelligence, this creature is still only a few steps away from being a zombie themself.",
     "copy-from": "mon_feral_human_pipe",
     "dodge": 3,
-    "special_attacks": [ [ "PARROT_AT_DANGER", 0 ], { "id": "feral_weapon_spear_knife" }, { "id": "feral_unarmed" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
+    "special_attacks": [
+      [ "PARROT_AT_DANGER", 0 ],
+      { "id": "feral_weapon_spear_knife" },
+      { "id": "feral_unarmed" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
+    ],
     "vision_day": 50,
     "death_drops": "feral_sapien_death_drops_spear",
     "zombify_into": "mon_zombie_survivor",
@@ -93,35 +99,6 @@
       "families": [ "prof_wp_syn_armored" ]
     },
     "armor": { "bash": 9, "cut": 14, "acid": 4, "bullet": 18 }
-  },
-  {
-    "id": "mon_chud",
-    "type": "MONSTER",
-    "name": { "str": "CHUD" },
-    "description": "This was once a person, but they've undergone some hideous transformation.  Their pallid skin is clammy and wet, and their face is dominated by unnaturally large, reflective eyes that no longer hold the spark of intelligence.",
-    "copy-from": "mon_feral_human_pipe",
-    "looks_like": "mon_zombie_runner",
-    "symbol": "@",
-    "color": "white",
-    "melee_skill": 6,
-    "melee_dice": 2,
-    "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
-    "weakpoint_sets": [ "wps_humanoid_body" ],
-    "families": [ "prof_intro_biology", "prof_physiology" ],
-    "dodge": 4,
-    "vision_night": 15,
-    "special_attacks": [
-      { "id": "scratch", "min_mul": 0.5, "cooldown": 10 },
-      { "type": "bite", "min_mul": 0.7, "cooldown": 15 },
-      [ "BROWSE", 100 ],
-      [ "EAT_FOOD", 100 ],
-      [ "EAT_CARRION", 250 ]
-    ],
-    "death_drops": "default_zombie_death_drops",
-    "dissect": "dissect_troglobite_sample_small",
-    "zombify_into": "mon_zombie_shady",
-    "extend": { "flags": [ "FILTHY" ] }
   },
   {
     "id": "mon_feral_human_crowbar",
@@ -316,7 +293,13 @@
     "type": "MONSTER",
     "copy-from": "mon_feral_labsecurity_9mm",
     "description": "At first glance, this disheveled figure could almost pass for a survivor, but the bloodshot eyes give them away as one of the humans who have gone feral and joined the undead without dying.  Their uniform suggests that this was at some point a security guard, and they still carry a stun gun and a heavy-duty flashlight that looks like it could easily double as a club.",
-    "special_attacks": [ [ "TAZER", 10 ], { "id": "feral_weapon_heavy_flashlight" }, { "id": "feral_unarmed" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
+    "special_attacks": [
+      [ "TAZER", 10 ],
+      { "id": "feral_weapon_heavy_flashlight" },
+      { "id": "feral_unarmed" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
+    ],
     "luminance": 500,
     "death_drops": "feral_security_death_drops_flashlight"
   },
@@ -656,7 +639,13 @@
     "aggression": 50,
     "melee_skill": 4,
     "dodge": 2,
-    "special_attacks": [ [ "PARROT_AT_DANGER", 0 ], { "id": "feral_weapon_feral_m4_carbine_bayonet" }, { "id": "feral_unarmed" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
+    "special_attacks": [
+      [ "PARROT_AT_DANGER", 0 ],
+      { "id": "feral_weapon_feral_m4_carbine_bayonet" },
+      { "id": "feral_unarmed" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
+    ],
     "death_drops": "mon_feral_marine_death_drops",
     "zombify_into": "mon_zombie_marine",
     "extend": {
@@ -721,7 +710,14 @@
     "aggression": 100,
     "melee_skill": 6,
     "dodge": 3,
-    "special_attacks": [ [ "PARROT", 200 ], [ "BLOW_WHISTLE", 25 ], { "id": "feral_weapon_PR24" }, { "id": "feral_unarmed" }, [ "BROWSE", 100 ], [ "EAT_FOOD", 100 ] ],
+    "special_attacks": [
+      [ "PARROT", 200 ],
+      [ "BLOW_WHISTLE", 25 ],
+      { "id": "feral_weapon_PR24" },
+      { "id": "feral_unarmed" },
+      [ "BROWSE", 100 ],
+      [ "EAT_FOOD", 100 ]
+    ],
     "death_drops": "mon_feral_cop_death_drops",
     "fungalize_into": "mon_feral_cop_fungal_infected",
     "zombify_into": "mon_zombie_cop",
