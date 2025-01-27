@@ -3369,10 +3369,6 @@ void monster::process_effects()
         }
     }
 
-    if( is_nemesis() ) {
-        add_effect( effect_nemesis_buff, 1000_turns, true );
-    }
-
     if( has_flag( mon_flag_PHOTOPHOBIC ) && get_map().ambient_light_at( pos_bub() ) >= 30.0f ) {
         add_msg_if_player_sees( *this, m_good, _( "The shadow withers in the light!" ), name() );
         add_effect( effect_photophobia, 5_turns, true );
