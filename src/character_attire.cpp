@@ -21,6 +21,7 @@
 #include "enums.h"
 #include "event.h"
 #include "event_bus.h"
+#include "field_type.h"
 #include "fire.h"
 #include "flag.h"
 #include "flat_set.h"
