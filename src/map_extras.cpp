@@ -145,8 +145,6 @@ static const mongroup_id GROUP_NETHER_PORTAL( "GROUP_NETHER_PORTAL" );
 static const mongroup_id GROUP_STRAY_DOGS( "GROUP_STRAY_DOGS" );
 static const mongroup_id GROUP_TURRET_SPEAKER( "GROUP_TURRET_SPEAKER" );
 
-static const mtype_id mon_fungaloid_queen( "mon_fungaloid_queen" );
-
 static const oter_type_str_id oter_type_bridge( "bridge" );
 static const oter_type_str_id oter_type_bridgehead_ground( "bridgehead_ground" );
 static const oter_type_str_id oter_type_road( "road" );
@@ -1042,7 +1040,7 @@ static bool mx_portal_in( map &m, const tripoint &abs_sub )
         }
         //Netherworld monsters spawning around the portal
         case 2: {
-            m.add_field( portal_location, fd_reality_tear, 3 );
+            m.add_field( portal_location, fd_fatigue, 3 );
             for( const tripoint_bub_ms &loc : m.points_in_radius( portal_location, 5 ) ) {
                 m.place_spawns( GROUP_NETHER_PORTAL, 15, loc.xy(), loc.xy(), 1, true );
             }
@@ -2123,7 +2121,7 @@ static bool mx_city_trap( map &/*m*/, const tripoint &abs_sub )
     return true;
 }
 
-static bool mx_fungal_zone( map &/*m*/, const tripoint &abs_sub )
+static bool mx_fungal_zone( map &m, const tripoint &abs_sub )
 {
     // Find suitable location for fungal spire to spawn (grass, dirt etc)
     const tripoint_bub_ms omt_center = { SEEX, SEEY, abs_sub.z };
@@ -2140,7 +2138,6 @@ static bool mx_fungal_zone( map &/*m*/, const tripoint &abs_sub )
     }
 
     const tripoint_bub_ms suitable_location = random_entry( suitable_locations, omt_center );
-    m.add_spawn( mon_fungaloid_queen, 1, suitable_location );
     m.place_spawns( GROUP_FUNGI_FUNGALOID, 1,
                     suitable_location.xy() + point_north_west,
                     suitable_location.xy() + point_south_east,
