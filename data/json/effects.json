@@ -3090,7 +3090,9 @@
       "conjunctivitis_viral",
       "conjunctivitis_bacterial",
       "common_cold",
-      "flu"
+      "flu",
+      "pre_flu",
+      "pre_common_cold"
     ],
     "base_mods": { "pkill_min": [ 5 ] }
   },
