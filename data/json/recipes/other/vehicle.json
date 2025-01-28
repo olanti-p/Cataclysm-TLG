@@ -194,7 +194,7 @@
     "time": "30 s",
     "autolearn": true,
     "reversible": true,
-    "components": [ [ [ "fridge", 1 ] ], [ [ "rope_natural", 1, "LIST" ] ] ]
+    "components": [ [ [ "apartment_fridge", 1 ] ], [ [ "rope_natural", 1, "LIST" ] ] ]
   },
   {
     "type": "recipe",
@@ -216,6 +216,6 @@
     "time": "30 s",
     "autolearn": true,
     "reversible": true,
-    "components": [ [ [ "freezer", 1 ] ], [ [ "rope_natural", 1, "LIST" ] ] ]
+    "components": [ [ [ "apartment_freezer", 1 ] ], [ [ "rope_natural", 1, "LIST" ] ] ]
   }
 ]

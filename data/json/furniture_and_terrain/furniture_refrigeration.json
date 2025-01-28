@@ -10,7 +10,7 @@
     "coverage": 90,
     "required_str": 10,
     "flags": [ "CONTAINER", "PLACE_ITEM", "BLOCKSDOOR", "MINEABLE", "NO_SELF_CONNECT", "EASY_DECONSTRUCT", "SMALL_HIDE" ],
-    "deconstruct": { "items": [ { "item": "fridge", "count": 1 }, { "item": "apartment_freezer", "count": 1 } ] },
+    "deconstruct": { "items": [ { "item": "apartment_fridge", "count": 1 }, { "item": "apartment_freezer", "count": 1 } ] },
     "max_volume": "433 L",
     "bash": {
       "str_min": 18,
