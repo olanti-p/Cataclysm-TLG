@@ -230,6 +230,7 @@
         "4|:  H  3     B6B =|A'|.",
         ".||00|||||0||||||||||||."
       ],
+      "palettes": [ "commercial" ],
       "terrain": {
         "A": "t_linoleum_gray",
         "R": "t_linoleum_gray",
@@ -259,7 +260,7 @@
         "Á": "f_sink",
         "B": "f_chair",
         "C": "f_desk",
-        "F": "f_glass_fridge",
+        "F": { "param": "display_fridge", "fallback": "f_glass_fridge" },
         "f": "f_fridge",
         "H": "f_armchair",
         "S": "f_stool",
