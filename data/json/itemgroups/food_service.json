@@ -2264,38 +2264,6 @@
     "type": "item_group",
     "id": "seasoning_salt_bag_plastic",
     "subtype": "collection",
-    "//": "This group was created by a fool and may contain errors.",
-    "container-item": "bottle_plastic_seasoning_small",
-    "entries": [ { "item": "seasoning_salt", "container-item": "null", "count": [ 10, 50 ] } ]
-  },
-  {
-    "type": "item_group",
-    "id": "seasoning_salt_bottle_glass_small",
-    "subtype": "collection",
-    "//": "This group was created by a fool and may contain errors.",
-    "container-item": "bottle_glass_seasoning_small",
-    "entries": [ { "item": "seasoning_salt", "container-item": "null", "count": [ 10, 50 ] } ]
-  },
-  {
-    "type": "item_group",
-    "id": "seasoning_salt_bottle_plastic",
-    "subtype": "collection",
-    "//": "This group was created by a fool and may contain errors.",
-    "container-item": "bottle_plastic_seasoning",
-    "entries": [ { "item": "seasoning_salt", "container-item": "null", "count": [ 10, 100 ] } ]
-  },
-  {
-    "type": "item_group",
-    "id": "seasoning_salt_bottle_glass",
-    "subtype": "collection",
-    "//": "This group was created by a fool and may contain errors.",
-    "container-item": "bottle_glass_seasoning",
-    "entries": [ { "item": "seasoning_salt", "container-item": "null", "count": [ 10, 100 ] } ]
-  },
-  {
-    "type": "item_group",
-    "id": "seasoning_salt_bag_plastic",
-    "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "bag_plastic_small",
     "entries": [ { "item": "seasoning_salt", "container-item": "null", "count": [ 10, 100 ] } ]
@@ -2454,14 +2422,6 @@
   },
   {
     "type": "item_group",
-    "id": "seasoning_italian_bag_paper",
-    "subtype": "collection",
-    "//": "This group was created by a fool and may contain errors.",
-    "container-item": "bag_paper_powder",
-    "entries": [ { "item": "seasoning_italian", "container-item": "null", "count": [ 20, 500 ] } ]
-  },
-  {
-    "type": "item_group",
     "id": "cornmeal_box_small_10",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
@@ -2474,7 +2434,7 @@
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
     "container-item": "plastic_bag_vac",
-    "entries": [ { "item": "oyster_crackers", "container-item": "null", "count": [ 1, -1 ] } ]
+    "entries": [ { "item": "oyster_crackers", "container-item": "null", "count": 1 } ]
   },
   {
     "type": "item_group",
@@ -2542,34 +2502,10 @@
   },
   {
     "type": "item_group",
-    "id": "flour_bag_paper_powder_70",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_paper_powder",
-    "entries": [ { "item": "flour", "container-item": "null", "count": 70 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "flour_bag_plastic_175",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
-    "entries": [ { "item": "flour", "container-item": "null", "count": 175 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "bread_flour_bag_paper_powder_20",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_paper_powder",
-    "entries": [ { "item": "bread_flour", "container-item": "null", "count": 20 } ]
-  },
-  {
-    "type": "item_group",
     "id": "koji_bag_plastic_25",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "koji", "container-item": "null", "count": 25 } ]
   },
   {
@@ -2577,7 +2513,7 @@
     "id": "dry_rice_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "dry_rice", "container-item": "null", "count": 3 } ]
   },
   {
@@ -2585,7 +2521,7 @@
     "id": "dry_wild_rice_bag_plastic_3",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic",
+    "container-item": "bag_plastic_small",
     "entries": [ { "item": "dry_wild_rice", "container-item": "null", "count": 3 } ]
   },
   {
@@ -2598,43 +2534,11 @@
   },
   {
     "type": "item_group",
-    "id": "koji_bag_plastic_25",
+    "id": "sprinkles_bottle_plastic_small_62",
     "subtype": "collection",
     "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic_small",
-    "entries": [ { "item": "koji", "container-item": "null", "count": 25 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "cinnamon_bottle_glass_small",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic_small",
-    "entries": [ { "item": "dry_rice", "container-item": "null", "count": 3 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "cinnamon_bottle_plastic",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic_small",
-    "entries": [ { "item": "dry_wild_rice", "container-item": "null", "count": 3 } ]
-  },
-  {
-    "type": "item_group",
-    "id": "cinnamon_bottle_glass",
-    "subtype": "collection",
-    "//": "This group was created by a fool and may contain errors.",
-    "container-item": "bottle_glass_seasoning",
-    "entries": [ { "item": "cinnamon", "container-item": "null", "count": [ 10, 100 ] } ]
-  },
-  {
-    "type": "item_group",
-    "id": "cinnamon_bag_plastic",
-    "subtype": "collection",
-    "//": "This group was created automatically and may contain errors.",
-    "container-item": "bag_plastic_small",
-    "entries": [ { "item": "cinnamon", "container-item": "null", "count": [ 10, 100 ] } ]
+    "container-item": "bottle_plastic_small",
+    "entries": [ { "item": "sprinkles", "container-item": "null", "count": 62 } ]
   },
   {
     "type": "item_group",

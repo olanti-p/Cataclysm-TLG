@@ -36,7 +36,6 @@
     "subtype": "distribution",
     "entries": [
       { "group": "flour_various", "prob": 40 },
-      { "group": "flour_bag_plastic_1", "prob": 10 },
       { "group": "potato_bag_plastic_1", "prob": 10 },
       { "group": "onion_bag_plastic_1", "prob": 10 },
       { "group": "yeast_various", "prob": 50 },
