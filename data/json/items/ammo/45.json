@@ -8,8 +8,8 @@
     "weight": "21 g",
     "volume": "112 ml",
     "longest_side": "32 mm",
-    "price": 180,
-    "price_postapoc": 600,
+    "price": "1 USD 80 cent",
+    "price_postapoc": "6 USD",
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
     "material": [ "brass", "lead", "powder" ],
     "symbol": "=",
@@ -62,8 +62,8 @@
     "type": "AMMO",
     "name": { "str_sp": ".45 ACP +P" },
     "description": "Overpressure .45 ACP ammunition with a 185gr JHP bullet.  This cartridge has higher muzzle energy than typical loads, leading to greater damage, accuracy and recoil.",
-    "price": 210,
-    "price_postapoc": 600,
+    "price": "2 USD 10 cent",
+    "price_postapoc": "6 USD",
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
     "count": 10,
     "relative": { "damage": { "damage_type": "bullet", "amount": 4, "armor_penetration": 4 }, "dispersion": -10, "recoil": 60 }
@@ -75,7 +75,7 @@
     "name": { "str_sp": ".45 ACP FMJ, black powder" },
     "description": ".45 ACP ammunition with a 230gr FMJ bullet.  Due to a reputation for effectiveness, the .45 ACP round has been common for over a century.  Someone was down on their luck when they hand-reloaded this one - it's filled with black powder instead of smokeless powder.  Expect lower velocity, muzzle smoke, and a dirtier barrel if you shoot it.",
     "proportional": {
-      "price": 0.3,
+    "price": 0.3,
       "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 },
       "recoil": 0.76,
       "dispersion": 1.2
@@ -90,7 +90,7 @@
     "name": { "str_sp": ".45 ACP JHP, black powder" },
     "description": ".45 ACP ammunition with a 185gr JHP bullet.  Someone was down on their luck when they hand-reloaded this one - it's filled with black powder instead of smokeless powder.  Expect lower velocity, muzzle smoke, and a dirtier barrel if you shoot it.",
     "proportional": {
-      "price": 0.3,
+    "price": 0.3,
       "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 },
       "recoil": 0.76,
       "dispersion": 1.2
