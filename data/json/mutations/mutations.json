@@ -1015,6 +1015,16 @@
   },
   {
     "type": "mutation",
+    "id": "TINYSTOMACH",
+    "name": { "str": "Tiny Stomach" },
+    "points": -3,
+    "description": "Either as the result of a lifesaving surgery, or as a congenital defect, your stomach is much smaller than usual.  You'll have to eat your food in small servings during the day, rather than one or two large daily meals.",
+    "starting_trait": true,
+    "active": false,
+    "enchantments": [ { "values": [ { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": -0.7 } ] } ]
+  },
+  {
+    "type": "mutation",
     "id": "LOVES_BOOKS",
     "name": { "str": "Bookworm" },
     "points": 1,
@@ -3204,6 +3214,8 @@
     "visibility": 1,
     "ugliness": 2,
     "description": "Your skin is covered with fine spines.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive moderate damage.",
+    "prereqs": [ "FELINE_FUR" ],
+    "types": [ "BODY_ARMOR_MOD" ],
     "changes_to": [ "QUILLS" ],
     "category": [ "BEAST" ]
   },
@@ -3216,7 +3228,8 @@
     "ugliness": 3,
     "description": "Your body is covered with large quills.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive significant damage.",
     "prereqs": [ "SPINES" ],
-    "category": [ "BEAST" ]
+    "category": [ "BEAST" ],
+    "types": [ "BODY_ARMOR_MOD" ]
   },
   {
     "type": "mutation",
@@ -4180,7 +4193,7 @@
     "name": { "str": "Padded Feet" },
     "points": 1,
     "visibility": 1,
-    "description": "The bottoms of your feet are strongly padded.  You receive no movement penalty for not wearing shoes, and even receive a 10% bonus when moving barefoot.  Also, your steps are significantly quieter, as added tissue dampens the noise.",
+    "description": "The bottoms of your feet are strongly padded.  You receive no movement penalty for not wearing shoes, and your steps are significantly quieter, as added tissue dampens the noise.",
     "types": [ "SOLES" ],
     "category": [ "BATRACHIAN", "RABBIT", "URSINE", "FELINE", "LUPINE", "SPIDER", "BEAST" ],
     "flags": [ "TOUGH_FEET" ],
@@ -7392,6 +7405,7 @@
     "prereqs": [ "INT_SLIME" ],
     "prereqs2": [ "PER_SLIME_OK" ],
     "threshreq": [ "THRESH_SLIME" ],
+    "cancels": [ "TINYSTOMACH" ],
     "category": [ "SLIME" ],
     "active": true,
     "cost": 347,
@@ -9109,6 +9123,17 @@
     "valid": false,
     "description": "With this, you'll be fixing those bugs faster than ever!",
     "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "SPEED", "multiply": 10 } ] } ],
+    "debug": true,
+    "active": true
+  },
+  {
+    "type": "mutation",
+    "id": "DEBUG_STAMINA",
+    "name": { "str": "Debug Stamina" },
+    "points": 99,
+    "valid": false,
+    "description": "Your energy to squash bugs is endless!",
+    "enchantments": [ { "values": [ { "value": "STAMINA_REGEN_MOD", "add": 9 } ] } ],
     "debug": true,
     "active": true
   },

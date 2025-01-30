@@ -78,7 +78,7 @@
     "ammo_type": "diesel",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 4 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "IGNITE", "NEVER_MISFIRES" ]
   },
   {
     "id": "jp8",
@@ -101,7 +101,7 @@
     "ammo_type": "jp8",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "IGNITE", "NEVER_MISFIRES" ]
   },
   {
     "id": "avgas",
@@ -125,7 +125,7 @@
     "ammo_type": "avgas",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "IGNITE", "NEVER_MISFIRES" ]
   },
   {
     "id": "biodiesel",
@@ -159,7 +159,7 @@
     "ammo_type": "gasoline",
     "damage": { "damage_type": "heat", "amount": 5, "armor_penetration": 5 },
     "range": 4,
-    "effects": [ "FLAME", "STREAM", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM", "IGNITE", "NEVER_MISFIRES" ]
   },
   {
     "id": "lamp_oil",
@@ -229,7 +229,7 @@
     "ammo_type": "flammable",
     "damage": { "damage_type": "heat", "amount": 15, "armor_penetration": 30 },
     "range": 6,
-    "effects": [ "FLAME", "STREAM_BIG", "INCENDIARY", "NEVER_MISFIRES" ]
+    "effects": [ "FLAME", "STREAM_BIG", "IGNITE", "NEVER_MISFIRES" ]
   },
   {
     "id": "gelled_gasoline",

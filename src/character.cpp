@@ -472,7 +472,6 @@ static const trait_id trait_NOMAD( "NOMAD" );
 static const trait_id trait_NOMAD2( "NOMAD2" );
 static const trait_id trait_NOMAD3( "NOMAD3" );
 static const trait_id trait_PACIFIST( "PACIFIST" );
-static const trait_id trait_PADDED_FEET( "PADDED_FEET" );
 static const trait_id trait_PARAIMMUNE( "PARAIMMUNE" );
 static const trait_id trait_PAWS( "PAWS" );
 static const trait_id trait_PAWS_LARGE( "PAWS_LARGE" );
@@ -5804,8 +5803,8 @@ Character::comfort_response_t Character::base_comfort_value( const tripoint_bub_
                 }
             }
         }
-        if( ( fungaloid_cosplay && here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_FUNGUS, pos() ) ) ||
-            ( watersleep && here.has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, pos() ) ) ) {
+        if( ( fungaloid_cosplay && here.has_flag_ter_or_furn( ter_furn_flag::TFLAG_FUNGUS, p.raw() ) ) ||
+            ( watersleep && here.has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, p.raw() ) ) ) {
             comfort += static_cast<int>( comfort_level::very_comfortable );
         }
     } else if( plantsleep ) {
@@ -7421,7 +7420,7 @@ int Character::item_handling_cost( const item &it, bool penalties, int base_cost
 {
     int mv = base_cost;
     if( penalties ) {
-        // 40 moves per liter, up to 200 at 5 liters
+        // 50 moves per liter, up to 200 at 4 liters
         mv += std::min( 200, it.volume( false, false, charges_in_it ) / 20_ml );
     }
 
@@ -10465,14 +10464,6 @@ std::vector<run_cost_effect> Character::run_cost_effects( float &movecost ) cons
         run_cost_effect_mul( flatground_mult, _( "Flat Ground Mut." ) );
     }
 
-    if( has_trait( trait_PADDED_FEET ) && is_barefoot() ) {
-        run_cost_effect_mul( 0.9f, _( "Bare Padded Feet" ) );
-    }
-
-    if( worn_with_flag( flag_SLOWS_MOVEMENT ) ) {
-        run_cost_effect_mul( 1.1f, _( "Tight Clothing" ) );
-    }
-
     if( worn_with_flag( flag_FIN ) ) {
         run_cost_effect_mul( 1.5f, _( "Swim Fins" ) );
     }
@@ -11481,12 +11472,12 @@ int Character::sleep_spot( const tripoint_bub_ms &p ) const
 
     sleepy = enchantment_cache->modify_value( enchant_vals::mod::SLEEPY, sleepy );
 
-    if( watersleep && get_map().has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, pos() ) ) {
+    if( watersleep && get_map().has_flag_ter( ter_furn_flag::TFLAG_SWIMMABLE, p.raw() ) ) {
         sleepy += 10; //comfy water!
     }
 
     if( has_trait( trait_CHLOROMORPH ) &&
-        get_map().has_flag_ter( ter_furn_flag::TFLAG_PLOWABLE, pos() ) ) {
+        get_map().has_flag_ter( ter_furn_flag::TFLAG_PLOWABLE, p.raw() ) ) {
         sleepy += 25; // It's time for a nice nap.
     }
 
