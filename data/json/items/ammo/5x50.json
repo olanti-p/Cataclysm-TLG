@@ -6,7 +6,7 @@
     "description": "The Rivtech 5x50mm flechette round is a fin-stabilized steel needle packed into a plastic sabot which breaks apart shortly after the round clears the chamber.  The resulting cartridge is far lighter and produces lower recoil than a conventional round, while the projectile makes up for its low mass with extreme velocity and long range.",
     "weight": "5 g",
     "volume": "144 ml",
-    "price": 1125,
+    "price": "11 USD 25 cent",
     "material": [ "plastic", "powder", "steel" ],
     "symbol": "=",
     "color": "green",
@@ -20,7 +20,7 @@
     "recoil": 80,
     "loudness": 80,
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "price_postapoc": 1800,
+    "price_postapoc": "18 USD",
     "effects": [ "COOKOFF", "NEVER_MISFIRES" ]
   },
   {
@@ -30,8 +30,8 @@
     "name": { "str": "RA119 5x50mm penetrator" },
     "description": "The Rivtech 5x50mm penetrator round is a fin-stabilized armor-penetrating tungsten needle packed into a plastic sabot which breaks apart shortly after the round clears the chamber.  The resulting cartridge is far lighter and produces lower recoil than a conventional round, while the projectile makes up for its low mass with extreme velocity and long range.",
     "weight": "6 g",
-    "price": 1688,
-    "price_postapoc": 2400,
+    "price": "16 USD 88 cent",
+    "price_postapoc": "24 USD",
     "loudness": 90,
     "relative": { "range": -10, "damage": { "damage_type": "bullet", "amount": 27, "armor_penetration": 28 }, "dispersion": 9 },
     "proportional": { "recoil": 1.1 }
@@ -41,7 +41,7 @@
     "copy-from": "5x50dart",
     "type": "AMMO",
     "name": { "str": "5x50mm flechette, reloaded", "str_pl": "5x50mm flechettes, reloaded" },
-    "price_postapoc": 1200,
+    "price_postapoc": "12 USD",
     "description": "The Rivtech 5x50mm flechette round is a fin-stabilized steel needle packed into a plastic sabot which breaks apart shortly after the round clears the chamber.  The resulting cartridge is far lighter and produces lower recoil than a conventional round, while the projectile makes up for its low mass with extreme velocity and long range.  This one has been hand-reloaded by a lucky survivor or perhaps a pre-Cataclysm corporate spy, leading to slightly inferior performance compared to factory-produced ammo.",
     "effects": [ "COOKOFF", "RECYCLED" ],
     "relative": { "range": -15, "dispersion": 40 },

@@ -5,8 +5,8 @@
     "name": { "str_sp": "seeing this is a bug" },
     "description": "seeing this is a bug",
     "volume": "0 ml",
-    "price": 0,
-    "price_postapoc": 0,
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
     "symbol": "/",
     "color": "light_gray",
     "flags": [ "ZERO_WEIGHT" ],
@@ -83,7 +83,7 @@
     "volume": "400 L",
     "longest_side": "114 cm",
     "price": "150 USD",
-    "price_postapoc": 7500,
+    "price_postapoc": "75 USD",
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
