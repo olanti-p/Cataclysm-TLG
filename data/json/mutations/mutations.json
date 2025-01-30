@@ -3228,7 +3228,7 @@
     "ugliness": 3,
     "description": "Your body is covered with large quills.  Whenever an unarmed opponent strikes a part of your body that is not covered by clothing, they will receive significant damage.",
     "prereqs": [ "SPINES" ],
-    "category": [ "BEAST" ]
+    "category": [ "BEAST" ],
     "types": [ "BODY_ARMOR_MOD" ]
   },
   {
