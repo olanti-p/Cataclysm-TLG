@@ -1,54 +1,40 @@
 [
   {
     "type": "overmap_terrain",
-    "abstract": "generic_park",
+    "id": [ "park", "park_roof", "park_2", "park_3", "park_4", "park_5", "park_5_roof", "park_6", "park_7", "park_7_roof" ],
     "copy-from": "generic_city_building",
     "name": "park",
     "sym": "O",
-    "color": "green",
-    "extras": "park"
-  },
-  {
-    "type": "overmap_terrain",
-    "id": [ "park", "park_roof", "park_2", "park_3", "park_4", "park_5", "park_5_roof", "park_6", "park_7", "park_7_roof" ],
-    "copy-from": "generic_park"
+    "color": "green"
   },
   {
     "type": "overmap_terrain",
     "id": [ "playground", "playground_roof", "playground_1" ],
-    "copy-from": "generic_park",
+    "copy-from": "park",
     "name": "playground"
   },
   {
     "type": "overmap_terrain",
     "id": [ "dog_park" ],
-    "copy-from": "generic_park",
+    "copy-from": "park",
     "name": "dog park"
   },
   {
     "type": "overmap_terrain",
-    "abstract": "sports_court",
-    "copy-from": "generic_city_building",
-    "sym": "O",
-    "color": "dark_gray"
-  },
-  {
-    "type": "overmap_terrain",
     "id": [ "volleyball_court" ],
-    "copy-from": "sports_court",
-    "name": "volleyball court",
-    "color": "yellow"
+    "copy-from": "park",
+    "name": "volleyball court"
   },
   {
     "type": "overmap_terrain",
     "id": [ "tennis_court" ],
-    "copy-from": "sports_court",
+    "copy-from": "park",
     "name": "tennis court"
   },
   {
     "type": "overmap_terrain",
     "id": [ "baskeball_court" ],
-    "copy-from": "sports_court",
+    "copy-from": "park",
     "name": "basketball court"
   },
   {
@@ -104,8 +90,7 @@
     "copy-from": "generic_city_building",
     "name": "fishing pond",
     "sym": "S",
-    "color": "i_blue",
-    "extras": "park"
+    "color": "i_blue"
   },
   {
     "type": "overmap_terrain",
@@ -121,8 +106,7 @@
     "copy-from": "generic_city_building",
     "name": "small wooded trail",
     "sym": "S",
-    "color": "i_green",
-    "extras": "park"
+    "color": "i_green"
   },
   {
     "type": "overmap_terrain",
@@ -163,8 +147,7 @@
     "copy-from": "generic_city_building",
     "name": "nature trail",
     "sym": "S",
-    "color": "i_green",
-    "extras": "park"
+    "color": "i_green"
   },
   {
     "type": "overmap_terrain",
@@ -172,8 +155,7 @@
     "copy-from": "generic_city_building",
     "name": "public pond",
     "sym": "P",
-    "color": "i_green",
-    "extras": "park"
+    "color": "i_green"
   },
   {
     "type": "overmap_terrain",
@@ -183,8 +165,7 @@
     "color": "yellow",
     "see_cost": 5,
     "mondensity": 2,
-    "flags": [ "SIDEWALK", "SOURCE_FARMING" ],
-    "extras": "park"
+    "flags": [ "SIDEWALK", "SOURCE_FARMING" ]
   },
   {
     "type": "overmap_terrain",
@@ -193,8 +174,7 @@
     "name": "public garden",
     "looks_like": "publicgarden",
     "sym": "g",
-    "color": "light_green",
-    "extras": "park"
+    "color": "light_green"
   },
   {
     "type": "overmap_terrain",
@@ -985,8 +965,7 @@
     "copy-from": "generic_city_building",
     "name": "private park roof",
     "sym": "p",
-    "color": "light_green_red",
-    "extras": "park"
+    "color": "light_green_red"
   },
   {
     "type": "overmap_terrain",
