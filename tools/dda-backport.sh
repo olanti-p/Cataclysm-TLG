@@ -42,8 +42,38 @@ _check_required_component "git"
 _check_required_component "curl"
 _check_required_component "jq"
 
-ORG=CleverRaven
-REPO=Cataclysm-DDA
+_ask_if_continue(){
+  read -rp "Continue? (y/n) " choice
+  if [ "$choice" != y ]; then
+    echo "Aborting."
+    exit 1
+  fi
+}
+
+_check_if_ctlg_repo(){
+  if ! git rev-parse --is-inside-work-tree &>/dev/null; then
+    echo "Not in any git repository. cd to the right one and retry."
+    exit 1
+  fi
+  if [[ $(git config --get remote.origin.url) == *Cataclysm-TLG/Cataclysm-TLG.git* ]]; then
+     ORG=CleverRaven
+     REPO=Cataclysm-DDA
+  elif [[ $(git config --get remote.origin.url) == *Cataclysm-TLG/CTLG-Tilesets.git* ]]; then
+     ORG=I-am-Erk
+     REPO=CDDA-Tilesets
+  else
+    echo "This command must be run inside a Cataclysm-TLG repository."
+    exit 1
+  fi
+  if [ "$(git remote | wc -l)" -lt 2 ]; then
+    echo "Less than 2 remotes detected. This script requires the dda repo to be a remote. Not having the remote set up will make git am fail."
+    echo "Set up the remote like this: git remote add cdda https://github.com/$ORG/$REPO.git"
+    echo "This will pull over 1 GB in data but is required to continue: git fetch cdda"
+    _ask_if_continue
+  fi
+}
+
+_check_if_ctlg_repo
 
 if [ -z "$GITHUB_TOKEN" ]; then
   API_RESPONSE=$(curl -Ls -H "Accept: application/json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/$ORG/$REPO/pulls/$PULLREQUEST_ID")
@@ -81,33 +111,6 @@ if [ "$CURL_EXIT" != "0" ]; then
   fi
   exit 1
 fi
-
-_ask_if_continue(){
-  read -rp "Continue? (y/n) " choice
-  if [ "$choice" != y ]; then
-    echo "Aborting."
-    exit 1
-  fi
-}
-
-_check_if_ctlg_repo(){
-  if ! git rev-parse --is-inside-work-tree &>/dev/null; then
-    echo "Not in any git repository. cd to the right one and retry."
-    exit 1
-  fi
-  if ! [[ $(git config --get remote.origin.url) == *Cataclysm-TLG/Cataclysm-TLG.git* ]]; then
-    echo "This command must be run inside the Cataclysm-TLG repository."
-    exit 1
-  fi
-  if [ "$(git remote | wc -l)" -lt 2 ]; then
-    echo "Less than 2 remotes detected. This script requires the dda repo to be a remote. Not having the remote set up will make git am fail."
-    echo "Set up the remote like this: git remote add cdda https://github.com/CleverRaven/Cataclysm-DDA.git"
-    echo "This will pull over 1 GB in data but is required to continue: git fetch cdda"
-    _ask_if_continue
-  fi
-}
-
-_check_if_ctlg_repo
 
 echo "$PATCH_BODY" | git apply --stat -
 
