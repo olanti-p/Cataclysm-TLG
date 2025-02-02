@@ -84,7 +84,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
             REQUIRE( main_npc.get_wielded_item()->typeId() == itype_knife_chef );
 
             THEN( "NPC attempts to melee the enemy target" ) {
-                main_npc.evaluate_best_weapon( zombie );
+                main_npc.evaluate_best_attack( zombie );
                 const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                 npc_attack_melee *melee_attack = dynamic_cast<npc_attack_melee *>( attack.get() );
                 CHECK( melee_attack );
@@ -104,7 +104,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
                 REQUIRE( !main_npc.rules.has_flag( ally_rule::use_silent ) );
 
                 THEN( "NPC tries to shoot the enemy target" ) {
-                    main_npc.evaluate_best_weapon( zombie );
+                    main_npc.evaluate_best_attack( zombie );
                     const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                     npc_attack_gun *ranged_attack = dynamic_cast<npc_attack_gun *>( attack.get() );
                     CHECK( ranged_attack );
@@ -119,7 +119,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
                 REQUIRE( main_npc.rules.has_flag( ally_rule::use_silent ) );
 
                 THEN( "NPC can't fire his weapon" ) {
-                    main_npc.evaluate_best_weapon( zombie );
+                    main_npc.evaluate_best_attack( zombie );
                     const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                     npc_attack_gun *ranged_attack = dynamic_cast<npc_attack_gun *>( attack.get() );
                     CHECK( !ranged_attack );
@@ -130,7 +130,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
                 REQUIRE( !main_npc.rules.has_flag( ally_rule::use_guns ) );
 
                 THEN( "NPC can't fire his weapon" ) {
-                    main_npc.evaluate_best_weapon( zombie );
+                    main_npc.evaluate_best_attack( zombie );
                     const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                     npc_attack_gun *ranged_attack = dynamic_cast<npc_attack_gun *>( attack.get() );
                     CHECK( !ranged_attack );
@@ -143,7 +143,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
             REQUIRE( main_npc.get_wielded_item()->typeId() == itype_rock );
 
             THEN( "NPC doesn't bother throwing the rocks so close" ) {
-                main_npc.evaluate_best_weapon( zombie );
+                main_npc.evaluate_best_attack( zombie );
                 const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                 npc_attack_throw *throw_attack = dynamic_cast<npc_attack_throw *>( attack.get() );
                 CHECK( !throw_attack );
@@ -214,7 +214,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
             REQUIRE( main_npc.get_wielded_item()->typeId() == itype_knife_chef );
 
             THEN( "NPC attempts to melee the enemy target" ) {
-                main_npc.evaluate_best_weapon( zombie );
+                main_npc.evaluate_best_attack( zombie );
                 const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                 npc_attack_melee *melee_attack = dynamic_cast<npc_attack_melee *>( attack.get() );
                 CHECK( melee_attack );
@@ -226,12 +226,12 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
         }
 
         WHEN( "NPC only has a bunch of rocks" ) {
-            item weapon( "rock" );
+            item weapon( "rock", calendar::turn, 5 );
             main_npc.set_wielded_item( weapon );
             REQUIRE( main_npc.get_wielded_item()->typeId() == itype_rock );
 
             THEN( "NPC throws rocks at the zombie" ) {
-                main_npc.evaluate_best_weapon( zombie );
+                main_npc.evaluate_best_attack( zombie );
                 const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
                 npc_attack_throw *throw_attack = dynamic_cast<npc_attack_throw *>( attack.get() );
                 CHECK( throw_attack );
@@ -248,7 +248,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
             REQUIRE( main_npc.get_wielded_item()->typeId() == itype_knife_chef );
 
             WHEN( "NPC is targetting closest zombie" ) {
-                main_npc.evaluate_best_weapon( zombie );
+                main_npc.evaluate_best_attack( zombie );
 
                 THEN( "NPC tries to attack closest zombie" ) {
                     const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
@@ -262,7 +262,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
             }
             WHEN( "NPC is targetting farthest zombie" ) {
                 WHEN( "Furthest zombie is at full HP" ) {
-                    main_npc.evaluate_best_weapon( zombie_far );
+                    main_npc.evaluate_best_attack( zombie_far );
 
                     THEN( "NPC tries to attack closest zombie" ) {
                         const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();
@@ -276,7 +276,7 @@ TEST_CASE( "NPC_faces_zombies", "[npc_attack]" )
                 }
                 WHEN( "Furthest zombie is at low HP" ) {
                     zombie_far->set_hp( 1 );
-                    main_npc.evaluate_best_weapon( zombie_far );
+                    main_npc.evaluate_best_attack( zombie_far );
 
                     THEN( "NPC tries to attack furthest zombie" ) {
                         const std::shared_ptr<npc_attack> &attack = main_npc.get_current_attack();

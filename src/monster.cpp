@@ -3117,12 +3117,15 @@ void monster::drop_items_on_death( item *corpse )
     }
 }
 
-void monster::spawn_dissectables_on_death( item *corpse )
+void monster::spawn_dissectables_on_death( item *corpse ) const
 {
     if( is_hallucination() ) {
         return;
     }
     if( type->dissect.is_empty() ) {
+        return;
+    }
+    if( !corpse ) {
         return;
     }
 
@@ -3140,8 +3143,6 @@ void monster::spawn_dissectables_on_death( item *corpse )
             }
             if( corpse ) {
                 corpse->put_in( dissectable, pocket_type::CORPSE );
-            } else {
-                get_map().add_item_or_charges( pos(), dissectable );
             }
         }
     }
@@ -3236,8 +3237,8 @@ void monster::process_one_effect( effect &it, bool is_new )
         }
     }
     //Reset max speed
-    this->set_speed_base( calculate_by_enchantment( this->get_speed_base(), enchant_vals::mod::SPEED,
-                          true ) );
+    set_speed_bonus( calculate_by_enchantment( get_speed_base(), enchant_vals::mod::SPEED,
+                     true ) - get_speed_base() );
 }
 
 void monster::process_effects()
