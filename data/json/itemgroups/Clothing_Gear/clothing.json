@@ -3708,7 +3708,7 @@
       { "item": "gloves_light", "prob": 60 },
       { "item": "gloves_fingerless", "prob": 40 },
       { "item": "gloves_wool", "prob": 25 },
-      { "item": "gloves_wool", "prob": 10 },
+      { "item": "gloves_wool_fingerless", "prob": 10 },
       { "item": "gloves_winter", "prob": 15 },
       { "item": "mittens", "prob": 30 },
       { "item": "gloves_work", "prob": 20 },
