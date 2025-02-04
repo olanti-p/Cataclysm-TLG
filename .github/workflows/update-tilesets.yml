@@ -12,7 +12,7 @@ env:
 
 jobs:
   pull-updates:
-    if: github.repository == 'CleverRaven/Cataclysm-DDA'
+    if: github.repository == 'Cataclysm-TLG/Cataclysm-TLG'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,8 +24,7 @@ jobs:
       - name: "Update Tilesets"
         shell: bash
         run: |
-          gh release download -D gfx/ -p '*.zip' -R I-am-Erk/CDDA-Tilesets
-          gh release download -D gfx/ -p '*.zip' -R pixel-32/CDDA-tileset
+          gh release download -D gfx/ -p '*.zip' -R Cataclysm-TLG/CTLG-Tilesets
 
           find gfx/ -name "*.zip" | xargs -I{} unzip -o {} -d gfx/
           rm -fr gfx/*.zip
@@ -39,11 +38,11 @@ jobs:
         with:
           commit-message: |
             Routine tileset updates on ${{ steps.current-date.outputs.formattedTime }}
-          committer: casswedson <casswedson@users.noreply.github.com>
-          author: casswedson <casswedson@users.noreply.github.com>
+          committer: worm-girl <worm-girl@users.noreply.github.com>
+          author: worm-girl <worm-girl@users.noreply.github.com>
           token: ${{ secrets.TX_PR_CREATOR }}
           branch: tileset-updates
           delete-branch: true
           base: master
           title: Routine tileset updates on ${{ steps.current-date.outputs.formattedTime }}
-          body: "#### Summary\nNone\nAutomatic tileset updates from:\n\n**https://github.com/I-am-Erk/CDDA-Tilesets/releases**\nAltica, BrownLikeBears, ChibiUltica, HollowMoon, Larwick_Overmap, MshockXotto+, NeoDaysTileset, RetroDaysTileset, SmashButton_iso, SurveyorsMap\n\n---\n\n**https://github.com/pixel-32/CDDA-tileset/releases**\nCuteclysm"
+          body: "#### Summary\nNone\nAutomatic tileset updates from:\n\n**https://github.com/Cataclysm-TLG/CTLG-Tilesets/releases**\nAltica, BrownLikeBears, ChibiUltica, HollowMoon, Larwick_Overmap, MshockXotto+, NeoDaysTileset, RetroDaysTileset, SmashButton_iso, SurveyorsMap\n\n"
