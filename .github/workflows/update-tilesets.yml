@@ -40,7 +40,7 @@ jobs:
             Routine tileset updates on ${{ steps.current-date.outputs.formattedTime }}
           committer: worm-girl <worm-girl@users.noreply.github.com>
           author: worm-girl <worm-girl@users.noreply.github.com>
-          token: ${{ secrets.TX_PR_CREATOR }}
+          token: ${{ secrets.ACTIONSECRET }}
           branch: tileset-updates
           delete-branch: true
           base: master
