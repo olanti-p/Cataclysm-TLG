@@ -1534,7 +1534,8 @@ std::optional<std::pair<attack_vector_id, sub_bodypart_str_id>>
                 int bp_hp_max = bp->main_part == bp ? user.get_part_hp_max( bp ) : user.get_part_hp_max(
                                     bp->main_part );
                 if( ( 100 * bp_hp_cur / bp_hp_max ) > vec->bp_hp_limit &&
-                    user.get_part_encumbrance_data( bp ).encumbrance < vec->encumbrance_limit && ( !vec->natural_attack || !user.natural_attack_restricted_on( bp ) ) ) {
+                    user.get_part_encumbrance_data( bp ).encumbrance < vec->encumbrance_limit &&
+                    ( !vec->natural_attack || !user.natural_attack_restricted_on( bp ) ) ) {
                     sub_bodypart_str_id current_contact;
                     for( const sub_bodypart_str_id &sbp : bp->sub_parts ) {
                         if( std::find( vec->contact_area.begin(), vec->contact_area.end(),

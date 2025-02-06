@@ -1717,7 +1717,7 @@
         "encumbrance": 0
       }
     ],
-  "melee_damage": { "stab": 16 }
+    "melee_damage": { "stab": 16 }
   },
   {
     "id": "integrated_saber_teeth",
