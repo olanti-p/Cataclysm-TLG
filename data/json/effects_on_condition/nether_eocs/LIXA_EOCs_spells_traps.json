@@ -543,58 +543,37 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_10",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "10" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "10" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_11",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "11" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "11" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_12",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "12" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "12" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_13",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "13" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "13" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_14",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "14" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "14" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_15",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "15" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "15" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_LIXA_UNFOLD_ENTRY_SETUP_16",
-    "effect": [
-      { "math": [ "u_LIXA_entry", "=", "16" ] },
-      { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] }
-    ]
+    "effect": [ { "math": [ "u_LIXA_entry", "=", "16" ] }, { "run_eocs": [ "EOC_LIXA_UNFOLD_ENTRY" ] } ]
   },
   {
     "type": "effect_on_condition",
