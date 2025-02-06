@@ -193,9 +193,7 @@
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Beggars2",
     "type": "talk_topic",
-    "dynamic_line": {
-        "I don't know, why don't you ask them?  I haven't pried, but where else do they have to go?  You've seen how bad it is out there.  We don't have the space for them, but it won't kill us to give them some shelter as long as they aren't too much of a drain on resources."
-    }
+    "dynamic_line": "I don't know, why don't you ask them?  I haven't pried, but where else do they have to go?  You've seen how bad it is out there.  We don't have the space for them, but it won't kill us to give them some shelter as long as they aren't too much of a drain on resources."
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Beggars3",
