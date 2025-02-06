@@ -427,16 +427,6 @@
   },
   {
     "type": "COMESTIBLE",
-    "id": "seed_gherkin",
-    "copy-from": "seed",
-    "price": 50,
-    "name": { "str_sp": "gherkin cucumber seeds" },
-    "description": "Some gherkin cucumber seeds.",
-    "flags": [ "PLANTABLE_SEED", "NUTRIENT_OVERRIDE", "INEDIBLE" ],
-    "seed_data": { "plant_name": "gherkin cucumber", "fruit": "gherkin", "byproducts": [ "withered" ], "grow": "60 days" }
-  },
-  {
-    "type": "COMESTIBLE",
     "id": "seed_potato_raw",
     "copy-from": "potato",
     "category": "seeds",

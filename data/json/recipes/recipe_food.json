@@ -6833,8 +6833,6 @@
         [ "dahlia_baked", 1 ],
         [ "cucumber", 1 ],
         [ "cucumber_cut", 1 ],
-        [ "gherkin_cut", 1 ],
-        [ "gherkin", 1 ],
         [ "veggy_pickled", 1 ],
         [ "cooked_cattail_stalk", 1 ],
         [ "cooked_burdock_stalk", 1 ],
@@ -6908,8 +6906,6 @@
         [ "dahlia_baked", 1 ],
         [ "cucumber", 1 ],
         [ "cucumber_cut", 1 ],
-        [ "gherkin_cut", 1 ],
-        [ "gherkin", 1 ],
         [ "veggy_pickled", 1 ],
         [ "cooked_cattail_stalk", 1 ],
         [ "cooked_burdock_stalk", 1 ],
@@ -7738,7 +7734,7 @@
       [ [ "vinegar", 1 ] ],
       [ [ "saline", 1 ], [ "salt", 2 ] ],
       [ [ "jar_glass_sealed", 1 ] ],
-      [ [ "gherkin", 1 ], [ "gherkin_cut", 1 ] ]
+      [ [ "cucumber", 1 ], [ "cucumber_cut", 1 ] ]
     ]
   },
   {
@@ -9262,7 +9258,6 @@
         [ "seed_carrot", 3 ],
         [ "seed_chili_pepper", 3 ],
         [ "seed_cucumber", 3 ],
-        [ "seed_gherkin", 3 ],
         [ "seed_weed", 3 ],
         [ "seed_thyme", 3 ],
         [ "seed_canola", 1 ],
