@@ -64,7 +64,9 @@
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Intro",
     "type": "talk_topic",
-    "dynamic_line": "Before you ask, we're full.  You're right about the refugee part, but we're way over capacity right now.  We don't have the food or space to take on anyone else.\"  He softens a little.  \"As for me, I do a lot of things here, but mostly I keep tabs on our supplies.  You can call me Smokes, or Gavin; whichever you prefer.  I also trade with people from outside, like you.  If you're in the market for hardware, we're selling, and if you have food, we are very much buying.  Anyways, uh, what can I do for you?",
+    "dynamic_line": {
+        "Before you ask, we're full.  You're right about the refugee part, but we're way over capacity right now.  We don't have the food or space to take on anyone else.\"  He softens a little.  \"As for me, I do a lot of things here, but mostly I keep tabs on our supplies.  You can call me Smokes, or Gavin; whichever you prefer.  I also trade with people from outside, like you.  If you're in the market for hardware, we're selling, and if you have food, we are very much buying.  Anyways, uh, what can I do for you?"
+    },
     "speaker_effect": [
       {
         "sentinel": "has_onetime_greeting_effect",
@@ -193,7 +195,9 @@
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Beggars2",
     "type": "talk_topic",
-    "dynamic_line": "I don't know, why don't you ask them?  I haven't pried, but where else do they have to go?  You've seen how bad it is out there.  We don't have the space for them, but it won't kill us to give them some shelter as long as they aren't too much of a drain on resources."
+    "dynamic_line": {
+        "I don't know, why don't you ask them?  I haven't pried, but where else do they have to go?  You've seen how bad it is out there.  We don't have the space for them, but it won't kill us to give them some shelter as long as they aren't too much of a drain on resources."
+    }
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Beggars3",
@@ -203,7 +207,16 @@
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Beggars_Reward",
     "type": "talk_topic",
-    "dynamic_line": "We don't have a lot to share, but… well, I guess it's not safe for them.  At best, it's a health hazard waiting to happen.  We could pay you in merch if you can clear them out without anyone getting hurt, yeah.",
+    "dynamic_line": {
+      "concatenate": [
+        "And so we did.\"  Smokes reaches under their table, counts out some money, and slides it through a slot in the glass.  \"Here's five merch a head for the folks you found a new home for.  We won't forget it",
+        {
+          "follower_present": "NC_BEGGAR_3",
+          "yes": ".\"\n\nLuo puts her hands on her hips.  \"You're getting *paid* for… ah, fuck it.  I should be pissed, but honestly I'm so glad to be out of this place, I can't even be mad.  That's really saying something, coming from me.",
+          "no": "."
+        }
+      ]
+    },
     "responses": [
       {
         "text": "I'll see what I can do.  What's merch?",
