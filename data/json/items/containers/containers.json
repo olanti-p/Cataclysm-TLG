@@ -1597,7 +1597,7 @@
     "description": "A slim and lightweight insulated plastic bladder worn on the back or within a hydration pouch in a backpack.  It has a large pocket and a capped mouth for filling with liquid, with a hose that allows the wearer to drink hands-free.",
     "ascii_picture": "camelbak",
     "weight": "286 g",
-    "volume": "3001 ml",
+    "volume": "250 ml",
     "price": "100 USD",
     "price_postapoc": "2 USD 50 cent",
     "to_hit": -1,
@@ -3037,6 +3037,23 @@
     ],
     "flags": [ "BANK_NOTE_SHAPED" ],
     "properties": { "burst_when_filled": "75" }
+  },
+  {
+    "id": "condom_sealed",
+    "type": "GENERIC",
+    "looks_like": "condom",
+    "name": { "str": "sealed condom" },
+    "description": "A sealed condom wrapper, activate to open it.",
+    "ascii_picture": "condom_sealed",
+    "weight": "5 g",
+    "volume": "15 ml",
+    "price": "0 cent",
+    "price_postapoc": "25 cent",
+    "material": [ "plastic" ],
+    "symbol": ")",
+    "color": "white",
+    "use_action": { "menu_text": "open", "type": "transform", "target": "condom", "msg": "You rip open the wrapped condom." },
+    "flags": [ "BANK_NOTE_SHAPED" ]
   },
   {
     "id": "balloon",

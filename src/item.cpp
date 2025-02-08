@@ -10277,7 +10277,8 @@ std::pair<item_location, item_pocket *> item::best_pocket( const item &it, item_
 
 bool item::spill_contents( Character &c )
 {
-    if( !is_container() || is_container_empty() ) {
+    if( ( !is_container() && !is_magazine() && !uses_magazine() ) ||
+        is_container_empty() ) {
         return true;
     }
 
@@ -10293,7 +10294,8 @@ bool item::spill_contents( Character &c )
 
 bool item::spill_contents( const tripoint &pos )
 {
-    if( !is_container() || is_container_empty() ) {
+    if( ( !is_container() && !is_magazine() && !uses_magazine() ) ||
+        is_container_empty() ) {
         return true;
     }
     return contents.spill_contents( pos );
@@ -14185,9 +14187,9 @@ bool item::process_internal( map &here, Character *carrier, const tripoint &pos,
 
         if( wetness && has_flag( flag_WATER_BREAK ) ) {
             deactivate();
-            set_fault( random_entry( fault::get_by_type( std::string( "wet" ) ) ) );
+            set_fault( faults::random_of_type( "wet" ) );
             if( has_flag( flag_ELECTRONIC ) ) {
-                set_fault( random_entry( fault::get_by_type( std::string( "shorted" ) ) ) );
+                set_fault( faults::random_of_type( "shorted" ) );
             }
         }
 
@@ -14520,9 +14522,11 @@ template bool item::is_bp_comfortable<bodypart_id>( const bodypart_id &bp ) cons
 
 bool item::is_reloadable() const
 {
-    if( has_flag( flag_NO_RELOAD ) && !has_flag( flag_VEHICLE ) ) {
-        return false; // turrets ignore NO_RELOAD flag
-
+    if( ( has_flag( flag_NO_RELOAD ) && !has_flag( flag_VEHICLE ) ) ||
+        ( is_gun() && !ammo_default() ) ) {
+        // turrets ignore NO_RELOAD flag
+        // don't show guns without default ammo defined in reload ui
+        return false;
     }
 
     for( const item_pocket *pocket : contents.get_all_reloadable_pockets() ) {

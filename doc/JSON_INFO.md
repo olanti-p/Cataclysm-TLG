@@ -2523,8 +2523,9 @@ request](https://github.com/CleverRaven/Cataclysm-DDA/pull/36657) and the
 | pre_special            | Description
 |---                     |---
 | `check_channel`        | Must be empty and have a current in at least one orthogonal tile
-| `check_empty`          | Tile is empty (no furniture, trap, item, or vehicle) and flat terrain
 | `check_empty_lite`     | Tile is empty (no furniture, trap, item, or vehicle)
+| `check_empty`          | Tile is empty (no furniture, trap, item, or vehicle) and flat terrain
+| `check_unblocked`      | Tile is empty (no furniture, trap, item, or vehicle), and either flat terrain or empty space
 | `check_support`        | Must have at least two solid walls/obstructions nearby on orthogonals (non-diagonal directions only) or solid support directly below to support the tile
 | `check_support_below`  | Must have at least two solid walls/obstructions at the Z level below on orthogonals (non-diagonal directions only) or solid support directly below to support the tile and be empty lite but with a ledge trap acceptable, as well as open air
 | `check_single_support` | Must have solid support directly below to support the tile
@@ -4075,7 +4076,7 @@ Any Item can be a container. To add the ability to contain things to an item, yo
     "airtight": false,                // Default false. If true, can contain gas.
     "ablative": false,                // Default false. If true, this item holds a single ablative plate. Make sure to include a flag_restriction on the type of plate that can be added.
     "holster": false,                 // Default false. If true, only one stack of items can be placed inside this pocket, or one item if that item is not count_by_charges.
-    "open_container": false,          // Default false. If true, the contents of this pocket will spill if this item is placed into another item.
+    "open_container": false,          // Default false. If true, the contents of this pocket will spill if this item is worn by a character or placed into another item.
     "fire_protection": false,         // Default false. If true, the pocket protects the contained items from exploding if tossed into a fire.
     "transparent": false              // Default false. If true, the pocket is transparent, as you can see items inside it afar; in the future this would be used for light also
     "extra_encumbrance": 3,           // Additional encumbrance given to character, if this pocket is used

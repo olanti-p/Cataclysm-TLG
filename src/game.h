@@ -607,7 +607,7 @@ class game
 
         void peek();
         void peek( const tripoint &p );
-        std::optional<tripoint> look_debug();
+        std::optional<tripoint_bub_ms> look_debug();
 
         bool check_zone( const zone_type_id &type, const tripoint &where ) const;
         /** Checks whether or not there is a zone of particular type nearby */
@@ -782,6 +782,9 @@ class game
         // TODO: Get rid of untyped overload
         void draw_cursor( const tripoint &p ) const;
         void draw_cursor( const tripoint_bub_ms &p ) const;
+        // Tiles: equivalent to draw_cusor
+        // Curses: draws diagonal arrows pointing at the tile so the target tile isn't obscured
+        void draw_cursor_unobscuring( const tripoint_bub_ms &p ) const;
         // Draw a highlight graphic at p, for example when examining something.
         // TILES only, in curses this does nothing
         // TODO: Get rid of untyped overload
