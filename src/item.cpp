@@ -9053,11 +9053,10 @@ item::armor_status item::damage_armor_durability( damage_unit &du, const bodypar
     // AP attacks usually concentrate force in a small area
     const float post_mitigated_dmg = du.amount;
     // more gradual damage chance calc
-    const float damaged_chance = ( 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1 ) *
-                                 enchant_multiplier;
     if( post_mitigated_dmg > armors_own_resist ) {
         // Figure out chance of damage relative to the damage we took.
-        float damaged_chance = 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1;
+        float damaged_chance = ( 0.11 * ( post_mitigated_dmg / ( armors_own_resist + 2 ) ) + 0.1 ) *
+                                 enchant_multiplier;
         // Soft items are protected from bash damage in much the same way the PLASTIC flag protects monsters.
         if( du.type == damage_bash && is_soft() ) {
             damaged_chance *= 0.66;
