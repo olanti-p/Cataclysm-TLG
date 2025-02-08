@@ -7,7 +7,7 @@
     "category": "CONSTRUCT",
     "required_skills": [ [ "fabrication", 3 ] ],
     "time": "120 m",
-    "components": [ [ [ "lc_wire", 20 ] ] ],
+    "components": [ [ [ "wire", 20 ] ] ],
     "pre_terrain": "t_chainfence_posts",
     "post_terrain": "t_chainfence"
   },
@@ -32,7 +32,7 @@
     "category": "CONSTRUCT",
     "required_skills": [ [ "fabrication", 3 ] ],
     "time": "150 m",
-    "components": [ [ [ "lc_wire", 20 ] ], [ [ "steel_chunk", 3 ], [ "scrap", 12 ] ], [ [ "pipe", 20 ] ] ],
+    "components": [ [ [ "wire", 20 ] ], [ [ "steel_chunk", 3 ], [ "scrap", 12 ] ], [ [ "pipe", 20 ] ] ],
     "pre_note": "Needs to be supported on both sides by fencing, walls, etc.",
     "pre_special": "check_empty",
     "post_terrain": "t_chaingate_c"
@@ -45,7 +45,7 @@
     "category": "CONSTRUCT",
     "required_skills": [ [ "fabrication", 2 ] ],
     "time": "30 m",
-    "components": [ [ [ "lc_wire", 10 ] ] ],
+    "components": [ [ [ "wire", 10 ] ] ],
     "pre_terrain": "t_chickenwire_fence_post",
     "post_terrain": "t_chickenwire_fence"
   },
@@ -70,7 +70,7 @@
     "category": "CONSTRUCT",
     "required_skills": [ [ "fabrication", 2 ] ],
     "time": "45 m",
-    "components": [ [ [ "lc_wire", 10 ] ], [ [ "2x4", 5 ] ], [ [ "nails", 20, "LIST" ] ], [ [ "hinge", 2 ] ] ],
+    "components": [ [ [ "wire", 10 ] ], [ [ "2x4", 5 ] ], [ [ "nails", 20, "LIST" ] ], [ [ "hinge", 2 ] ] ],
     "pre_note": "Needs to be supported on both sides by fencing, walls, etc.",
     "pre_special": "check_empty",
     "post_terrain": "t_chickenwire_gate_c"
@@ -147,7 +147,7 @@
     "category": "CONSTRUCT",
     "required_skills": [ [ "fabrication", 1 ] ],
     "time": "15 m",
-    "components": [ [ [ "lc_wire", 2 ] ] ],
+    "components": [ [ [ "wire", 2 ] ] ],
     "pre_terrain": "t_fence_post",
     "post_terrain": "t_fence_wire"
   },
