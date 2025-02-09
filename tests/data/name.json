@@ -1,20 +1,5 @@
 [
   {
-    "usage": "backer",
-    "gender": "male",
-    "name": "Male Backer"
-  },
-  {
-    "usage": "backer",
-    "gender": "female",
-    "name": "Female Backer"
-  },
-  {
-    "usage": "backer",
-    "gender": "unisex",
-    "name": "Unisex Backer"
-  },
-  {
     "usage": "family",
     "name": "Family"
   },
