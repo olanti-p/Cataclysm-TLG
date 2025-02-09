@@ -154,7 +154,7 @@
     "looks_like": "t_dirtmound",
     "symbol": "#",
     "color": "brown",
-    "connect_groups": "DIRT",
+    "connect_groups": [ "DIRT", "INDOORFLOOR" ],
     "connects_to": "DIRT",
     "move_cost": 3,
     "coverage": 40,
@@ -178,6 +178,8 @@
     "looks_like": "t_pit",
     "move_cost": 0,
     "roof": "t_rock_floor",
+    "connect_groups": "WALL",
+    "connects_to": "WALL",
     "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL" ],
     "examine_action": {
       "type": "effect_on_condition",
@@ -587,6 +589,8 @@
     "looks_like": "t_pit",
     "move_cost": 0,
     "roof": "t_rock_floor",
+    "connect_groups": "WALL",
+    "connects_to": "WALL",
     "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL" ]
   },
   {
