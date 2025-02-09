@@ -7448,7 +7448,7 @@
   },
   {
     "type": "overmap_special",
-    "id": "Militia Lodge",
+    "id": "militia lodge",
     "overmaps": [
       { "point": [ 0, 0, 0 ], "overmap": "GMLODGE1_1" },
       { "point": [ 1, 0, 0 ], "overmap": "GMLODGE1_2" },
