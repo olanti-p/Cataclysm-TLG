@@ -3287,6 +3287,7 @@
     "description": "Your warped bark can be shifted in function, and is currently spread evenly.  Activate to better protect your torso, at the cost of other areas.",
     "types": [ "BODY_ARMOR" ],
     "prereqs": [ "BARK" ],
+    "prereqs2": [ "PLANTSKIN" ],
     "category": [ "PLANT" ],
     "threshreq": [ "THRESH_PLANT" ],
     "active": true,
@@ -3310,6 +3311,7 @@
     "valid": false,
     "description": "Your warped bark can be shifted in function, and is currently consolidated on your torso.  Activate to shift your bark into a lattice, increasing bulk but providing better protection for the entire body.",
     "types": [ "BODY_ARMOR" ],
+    "prereqs": [ "PLANTSKIN" ],
     "active": true,
     "integrated_armor": [ "integrated_bark2_b" ],
     "transform": {
@@ -3331,6 +3333,7 @@
     "valid": false,
     "description": "Your warped bark can be shifted in function, and is currently expanded into a sturdy lattice.  Activate to collapse the lattice, returning to an evenly distributed form.",
     "types": [ "BODY_ARMOR" ],
+    "prereqs": [ "PLANTSKIN" ],
     "active": true,
     "integrated_armor": [ "integrated_bark2_c" ],
     "transform": {
