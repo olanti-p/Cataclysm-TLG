@@ -56,28 +56,16 @@ TEST_CASE( "name_generation", "[name]" )
             std::string name = SNIPPET.expand( "<family_name>" );
             CHECK( name == "Family" );
         }
-        WHEN( "Getting a male backer name" ) {
-            for( int i = 0; i < 8; ++i ) {
-                std::string name = SNIPPET.expand( "<male_backer_name>" );
-                CHECK_THAT( name, IsOneOf( {"Male Backer", "Unisex Backer"} ) );
-            }
-        }
-        WHEN( "Getting a female backer name" ) {
-            for( int i = 0; i < 8; ++i ) {
-                std::string name = SNIPPET.expand( "<female_backer_name>" );
-                CHECK_THAT( name, IsOneOf( {"Female Backer", "Unisex Backer"} ) );
-            }
-        }
         WHEN( "Generating a male name" ) {
             for( int i = 0; i < 16; ++i ) {
                 std::string name = SNIPPET.expand( "<male_full_name>" );
-                CHECK_THAT( name, IsOneOf( {"Male Backer", "Unisex Backer", "Male Family", "Unisex Family", "Male 'Nick' Family", "Unisex 'Nick' Family"} ) );
+                CHECK_THAT( name, IsOneOf( {"Male Family", "Unisex Family", "Male 'Nick' Family", "Unisex 'Nick' Family"} ) );
             }
         }
         WHEN( "Generating a female name" ) {
             for( int i = 0; i < 16; ++i ) {
                 std::string name = SNIPPET.expand( "<female_full_name>" );
-                CHECK_THAT( name, IsOneOf( {"Female Backer", "Unisex Backer", "Female Family", "Unisex Family", "Female 'Nick' Family", "Unisex 'Nick' Family"} ) );
+                CHECK_THAT( name, IsOneOf( {"Female Family", "Unisex Family", "Female 'Nick' Family", "Unisex 'Nick' Family"} ) );
             }
         }
     }

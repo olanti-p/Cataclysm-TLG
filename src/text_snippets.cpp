@@ -97,7 +97,6 @@ void snippet_library::reload_names( const cata_path &path )
         };
 
         const std::unordered_map<std::string, usage_info> usages = {
-            { "backer", { true, nullptr, &snippets_by_category["<male_backer_name>"], &snippets_by_category["<female_backer_name>"] } },
             { "given", { true, nullptr, &snippets_by_category["<male_given_name>"], &snippets_by_category["<female_given_name>"] } },
             { "family", { false, &snippets_by_category["<family_name>"], nullptr, nullptr } },
             { "nick", { false, &snippets_by_category["<nick_name>"], nullptr, nullptr } },
