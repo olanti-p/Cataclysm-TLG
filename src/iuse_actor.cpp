@@ -139,8 +139,7 @@ static const json_character_flag json_flag_MANUAL_CBM_INSTALLATION( "MANUAL_CBM_
 
 static const proficiency_id proficiency_prof_traps( "prof_traps" );
 static const proficiency_id proficiency_prof_trapsetting( "prof_trapsetting" );
-static const proficiency_id proficiency_prof_wound_care( "prof_wound_care" );
-static const proficiency_id proficiency_prof_wound_care_expert( "prof_wound_care_expert" );
+static const proficiency_id proficiency_prof_field_medic( "prof_field_medic" );
 
 static const quality_id qual_DIG( "DIG" );
 static const quality_id qual_MOP( "MOP" );
@@ -3332,10 +3331,9 @@ std::optional<int> heal_actor::use( Character *p, item &it, const tripoint &pos 
         return std::nullopt;
     }
 
-    // each tier of proficiency cuts required time by half
+    // Field medic cuts the move cost by 2/3
     int cost = move_cost;
-    cost = p->has_proficiency( proficiency_prof_wound_care_expert ) ? cost / 2 : cost;
-    cost = p->has_proficiency( proficiency_prof_wound_care ) ? cost / 2 : cost;
+    cost = p->has_proficiency( proficiency_prof_field_medic ) ? cost / 3 : cost;
 
     p->assign_activity( firstaid_activity_actor( cost, it.tname(), patient.getID() ) );
 
@@ -3380,12 +3378,8 @@ int heal_actor::get_heal_value( const Character &healer, bodypart_id healed ) co
 int heal_actor::get_bandaged_level( const Character &healer ) const
 {
     if( bandages_power > 0 ) {
-        float prof_bonus = healer.get_skill_level( skill_firstaid );
-        prof_bonus = healer.has_proficiency( proficiency_prof_wound_care ) ?
-                     prof_bonus + 1 : prof_bonus;
-        prof_bonus = healer.has_proficiency( proficiency_prof_wound_care_expert ) ?
-                     prof_bonus + 2 : prof_bonus;
-        /** @EFFECT_FIRSTAID increases healing item effects */
+        /** @EFFECT_FIRSTAID and int_cur improve wound bandaging */
+        float prof_bonus = healer.get_skill_level( skill_firstaid ) + std::clamp( ( ( healer.int_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
         float total_bonus = bandages_power + bandages_scaling * prof_bonus;
         total_bonus = healer.enchantment_cache->modify_value( enchant_vals::mod::BANDAGE_BONUS,
                       total_bonus );
@@ -3398,12 +3392,8 @@ int heal_actor::get_bandaged_level( const Character &healer ) const
 int heal_actor::get_disinfected_level( const Character &healer ) const
 {
     if( disinfectant_power > 0 ) {
-        /** @EFFECT_FIRSTAID increases healing item effects */
-        float prof_bonus = healer.get_skill_level( skill_firstaid );
-        prof_bonus = healer.has_proficiency( proficiency_prof_wound_care ) ?
-                     prof_bonus + 1 : prof_bonus;
-        prof_bonus = healer.has_proficiency( proficiency_prof_wound_care_expert ) ?
-                     prof_bonus + 2 : prof_bonus;
+        /** @EFFECT_FIRSTAID and per_cur make it easier to ensure a wound is clean */
+        float prof_bonus = healer.get_skill_level( skill_firstaid ) + std::clamp( ( ( healer.per_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
         float total_bonus = disinfectant_power + disinfectant_scaling * prof_bonus;
         total_bonus = healer.enchantment_cache->modify_value( enchant_vals::mod::DISINFECTANT_BONUS,
                       total_bonus );
@@ -3416,13 +3406,8 @@ int heal_actor::get_disinfected_level( const Character &healer ) const
 int heal_actor::get_stopbleed_level( const Character &healer ) const
 {
     if( bleed > 0 ) {
-        /** @EFFECT_FIRSTAID increases healing item effects */
-        float prof_bonus = healer.get_skill_level( skill_firstaid ) / 2;
-        prof_bonus = healer.has_proficiency( proficiency_prof_wound_care ) ?
-                     prof_bonus + 1 : prof_bonus;
-        prof_bonus = healer.has_proficiency( proficiency_prof_wound_care_expert ) ?
-                     prof_bonus + 2 : prof_bonus;
-        float total_bonus = bleed * prof_bonus;
+        /** @EFFECT_FIRSTAID and int_cur make it easier to stop bleeding */
+        float total_bonus = bleed * ( healer.get_skill_level( skill_firstaid ) / 2.0f ) + std::clamp( ( ( healer.int_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
         total_bonus = healer.enchantment_cache->modify_value( enchant_vals::mod::BLEED_STOP_BONUS,
                       total_bonus );
         return round( total_bonus );
@@ -3561,9 +3546,7 @@ int heal_actor::finish_using( Character &healer, Character &patient, item &it,
     practice_amount = std::max( 9.0f, practice_amount );
 
     healer.practice( skill_firstaid, static_cast<int>( practice_amount ) );
-    healer.practice_proficiency( proficiency_prof_wound_care,
-                                 time_duration::from_turns( practice_amount ) );
-    healer.practice_proficiency( proficiency_prof_wound_care_expert,
+    healer.practice_proficiency( proficiency_prof_field_medic,
                                  time_duration::from_turns( practice_amount ) );
     return 1;
 }
@@ -3579,12 +3562,9 @@ static bodypart_id pick_part_to_heal(
     const bool bite = bite_chance > 0.0f;
     const bool infect = infect_chance > 0.0f;
     const bool precise = &healer == &patient ? false :
-                         /** @EFFECT_PER slightly increases precision when using first aid on someone else */
-                         /** @EFFECT_FIRSTAID increases precision when using first aid on someone else */
-                         ( ( healer.get_skill_level( skill_firstaid ) +
-                             ( healer.has_proficiency( proficiency_prof_wound_care ) ? 0 : 1 ) +
-                             ( healer.has_proficiency( proficiency_prof_wound_care ) ? 0 : 2 ) ) * 4 +
-                           healer.per_cur >= 20 );
+    /** @EFFECT_PER slightly increases precision when using first aid on someone else */
+    /** @EFFECT_FIRSTAID increases precision when using first aid on someone else */
+    ( healer.get_skill_level( skill_firstaid ) * 4 + healer.per_cur >= 18 );
     while( true ) {
         bodypart_id healed_part = patient.body_window( menu_header, force, precise,
                                   limb_power, head_bonus, torso_bonus,
