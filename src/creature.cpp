@@ -201,22 +201,20 @@ void Creature::setpos( const tripoint_bub_ms &p )
 
 static units::volume size_to_volume( creature_size size_class )
 {
-    // returns midpoint of size from volume_to_size, minus 1_ml
-    // e.g. max tiny size is 7500, max small size is 46250, we return
-    // 46250+7500 / 2 - 1_ml = 26875_ml - 1ml
-    // TODO: size_to_volume and volume_to_size of these functions should be merged into one single source of truth.
+    // TODO: size_to_volume and volume_to_size should be made into a single consistent function.
     // TODO: This calculation is underestimating the size of a medium creature. They should be around 10500 ml.
-    // Large and Huge creatures should probably be bigger too. This would necessitate increasing vpart capacity.
+    // Large creatures should be bigger too. This would necessitate increasing vpart capacity and resizing
+    // almost every monster in the game.
     if( size_class == creature_size::tiny ) {
-        return 3749_ml;
+        return 15625_ml;
     } else if( size_class == creature_size::small ) {
-        return 26874_ml;
+        return 31250_ml;
     } else if( size_class == creature_size::medium ) {
-        return 77124_ml;
+        return 62500_ml;
     } else if( size_class == creature_size::large ) {
-        return 295874_ml;
+        return 125000_ml;
     }
-    return 741874_ml;
+    return 250000_ml;
 }
 
 bool Creature::can_move_to_vehicle_tile( const tripoint_abs_ms &loc, bool &cramped ) const
@@ -244,13 +242,13 @@ bool Creature::can_move_to_vehicle_tile( const tripoint_abs_ms &loc, bool &cramp
             !vp_there.part_with_feature( "OBSTACLE", false ) ) {
             capacity += contents.max_volume();
             free_cargo += contents.free_volume();
+            // Open-topped vehicle parts have more room to step over cargo.
+            if( !vp_there.part_with_feature( "ROOF", true ) ) {
+                free_cargo *= 1.2;
+            }
         }
     }
     if( capacity > 0_ml ) {
-        // First, we'll try to squeeze in. Open-topped vehicle parts have more room to step over cargo.
-        if( !veh.enclosed_at( here.getlocal( loc ) ) ) {
-            free_cargo *= 1.2;
-        }
         const creature_size size = get_size();
         units::volume critter_volume;
         if( mon ) {
@@ -278,6 +276,7 @@ bool Creature::can_move_to_vehicle_tile( const tripoint_abs_ms &loc, bool &cramp
         }
 
         if( size == creature_size::huge && !vp_there.part_with_feature( "AISLE", false ) &&
+            // TODO: Can we get rid of huge_ok? Cargo space alone should handle it, right?
             !vp_there.part_with_feature( "HUGE_OK", false ) ) {
             cramped = true;
             return true;
