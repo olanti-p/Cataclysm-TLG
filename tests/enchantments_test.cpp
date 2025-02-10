@@ -369,22 +369,32 @@ TEST_CASE( "Enchantment_PAIN_PENALTY_MOD_test", "[magic][enchantments]" )
     INFO( "Character has 50 pain, not affected by enchantments" );
     guy.set_pain( 50 );
     advance_turn( guy );
-    INFO( "Stats are: 6 str, 6 dex, 3 int, 3 per, 85 speed" );
+    INFO( "Stats are: 6 str, 6 dex, 6 int, 6 per, 85 speed" );
     REQUIRE( guy.get_str() == 6 );
     REQUIRE( guy.get_dex() == 6 );
-    REQUIRE( guy.get_int() == 4 );
-    REQUIRE( guy.get_per() == 4 );
+    REQUIRE( guy.get_int() == 6 );
+    REQUIRE( guy.get_per() == 6 );
     REQUIRE( guy.get_speed() == 85 );
 
+    INFO( "Character has 100 pain, not affected by enchantments" );
+    guy.set_pain( 100 );
+    advance_turn( guy );
+    INFO( "Stats are: 3 str, 3 dex, 2 int, 4 per, 85 speed" );
+    REQUIRE( guy.get_str() == 3 );
+    REQUIRE( guy.get_dex() == 3 );
+    REQUIRE( guy.get_int() == 2 );
+    REQUIRE( guy.get_per() == 4 );
+    REQUIRE( guy.get_speed() == 67 );
 
     INFO( "Character has 50 pain, obtain enchantment" );
     guy.i_add( item( "test_PAIN_PENALTY_MOD_ench_item_1" ) );
     guy.recalculate_enchantment_cache();
+    guy.set_pain( 50 );
     advance_turn( guy );
-    INFO( "Stats are: 4 str, 8 dex, 7 int, 0 per, 89 speed" );
+    INFO( "Stats are: 4 str, 7 dex, 7 int, 1 per, 90 speed" );
     REQUIRE( guy.get_str() == 4 );
-    REQUIRE( guy.get_dex() == 8 );
-    REQUIRE( guy.get_int() == 7 );
-    REQUIRE( guy.get_per() == 0 );
-    REQUIRE( guy.get_speed() == 89 );
+    REQUIRE( guy.get_dex() == 3 );
+    REQUIRE( guy.get_int() == 3 );
+    REQUIRE( guy.get_per() == 6 );
+    REQUIRE( guy.get_speed() == 90 );
 }
