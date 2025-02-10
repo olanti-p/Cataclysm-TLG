@@ -92,7 +92,7 @@ TEST_CASE( "memorials", "[memorial]" )
     trait_id mut2( "SAPROPHAGE" );
     trait_id mut3( "NONE" );
     bionic_id cbm( "bio_alarm" );
-    proficiency_id prof( "prof_wound_care" );
+    proficiency_id prof( "prof_field_medic" );
 
     check_memorial<event_type::activates_artifact>(
         m, b, "Activated the art_name.", ch, "art_name" );
@@ -107,7 +107,7 @@ TEST_CASE( "memorials", "[memorial]" )
         m, b, "Angered a group of amigara horrors!" );
 
     check_memorial<event_type::awakes_dark_wyrms>(
-        m, b, "Awoke a group of dark wyrms!" );
+        m, b, "Awoke a group of giant cave worms!" );
 
     check_memorial<event_type::becomes_wanted>(
         m, b, "Became wanted by the police!", ch );
@@ -219,7 +219,7 @@ TEST_CASE( "memorials", "[memorial]" )
         m, b, "Gained the mutation 'Carnivore'.", ch, mut );
 
     check_memorial<event_type::gains_proficiency>(
-        m, b, "Gained the proficiency 'Wound Care'.", ch, prof );
+        m, b, "Gained the proficiency 'Field Medic'.", ch, prof );
 
     check_memorial<event_type::gains_skill_level>(
         m, b, "Reached skill level 8 in vehicles.", ch, skill_driving, 8 );

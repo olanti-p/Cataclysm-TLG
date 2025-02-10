@@ -16,7 +16,7 @@
     "required_level": 5,
     "max_level": 8,
     "intelligence": 10,
-    "proficiencies": [ { "proficiency": "prof_wound_care_expert", "time_factor": 0.75, "fail_factor": 0.5 } ],
+    "proficiencies": [ { "proficiency": "prof_field_medic", "time_factor": 0.75, "fail_factor": 0.5 } ],
     "time": "55 m",
     "fun": -1,
     "melee_damage": { "bash": 8 }
@@ -38,7 +38,6 @@
     "skill": "firstaid",
     "max_level": 1,
     "intelligence": 6,
-    "proficiencies": [ { "proficiency": "prof_wound_care", "time_factor": 0.75, "fail_factor": 0.5 } ],
     "time": "8 m",
     "fun": 1
   },
@@ -59,10 +58,6 @@
     "skill": "firstaid",
     "max_level": 3,
     "intelligence": 8,
-    "proficiencies": [
-      { "proficiency": "prof_wound_care", "time_factor": 0.75, "fail_factor": 0.5 },
-      { "proficiency": "prof_wound_care_expert", "time_factor": 0.75, "fail_factor": 0.5 }
-    ],
     "time": "20 m"
   },
   {
@@ -81,7 +76,6 @@
     "skill": "firstaid",
     "max_level": 2,
     "intelligence": 6,
-    "proficiencies": [ { "proficiency": "prof_wound_care", "time_factor": 0.75, "fail_factor": 0.5 } ],
     "time": "20 m"
   },
   {
@@ -102,7 +96,6 @@
     "required_level": 3,
     "max_level": 6,
     "intelligence": 8,
-    "proficiencies": [ { "proficiency": "prof_wound_care_expert", "time_factor": 0.75, "fail_factor": 0.5 } ],
     "time": "30 m",
     "melee_damage": { "bash": 4 }
   },

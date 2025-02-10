@@ -100,19 +100,9 @@
 | `prof_disarming`              | Trap Disarming                    | prof_traps                                  | You know how to take down a trap safely.                                                                                                                                                                                                                                  |
 | `prof_spotting`               | Spotting and Awareness            | None                                        | You are skilled at spotting things out of the ordinary, like traps or ambushes.                                                                                                                                                                                           |
 | `prof_parkour`                | Parkour Expert                    | None                                        | You're skilled at clearing obstacles; terrain like railings or counters are as easy for you to move on as solid ground.                                                                                                                                                   |
-| `prof_wound_care`             | Wound Care                        | None                                        | You know how to bandage wounds and understand basic principles of wound care.                                                                                                                                                                                             |
+| `prof_field_medic`             | Field Medic                        | None                                        | You're accustomed to dressing wounds under pressure, and can apply
+bandages or disinfectant much more quickly.                                                                                                                                                                                       |
 | `prof_wound_care_expert`      | Wound Care Expert                 | prof_wound_care                             | Your extensive field experience in bandaging and wound care is on par with that of a paramedic.                                                                                                                                                                           |
-
-## Magiclysm proficiencies
-
-| id                           | name                   | required_proficiencies           | description |
-| ---------------------------- | ---------------------- | -------------------------------- | ----------- |
-| `prof_alchemy`               | Alchemy                | None                             | You know the basics of manipulating the mana of objects through application of chemical laws. |
-| `prof_almetallurgy`          | Almetallurgy           | prof_alchemy / prof_metalworking | The forging of magical alloys is a complex process requiring an understanding of both mundane metals and alchemy. |
-| `prof_leatherworking_dragon` | Dragon leather working | prof_leatherworking              | Working with dragon leather requires a specific set of skills and tools… a set you are familiar with. |
-| `prof_scaleworking_dragon`   | Dragon scale working   | prof_leatherworking_dragon       | Working with dragon scales requires a specific set of skills and tools… a set you are familiar with. |
-| `prof_golemancy_basic`       | Basic Golemancy        | None                             | Infusing shaped material with your will and the ability to move is hard but you're starting to get it. |
-
 This data was extracted using tools/json_tools/table.py as follows (then formatted):
 
 ```bash

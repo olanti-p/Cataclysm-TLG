@@ -109,8 +109,7 @@
     "proficiencies": [
       "prof_intro_chemistry",
       "prof_intro_biology",
-      "prof_wound_care",
-      "prof_wound_care_expert",
+      "prof_field_medic",
       "prof_burn_care",
       "prof_dissect_humans",
       "prof_physiology"
@@ -142,8 +141,7 @@
     "proficiencies": [
       "prof_intro_chemistry",
       "prof_intro_biology",
-      "prof_wound_care",
-      "prof_wound_care_expert",
+      "prof_field_medic",
       "prof_burn_care",
       "prof_dissect_humans",
       "prof_physiology"

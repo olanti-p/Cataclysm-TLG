@@ -7,7 +7,7 @@
     "category": "CC_PRACTICE",
     "subcategory": "CSC_PRACTICE_RANGED",
     "name": "throwing (beginner)",
-    "description": "Practice your throwing by throwing something and trying to hit a spot on the wall.",
+    "description": "Practice basic throwing techniques using a ball, a stone, or something else that's easy to toss around.",
     "skill_used": "throw",
     "time": "1 h",
     "practice_data": { "min_difficulty": 0, "max_difficulty": 2, "skill_limit": 3 },
@@ -21,6 +21,10 @@
         "football",
         "golf_ball",
         "marble",
+        "pool_ball",
+        "frisbee",
+        "disc_golf",
+        "pebble",
         "metal_RPG_die",
         "RPG_die",
         "rock",
@@ -133,89 +137,6 @@
     "tools": [ [ [ "crossbows", 1, "LIST" ] ], [ "pseudo_archery_target_box", "pseudo_archery_target_bale" ] ],
     "components": [ [ [ "bolt_wood", 20 ] ] ],
     "byproduct_group": [ { "item": "bolt_wood", "count": [ 0, 4 ] } ]
-  },
-  {
-    "id": "prac_archery_form",
-    "type": "practice",
-    "activity_level": "BRISK_EXERCISE",
-    "category": "CC_PRACTICE",
-    "subcategory": "CSC_PRACTICE_RANGED",
-    "name": "expert archer's form",
-    "description": "Improve your archery form by quickly and smoothly drawing a bowstring.",
-    "skill_used": "archery",
-    "time": "1 h",
-    "practice_data": { "min_difficulty": 2, "max_difficulty": 3, "skill_limit": 4 },
-    "proficiencies": [
-      { "proficiency": "prof_bow_basic", "required": true },
-      { "proficiency": "prof_bow_expert", "time_multiplier": 2, "skill_penalty": 0 }
-    ],
-    "autolearn": [ [ "archery", 3 ] ],
-    "flags": [ "BLIND_EASY" ],
-    "book_learn": [ [ "mag_archery", 2 ], [ "book_archery", 2 ], [ "manual_archery", 2 ] ],
-    "tools": [
-      [
-        "shortbow",
-        "compbow",
-        "compbow_high",
-        "compbow_low",
-        "compositebow",
-        "reflexbow",
-        "recurbow",
-        "takedown_recurbow",
-        "longbow",
-        "woodgreatbow",
-        "compgreatbow",
-        "reflexrecurvebow"
-      ]
-    ]
-  },
-  {
-    "id": "prac_master_archery_form",
-    "type": "practice",
-    "activity_level": "ACTIVE_EXERCISE",
-    "category": "CC_PRACTICE",
-    "subcategory": "CSC_PRACTICE_RANGED",
-    "name": "master archer's form",
-    "description": "Refine your archery form by drawing and holding a heavy bow.",
-    "skill_used": "archery",
-    "time": "1 h",
-    "practice_data": { "min_difficulty": 3, "max_difficulty": 4, "skill_limit": 5 },
-    "proficiencies": [
-      { "proficiency": "prof_bow_basic", "required": true },
-      { "proficiency": "prof_bow_expert", "required": true },
-      { "proficiency": "prof_bow_master", "time_multiplier": 2, "skill_penalty": 0 }
-    ],
-    "autolearn": [ [ "archery", 4 ] ],
-    "flags": [ "BLIND_EASY" ],
-    "book_learn": [ [ "book_archery", 3 ], [ "manual_archery", 3 ] ],
-    "tools": [
-      [
-        "compbow",
-        "compbow_high",
-        "compositebow",
-        "reflexbow",
-        "recurbow",
-        "takedown_recurbow",
-        "longbow",
-        "woodgreatbow",
-        "compgreatbow"
-      ]
-    ]
-  },
-  {
-    "id": "prac_marksmanship_beg",
-    "type": "practice",
-    "//": "simple intuitive practice to get comfortable with holding a gun",
-    "activity_level": "NO_EXERCISE",
-    "category": "CC_PRACTICE",
-    "subcategory": "CSC_PRACTICE_RANGED",
-    "name": "marksmanship (beginner)",
-    "description": "Practice your shooting by dry firing a gun.",
-    "skill_used": "gun",
-    "time": "1 h",
-    "practice_data": { "min_difficulty": 0, "max_difficulty": 1, "skill_limit": 1 },
-    "autolearn": [ [ "gun", 0 ] ],
-    "qualities": [ { "id": "GUN", "level": 1 } ]
   },
   {
     "id": "prac_handguns_beg",
