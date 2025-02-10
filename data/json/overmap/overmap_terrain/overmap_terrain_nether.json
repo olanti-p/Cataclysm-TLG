@@ -6,6 +6,6 @@
     "sym": " ",
     "color": "black",
     "see_cost": 10,
-    "flags": [ "RISK_HIGH" ]
+    "flags": [ "RISK_EXTREME" ]
   }
 ]
