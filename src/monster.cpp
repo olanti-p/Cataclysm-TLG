@@ -3396,76 +3396,13 @@ void monster::process_effects()
             hp = 0;
         }
     }
-
-    // Check to see if critter slips on bile or whatever.
-    if( has_effect( effect_slippery_terrain ) && !is_immune_effect( effect_downed ) && !flies() &&
-        !digging() && !has_effect( effect_downed ) ) {
-        map &here = get_map();
-        if( here.has_flag( ter_furn_flag::TFLAG_FLAT, pos() ) ) {
-            int intensity = get_effect_int( effect_slippery_terrain );
-            intensity -= 1;
-            //ROAD tiles are hard, flat surfaces, and easier to slip on.
-            if( here.has_flag( ter_furn_flag::TFLAG_ROAD, pos() ) ) {
-                intensity++;
-            }
-            int slipchance = ( round( get_speed() / 50 ) - round( get_dodge() / 3 ) );
-            if( intensity + slipchance > dice( 1, 12 ) ) {
-                add_effect( effect_downed, rng( 1_turns, 2_turns ) );
-                add_msg_if_player_sees( pos(), m_info, _( "The %1s slips and falls!" ),
-                                        name() );
-            }
+    if( has_effect( effect_cramped_space ) ) {
+        bool cramped = false;
+        // return is intentionally discarded, sets cramped if appropriate
+        can_move_to_vehicle_tile( get_map().getglobal( pos() ), cramped );
+        if( !cramped ) {
+            remove_effect( effect_cramped_space );
         }
-    }
-
-    // Apply or remove the cramped_space effect, which needs specific information about the monster's surroundings.
-    map &here = get_map();
-    const tripoint z_pos = pos();
-    const optional_vpart_position vp = here.veh_at( z_pos );
-    if( has_effect( effect_cramped_space ) && !vp.has_value() ) {
-        remove_effect( effect_cramped_space );
-    }
-    if( vp.has_value() ) {
-        vehicle &veh = vp->vehicle();
-        units::volume capacity = 0_ml;
-        units::volume free_cargo = 0_ml;
-        auto cargo_parts = veh.get_parts_at( z_pos, "CARGO", part_status_flag::any );
-        for( vehicle_part *&part : cargo_parts ) {
-            vehicle_stack contents = veh.get_items( *part );
-            const vpart_info &vpinfo = part->info();
-            if( !vp.part_with_feature( "CARGO_PASSABLE", false ) ) {
-                capacity += vpinfo.size;
-                free_cargo += contents.free_volume();
-            }
-        }
-        const creature_size size = get_size();
-        if( capacity > 0_ml ) {
-            // Open-topped vehicle parts have more room, and are always free space for fliers.
-            if( !veh.enclosed_at( z_pos ) ) {
-                free_cargo *= 1.2;
-                if( flies() ) {
-                    remove_effect( effect_cramped_space );
-                    return;
-                }
-            }
-            if( ( size == creature_size::tiny && free_cargo < 15625_ml ) ||
-                ( size == creature_size::small && free_cargo < 31250_ml ) ||
-                ( size == creature_size::medium && free_cargo < 62500_ml ) ||
-                ( size == creature_size::large && free_cargo < 125000_ml ) ||
-                ( size == creature_size::huge && free_cargo < 250000_ml ) ) {
-                if( !has_effect( effect_cramped_space ) ) {
-                    add_effect( effect_cramped_space, 2_turns, true );
-                }
-                return;
-            }
-        }
-        if( get_size() == creature_size::huge && !vp.part_with_feature( "AISLE", false ) &&
-            !vp.part_with_feature( "HUGE_OK", false ) ) {
-            if( !has_effect( effect_cramped_space ) ) {
-                add_effect( effect_cramped_space, 2_turns, true );
-            }
-            return;
-        }
-        remove_effect( effect_cramped_space );
     }
 
     Creature::process_effects();

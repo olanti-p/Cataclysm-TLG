@@ -469,8 +469,8 @@ static butcher_type get_butcher_type( player_activity *act )
         action = butcher_type::BLEED;
     } else if( act->id() == ACT_SKIN ) {
         action = butcher_type::SKIN;
-    // } else if( act->id() == ACT_DISMEMBER ) {
-    //    action = butcher_type::DISMEMBER;
+        // } else if( act->id() == ACT_DISMEMBER ) {
+        //    action = butcher_type::DISMEMBER;
     }
     return action;
 }
