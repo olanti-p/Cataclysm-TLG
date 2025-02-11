@@ -696,7 +696,8 @@
           "mx_casings": 1000,
           "mx_corpses": 300,
           "mx_prison_bus": 150,
-          "mx_prison_van": 10
+          "mx_prison_van": 10,
+          "mx_specimen_van": 20
         }
       },
       "bridgehead_ground": { "chance": 5, "extras": { "mx_minefield": 100 } },
