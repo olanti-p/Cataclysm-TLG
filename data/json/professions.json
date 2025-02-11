@@ -1908,13 +1908,7 @@
     "description": "Fresh out of med school, you've got little in the way of practical experience and just a handful of first-aid supplies.  You just hope it will be enough if 'physician, heal thyself' turns out to be more literal than you expected.",
     "points": 2,
     "skills": [ { "level": 5, "name": "firstaid" } ],
-    "proficiencies": [
-      "prof_field_medic",
-      "prof_intro_biology",
-      "prof_physiology",
-      "prof_burn_care",
-      "prof_dissect_humans"
-    ],
+    "proficiencies": [ "prof_field_medic", "prof_intro_biology", "prof_physiology", "prof_burn_care", "prof_dissect_humans" ],
     "traits": [ "PROF_MED" ],
     "items": {
       "both": {
@@ -3038,14 +3032,7 @@
       { "level": 4, "name": "swimming" },
       { "level": 4, "name": "driving" }
     ],
-    "proficiencies": [
-      "prof_field_medic",
-      "prof_intro_biology",
-      "prof_physiology",
-      "prof_burn_care",
-      "prof_dissect_humans",
-      "prof_driver"
-    ],
+    "proficiencies": [ "prof_field_medic", "prof_intro_biology", "prof_physiology", "prof_burn_care", "prof_dissect_humans", "prof_driver" ],
     "vehicle": "fire_engine",
     "items": {
       "both": {
@@ -6200,13 +6187,7 @@
     "description": "You were separated from your partner while out on a call.  You managed to hang onto some medical supplies, but it's looking like the only life that needs saving now is yours.",
     "points": 3,
     "skills": [ { "level": 6, "name": "firstaid" }, { "level": 3, "name": "driving" }, { "level": 1, "name": "mechanics" } ],
-    "proficiencies": [
-      "prof_field_medic",
-      "prof_intro_biology",
-      "prof_physiology",
-      "prof_burn_care",
-      "prof_dissect_humans"
-    ],
+    "proficiencies": [ "prof_field_medic", "prof_intro_biology", "prof_physiology", "prof_burn_care", "prof_dissect_humans" ],
     "traits": [ "PROF_MED" ],
     "items": {
       "both": {
@@ -6370,12 +6351,7 @@
     "description": "You were deployed to autopsy one of the rioters showing feral behavior before being put down.  When they got back up, you knew this was out of your pay grade.",
     "points": 4,
     "skills": [ { "level": 6, "name": "firstaid" } ],
-    "proficiencies": [
-      "prof_intro_biology",
-      "prof_physiology",
-      "prof_burn_care",
-      "prof_dissect_humans"
-    ],
+    "proficiencies": [ "prof_intro_biology", "prof_physiology", "prof_burn_care", "prof_dissect_humans" ],
     "traits": [ "PROF_MED" ],
     "items": {
       "both": {
