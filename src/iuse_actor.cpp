@@ -3380,7 +3380,8 @@ int heal_actor::get_bandaged_level( const Character &healer ) const
 {
     if( bandages_power > 0 ) {
         /** @EFFECT_FIRSTAID and int_cur improve wound bandaging */
-        float prof_bonus = healer.get_skill_level( skill_firstaid ) + std::clamp( ( ( healer.int_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
+        float prof_bonus = healer.get_skill_level( skill_firstaid ) + std::clamp( ( (
+                               healer.int_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
         float total_bonus = bandages_power + bandages_scaling * prof_bonus;
         total_bonus = healer.enchantment_cache->modify_value( enchant_vals::mod::BANDAGE_BONUS,
                       total_bonus );
@@ -3394,7 +3395,8 @@ int heal_actor::get_disinfected_level( const Character &healer ) const
 {
     if( disinfectant_power > 0 ) {
         /** @EFFECT_FIRSTAID and per_cur make it easier to ensure a wound is clean */
-        float prof_bonus = healer.get_skill_level( skill_firstaid ) + std::clamp( ( ( healer.per_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
+        float prof_bonus = healer.get_skill_level( skill_firstaid ) + std::clamp( ( (
+                               healer.per_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
         float total_bonus = disinfectant_power + disinfectant_scaling * prof_bonus;
         total_bonus = healer.enchantment_cache->modify_value( enchant_vals::mod::DISINFECTANT_BONUS,
                       total_bonus );
@@ -3408,7 +3410,8 @@ int heal_actor::get_stopbleed_level( const Character &healer ) const
 {
     if( bleed > 0 ) {
         /** @EFFECT_FIRSTAID and int_cur make it easier to stop bleeding */
-        float total_bonus = bleed * ( healer.get_skill_level( skill_firstaid ) / 2.0f ) + std::clamp( ( ( healer.int_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
+        float total_bonus = bleed * ( healer.get_skill_level( skill_firstaid ) / 2.0f ) + std::clamp( ( (
+                                healer.int_cur - 10.0f ) / 3.0f ), 0.0f, healer.get_skill_level( skill_firstaid ) / 2.66f );
         total_bonus = healer.enchantment_cache->modify_value( enchant_vals::mod::BLEED_STOP_BONUS,
                       total_bonus );
         return round( total_bonus );
@@ -3563,9 +3566,9 @@ static bodypart_id pick_part_to_heal(
     const bool bite = bite_chance > 0.0f;
     const bool infect = infect_chance > 0.0f;
     const bool precise = &healer == &patient ? false :
-    /** @EFFECT_PER slightly increases precision when using first aid on someone else */
-    /** @EFFECT_FIRSTAID increases precision when using first aid on someone else */
-    ( healer.get_skill_level( skill_firstaid ) * 4 + healer.per_cur >= 18 );
+                         /** @EFFECT_PER slightly increases precision when using first aid on someone else */
+                         /** @EFFECT_FIRSTAID increases precision when using first aid on someone else */
+                         ( healer.get_skill_level( skill_firstaid ) * 4 + healer.per_cur >= 18 );
     while( true ) {
         bodypart_id healed_part = patient.body_window( menu_header, force, precise,
                                   limb_power, head_bonus, torso_bonus,
