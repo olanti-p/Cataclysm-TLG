@@ -90,7 +90,8 @@
         "v": { "item": "office", "chance": 40, "repeat": [ 1, 2 ] },
         "X": [
           { "item": "harddrugs", "chance": 70, "repeat": [ 1, 2 ] },
-          { "item": "drugs_rare", "chance": 70, "repeat": [ 1, 2 ] }
+          { "item": "drugs_rare", "chance": 70, "repeat": [ 1, 2 ] },
+          { "item": "bionics_retail", "chance": 7, "repeat": [ 1, 2 ] }
         ],
         "D": { "item": "softdrugs", "chance": 90, "repeat": [ 1, 2 ] },
         "O": { "item": "virology_lab_fridge", "chance": 80, "repeat": [ 1, 2 ] },
@@ -111,10 +112,10 @@
         }
       },
       "monster": {
-        "^": { "monster": "mon_civilian_icu", "chance": 10 },
-        "ւ": { "monster": "mon_civilian_icu", "chance": 10 },
-        "Г": { "monster": "mon_civilian_icu", "chance": 10 },
-        "Я": { "monster": "mon_civilian_icu", "chance": 10 }
+        "^": { "monster": "mon_zombie_crawler", "chance": 4 },
+        "ւ": { "monster": "mon_zombie_crawler", "chance": 4 },
+        "Г": { "monster": "mon_zombie_crawler", "chance": 4 },
+        "Я": { "monster": "mon_zombie_crawler", "chance": 4 }
       },
       "place_monsters": [
         { "monster": "GROUP_HOSPITAL", "x": [ 1, 22 ], "y": [ 5, 22 ], "density": 0.6 },
@@ -351,10 +352,10 @@
         ]
       },
       "monster": {
-        "^": { "monster": "mon_civilian_icu", "chance": 10 },
-        "ւ": { "monster": "mon_civilian_icu", "chance": 10 },
-        "Г": { "monster": "mon_civilian_icu", "chance": 10 },
-        "Я": { "monster": "mon_civilian_icu", "chance": 10 }
+        "^": { "monster": "mon_zombie_crawler", "chance": 4 },
+        "ւ": { "monster": "mon_zombie_crawler", "chance": 4 },
+        "Г": { "monster": "mon_zombie_crawler", "chance": 4 },
+        "Я": { "monster": "mon_zombie_crawler", "chance": 4 }
       },
       "place_monsters": [
         { "monster": "GROUP_ZOMBIE", "x": [ 1, 22 ], "y": [ 5, 22 ], "density": 0.5 },
@@ -571,10 +572,10 @@
         ]
       },
       "monster": {
-        "^": { "monster": "mon_civilian_icu", "chance": 10 },
-        "ւ": { "monster": "mon_civilian_icu", "chance": 10 },
-        "Г": { "monster": "mon_civilian_icu", "chance": 10 },
-        "Я": { "monster": "mon_civilian_icu", "chance": 10 }
+        "^": { "monster": "mon_zombie_crawler", "chance": 10 },
+        "ւ": { "monster": "mon_zombie_crawler", "chance": 10 },
+        "Г": { "monster": "mon_zombie_crawler", "chance": 10 },
+        "Я": { "monster": "mon_zombie_crawler", "chance": 10 }
       },
       "place_monsters": [
         { "monster": "GROUP_ZOMBIE", "x": [ 1, 22 ], "y": [ 5, 22 ], "density": 0.5 },

@@ -274,7 +274,7 @@
         "W": "t_floor",
         "'": "t_door_glass_o"
       },
-      "furniture": { "?": "f_bed", "/": "f_bed", "Y": "f_sofa", "T": "f_table", "A": "f_armchair", "R": "f_trashcan" },
+      "furniture": { "?": "f_autodoc", "/": "f_autodoc_couch", "Y": "f_sofa", "T": "f_table", "A": "f_armchair", "R": "f_trashcan" },
       "computers": {
         "5": {
           "name": "Medical Supply Access",
@@ -293,6 +293,9 @@
         "f": { "item": "office_paper", "chance": 90 },
         "H": [
           { "item": "harddrugs", "chance": 60 },
+          { "item": "bionics_retail", "chance": 80 },
+          { "item": "bionics_retail", "chance": 60 },
+          { "item": "bionics_retail", "chance": 20 },
           { "item": "gear_medical", "chance": 60, "repeat": [ 1, 3 ] },
           { "item": "drugs_analgesic", "chance": 60, "repeat": [ 1, 3 ] },
           { "item": "drugs_rare", "chance": 60 },

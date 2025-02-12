@@ -29,12 +29,12 @@
     "//": "Weights are set high in order to allow mods to add rare terrains.",
     "region_terrain_and_furniture": {
       "terrain": {
-        "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 4000, "t_grass_long": 200, "t_dirt": 2000, "t_dirt_rocky": 30 },
+        "t_region_groundcover": { "t_grass": 13000, "t_grass_dead": 4000, "t_grass_long": 400, "t_dirt": 900, "t_dirt_rocky": 30 },
         "t_region_groundcover_urban": { "t_grass": 20, "t_grass_dead": 6, "t_grass_long": 3, "t_dirt": 1 },
-        "t_region_groundcover_forest": { "t_forestfloor": 200, "t_grass": 10, "t_grass_long": 10, "t_moss": 10, "t_grass_dead": 40, "t_dirt_rocky": 1 },
-        "t_region_groundcover_swamp": { "t_grass_long": 300, "t_moss": 200, "t_dirt": 200, "t_grass_dead": 110, "t_dirt_rocky": 1 },
-        "t_region_groundcover_barren": { "t_dirt": 30, "t_grass_dead": 2, "t_railroad_rubble": 1, "t_dirt_rocky": 2 },
-        "t_region_grass": { "t_grass": 18, "t_grass_dead": 10, "t_grass_long": 3, "t_dirt": 2 },
+        "t_region_groundcover_forest": { "t_forestfloor": 220, "t_grass": 10, "t_grass_long": 10, "t_moss": 10, "t_grass_dead": 40, "t_dirt_rocky": 1 },
+        "t_region_groundcover_swamp": { "t_grass_long": 300, "t_moss": 200, "t_dirt": 160, "t_grass_dead": 110, "t_dirt_rocky": 1 },
+        "t_region_groundcover_barren": { "t_dirt": 35, "t_grass_dead": 2, "t_railroad_rubble": 1, "t_dirt_rocky": 1 },
+        "t_region_grass": { "t_grass": 30, "t_grass_dead": 10, "t_grass_long": 3, "t_dirt": 1 },
         "t_region_soil": { "t_dirt": 297, "t_dirt_rocky": 1 },
         "t_region_shrub_forest_dense": {
           "t_underbrush": 70,
@@ -1199,8 +1199,8 @@
         "hotel_1": 75,
         "hotel_2": 75,
         "hotel_3": 75,
-        "hospital": 175,
-        "urban_35_hospital": 175,
+        "hospital": 400,
+        "urban_35_hospital": 450,
         "public_works": 200,
         "office_tower": 150,
         "office_tower_2": 150,
