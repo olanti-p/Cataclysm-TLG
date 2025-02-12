@@ -155,4 +155,5 @@ if [ "$PATCH_STATUS" = "UNCLEAN" ]; then
   echo -e "\e[1;33mShould this merge conflict be caused by recursive backport dependencies, copying the file from the dda repo will lead to attribution issues.\e[0m"
 fi
 
+echo "${ORG}/${REPO}#${PULLREQUEST_ID}" > $(git rev-parse --show-toplevel)/dda-backport-tracked-pr
 echo "$PATCH_BODY" | git am -3 -
