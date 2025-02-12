@@ -2285,7 +2285,7 @@
       { "point": [ 1, 2, 1 ], "overmap": "hospital_8_roof_north" },
       { "point": [ 2, 2, 1 ], "overmap": "hospital_7_roof_north" }
     ],
-    "city_sizes": [ 12, -1 ]
+    "city_sizes": [ 10, -1 ]
   },
   {
     "id": "urban_35_hospital",

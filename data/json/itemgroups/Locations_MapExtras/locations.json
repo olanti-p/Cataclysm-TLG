@@ -2442,6 +2442,8 @@
     "id": "vault",
     "items": [
       { "group": "schematics", "prob": 5 },
+      { "group": "guns_pistol_rare_display", "prob": 5 },
+      { "group": "guns_pistol_obscure", "prob": 5 },
       { "item": "money_strap_ten", "prob": 50, "count": [ 1, 9 ] },
       { "item": "money_strap_twenty", "prob": 50, "count": [ 1, 9 ] },
       { "item": "money_strap_fifty", "prob": 50, "count": [ 1, 9 ] },

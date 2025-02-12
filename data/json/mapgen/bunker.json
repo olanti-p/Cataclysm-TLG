@@ -173,9 +173,10 @@
         "l": { "item": "bunker_basement_clothing", "chance": 50 },
         "t": { "item": "dining", "chance": 45 },
         "r": [
-          { "item": "milspec_arsenal_group_only_guns", "chance": 100 },
+          { "item": "milspec_arsenal_group_only_guns", "chance": 70 },
           { "item": "arsenal_mics_group", "chance": 70 },
           { "item": "c4_box_part", "chance": 10 },
+          { "item": "bionics_mil", "chance": 10 },
           { "item": "grenade_can_pa120_grenades_full", "chance": 10 }
         ],
         "U": { "item": "SUS_janitors_closet", "chance": 100 },
@@ -191,6 +192,7 @@
         { "group": "oven", "x": 4, "y": 17, "chance": 70 },
         { "group": "cleaning", "x": 2, "y": 10, "chance": 70 },
         { "group": "bunker_basement_suicide", "x": 3, "y": 3 },
+        { "group": "bunker_basement_suicide_items", "x": 3, "y": 3 },
         { "item": "mess_tray", "x": [ 5, 6 ], "y": 17, "chance": 50, "repeat": [ 4, 5 ] },
         { "item": "whiskey", "x": 5, "y": 3 },
         { "item": "glass", "x": 5, "y": 3 },
@@ -226,19 +228,21 @@
     "type": "item_group",
     "id": "bunker_basement_suicide",
     "subtype": "collection",
-    "items": [
-      { "item": "m1911", "charges": 6, "ammo-item": "45_acp" },
-      { "item": "45_casing", "charges": 1 },
-      { "group": "underwear" },
-      { "item": "corpse" }
-    ]
+    "container-item": "corpse_generic_human",
+    "items": [ { "group": "underwear", "custom-flags": [ "FILTHY" ] } ]
+  },
+  {
+    "type": "item_group",
+    "id": "bunker_basement_suicide_items",
+    "subtype": "collection",
+    "items": [ { "item": "m17", "charges": 16, "ammo-item": "9mmfmj" }, { "item": "9mm_casing", "charges": 1 } ]
   },
   {
     "id": "bunker_basement_clothing",
     "type": "item_group",
     "items": [
       { "group": "clothing_soldier_shirt", "prob": 20 },
-      { "item": "jacket_army", "prob": 20 },
+      { "item": "jacket_army_modern", "prob": 20 },
       { "item": "pants_army", "prob": 20 },
       { "item": "boots_combat", "prob": 20 },
       { "item": "helmet_army", "prob": 20 },

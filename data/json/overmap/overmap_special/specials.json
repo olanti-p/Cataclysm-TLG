@@ -310,7 +310,7 @@
       { "point": [ 0, 0, -1 ], "overmap": "shipwreck_river_3_north", "locations": [ "subterranean_empty" ] },
       { "point": [ 1, 0, -1 ], "overmap": "shipwreck_river_4_north", "locations": [ "subterranean_empty" ] }
     ],
-    "occurrences": [ 0, 3 ],
+    "occurrences": [ 0, 2 ],
     "spawns": { "group": "GROUP_RAZORCLAW", "population": [ 30, 60 ], "radius": [ 2, 10 ] },
     "flags": [ "MAN_MADE", "WILDERNESS" ]
   },
@@ -355,7 +355,7 @@
     "locations": [ "forest_without_trail" ],
     "city_distance": [ 25, -1 ],
     "city_sizes": [ 0, 12 ],
-    "occurrences": [ 20, 100 ],
+    "occurrences": [ 1, 20 ],
     "flags": [ "CLASSIC", "MAN_MADE", "UNIQUE", "WILDERNESS" ]
   },
   {
@@ -369,7 +369,7 @@
     "locations": [ "forest_without_trail" ],
     "city_distance": [ 25, -1 ],
     "city_sizes": [ 0, 12 ],
-    "occurrences": [ 100, 100 ],
+    "occurrences": [ 1, 20 ],
     "flags": [ "CLASSIC", "MAN_MADE", "GLOBALLY_UNIQUE", "WILDERNESS" ]
   },
   {
@@ -383,7 +383,7 @@
     "locations": [ "forest_without_trail" ],
     "city_distance": [ 25, -1 ],
     "city_sizes": [ 0, 12 ],
-    "occurrences": [ 20, 100 ],
+    "occurrences": [ 1, 20 ],
     "flags": [ "CLASSIC", "MAN_MADE", "UNIQUE", "WILDERNESS" ]
   },
   {
@@ -6222,11 +6222,10 @@
       { "point": [ -1, 15, 0 ], "locations": [ "land", "road" ] }
     ],
     "locations": [ "land" ],
-    "occurrences": [ 35, 100 ],
+    "occurrences": [ 20, 100 ],
     "priority": 1,
-    "//": "Inflated chance, effective rate ~19% (n=726)",
     "connections": [ { "point": [ -1, 15, 0 ], "terrain": "road", "connection": "local_road" } ],
-    "flags": [ "FARM", "UNIQUE", "SAFE_AT_WORLDGEN", "MAN_MADE" ]
+    "flags": [ "FARM", "GLOBALLY_UNIQUE", "SAFE_AT_WORLDGEN", "MAN_MADE" ]
   },
   {
     "id": "airliner_crashed",
@@ -6774,7 +6773,7 @@
     "locations": [ "field", "forest_without_trail" ],
     "city_distance": [ 1, 40 ],
     "city_sizes": [ 4, -1 ],
-    "occurrences": [ 0, 8 ],
+    "occurrences": [ 0, 4 ],
     "flags": [ "CLASSIC", "MAN_MADE" ]
   },
   {
@@ -6895,8 +6894,8 @@
     "locations": [ "forest" ],
     "city_distance": [ 5, 10 ],
     "city_sizes": [ 4, -1 ],
-    "occurrences": [ 0, 1 ],
-    "flags": [ "CLASSIC", "MAN_MADE" ]
+    "occurrences": [ 0, 10 ],
+    "flags": [ "CLASSIC", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
@@ -6909,8 +6908,8 @@
     "locations": [ "field" ],
     "city_distance": [ 5, 40 ],
     "city_sizes": [ 1, -1 ],
-    "occurrences": [ 0, 1 ],
-    "flags": [ "CLASSIC", "MAN_MADE" ]
+    "occurrences": [ 1, 10 ],
+    "flags": [ "CLASSIC", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
@@ -6950,8 +6949,8 @@
     "locations": [ "land" ],
     "city_distance": [ 5, 60 ],
     "city_sizes": [ 4, -1 ],
-    "occurrences": [ 0, 2 ],
-    "flags": [ "CLASSIC", "MAN_MADE" ]
+    "occurrences": [ 1, 8 ],
+    "flags": [ "CLASSIC", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
@@ -6960,8 +6959,8 @@
     "locations": [ "field" ],
     "city_distance": [ 3, 10 ],
     "city_sizes": [ 8, -1 ],
-    "occurrences": [ 0, 1 ],
-    "flags": [ "CLASSIC", "URBAN", "MAN_MADE" ]
+    "occurrences": [ 1, 10 ],
+    "flags": [ "CLASSIC", "URBAN", "MAN_MADE", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
@@ -7111,8 +7110,8 @@
     ],
     "connections": [ { "point": [ 3, 3, 0 ], "terrain": "road", "connection": "local_road", "from": [ 3, 2, 0 ] } ],
     "city_distance": [ 0, 5 ],
-    "occurrences": [ 0, 1 ],
-    "flags": [ "CLASSIC", "GENERIC_LOOT", "MAN_MADE" ]
+    "occurrences": [ 1, 10 ],
+    "flags": [ "CLASSIC", "GENERIC_LOOT", "MAN_MADE", "UNIQUE" ]
   },
   {
     "type": "overmap_special",
@@ -7275,7 +7274,7 @@
     ],
     "city_distance": [ -1, 5 ],
     "city_sizes": [ 5, -1 ],
-    "occurrences": [ 20, 100 ],
+    "occurrences": [ 1, 10 ],
     "flags": [ "UNIQUE", "SIDEWALK", "GENERIC_LOOT", "URBAN", "MAN_MADE" ]
   },
   {
