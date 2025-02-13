@@ -61,7 +61,7 @@
       "ñ": "t_wall_wood",
       "å": "t_wall_glass",
       "@": "t_wall_lighthouse_lens",
-      "w": "t_metal_grate_window",
+      "w": "t_window_bars",
       "ö": "t_door_lighthouse_lens_c",
       "/": "t_door_c",
       "!": "t_door_glass_c",
