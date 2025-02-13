@@ -934,6 +934,22 @@ int options_manager::cOpt::getIntPos( const int iSearch ) const
     return -1;
 }
 
+std::string options_manager::cOpt::getGroupName() const
+{
+    const std::string page_id = getPage();
+    for( Page &p : get_options().pages_ ) {
+        if( p.id_ == page_id ) {
+            for( const PageItem &i : p.items_ ) {
+                if( i.type == ItemType::Option && i.data == getName() ) {
+                    return get_options().find_group( i.group ).name_.translated();
+                }
+            }
+            break;
+        }
+    }
+    return "";
+}
+
 std::optional<options_manager::int_and_option> options_manager::cOpt::findInt(
     const int iSearch ) const
 {
@@ -1892,6 +1908,11 @@ void options_manager::add_options_interface()
 
         add( "AIM_AFTER_FIRING", page_id, to_translation( "Reaim after firing" ),
              to_translation( "If true, after firing automatically aim again if targets are available." ),
+             true
+           );
+        add( "UNLOAD_RAS_WEAPON", page_id,
+             to_translation( "Unload your bow etc after canceling shooting" ),
+             to_translation( "If true, weapons like bow and slingshot will be unloaded when quitting aim UI." ),
              true
            );
 
