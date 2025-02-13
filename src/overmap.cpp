@@ -6723,8 +6723,6 @@ std::vector<tripoint_om_omt> overmap::place_special(
 
     if( special.has_flag( "GLOBALLY_UNIQUE" ) ) {
         overmap_buffer.add_unique_special( special.id );
-    } else if( special.has_flag( "OVERMAP_UNIQUE" ) ) {
-        overmap_buffer.log_unique_special( special.id );
     }
     // CITY_UNIQUE is handled in place_building()
 
