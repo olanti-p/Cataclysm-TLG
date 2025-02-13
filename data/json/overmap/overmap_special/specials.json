@@ -298,7 +298,7 @@
     "locations": [ "forest" ],
     "city_distance": [ 12, -1 ],
     "occurrences": [ 30, 100 ],
-    "flags": [ "CLASSIC", "FARM", "UNIQUE", "MAN_MADE" ]
+    "flags": [ "CLASSIC", "FARM", "OVERMAP_UNIQUE", "MAN_MADE" ]
   },
   {
     "type": "overmap_special",
@@ -724,7 +724,7 @@
     "city_distance": [ 25, -1 ],
     "occurrences": [ 50, 100 ],
     "//": "Inflated chance, effective rate ~40%",
-    "flags": [ "WILDERNESS", "UNIQUE", "MAN_MADE" ]
+    "flags": [ "WILDERNESS", "OVERMAP_UNIQUE", "MAN_MADE" ]
   },
   {
     "type": "overmap_special",
@@ -7188,7 +7188,7 @@
     "connections": [ { "point": [ 3, 3, 0 ], "terrain": "road", "connection": "local_road", "from": [ 3, 2, 0 ] } ],
     "city_distance": [ 0, 5 ],
     "occurrences": [ 1, 10 ],
-    "flags": [ "CLASSIC", "GENERIC_LOOT", "MAN_MADE", "UNIQUE" ]
+    "flags": [ "CLASSIC", "GENERIC_LOOT", "MAN_MADE", "OVERMAP_UNIQUE" ]
   },
   {
     "type": "overmap_special",
