@@ -31,6 +31,16 @@ and burdening the reviewers is not worth it for things like these.
 However, we are very grateful for people to take care of complex or otherwise non-trivial backports, especially if done by the person
 who originally contributed the fixes upstream.
 
+### Maintaining documentation
+
+We have removed most of the documentation as pointlessly duplicating DDA things makes things vastly harder and instead opted to
+document differences. Documentation is a chore and we are thankful if someone offers to take care of it.
+
+### Tileset additions
+
+The DDA tilesets have gotten fixes and additions, but backporting them is very hard as git can not resolve merge conflicts in
+binary files. If you are adept with graphics software and would like to give it your all, discuss it first.
+
 ### Fixing bugs
 
 Bug fixes are appreciated, but you are encouraged to discuss your proposed fix first, especially if the fix will affect many lines of code.
