@@ -385,7 +385,11 @@ AR  = $(CROSS)ar
 LDFLAGS += $(PROFILE)
 
 ifneq ($(SANITIZE),)
-  SANITIZE_FLAGS := -fsanitize=$(SANITIZE) -fno-sanitize-recover=all -fno-omit-frame-pointer
+  ifeq ($(SANITIZE), all)
+    SANITIZE_FLAGS := -fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all -fno-omit-frame-pointer
+  else
+    SANITIZE_FLAGS := -fsanitize=$(SANITIZE) -fno-sanitize-recover=all -fno-omit-frame-pointer
+  endif
   CXXFLAGS += $(SANITIZE_FLAGS)
   LDFLAGS += $(SANITIZE_FLAGS)
 endif
