@@ -22,6 +22,8 @@
 
 static const character_modifier_id character_modifier_reloading_move_mod( "reloading_move_mod" );
 static const skill_id skill_gun( "gun" );
+static const skill_id skill_archery( "archery" );
+static const skill_id skill_throw( "throw" );
 
 int Character::ammo_count_for( const item_location &gun ) const
 {
@@ -162,16 +164,20 @@ int Character::item_reload_cost( const item &it, const item &ammo, int qty ) con
     /** @EFFECT_LAUNCHER decreases time taken to reload a launcher */
 
     int cost = 0;
+    skill_id sk = it.is_gun() ? it.type->gun->skill_used : skill_gun;
     if( it.is_gun() ) {
         cost = it.get_reload_time();
+        if( sk != skill_archery && sk != skill_throw && sk != skill_gun ) {
+            mv += round( cost * ( 7 - std::min( get_skill_level( sk ), 6.0f ) ) ); 
+        } else {
+            mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 1.0f ) );
+        }
     } else if( it.type->magazine ) {
         cost = it.type->magazine->reload_time * qty;
+        mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 1.0f ) );
     } else {
         cost = it.obtain_cost( ammo );
     }
-
-    skill_id sk = it.is_gun() ? it.type->gun->skill_used : skill_gun;
-    mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 1.0f ) );
 
     if( it.has_flag( flag_STR_RELOAD ) ) {
         /** @EFFECT_STR reduces reload time of some weapons */
