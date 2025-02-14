@@ -677,6 +677,7 @@
           "mx_military": 4
         }
       },
+      "ocean_bed": { "chance": 30, "extras": { "mx_kelp_patch": 1 } },
       "road": {
         "chance": 75,
         "extras": {
@@ -986,13 +987,13 @@
         "communitygarden_3": 75,
         "publicgarden": 100,
         "publicgarden_2": 100,
-        "cathedral": 10,
+        "cathedral": 50,
         "football_field": 25,
         "baseball_field": 50,
         "botanical_garden": 100,
         "zoo": 25,
-        "stadium": 25,
-        "stadium_football": 25,
+        "stadium": 50,
+        "stadium_football": 50,
         "convention_center": 10,
         "cemetery_city": 50,
         "public_pond_city": 50,
@@ -1195,7 +1196,7 @@
         "s_petstore": 100,
         "s_petstore_1": 100,
         "s_petstore_2": 100,
-        "megastore": 150,
+        "megastore": 250,
         "hotel_1": 75,
         "hotel_2": 75,
         "hotel_3": 75,
@@ -1207,7 +1208,7 @@
         "office_skyscraper": 300,
         "office_tower_large": 300,
         "office_tower_hiddenlab": 200,
-        "mall": 100,
+        "mall": 200,
         "home_improvement_superstore_new": 150,
         "lumberyard": 75,
         "landscaping_supply_co": 150,

@@ -113,6 +113,24 @@
     "name": "lighthouse",
     "sym": "&",
     "color": "yellow",
+    "see_cost": 5,
+    "flags": [ "RISK_LOW", "SOURCE_SAFETY" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "lighthouse_small_ground",
+    "name": "small lighthouse",
+    "sym": "0",
+    "color": "yellow",
+    "see_cost": 5,
+    "flags": [ "RISK_LOW", "SOURCE_SAFETY" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "lighthouse_small_z1", "lighthouse_small_z2", "lighthouse_small_z3", "lighthouse_small_z4", "lighthouse_small_roof" ],
+    "name": "small lighthouse",
+    "sym": "0",
+    "color": "yellow",
     "see_cost": 5
   },
   {
@@ -477,7 +495,9 @@
     "type": "overmap_terrain",
     "id": [
       "bandit_farm_3",
+      "bandit_farm_3_roof",
       "bandit_farm_2",
+      "bandit_farm_2_roof",
       "bandit_farm_1",
       "bandit_farm_6",
       "bandit_farm_5",
