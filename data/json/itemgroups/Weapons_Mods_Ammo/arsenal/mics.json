@@ -74,7 +74,7 @@
     "//": "represent small amount of stuff that were left in locker while active using.",
     "subtype": "collection",
     "items": [
-      { "item": "bubblewrap", "count": [ 0, 2 ], "prob": 80 },
+      { "item": "bubblewrap", "count": [ 0, 1 ], "prob": 80 },
       { "group": "arsenal_mics_tools", "count": [ 0, 2 ], "prob": 80 },
       { "group": "arsenal_mics_group", "count": [ 0, 1 ], "prob": 50 },
       { "group": "arsenal_armor+plates", "count": [ 0, 1 ], "prob": 20 }
