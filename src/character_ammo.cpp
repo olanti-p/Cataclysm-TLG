@@ -165,6 +165,7 @@ int Character::item_reload_cost( const item &it, const item &ammo, int qty ) con
 
     int cost = 0;
     skill_id sk = it.is_gun() ? it.type->gun->skill_used : skill_gun;
+    // It takes 6 in a gun's skill to reload it at top speed. Bows and other simple devices are easier.
     if( it.is_gun() ) {
         cost = it.get_reload_time();
         if( sk != skill_archery && sk != skill_throw && sk != skill_gun ) {
@@ -172,9 +173,10 @@ int Character::item_reload_cost( const item &it, const item &ammo, int qty ) con
         } else {
             mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 1.0f ) );
         }
+    // It takes 6 marksmanship to load a magazine at top speed.
     } else if( it.type->magazine ) {
         cost = it.type->magazine->reload_time * qty;
-        mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 1.0f ) );
+        mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 0.6f ) );
     } else {
         cost = it.obtain_cost( ammo );
     }
