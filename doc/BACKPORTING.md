@@ -10,12 +10,19 @@ The number 1 issue when backporting are conflicts and to avoid those, go through
 If you cherry-pick something that is months in the future from our current backporting stage, it may make future
 backporting endeavors harder.
 
+Avoid that if you can. Sometimes it can not be avoided as some critical bugfix from the future is needed.
+
 ## Preserve authorship at all costs
 
-Use the script. Do not backport manually unless its your own changes.
+Use the script. Do not backport manually unless its your own changes or you know how to manually preserve attribution.
 
 > [!CAUTION]
 > Messing up attribution leads to you or the project potentially being chased with the DMCA hammer. No one wants that.
+
+## Coordinate
+
+Accidentally duplicating work because someone else was already onto it before you started sucks. Coordinate with other
+people in the designated channel before starting.
 
 ## Usage of the script
 
@@ -71,6 +78,7 @@ It will automatically switch to a new branch called `backport-12345` and apply t
 > Then, invoke the script with the parameter `--raw-apply`, which causes it to skip branch creation and some other checks, applying the patch raw:
 > `tools/dda-backport.sh --raw-apply 12345`.
 > Repeat this invocation for all PRs you want to batch together. Do not batch too many or it is getting hard to review and test. Around 5 is a sensible number.
+> 15 for smaller changes, like roof additions and typo fixes.
 
 If you are lucky, the patch will apply cleanly and no further action is required. Sometimes however there are [merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts).
 You will know there is a merge conflict because (1) the patch can not be applied cleanly and this will be reported by the script (2) There will be a yellow hint text of git itself and mentions of `CONFLICT`.
@@ -91,7 +99,7 @@ CONFLICT (content): Merge conflict in src/fault.cpp
 ```
 
 > [!TIP]
-> [Mergiraf](https://mergiraf.org/) can help dealing with merge conflicts. It has been tested on this repo and it sucessfully resolves most of the conflicts.
+> [Mergiraf](https://mergiraf.org/) can help dealing with merge conflicts. It has been tested on this repo and it sucessfully resolves many of the conflicts.
 
 There are multiple ways to solve the merge conflict. Apparently the github desktop app can do so, but you can also use `git mergetool`.
 After you are done, run `git am --continue`.
