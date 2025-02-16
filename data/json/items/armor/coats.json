@@ -588,8 +588,8 @@
   {
     "id": "greatcoat",
     "type": "ARMOR",
-    "name": { "str": "wool longcoat" },
-    "description": "An overcoat made from durable heavyweight wool.",
+    "name": { "str": "greatcoat" },
+    "description": "A long overcoat made from durable heavyweight wool.",
     "weight": "2428 g",
     "volume": "8 L",
     "price": "180 USD",
@@ -624,20 +624,6 @@
         "max_contains_volume": "1500 ml",
         "max_contains_weight": "4 kg",
         "max_item_length": "24 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1 L",
-        "max_contains_weight": "2 kg",
-        "max_item_length": "21 cm",
-        "moves": 80
-      },
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "1 L",
-        "max_contains_weight": "2 kg",
-        "max_item_length": "21 cm",
         "moves": 80
       },
       {
@@ -1419,10 +1405,10 @@
     ]
   },
   {
-    "id": "judo_gi",
+    "id": "gi",
     "type": "ARMOR",
-    "name": { "str_sp": "judo gi" },
-    "description": "A plain white judo uniform made of durable cotton.",
+    "name": { "str_sp": "gi" },
+    "description": "A durable cotton jacket used as the top half of a uniform in many Japanese martial arts.",
     "weight": "1000 g",
     "volume": "1500 ml",
     "price": "50 USD",
@@ -1432,62 +1418,32 @@
     "looks_like": "robe",
     "color": "white",
     "warmth": 10,
-    "material_thickness": 0.5,
+    "material_thickness": 0.6,
     "flags": [ "VARSIZE", "STURDY" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 10 },
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 10 },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 10 }
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 6 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 90 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": 6 }
+    ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "gi_karate",
+        "name": { "str": "gi" },
+        "description": "A durable cotton jacket used as the top half of a uniform in many Japanese martial arts."
+      },
+      {
+        "id": "gi_dobok",
+        "name": { "str": "dobok" },
+        "description": "A distinctive cotton jacket worn by practitioners of the Korean art of Taekwando.  It's lightweight, but sturdy enough to go to the mat."
+      }
     ]
-  },
-  {
-    "id": "karate_gi",
-    "type": "ARMOR",
-    "name": { "str_sp": "karate gi" },
-    "description": "Plain white karate gi.  Made from loose and flowing cotton.",
-    "weight": "400 g",
-    "volume": "1500 ml",
-    "price": "50 USD",
-    "price_postapoc": "50 cent",
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "judo_gi",
-    "color": "white",
-    "warmth": 5,
-    "material_thickness": 0.5,
-    "flags": [ "VARSIZE", "STURDY" ],
-    "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100 }
-    ]
-  },
-  {
-    "id": "kariginu",
-    "type": "ARMOR",
-    "name": { "str_sp": "kariginu" },
-    "description": "A traditional, ankle-length Shinto robe with several layers and very wide sleeves.",
-    "weight": "1400 g",
-    "volume": "5500 ml",
-    "price": "300 USD",
-    "price_postapoc": "50 cent",
-    "to_hit": -5,
-    "material": [ "cotton" ],
-    "symbol": "[",
-    "looks_like": "robe",
-    "color": "white",
-    "warmth": 23,
-    "material_thickness": 0.5,
-    "flags": [ "VARSIZE" ],
-    "armor": [ { "encumbrance": 17, "coverage": 100, "covers": [ "leg_l", "leg_r", "torso", "arm_l", "arm_r" ] } ]
   },
   {
     "id": "kasaya",
     "type": "ARMOR",
     "name": { "str": "kasaya" },
-    "description": "A traditional, ankle-length Buddhist robe, stitched together from three pieces of traditional saffron dyed cloth.",
+    "description": "A traditional ankle-length Buddhist robe, stitched together from three pieces of traditional saffron dyed cloth.",
     "weight": "1550 g",
     "volume": "5000 ml",
     "price": "200 USD",
@@ -1498,7 +1454,7 @@
     "looks_like": "kimono",
     "color": "brown",
     "warmth": 20,
-    "material_thickness": 0.5,
+    "material_thickness": 0.4,
     "flags": [ "VARSIZE" ],
     "armor": [
       { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 70, "encumbrance": 2 },
@@ -1513,37 +1469,35 @@
     ]
   },
   {
-    "id": "keikogi",
+    "id": "tangzhuang",
     "type": "ARMOR",
-    "name": { "str_sp": "keikogi" },
-    "description": "Plain white keikogi for use in martial arts.",
+    "name": { "str_sp": "tangzhuang" },
+    "description": "A loose-fitting Chinese jacket with a mandarin collar and frog ties down the front.  These were once common street fashion in China, but have long since become associated with martial arts from that country.",
     "weight": "250 g",
     "volume": "750 ml",
     "price": "25 USD",
     "price_postapoc": "50 cent",
     "material": [ "cotton" ],
     "symbol": "[",
-    "looks_like": "judo_gi",
-    "color": "white",
+    "looks_like": "gi",
+    "color": "red",
     "warmth": 5,
     "material_thickness": 0.3,
     "flags": [ "VARSIZE", "STURDY" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 98 },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
       {
         "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l", "arm_elbow_r", "arm_elbow_l" ],
-        "coverage": 100
-      },
-      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 40 }
+        "coverage": 98
+      }
     ]
   },
   {
     "id": "kimono",
     "type": "ARMOR",
     "name": { "str": "kimono" },
-    "description": "A traditional, ankle-length Japanese robe, wrapped around the body with a sash.",
+    "description": "A traditional ankle-length Japanese robe, wrapped around the body with a sash.",
     "weight": "1200 g",
     "volume": "5 L",
     "price": "200 USD",
@@ -1554,16 +1508,16 @@
     "looks_like": "robe",
     "color": "white",
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 2, 5 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 8, 10 ] },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 2, 2 ] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 8, 8 ] },
       {
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l", "arm_elbow_r", "arm_elbow_l" ],
         "coverage": 100,
-        "encumbrance": [ 2, 2 ]
+        "encumbrance": [ 6, 6 ]
       },
-      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 95 }
+      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 90 }
     ],
     "pocket_data": [
       {
@@ -1574,15 +1528,16 @@
         "moves": 80
       }
     ],
-    "warmth": 20,
+    "warmth": 15,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE" ]
   },
   {
     "id": "yukata",
     "type": "ARMOR",
+    "copy-from": "kimono",
     "name": { "str_sp": "yukata" },
-    "description": "An easy-to-wear, breezy robe secured with a sash.  Essentially Japanese pajamas.  Great for summer nights.",
+    "description": "A Japanese robe similar to a Kimono, it's made of lightweight cotton, perfect for the Summer.",
     "weight": "900 g",
     "volume": "3 L",
     "price": "50 USD",
@@ -1592,27 +1547,6 @@
     "symbol": "[",
     "looks_like": "kimono",
     "color": "blue",
-    "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 1, 3 ] },
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 1, 1 ] },
-      {
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l", "arm_elbow_r", "arm_elbow_l" ],
-        "coverage": 100,
-        "encumbrance": [ 1, 1 ]
-      },
-      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 95 }
-    ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "500 ml",
-        "max_contains_weight": "1 kg",
-        "max_item_length": "13 cm",
-        "moves": 80
-      }
-    ],
     "warmth": 5,
     "material_thickness": 0.15,
     "flags": [ "VARSIZE" ]
@@ -1621,7 +1555,7 @@
     "id": "haori",
     "type": "ARMOR",
     "name": { "str_sp": "haori" },
-    "description": "A loose coat with wide sleeves that is worn unfastened over a kimono.  It is jet black with sparse, tasteful golden embroidery.",
+    "description": "A loose coat with wide sleeves that is typically worn unfastened over a kimono.",
     "weight": "800 g",
     "volume": "2 L",
     "price": "300 USD",
@@ -1631,18 +1565,19 @@
     "symbol": "[",
     "looks_like": "house_coat",
     "color": "dark_gray",
-    "warmth": 10,
+    "warmth": 5,
     "material_thickness": 0.3,
     "flags": [ "VARSIZE", "OUTER" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper", "torso_lower" ], "coverage": 80, "encumbrance": 3 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper", "torso_lower" ], "coverage": 60, "encumbrance": 5 },
       {
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l", "arm_elbow_r", "arm_elbow_l" ],
-        "coverage": 100,
-        "encumbrance": 3
+        "coverage": 98,
+        "encumbrance": 5
       },
-      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 20 }
+      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 20 },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_draped_l", "leg_draped_r" ], "coverage": 20, "layers": [ "BELTED" ] }
     ]
   },
   {
@@ -1689,8 +1624,8 @@
     "looks_like": "jacket_leather",
     "color": "dark_gray",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 98, "encumbrance": [ 26, 28 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": [ 26, 26 ] }
+      { "covers": [ "torso" ], "coverage": 98, "encumbrance": [ 20, 22 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": [ 20, 20 ] }
     ],
     "pocket_data": [
       {
@@ -1937,12 +1872,6 @@
       },
       { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 90 }
     ],
-    "use_action": {
-      "type": "transform",
-      "msg": "The darkness surrounding your face lightens.",
-      "target": "grim_reaper_robe_faceless",
-      "menu_text": "Remove face cover"
-    },
     "warmth": 10,
     "material_thickness": 0.1,
     "flags": [ "UNRESTRICTED", "OUTER", "ALLOWS_NATURAL_ATTACKS" ]
@@ -2514,13 +2443,7 @@
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
         "coverage": 40
       },
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 100,
-        "encumbrance": 3
-      },
-      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 80 }
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_draped_l", "leg_draped_r" ], "coverage": 60, "encumbrance": 4, "layers": [ "BELTED" ] }
     ]
   },
   {
@@ -2540,13 +2463,18 @@
     "warmth": 20,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE" ],
-    "armor": [ { "encumbrance": 7, "coverage": 100, "covers": [ "leg_l", "leg_r", "torso", "arm_l", "arm_r" ] } ]
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": 12 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 98, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": 10 }
+    ]
   },
   {
     "id": "tunic",
     "type": "ARMOR",
     "name": { "str": "tunic" },
-    "description": "A simple garment long enough to cover down to the knees.",
+    "description": "A long-sleeved top that drapes almost to the knees.",
     "weight": "250 g",
     "volume": "1250 ml",
     "price": "42 USD",
@@ -2560,44 +2488,32 @@
     "material_thickness": 0.3,
     "flags": [ "VARSIZE" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 12 },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 3 },
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 100,
-        "encumbrance": 3
-      },
-      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 80 }
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": 12 },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_draped_l", "leg_draped_r" ], "coverage": 40, "encumbrance": 4, "layers": [ "BELTED" ] }
     ]
   },
   {
     "id": "tunic_rag",
     "type": "ARMOR",
     "name": { "str": "rag tunic" },
-    "description": "A poorly-made long tunic with a string tied around the waist to keep it all in place.",
+    "description": "A makeshift knee-length robe with a string tied around the waist to keep it all in place.",
     "weight": "683 g",
     "volume": "1 L",
     "price": "70 cent",
     "price_postapoc": "60 cent",
     "material": [ "cotton" ],
     "symbol": "[",
-    "looks_like": "tunic",
-    "color": "light_red",
+    "looks_like": "robe",
+    "color": "white",
     "warmth": 15,
     "material_thickness": 0.3,
-    "flags": [ "OVERSIZE" ],
+    "flags": [ "OVERSIZE", "FRAGILE" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 95, "encumbrance": 5 },
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 85 },
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 95,
-        "encumbrance": 5
-      },
-      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 65 }
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 12 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_draped_l", "leg_draped_r" ], "coverage": 30, "encumbrance": 4, "layers": [ "BELTED" ] }
     ]
   },
   {
@@ -2637,7 +2553,8 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r", "leg_lower_l", "leg_lower_r", "leg_hip_l", "leg_hip_r" ],
         "material": [ { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 } ],
-        "coverage": 100
+        "coverage": 100,
+        "encumbrance": [ 13, 13 ]
       }
     ],
     "pocket_data": [
@@ -2665,7 +2582,7 @@
     ],
     "warmth": 30,
     "material_thickness": 0.5,
-    "flags": [ "VARSIZE", "POCKETS", "SUPER_FANCY", "OUTER" ]
+    "flags": [ "VARSIZE", "POCKETS", "SUPER_FANCY" ]
   },
   {
     "id": "waistcoat",
@@ -2707,12 +2624,12 @@
     "material_thickness": 0.5,
     "flags": [ "VARSIZE", "FANCY" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "encumbrance": [ 2, 5 ], "coverage": 60 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "encumbrance": [ 8, 12 ], "coverage": 60 },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 80 },
       {
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
-        "coverage": 40
+        "coverage": 40, "encumbrance": [ 2, 2 ]
       }
     ]
   },
@@ -2730,8 +2647,8 @@
     "looks_like": "coat_winter",
     "color": "white",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 10, 20 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 10, 10 ] }
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 20, 26 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 20, 20 ] }
     ],
     "pocket_data": [
       {
@@ -2853,8 +2770,8 @@
     "color": "blue",
     "looks_like": "jacket_army",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 4, 8 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 4, 4 ] }
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 16, 22 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 16, 16 ] }
     ],
     "pocket_data": [
       {

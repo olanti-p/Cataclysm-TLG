@@ -64,11 +64,10 @@
     ]
   },
   {
-    "abstract": "judo_belt_abstract",
-    "repairs_like": "scarf",
+    "id": "martial_arts_belt",
     "type": "ARMOR",
-    "name": { "str": "judo belt template" },
-    "description": "This is a template for judo belts.  If found in a game, it is a bug.",
+    "name": { "str": "martial arts belt" },
+    "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
     "weight": "200 g",
     "volume": "250 ml",
     "price": "10 USD",
@@ -77,64 +76,60 @@
     "material": [ "cotton" ],
     "symbol": "[",
     "material_thickness": 2,
-    "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY" ],
-    "armor": [ { "encumbrance": 2, "coverage": 50, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ]
-  },
-  {
-    "id": "judo_belt_black",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "black belt" },
-    "description": "A belt worn by martial arts practitioners, advertising a master.",
-    "color": "dark_gray"
-  },
-  {
-    "id": "judo_belt_blue",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "blue belt" },
-    "description": "A belt worn by martial arts practitioners, advertising a strong intermediate.",
-    "color": "blue"
-  },
-  {
-    "id": "judo_belt_brown",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "brown belt" },
-    "description": "A belt worn by martial arts practitioners, advertising a near-master.",
-    "color": "brown"
-  },
-  {
-    "id": "judo_belt_green",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "green belt" },
-    "description": "A belt worn by martial arts practitioners, advertising an intermediate.",
-    "color": "green"
-  },
-  {
-    "id": "judo_belt_orange",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "orange belt" },
-    "description": "A belt worn by martial arts practitioners, advertising a fresh intermediate.",
-    "color": "light_red"
-  },
-  {
-    "id": "judo_belt_white",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "white belt" },
-    "description": "A belt worn by martial arts practitioners, advertising a novice.",
-    "color": "white"
-  },
-  {
-    "id": "judo_belt_yellow",
-    "copy-from": "judo_belt_abstract",
-    "type": "ARMOR",
-    "name": { "str": "yellow belt" },
-    "description": "A belt worn by martial arts practitioners, advertising a moderate novice.",
-    "color": "yellow"
+    "flags": [ "BELTED", "OVERSIZE" ],
+    "color": "white",
+    "armor": [ { "encumbrance": 2, "coverage": 50, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "martial_arts_belt_black",
+        "name": { "str": "black belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "dark_gray"
+      },
+      {
+        "id": "martial_arts_belt_orange",
+        "name": { "str": "orange belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "brown"
+      },
+      {
+        "id": "martial_arts_belt_brown",
+        "name": { "str": "brown belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "brown"
+      },
+      {
+        "id": "martial_arts_belt_purple",
+        "name": { "str": "purple belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "magenta"
+      },
+      {
+        "id": "martial_arts_belt_blue",
+        "name": { "str": "blue belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "blue"
+      },
+      {
+        "id": "martial_arts_belt_red",
+        "name": { "str": "red belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "red"
+      },
+      {
+        "id": "martial_arts_belt_white",
+        "name": { "str": "white belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "light_gray"
+      },
+      {
+        "id": "martial_arts_belt_yellow",
+        "name": { "str": "yellow belt" },
+        "description": "A simple cloth belt that ties about the waist.  Its color indicates the wearer's rank.",
+        "color": "yellow"
+      }
+    ]
   },
   {
     "id": "leather_belt",

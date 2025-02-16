@@ -238,13 +238,13 @@
         "moves": 100
       }
     ],
-    "warmth": 10,
+    "warmth": 15,
     "material_thickness": 0.65,
     "//": "Mediumweight 10 oz denim jeans.",
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": [ 7, 11 ],
+        "encumbrance": [ 14, 16 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
@@ -301,13 +301,13 @@
         "moves": 80
       }
     ],
-    "warmth": 6,
+    "warmth": 10,
     "material_thickness": 0.52,
     "//": "Lightweight 8 oz denim jeans.",
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": [ 8, 10 ],
+        "encumbrance": [ 16, 18 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
@@ -501,10 +501,43 @@
     ]
   },
   {
+    "id": "sweatpants",
+    "type": "ARMOR",
+    "name": { "str_sp": "sweatpants" },
+    "description": "Loose-fitting pants ostensibly designed for exercise, though they frequently wind up as pajamas.",
+    "weight": "560 g",
+    "volume": "2 L",
+    "price": "49 USD",
+    "price_postapoc": "1 USD",
+    "to_hit": 1,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "looks_like": "jeans",
+    "color": "light_gray",
+    "warmth": 20,
+    "material_thickness": 0.3,
+    "flags": [ "VARSIZE" ],
+    "armor": [
+      {
+        "encumbrance": [ 8, 8 ],
+        "coverage": 98,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "volume_encumber_modifier": 0.6
+      },
+      {
+        "coverage": 100,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
+      },
+      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+    ]
+  },
+  {
     "id": "pants",
     "type": "ARMOR",
-    "name": { "str_sp": "pants" },
-    "description": "A pair of khaki pants.  Slightly warmer than jeans.",
+    "name": { "str_sp": "slacks" },
+    "description": "A pair of cotton pants.  Less durable than denim, but a little more comfortable.",
     "weight": "560 g",
     "volume": "2 L",
     "price": "49 USD",
@@ -544,22 +577,15 @@
         "moves": 100
       }
     ],
-    "warmth": 15,
+    "warmth": 10,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [
       {
-        "encumbrance": [ 5, 9 ],
         "coverage": 98,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
-      },
-      {
-        "coverage": 100,
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_knee_l", "leg_knee_r" ]
-      },
-      { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_lower_l", "leg_lower_r" ] }
+        "encumbrance": [ 8, 12 ]
+      }
     ]
   },
   {
@@ -1449,7 +1475,7 @@
     "id": "zubon_gi",
     "type": "ARMOR",
     "name": { "str": "zubon" },
-    "description": "Plain white zubon for use in martial arts.",
+    "description": "Loose-fitting pants made for use in martial arts.",
     "weight": "150 g",
     "volume": "750 ml",
     "price": "25 USD",
