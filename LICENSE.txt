@@ -1,4 +1,7 @@
-Cataclysm: The Last Generation is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+The Cataclysm: The Last Generation source code was previously licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+All source code contributions made after 20th of February 2025 are licensed under the GNU General Public License version 3. Visit <https://www.gnu.org/licenses/gpl-3.0.en.html> for details or see gpl-3.0.txt.
+
+Everything else, most notably media found in gfx/, remains licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
 
 GNU Unifont (data/font/unifont.ttf) is licensed under SIL Open Font License version 1.1 and GNU General Public License v2+ with the GNU font embedding exception. Visit http://unifoundry.com/LICENSE.txt for details.
 
