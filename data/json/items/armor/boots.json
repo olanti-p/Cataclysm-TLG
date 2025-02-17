@@ -29,7 +29,7 @@
           "foot_arch_l"
         ],
         "material": [ { "type": "cotton", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 40,
+        "encumbrance": 34,
         "coverage": 40
       },
       {
@@ -69,7 +69,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
         "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.5 } ],
-        "encumbrance": 25,
+        "encumbrance": 22,
         "coverage": 100
       },
       {
@@ -136,7 +136,7 @@
           { "type": "rubber", "covered_by_mat": 100, "thickness": 2.25 },
           { "type": "nomex", "covered_by_mat": 100, "thickness": 2.25 }
         ],
-        "encumbrance": 32,
+        "encumbrance": 30,
         "coverage": 100
       },
       {
@@ -185,7 +185,7 @@
       {
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l", "foot_toes_l", "foot_toes_r" ],
-        "encumbrance": 36,
+        "encumbrance": 30,
         "coverage": 95
       },
       { "coverage": 75, "covers": [ "foot_l", "foot_r" ], "specifically_covers": [ "foot_ankle_l", "foot_ankle_r" ] },
@@ -277,7 +277,7 @@
           { "type": "leather", "covered_by_mat": 70, "thickness": 1.25 },
           { "type": "nylon", "covered_by_mat": 100, "thickness": 2 }
         ],
-        "encumbrance": 28,
+        "encumbrance": 24,
         "coverage": 100
       },
       {
@@ -368,7 +368,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 },
           { "type": "fur", "covered_by_mat": 100, "thickness": 1.5 }
         ],
-        "encumbrance": 34,
+        "encumbrance": 30,
         "coverage": 100
       },
       {
@@ -426,7 +426,7 @@
           { "type": "faux_fur", "covered_by_mat": 100, "thickness": 2.0 },
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.5 }
         ],
-        "encumbrance": 34,
+        "encumbrance": 30,
         "coverage": 98
       },
       {
@@ -495,7 +495,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
         "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 30,
+        "encumbrance": 26,
         "coverage": 100
       },
       {
@@ -542,7 +542,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 },
           { "type": "steel", "covered_by_mat": 100, "thickness": 2.0 }
         ],
-        "encumbrance": 40,
+        "encumbrance": 32,
         "coverage": 100
       },
       {
@@ -641,7 +641,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
         "material": [ { "type": "leather_treated", "covered_by_mat": 100, "thickness": 2.5 } ],
-        "encumbrance": 34,
+        "encumbrance": 30,
         "coverage": 100
       },
       {
@@ -749,7 +749,7 @@
           "foot_arch_l"
         ],
         "material": [ { "type": "leather_treated", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 24,
+        "encumbrance": 34,
         "coverage": 100
       },
       {
@@ -854,7 +854,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 }
         ],
-        "encumbrance": 24,
+        "encumbrance": 30,
         "coverage": 100
       },
       {
@@ -903,7 +903,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 }
         ],
-        "encumbrance": 15,
+        "encumbrance": 24,
         "coverage": 100
       },
       {
@@ -1134,7 +1134,7 @@
     "warmth": 5,
     "material_thickness": 1.5,
     "flags": [ "SKINTIGHT", "OVERSIZE", "ALLOWS_NATURAL_ATTACKS" ],
-    "armor": [ { "encumbrance": 8, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [ { "encumbrance": 18, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
     "id": "footrags_fur",
@@ -1152,7 +1152,7 @@
     "warmth": 20,
     "material_thickness": 1.5,
     "flags": [ "OVERSIZE", "ALLOWS_NATURAL_ATTACKS" ],
-    "armor": [ { "encumbrance": 10, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [ { "encumbrance": 24, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
     "id": "footrags_faux_fur",
@@ -1170,7 +1170,7 @@
     "warmth": 18,
     "material_thickness": 1.5,
     "flags": [ "OVERSIZE", "ALLOWS_NATURAL_ATTACKS" ],
-    "armor": [ { "encumbrance": 10, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [ { "encumbrance": 24, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
     "id": "footrags_leather",
@@ -1188,7 +1188,7 @@
     "warmth": 10,
     "material_thickness": 1.5,
     "flags": [ "OVERSIZE", "ALLOWS_NATURAL_ATTACKS" ],
-    "armor": [ { "encumbrance": 9, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [ { "encumbrance": 22, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
     "id": "footrags_wool",
@@ -1206,7 +1206,7 @@
     "warmth": 15,
     "material_thickness": 1.5,
     "flags": [ "SKINTIGHT", "OVERSIZE", "ALLOWS_NATURAL_ATTACKS" ],
-    "armor": [ { "encumbrance": 8, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
+    "armor": [ { "encumbrance": 20, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
     "id": "geta",
@@ -1277,12 +1277,12 @@
           { "type": "rubber", "covered_by_mat": 5, "thickness": 80.0 }
         ],
         "coverage": 100,
-        "encumbrance": 55,
+        "encumbrance": 54,
         "layers": [ "OUTER", "NORMAL", "BELTED" ],
         "rigid_layer_only": true
       }
     ],
-    "melee_damage": { "bash": 2 }
+    "melee_damage": { "bash": 2, "stab": 1 }
   },
   {
     "id": "knee_high_boots",
@@ -1312,7 +1312,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "coverage": 100,
-        "encumbrance": 40,
+        "encumbrance": 32,
         "layers": [ "OUTER", "NORMAL" ]
       },
       {
@@ -1459,7 +1459,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "cotton", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "encumbrance": 20,
+        "encumbrance": 12,
         "coverage": 100
       },
       {
@@ -1501,7 +1501,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 } ],
-        "encumbrance": 24,
+        "encumbrance": 14,
         "coverage": 100
       },
       {
@@ -1539,7 +1539,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "fur", "covered_by_mat": 100, "thickness": 1.0 } ],
-        "encumbrance": 28,
+        "encumbrance": 16,
         "coverage": 100
       },
       {
@@ -1582,7 +1582,7 @@
           { "type": "rubber", "covered_by_mat": 100, "thickness": 6.0 }
         ],
         "coverage": 100,
-        "encumbrance": 34
+        "encumbrance": 24
       },
       {
         "covers": [ "foot_l", "foot_r" ],
@@ -1729,7 +1729,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "dry_plant", "covered_by_mat": 100, "thickness": 0.3 } ],
-        "encumbrance": 46,
+        "encumbrance": 42,
         "coverage": 98
       },
       {
@@ -1861,7 +1861,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.7 } ],
-        "encumbrance": 30,
+        "encumbrance": 20,
         "coverage": 80
       },
       {
@@ -1896,7 +1896,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 1 } ],
-        "encumbrance": 20,
+        "encumbrance": 14,
         "coverage": 100
       },
       {
@@ -1945,7 +1945,7 @@
           "foot_arch_l"
         ],
         "material": [ { "type": "dry_plant", "covered_by_mat": 100, "thickness": 1.0 } ],
-        "encumbrance": 40,
+        "encumbrance": 38,
         "coverage": 20
       },
       {
@@ -2007,7 +2007,7 @@
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ],
         "coverage": 100,
-        "encumbrance": 35,
+        "encumbrance": 20,
         "layers": [ "OUTER" ]
       },
       {
@@ -2019,7 +2019,7 @@
         "layers": [ "OUTER" ]
       }
     ],
-    "melee_damage": { "bash": 2 }
+    "melee_damage": { "bash": 2, "stab": 1 }
   },
   {
     "id": "roller_shoes_off",
@@ -2048,7 +2048,7 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l" ],
         "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 1.5 } ],
-        "encumbrance": 26,
+        "encumbrance": 18,
         "coverage": 100
       },
       {
