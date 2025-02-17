@@ -4324,12 +4324,7 @@
     "name": "Butōka",
     "description": "Your sensei prepared you for a lot of things, but somehow the end of the world never came up in traning.",
     "points": 3,
-    "starting_styles_choices": [
-      "style_aikido",
-      "style_karate",
-      "style_ninjutsu",
-      "style_jiu_jutsu"
-    ],
+    "starting_styles_choices": [ "style_aikido", "style_karate", "style_ninjutsu", "style_jiu_jutsu" ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
       { "level": 4, "name": "melee" },
@@ -4338,7 +4333,14 @@
       { "level": 3, "name": "swimming" }
     ],
     "items": {
-      "both": { "entries": [ { "item": "gi", "variant": "gi_karate" }, { "item": "zubon_gi" }, { "item": "martial_arts_belt", "variant": "martial_arts_belt_white" }, { "item": "mouthpiece" } ] },
+      "both": {
+        "entries": [
+          { "item": "gi", "variant": "gi_karate" },
+          { "item": "zubon_gi" },
+          { "item": "martial_arts_belt", "variant": "martial_arts_belt_white" },
+          { "item": "mouthpiece" }
+        ]
+      },
       "male": { "entries": [ { "item": "boxer_shorts" } ] },
       "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
     }
@@ -4349,9 +4351,7 @@
     "name": "Taekwandoin",
     "description": "You've spent years practicing the Korean art of hand-to-hand combat, and now it looks like your training will be put to the ultimate test.",
     "points": 3,
-    "starting_styles_choices": [
-      "style_taekwondo"
-    ],
+    "starting_styles_choices": [ "style_taekwondo" ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
       { "level": 4, "name": "melee" },
@@ -4360,7 +4360,14 @@
       { "level": 3, "name": "swimming" }
     ],
     "items": {
-      "both": { "entries": [ { "item": "gi", "variant": "gi_dobok" }, { "item": "zubon_gi" }, { "item": "martial_arts_belt", "variant": "martial_arts_belt_white" }, { "item": "mouthpiece" } ] },
+      "both": {
+        "entries": [
+          { "item": "gi", "variant": "gi_dobok" },
+          { "item": "zubon_gi" },
+          { "item": "martial_arts_belt", "variant": "martial_arts_belt_white" },
+          { "item": "mouthpiece" }
+        ]
+      },
       "male": { "entries": [ { "item": "boxer_shorts" } ] },
       "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
     }

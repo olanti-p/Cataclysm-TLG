@@ -580,13 +580,7 @@
     "warmth": 10,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "POCKETS" ],
-    "armor": [
-      {
-        "coverage": 98,
-        "covers": [ "leg_l", "leg_r" ],
-        "encumbrance": [ 8, 12 ]
-      }
-    ]
+    "armor": [ { "coverage": 98, "covers": [ "leg_l", "leg_r" ], "encumbrance": [ 8, 12 ] } ]
   },
   {
     "id": "pants_checkered",

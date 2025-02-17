@@ -1147,12 +1147,7 @@
     "difficulty": 2,
     "time": "4 h",
     "autolearn": true,
-    "using": [
-      [ "sewing_standard", 6 ],
-      [ "shoe_rubber", 1 ],
-      [ "adhesive_rubber", 1 ],
-      [ "tailoring_nylon_patchwork", 12 ]
-    ],
+    "using": [ [ "sewing_standard", 6 ], [ "shoe_rubber", 1 ], [ "adhesive_rubber", 1 ], [ "tailoring_nylon_patchwork", 12 ] ],
     "proficiencies": [ { "proficiency": "prof_cobbling" } ]
   }
 ]
