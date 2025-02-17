@@ -1842,6 +1842,40 @@
     ]
   },
   {
+    "id": "shoes_slip_on",
+    "type": "ARMOR",
+    "name": { "str": "pair of slip-on shoes", "str_pl": "pairs of slip-on shoes" },
+    "description": "Lightweight cloth shoes with no ties, meant to be worn without socks.",
+    "weight": "420 g",
+    "volume": "1200 ml",
+    "price": "50 USD",
+    "price_postapoc": "1 USD 75 cent",
+    "material": [ "nylon", "rubber" ],
+    "symbol": "[",
+    "looks_like": "shoes_bowling",
+    "color": "light_blue",
+    "warmth": 10,
+    "flags": [ "VARSIZE", "NORMAL", "OUTER", "PADDED" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l" ],
+        "material": [ { "type": "nylon", "covered_by_mat": 100, "thickness": 0.7 } ],
+        "encumbrance": 30,
+        "coverage": 80
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 2.0 },
+          { "type": "nylon", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "coverage": 100
+      }
+    ]
+  },
+  {
     "id": "sneakers",
     "type": "ARMOR",
     "name": { "str": "pair of sneakers", "str_pl": "pairs of sneakers" },

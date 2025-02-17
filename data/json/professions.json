@@ -389,12 +389,6 @@
   {
     "type": "item_group",
     "subtype": "collection",
-    "id": "ninja_grenade_pouch",
-    "entries": [ { "item": "flashbang" }, { "item": "flashbang" }, { "item": "smokebomb" }, { "item": "smokebomb" } ]
-  },
-  {
-    "type": "item_group",
-    "subtype": "collection",
     "id": "leg_sheath6_throwing_knives",
     "entries": [
       { "item": "throwing_knife" },
@@ -4194,31 +4188,6 @@
   },
   {
     "type": "profession",
-    "id": "shinto_priest",
-    "name": "Kannushi",
-    "description": "You were one of the maintainers of a Shinto shrine, performing rituals and sacred tasks.  You preferred it when only the spirits of the dead inhabited your shrine, and not their rotting corpses.",
-    "points": 0,
-    "skills": [ { "level": 3, "name": "fabrication" }, { "level": 3, "name": "tailor" } ],
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "kariginu" },
-          { "item": "eboshi" },
-          { "item": "hakama" },
-          { "item": "tabi_dress" },
-          { "item": "geta" },
-          { "item": "holybook_kojiki" },
-          { "group": "charged_smart_phone" },
-          { "item": "holy_symbol", "variant": "shinto_necklace" },
-          { "item": "pants" }
-        ]
-      },
-      "male": { "entries": [ { "item": "briefs" } ] },
-      "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
-    }
-  },
-  {
-    "type": "profession",
     "id": "bhikkhu",
     "name": { "male": "Bhikkhu", "female": "Bhikkhuni" },
     "description": "Your life was simple at the Vihara, doing household chores and meditating.  Your Sangha wanted to attain liberation from suffering, now their rotting corpses will suffer forever.",
@@ -4351,49 +4320,62 @@
   },
   {
     "type": "profession",
-    "id": "blackbelt_novice",
-    "name": "Novice Martial Artist",
-    "description": "You've decided today is the day to take your first lesson at the local dojo.  You'll be great at it, you're sure of it.",
-    "points": 1,
-    "flags": [ "NO_BONUS_ITEMS" ],
-    "skills": [ { "level": 1, "name": "melee" }, { "level": 1, "name": "unarmed" } ],
-    "proficiencies": [ "prof_unarmed_familiar" ],
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "karate_gi" },
-          { "item": "judo_belt_white" },
-          { "item": "mouthpiece" },
-          { "item": "socks_ankle" },
-          { "item": "sneakers" },
-          { "item": "manual_karate", "custom-flags": [ "auto_wield" ] }
-        ]
-      },
-      "male": { "entries": [ { "item": "boxer_shorts" } ] },
-      "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
-    },
-    "missions": [ "MISSION_BLACK_BELT_GOAL" ]
-  },
-  {
-    "type": "profession",
-    "id": "blackbelt_intermediate",
-    "name": "Martial Artist",
-    "description": "'Drop the martial arts!', they said.  'Learn a skill for the REAL world!', they said.  Well, you're about to show them!  SHOW THEM ALL!",
+    "id": "martial_artist_japanese",
+    "name": "Butōka",
+    "description": "Your sensei prepared you for a lot of things, but somehow the end of the world never came up in traning.",
     "points": 3,
     "starting_styles_choices": [
       "style_aikido",
-      "style_capoeira",
+      "style_karate",
+      "style_ninjutsu",
+      "style_jiu_jutsu"
+    ],
+    "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
+    "skills": [
+      { "level": 4, "name": "melee" },
+      { "level": 4, "name": "unarmed" },
+      { "level": 4, "name": "dodge" },
+      { "level": 3, "name": "swimming" }
+    ],
+    "items": {
+      "both": { "entries": [ { "item": "gi", "variant": "gi_karate" }, { "item": "zubon_gi" }, { "item": "martial_arts_belt", "variant": "martial_arts_belt_white" }, { "item": "mouthpiece" } ] },
+      "male": { "entries": [ { "item": "boxer_shorts" } ] },
+      "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "martial_artist_korean",
+    "name": "Taekwandoin",
+    "description": "You've spent years practicing the Korean art of hand-to-hand combat, and now it looks like your training will be put to the ultimate test.",
+    "points": 3,
+    "starting_styles_choices": [
+      "style_taekwondo"
+    ],
+    "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
+    "skills": [
+      { "level": 4, "name": "melee" },
+      { "level": 4, "name": "unarmed" },
+      { "level": 4, "name": "dodge" },
+      { "level": 3, "name": "swimming" }
+    ],
+    "items": {
+      "both": { "entries": [ { "item": "gi", "variant": "gi_dobok" }, { "item": "zubon_gi" }, { "item": "martial_arts_belt", "variant": "martial_arts_belt_white" }, { "item": "mouthpiece" } ] },
+      "male": { "entries": [ { "item": "boxer_shorts" } ] },
+      "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "martial_artist_chinese",
+    "name": "Wǔshùjiā",
+    "description": "You know kung fu.  Pretty much everyone else is dead, so maybe that makes you The One.",
+    "points": 3,
+    "starting_styles_choices": [
       "style_crane",
       "style_dragon",
-      "style_judo",
-      "style_karate",
-      "style_krav_maga",
       "style_leopard",
-      "style_muay_thai",
-      "style_ninjutsu",
-      "style_pankration",
       "style_snake",
-      "style_taekwondo",
       "style_tai_chi",
       "style_tiger",
       "style_wingchun",
@@ -4407,48 +4389,37 @@
       { "level": 3, "name": "swimming" }
     ],
     "items": {
-      "both": [ "karate_gi", "judo_belt_orange", "mouthpiece", "socks_ankle", "sneakers" ],
+      "both": [ "tangzhuang", "tank_top", "pants", "mouthpiece", "shoes_slip_on" ],
       "male": { "entries": [ { "item": "boxer_shorts" } ] },
-      "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
-    },
-    "missions": [ "MISSION_BLACK_BELT_GOAL" ]
+      "female": { "entries": [ { "item": "boy_shorts" } ] }
+    }
   },
   {
     "type": "profession",
-    "id": "blackbelt",
-    "name": "Black Belt",
-    "description": "As the world ends, you alone stand against the coming darkness with your fists of steel.",
-    "points": 8,
+    "id": "martial_artist_mixed",
+    "name": "MMA Fighter",
+    "description": "You might have once dreamed of fighting in the octagon, but the Cataclysm presents a new venue for Mixed Martial Arts.",
+    "points": 3,
     "starting_styles_choices": [
-      "style_aikido",
-      "style_capoeira",
-      "style_crane",
-      "style_dragon",
-      "style_judo",
-      "style_karate",
-      "style_krav_maga",
-      "style_leopard",
-      "style_muay_thai",
-      "style_ninjutsu",
       "style_pankration",
-      "style_snake",
-      "style_taekwondo",
-      "style_tai_chi",
-      "style_tiger",
-      "style_wingchun",
-      "style_zui_quan"
+      "style_capoeira",
+      "style_muay_thai",
+      "style_krav_maga",
+      "style_boxing",
+      "style_kickboxing",
+      "style_jiu_jutsu"
     ],
-    "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro", "prof_unarmed_master" ],
+    "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
-      { "level": 8, "name": "melee" },
-      { "level": 8, "name": "unarmed" },
-      { "level": 8, "name": "dodge" },
-      { "level": 5, "name": "swimming" }
+      { "level": 4, "name": "melee" },
+      { "level": 4, "name": "unarmed" },
+      { "level": 3, "name": "dodge" },
+      { "level": 4, "name": "swimming" }
     ],
     "items": {
-      "both": [ "karate_gi", "judo_belt_black", "mouthpiece", "geta" ],
+      "both": [ "jacket_windbreaker", "tank_top", "sweatpants", "mouthpiece", "socks_ankle", "sneakers" ],
       "male": { "entries": [ { "item": "boxer_shorts" } ] },
-      "female": { "entries": [ { "item": "sports_bra" }, { "item": "boy_shorts" } ] }
+      "female": { "entries": [ { "item": "boy_shorts" } ] }
     }
   },
   {
@@ -5425,7 +5396,7 @@
           { "item": "tabi_dress" },
           { "item": "geta" },
           { "item": "bellywrap" },
-          { "item": "bokken_inferior", "container-item": "scabbard" }
+          { "item": "bokken" }
         ]
       },
       "female": { "entries": [ { "item": "chestwrap" } ] }
@@ -6507,72 +6478,6 @@
   },
   {
     "type": "profession",
-    "id": "portal_traveler",
-    "name": "Portal Traveler",
-    "description": "You were abducted from your home, taken hostage, and used as a test subject in a lab.  For the last test, you were dressed in strange clothes and put in a room where you started to feel… different.  You lost consciousness and woke up somewhere unfamiliar.",
-    "points": 1,
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "xedra_enviro_suit" },
-          { "item": "socks" },
-          { "item": "union_suit" },
-          { "item": "mask_gas", "ammo-item": "gasfilter_med", "charges": 100 },
-          {
-            "item": "light_minus_battery_cell",
-            "ammo-item": "battery",
-            "charges": 20,
-            "container-item": "rad_monitor"
-          },
-          {
-            "item": "medium_atomic_battery_cell",
-            "ammo-item": "battery",
-            "charges": 20,
-            "container-item": "broken_dimensional_anchor"
-          },
-          { "item": "xedra_seismograph", "custom-flags": [ "auto_wield" ] }
-        ]
-      }
-    },
-    "flags": [ "SCEN_ONLY" ],
-    "missions": [ "MISSION_PORTAL_TRAVELER" ]
-  },
-  {
-    "type": "profession",
-    "id": "ninja",
-    "name": { "male": "Ninja", "female": "Kunoichi" },
-    "description": "You are obsessed with the techniques and aesthetics of the ninja, so you practiced your movements, dressed all in black, and spent big bucks to acquire some tools of the trade.  Some may question your historical authenticity, but you're perfectly happy living out your fantasy regardless.",
-    "points": 5,
-    "skills": [
-      { "level": 4, "name": "melee" },
-      { "level": 4, "name": "cutting" },
-      { "level": 4, "name": "dodge" },
-      { "level": 4, "name": "throw" },
-      { "level": 2, "name": "swimming" }
-    ],
-    "proficiencies": [ "prof_long_swords_familiar" ],
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "hood_ninja" },
-          { "item": "jacket_ninja" },
-          { "item": "trousers_ninja" },
-          { "item": "tabi_dress" },
-          { "item": "geta" },
-          { "item": "gloves_wraps" },
-          { "item": "bellywrap" },
-          { "item": "katana", "container-item": "scabbard" },
-          { "item": "grenadebandolier", "contents-group": "ninja_grenade_pouch" }
-        ]
-      },
-      "male": { "entries": [ { "item": "boxer_shorts" } ] },
-      "female": { "entries": [ { "item": "chestwrap" }, { "item": "panties" } ] }
-    },
-    "traits": [ "LIGHTSTEP" ],
-    "missions": [ "MISSION_NINJA" ]
-  },
-  {
-    "type": "profession",
     "id": "cheerleader",
     "name": "Cheerleader",
     "description": "Your last cheerleader routine ended abruptly after your partners switched sides to the undead team.  Let's hope your quick reflexes and flexibility help you to find new members for the squad.",
@@ -6609,35 +6514,6 @@
       "female": {
         "entries": [ { "item": "flag_jumpsuit" }, { "item": "bikini_top" }, { "item": "bikini_bottom" }, { "item": "heels" } ]
       }
-    }
-  },
-  {
-    "type": "profession",
-    "id": "prepped_patriot",
-    "name": "Prepped Patriot",
-    "description": "Does the American dream still exist?  Well, recent events have put that to the test.  Does it still proudly live in your beating heart?  Yes.  Yes, it does.  A patriot to the bitter end, you've readied yourself to go toe to toe with the Cataclysm that would seek to do harm to your darling USA.  That is to say, you grabbed your gun… and nothing more.  God bless America, soldier.",
-    "points": 2,
-    "skills": [
-      { "level": 3, "name": "gun" },
-      { "level": 2, "name": "rifle" },
-      { "level": 2, "name": "pistol" },
-      { "level": 2, "name": "shotgun" }
-    ],
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "american_flag" },
-          { "item": "slippers" },
-          { "group": "charged_smart_phone" },
-          { "item": "mask_dust" },
-          { "item": "chestrig", "contents-group": "mags_ruger_arr" },
-          { "item": "cowboy_hat" },
-          { "item": "leg_bag" },
-          { "item": "ruger_arr", "ammo-item": "450_ftx", "charges": 3, "contents-item": "shoulder_strap" }
-        ]
-      },
-      "male": { "entries": [ { "item": "boxer_shorts" } ] },
-      "female": { "entries": [ { "item": "boy_shorts" } ] }
     }
   },
   {
@@ -6715,21 +6591,6 @@
         ]
       }
     }
-  },
-  {
-    "type": "profession",
-    "id": "professional_swimmer",
-    "name": "Professional Swimmer",
-    "description": "After much practice you were sure the next competition would be your big break, but your rivals started killing each other and you had to escape with only your competition gear on you.  Will your athleticism alone be enough to keep you alive?",
-    "points": 2,
-    "skills": [ { "level": 6, "name": "swimming" }, { "level": 2, "name": "dodge" } ],
-    "traits": [ "OUTDOORSMAN" ],
-    "items": {
-      "both": { "entries": [ { "item": "goggles_swim" }, { "item": "swim_cap" } ] },
-      "male": { "entries": [ { "item": "speedo" } ] },
-      "female": { "entries": [ { "item": "bikini_top" }, { "item": "bikini_bottom" } ] }
-    },
-    "proficiencies": [ "prof_athlete_basic" ]
   },
   {
     "type": "profession",
@@ -7038,17 +6899,15 @@
         "entries": [
           { "item": "dress_shirt" },
           { "item": "undershirt" },
-          { "item": "socks" },
           { "item": "tie_clipon" },
-          { "item": "dress_shoes" },
           { "group": "charged_smart_phone" },
           { "group": "charged_penblack" },
           { "item": "pants" },
           { "item": "coffee", "container-item": "coffeepot" }
         ]
       },
-      "male": { "entries": [ { "item": "briefs" } ] },
-      "female": { "entries": [ { "item": "panties" }, { "item": "bra" } ] }
+      "male": { "entries": [ { "item": "briefs" }, { "item": "socks" }, { "item": "dress_shoes" } ] },
+      "female": { "entries": [ { "item": "panties" }, { "item": "bra" }, { "item": "shoes_slip_on" } ] }
     }
   },
   {
@@ -7164,40 +7023,6 @@
       },
       "male": { "entries": [ { "item": "boxer_shorts" } ] },
       "female": { "entries": [ { "item": "sports_bra" }, { "item": "boxer_shorts" } ] }
-    }
-  },
-  {
-    "type": "item_group",
-    "subtype": "collection",
-    "id": "quiver_bionic_prepper",
-    "entries": [ { "item": "bolt_steel", "charges": 20 } ]
-  },
-  {
-    "type": "profession",
-    "id": "bionic_athlete",
-    "name": "Bionic Athlete",
-    "description": "You'll never get your shot at the Cyberolympics.  All that's left of your dream is a single leftover protein shake.  Well, that and your bulging, cybernetically-enhanced muscles.",
-    "points": 5,
-    "skills": [ { "level": 3, "name": "swimming" } ],
-    "CBMs": [ "bio_str_enhancer", "bio_adrenaline", "bio_hydraulics", "bio_metabolics", "bio_power_storage_mkII" ],
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "socks_ankle" },
-          { "item": "under_armor_shorts" },
-          { "item": "under_armor" },
-          { "item": "shorts" },
-          { "item": "lowtops" },
-          { "item": "fanny" },
-          { "item": "protein_drink" },
-          { "item": "wristwatch" },
-          { "item": "fitness_band" },
-          { "group": "charged_smart_phone" },
-          { "item": "tshirt", "variant": "generic_tshirt" }
-        ]
-      },
-      "male": { "entries": [ { "item": "briefs" } ] },
-      "female": { "entries": [ { "item": "sports_bra" }, { "item": "panties" } ] }
     }
   },
   {
@@ -7599,7 +7424,6 @@
           { "item": "binoculars" },
           { "group": "charged_smart_phone" },
           { "item": "crossbow", "ammo-item": "bolt_steel", "charges": 1, "contents-item": "shoulder_strap" },
-          { "item": "quiver", "contents-group": "quiver_bionic_prepper" },
           { "item": "machete", "container-item": "scabbard" },
           { "item": "tshirt", "variant": "generic_tshirt" }
         ]

@@ -18,11 +18,11 @@
     "environmental_protection": 1,
     "flags": [ "OVERSIZE", "BELTED", "ALLOWS_NATURAL_ATTACKS", "POCKETS", "COLLAR" ],
     "armor": [
-      { "encumbrance": 15, "coverage": 60, "covers": [ "torso", "arm_l", "arm_r" ] },
+      { "encumbrance": 13, "coverage": 60, "covers": [ "torso", "arm_l", "arm_r" ] },
       {
         "covers": [ "leg_l", "leg_r" ],
         "coverage": 60,
-        "encumbrance": 15,
+        "encumbrance": 5,
         "specifically_covers": [ "leg_draped_l", "leg_draped_r" ],
         "layers": [ "BELTED" ]
       }
@@ -1674,62 +1674,13 @@
     "material_thickness": 1.1
   },
   {
-    "id": "cloak_vampire",
+    "id": "cloak_costume",
     "type": "ARMOR",
-    "name": { "str": "sinister cloak (black)", "str_pl": "sinister cloaks (black)" },
-    "description": "A sinister-looking hooded cloak meant to be thrown over your body.  The black side is currently facing outwards.  Use it to reverse it and show the red side.",
-    "weight": "150 g",
-    "volume": "2500 ml",
-    "price": "108 USD",
-    "price_postapoc": "5 USD",
-    "to_hit": -1,
-    "material": [ "lycra" ],
-    "symbol": "[",
-    "looks_like": "cloak",
-    "color": "dark_gray",
-    "warmth": 6,
-    "material_thickness": 0.1,
-    "environmental_protection": 1,
-    "flags": [ "OVERSIZE", "HOOD", "BELTED", "POCKETS" ],
-    "armor": [
-      { "encumbrance": 2, "coverage": 65, "covers": [ "torso", "arm_l", "arm_r" ] },
-      {
-        "covers": [ "leg_l", "leg_r" ],
-        "coverage": 65,
-        "encumbrance": 2,
-        "specifically_covers": [ "leg_draped_l", "leg_draped_r" ],
-        "layers": [ "BELTED" ]
-      }
-    ],
-    "use_action": {
-      "type": "transform",
-      "msg": "Your cloak is now bathed in blood.",
-      "target": "cloak_vampire_red",
-      "menu_text": "Reverse the colors"
-    }
-  },
-  {
-    "id": "cloak_vampire_red",
-    "copy-from": "cloak_vampire",
-    "type": "ARMOR",
-    "name": { "str": "sinister cloak (red)", "str_pl": "sinister cloaks (red)" },
-    "description": "A sinister-looking hooded cloak meant to be thrown over your body.  The red side is currently facing outwards.  Use it to reverse it and show the black side.",
-    "color": "red",
-    "use_action": {
-      "type": "transform",
-      "msg": "Your cloak is now one with the night.",
-      "target": "cloak_vampire",
-      "menu_text": "Reverse the colors"
-    }
-  },
-  {
-    "id": "cloak_black",
-    "type": "ARMOR",
-    "name": { "str": "dark cloak" },
-    "description": "A long black cape with no hood, a common costume piece for witches and other creatures of the night.",
+    "name": { "str": "costume cloak" },
+    "description": "A cheap rayon cloak, the kind you'd see vampires and witches wearing on halloween.",
     "weight": "100 g",
     "volume": "2000 ml",
-    "price": "90 USD",
+    "price": "30 USD",
     "price_postapoc": "50 cent",
     "to_hit": -1,
     "material": [ "lycra" ],

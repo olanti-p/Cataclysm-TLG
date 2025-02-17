@@ -2459,7 +2459,7 @@
       "toilets": { "*": {  } },
       "place_signs": [ { "signage": "<full_name>'s School of Self Defense", "x": 10, "y": 21 } ],
       "items": {
-        "L": [ { "item": "gi", "chance": 80, "repeat": [ 5, 8 ] }, { "item": "judo_belts", "chance": 80, "repeat": [ 4, 6 ] } ],
+        "L": [ { "item": "gi", "chance": 80, "repeat": [ 5, 8 ] } ],
         "K": [ { "item": "dojo_manuals", "chance": 80, "repeat": [ 1, 2 ] }, { "item": "SUS_fiction_bookcase", "chance": 100 } ],
         "d": { "item": "SUS_office_desk", "chance": 70 }
       }

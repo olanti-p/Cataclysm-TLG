@@ -216,14 +216,12 @@
   {
     "id": "MISSION_BLACK_BELT_GOAL",
     "type": "mission_definition",
-    "name": { "str": "Obtain your black belt" },
-    "description": "You could have become a master in martial arts if you had the chance, so train until you achieve the level of a master in the old world, and find yourself a nice black belt to commemorate the occasion.",
+    "name": { "str": "Master hand-to-hand combat" },
+    "description": "You could have become a master in martial arts if you had the chance, so train until you achieve the level of a master in the old world.",
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
       "and": [
-        { "math": [ "u_skill('melee')", ">=", "5" ] },
-        { "math": [ "u_skill('dodge')", ">=", "5" ] },
-        { "u_has_item": "judo_belt_black" }
+        { "math": [ "u_skill('unarmed')", ">=", "8" ] }
       ]
     },
     "difficulty": 4,

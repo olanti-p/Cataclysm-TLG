@@ -110,7 +110,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
-        "encumbrance": 10,
+        "encumbrance": 11,
         "coverage": 95,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -284,7 +284,7 @@
     "flags": [ "ABLATIVE_LARGE", "CANT_WEAR" ],
     "armor": [
       {
-        "encumbrance": 2,
+        "encumbrance": 3,
         "coverage": 45,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -314,7 +314,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 0.5 },
           { "type": "kevlar", "covered_by_mat": 100, "thickness": 2.3 }
         ],
-        "encumbrance": 0,
+        "encumbrance": 3,
         "coverage": 45,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -347,7 +347,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "steel", "covered_by_mat": 100, "thickness": 2.5 }
         ],
-        "encumbrance": 1,
+        "encumbrance": 4,
         "coverage": 45,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -377,7 +377,7 @@
     "armor": [
       {
         "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 6.35 } ],
-        "encumbrance": 3,
+        "encumbrance": 4,
         "coverage": 45,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -408,7 +408,7 @@
           { "type": "steel", "covered_by_mat": 90, "thickness": 1.8 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }
         ],
-        "encumbrance": 3,
+        "encumbrance": 5,
         "coverage": 45,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -436,7 +436,7 @@
           { "type": "steel", "covered_by_mat": 100, "thickness": 2.3 },
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 }
         ],
-        "encumbrance": 1,
+        "encumbrance": 4,
         "coverage": 45,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -464,7 +464,7 @@
     "flags": [ "ABLATIVE_MEDIUM", "CANT_WEAR" ],
     "armor": [
       {
-        "encumbrance": 8,
+        "encumbrance": 4,
         "coverage": 35,
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
@@ -493,7 +493,7 @@
     "flags": [ "ABLATIVE_MEDIUM", "CANT_WEAR" ],
     "armor": [
       {
-        "encumbrance": 1,
+        "encumbrance": 2,
         "coverage": 35,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
@@ -524,7 +524,7 @@
           { "type": "steel", "covered_by_mat": 90, "thickness": 1.8 },
           { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }
         ],
-        "encumbrance": 1,
+        "encumbrance": 3,
         "coverage": 35,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
@@ -552,7 +552,7 @@
           { "type": "steel", "covered_by_mat": 100, "thickness": 2.3 },
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.2 }
         ],
-        "encumbrance": 1,
+        "encumbrance": 3,
         "coverage": 35,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
@@ -685,7 +685,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
-        "encumbrance": 12,
+        "encumbrance": 13,
         "coverage": 98,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -754,7 +754,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }
         ],
-        "encumbrance": 6,
+        "encumbrance": 8,
         "coverage": 90,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -811,7 +811,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar", "covered_by_mat": 95, "thickness": 2 }
         ],
-        "encumbrance": 6,
+        "encumbrance": 11,
         "coverage": 98,
         "covers": [ "torso" ]
       }
@@ -904,7 +904,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
-        "encumbrance": 4,
+        "encumbrance": 11,
         "coverage": 98,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ]
@@ -949,7 +949,7 @@
           { "type": "ceramic", "covered_by_mat": 90, "thickness": 6.4 },
           { "type": "ceramic", "covered_by_mat": 30, "thickness": 6.4 }
         ],
-        "encumbrance": 8,
+        "encumbrance": 17,
         "coverage": 98,
         "covers": [ "torso" ],
         "rigid_layer_only": true
@@ -978,7 +978,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
         ],
-        "encumbrance": 8,
+        "encumbrance": 13,
         "coverage": 98,
         "covers": [ "torso" ],
         "volume_encumber_modifier": 0.25
@@ -1008,7 +1008,7 @@
           { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 },
           { "type": "steel", "covered_by_mat": 85, "thickness": 1.5 }
         ],
-        "encumbrance": 14,
+        "encumbrance": 25,
         "coverage": 98,
         "covers": [ "torso" ],
         "volume_encumber_modifier": 0.25,
@@ -1099,7 +1099,7 @@
           { "type": "nylon", "covered_by_mat": 100, "thickness": 1.0 },
           { "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }
         ],
-        "encumbrance": 0,
+        "encumbrance": 1,
         "coverage": 30,
         "covers": [ "head" ],
         "specifically_covers": [ "head_throat", "head_nape" ],

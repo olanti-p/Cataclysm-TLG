@@ -24,7 +24,7 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 20,
-        "encumbrance": 9,
+        "encumbrance": 18,
         "rigid_layer_only": true
       },
       {
@@ -32,7 +32,7 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 70,
-        "encumbrance": 10,
+        "encumbrance": 18,
         "rigid_layer_only": true
       }
     ]
@@ -72,7 +72,7 @@
     "warmth": 15,
     "material_thickness": 2,
     "flags": [ "OUTER", "STURDY" ],
-    "armor": [ { "encumbrance": 10, "coverage": 85, "covers": [ "torso" ] } ],
+    "armor": [ { "encumbrance": 12, "coverage": 85, "covers": [ "torso" ], "rigid_layer_only": true } ],
     "melee_damage": { "bash": 6 }
   },
   {
@@ -115,10 +115,9 @@
           { "type": "carpet_pilling", "covered_by_mat": 100, "thickness": 3.0 },
           { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 }
         ],
-        "encumbrance": 10,
+        "encumbrance": 16,
         "coverage": 85,
-        "covers": [ "torso" ],
-        "rigid_layer_only": true
+        "covers": [ "torso" ]
       },
       {
         "material": [
@@ -128,8 +127,7 @@
         "encumbrance": 5,
         "coverage": 85,
         "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
-        "rigid_layer_only": true
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
       },
       {
         "material": [
@@ -139,8 +137,7 @@
         "encumbrance": 5,
         "coverage": 85,
         "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "rigid_layer_only": true
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       }
     ]
   },
@@ -157,14 +154,14 @@
     "material": [ "iron", "leather" ],
     "symbol": "[",
     "longest_side": "60 cm",
-    "looks_like": "armor_lamellar",
+    "looks_like": "platemail_cuirass",
     "category": "armor",
     "color": "light_gray",
     "warmth": 15,
     "material_thickness": 2,
     "flags": [ "VARSIZE", "OUTER", "STURDY" ],
     "armor": [
-      { "encumbrance": 15, "coverage": 90, "covers": [ "torso" ] },
+      { "encumbrance": 26, "coverage": 90, "covers": [ "torso" ] },
       {
         "encumbrance": 3,
         "coverage": 90,
@@ -234,7 +231,7 @@
         ],
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": 16
+        "encumbrance": 22
       },
       {
         "material": [
@@ -243,7 +240,7 @@
         ],
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
-        "encumbrance": 16
+        "encumbrance": 22
       }
     ],
     "warmth": 35,
@@ -273,7 +270,7 @@
         ],
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": 16
+        "encumbrance": 22
       }
     ],
     "warmth": 35,
@@ -300,8 +297,8 @@
     "longest_side": "20 cm",
     "material_thickness": 4,
     "environmental_protection": 1,
-    "flags": [ "WATER_FRIENDLY", "STURDY", "OUTER" ],
-    "armor": [ { "encumbrance": 4, "coverage": 90, "covers": [ "torso" ], "rigid_layer_only": true } ]
+    "flags": [ "RAINPROOF", "STURDY", "OUTER" ],
+    "armor": [ { "encumbrance": 12, "coverage": 90, "covers": [ "torso" ], "rigid_layer_only": true } ]
   },
   {
     "id": "platemail_cuirass",
@@ -321,14 +318,14 @@
     "warmth": 20,
     "longest_side": "60 cm",
     "material_thickness": 1.3,
-    "flags": [ "OUTER", "STURDY" ],
+    "flags": [ "OUTER", "STURDY", "RAINPROOF" ],
     "armor": [
       {
         "material": [ { "type": "steel", "covered_by_mat": 100, "thickness": 1.3 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
-        "encumbrance": 10,
+        "encumbrance": 12,
         "rigid_layer_only": true
       },
       {
@@ -336,7 +333,6 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
         "coverage": 100,
-        "encumbrance": 10,
         "rigid_layer_only": true
       }
     ]
@@ -376,7 +372,7 @@
     "warmth": 10,
     "material_thickness": 4,
     "flags": [ "OUTER", "NONCONDUCTIVE" ],
-    "armor": [ { "encumbrance": 18, "coverage": 80, "covers": [ "torso" ], "rigid_layer_only": true } ]
+    "armor": [ { "encumbrance": 20, "coverage": 80, "covers": [ "torso" ], "rigid_layer_only": true } ]
   },
   {
     "id": "tire_cuirass_xl",
@@ -411,7 +407,7 @@
     "warmth": 20,
     "material_thickness": 3,
     "flags": [ "STURDY" ],
-    "armor": [ { "encumbrance": 5, "coverage": 100, "covers": [ "torso", "arm_l", "arm_r" ] } ]
+    "armor": [ { "encumbrance": 9, "coverage": 100, "covers": [ "torso", "arm_l", "arm_r" ] } ]
   },
   {
     "id": "jacket_leather_mod",
@@ -431,7 +427,7 @@
       {
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": [ 20, 21 ],
+        "encumbrance": [ 26, 30 ],
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
@@ -441,7 +437,7 @@
       {
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
-        "encumbrance": [ 20, 20 ],
+        "encumbrance": [ 26, 26 ],
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
@@ -486,7 +482,7 @@
       {
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": [ 15, 16 ],
+        "encumbrance": [ 24, 28 ],
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
@@ -496,7 +492,7 @@
       {
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
-        "encumbrance": [ 15, 15 ],
+        "encumbrance": [ 24, 24 ],
         "material": [
           { "type": "steel", "covered_by_mat": 70, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
@@ -541,7 +537,7 @@
       {
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": [ 15, 16 ],
+        "encumbrance": [ 24, 28 ],
         "material": [
           { "type": "steel", "covered_by_mat": 80, "thickness": 0.9 },
           { "type": "denim", "covered_by_mat": 100, "thickness": 0.9 }
@@ -586,7 +582,7 @@
       {
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": [ 20, 21 ],
+        "encumbrance": [ 32, 32 ],
         "material": [
           { "type": "rubber", "covered_by_mat": 80, "thickness": 3.0 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
@@ -596,7 +592,7 @@
       {
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
-        "encumbrance": [ 20, 20 ],
+        "encumbrance": [ 32, 32 ],
         "material": [
           { "type": "rubber", "covered_by_mat": 75, "thickness": 3.0 },
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 }
@@ -608,9 +604,9 @@
     "environmental_protection": 5
   },
   {
-    "id": "lame_foil",
+    "id": "lame",
     "type": "ARMOR",
-    "name": { "str": "lamé (foil)", "str_pl": "lamés (foil)" },
+    "name": { "str": "lamé", "str_pl": "lamés" },
     "description": "A thin, lightweight conductive vest with the zipper on the back used by fencers for electronic scoring.  Its outer layer is a woven mix of sturdy cotton and stainless steel strands.",
     "weight": "843 g",
     "volume": "2500 ml",
@@ -622,24 +618,7 @@
     "warmth": 10,
     "material_thickness": 1,
     "flags": [ "VARSIZE", "OUTER" ],
-    "armor": [ { "encumbrance": 8, "coverage": 100, "covers": [ "torso" ] } ]
-  },
-  {
-    "id": "lame_saber",
-    "type": "ARMOR",
-    "name": { "str": "lamé (saber)", "str_pl": "lamés (saber)" },
-    "description": "A thin, lightweight conductive jacket used by fencers for electronic scoring.  Its outer layer is a woven mix of sturdy cotton and stainless steel strands.",
-    "weight": "1043 g",
-    "volume": "2500 ml",
-    "price": "85 USD",
-    "price_postapoc": "2 USD 50 cent",
-    "material": [ "cotton", "budget_steel" ],
-    "symbol": "[",
-    "color": "light_gray",
-    "warmth": 10,
-    "material_thickness": 1,
-    "flags": [ "VARSIZE", "OUTER" ],
-    "armor": [ { "encumbrance": 8, "coverage": 100, "covers": [ "torso", "arm_l", "arm_r" ] } ]
+    "armor": [ { "encumbrance": 16, "coverage": 100, "covers": [ "torso" ] } ]
   },
   {
     "id": "football_armor",
@@ -659,7 +638,7 @@
     "flags": [ "OUTER" ],
     "armor": [
       {
-        "encumbrance": 5,
+        "encumbrance": 17,
         "coverage": 90,
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
@@ -671,7 +650,7 @@
         "rigid_layer_only": true
       },
       {
-        "encumbrance": 4,
+        "encumbrance": 3,
         "coverage": 100,
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
@@ -704,7 +683,7 @@
         ],
         "covers": [ "torso" ],
         "coverage": 100,
-        "encumbrance": 10
+        "encumbrance": 24
       },
       {
         "material": [
@@ -713,7 +692,7 @@
         ],
         "covers": [ "arm_l", "arm_r" ],
         "coverage": 100,
-        "encumbrance": 10
+        "encumbrance": 22
       }
     ],
     "warmth": 15,
@@ -723,7 +702,7 @@
     "melee_damage": { "bash": 2 }
   },
   {
-    "id": "plastron_cotton",
+    "id": "plastron_fencing",
     "type": "ARMOR",
     "name": { "str": "underarm protector" },
     "description": "A sturdy cotton plastron that protects much of the torso, the dominant shoulder, and underarm while fencing.",
@@ -737,32 +716,7 @@
     "warmth": 5,
     "material_thickness": 3,
     "flags": [ "SKINTIGHT" ],
-    "armor": [ { "coverage": 65, "covers": [ "torso" ], "rigid_layer_only": true } ]
-  },
-  {
-    "id": "plastron_plastic",
-    "type": "ARMOR",
-    "name": { "str": "plastic chest protector" },
-    "description": "A rigid plastic plastron with molded cups to be worn by female fencers for protection while fencing.",
-    "weight": "194 g",
-    "volume": "850 ml",
-    "price": "30 USD",
-    "price_postapoc": "50 cent",
-    "material": [ "plastic" ],
-    "symbol": "[",
-    "color": "white",
-    "warmth": 5,
-    "material_thickness": 3,
-    "flags": [ "SKINTIGHT" ],
-    "armor": [
-      {
-        "encumbrance": 2,
-        "coverage": 60,
-        "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ],
-        "rigid_layer_only": true
-      }
-    ]
+    "armor": [ { "coverage": 65, "covers": [ "torso" ], "rigid_layer_only": true, "encumbrance": 6 } ]
   },
   {
     "id": "vest_leather_mod",
@@ -799,7 +753,7 @@
     "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY" ],
     "armor": [
       {
-        "encumbrance": [ 12, 15 ],
+        "encumbrance": [ 26, 30 ],
         "coverage": 90,
         "covers": [ "torso" ],
         "material": [
@@ -814,8 +768,8 @@
     "id": "armor_riot_torso",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "riot chest guard" },
-    "description": "A hard chest protector, attached to thigh and upper arm guards.  Used by riot police officers.  MOLLE webbing is attached to the torso and the word POLICE is emblazoned across the front.",
+    "name": { "str": "riot guard" },
+    "description": "A hard chest protector attached to thigh and upper arm guards.  MOLLE webbing is attached to the torso and the word POLICE is emblazoned across the front.",
     "weight": "2 kg",
     "volume": "10000 ml",
     "price": "400 USD",
@@ -883,7 +837,7 @@
       {
         "covers": [ "torso" ],
         "coverage": 95,
-        "encumbrance": 17,
+        "encumbrance": 24,
         "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 } ]
       }
     ],
@@ -925,10 +879,10 @@
     "color": "light_gray",
     "warmth": 20,
     "longest_side": "60 cm",
-    "flags": [ "VARSIZE", "OUTER", "STURDY" ],
+    "flags": [ "OUTER", "STURDY" ],
     "armor": [
       {
-        "encumbrance": 5,
+        "encumbrance": 12,
         "coverage": 60,
         "covers": [ "torso" ],
         "material": [
@@ -987,14 +941,13 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
-        "encumbrance": 4
+        "encumbrance": 8
       },
       {
         "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_lower" ],
-        "coverage": 100,
-        "encumbrance": 5
+        "coverage": 100
       }
     ]
   },

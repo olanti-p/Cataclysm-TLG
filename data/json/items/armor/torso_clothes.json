@@ -214,7 +214,6 @@
     ],
     "warmth": 25,
     "material_thickness": 1.5,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "FANCY", "OUTER" ]
   },
   {
@@ -406,7 +405,7 @@
     "material_thickness": 0.1,
     "flags": [ "VARSIZE", "SKINTIGHT" ],
     "armor": [
-      { "coverage": 90, "covers": [ "torso" ] },
+      { "coverage": 90, "covers": [ "torso" ], "encumbrance": 4 },
       {
         "coverage": 100,
         "covers": [ "arm_l", "arm_r" ],
@@ -520,7 +519,6 @@
     ],
     "warmth": 20,
     "material_thickness": 1,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "POCKETS", "HOOD" ]
   },
   {
@@ -762,7 +760,7 @@
     "material_thickness": 0.2,
     "flags": [ "VARSIZE" ],
     "armor": [
-      { "encumbrance": 7, "coverage": 90, "covers": [ "torso" ] },
+      { "encumbrance": 6, "coverage": 90, "covers": [ "torso" ] },
       {
         "coverage": 100,
         "covers": [ "arm_l", "arm_r" ],
@@ -804,9 +802,9 @@
     "material_thickness": 0.1,
     "flags": [ "VARSIZE" ],
     "armor": [
-      { "coverage": 90, "covers": [ "torso" ] },
+      { "coverage": 90, "covers": [ "torso" ], "encumbrance": [ 6, 8 ] },
       {
-        "encumbrance": [ 0, 0 ],
+        "encumbrance": [ 2, 2 ],
         "coverage": 100,
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
@@ -919,8 +917,8 @@
     "looks_like": "dress_shirt",
     "color": "light_gray",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 90, "encumbrance": [ 3, 5 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 90, "encumbrance": [ 3, 3 ] }
+      { "covers": [ "torso" ], "coverage": 90, "encumbrance": [ 6, 8 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 90, "encumbrance": [ 6, 6 ] }
     ],
     "pocket_data": [
       {
@@ -1053,7 +1051,7 @@
     "warmth": 5,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE" ],
-    "armor": [ { "encumbrance": 5, "coverage": 90, "covers": [ "torso", "arm_l", "arm_r" ] } ]
+    "armor": [ { "encumbrance": 12, "coverage": 90, "covers": [ "torso", "arm_l", "arm_r" ] } ]
   },
   {
     "id": "sundress",
@@ -1095,7 +1093,6 @@
     "color": "blue",
     "warmth": 35,
     "material_thickness": 1,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE" ],
     "armor": [ { "encumbrance": 6, "coverage": 95, "covers": [ "torso", "arm_l", "arm_r" ] } ]
   },
@@ -1114,7 +1111,6 @@
     "color": "light_red",
     "warmth": 30,
     "material_thickness": 1,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE" ],
     "armor": [ { "encumbrance": 6, "coverage": 95, "covers": [ "torso", "arm_l", "arm_r" ] } ]
   },
@@ -1122,7 +1118,7 @@
     "id": "technician_shirt_gray",
     "type": "ARMOR",
     "name": { "str": "work t-shirt" },
-    "description": "A gray work t-shirt with a small front pocket.",
+    "description": "A t-shirt with a small front pocket.",
     "weight": "200 g",
     "volume": "250 ml",
     "price": "10 USD",
@@ -1142,11 +1138,6 @@
     ],
     "warmth": 8,
     "material_thickness": 0.2,
-    "snippet_category": [
-      { "id": "technician_shirt_blue", "text": "A blue work t-shirt with a small front pocket." },
-      { "id": "technician_shirt_gray", "text": "A gray work t-shirt with a small front pocket." },
-      { "id": "technician_shirt_lightblue", "text": "A light-blue work t-shirt with a small front pocket." }
-    ],
     "flags": [ "VARSIZE" ],
     "armor": [
       { "encumbrance": [ 4, 5 ], "coverage": 90, "covers": [ "torso" ] },
@@ -1181,7 +1172,7 @@
     "material_thickness": 0.1,
     "flags": [ "VARSIZE", "SKINTIGHT" ],
     "armor": [
-      { "coverage": 90, "covers": [ "torso" ] },
+      { "coverage": 90, "covers": [ "torso" ], "encumbrance": 4 },
       {
         "coverage": 100,
         "covers": [ "arm_l", "arm_r" ],
@@ -1275,9 +1266,8 @@
     "warmth": 15,
     "material_thickness": 1.5,
     "environmental_protection": 1,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "POCKETS", "OUTER" ],
-    "armor": [ { "encumbrance": [ 4, 8 ], "coverage": 90, "covers": [ "torso" ] } ]
+    "armor": [ { "encumbrance": [ 20, 22 ], "coverage": 95, "covers": [ "torso" ] } ]
   },
   {
     "id": "witch_dress",
@@ -1400,7 +1390,6 @@
     ],
     "warmth": 35,
     "material_thickness": 1,
-    "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "POCKETS", "HOOD" ]
   },
   {

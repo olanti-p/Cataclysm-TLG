@@ -30,7 +30,6 @@
     "subtype": "distribution",
     "entries": [
       { "group": "vampire_costume_female", "prob": 45 },
-      { "group": "ninja_costume_female", "prob": 20 },
       { "group": "sexy_santa_costume_female", "prob": 25 },
       { "group": "bride_costume_female", "prob": 25 },
       { "group": "mummy_costume_female", "prob": 40 },
@@ -47,7 +46,6 @@
     "subtype": "distribution",
     "entries": [
       { "group": "vampire_costume_unisex", "prob": 45 },
-      { "group": "ninja_costume_unisex", "prob": 20 },
       { "group": "mummy_costume_unisex", "prob": 40 },
       { "group": "wizard_costume_unisex", "prob": 50 },
       { "group": "skeleton_costume_unisex", "prob": 50 },
@@ -459,7 +457,7 @@
           { "item": "sinister_cane", "prob": 35, "damage": [ 1, 4 ] },
           { "group": "costume_masks", "prob": 10, "damage": [ 1, 4 ] },
           { "item": "vampire_fangs", "damage": [ 1, 4 ] },
-          { "item": "cloak_vampire", "damage": [ 1, 4 ] },
+          { "item": "cloak_costume", "damage": [ 1, 4 ] },
           { "item": "dress_shirt", "prob": 85, "damage": [ 1, 4 ] },
           { "item": "pants", "damage": [ 1, 4 ] },
           {
@@ -569,8 +567,6 @@
           { "item": "bokken_fake", "container-item": "scabbard", "prob": 5, "damage": [ 1, 4 ] },
           { "item": "gloves_black", "prob": 50, "damage": [ 1, 4 ] },
           { "item": "hood_ninja", "prob": 75, "damage": [ 1, 4 ] },
-          { "item": "jacket_ninja", "damage": [ 1, 4 ] },
-          { "item": "trousers_ninja", "damage": [ 1, 4 ] },
           { "group": "costume_masks", "prob": 25, "damage": [ 1, 4 ] },
           {
             "distribution": [
