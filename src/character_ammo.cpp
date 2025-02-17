@@ -169,11 +169,11 @@ int Character::item_reload_cost( const item &it, const item &ammo, int qty ) con
     if( it.is_gun() ) {
         cost = it.get_reload_time();
         if( sk != skill_archery && sk != skill_throw && sk != skill_gun ) {
-            mv += round( cost * ( 7 - std::min( get_skill_level( sk ), 6.0f ) ) ); 
+            mv += round( cost * ( 7 - std::min( get_skill_level( sk ), 6.0f ) ) );
         } else {
             mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 1.0f ) );
         }
-    // It takes 6 marksmanship to load a magazine at top speed.
+        // It takes 6 marksmanship to load a magazine at top speed.
     } else if( it.type->magazine ) {
         cost = it.type->magazine->reload_time * qty;
         mv += cost / ( 1.0f + std::min( get_skill_level( sk ) * 0.1f, 0.6f ) );

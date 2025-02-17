@@ -219,11 +219,7 @@
     "name": { "str": "Master hand-to-hand combat" },
     "description": "You could have become a master in martial arts if you had the chance, so train until you achieve the level of a master in the old world.",
     "goal": "MGOAL_CONDITION",
-    "goal_condition": {
-      "and": [
-        { "math": [ "u_skill('unarmed')", ">=", "8" ] }
-      ]
-    },
+    "goal_condition": { "and": [ { "math": [ "u_skill('unarmed')", ">=", "8" ] } ] },
     "difficulty": 4,
     "value": 0,
     "end": {

@@ -12573,13 +12573,15 @@ stat_mod Character::get_pain_penalty() const
     // penalties should scale with max stat, but not linearly - 20 base strength should have a proportional
     // advantage over 10 base strength assuming the same amount of pain.
     ret.strength = std::clamp( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_STR,
-                             stat_penalty ), 0.0, get_str() - 1.0 );
-    ret.dexterity = std::clamp( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_DEX,
-                              stat_penalty ), 0.0, get_dex() - 1.0 );
+                               stat_penalty ), 0.0, get_str() - 1.0 );
+    ret.dexterity = std::clamp( enchantment_cache->modify_value(
+                                    enchant_vals::mod::PAIN_PENALTY_MOD_DEX,
+                                    stat_penalty ), 0.0, get_dex() - 1.0 );
     ret.intelligence = std::clamp( enchantment_cache->modify_value(
-                                     enchant_vals::mod::PAIN_PENALTY_MOD_INT, stat_penalty * 1.333 ), 0.0, get_dex() - 1.0 );
-    ret.perception = std::clamp( enchantment_cache->modify_value( enchant_vals::mod::PAIN_PENALTY_MOD_PER,
-                               stat_penalty * 0.666f ), 0.0, get_dex() - 1.0 );
+                                       enchant_vals::mod::PAIN_PENALTY_MOD_INT, stat_penalty * 1.333 ), 0.0, get_dex() - 1.0 );
+    ret.perception = std::clamp( enchantment_cache->modify_value(
+                                     enchant_vals::mod::PAIN_PENALTY_MOD_PER,
+                                     stat_penalty * 0.666f ), 0.0, get_dex() - 1.0 );
 
     int speed_penalty = std::pow( pain, 0.7f );
 
