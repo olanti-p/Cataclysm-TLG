@@ -8155,7 +8155,11 @@ int item::get_encumber( const Character &p, const bodypart_id &bodypart,
 
     // Fit checked before changes, fitting shouldn't reduce penalties from patching.
     if( has_flag( flag_FIT ) && has_flag( flag_VARSIZE ) ) {
-        encumber = std::max( encumber / 2, encumber - 10 );
+        if( encumber >= 50 ) {
+            encumber = encumber - 10;
+        } else {
+            encumber /= 2;
+        }
     }
 
     // TODO: Should probably have sizing affect coverage
