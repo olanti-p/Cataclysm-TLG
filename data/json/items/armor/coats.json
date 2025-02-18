@@ -1416,7 +1416,7 @@
     "material_thickness": 0.6,
     "flags": [ "VARSIZE", "STURDY" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 6 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": 8 },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 90 },
       { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": 6 }
     ],
@@ -1480,9 +1480,9 @@
     "material_thickness": 0.3,
     "flags": [ "VARSIZE", "STURDY" ],
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 98 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 98, "encumbrance": 6 },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 98 }
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 98, "encumbrance": 6 }
     ]
   },
   {
