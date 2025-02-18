@@ -625,7 +625,7 @@
     "start_of_cataclysm": { "hour": 0, "day": 41, "season": "spring", "year": 1 },
     "fall_of_civilization": { "hour": 0, "day": 61, "season": "spring", "year": 1 },
     "start_of_game": { "hour": 8, "day": 1, "season": "winter", "year": 1 },
-    "professions": [ "sheltered_militia", "sheltered_survivor", "bionic_prepper", "unemployed" ]
+    "professions": [ "sheltered_militia", "sheltered_survivor", "unemployed" ]
   },
   {
     "type": "scenario",
@@ -706,10 +706,10 @@
     "id": "mutant",
     "name": "Experiment",
     "points": 2,
-    "description": "You have been heavily experimented upon for the advancement of genetic science, willingly or not.  Once the Cataclysm struck, you escaped the lab and wandered aimlessly, ending up in a forest.",
+    "description": "You have been heavily experimented upon for the advancement of science, willingly or not.  Once the Cataclysm struck, you escaped the lab and wandered aimlessly, ending up in a forest.",
     "start_name": "Wilderness",
     "allowed_locs": [ "sloc_forest", "sloc_field" ],
-    "professions": [ "unemployed", "mutant_patient", "mutant_volunteer", "cykotic", "faulty_bionic", "broken_cyborg" ],
+    "professions": [ "unemployed", "mutant_patient", "mutant_volunteer", "broken_cyborg", "bionic_patient" ],
     "traits": [
       "ELFAEYES",
       "URSINE_EYE",
@@ -1260,6 +1260,6 @@
     "points": 2,
     "start_name": "Shady Basement",
     "allowed_locs": [ "sloc_basement_bionic" ],
-    "professions": [ "cyberjunkie", "faulty_bionic", "cykotic", "razorgirl", "bionic_installer" ]
+    "professions": [ "razorgirl", "bionic_installer", "broken_cyborg" ]
   }
 ]
