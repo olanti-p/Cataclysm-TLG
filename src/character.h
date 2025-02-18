@@ -1428,6 +1428,12 @@ class Character : public Creature, public visitable
         bool has_flag( const json_character_flag &flag ) const;
         /** Returns the count of traits, bionics, effects, bodyparts, and martial arts buffs with a flag */
         int count_flag( const json_character_flag &flag ) const;
+
+    private:
+        // Cache if character has a flag on their mutations. It is cleared whenever my_mutations is modified.
+        mutable std::map<const json_character_flag, bool> trait_flag_cache;
+
+    public:
         /** Returns the trait id with the given invlet, or an empty string if no trait has that invlet */
         trait_id trait_by_invlet( int ch ) const;
 
@@ -3288,7 +3294,7 @@ class Character : public Creature, public visitable
         int run_cost( int base_cost, bool diag = false ) const;
 
         const pathfinding_settings &get_pathfinding_settings() const override;
-        std::unordered_set<tripoint> get_path_avoid() const override;
+        std::function<bool( const tripoint & )> get_path_avoid() const override;
         /**
          * Get all hostile creatures currently visible to this player.
          */
