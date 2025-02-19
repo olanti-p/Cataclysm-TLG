@@ -105,5 +105,5 @@ jobs:
     - name: Create artifact
       uses: actions/upload-artifact@v4
       with:
-        name: play-cdda
+        name: play-ctlg
         path: build/*
