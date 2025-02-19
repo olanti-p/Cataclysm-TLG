@@ -4449,7 +4449,7 @@ void iexamine::shrub_wildveggies( Character &you, const tripoint &examp )
     }
 
     ///\EFFECT_SURVIVAL speeds up foraging
-    int move_cost = 3000000 / ( 2 * you.get_skill_level( skill_survival ) + 5 );
+    int move_cost = 3000000 / ( 2 * std::max( 0.5f, you.get_skill_level( skill_survival ) ) + 5 );
     ///\EFFECT_PER randomly speeds up foraging
     move_cost /= rng( std::max( 4, you.per_cur ), 4 + you.per_cur * 2 );
     if( you.has_quality( qual_GRASS_CUT ) || you.has_quality( qual_AXE ) ) {

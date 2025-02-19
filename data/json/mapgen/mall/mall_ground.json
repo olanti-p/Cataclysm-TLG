@@ -632,16 +632,16 @@
         "n": { "item": "restaur_sink", "chance": 20, "repeat": [ 1, 2 ] },
         "l": { "item": "fast_fridge", "chance": 30, "repeat": [ 2, 4 ] },
         "Q": [
-          { "item": "fast_kitchen", "chance": 30, "repeat": [ 2, 4 ] },
-          { "item": "big_canned_food", "chance": 30, "repeat": [ 2, 4 ] }
+          { "item": "fast_kitchen", "chance": 30, "repeat": [ 1, 2 ] },
+          { "item": "big_canned_food", "chance": 30, "repeat": [ 2, 3 ] }
         ],
         "m": [
-          { "item": "dessert", "chance": 30, "repeat": [ 2, 4 ] },
+          { "item": "dessert", "chance": 30, "repeat": [ 1, 2 ] },
           { "item": "softdrinks_canned", "chance": 30, "repeat": [ 2, 4 ] }
         ],
         "V": [
-          { "item": "salty_snacks", "chance": 30, "repeat": [ 2, 4 ] },
-          { "item": "candy_chocolate", "chance": 30, "repeat": [ 2, 4 ] }
+          { "item": "salty_snacks", "chance": 30, "repeat": [ 1, 2 ] },
+          { "item": "candy_chocolate", "chance": 30, "repeat": [ 1, 2 ] }
         ],
         "M": { "item": "jewelry_accessories", "chance": 20, "repeat": [ 1, 2 ] }
       },

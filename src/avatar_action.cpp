@@ -1036,7 +1036,7 @@ void avatar_action::plthrow( avatar &you, item_location loc,
             // TODO: Get better stamina costs. Pull weight from monster's corpse entry?
             // Relative size is probably better than absolute until we make weapons
             // care about character size.
-            int stamina_mod = std::round( std::min( -800.f,
+            int stamina_mod = std::round( std::min( -700.f,
                                                     ( 300 * std::max( 0.5f, you.get_skill_level( skill_throw ) ) + 400 * std::max( 0.5f,
                                                             you.get_skill_level( skill_unarmed ) ) +
                                                             ( -5000 * ( their_size / your_size ) ) ) ) );

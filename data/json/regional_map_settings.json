@@ -702,7 +702,7 @@
         }
       },
       "bridgehead_ground": { "chance": 5, "extras": { "mx_minefield": 100 } },
-      "park": { "chance": 60, "extras": { "mx_fungal_zone": 100 } },
+      "park": { "chance": 60, "extras": { "mx_fungal_zone": 40 } },
       "road_nesw_manhole": { "chance": 20, "extras": { "mx_city_trap": 1, "mx_laststand": 1 } },
       "build": {
         "chance": 90,
@@ -1237,8 +1237,9 @@
       "base_temperature": 6.5,
       "base_humidity": 74.0,
       "base_pressure": 1008.0,
+      "spring_temp_manual_mod": 1,
       "summer_temp_manual_mod": 2,
-      "base_wind": 6.4,
+      "base_wind": 5.4,
       "base_wind_distrib_peaks": 75,
       "base_wind_season_variation": 50
     },

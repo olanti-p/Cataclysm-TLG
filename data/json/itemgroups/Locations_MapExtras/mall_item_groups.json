@@ -10,7 +10,7 @@
       [ "cup_plastic", 10 ],
       [ "bottle_glass", 10 ],
       [ "can_drink", 10 ],
-      [ "can_food", 10 ],
+      [ "can_food", 8 ],
       [ "box_small", 10 ],
       [ "jug_plastic", 10 ],
       [ "jar_glass_sealed", 5 ],
