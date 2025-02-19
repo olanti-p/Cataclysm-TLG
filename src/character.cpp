@@ -387,8 +387,7 @@ static const proficiency_id proficiency_prof_parkour( "prof_parkour" );
 static const proficiency_id proficiency_prof_spotting( "prof_spotting" );
 static const proficiency_id proficiency_prof_traps( "prof_traps" );
 static const proficiency_id proficiency_prof_trapsetting( "prof_trapsetting" );
-static const proficiency_id proficiency_prof_wound_care( "prof_wound_care" );
-static const proficiency_id proficiency_prof_wound_care_expert( "prof_wound_care_expert" );
+static const proficiency_id proficiency_prof_field_medic( "prof_field_medic" );
 
 static const quality_id qual_DRILL( "DRILL" );
 static const quality_id qual_HAMMER( "HAMMER" );
@@ -2611,7 +2610,7 @@ void Character::process_turn()
         } else {
             // TODO: Move stamina cost to creature escape attempts, incorporate relative size etc.
             set_activity_level( EXPLOSIVE_EXERCISE );
-            burn_energy_arms( -300 );
+            burn_energy_arms( -260 );
         }
     }
     effect_on_conditions::process_effect_on_conditions( *this );
@@ -13339,10 +13338,10 @@ bodypart_id Character::most_staunchable_bp( int &max_staunch )
     add_msg_debug( debugmode::DF_CHARACTER, "Staunch limit after limb score modifier %d", max_staunch );
 
     // +5 bonus if you know your first aid
-    if( has_proficiency( proficiency_prof_wound_care ) ||
-        has_proficiency( proficiency_prof_wound_care_expert ) ) {
+    if( has_proficiency( proficiency_prof_field_medic ) ) {
         max_staunch += 5;
-        add_msg_debug( debugmode::DF_CHARACTER, "Wound care proficiency found, new limit %d", max_staunch );
+        add_msg_debug( debugmode::DF_CHARACTER, "Field medic proficiency found, new limit %d",
+                       max_staunch );
     }
 
     int num_broken_arms = get_num_broken_body_parts_of_type( body_part_type::type::arm );
@@ -13464,7 +13463,7 @@ void Character::pause()
             add_msg_player_or_npc( m_warning,
                                    _( "You put pressure on the bleeding wound…" ),
                                    _( "<npcname> puts pressure on the bleeding wound…" ) );
-            practice_proficiency( proficiency_prof_wound_care, 1_turns );
+            practice_proficiency( proficiency_prof_field_medic, 1_turns );
         }
     }
     // on-pause effects for martial arts

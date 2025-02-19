@@ -7238,13 +7238,7 @@
       "prof_auto_rifles_familiar",
       "prof_auto_pistols_familiar"
     ],
-    "CBMs": [
-      "bio_targeting",
-      "bio_carbon",
-      "bio_cqb",
-      "bio_metabolics",
-      "bio_power_storage_mkII"
-    ],
+    "CBMs": [ "bio_targeting", "bio_carbon", "bio_cqb", "bio_metabolics", "bio_power_storage_mkII" ],
     "skills": [
       { "level": 4, "name": "gun" },
       { "level": 2, "name": "melee" },
