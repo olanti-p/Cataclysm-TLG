@@ -1,5 +1,5 @@
 #pragma once
-#ifndef CATA_SRC_GET_VERSION_H
-#define CATA_SRC_GET_VERSION_H
+#ifndef CATA_SRC_GET_VERSION
+#define CATA_SRC_GET_VERSION
 const char *getVersionString();
-#endif // CATA_SRC_GET_VERSION_H
+#endif // CATA_SRC_GET_VERSION
