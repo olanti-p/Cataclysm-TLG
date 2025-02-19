@@ -37,18 +37,18 @@ jobs:
           echo "base_commit=$(git log -1 --format='%B' | grep -o -E -e 'into\s([0-9a-f]{40})$' | grep -o -E -e '[0-9a-f]{40}')" >> $GITHUB_OUTPUT
       - name: "Generate translation template on test merge commit"
         run: |
-          rm -f lang/po/cataclysm-dda.pot
+          rm -f lang/po/cataclysm-tlg.pot
           ./lang/update_pot.sh
-          cp lang/po/cataclysm-dda.pot ~/merge.pot
+          cp lang/po/cataclysm-tlg.pot ~/merge.pot
       - name: "Checkout base commit"
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.get-commit-hash.outputs.base_commit }}
       - name: "Generate translation template on base commit"
         run: |
-          rm -f lang/po/cataclysm-dda.pot
+          rm -f lang/po/cataclysm-tlg.pot
           ./lang/update_pot.sh
-          cp lang/po/cataclysm-dda.pot ~/base.pot
+          cp lang/po/cataclysm-tlg.pot ~/base.pot
       - name: "Checkout test merge commit"
         uses: actions/checkout@v4
         with:
