@@ -11,7 +11,7 @@ This guide demonstrates how to translate a mod through an example. Suppose you h
     "authors": [ "..." ],
     "description": "This mod adds a book.",
     "category": "content",
-    "dependencies": [ "cdda" ]
+    "dependencies": [ "ctlg" ]
   },
   {
     "type": "BOOK",
@@ -25,7 +25,7 @@ This guide demonstrates how to translate a mod through an example. Suppose you h
 The first step is to generate the translation template for your mod.
 
 ```sh
-# In Cataclysm DDA root directory
+# In Cataclysm TLG root directory
 mkdir -p ./mods/demo/lang/po
 python3 ./lang/extract_json_strings.py -i ./mods/demo -o ./mods/demo/lang/po/demo.pot
 ```
@@ -160,4 +160,4 @@ demo
 └── your_mod_content.json
 ````
 
-When the player plays the Russian version of Cataclysm DDA, the Russian translation of your mod in `lang/mo/ru/LC_MESSAGES/demo.mo` is automatically loaded, and the player will see translated text in Russian in the game.
+When the player plays the Russian version of Cataclysm TLG, the Russian translation of your mod in `lang/mo/ru/LC_MESSAGES/demo.mo` is automatically loaded, and the player will see translated text in Russian in the game.
