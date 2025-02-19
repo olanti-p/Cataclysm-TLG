@@ -6,7 +6,7 @@ on:
 
 jobs:
   pull-translations:
-    if: github.repository == 'CleverRaven/Cataclysm-DDA'
+    if: github.repository == 'Cataclysm-TLG/Cataclysm-TLG'
     runs-on: ubuntu-22.04
     steps:
       - name: install gettext tools
