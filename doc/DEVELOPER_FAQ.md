@@ -75,20 +75,6 @@ Specifically to ablative plates, some transform when damaged instead of damaging
 2. Add the new json_flag to your item. And link it to the iuse function in `item_factory.cpp`.
 3. Document the new flag in `JSON_FLAGS.md`.
 
-## Acid resistance
-
-This determines how items react to acid fields.  Item acid resistances are a weighted average of the materials acid resistance (see `item::acid_resist`):
-
-- An item acid resistance of zero means it will get corroded every turn;
-- An item acid resistance above zero means it has a chance of getting corroded every turn;
-- An item acid resistance above 9 means completely acidproof.
-
-Acid resistance values are in `materials.json`, and defined as such:
-
-- 0 - zero resistance to acid (metals)
-- 1 - partly resistant to acid
-- 2 - very resistant to acid
-- 3 - complete acid resistance
 
 # FAQ
 

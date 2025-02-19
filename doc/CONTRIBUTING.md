@@ -18,6 +18,8 @@ editor such as [Notepad++](https://notepad-plus-plus.org/).
 
 ## Contributing via GitHub
 
+At this time, we are not accepting contributions from the general public. If you would like to take on a specific project, please contact worm girl via discord or github.
+
 Contributing to Cataclysm: The Last Generation is easy — simply [fork](https://github.com/CleverRaven/Cataclysm-DDA/fork) the repository here on GitHub, make your changes, and then send us a pull request.
 
 There are a couple of guidelines we suggest sticking to (see [#Example Workflow](#example-workflow)):
