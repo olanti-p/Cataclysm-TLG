@@ -432,30 +432,30 @@ class mission_debug
         static std::string describe( const mission &m );
 };
 
-static std::string first_word( const std::string &str )
-{
-    const size_t space_pos = str.find( ' ' );
-    if( space_pos == std::string::npos || space_pos == 0 ) {
-        return str;
-    }
-    return str.substr( 0, space_pos );
-}
+// static std::string first_word( const std::string &str )
+// {
+//     const size_t space_pos = str.find( ' ' );
+//     if( space_pos == std::string::npos || space_pos == 0 ) {
+//         return str;
+//     }
+//     return str.substr( 0, space_pos );
+// }
 
-static bool is_debug_character()
-{
-    static const std::unordered_set<std::string> debug_names = {
-        "Debug", "Test", "Sandbox", "Staging", "QA", "UAT"
-    };
-    return debug_names.count( first_word( get_player_character().name ) ) ||
-           debug_names.count( first_word( world_generator->active_world->world_name ) );
-}
+// static bool is_debug_character()
+// {
+//     static const std::unordered_set<std::string> debug_names = {
+//         "Debug", "Test", "Sandbox", "Staging", "QA", "UAT"
+//     };
+//     return debug_names.count( first_word( get_player_character().name ) ) ||
+//            debug_names.count( first_word( world_generator->active_world->world_name ) );
+// }
 
 static int player_uilist()
 {
     std::vector<uilist_entry> uilist_initializer = {
         { uilist_entry( debug_menu_index::MUTATE, true, 'M', _( "Mutate" ) ) },
         { uilist_entry( debug_menu_index::CHANGE_SKILLS, true, 's', _( "Change all skills" ) ) },
-        { uilist_entry( debug_menu_index::CHANGE_THEORY, true, 'T', _( "Change all skills theoretical knowledge" ) ) },
+        { uilist_entry( debug_menu_index::CHANGE_THEORY, true, 'k', _( "Change all knowledge" ) ) },
         { uilist_entry( debug_menu_index::LEARN_MA, true, 'l', _( "Learn all melee styles" ) ) },
         { uilist_entry( debug_menu_index::UNLOCK_RECIPES, true, 'r', _( "Unlock all recipes" ) ) },
         { uilist_entry( debug_menu_index::FORGET_ALL_RECIPES, true, 'f', _( "Forget all recipes" ) ) },
@@ -895,11 +895,7 @@ static std::optional<debug_menu_index> debug_menu_uilist( bool display_all_entri
     }
 
     std::string msg;
-    if( display_all_entries && !is_debug_character() ) {
-        msg = _( "Debug Functions - Using these will cheat not only the game, but yourself.\nYou won't grow.  You won't improve.\nTaking this shortcut will gain you nothing.  Your victory will be hollow.\nNothing will be risked and nothing will be gained." );
-    } else {
         msg = _( "Debug Functions" );
-    }
 
     while( true ) {
         const int group = uilist( msg, menu );
@@ -3447,16 +3443,11 @@ static void spawn_npc()
 static void unlock_all()
 {
     if( query_yn( _(
-                      "Activating this will add the Arcade Mode achievement unlocking all starting "
-                      "scenarios and professions for all worlds.  You will need to save the "
-                      "character in order to record this.  Achievements are tracked from the "
+                      "Activating this will add the Arcade Mode achievement. You will need to save "
+                      "in order to record this.  Achievements are tracked from the "
                       "'achievements' folder if you need to get rid of this (and the 'memorial' "
                       "folder if you need to get rid of this from a dead character in a legacy "
-                      "save).  Activating this will spoil factions and situations you may otherwise "
-                      "stumble upon naturally while playing.  Some scenarios are frustrating for the "
-                      "uninitiated, and some professions skip portions of the game's content.  If "
-                      "new to the game, meta progression will help you be introduced to mechanics at "
-                      "a reasonable pace." ) ) ) {
+                      "save)." ) ) ) {
         get_achievements().report_achievement( &achievement_achievement_arcade_mode.obj(),
                                                achievement_completion::completed );
     }
@@ -3613,19 +3604,6 @@ void debug()
         debug_menu_index::EXPORT_FOLLOWER,
         debug_menu_index::EXPORT_SELF
     };
-    const bool should_disable_achievements = action && !is_debug_character() &&
-            !non_cheaty_options.count( *action );
-    if( should_disable_achievements && achievements.is_enabled() ) {
-        static const std::string query(
-            translate_marker(
-                "Using this will disable achievements.  Proceed?"
-                "\nThey can be reenabled in the 'game' section of the menu." ) );
-        if( query_yn( _( query ) ) ) {
-            achievements.set_enabled( false );
-        } else {
-            action = std::nullopt;
-        }
-    }
 
     if( !action ) {
         return;
