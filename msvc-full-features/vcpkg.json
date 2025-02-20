@@ -1,6 +1,6 @@
 {
-    "name": "cdda-vcpkg-dependencies",
-    "version-string": "0.I",
+    "name": "ctlg-vcpkg-dependencies",
+    "version-string": "1.0",
     "dependencies": [
         "sdl2",
         {

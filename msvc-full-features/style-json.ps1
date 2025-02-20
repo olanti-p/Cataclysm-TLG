@@ -10,7 +10,7 @@ function IsFileLocked( [string] $filePath ) {
 
 function ExitWithError( [string] $msg ) {
 	if ( $FromMSBuild ) {
-		Write-Output "jsonlint : lint warning cddalint01 : $msg";
+		Write-Output "jsonlint : lint warning ctlglint01 : $msg";
 	} else {
 		Write-Output $msg
 	}
@@ -67,7 +67,7 @@ $gitChanged | ForEach-Object -Begin { $i = 0 } -Process { $i = $i+1 } {
 			$col = $res.Groups[3].Value;
 			$msg = $res.Groups[4].Value;
 			$file = Join-Path ( Resolve-Path . ) $_
-			Write-Output "$file($line,$col) : lint warning cddalint01 : $msg";
+			Write-Output "$file($line,$col) : lint warning ctlglint01 : $msg";
 			break
 		}
 	} else {
