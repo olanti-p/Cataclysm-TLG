@@ -7,7 +7,7 @@ list(APPEND CMAKE_MODULE_PATH
 include(GetGitRevisionDescription)
 
 # Hardcoded version
-set(GIT_VERSION "1.0-beta")
+set(GIT_VERSION "1.0")
 
 message(NOTICE ${GIT_VERSION})
 
