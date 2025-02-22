@@ -3013,49 +3013,6 @@
     }
   },
   {
-    "id": "emt_firefighter",
-    "type": "profession",
-    "name": "Paramedic Firefighter",
-    "description": "On your way to respond to an emergency call, you nearly drove straight into a riot in the city.  Turning off of the burning, debris-covered streets, you took a long detour only to find yourself lost.  That call will have to wait - you're in an emergency of your own now.",
-    "points": 5,
-    "skills": [
-      { "level": 6, "name": "firstaid" },
-      { "level": 4, "name": "melee" },
-      { "level": 4, "name": "bashing" },
-      { "level": 4, "name": "swimming" },
-      { "level": 4, "name": "driving" }
-    ],
-    "proficiencies": [ "prof_field_medic", "prof_intro_biology", "prof_physiology", "prof_burn_care", "prof_dissect_humans", "prof_driver" ],
-    "vehicle": "fire_engine",
-    "items": {
-      "both": {
-        "entries": [
-          { "item": "boots_bunker" },
-          { "item": "bunker_coat" },
-          { "item": "nomex_suit" },
-          { "item": "bunker_pants" },
-          { "item": "dress_shirt" },
-          { "item": "nomex_gloves" },
-          { "item": "fire_gauntlets" },
-          { "item": "nomex_hood" },
-          { "item": "firehelmet" },
-          { "item": "mask_bunker" },
-          { "item": "mbag" },
-          { "item": "nomex_socks" },
-          { "item": "water_clean" },
-          { "item": "wristwatch" },
-          { "item": "syringe" },
-          { "item": "morphine" },
-          { "item": "adrenaline_injector" },
-          { "group": "full_1st_aid" },
-          { "group": "charged_smart_phone" },
-          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
-          { "item": "halligan", "container-item": "fireman_belt" }
-        ]
-      }
-    }
-  },
-  {
     "id": "handymanservice",
     "type": "profession",
     "name": { "male": "Serviceman", "female": "Servicewoman" },
@@ -3861,6 +3818,7 @@
           { "item": "fire_gauntlets" },
           { "item": "mask_bunker" },
           { "item": "nomex_hood" },
+          { "item": "gasfilter_med" },
           { "item": "firehelmet" },
           { "item": "pocketwatch" },
           { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
@@ -4324,7 +4282,7 @@
     "name": "Butōka",
     "description": "Your sensei prepared you for a lot of things, but somehow the end of the world never came up in traning.",
     "points": 3,
-    "starting_styles_choices": [ "style_aikido", "style_karate", "style_ninjutsu", "style_jiu_jutsu" ],
+    "starting_styles_choices": [ "style_aikido", "style_karate", "style_ninjutsu", "style_judo" ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
       { "level": 4, "name": "melee" },
@@ -4407,15 +4365,7 @@
     "name": "MMA Fighter",
     "description": "You might have once dreamed of fighting in the octagon, but the Cataclysm presents a new venue for Mixed Martial Arts.",
     "points": 3,
-    "starting_styles_choices": [
-      "style_pankration",
-      "style_capoeira",
-      "style_muay_thai",
-      "style_krav_maga",
-      "style_boxing",
-      "style_kickboxing",
-      "style_jiu_jutsu"
-    ],
+    "starting_styles_choices": [ "style_pankration", "style_capoeira", "style_muay_thai", "style_krav_maga", "style_boxing", "style_kickboxing" ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
       { "level": 4, "name": "melee" },
