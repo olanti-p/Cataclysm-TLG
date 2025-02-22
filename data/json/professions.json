@@ -4365,14 +4365,7 @@
     "name": "MMA Fighter",
     "description": "You might have once dreamed of fighting in the octagon, but the Cataclysm presents a new venue for Mixed Martial Arts.",
     "points": 3,
-    "starting_styles_choices": [
-      "style_pankration",
-      "style_capoeira",
-      "style_muay_thai",
-      "style_krav_maga",
-      "style_boxing",
-      "style_kickboxing"
-    ],
+    "starting_styles_choices": [ "style_pankration", "style_capoeira", "style_muay_thai", "style_krav_maga", "style_boxing", "style_kickboxing" ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
       { "level": 4, "name": "melee" },
