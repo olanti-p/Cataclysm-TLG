@@ -3046,6 +3046,7 @@
           { "item": "wristwatch" },
           { "item": "syringe" },
           { "item": "morphine" },
+          { "item": "gasfilter_m" },
           { "item": "adrenaline_injector" },
           { "group": "full_1st_aid" },
           { "group": "charged_smart_phone" },
@@ -3861,6 +3862,7 @@
           { "item": "fire_gauntlets" },
           { "item": "mask_bunker" },
           { "item": "nomex_hood" },
+          { "item": "gasfilter_m" },
           { "item": "firehelmet" },
           { "item": "pocketwatch" },
           { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
@@ -4324,7 +4326,7 @@
     "name": "Butōka",
     "description": "Your sensei prepared you for a lot of things, but somehow the end of the world never came up in traning.",
     "points": 3,
-    "starting_styles_choices": [ "style_aikido", "style_karate", "style_ninjutsu", "style_jiu_jutsu" ],
+    "starting_styles_choices": [ "style_aikido", "style_karate", "style_ninjutsu", "style_judo" ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
       { "level": 4, "name": "melee" },
@@ -4413,8 +4415,7 @@
       "style_muay_thai",
       "style_krav_maga",
       "style_boxing",
-      "style_kickboxing",
-      "style_jiu_jutsu"
+      "style_kickboxing"
     ],
     "proficiencies": [ "prof_unarmed_familiar", "prof_unarmed_pro" ],
     "skills": [
