@@ -21,7 +21,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 9,
+        "encumbrance": 16,
         "coverage": 80,
         "cover_melee": 80,
         "cover_ranged": 80,
@@ -59,7 +59,7 @@
           { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 5,
+        "encumbrance": 15,
         "coverage": 90,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l", "arm_upper_r", "arm_upper_l" ]
       }
@@ -92,7 +92,7 @@
           { "type": "plastic", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 3,
+        "encumbrance": 10,
         "coverage": 90,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ]
       }
@@ -112,7 +112,7 @@
     "material": [ "chitin" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
-    "color": "green",
+    "color": "brown",
     "warmth": 5,
     "material_thickness": 3,
     "environmental_protection": 2,
@@ -120,7 +120,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 4,
+        "encumbrance": 8,
         "coverage": 90,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l", "arm_elbow_r", "arm_elbow_l" ],
         "rigid_layer_only": true
@@ -221,7 +221,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 5,
+        "encumbrance": 12,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ],
         "material": [
           { "type": "plastic", "covered_by_mat": 90, "thickness": 1.5 },
@@ -290,7 +290,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 5,
+        "encumbrance": 9,
         "coverage": 90,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l", "arm_elbow_r", "arm_elbow_l", "arm_upper_l", "arm_upper_r" ]
       }
@@ -333,7 +333,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 4,
+        "encumbrance": 10,
         "coverage": 80,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ],
         "rigid_layer_only": true
@@ -361,8 +361,8 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 4,
-        "coverage": 80,
+        "encumbrance": 8,
+        "coverage": 90,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ],
         "rigid_layer_only": true
       }
@@ -408,7 +408,7 @@
           { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 }
         ],
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 6,
+        "encumbrance": 8,
         "coverage": 75,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ],
         "rigid_layer_only": true
@@ -595,7 +595,7 @@
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_upper_l", "arm_upper_r" ],
         "coverage": 100,
-        "encumbrance": 1
+        "encumbrance": 2
       },
       {
         "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
@@ -762,7 +762,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 5,
+        "encumbrance": 8,
         "coverage": 95,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ],
         "rigid_layer_only": true
@@ -807,7 +807,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 2,
+        "encumbrance": 8,
         "coverage": 95,
         "specifically_covers": [ "arm_lower_r", "arm_lower_l" ]
       }
@@ -868,7 +868,7 @@
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_lower_r", "arm_lower_l", "arm_elbow_r", "arm_elbow_l", "arm_upper_r", "arm_upper_l" ],
         "coverage": 85,
-        "encumbrance": 10,
+        "encumbrance": 12,
         "rigid_layer_only": true
       }
     ],
@@ -916,7 +916,7 @@
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
         "coverage": 100,
-        "encumbrance": 10,
+        "encumbrance": 4,
         "rigid_layer_only": true
       }
     ],
@@ -964,7 +964,7 @@
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
         "coverage": 100,
-        "encumbrance": 6,
+        "encumbrance": 4,
         "rigid_layer_only": true
       }
     ]
