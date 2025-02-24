@@ -244,8 +244,7 @@
         "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],
         "covers": [ "leg_l", "leg_r" ],
         "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
-        "coverage": 40,
-        "encumbrance": 1
+        "coverage": 40
       },
       {
         "material": [ { "type": "steel_chain", "covered_by_mat": 100, "thickness": 1.2 } ],

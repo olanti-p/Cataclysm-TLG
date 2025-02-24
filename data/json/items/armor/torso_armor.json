@@ -72,7 +72,7 @@
     "warmth": 15,
     "material_thickness": 2,
     "flags": [ "OUTER", "STURDY" ],
-    "armor": [ { "encumbrance": 12, "coverage": 85, "covers": [ "torso" ], "rigid_layer_only": true } ],
+    "armor": [ { "encumbrance": 17, "coverage": 95, "covers": [ "torso" ], "rigid_layer_only": true } ],
     "melee_damage": { "bash": 6 }
   },
   {
@@ -161,9 +161,9 @@
     "material_thickness": 2,
     "flags": [ "VARSIZE", "OUTER", "STURDY" ],
     "armor": [
-      { "encumbrance": 26, "coverage": 90, "covers": [ "torso" ] },
+      { "encumbrance": 30, "coverage": 90, "covers": [ "torso" ] },
       {
-        "encumbrance": 3,
+        "encumbrance": 4,
         "coverage": 90,
         "covers": [ "arm_l", "arm_r" ],
         "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l" ],
@@ -325,7 +325,7 @@
         "covers": [ "torso" ],
         "specifically_covers": [ "torso_upper" ],
         "coverage": 90,
-        "encumbrance": 14,
+        "encumbrance": 17,
         "rigid_layer_only": true
       },
       {

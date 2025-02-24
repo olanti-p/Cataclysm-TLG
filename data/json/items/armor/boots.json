@@ -136,7 +136,7 @@
           { "type": "rubber", "covered_by_mat": 100, "thickness": 2.25 },
           { "type": "nomex", "covered_by_mat": 100, "thickness": 2.25 }
         ],
-        "encumbrance": 30,
+        "encumbrance": 45,
         "coverage": 100
       },
       {
@@ -2156,7 +2156,7 @@
           { "type": "steel", "covered_by_mat": 100, "thickness": 1.2 },
           { "type": "leather", "covered_by_mat": 1, "thickness": 2.0 }
         ],
-        "encumbrance": 10,
+        "encumbrance": 5,
         "coverage": 90
       }
     ]
@@ -2165,15 +2165,15 @@
     "id": "platemail_sollerets_xl",
     "type": "ARMOR",
     "copy-from": "platemail_sollerets",
-    "name": { "str": "pair of platemail_sollerets", "str_pl": "pairs of platemail_sollerets" },
+    "name": { "str": "pair of plate sollerets", "str_pl": "pairs of plate sollerets" },
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XS" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
   },
   {
     "id": "platemail_sollerets_xs",
     "type": "ARMOR",
     "copy-from": "platemail_sollerets",
-    "name": { "str": "pair of platemail_sollerets", "str_pl": "pairs of platemail_sollerets" },
+    "name": { "str": "pair of plate sollerets", "str_pl": "pairs of plate sollerets" },
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
     "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
   },
