@@ -325,6 +325,58 @@
     ]
   },
   {
+    "result": "platemail_suit",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "skill_used": "fabrication",
+    "difficulty": 2,
+    "time": "20 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [ "NO_RESIZE" ],
+    "components": [
+      [ [ "platemail_cuirass", 1 ] ],
+      [ [ "platemail_gauntlets", 1 ] ],
+      [ [ "platemail_sollerets", 1 ] ],
+      [ [ "platemail_arm_guards", 1 ] ],
+      [ [ "platemail_leg_guards", 1 ] ],
+      [ [ "platemail_pauldrons", 1 ] ],
+      [ [ "platemail_tasset", 1 ], [ "platemail_tasset_loose", 1 ] ]
+    ]
+  },
+  {
+    "result": "platemail_suit_xs",
+    "type": "recipe",
+    "copy-from": "platemail_suit",
+    "time": "20 m",
+    "components": [
+      [ [ "platemail_cuirass_xs", 1 ] ],
+      [ [ "platemail_gauntlets_xs", 1 ] ],
+      [ [ "platemail_sollerets_xs", 1 ] ],
+      [ [ "platemail_arm_guards_xs", 1 ] ],
+      [ [ "platemail_leg_guards_xs", 1 ] ],
+      [ [ "platemail_pauldrons_xs", 1 ] ],
+      [ [ "platemail_tasset_xs", 1 ], [ "platemail_tasset_loose_xs", 1 ] ]
+    ]
+  },
+  {
+    "result": "platemail_suit_xl",
+    "type": "recipe",
+    "copy-from": "platemail_suit",
+    "time": "20 m",
+    "components": [
+      [ [ "platemail_cuirass_xl", 1 ] ],
+      [ [ "platemail_gauntlets_xl", 1 ] ],
+      [ [ "platemail_sollerets_xl", 1 ] ],
+      [ [ "platemail_arm_guards_xl", 1 ] ],
+      [ [ "platemail_leg_guards_xl", 1 ] ],
+      [ [ "platemail_pauldrons_xl", 1 ] ],
+      [ [ "platemail_tasset_xl", 1 ], [ "platemail_tasset_loose_xl", 1 ] ]
+    ]
+  },
+  {
     "result": "chainmail_hauberk",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
