@@ -526,8 +526,8 @@
     "id": "gambeson_sleeve",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of gambeson sleeves", "str_pl": "pairs of gambeson sleeves" },
-    "description": "A pair of arm sleeves made from heavy quilted fabric.",
+    "name": { "str": "pair of quilted sleeves", "str_pl": "pairs of quilted sleeves" },
+    "description": "Medieval cloth armor for the arms consisting of a pair of quilted sleeves stuffed with batting.  Adjustable ties along their length allow them to be worn under or over other gear.  Activate to change thier fit.",
     "weight": "1380 g",
     "volume": "500 ml",
     "price": "12 USD",
@@ -540,23 +540,117 @@
     "warmth": 50,
     "material_thickness": 5,
     "flags": [ "VARSIZE", "STURDY" ],
-    "armor": [ { "encumbrance": 20, "coverage": 100, "covers": [ "arm_l", "arm_r" ] } ]
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Loosen",
+      "target": "gambeson_sleeve_loose",
+      "msg": "You loosen the fit of your sleeves."
+    },
+    "armor": [
+      {
+        "material": [
+          { "type": "cotton_quilted", "covered_by_mat": 100, "thickness": 2.5 },
+          { "type": "cotton", "covered_by_mat": 95, "thickness": 2 },
+          { "type": "cotton", "covered_by_mat": 95, "thickness": 2 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "coverage": 98,
+        "encumbrance": 28
+      }
+    ]
   },
   {
-    "id": "xl_gambeson_sleeve",
+    "id": "gambeson_sleeve_xl",
     "type": "ARMOR",
     "name": { "str": "pair of gambeson sleeves", "str_pl": "pairs of gambeson sleeves" },
     "copy-from": "gambeson_sleeve",
     "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
-    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] }
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Loosen",
+      "target": "gambeson_sleeve_xl_loose",
+      "msg": "You loosen the fit of your sleeves."
+    }
   },
   {
-    "id": "xs_gambeson_sleeve",
+    "id": "gambeson_sleeve_xs",
     "type": "ARMOR",
     "name": { "str": "pair of gambeson sleeves", "str_pl": "pairs of gambeson sleeves" },
     "copy-from": "gambeson_sleeve",
     "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
-    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] }
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Loosen",
+      "target": "gambeson_sleeve_xs_loose",
+      "msg": "You loosen the fit of your sleeves."
+    }
+  },
+  {
+    "id": "gambeson_sleeve_loose",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "pair of quilted sleeves", "str_pl": "pairs of quilted sleeves" },
+    "description": "Medieval cloth armor for the arms consisting of a pair of quilted sleeves stuffed with batting.  Adjustable ties along their length allow them to be worn under or over other gear.  Activate to change thier fit.",
+    "weight": "1380 g",
+    "volume": "500 ml",
+    "price": "12 USD",
+    "price_postapoc": "4 USD",
+    "to_hit": 1,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "looks_like": "arm_warmers",
+    "color": "light_gray",
+    "warmth": 50,
+    "material_thickness": 5,
+    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "cotton_quilted", "covered_by_mat": 100, "thickness": 2.5 },
+          { "type": "cotton", "covered_by_mat": 95, "thickness": 2 },
+          { "type": "cotton", "covered_by_mat": 95, "thickness": 2 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "coverage": 98,
+        "encumbrance": 28
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Tighten",
+      "target": "gambeson_sleeve",
+      "msg": "You tighten the fit of your sleeves."
+    }
+  },
+  {
+    "id": "gambeson_sleeve_xl_loose",
+    "type": "ARMOR",
+    "name": { "str": "pair of quilted sleeves (loose)", "str_pl": "pairs of quilted sleeves (loose)" },
+    "copy-from": "gambeson_sleeve",
+    "proportional": { "weight": 1.125, "volume": 1.13, "price": 1.25 },
+    "extend": { "flags": [ "OVERSIZE", "PREFIX_XL" ] },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Tighten",
+      "target": "gambeson_sleeve_xl",
+      "msg": "You tighten the fit of your sleeves."
+    }
+  },
+  {
+    "id": "gambeson_sleeve_xs_loose",
+    "type": "ARMOR",
+    "name": { "str": "pair of quilted sleeves (loose)", "str_pl": "pairs of quilted sleeves (loose)" },
+    "copy-from": "gambeson_sleeve",
+    "proportional": { "weight": 0.75, "volume": 0.75, "price": 0.5 },
+    "extend": { "flags": [ "UNDERSIZE", "PREFIX_XS" ] },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Tighten",
+      "target": "gambeson_sleeve_xs",
+      "msg": "You tighten the fit of your sleeves."
+    }
   },
   {
     "id": "chainmail_sleeves",
