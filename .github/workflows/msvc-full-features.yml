@@ -1,35 +1,35 @@
 name: Cataclysm Windows build
 
 on:
-  push:
-    branches:
-    - master
-    paths-ignore:
-    - 'android/**'
-    - 'build-data/osx/**'
-    - 'doc/**'
-    - 'doxygen_doc/**'
-    - 'gfx/**'
-    - 'lang/**'
-    - 'lgtm/**'
-    - 'tools/**'
-    - '!tools/format/**'
-    - 'utilities/**'
-  pull_request:
-    branches:
-    - master
-    paths-ignore:
-    - 'android/**'
-    - 'build-data/osx/**'
-    - 'doc/**'
-    - 'doxygen_doc/**'
-    - 'gfx/**'
-    - 'lang/**'
-    - 'lgtm/**'
-    - 'tools/**'
-    - '!tools/format/**'
-    - 'utilities/**'
-    types: [opened, reopened, synchronize, ready_for_review]
+  workflow_dispatch:
+#  push:
+#    branches:
+#    - master
+#    paths-ignore:
+#    - 'android/**'
+#    - 'build-data/osx/**'
+#    - 'doc/**'
+#    - 'doxygen_doc/**'
+#    - 'gfx/**'
+#    - 'lang/**'
+#    - 'lgtm/**'
+#    - 'tools/**'
+#    - '!tools/format/**'
+#    - 'utilities/**'
+#  pull_request:
+#    branches:
+#    - master
+#    paths-ignore:
+#    - 'android/**'
+#    - 'build-data/osx/**'
+#    - 'doc/**'
+#    - 'doxygen_doc/**'
+#    - 'gfx/**'
+#    - 'lang/**'
+#    - 'lgtm/**'
+#    - 'tools/**'
+#    - '!tools/format/**'
+#    - 'utilities/**'
 
 # We only care about the latest revision of a PR, so cancel previous instances.
 concurrency:
