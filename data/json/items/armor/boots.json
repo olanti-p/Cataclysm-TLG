@@ -728,7 +728,6 @@
     "price_postapoc": "7 USD 50 cent",
     "material": [ "leather_treated" ],
     "environmental_protection": 2,
-    "proportional": { "weight": 1.2, "volume": 1.2, "price": 2, "encumbrance": 2 },
     "flags": [ "VARSIZE", "RAINPROOF", "NORMAL", "OUTER" ],
     "pocket_data": [
       { "pocket_type": "CONTAINER", "max_contains_volume": "250 ml", "max_contains_weight": "600 g", "moves": 80 },
@@ -749,7 +748,7 @@
           "foot_arch_l"
         ],
         "material": [ { "type": "leather_treated", "covered_by_mat": 100, "thickness": 2.0 } ],
-        "encumbrance": 12,
+        "encumbrance": 34,
         "coverage": 100
       },
       {
