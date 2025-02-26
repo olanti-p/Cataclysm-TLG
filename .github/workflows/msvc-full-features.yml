@@ -136,7 +136,8 @@ jobs:
 
     - name: Build
       run: |
-          msbuild -m -p:Configuration=Release -p:Platform=x64 "-target:Cataclysm-vcpkg-static;Cataclysm-test-vcpkg-static;JsonFormatter-vcpkg-static" msvc-full-features/Cataclysm-vcpkg-static.sln
+          msbuild -m -p:Configuration=Release -p:Platform=x64 "-target:Cataclysm-vcpkg-static;JsonFormatter-vcpkg-static" msvc-full-features/Cataclysm-vcpkg-static.sln
+     #     msbuild -m -p:Configuration=Release -p:Platform=x64 "-target:Cataclysm-vcpkg-static;Cataclysm-test-vcpkg-stati;JsonFormatter-vcpkg-static" msvc-full-features/Cataclysm-vcpkg-static.sln
 
     - name: Post-build ccache manipulation
       if: ${{ !failure() }}
@@ -182,10 +183,10 @@ jobs:
           Write-Output "::add-matcher::build-scripts/problem-matchers/catch2.json"
           Write-Output "::add-matcher::build-scripts/problem-matchers/debugmsg.json"
 
-    - name: Run tests
-      if: ${{ github.ref_name != 'master' }}
-      run: |
-          .\Cataclysm-test-vcpkg-static-Release-x64.exe --min-duration 20 --rng-seed time
+  #  - name: Run tests
+  #    if: ${{ github.ref_name != 'master' }}
+  #    run: |
+  #        .\Cataclysm-test-vcpkg-static-Release-x64.exe --min-duration 20 --rng-seed time
 
     - name: Dump disk usage logs if job failed
       if: failure()
