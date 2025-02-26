@@ -81,7 +81,7 @@
       <AdditionalLibraryDirectories Condition="'$(Configuration)'=='Debug'">.\vcpkg_installed\$(VcpkgTriplet)\$(VcpkgTriplet)\debug\plugins\platforms;.\vcpkg_installed\$(VcpkgTriplet)\debug\plugins\platforms;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalLibraryDirectories Condition="'$(Configuration)'=='Release'">.\vcpkg_installed\$(VcpkgTriplet)\$(VcpkgTriplet)\plugins\platforms;.\vcpkg_installed\$(VcpkgTriplet)\plugins\platforms;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <Link Condition="$(_CDDA_USE_LLD_LINK)">
+    <Link Condition="$(_CTLG_USE_LLD_LINK)">
       <AdditionalDependencies>
         double-conversion.lib;
         harfbuzz.lib;
