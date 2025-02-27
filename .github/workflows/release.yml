@@ -29,6 +29,7 @@ jobs:
     permissions: write-all
     outputs:
       timestamp: ${{ steps.get-timestamp.outputs.time }}
+      tag_name: ${{ steps.generate_env_vars.outputs.tag_name }}
     steps:
       - name: Get build timestamp
         id: get-timestamp
@@ -331,4 +332,4 @@ jobs:
                mv ./app/build/outputs/bundle/experimentalRelease/*.aab ../ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.aab     
           fi
       - run: |
-          gh release upload ctlg-experimental-${{ needs.release.outputs.timestamp }} ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.${{ matrix.ext }}
+          gh release upload ${{ jobs.release.outputs.tag_name }} ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.${{ matrix.ext }}
