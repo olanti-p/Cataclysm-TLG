@@ -150,8 +150,13 @@
         "prob": 20
       },
       {
-        "distribution": [ { "item": "peacoat", "prob": 10 }, { "item": "greatcoat", "prob": 10 }, { "item": "coat_fur", "prob": 10 } ],
-        "prob": 80
+        "distribution": [
+          { "item": "longcoat_leather", "prob": 60 },
+          { "item": "longcoat_fur", "prob": 5 },
+          { "item": "sleeveless_longcoat_leather", "prob": 30 },
+          { "item": "sleeveless_longcoat_fur", "prob": 10 }
+        ],
+        "prob": 40
       },
       { "distribution": [ { "item": "jacket_leather", "prob": 50 }, { "item": "poncho", "prob": 10 } ], "prob": 60 },
       { "distribution": [ { "item": "vest_leather", "prob": 20 } ], "prob": 40 }
