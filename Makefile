@@ -527,9 +527,9 @@ CXXFLAGS += $(WARNINGS) $(DEBUG) $(DEBUGSYMS) $(PROFILE) $(OTHERS)
 TOOL_CXXFLAGS = -DCATA_IN_TOOL
 
 BINDIST_EXTRAS += README.md data doc LICENSE.txt LICENSE-OFL-Terminus-Font.txt VERSION.txt $(JSON_FORMATTER_BIN)
-BINDIST    = $(BUILD_PREFIX)cataclysmtlg-$(VERSION).tar.gz
-W32BINDIST = $(BUILD_PREFIX)cataclysmtlg-$(VERSION).zip
-BINDIST_CMD    = tar --transform=s@^$(BINDIST_DIR)@cataclysmtlg-$(VERSION)@ -czvf $(BINDIST) $(BINDIST_DIR)
+BINDIST    = $(BUILD_PREFIX)cataclysm-tlg-$(VERSION).tar.gz
+W32BINDIST = $(BUILD_PREFIX)cataclysm-tlg-$(VERSION).zip
+BINDIST_CMD    = tar --transform=s@^$(BINDIST_DIR)@cataclysm-tlg-$(VERSION)@ -czvf $(BINDIST) $(BINDIST_DIR)
 W32BINDIST_CMD = cd $(BINDIST_DIR) && zip -r ../$(W32BINDIST) * && cd $(BUILD_DIR)
 
 
@@ -609,7 +609,7 @@ ifeq ($(NATIVE), osx)
   endif
   TARGETSYSTEM=LINUX
   ifneq ($(OS), Linux)
-    BINDIST_CMD = tar -s"@^$(BINDIST_DIR)@cataclysmtlg-$(VERSION)@" -czvf $(BINDIST) $(BINDIST_DIR)
+    BINDIST_CMD = tar -s"@^$(BINDIST_DIR)@cataclysm-tlg-$(VERSION)@" -czvf $(BINDIST) $(BINDIST_DIR)
   endif
 endif
 
@@ -974,13 +974,13 @@ endif
 
 ifeq ($(TARGETSYSTEM), LINUX)
   ifneq ($(PREFIX),)
-    DEFINES += -DPREFIX="$(PREFIX)" -DDATA_DIR_PREFIX
+    DEFINES += -DPREFIX="$(PREFIX)" -tlgTA_DIR_PREFIX
   endif
 endif
 
 ifeq ($(TARGETSYSTEM), CYGWIN)
   ifneq ($(PREFIX),)
-    DEFINES += -DPREFIX="$(PREFIX)" -DDATA_DIR_PREFIX
+    DEFINES += -DPREFIX="$(PREFIX)" -tlgTA_DIR_PREFIX
   endif
 endif
 
@@ -1108,7 +1108,7 @@ clean: clean-tests clean-object_creator clean-pch clean-lang
 	rm -rf *$(TARGET_NAME) *$(TILES_TARGET_NAME)
 	rm -rf *$(TILES_TARGET_NAME).exe *$(TARGET_NAME).exe *$(TARGET_NAME).a
 	rm -rf *obj *objwin
-	rm -rf *$(BINDIST_DIR) *cataclysmtlg-*.tar.gz *cataclysmtlg-*.zip
+	rm -rf *$(BINDIST_DIR) *cataclysm-tlg-*.tar.gz *cataclysm-tlg-*.zip
 	rm -f $(SRC_DIR)/version.h $(SRC_DIR)/prefix.h
 	rm -f $(CHKJSON_BIN)
 	rm -f $(TEST_MO)
@@ -1145,9 +1145,9 @@ install: version $(TARGET)
 	cp -R --no-preserve=ownership data/help $(DATA_PREFIX)
 ifeq ($(TILES), 1)
 	cp -R --no-preserve=ownership gfx $(DATA_PREFIX)
-	install -Dm644 -t $(SHARE_DIR)/applications/ data/xdg/com.cataclysmtlg.CataclysmTLG.desktop
-	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/com.cataclysmtlg.CataclysmTLG.appdata.xml
-	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/com.cataclysmtlg.CataclysmTLG.svg
+	install -Dm644 -t $(SHARE_DIR)/applications/ data/xdg/com.cataclysm-tlg.cataclysm-tlg.desktop
+	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/com.cataclysm-tlg.cataclysm-tlg.appdata.xml
+	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/com.cataclysm-tlg.cataclysm-tlg.svg
 endif
 ifeq ($(SOUND), 1)
 	cp -R --no-preserve=ownership data/sound $(DATA_PREFIX)
@@ -1180,9 +1180,9 @@ install: version $(TARGET)
 	cp -R --no-preserve=ownership data/help $(DATA_PREFIX)
 ifeq ($(TILES), 1)
 	cp -R --no-preserve=ownership gfx $(DATA_PREFIX)
-	install -Dm755 -t $(SHARE_DIR)/applications/ data/xdg/org.cataclysmdda.CataclysmDDA.desktop
-	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/org.cataclysmdda.CataclysmDDA.appdata.xml
-	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/org.cataclysmdda.CataclysmDDA.svg
+	install -Dm755 -t $(SHARE_DIR)/applications/ data/xdg/org.cataclysmtlg.Cataclysmtlg.desktop
+	install -Dm644 -t $(SHARE_DIR)/metainfo/ data/xdg/org.cataclysmtlg.Cataclysmtlg.appdata.xml
+	install -Dm644 -t $(SHARE_DIR)/icons/hicolor/scalable/apps/ data/xdg/org.cataclysmtlg.Cataclysmtlg.svg
 endif
 ifeq ($(SOUND), 1)
 	cp -R --no-preserve=ownership data/sound $(DATA_PREFIX)
@@ -1297,11 +1297,11 @@ export ODIR _OBJS LDFLAGS CXX W32FLAGS DEFINES CXXFLAGS TARGETSYSTEM CLANG PCH P
 
 ctags: $(ASTYLE_SOURCES)
 	ctags $^
-	./tools/json_tools/cddatags.py
+	./tools/json_tools/ctlgtags.py
 
 etags: $(ASTYLE_SOURCES)
 	etags $^
-	./tools/json_tools/cddatags.py
+	./tools/json_tools/ctlgtags.py
 
 ifneq ($(IS_WINDOWS_HOST),1)
 # Parallel astyle for posix hosts where fork and filesystem are cheap.
