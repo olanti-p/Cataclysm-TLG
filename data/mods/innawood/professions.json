@@ -74,7 +74,7 @@
     "description": "You've trained in the medical arts, refining natural remedies into real cures for disease.  Your tribe would have lived long and healthy lives, were they still here.",
     "points": 3,
     "skills": [ { "level": 3, "name": "firstaid" }, { "level": 2, "name": "chemistry" }, { "level": 1, "name": "survival" } ],
-    "proficiencies": [ "prof_wound_care", "prof_wound_care_expert", "prof_intro_biology", "prof_physiology", "prof_burn_care" ],
+    "proficiencies": [ "prof_field_medic", "prof_intro_biology", "prof_physiology", "prof_burn_care" ],
     "items": {
       "both": {
         "entries": [
@@ -127,7 +127,7 @@
           { "item": "torch" },
           { "item": "waterskin" },
           { "item": "tunic" },
-          { "item": "helmet_larmor" },
+          { "item": "leather_helmet" },
           { "item": "gloves_wraps_leather" },
           { "item": "bigtrapper_pack" },
           { "item": "fire_drill", "ammo-item": "notch", "charges": 24 }
@@ -480,11 +480,11 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "helmet_larmor" },
-          { "item": "armor_larmor" },
+          { "item": "leather_helmet" },
+          { "item": "leather_armor_suit" },
           { "item": "socks" },
-          { "item": "boots_larmor" },
-          { "item": "gauntlets_larmor" },
+          { "item": "boots" },
+          { "item": "leather_gauntlets" },
           { "item": "water_clean", "charges": 6, "container-item": "waterskin" },
           { "item": "quiver_birchbark", "contents-group": "quiver_bow_hunter" },
           { "item": "spear_copper", "container-item": "spearsling" },
@@ -512,11 +512,11 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "helmet_larmor" },
-          { "item": "armor_larmor" },
+          { "item": "leather_helmet" },
+          { "item": "leather_armor_suit" },
           { "item": "socks" },
-          { "item": "boots_larmor" },
-          { "item": "gauntlets_larmor" },
+          { "item": "boots" },
+          { "item": "leather_gauntlets" },
           { "item": "water_clean", "charges": 6, "container-item": "waterskin" },
           { "item": "sword_bronze", "container-item": "scabbard" },
           { "item": "copper_knife", "container-item": "sheath_birchbark" }
@@ -543,12 +543,12 @@
       "both": {
         "entries": [
           { "item": "leathersandals" },
-          { "item": "helmet_larmor" },
-          { "item": "vambrace_larmor" },
+          { "item": "leather_helmet" },
+          { "item": "leather_vambraces" },
           { "item": "socks" },
           { "item": "skirt_grass" },
           { "item": "vest_leather" },
-          { "item": "legguard_larmor" },
+          { "item": "leather_leg_guards" },
           {
             "item": "compositecrossbow",
             "ammo-item": "bolt_simple_wood",
@@ -637,7 +637,7 @@
           { "item": "tunic" },
           { "item": "clogs" },
           { "item": "socks" },
-          { "item": "helmet_larmor" },
+          { "item": "leather_helmet" },
           { "item": "copper_knife" },
           { "item": "primitive_hammer" },
           { "item": "loincloth" },
@@ -662,7 +662,7 @@
           { "item": "tunic" },
           { "item": "mocassins" },
           { "item": "socks" },
-          { "item": "helmet_larmor" },
+          { "item": "leather_helmet" },
           { "item": "primitive_hammer" },
           { "item": "loincloth" },
           { "item": "frame_wood_light" },

@@ -419,7 +419,10 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures" } ],
-    "components": [ [ [ "gambeson_vest", 1 ], [ "gambeson_vest_loose", 1 ] ], [ [ "gambeson_sleeve", 1 ], [ "gambeson_sleeve_loose", 1 ] ] ]
+    "components": [
+      [ [ "gambeson_vest", 1 ], [ "gambeson_vest_loose", 1 ] ],
+      [ [ "gambeson_sleeve", 1 ], [ "gambeson_sleeve_loose", 1 ] ]
+    ]
   },
   {
     "result": "gambeson_xs",
@@ -435,7 +438,10 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures" } ],
-    "components": [ [ [ "gambeson_vest_xs", 1 ], [ "gambeson_vest_xs_loose", 1 ] ], [ [ "gambeson_sleeve_xs", 1 ], [ "gambeson_sleeve_xs_loose", 1 ] ] ]
+    "components": [
+      [ [ "gambeson_vest_xs", 1 ], [ "gambeson_vest_xs_loose", 1 ] ],
+      [ [ "gambeson_sleeve_xs", 1 ], [ "gambeson_sleeve_xs_loose", 1 ] ]
+    ]
   },
   {
     "result": "gambeson_xl",
@@ -451,7 +457,10 @@
     "autolearn": true,
     "flags": [ "NO_RESIZE" ],
     "proficiencies": [ { "proficiency": "prof_closures" } ],
-    "components": [ [ [ "gambeson_vest_xl", 1 ], [ "gambeson_vest_xl_loose", 1 ] ], [ [ "gambeson_sleeve_xl", 1 ], [ "gambeson_sleeve_xl_loose", 1 ] ] ]
+    "components": [
+      [ [ "gambeson_vest_xl", 1 ], [ "gambeson_vest_xl_loose", 1 ] ],
+      [ [ "gambeson_sleeve_xl", 1 ], [ "gambeson_sleeve_xl_loose", 1 ] ]
+    ]
   },
   {
     "result": "chainmail_suit",
