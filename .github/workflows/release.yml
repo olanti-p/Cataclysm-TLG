@@ -266,7 +266,7 @@ jobs:
         if: runner.os == 'Linux' && matrix.mxe == 'none' && matrix.android == 'none' && !matrix.wasm
         run: |
           make -j$((`nproc`+0)) TILES=${{ matrix.tiles }} SOUND=${{ matrix.tiles }} RELEASE=1 LOCALIZE=1 LANGUAGES=all BACKTRACE=1 LIBBACKTRACE=${{ matrix.libbacktrace }} PCH=0 bindist
-          mv cataclysmtlg-0.I.tar.gz ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.tar.gz
+          mv ctlg-1.0.tar.gz ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.tar.gz
       - name: Build Ctlg (WebAssembly)
         if: matrix.wasm
         run: |
@@ -279,7 +279,7 @@ jobs:
           PLATFORM: /opt/mxe/usr/bin/${{ matrix.mxe }}-w64-mingw32.static.gcc12-
         run: |
           make -j$((`nproc`+0)) CROSS="${PLATFORM}" TILES=1 SOUND=1 RELEASE=1 LOCALIZE=1 LANGUAGES=all BACKTRACE=1 LIBBACKTRACE=${{ matrix.libbacktrace }} PCH=0 bindist
-          mv cataclysmtlg-0.I.zip ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.zip
+          mv ctlg-1.0.zip ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.zip
       - name: Build Ctlg (windows msvc)
         if: runner.os == 'Windows'
         env:
@@ -290,7 +290,7 @@ jobs:
         run: |
           msbuild -m -p:Configuration=Release -p:Platform=${{ matrix.arch }} "-target:Cataclysm-vcpkg-static;JsonFormatter-vcpkg-static" msvc-full-features\Cataclysm-vcpkg-static.sln
           .\build-scripts\windist.ps1
-          mv cataclysmtlg-0.I.zip ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.zip
+          mv ctlg-1.0.zip ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.zip
       - name: Build Ctlg (osx)
         if: runner.os == 'macOS'
         run: |
