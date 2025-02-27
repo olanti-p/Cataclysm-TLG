@@ -1181,7 +1181,7 @@
     "reversible": false,
     "tools": [ [ [ "fakeitem_statue", -1 ] ] ],
     "components": [
-      [ [ "fp_loyalty_card", 1 ] ],
+      [ [ "loyalty_card", 1 ] ],
       [ [ "coin_penny", 1 ] ],
       [ [ "coin_nickel", 1 ] ],
       [ [ "coin_dime", 1 ] ],
