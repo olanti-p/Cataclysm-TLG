@@ -20,7 +20,7 @@ on:
 #      - 'src/**'
 
 env:
-  GITHUB_TOKEN: ${{ secrets.build_token }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   release:
