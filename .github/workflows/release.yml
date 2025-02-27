@@ -331,4 +331,4 @@ jobs:
                mv ./app/build/outputs/bundle/experimentalRelease/*.aab ../ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.aab     
           fi
       - run: |
-          gh release upload ctlg-experimental-${{ needs.release.outputs.timestamp }} ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.${{ matrix.ext }}
+          gh release upload cataclysm-tlg-1.0-${{ needs.release.outputs.timestamp }} ctlg-${{ matrix.artifact }}-${{ needs.release.outputs.timestamp }}.${{ matrix.ext }}
